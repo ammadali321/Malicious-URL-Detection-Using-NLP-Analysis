@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head itemscope itemtype="http://schema.org/WebSite">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var ewww_webp_supported=!1;function check_webp_feature(A,e){var w;e=void 0!==e?e:function(){},ewww_webp_supported?e(ewww_webp_supported):((w=new Image).onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A])}check_webp_feature("alpha");</script><script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var Arrive=function(c,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return e=void 0!==e&&("number"!=typeof e.length||e===c)?[e]:e}}),e=(l.prototype.addEvent=function(e,t,r,a){a={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(a),this._eventsBucket.push(a),a},l.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)e(t)&&(this._beforeRemoving&&this._beforeRemoving(t),(t=this._eventsBucket.splice(r,1))&&t.length&&(t[0].callback=null))},l.prototype.beforeAdding=function(e){this._beforeAdding=e},l.prototype.beforeRemoving=function(e){this._beforeRemoving=e},l),t=function(i,n){var o=new e,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e=t.target;e!==c.document&&e!==c||(e=document.getElementsByTagName("html")[0]);var r=new MutationObserver(function(e){n.call(this,e,t)}),a=i(t.options);r.observe(e,a),t.observer=r,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var a=u.toElementsArray(this),i=r,e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1};o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id)))&&(t.firedElems.push(e._id),!0)}var c=(i=new t(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},o=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(o=new t(function(){return{childList:!0,subtree:!0}},function(e,r){e.forEach(function(e){var t=e.removedNodes,e=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,r,i,e),u.callCallbacks(e,r)})})).bindEvent;return o.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},o};d(HTMLElement.prototype),d(NodeList.prototype),d(HTMLCollection.prototype),d(HTMLDocument.prototype),d(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(o,n,"unbindAllLeave"),n}function l(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function d(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=o.bindEvent,s(o,e,"unbindLeave")}}(window,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){var r;ewww_webp_supported?t(ewww_webp_supported):((r=new Image).onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e])}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(var i=document.querySelectorAll("div.woocommerce-product-gallery__image"),r=0,a=i.length;r<a;r++)ewwwAttr(i[r],"data-thumb",i[r].getAttribute("data-webp-thumb"))}for(var n=document.querySelectorAll("video"),r=0,a=n.length;r<a;r++)ewwwAttr(n[r],"poster",e?n[r].getAttribute("data-poster-webp"):n[r].getAttribute("data-poster-image"));for(var o,l=document.querySelectorAll("img.ewww_webp_lazy_load"),r=0,a=l.length;r<a;r++)e&&(ewwwAttr(l[r],"data-lazy-srcset",l[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(l[r],"data-srcset",l[r].getAttribute("data-srcset-webp")),ewwwAttr(l[r],"data-lazy-src",l[r].getAttribute("data-lazy-src-webp")),ewwwAttr(l[r],"data-src",l[r].getAttribute("data-src-webp")),ewwwAttr(l[r],"data-orig-file",l[r].getAttribute("data-webp-orig-file")),ewwwAttr(l[r],"data-medium-file",l[r].getAttribute("data-webp-medium-file")),ewwwAttr(l[r],"data-large-file",l[r].getAttribute("data-webp-large-file")),null!=(o=l[r].getAttribute("srcset"))&&!1!==o&&o.includes("R0lGOD")&&ewwwAttr(l[r],"src",l[r].getAttribute("data-lazy-src-webp"))),l[r].className=l[r].className.replace(/\bewww_webp_lazy_load\b/,"");for(var s=document.querySelectorAll(".ewww_webp"),r=0,a=s.length;r<a;r++)e?(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-webp")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-webp")),ewwwAttr(s[r],"data-orig-file",s[r].getAttribute("data-webp-orig-file")),ewwwAttr(s[r],"data-medium-file",s[r].getAttribute("data-webp-medium-file")),ewwwAttr(s[r],"data-large-file",s[r].getAttribute("data-webp-large-file")),ewwwAttr(s[r],"data-large_image",s[r].getAttribute("data-webp-large_image")),ewwwAttr(s[r],"data-src",s[r].getAttribute("data-webp-src"))):(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-img")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-img"))),s[r].className=s[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script><meta name='robots' content='index, max-image-preview:large'/>
+<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+<!-- This site is optimized with the Yoast SEO plugin v25.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Istanbulle - Actualités Istanbul - Turquie Voyages</title>
+<meta name="description" content="Actualités Istanbul - Turquie Voyages"/>
+<link rel="canonical" href="https://istanbulle.com/"/>
+<link rel="next" href="https://istanbulle.com/page/2/"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Istanbulle"/>
+<meta property="og:description" content="Actualités Istanbul - Turquie Voyages"/>
+<meta property="og:url" content="https://istanbulle.com/"/>
+<meta property="og:site_name" content="Istanbulle"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://istanbulle.com/","url":"https://istanbulle.com/","name":"Istanbulle - Actualités Istanbul - Turquie Voyages","isPartOf":{"@id":"https://istanbulle.com/#website"},"about":{"@id":"https://istanbulle.com/#organization"},"description":"Actualités Istanbul - Turquie Voyages","breadcrumb":{"@id":"https://istanbulle.com/#breadcrumb"},"inLanguage":"fr-FR"},{"@type":"BreadcrumbList","@id":"https://istanbulle.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil"}]},{"@type":"WebSite","@id":"https://istanbulle.com/#website","url":"https://istanbulle.com/","name":"Istanbulle","description":"Actualités Istanbul - Turquie Voyages","publisher":{"@id":"https://istanbulle.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://istanbulle.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"fr-FR"},{"@type":"Organization","@id":"https://istanbulle.com/#organization","name":"Istanbulle","url":"https://istanbulle.com/","logo":{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https://istanbulle.com/#/schema/logo/image/","url":"https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon.png","contentUrl":"https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon.png","width":512,"height":512,"caption":"Istanbulle"},"image":{"@id":"https://istanbulle.com/#/schema/logo/image/"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+<link rel="amphtml" href="https://istanbulle.com/amp/"/><meta name="generator" content="AMP for WP 1.1.6"/><link rel='dns-prefetch' href='//fonts.googleapis.com'/>
+<link rel="alternate" type="application/rss+xml" title="Istanbulle &raquo; Flux" href="https://istanbulle.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Istanbulle &raquo; Flux des commentaires" href="https://istanbulle.com/comments/feed/"/>
+<!-- <link rel='stylesheet' id='wp-block-library-css' href='https://istanbulle.com/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//istanbulle.com/wp-content/cache/wpfc-minified/qx2rxk68/dkdwi.css" media="all"/>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<!-- <link rel='stylesheet' id='contact-form-7-css' href='https://istanbulle.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='owl-carousel-css' href='https://istanbulle.com/wp-content/themes/vilva/css/owl.carousel.min.css?ver=2.3.4' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='animate-css' href='https://istanbulle.com/wp-content/themes/vilva/css/animate.min.css?ver=3.5.2' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//istanbulle.com/wp-content/cache/wpfc-minified/q77caoe6/dkdwi.css" media="all"/>
+<link rel='stylesheet' id='vilva-google-fonts-css' href='https://fonts.googleapis.com/css?family=Nunito+Sans%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CEB+Garamond%3Aregular%2C500%2C600%2C700%2C800%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%7CAngkor%3Aregular' type='text/css' media='all'/>
+<!-- <link rel='stylesheet' id='vilva-css' href='https://istanbulle.com/wp-content/themes/vilva/style.css?ver=1.2.8' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='vilva-gutenberg-css' href='https://istanbulle.com/wp-content/themes/vilva/css/gutenberg.min.css?ver=1.2.8' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//istanbulle.com/wp-content/cache/wpfc-minified/qncdksb/dnas5.css" media="all"/>
+<script src='//istanbulle.com/wp-content/cache/wpfc-minified/12vnfczi/dkdwj.js' type="text/javascript"></script>
+<!-- <script type="text/javascript" src="https://istanbulle.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script> -->
+<!-- <script type="text/javascript" src="https://istanbulle.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script> -->
+<link rel="https://api.w.org/" href="https://istanbulle.com/wp-json/"/>
+<noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style><style>.wp-block-gallery.is-cropped .blocks-gallery-item picture{height:100%;width:100%;}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://istanbulle.com/wp-content/uploads/2022/12/mosque-geb99e85d8_1280.jpeg"); background-position: center center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }
+</style>
+<script>
+if(screen.width<769){
+window.location = "https://istanbulle.com/amp/";
+}
+</script>
+<link rel="icon" href="https://istanbulle.com/wp-content/uploads/2022/12/cropped-8684383_mosque_islam_maps_location_placeholder_icon-32x32.png" sizes="32x32"/>
+<link rel="icon" href="https://istanbulle.com/wp-content/uploads/2022/12/cropped-8684383_mosque_islam_maps_location_placeholder_icon-192x192.png" sizes="192x192"/>
+<link rel="apple-touch-icon" href="https://istanbulle.com/wp-content/uploads/2022/12/cropped-8684383_mosque_islam_maps_location_placeholder_icon-180x180.png"/>
+<meta name="msapplication-TileImage" content="https://istanbulle.com/wp-content/uploads/2022/12/cropped-8684383_mosque_islam_maps_location_placeholder_icon-270x270.png"/>
+<style type='text/css' media='all'>     
+.content-newsletter .blossomthemes-email-newsletter-wrapper.bg-img:after,
+.widget_blossomthemes_email_newsletter_widget .blossomthemes-email-newsletter-wrapper:after{
+background: rgba(252, 205, 29, 0.8);    }
+/*Typography*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea{
+font-family : Nunito Sans;
+font-size   : 19px;        
+}
+:root {
+--primary-font: Nunito Sans;
+--secondary-font: EB Garamond;
+--primary-color: #fccd1d;
+--primary-color-rgb: 252, 205, 29;
+}
+.site-branding .site-title-wrap .site-title{
+font-size   : 33px;
+font-family : Angkor;
+font-weight : 400;
+font-style  : normal;
+}
+.site-branding .site-title-wrap .site-title a{
+color: #121212;
+}
+.custom-logo-link img{
+width: 70px;
+max-width: 100%;
+}
+.comment-body .reply .comment-reply-link:hover:before {
+background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15"><path d="M934,147.2a11.941,11.941,0,0,1,7.5,3.7,16.063,16.063,0,0,1,3.5,7.3c-2.4-3.4-6.1-5.1-11-5.1v4.1l-7-7,7-7Z" transform="translate(-927 -143.2)" fill="%23fccd1d"/></svg>');
+}
+.site-header.style-five .header-mid .search-form .search-submit:hover {
+background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23fccd1d" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>');
+}
+.site-header.style-seven .header-bottom .search-form .search-submit:hover {
+background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23fccd1d" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>');
+}
+.site-header.style-fourteen .search-form .search-submit:hover {
+background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23fccd1d" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>');
+}
+.search-results .content-area > .page-header .search-submit:hover {
+background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23fccd1d" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>');
+}
+</style>		<style type="text/css" id="wp-custom-css">
+.header-mid {
+padding: 5px 0;
+text-align: center;
+}
+.single-style-four .site-main .entry-header .entry-title {
+font-size: 2.11em;}
+</style>
+</head>
+<body class="home blog custom-background wp-custom-logo wp-embed-responsive wp-theme-vilva cookies-not-set hfeed custom-background-image post-layout-one vilva-has-blocks rightsidebar" itemscope itemtype="http://schema.org/WebPage">
+<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">if(typeof ewww_webp_supported==="undefined"){var ewww_webp_supported=!1}if(ewww_webp_supported){document.body.classList.add("webp-support")}</script>
+<div id="page" class="site">
+<a class="skip-link" href="#content">Aller au contenu</a>
+<header id="masthead" class="site-header style-one" itemscope itemtype="http://schema.org/WPHeader">
+<div class="header-t">
+<div class="container">
+<nav class="secondary-menu">
+<button class="toggle-btn" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+<span class="toggle-bar"></span>
+<span class="toggle-bar"></span>
+<span class="toggle-bar"></span>
+</button>
+<div class="secondary-menu-list menu-modal cover-modal" data-modal-target-string=".menu-modal">
+<button class="close close-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
+<span class="toggle-bar"></span>
+<span class="toggle-bar"></span>
+</button>
+<div class="mobile-menu" aria-label="Mobile">
+<div class="menu-second-container"><ul id="secondary-menu" class="nav-menu menu-modal"><li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-72"><a rel="privacy-policy" href="https://istanbulle.com/privacy-policy/">Confidentialité</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://istanbulle.com/mentions/">Mentions</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="https://istanbulle.com/contacter-lequipe/">Contacter l&rsquo;équipe</a></li>
+</ul></div>            </div>
+</div>
+</nav>
+<div class="right">
+<div class="header-social">
+<ul class="social-networks">
+<li>
+<a href="https://www.facebook.com/people/Istanbulle/100090535864711/" target="_blank" rel="nofollow noopener">
+<i class="fab fa-facebook-f"></i>
+</a>
+</li>    	   
+</ul>
+</div><!-- .header-social -->
+<div class="header-search">                
+<button class="search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+<i class="fas fa-search"></i>
+</button>
+<div class="header-search-wrap search-modal cover-modal" data-modal-target-string=".search-modal">
+<div class="header-search-inner-wrap">
+<form role="search" method="get" class="search-form" action="https://istanbulle.com/">
+<label>
+<span class="screen-reader-text">Vous recherchiez quelque chose ?
+</span>
+<input type="search" class="search-field" placeholder="Taper &amp; appuyez sur Entrer…" value="" name="s"/>
+</label>                
+<input type="submit" id="submit-field" class="search-submit" value="Recherche"/>
+</form>                                    <button class="close" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false"></button>
+</div>
+</div>
+</div><!-- .header-search -->
+</div><!-- .right -->
+</div>
+</div><!-- .header-t -->
+<div class="header-mid">
+<div class="container">
+<div class="site-branding has-logo-text" itemscope itemtype="http://schema.org/Organization">  
+<div class="site-logo">
+<a href="https://istanbulle.com/" class="custom-logo-link" rel="home" aria-current="page"><picture><source sizes='(max-width: 512px) 100vw, 512px' type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon.png.webp 512w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-300x300.png.webp 300w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-150x150.png.webp 150w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-60x60.png.webp 60w"><img width="512" height="512" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAAQMAAADOtka5AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAADZJREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzgWCAAABtQdqrgAAAABJRU5ErkJggg==" class="custom-logo lazyload" alt="Istanbulle" decoding="async" fetchpriority="high" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon.png" data-srcset="https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon.png 512w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-300x300.png 300w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-150x150.png 150w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-60x60.png 60w" data-sizes="auto" data-eio-rwidth="512" data-eio-rheight="512"/></picture><noscript><img width="512" height="512" src="https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon.png" class="custom-logo" alt="Istanbulle" decoding="async" fetchpriority="high" srcset="https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon.png 512w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-300x300.png 300w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-150x150.png 150w, https://istanbulle.com/wp-content/uploads/2022/12/cropped-cropped-8684383_mosque_islam_maps_location_placeholder_icon-60x60.png 60w" sizes="(max-width: 512px) 100vw, 512px" data-eio="l"/></noscript></a>            </div>
+<div class="site-title-wrap">                    <h1 class="site-title" itemprop="name"><a href="https://istanbulle.com/" rel="home" itemprop="url">Istanbulle</a></h1>
+<p class="site-description" itemprop="description">Actualités Istanbul &#8211; Turquie Voyages</p>
+</div>        </div>    
+</div>
+</div><!-- .header-mid -->
+<div class="header-bottom">
+<div class="container">
+<nav id="site-navigation" class="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<button class="toggle-btn" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".close-main-nav-toggle">
+<span class="toggle-bar"></span>
+<span class="toggle-bar"></span>
+<span class="toggle-bar"></span>
+</button>
+<div class="primary-menu-list main-menu-modal cover-modal" data-modal-target-string=".main-menu-modal">
+<button class="close close-main-nav-toggle" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".main-menu-modal"></button>
+<div class="mobile-menu" aria-label="Mobile">
+<div class="menu-main-container"><ul id="primary-menu" class="nav-menu main-menu-modal"><li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://istanbulle.com/turquie/quoi-voir-a-istanbul/">Quoi voir à Istanbul ?</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-57"><a href="https://istanbulle.com/turquie/hotels/">Hôtels</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><a href="https://istanbulle.com/turquie/culture/">Culture</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58"><a href="https://istanbulle.com/turquie/la-turquie/">La Turquie</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-60"><a href="https://istanbulle.com/turquie/economie/">Economie</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61"><a href="https://istanbulle.com/turquie/tourisme/">Tourisme</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62"><a href="https://istanbulle.com/turquie/villes/">Villes</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://istanbulle.com/turquie/recettes/">Recettes</a></li>
+</ul></div>            </div>
+</div>
+</nav><!-- #site-navigation -->
+</div>
+</div><!-- .header-bottom -->
+</header>
+<div id="banner_section" class="site-banner style-one">
+<div class="item-wrap owl-carousel">
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2025/07/istanbul-1220x600.jpg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2025/07/istanbul-1220x600.jpg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2025/07/istanbul-1220x600.jpg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2025/turkiye-pourquoi-choisir-cette-destination-complete-pour-vos-vacances-dete-ideales/">Türkiye : pourquoi choisir cette destination complète pour vos vacances d&rsquo;été idéales</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="Partir vivre en Turquie" itemprop="image" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="Partir vivre en Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2024/la-turquie-est-elle-un-bon-endroit-pour-vivre/">La Turquie est-elle un bon endroit pour vivre ?</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2024/02/visa-turquie-1220x600.jpg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="Obtenir un visa pour la Turquie" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2024/02/visa-turquie-1220x600.jpg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2024/02/visa-turquie-1220x600.jpg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="Obtenir un visa pour la Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2024/visa-pour-la-turquie-guide-complet-pour-voyager-sereinement/">Visa pour la Turquie : Guide complet pour voyager sereinement</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2023/11/immobilier-turquie-1220x600.jpeg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="Investir dans l&#039;immobilier en Turquie" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2023/11/immobilier-turquie-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2023/11/immobilier-turquie-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="Investir dans l&#039;immobilier en Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/economie/" rel="category tag">Economie</a> <a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2023/immobilier-en-turquie-investir-dans-un-environnement-dynamique-et-en-pleine-croissance/">Immobilier en Turquie : Investir dans un environnement dynamique et en pleine croissance</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2023/10/turquie-1220x600.jpeg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="Faire du ski en Turquie" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2023/10/turquie-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2023/10/turquie-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="Faire du ski en Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2023/skier-en-turquie-un-pays-aux-multiples-facettes-pour-les-amateurs-de-glisse/">Skier en Turquie : un pays aux multiples facettes pour les amateurs de glisse</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2023/05/arindam-mahanta-VEOk8qUl9DU-unsplash-1220x600.jpeg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="Concert d&#039;orchestre pour soutenir la Turquie" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2023/05/arindam-mahanta-VEOk8qUl9DU-unsplash-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2023/05/arindam-mahanta-VEOk8qUl9DU-unsplash-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="Concert d&#039;orchestre pour soutenir la Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2023/un-concert-de-solidarite-de-lorchestre-francais-pour-les-musiciens-touches-par-le-seisme/">Un concert de solidarité de l&rsquo;orchestre français pour les musiciens touchés par le séisme</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2023/05/meric-dagli-uRnkbWnCElY-unsplash-1220x600.jpg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="L&#039;élection en Turquie" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2023/05/meric-dagli-uRnkbWnCElY-unsplash-1220x600.jpg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2023/05/meric-dagli-uRnkbWnCElY-unsplash-1220x600.jpg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="L&#039;élection en Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2023/limpact-de-lelection-en-turquie-sur-la-politique-etrangere-regionale-et-mondiale/">L&rsquo;impact de l&rsquo;élection en Turquie sur la politique étrangère régionale et mondiale</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2023/02/fatih-trkTXDoTRY8-unsplash-1220x600.jpeg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2023/02/fatih-trkTXDoTRY8-unsplash-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2023/02/fatih-trkTXDoTRY8-unsplash-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2023/les-raisons-de-douvrir-une-entreprise-en-turquie/">Les raisons d&rsquo;ouvrir une entreprise en Turquie</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2023/02/real-estate-g8a5985e8b_1280-1220x600.jpeg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="L&#039;immobilier en Turquie" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2023/02/real-estate-g8a5985e8b_1280-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2023/02/real-estate-g8a5985e8b_1280-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="L&#039;immobilier en Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2023/questions-juridiques-que-vous-devez-connaitre-lors-de-lachat-dun-bien-immobilier-en-turquie/">Questions juridiques que vous devez connaître lors de l’achat d’un bien immobilier en Turquie</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2023/01/architecture-g8db1e7790_1280-1220x600.jpeg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="Vivre en Turquie" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2023/01/architecture-g8db1e7790_1280-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2023/01/architecture-g8db1e7790_1280-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="Vivre en Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2023/les-etrangers-peuvent-ils-vivre-de-maniere-permanente-en-turquie-2/">Les étrangers peuvent-ils vivre de manière permanente en Turquie ?</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2022/12/dice-g4a4709892_1280-1220x600.jpeg.webp"><img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="Les casinos en ligne en Turquie" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2022/12/dice-g4a4709892_1280-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/></picture><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2022/12/dice-g4a4709892_1280-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="Les casinos en ligne en Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2022/la-legislation-sur-les-casinos-en-ligne-en-turquie/">La législation sur les casinos en ligne en Turquie</a>
+</h2>                                            
+</div>
+</div>
+</div>
+<div class="item">
+<img width="1220" height="600" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMQAAAJYAQMAAAC3iqi7AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHBJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAQaP8AAar0K7kAAAAASUVORK5CYII=" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image lazyload" alt="Créer son entreprise en Turquie" itemprop="image" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/istanbul-g0f3d0ad86_1280-1220x600.jpeg" data-eio-rwidth="1220" data-eio-rheight="600"/><noscript><img width="1220" height="600" src="https://istanbulle.com/wp-content/uploads/2022/12/istanbul-g0f3d0ad86_1280-1220x600.jpeg" class="attachment-vilva-slider-one size-vilva-slider-one wp-post-image" alt="Créer son entreprise en Turquie" itemprop="image" decoding="async" data-eio="l"/></noscript>                                        <div class="banner-caption">
+<div class="container">
+<div class="cat-links">
+<span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span>                                                </div>
+<h2 class="banner-title">
+<a href="https://istanbulle.com/2022/le-monde-de-lentrepreneuriat-en-turquie/">Le monde de l’entrepreneuriat en Turquie</a>
+</h2>                                            
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="content" class="site-content"><div class="container"><div id="primary" class="content-area">        
+<main id="main" class="site-main">
+<article id="post-237" class="post-237 post type-post status-publish format-standard has-post-thumbnail hentry category-la-turquie" itemscope itemtype="https://schema.org/Blog">
+<header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2025/turkiye-pourquoi-choisir-cette-destination-complete-pour-vos-vacances-dete-ideales/" rel="bookmark"><time class="entry-date published updated" datetime="2025-07-29T05:13:41+00:00" itemprop="dateModified">juillet 29, 2025</time><time class="updated" datetime="2025-07-29T05:13:21+00:00" itemprop="datePublished">juillet 29, 2025</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/la-turquie/" rel="category tag">La Turquie</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2025/turkiye-pourquoi-choisir-cette-destination-complete-pour-vos-vacances-dete-ideales/" rel="bookmark">Türkiye : pourquoi choisir cette destination complète pour vos vacances d&rsquo;été idéales</a></h2>        </header>    
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2025/turkiye-pourquoi-choisir-cette-destination-complete-pour-vos-vacances-dete-ideales/" class="post-thumbnail"><picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2025/07/istanbul-900x500.jpg.webp"><img width="900" height="500" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA4QAAAH0AQMAAABfPXGQAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAE1JREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADOBN6oAAFJRO8kAAAAAElFTkSuQmCC" class="attachment-vilva-blog-one size-vilva-blog-one wp-post-image lazyload" alt="" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2025/07/istanbul-900x500.jpg" data-eio-rwidth="900" data-eio-rheight="500"/></picture><noscript><img width="900" height="500" src="https://istanbulle.com/wp-content/uploads/2025/07/istanbul-900x500.jpg" class="attachment-vilva-blog-one size-vilva-blog-one wp-post-image" alt="" itemprop="image" decoding="async" data-eio="l"/></noscript></a></figure><div class="content-wrap"><div class="entry-content" itemprop="text"><p>Türkiye s’impose comme une destination d’exception pour des vacances d’été riches en découvertes et en détente. Alliant plages magnifiques, sites historiques incontournables, paysages naturels variés &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2025/turkiye-pourquoi-choisir-cette-destination-complete-pour-vos-vacances-dete-ideales/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-237 -->
+<article id="post-231" class="post-231 post type-post status-publish format-standard has-post-thumbnail hentry category-quoi-voir-a-istanbul" itemscope itemtype="https://schema.org/Blog">
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2025/istanbul-les-meilleurs-endroits-pour-sortir-le-soir-et-vibrer-au-rythme-de-la-ville/" class="post-thumbnail"><picture><source sizes='(max-width: 420px) 100vw, 420px' type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-420x280.jpg.webp 420w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-300x200.jpg.webp 300w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-1024x683.jpg.webp 1024w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-768x512.jpg.webp 768w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-1536x1024.jpg.webp 1536w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul.jpg.webp 1920w"><img width="420" height="280" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAEYAQMAAAApihB4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACVJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAHAsOxAAAYRSSfcAAAAASUVORK5CYII=" class="attachment-vilva-blog size-vilva-blog wp-post-image lazyload" alt="" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-420x280.jpg" data-srcset="https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-420x280.jpg 420w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-300x200.jpg 300w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-1024x683.jpg 1024w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-768x512.jpg 768w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-1536x1024.jpg 1536w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul.jpg 1920w" data-sizes="auto" data-eio-rwidth="420" data-eio-rheight="280"/></picture><noscript><img width="420" height="280" src="https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-420x280.jpg" class="attachment-vilva-blog size-vilva-blog wp-post-image" alt="" itemprop="image" decoding="async" srcset="https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-420x280.jpg 420w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-300x200.jpg 300w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-1024x683.jpg 1024w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-768x512.jpg 768w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul-1536x1024.jpg 1536w, https://istanbulle.com/wp-content/uploads/2025/06/Istanbul.jpg 1920w" sizes="(max-width: 420px) 100vw, 420px" data-eio="l"/></noscript></a></figure>    <header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2025/istanbul-les-meilleurs-endroits-pour-sortir-le-soir-et-vibrer-au-rythme-de-la-ville/" rel="bookmark"><time class="entry-date published updated" datetime="2025-06-29T12:17:02+00:00" itemprop="dateModified">juin 29, 2025</time><time class="updated" datetime="2025-06-29T12:17:00+00:00" itemprop="datePublished">juin 29, 2025</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/quoi-voir-a-istanbul/" rel="category tag">Quoi voir à Istanbul ?</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2025/istanbul-les-meilleurs-endroits-pour-sortir-le-soir-et-vibrer-au-rythme-de-la-ville/" rel="bookmark">Istanbul : les meilleurs endroits pour sortir le soir et vibrer au rythme de la ville</a></h2>    </header> 
+<div class="content-wrap"><div class="entry-content" itemprop="text"><p>Istanbul, ville au carrefour de l’Europe et de l’Asie, offre une vie nocturne riche et variée, mêlant traditions et modernité. Ses quartiers animés, ses bars, &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2025/istanbul-les-meilleurs-endroits-pour-sortir-le-soir-et-vibrer-au-rythme-de-la-ville/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-231 -->
+<article id="post-221" class="post-221 post type-post status-publish format-standard has-post-thumbnail hentry category-quoi-voir-a-istanbul" itemscope itemtype="https://schema.org/Blog">
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2025/istanbul-autrement-5-lieux-secrets-a-explorer-absolument/" class="post-thumbnail"><img width="420" height="280" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAEYAQMAAAApihB4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACVJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAHAsOxAAAYRSSfcAAAAASUVORK5CYII=" class="attachment-vilva-blog size-vilva-blog wp-post-image lazyload" alt="Les lieux à voir à Istanbul" itemprop="image" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2025/04/Istanbul-420x280.jpg" data-eio-rwidth="420" data-eio-rheight="280"/><noscript><img width="420" height="280" src="https://istanbulle.com/wp-content/uploads/2025/04/Istanbul-420x280.jpg" class="attachment-vilva-blog size-vilva-blog wp-post-image" alt="Les lieux à voir à Istanbul" itemprop="image" decoding="async" data-eio="l"/></noscript></a></figure>    <header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2025/istanbul-autrement-5-lieux-secrets-a-explorer-absolument/" rel="bookmark"><time class="entry-date published updated" datetime="2025-05-27T19:48:28+00:00" itemprop="dateModified">mai 27, 2025</time><time class="updated" datetime="2025-04-10T05:45:33+00:00" itemprop="datePublished">avril 10, 2025</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/quoi-voir-a-istanbul/" rel="category tag">Quoi voir à Istanbul ?</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2025/istanbul-autrement-5-lieux-secrets-a-explorer-absolument/" rel="bookmark">Istanbul autrement : 5 lieux secrets à explorer absolument</a></h2>    </header> 
+<div class="content-wrap"><div class="entry-content" itemprop="text"><p>Istanbul, c’est bien plus que Sainte-Sophie, le Grand Bazar ou la Mosquée Bleue. Sous l&rsquo;ombre de ses monuments emblématiques, Istanbul dissimule des joyaux méconnus, idéaux &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2025/istanbul-autrement-5-lieux-secrets-a-explorer-absolument/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-221 -->
+<article id="post-215" class="post-215 post type-post status-publish format-standard has-post-thumbnail hentry category-economie" itemscope itemtype="https://schema.org/Blog">
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2024/la-turquie-et-les-brics-une-strategie-dalliance-economique-en-pleine-evolution/" class="post-thumbnail"><picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2024/11/Turquie-420x280.jpg.webp"><img width="420" height="280" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAEYAQMAAAApihB4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACVJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAHAsOxAAAYRSSfcAAAAASUVORK5CYII=" class="attachment-vilva-blog size-vilva-blog wp-post-image lazyload" alt="La Turquie et les BRICS" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2024/11/Turquie-420x280.jpg" data-eio-rwidth="420" data-eio-rheight="280"/></picture><noscript><img width="420" height="280" src="https://istanbulle.com/wp-content/uploads/2024/11/Turquie-420x280.jpg" class="attachment-vilva-blog size-vilva-blog wp-post-image" alt="La Turquie et les BRICS" itemprop="image" decoding="async" data-eio="l"/></noscript></a></figure>    <header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2024/la-turquie-et-les-brics-une-strategie-dalliance-economique-en-pleine-evolution/" rel="bookmark"><time class="entry-date published updated" datetime="2024-11-21T04:44:44+00:00" itemprop="dateModified">novembre 21, 2024</time><time class="updated" datetime="2024-11-21T04:44:42+00:00" itemprop="datePublished">novembre 21, 2024</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/economie/" rel="category tag">Economie</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2024/la-turquie-et-les-brics-une-strategie-dalliance-economique-en-pleine-evolution/" rel="bookmark">La Turquie et les BRICS, une stratégie d&rsquo;alliance économique en pleine évolution</a></h2>    </header> 
+<div class="content-wrap"><div class="entry-content" itemprop="text"><p>L&rsquo;intérêt croissant de la Turquie pour rejoindre les BRICS, un groupe économique composé de pays émergents tels que le Brésil, la Russie, l&rsquo;Inde, la Chine &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2024/la-turquie-et-les-brics-une-strategie-dalliance-economique-en-pleine-evolution/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-215 -->
+<article id="post-211" class="post-211 post type-post status-publish format-standard has-post-thumbnail hentry category-quoi-voir-a-istanbul" itemscope itemtype="https://schema.org/Blog">
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2024/le-meilleur-moment-pour-visiter-istanbul/" class="post-thumbnail"><picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2024/10/istanbul-420x280.jpg.webp"><img width="420" height="280" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAEYAQMAAAApihB4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACVJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAHAsOxAAAYRSSfcAAAAASUVORK5CYII=" class="attachment-vilva-blog size-vilva-blog wp-post-image lazyload" alt="Partir à Istanbul" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2024/10/istanbul-420x280.jpg" data-eio-rwidth="420" data-eio-rheight="280"/></picture><noscript><img width="420" height="280" src="https://istanbulle.com/wp-content/uploads/2024/10/istanbul-420x280.jpg" class="attachment-vilva-blog size-vilva-blog wp-post-image" alt="Partir à Istanbul" itemprop="image" decoding="async" data-eio="l"/></noscript></a></figure>    <header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2024/le-meilleur-moment-pour-visiter-istanbul/" rel="bookmark"><time class="entry-date published updated" datetime="2024-10-29T05:40:56+00:00" itemprop="dateModified">octobre 29, 2024</time><time class="updated" datetime="2024-10-29T05:40:52+00:00" itemprop="datePublished">octobre 29, 2024</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/quoi-voir-a-istanbul/" rel="category tag">Quoi voir à Istanbul ?</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2024/le-meilleur-moment-pour-visiter-istanbul/" rel="bookmark">Le meilleur moment pour visiter Istanbul</a></h2>    </header> 
+<div class="content-wrap"><div class="entry-content" itemprop="text"><p>Istanbul, avec son riche patrimoine culturel et ses paysages à couper le souffle, est une destination prisée tout au long de l&rsquo;année. Cependant, choisir le &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2024/le-meilleur-moment-pour-visiter-istanbul/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-211 -->
+<article id="post-12" class="post-12 post type-post status-publish format-standard has-post-thumbnail hentry category-culture" itemscope itemtype="https://schema.org/Blog">
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2024/les-etrangers-peuvent-ils-vivre-de-maniere-permanente-en-turquie/" class="post-thumbnail"><img width="420" height="280" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAEYAQMAAAApihB4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACVJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAHAsOxAAAYRSSfcAAAAASUVORK5CYII=" class="attachment-vilva-blog size-vilva-blog wp-post-image lazyload" alt="Les séjours en Turquie" itemprop="image" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-420x280.jpeg" data-srcset="https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-420x280.jpeg 420w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-300x200.jpeg 300w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-1024x682.jpeg 1024w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-768x512.jpeg 768w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-90x60.jpeg 90w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280.jpeg 1280w" data-sizes="auto" data-eio-rwidth="420" data-eio-rheight="280"/><noscript><img width="420" height="280" src="https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-420x280.jpeg" class="attachment-vilva-blog size-vilva-blog wp-post-image" alt="Les séjours en Turquie" itemprop="image" decoding="async" srcset="https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-420x280.jpeg 420w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-300x200.jpeg 300w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-1024x682.jpeg 1024w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-768x512.jpeg 768w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-90x60.jpeg 90w, https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280.jpeg 1280w" sizes="(max-width: 420px) 100vw, 420px" data-eio="l"/></noscript></a></figure>    <header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2024/les-etrangers-peuvent-ils-vivre-de-maniere-permanente-en-turquie/" rel="bookmark"><time class="entry-date published updated" datetime="2024-09-18T04:52:01+00:00" itemprop="dateModified">septembre 18, 2024</time><time class="updated" datetime="2024-08-01T08:58:28+00:00" itemprop="datePublished">août 1, 2024</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/culture/" rel="category tag">Culture</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2024/les-etrangers-peuvent-ils-vivre-de-maniere-permanente-en-turquie/" rel="bookmark">Les étrangers peuvent-ils vivre de manière permanente en Turquie ?</a></h2>    </header> 
+<div class="content-wrap"><div class="entry-content" itemprop="text"><p>Si vous souhaitez faire de la Turquie votre résidence permanente, continuez à lire pour savoir comment demander un permis de séjour de longue durée en &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2024/les-etrangers-peuvent-ils-vivre-de-maniere-permanente-en-turquie/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-12 -->
+<article id="post-40" class="post-40 post type-post status-publish format-standard has-post-thumbnail hentry category-recettes" itemscope itemtype="https://schema.org/Blog">
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2024/les-plats-traditionnels-les-plus-delicieux-turcs/" class="post-thumbnail"><img width="420" height="280" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAEYAQMAAAApihB4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACVJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAHAsOxAAAYRSSfcAAAAASUVORK5CYII=" class="attachment-vilva-blog size-vilva-blog wp-post-image lazyload" alt="Les meilleurs plats turcs" itemprop="image" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-420x280.jpeg" data-srcset="https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-420x280.jpeg 420w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-300x200.jpeg 300w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-1024x682.jpeg 1024w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-768x512.jpeg 768w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-90x60.jpeg 90w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280.jpeg 1280w" data-sizes="auto" data-eio-rwidth="420" data-eio-rheight="280"/><noscript><img width="420" height="280" src="https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-420x280.jpeg" class="attachment-vilva-blog size-vilva-blog wp-post-image" alt="Les meilleurs plats turcs" itemprop="image" decoding="async" srcset="https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-420x280.jpeg 420w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-300x200.jpeg 300w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-1024x682.jpeg 1024w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-768x512.jpeg 768w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-90x60.jpeg 90w, https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280.jpeg 1280w" sizes="(max-width: 420px) 100vw, 420px" data-eio="l"/></noscript></a></figure>    <header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2024/les-plats-traditionnels-les-plus-delicieux-turcs/" rel="bookmark"><time class="entry-date published updated" datetime="2024-09-18T04:51:44+00:00" itemprop="dateModified">septembre 18, 2024</time><time class="updated" datetime="2024-07-01T05:13:18+00:00" itemprop="datePublished">juillet 1, 2024</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/recettes/" rel="category tag">Recettes</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2024/les-plats-traditionnels-les-plus-delicieux-turcs/" rel="bookmark">Les plats traditionnels les plus délicieux turcs</a></h2>    </header> 
+<div class="content-wrap"><div class="entry-content" itemprop="text"><p>Les aliments turcs sont faits de cuisine particulièrement non épicée, riche et savoureuse.&nbsp;Entre les plats turcs, remplissant les menus des restaurants du monde entier.&nbsp;Il existe &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2024/les-plats-traditionnels-les-plus-delicieux-turcs/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-40 -->
+<article id="post-205" class="post-205 post type-post status-publish format-standard has-post-thumbnail hentry category-quoi-voir-a-istanbul" itemscope itemtype="https://schema.org/Blog">
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2024/les-meilleures-choses-a-faire-cet-ete-a-istanbul/" class="post-thumbnail"><picture><source type="image/webp" data-srcset="https://istanbulle.com/wp-content/uploads/2024/06/istanbul-420x280.jpg.webp"><img width="420" height="280" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAEYAQMAAAApihB4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACVJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAHAsOxAAAYRSSfcAAAAASUVORK5CYII=" class="attachment-vilva-blog size-vilva-blog wp-post-image lazyload" alt="Les choses à faire à Istanbul" itemprop="image" decoding="async" data-eio="p" data-src="https://istanbulle.com/wp-content/uploads/2024/06/istanbul-420x280.jpg" data-eio-rwidth="420" data-eio-rheight="280"/></picture><noscript><img width="420" height="280" src="https://istanbulle.com/wp-content/uploads/2024/06/istanbul-420x280.jpg" class="attachment-vilva-blog size-vilva-blog wp-post-image" alt="Les choses à faire à Istanbul" itemprop="image" decoding="async" data-eio="l"/></noscript></a></figure>    <header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2024/les-meilleures-choses-a-faire-cet-ete-a-istanbul/" rel="bookmark"><time class="entry-date published updated" datetime="2025-07-29T05:14:21+00:00" itemprop="dateModified">juillet 29, 2025</time><time class="updated" datetime="2024-06-28T04:46:31+00:00" itemprop="datePublished">juin 28, 2024</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/quoi-voir-a-istanbul/" rel="category tag">Quoi voir à Istanbul ?</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2024/les-meilleures-choses-a-faire-cet-ete-a-istanbul/" rel="bookmark">Les meilleures choses à faire cet été à Istanbul</a></h2>    </header> 
+<div class="content-wrap"><div class="entry-content" itemprop="text"><p>L&rsquo;été à Istanbul offre une expérience inoubliable, mêlant histoire, culture et divertissement sous un soleil généreux. Cette métropole, où l&rsquo;Orient rencontre l&rsquo;Occident, regorge d&rsquo;activités à &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2024/les-meilleures-choses-a-faire-cet-ete-a-istanbul/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-205 -->
+<article id="post-37" class="post-37 post type-post status-publish format-standard has-post-thumbnail hentry category-quoi-voir-a-istanbul" itemscope itemtype="https://schema.org/Blog">
+<figure class="post-thumbnail"><a href="https://istanbulle.com/2024/les-plus-beaux-chateaux-a-decouvrir-a-istanbul-lors-de-vos-vacances-en-turquie/" class="post-thumbnail"><img width="420" height="280" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAEYAQMAAAApihB4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACVJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAHAsOxAAAYRSSfcAAAAASUVORK5CYII=" class="attachment-vilva-blog size-vilva-blog wp-post-image lazyload" alt="Les plus beaux châteaux à Istanbul." itemprop="image" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/kucuksu-palace-g4fa02d99e_1280-420x280.jpeg" data-eio-rwidth="420" data-eio-rheight="280"/><noscript><img width="420" height="280" src="https://istanbulle.com/wp-content/uploads/2022/12/kucuksu-palace-g4fa02d99e_1280-420x280.jpeg" class="attachment-vilva-blog size-vilva-blog wp-post-image" alt="Les plus beaux châteaux à Istanbul." itemprop="image" decoding="async" data-eio="l"/></noscript></a></figure>    <header class="entry-header">
+<div class="entry-meta"><span class="posted-on">Updated on  <a href="https://istanbulle.com/2024/les-plus-beaux-chateaux-a-decouvrir-a-istanbul-lors-de-vos-vacances-en-turquie/" rel="bookmark"><time class="entry-date published updated" datetime="2024-09-18T04:51:29+00:00" itemprop="dateModified">septembre 18, 2024</time><time class="updated" datetime="2024-05-01T04:56:05+00:00" itemprop="datePublished">mai 1, 2024</time></a></span><span class="category"><a href="https://istanbulle.com/turquie/quoi-voir-a-istanbul/" rel="category tag">Quoi voir à Istanbul ?</a></span></div><h2 class="entry-title"><a href="https://istanbulle.com/2024/les-plus-beaux-chateaux-a-decouvrir-a-istanbul-lors-de-vos-vacances-en-turquie/" rel="bookmark">Les plus beaux châteaux à découvrir à Istanbul lors de vos vacances en Turquie</a></h2>    </header> 
+<div class="content-wrap"><div class="entry-content" itemprop="text"><p>Vous êtes donc ici à Istanbul, vous avez cherché un logement et peu d&rsquo;autres lieux d&rsquo;attraction, mais vous ne savez toujours pas si votre itinéraire &hellip; </p>
+</div></div><div class="entry-footer"><div class="button-wrap"><a href="https://istanbulle.com/2024/les-plus-beaux-chateaux-a-decouvrir-a-istanbul-lors-de-vos-vacances-en-turquie/" class="btn-readmore">Lire la Suite<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div></div></article><!-- #post-37 -->
+</main><!-- #main -->
+<nav class="navigation pagination" aria-label="Pagination des publications">
+<h2 class="screen-reader-text">Pagination des publications</h2>
+<div class="nav-links"><span aria-current="page" class="page-numbers current"><span class="meta-nav screen-reader-text">Page </span>1</span>
+<a class="page-numbers" href="https://istanbulle.com/page/2/"><span class="meta-nav screen-reader-text">Page </span>2</a>
+<span class="page-numbers dots">…</span>
+<a class="page-numbers" href="https://istanbulle.com/page/5/"><span class="meta-nav screen-reader-text">Page </span>5</a>
+<a class="next page-numbers" href="https://istanbulle.com/page/2/">Suivant<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path d="M0,12,12,0,5.564,12,12,24Z" transform="translate(12 24) rotate(180)" fill="#121212"/></svg></a></div>
+</nav>    
+</div><!-- #primary -->
+<aside id="secondary" class="widget-area" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+<section id="recent-posts-3" class="widget widget_recent_entries">
+<h2 class="widget-title" itemprop="name">Billets récents</h2>
+<ul>
+<li>
+<a href="https://istanbulle.com/2025/turkiye-pourquoi-choisir-cette-destination-complete-pour-vos-vacances-dete-ideales/">Türkiye : pourquoi choisir cette destination complète pour vos vacances d&rsquo;été idéales</a>
+</li>
+<li>
+<a href="https://istanbulle.com/2025/istanbul-les-meilleurs-endroits-pour-sortir-le-soir-et-vibrer-au-rythme-de-la-ville/">Istanbul : les meilleurs endroits pour sortir le soir et vibrer au rythme de la ville</a>
+</li>
+<li>
+<a href="https://istanbulle.com/2025/istanbul-autrement-5-lieux-secrets-a-explorer-absolument/">Istanbul autrement : 5 lieux secrets à explorer absolument</a>
+</li>
+<li>
+<a href="https://istanbulle.com/2024/la-turquie-et-les-brics-une-strategie-dalliance-economique-en-pleine-evolution/">La Turquie et les BRICS, une stratégie d&rsquo;alliance économique en pleine évolution</a>
+</li>
+<li>
+<a href="https://istanbulle.com/2024/le-meilleur-moment-pour-visiter-istanbul/">Le meilleur moment pour visiter Istanbul</a>
+</li>
+<li>
+<a href="https://istanbulle.com/2024/les-etrangers-peuvent-ils-vivre-de-maniere-permanente-en-turquie/">Les étrangers peuvent-ils vivre de manière permanente en Turquie ?</a>
+</li>
+</ul>
+</section><section id="media_image-3" class="widget widget_media_image"><h2 class="widget-title" itemprop="name">Istanbulle ou le voyage d&rsquo;une vie</h2><img width="300" height="200" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB5JREFUGBntwTEBAAAAwiD7p14IX2AAAAAAAAAAcAgeeAABD6RTzgAAAABJRU5ErkJggg==" class="image wp-image-29  attachment-medium size-medium lazyload" alt="Partir vivre en Turquie" style="max-width: 100%; height: auto;" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-300x200.jpeg" data-srcset="https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-300x200.jpeg 300w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-1024x682.jpeg 1024w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-768x512.jpeg 768w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-90x60.jpeg 90w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-800x530.jpeg 800w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-420x280.jpeg 420w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280.jpeg 1280w" data-sizes="auto" data-eio-rwidth="300" data-eio-rheight="200"/><noscript><img width="300" height="200" src="https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-300x200.jpeg" class="image wp-image-29  attachment-medium size-medium" alt="Partir vivre en Turquie" style="max-width: 100%; height: auto;" decoding="async" srcset="https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-300x200.jpeg 300w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-1024x682.jpeg 1024w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-768x512.jpeg 768w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-90x60.jpeg 90w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-800x530.jpeg 800w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280-420x280.jpeg 420w, https://istanbulle.com/wp-content/uploads/2022/12/woman-g1b34c21a4_1280.jpeg 1280w" sizes="(max-width: 300px) 100vw, 300px" data-eio="l"/></noscript></section><section id="media_gallery-3" class="widget widget_media_gallery"><div id='gallery-1' class='gallery galleryid-37 gallery-columns-2 gallery-size-thumbnail'><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2022/les-hotels-troglodytes-a-decouvrir-a-cappadoce/cappadocia-g89ac0b5be_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Des hôtels originaux à découvrir" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/cappadocia-g89ac0b5be_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/cappadocia-g89ac0b5be_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Des hôtels originaux à découvrir" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2022/les-meilleurs-hotels-de-luxe-ou-sejourner-a-antalya-en-turquie/antalya-gbe1bd724d_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Les plus beaux hôtels à Antalya" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/antalya-gbe1bd724d_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/antalya-gbe1bd724d_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Les plus beaux hôtels à Antalya" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2024/les-plus-beaux-chateaux-a-decouvrir-a-istanbul-lors-de-vos-vacances-en-turquie/kucuksu-palace-g4fa02d99e_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Les plus beaux châteaux à Istanbul." decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/kucuksu-palace-g4fa02d99e_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/kucuksu-palace-g4fa02d99e_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Les plus beaux châteaux à Istanbul." decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2024/les-plats-traditionnels-les-plus-delicieux-turcs/shawarma-ga80ca8db9_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Les meilleurs plats turcs" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/shawarma-ga80ca8db9_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Les meilleurs plats turcs" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2022/permis-de-sejour-humanitaire-en-turquie-ses-avantages-ses-conditions-et-comment-lobtenir/istanbul-g21f1aef1e_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Obtenir un permis de séjour en Turquie" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/istanbul-g21f1aef1e_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/istanbul-g21f1aef1e_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Obtenir un permis de séjour en Turquie" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2022/antalya-un-paradis-pour-le-tourisme-en-turquie/tourist-ge32f0d1bd_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Le développement du tourisme à Antalya" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/tourist-ge32f0d1bd_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/tourist-ge32f0d1bd_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Le développement du tourisme à Antalya" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2022/les-endroits-a-visiter-a-ankara-pour-simpregner-de-la-culture-turque/mosque-geb99e85d8_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Les choses à voir à Ankara" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/mosque-geb99e85d8_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/mosque-geb99e85d8_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Les choses à voir à Ankara" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2022/le-monde-de-lentrepreneuriat-en-turquie/istanbul-g0f3d0ad86_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Créer son entreprise en Turquie" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/istanbul-g0f3d0ad86_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/istanbul-g0f3d0ad86_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Créer son entreprise en Turquie" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2022/les-meilleures-choses-a-faire-a-istanbul-pour-savourer-le-vrai-charme-de-la-ville-orientale/istanbul-gb6cd89b20_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Les choses à voir à Istanbul" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/istanbul-gb6cd89b20_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/istanbul-gb6cd89b20_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Les choses à voir à Istanbul" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2022/quels-documents-sont-necessaires-pour-acheter-un-bien-immobilier-en-turquie/city-gc9ba1a8f8_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Investir dans l&#039;immobilier en Turquie" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/city-gc9ba1a8f8_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/city-gc9ba1a8f8_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Investir dans l&#039;immobilier en Turquie" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/2024/les-etrangers-peuvent-ils-vivre-de-maniere-permanente-en-turquie/cami-g7762c7eff_1280/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="Les séjours en Turquie" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-150x150.jpeg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/12/cami-g7762c7eff_1280-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="Les séjours en Turquie" decoding="async" data-eio="l"/></noscript></a>
+</div></figure><figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a href='https://istanbulle.com/mt-sample-background/'><img width="150" height="150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC" class="attachment-thumbnail size-thumbnail lazyload" alt="" decoding="async" data-src="https://istanbulle.com/wp-content/uploads/2022/11/mt-sample-background-150x150.jpg" data-eio-rwidth="150" data-eio-rheight="150"/><noscript><img width="150" height="150" src="https://istanbulle.com/wp-content/uploads/2022/11/mt-sample-background-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" data-eio="l"/></noscript></a>
+</div></figure>
+</div>
+</section><section id="categories-3" class="widget widget_categories"><h2 class="widget-title" itemprop="name">Catégories</h2>
+<ul>
+<li class="cat-item cat-item-4"><a href="https://istanbulle.com/turquie/culture/">Culture</a>
+</li>
+<li class="cat-item cat-item-6"><a href="https://istanbulle.com/turquie/economie/">Economie</a>
+</li>
+<li class="cat-item cat-item-2"><a href="https://istanbulle.com/turquie/hotels/">Hôtels</a>
+</li>
+<li class="cat-item cat-item-3"><a href="https://istanbulle.com/turquie/la-turquie/">La Turquie</a>
+</li>
+<li class="cat-item cat-item-9"><a href="https://istanbulle.com/turquie/quoi-voir-a-istanbul/">Quoi voir à Istanbul ?</a>
+</li>
+<li class="cat-item cat-item-8"><a href="https://istanbulle.com/turquie/recettes/">Recettes</a>
+</li>
+<li class="cat-item cat-item-5"><a href="https://istanbulle.com/turquie/tourisme/">Tourisme</a>
+</li>
+<li class="cat-item cat-item-7"><a href="https://istanbulle.com/turquie/villes/">Villes</a>
+</li>
+</ul>
+</section><section id="block-8" class="widget widget_block"></section><section id="media_video-3" class="widget widget_media_video"><h2 class="widget-title" itemprop="name">Sélection vidéo</h2><div style="width:100%;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-37-1" preload="metadata" controls="controls"><source type="video/youtube" src="https://youtu.be/UCJ6hkz1vys?_=1"/><a href="https://youtu.be/UCJ6hkz1vys">https://youtu.be/UCJ6hkz1vys</a></video></div></section><section id="archives-3" class="widget widget_archive"><h2 class="widget-title" itemprop="name">Archives</h2>
+<ul>
+<li><a href='https://istanbulle.com/2025/07/'>juillet 2025</a></li>
+<li><a href='https://istanbulle.com/2025/06/'>juin 2025</a></li>
+<li><a href='https://istanbulle.com/2025/04/'>avril 2025</a></li>
+<li><a href='https://istanbulle.com/2024/11/'>novembre 2024</a></li>
+<li><a href='https://istanbulle.com/2024/10/'>octobre 2024</a></li>
+<li><a href='https://istanbulle.com/2024/08/'>août 2024</a></li>
+<li><a href='https://istanbulle.com/2024/07/'>juillet 2024</a></li>
+<li><a href='https://istanbulle.com/2024/06/'>juin 2024</a></li>
+<li><a href='https://istanbulle.com/2024/05/'>mai 2024</a></li>
+<li><a href='https://istanbulle.com/2024/04/'>avril 2024</a></li>
+<li><a href='https://istanbulle.com/2024/03/'>mars 2024</a></li>
+<li><a href='https://istanbulle.com/2024/02/'>février 2024</a></li>
+<li><a href='https://istanbulle.com/2024/01/'>janvier 2024</a></li>
+<li><a href='https://istanbulle.com/2023/11/'>novembre 2023</a></li>
+<li><a href='https://istanbulle.com/2023/10/'>octobre 2023</a></li>
+<li><a href='https://istanbulle.com/2023/09/'>septembre 2023</a></li>
+<li><a href='https://istanbulle.com/2023/08/'>août 2023</a></li>
+<li><a href='https://istanbulle.com/2023/07/'>juillet 2023</a></li>
+<li><a href='https://istanbulle.com/2023/06/'>juin 2023</a></li>
+<li><a href='https://istanbulle.com/2023/05/'>mai 2023</a></li>
+<li><a href='https://istanbulle.com/2023/04/'>avril 2023</a></li>
+<li><a href='https://istanbulle.com/2023/03/'>mars 2023</a></li>
+<li><a href='https://istanbulle.com/2023/02/'>février 2023</a></li>
+<li><a href='https://istanbulle.com/2023/01/'>janvier 2023</a></li>
+<li><a href='https://istanbulle.com/2022/12/'>décembre 2022</a></li>
+</ul>
+</section></aside><!-- #secondary -->
+            
+</div><!-- .container/ -->        
+</div><!-- .error-holder/site-content -->
+<footer id="colophon" class="site-footer" itemscope itemtype="http://schema.org/WPFooter">
+<div class="footer-t">
+<div class="container">
+<div class="grid column-2">
+<div class="col">
+<section id="recent-posts-6" class="widget widget_recent_entries">
+<h2 class="widget-title" itemprop="name">Articles récents</h2>
+<ul>
+<li>
+<a href="https://istanbulle.com/2025/turkiye-pourquoi-choisir-cette-destination-complete-pour-vos-vacances-dete-ideales/">Türkiye : pourquoi choisir cette destination complète pour vos vacances d&rsquo;été idéales</a>
+<span class="post-date">juillet 29, 2025</span>
+</li>
+<li>
+<a href="https://istanbulle.com/2025/istanbul-les-meilleurs-endroits-pour-sortir-le-soir-et-vibrer-au-rythme-de-la-ville/">Istanbul : les meilleurs endroits pour sortir le soir et vibrer au rythme de la ville</a>
+<span class="post-date">juin 29, 2025</span>
+</li>
+</ul>
+</section>	
+</div>
+<div class="col">
+<section id="nav_menu-3" class="widget widget_nav_menu"><h2 class="widget-title" itemprop="name">Informations</h2><div class="menu-second-container"><ul id="menu-second" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-72"><a rel="privacy-policy" href="https://istanbulle.com/privacy-policy/">Confidentialité</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://istanbulle.com/mentions/">Mentions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="https://istanbulle.com/contacter-lequipe/">Contacter l&rsquo;équipe</a></li>
+</ul></div></section>	
+</div>
+</div>
+</div>
+</div>
+<div class="footer-b">
+<div class="container">
+<div class="copyright">
+<span>&copy; Copyright 2025 <a href="https://istanbulle.com/">Istanbulle</a>. Tous droits réservés. </span> Vilva | Développé par <a href="https://blossomthemes.com/" rel="nofollow" target="_blank">Blossom Themes</a>. Propulsé par <a href="https://fr.wordpress.org/" target="_blank">WordPress</a><a class="privacy-policy-link" href="https://istanbulle.com/privacy-policy/" rel="privacy-policy">Politique de confidentialité</a> 
+</div>
+<div class="footer-social">
+<ul class="social-networks">
+<li>
+<a href="https://www.facebook.com/people/Istanbulle/100090535864711/" target="_blank" rel="nofollow noopener">
+<i class="fab fa-facebook-f"></i>
+</a>
+</li>    	   
+</ul>
+</div>
+</div>
+</div> <!-- .footer-b -->
+</footer><!-- #colophon -->
+<button class="back-to-top">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="translate(-1789 -1176)"><rect width="24" height="2.667" transform="translate(1789 1176)" fill="#fff"/><path d="M-215.453,382.373-221.427,372l-5.973,10.373h4.64v8.293h2.667v-8.293Z" transform="translate(2022.427 809.333)" fill="#fff"/></g></svg>
+</button>
+</div><!-- #page -->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/vilva\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- <link rel='stylesheet' id='mediaelement-css' href='https://istanbulle.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wp-mediaelement-css' href='https://istanbulle.com/wp-includes/js/mediaelement/wp-mediaelement.min.css' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//istanbulle.com/wp-content/cache/wpfc-minified/l8l8ta9v/dkdwi.css" media="all"/>
+<script type="text/javascript" id="eio-lazy-load-js-before">
+/* <![CDATA[ */
+var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"threshold":0,"use_dpr":1};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min.js?ver=820" id="eio-lazy-load-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+localeData[""].domain = domain;
+wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2025-02-06 12:02:14+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"fr"},"This contact form is placed in the wrong place.":["Ce formulaire de contact est plac\u00e9 dans un mauvais endroit."],"Error:":["Erreur\u00a0:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+/* ]]> */
+</script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+"api": {
+"root": "https:\/\/istanbulle.com\/wp-json\/",
+"namespace": "contact-form-7\/v1"
+}
+};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/themes/vilva/js/all.min.js?ver=6.1.1" id="all-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/themes/vilva/js/v4-shims.min.js?ver=6.1.1" id="v4-shims-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/themes/vilva/js/owl.carousel.min.js?ver=2.3.4" id="owl-carousel-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/themes/vilva/js/owlcarousel2-a11ylayer.min.js?ver=0.2.1" id="owlcarousel2-a11ylayer-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+<script type="text/javascript" id="vilva-js-extra">
+/* <![CDATA[ */
+var vilva_data = {"rtl":"","auto":"1","loop":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/themes/vilva/js/custom.min.js?ver=1.2.8" id="vilva-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/themes/vilva/js/modal-accessibility.min.js?ver=1.2.8" id="vilva-modal-js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6Leljl0jAAAAAOk1f_4KK_X3x9dZroi5p-fp6Atr&amp;ver=3.0" id="google-recaptcha-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="wpcf7-recaptcha-js-before">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {
+"sitekey": "6Leljl0jAAAAAOk1f_4KK_X3x9dZroi5p-fp6Atr",
+"actions": {
+"homepage": "homepage",
+"contactform": "contactform"
+}
+};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://istanbulle.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1" id="wpcf7-recaptcha-js"></script>
+<script type="text/javascript" id="mediaelement-core-js-before">
+/* <![CDATA[ */
+var mejsL10n = {"language":"fr","strings":{"mejs.download-file":"T\u00e9l\u00e9charger le fichier","mejs.install-flash":"Vous utilisez un navigateur qui n\u2019a pas le lecteur Flash activ\u00e9 ou install\u00e9. Veuillez activer votre extension Flash ou t\u00e9l\u00e9charger la derni\u00e8re version \u00e0 partir de cette adresse\u00a0: https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Plein \u00e9cran","mejs.play":"Lecture","mejs.pause":"Pause","mejs.time-slider":"Curseur de temps","mejs.time-help-text":"Utilisez les fl\u00e8ches droite\/gauche pour avancer d\u2019une seconde, haut\/bas pour avancer de dix secondes.","mejs.live-broadcast":"\u00c9mission en direct","mejs.volume-help-text":"Utilisez les fl\u00e8ches haut\/bas pour augmenter ou diminuer le volume.","mejs.unmute":"R\u00e9activer le son","mejs.mute":"Muet","mejs.volume-slider":"Curseur de volume","mejs.video-player":"Lecteur vid\u00e9o","mejs.audio-player":"Lecteur audio","mejs.captions-subtitles":"L\u00e9gendes\/Sous-titres","mejs.captions-chapters":"Chapitres","mejs.none":"Aucun","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanais","mejs.arabic":"Arabe","mejs.belarusian":"Bi\u00e9lorusse","mejs.bulgarian":"Bulgare","mejs.catalan":"Catalan","mejs.chinese":"Chinois","mejs.chinese-simplified":"Chinois (simplifi\u00e9)","mejs.chinese-traditional":"Chinois (traditionnel)","mejs.croatian":"Croate","mejs.czech":"Tch\u00e8que","mejs.danish":"Danois","mejs.dutch":"N\u00e9erlandais","mejs.english":"Anglais","mejs.estonian":"Estonien","mejs.filipino":"Filipino","mejs.finnish":"Finnois","mejs.french":"Fran\u00e7ais","mejs.galician":"Galicien","mejs.german":"Allemand","mejs.greek":"Grec","mejs.haitian-creole":"Cr\u00e9ole ha\u00eftien","mejs.hebrew":"H\u00e9breu","mejs.hindi":"Hindi","mejs.hungarian":"Hongrois","mejs.icelandic":"Islandais","mejs.indonesian":"Indon\u00e9sien","mejs.irish":"Irlandais","mejs.italian":"Italien","mejs.japanese":"Japonais","mejs.korean":"Cor\u00e9en","mejs.latvian":"Letton","mejs.lithuanian":"Lituanien","mejs.macedonian":"Mac\u00e9donien","mejs.malay":"Malais","mejs.maltese":"Maltais","mejs.norwegian":"Norv\u00e9gien","mejs.persian":"Perse","mejs.polish":"Polonais","mejs.portuguese":"Portugais","mejs.romanian":"Roumain","mejs.russian":"Russe","mejs.serbian":"Serbe","mejs.slovak":"Slovaque","mejs.slovenian":"Slov\u00e9nien","mejs.spanish":"Espagnol","mejs.swahili":"Swahili","mejs.swedish":"Su\u00e9dois","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turc","mejs.ukrainian":"Ukrainien","mejs.vietnamese":"Vietnamien","mejs.welsh":"Ga\u00e9lique","mejs.yiddish":"Yiddish"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17" id="mediaelement-core-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js" id="mediaelement-migrate-js"></script>
+<script type="text/javascript" id="mediaelement-js-extra">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/mediaelement/wp-mediaelement.min.js" id="wp-mediaelement-js"></script>
+<script type="text/javascript" src="https://istanbulle.com/wp-includes/js/mediaelement/renderers/vimeo.min.js?ver=4.2.17" id="mediaelement-vimeo-js"></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.227 seconds, on July 29, 2025 @ 5:42 am -->

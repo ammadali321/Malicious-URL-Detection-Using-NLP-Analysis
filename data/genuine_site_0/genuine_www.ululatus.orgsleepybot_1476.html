@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<!-- - - - - page head start - - - - -->
+	
+	<!-- - - - - content-type / charset declaration - - - - -->
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	
+	<!-- - - - - include stylesheets - - - - -->
+	<link rel="stylesheet" type="text/css" href="/ululatus.css" media="screen, projection" />
+	
+	
+	<!-- - - - - include favicon for all pages - - - - -->
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<!-- - - - - page title - - - - -->
+	
+	<title>ululatus.org - SleepyBot</title>
+	
+	<meta name="author" content="ululatus.org" />
+	<meta name="description" content="ululatus.org" />
+	<meta name="keywords" content="SleepyBot, IRC bot, sleep, sleep scripting language, jIRCii scripts, sleep extensions, open source" />
+	<meta name="language" content="en" />
+	<meta name="robots" content="INDEX,FOLLOW" />
+	<meta name="revisit-after" content="7 days" />
+	
+	<!-- - - - - page head end - - - - -->
+</head>
+	<!-- - - - - end head - begin body - - - - -->
+<body>
+
+	
+	<div id="iemenu">
+	
+	
+		<p class="menutitle">ululatus.org</p>
+		<p class="menulogo">
+			<img alt="" src="/images/ululatus.png" />
+		</p>
+			<!-- - - - - menu start - - - - -->
+	<p style="color: #fff;background-color: #000;text-align: center;">Navigation</p>
+	<div id="menulist">
+		<ul id="menuitem">
+		
+			<li><a href="/" title="Home">Home</a></li>
+		
+
+		
+			<li><a href="/shuteye/" title="Shuteye Editor">Shuteye</a></li>
+		
+
+		
+		
+
+			
+			<li class="menuLI">SleepyBot .
+			
+			
+			<ul class="menuitems">
+			
+				<li><a href="/sleepybot/examples/" title="Examples">Examples</a></li>
+			
+			
+				<li><a href="/sleepybot/functions/" title="Functions">Functions</a></li>
+			
+			
+				<li><a href="/sleepybot/events/" title="Events">Events</a></li>
+			
+			
+				<li><a href="/sleepybot/variables/" title="Variables">Variables</a></li>
+			
+			
+				<li><a href="/sleepybot/predicates/" title="Predicates">Predicates</a></li>
+			
+				</ul>
+			</li>
+
+
+		
+		
+		
+			<li><a href="/sleep_jircii/" title="Sleep/jIRCii Extensions">Sleep/jIRCii</a></li>
+		
+
+		
+		
+			<li><a href="/contact/" title="Contact">Contact</a></li>
+		
+		
+		
+			<li><a href="/links/" title="Links">Links</a></li>
+		
+		</ul>
+	</div>
+	
+	<!-- - - - - menu end - - - - -->
+
+
+		
+<div>
+	<p style="color: #fff;background-color: #000;text-align: center;">&nbsp;+&nbsp;+&nbsp;+&nbsp;</p>
+	<p class="menulogo">
+		<a href="http://sleep.dashnine.org/"><img style="margin: 15px 0px 6px 0px; border: 0px;" alt="Get Sleep Scripting Runtime" title="Sleep Scripting Language" src="/images/sleep.png"></img></a>
+	</p>
+</div>
+
+		
+	</div>
+
+
+	<!-- - - - - page content start - - - - -->
+
+	<div id="pagecontent">
+		<p class="pagetitle"><span style="margin-left: 10px;">SleepyBot</span></p>
+		<p class="pagetext">
+<!-- #include virtual="${include_dir}content.php?links" -->
+<br />
+<span class="fett">SleepyBot - What's that?</span><br />
+<br />
+	SleepyBot is a PircBot implementation which uses Sleep as its scripting language.
+	You do not need to write java code and compile it. You just have to write scripts in Sleep
+	and run them with SleepyBot. All (or almost all?) things you can do with a PircBot can be done with 
+	SleepyBot and a bot-script. See <a class="links" title="" href="/sleepybot/examples/">Examples <img style="border:0;" alt="" src="/images/link.png" /></a>
+<br />
+<br />
+
+<span class="fett">Download: SleepyBot 1.1 (for Sleep 2.1)</span> <br />
+</p>
+<ul style="list-style-type:none;">
+<li><a class="links" title="SleepyBot JAR file" href="sleepybot.jar">sleepybot.jar <img alt="" src="/images/link.png" /></a> (Size: 112K)
+Contains SleepyBot classes only, requires pircbot.jar(1.4.6) and sleep.jar(2.1u3).</li>
+<li><a class="links" title="SleepyBot All JAR file" href="sleepybot-all.jar">sleepybot-all.jar <img alt="" src="/images/link.png" /></a> (Size: 438K)
+Contains SleepyBot, PircBot(1.4.6) and Sleep(2.1u3) classes.</li>
+<li><a class="links" title="SleepyBot Sources" href="sleepybot-src.zip">sleepybot-src.zip <img alt="" src="/images/link.png" /></a> (Size: 324K)
+Contains the SleepyBot source files, an ant build script and sleep.jar(2.1u3) and pircbot.jar(1.4.6).</li>
+</ul>
+<p class="pagetext">
+<br />
+
+<span class="fett">Changes</span><br />
+</p>
+<ul>
+	<li>added &quot;identify&quot; function that is new in PircBot 1.4.6</li>
+	<li>fixed a typo in the onPing method (it checked for &amp;onVersion instead for &amp;onPing)</li>
+	<li>introduced the &quot;bot&quot; environment: the event handling functions and the init function of the bot script 
+	are no longer added as functions to Sleep's environment. They are passed directly to the ScriptedBot class. See the example 
+	on this page and the examples on the <a class="links" href="examples/" title="Examples">examples <img alt="" src="/images/link.png" /></a> 
+	page. You may run your existing bot scripts without changes with &quot;-Dsleepybot.mode=old-fashioned&quot; but it is recommended to 
+	change to the new style.
+	</li>
+	
+</ul>
+<p class="pagetext">
+<br />
+
+<span class="fett">Step by step to your first bot script</span><br />
+<br />
+First your script needs a function called &quot;init&quot;.
+The init function is the entry point of the script.
+It is called when the botscript has been parsed 
+without exception into a runnable block.
+Here you set up the bot as you would do in the 
+constructor of a PircBot. It should contain a 
+call to connectServer(server [, port[, password]])
+or a call to a function which contains a call to 
+that function.
+<br />
+</p>
+
+<pre style="margin-left: 25px;background-color: #ccc;margin-right: 25px;padding: 10px;">
+bot init {
+  setName('MyFirstBot');
+  # connects to irc.freenode.net using port 6667 and no password.
+  connectServer('irc.freenode.net');
+}
+</pre>
+
+<p class="pagetext">
+Next we do something if our bot has successfully connected to the server: we join a channel at this server.
+We do this in the &quot;onConnect&quot; function which is called when the bot is connected to the server.<br />
+</p>
+
+<pre style="margin-left: 25px;background-color: #ccc;margin-right: 25px;padding: 10px;">
+bot init {
+  setName('MyFirstBot');
+  # connects to irc.freenode.net using port 6667 and no password.
+  connectServer('irc.freenode.net');
+}
+
+bot onConnect {
+  joinChannel('#MyChannel');
+}
+
+</pre>
+
+<p class="pagetext">
+After joining the channel we want to do something uselful. Your bot tells us 
+the actual time and date if a user typed &quot;!time&quot;.
+</p>
+
+<pre style="margin-left: 25px;background-color: #ccc;margin-right: 25px;padding: 10px;">
+bot init {
+  setName('MyFirstBot');
+  # connects to irc.freenode.net using port 6667 and no password.
+  connectServer('irc.freenode.net'); 
+}
+
+bot onConnect {
+  joinChannel('#MyChannel');
+}
+
+# onMessage($1(channel),$2(sender),$3(login),$4(hostmask),$5(message))
+bot onMessage {
+  if ( $5 eq '!time') {
+  	sendMessage( $1, [[new java.util.Date] toString]);
+  }
+}
+
+</pre>
+
+<p class="pagetext">
+Ok, provided you saved the bot script as &quot;myfirst.bot&quot;, we can now run the bot:<br />
+</p>
+<pre style="margin-left: 25px;background-color: #ccc;margin-right: 25px;padding: 10px;">
+  java -jar sleepybot.jar myfirst.bot
+  (sleep.jar and pircbot.jar required)
+</pre>
+
+<p class="pagetext">
+or:<br />
+</p>
+<pre style="margin-left: 25px;background-color: #ccc;margin-right: 25px;padding: 10px;">
+  java -jar sleepybot-all.jar myfirst.bot 
+</pre>
+
+<p class="pagetext">
+<br />
+<span class="fett">License</span><br />
+<br />
+SleepyBot is published under the <a class="links" title="GNU General Public License (GPL)" href="gpl.txt">GNU General Public License (GPL) <img alt="" src="/images/link.png" /></a>
+
+<br />
+<br />
+<br />
+<span class="fett">Download: SleepyBot 1.0 </span> <span class="fett" style="color: #cc0000"> runs with Sleep 2.0 only!</span><br />
+</p>
+<ul style="list-style-type:none;">
+<li><a class="links" title="SleepyBot 1.0 JAR file" href="sleepybot-1.0.jar">sleepybot-1.0.jar <img alt="" src="/images/link.png" /></a> (Size:  80K)
+Contains SleepyBot 1.0 classes only, requires pircbot.jar and sleep.jar.</li>
+<li><a class="links" title="SleepyBot 1.0 All JAR file" href="sleepybot-1.0-all.jar">sleepybot-1.0-all.jar <img alt="" src="/images/link.png" /></a> (Size: 297K)
+Contains SleepyBot 1.0, PircBot(1.4.4) and Sleep(2.0) classes.</li>
+<li><a class="links" title="SleepyBot 1.0 Sources" href="sleepybot-1.0-src.zip">sleepybot-1.0-src.zip <img alt="" src="/images/link.png" /></a> (Size: 256K)
+Contains the SleepyBot 1.0 source files, an ant build script and sleep.jar(2.0) and pircbot.jar(1.4.4).</li>
+<li><a class="links" title="SleepyBot 1.0 Examples" href="sleepybot-1.0-examples.zip">sleepybot-1.0-examples.zip <img alt="" src="/images/link.png" /></a> (Size: 2.7K)
+Contains the SleepyBot 1.0 examples</li>
+</ul>
+<p class="pagetext">
+<br />
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+		</p>
+
+		<p class="pagetitle" style="text-align: left;">
+			<span style="margin-left: 10px;">ululatus.org</span>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a style="text-decoration: none; color: #fff; font-size: 0.7em;" title="Validate" href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.ululatus.org%2Fsleepybot%2F">Valid&nbsp;XHTML&nbsp;1.0!</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a style="text-decoration: none; color: #fff; font-size: 0.7em;" title="Validate" href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.ululatus.org%2Fsleepybot%2F&amp;usermedium=all">Valid&nbsp;CSS!</a>			
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- /www/htdocs/w0056597/sleepybot/content.shtml --><span style="color: white;font-weight: normal;font-size: 8pt;font-style: italic;padding:0;border:0;margin:0;text-align: right;">Last&nbsp;modified&nbsp;16&nbsp;Oct&nbsp;2008&nbsp;17:32</span>
+		</p>
+		
+	</div>
+	
+	<!-- - - - - page content end - - - - -->
+
+</body>
+</html>

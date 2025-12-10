@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 no-js"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 no-js"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Golden Harvest Theatre in Honolulu, HI - Cinema Treasures</title>
+    <meta content="The last of the Hawaiian ethnic movie theatres was sold to make way for a Christian Broadcasting center. The Golden Harvest was a twin theatre loca..." name="description">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  
+    <script src="//use.typekit.com/voa4cfk.js" type="text/javascript"></script>
+    <script>
+      //<![CDATA[
+        try{Typekit.load();}catch(e){}
+      //]]>
+    </script>
+    <script async="" src="//www.googletagmanager.com/gtag/js?id=UA-2710707-1"></script>
+    <script>
+      //<![CDATA[
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-2710707-1');
+      //]]>
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
+    <script src="//cdn.apple-mapkit.com/mk/5.x.x/mapkit.js" type="text/javascript"></script>
+    <script src="/assets/common.js?1745249885" type="text/javascript"></script>
+    <script>
+        //<![CDATA[
+          $(document).ready(function () {
+        
+            // Setup global pano variable
+            // so we can keep track of pano
+            // window.pano = '';
+        
+            // Functions
+            function color() {
+              status = $("#map").attr("data_status");
+              if (status == 'open') {
+                color = '#38B257';
+              } else {
+                color = '#A3121B';
+              }
+              return color;
+            }
+        
+            function name() {
+              return $("#map").attr("data_name")
+            }
+        
+            function latitude() {
+              var latitude = parseFloat($("#map").attr("data_latitude"))
+              return latitude;
+            }
+        
+            function longitude() {
+              var longitude = parseFloat($("#map").attr("data_longitude"))
+              return longitude;
+            }
+        
+            // function update_position() {
+            //   position = pano.getPosition().lat() + ", " + pano.getPosition().lng();
+            //   console.log("New location: " + position);
+            //   $('#theater_custom_geolocation').attr("value", position);
+            // }
+            //
+            // function update_pov() {
+            //   pov = pano.getPov().heading + "," + pano.getPov().pitch;
+            //   console.log("New pov: " + pov);
+            //   $('#theater_custom_pov').attr("value", pov);
+            // }
+        
+            // function load_streetview() {
+            //   $("#streetview").show();
+            //
+            //   // Custom street view options
+            //   if ($('#streetview').attr("data-custom-pov") != '') {
+            //
+            //     // Grab saved values
+            //     var saved_geolocation = $('#streetview').attr("data-custom-geolocation").split(',');
+            //     var custom_latitude = saved_geolocation[0];
+            //     var custom_longitude = saved_geolocation[1];
+            //     var saved_pov = $('#streetview').attr("data-custom-pov").split(',');
+            //     var custom_heading = parseInt(saved_pov[0]);
+            //     var custom_pitch = parseInt(saved_pov[1]);
+            //
+            //     // Assemble options
+            //     var point = new google.maps.LatLng(custom_latitude, custom_longitude);
+            //     var panoramaOptions = {
+            //       position: point,
+            //       pov: {
+            //         heading: custom_heading,
+            //         pitch: custom_pitch
+            //       },
+            //       zoom: 1
+            //     };
+            //
+            //   // Default street view options
+            //   } else {
+            //
+            //     var point = new google.maps.LatLng(latitude(), longitude());
+            //     var panoramaOptions = {
+            //       position: point,
+            //       zoom: 1
+            //     };
+            //
+            //   }
+            //
+            //   // Load streetview
+            //   pano = new google.maps.StreetViewPanorama(document.getElementById('streetview'), panoramaOptions);
+            //   pano.setVisible(true);
+            //
+            //   // Watch streetview for pov and position changes
+            //   google.maps.event.addListener(pano, "pov_changed", function() {
+            //      var info = pano.getPov();
+            //      console.log(info['pitch']);
+            //      console.log(info['heading']);
+            //
+            //      update_pov();
+            //   });
+            //   google.maps.event.addListener(pano, "links_changed", function() {
+            //     update_position();
+            //   });
+            //
+            // }
+        
+            // Toggle photo/street view
+            // $('#photo_link').click(function() {
+            //   $("#photo").show();
+            //   $("#streetview").hide();
+            //   $("#update_streetview").hide();
+            //   $('#photo_link').addClass('hide_link');
+            //   $('#streetview_link').removeClass('hide_link');
+            // });
+            // $('#streetview_link').click(function() {
+            //   $("#photo").hide();
+            //   load_streetview();
+            //   $("#update_streetview").animate({opacity:"1"}, 1000).slideDown();
+            //   $("#photo").hide();
+            //   $('#photo_link').removeClass('hide_link');
+            //   $('#streetview_link').addClass('hide_link');
+            // });
+        
+            // Ajax form for updating street view
+            // $('#update_streetview').ajaxForm(function() {
+            //     alert("Thanks for updating this street view!");
+            //     $('#update_streetview').slideUp();
+            //     if ($('#photo_link').length) {
+            //       $('#photo_link').click(function() {
+            //         location.reload();
+            //       });
+            //     }
+            // });
+        
+            // Hide photo link if unavailable
+            // if ($('#photo').length == 0) {
+            //   $('#photo_link').hide();
+            //   $('.divider').hide();
+            //   load_streetview();
+            //   $("#update_streetview").show();
+            //   $('#streetview_link').hide();
+            // }
+        
+            // Hide street view if unavailable
+            // if ($('#streetview').attr("data-custom-pov") != '') {
+            //   var saved_geolocation = $('#streetview').attr("data-custom-geolocation").split(',');
+            //   var custom_latitude = saved_geolocation[0];
+            //   var custom_longitude = saved_geolocation[1];
+            //   var point = new google.maps.LatLng(custom_latitude, custom_longitude);
+            // } else {
+            //   var point = new google.maps.LatLng(latitude(), longitude());
+            // }
+            // var streetview = new google.maps.StreetViewService();
+            // streetview.getPanoramaByLocation(point, 50, function(data, status) {
+            //   if (status != 'OK') {
+            //     $('#map_navigation').hide();
+            //     $('#update_streetview').hide();
+            //     $('#streetview').hide();
+            //   }
+            // });
+        
+            // Favorites
+            if ($("#links a").attr("href").match(/members/)) {
+              if ($("#favorite img").attr("src").match(/unfavorite/)) {
+                $("#favorite img").hover(
+                  function () {
+                    $("#favorite img").attr("src", '/images/app/favorite.png');
+                    $("#favorite span").hide();
+                    $("#favorite em").html("Add this theater to your favorites");
+                    $("#favorite em").show();
+                  },
+                  function () {
+                    $("#favorite img").attr("src", '/images/app/unfavorite.png');
+                    $("#favorite span").show();
+                    $("#favorite em").hide();
+                  }
+                );
+              } else {
+                $("#favorite img").hover(
+                  function () {
+                    $("#favorite img").attr("src", '/images/app/unfavorite.png');
+                    $("#favorite span").hide();
+                    $("#favorite em").html("Remove theater from your favorites");
+                    $("#favorite em").show();
+                  },
+                  function () {
+                    $("#favorite img").attr("src", '/images/app/favorite.png');
+                    $("#favorite span").show();
+                    $("#favorite em").hide();
+                  }
+                );
+              }
+            } else {
+              $("#favorite img").hover(
+                function () {
+                  $("#favorite img").attr("src", '/images/app/favorite.png');
+                  $("#favorite span").hide();
+                  $("#favorite em").html("Login to favorite this theater");
+                  $("#favorite em").show();
+                },
+                function () {
+                  $("#favorite img").attr("src", '/images/app/unfavorite.png');
+                  $("#favorite span").show();
+                  $("#favorite em").hide();
+                }
+              );
+            }
+        
+            // Load MapKit JS
+            mapkit.init({
+            authorizationCallback: function(done) {
+              done("eyJraWQiOiJSTUI2MzM2NU5QIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiI5OVhYUDJXRjM4IiwiaWF0IjoxNzQ0OTkzMjUyLCJleHAiOjE3NzY1MjkyNTJ9.pC5hHKIaZ0fZBtKTbHK-qwMFvG19o4zRD-dCMqpJYGiaXtAfyNq2Infw21s9uDYSGBR2cLl_CLB58SYjbVHhlg");
+            }
+          })
+          ;
+        
+            // Set region size
+            var region = new mapkit.CoordinateRegion(
+              new mapkit.Coordinate(latitude(), longitude()),
+              new mapkit.CoordinateSpan(0.004, 0.004)
+            );
+        
+            // Create map
+            let map = new mapkit.Map("map", {
+              center: new mapkit.Coordinate(latitude(), longitude()),
+              region: region
+            });
+        
+            // Create map marker
+            const coordinates = new mapkit.Coordinate(latitude(), longitude())
+            const annotation = new mapkit.MarkerAnnotation(coordinates, {
+              color: color(),
+              title: name(),
+              glyphImage: {
+                1: "/apple-touch-icon.png"
+              }
+            })
+        
+            // Add map marker to map
+            map.addAnnotation(annotation)
+        
+          });
+        //]]>
+      </script>
+    <link href="/stylesheets/app.css?1745249885" media="all" rel="stylesheet" type="text/css" />
+  
+  </head>
+  <body class="theaters show" lang="en">
+    <div id="wrap">
+      <div id="header">
+        <div id="stars"></div>
+        <div id="primary">
+          <a href="/"><img alt="Cinema Treasures" height="88" id="logo" src="/images/app/logo.png?1745249885" width="218" /></a>
+          <div id="links">
+            <a href="/login?return_to=https%3A%2F%2Fcinematreasures.org%2Ftheaters%2F6334">Login</a> or
+            <a href="/signup">Sign up</a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/theaters">Theaters</a></li>
+              <li><a href="/photos">Photos</a></li>
+              <li><a href="/video">Video</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="secondary">
+          <span>
+            <div id="slogan">Your guide to movie theaters</div>
+            <div id="search_bar">
+              <form action="/theaters" method="get">
+                <input id="query" name="q" placeholder="Search by Theater, Location, or Zipcode" type="text" />
+                <input name="" type="submit" value="Search" />
+              </form>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div id="page">
+        <div id="content">
+          <div id="leaderboard">
+            <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle" data-ad-client="ca-pub-4430601922741422" data-ad-slot="6230392620" style="display:inline-block;width:970px;height:90px"></ins>
+            <script>
+              //<![CDATA[
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              //]]>
+            </script>
+          </div>
+          <div id="breadcrumb">
+            <ul>
+              <li><a href="/theaters">Movie Theaters</a></li>
+              <li><a href="/theaters/united-states">United States</a></li>
+              <li><a href="/theaters/united-states/hawaii">Hawaii</a></li>
+              <li><a href="/theaters/united-states/hawaii/honolulu">Honolulu</a></li>
+              <li><a href="/theaters/united-states/hawaii/honolulu/downtown">Downtown</a></li>
+              <li><a href="/theaters/6334">Golden Harvest Theatre</a></li>
+            </ul>
+          </div>
+          <h1>Golden Harvest Theatre</h1>
+          <h2 id="address">
+            <div class="adr">
+              <div class="street-address">1152 Smith Street,</div>
+              <span class="locality">
+                Honolulu,
+              </span>
+              <span class="region">HI</span>
+              <span class="postal-code">96817</span>
+            </div>
+          </h2>
+          <div id="facts">
+            <div class="fact red"><a href="/theaters?status=closed">Closed</a></div>
+            <div class="fact"><a href="/screens/2">2 screens</a></div>
+            <div class="fact"><a href="/seats/1">740 seats</a></div>
+          </div>
+          <p id="favorite">
+            <img alt="Unfavorite" height="22" src="/images/app/unfavorite.png?1745249885" title="Login to favorite this theater" width="23" />
+            <span>
+              1 person
+              favorited this theater
+            </span>
+            <em></em>
+          </p>
+          <ul class="tabs">
+            <li class="active"><a href="/theaters/6334">Overview</a></li>
+            <li><a href="/theaters/6334/photos">Photos</a></li>
+            <li><a href="/theaters/6334/comments">Comments</a></li>
+          </ul>
+          <div id="theater">
+            <div class="vcard" id="stats">
+              <div data_latitude="21.3124758" data_longitude="-157.8615134" data_name="Golden Harvest Theatre" data_status="closed" id="map">
+                <div class="location"></div>
+              </div>
+              <div id="view_larger_map">
+                <a href="/theaters/6334/map">View larger map &rarr;</a>
+              </div>
+              <div class="adsense">
+                <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle" data-ad-client="ca-pub-4430601922741422" data-ad-slot="5812031164" style="display:inline-block;width:300px;height:250px"></ins>
+                <script>
+                  //<![CDATA[
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  //]]>
+                </script>
+              </div>
+              <h3>Additional Info</h3>
+              <p>
+                <strong>Functions:</strong>
+                <a href="/functions/56">Television Studio</a>
+              </p>
+              <p>
+                <strong>Previous Names:</strong>
+                Palace Theatre, Asian Cinema Center
+              </p>
+              <h3>Nearby Theaters</h3>
+              <ul id="nearby_theaters">
+                <li>
+                  <a href="/theaters/40599"><img alt="Missing" height="24" src="/images/photos/missing.png?1745249885" width="24" /></a>
+                  <a href="/theaters/40599">Rex Theatre</a>
+                </li>
+                <li>
+                  <a href="/theaters/40741"><img alt="Tiny" height="24" src="https://photos.cinematreasures.org/production/photos/455984/1720956902/tiny.jpeg?1720956902" width="24" /></a>
+                  <a href="/theaters/40741">Novelty Theatre</a>
+                </li>
+                <li>
+                  <a href="/theaters/29492"><img alt="Tiny" height="24" src="https://photos.cinematreasures.org/production/photos/194526/1481313175/tiny.jpg?1481313175" width="24" /></a>
+                  <a href="/theaters/29492">Liberty Theatre</a>
+                </li>
+                <li>
+                  <a href="/theaters/40604"><img alt="Tiny" height="24" src="https://photos.cinematreasures.org/production/photos/455974/1720955345/tiny.jpeg?1720955345" width="24" /></a>
+                  <a href="/theaters/40604">Empress Theater</a>
+                </li>
+                <li>
+                  <a href="/theaters/29495"><img alt="Tiny" height="24" src="https://photos.cinematreasures.org/production/photos/59482/1351403612/tiny.jpg?1351403612" width="24" /></a>
+                  <a href="/theaters/29495">Risque II Theatre</a>
+                </li>
+              </ul>
+            </div>
+            <div id="photo">
+              <a href="/theaters/6334/photos"><img src="https://photos.cinematreasures.org/production/photos/102750/1402896190/large.jpg?1402896190" width="640" height="317" alt="Golden Harvest Theatre" /></a>
+            </div>
+            <div id="description">
+              <p>The last of the Hawaiian ethnic movie theatres was sold to make way for a Christian Broadcasting center. The Golden Harvest was a twin theatre located on Smith Street near Beretania Street. The theatre opened in 1981 and closed in 1995 after the operator, Golden Reserves Hawaii LTD&rsquo;s lease expired. The theatre largely ran Chinese language movies and martial arts films. While the Golden Harvest did well initially, it struggled in the last two years.</p>
+            
+              <p>The theatre&rsquo;s closing marked an end of an era for ethnic movies in Hawaii, an era that included the Japanese language Toya Theatre and Nippon Theatre, the Filipino language Zamboango Theatre, and the Chinese language Liberty Theatre. All of those theatres no longer exist.</p>
+              <div id="contributors">
+                Contributed by
+                Chuck Van Bibber
+              </div>
+            </div>
+            <div id="tickets">
+              <a href="http://www.kqzyfj.com/click-8793702-10504407">Get Movie Tickets & Showtimes</a>
+            </div>
+            <div class="adsense">
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4430601922741422" crossorigin="anonymous">
+              </script>
+              <ins class="adsbygoogle"
+              style="display:inline-block;width:336px;height:280px"
+              data-ad-client="ca-pub-4430601922741422"
+              data-ad-slot="0787365998">
+              </ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>
+            <div id="comments">
+              <h2>
+                Recent comments
+                <a href="/theaters/6334/comments">(view all 2 comments)</a>
+              </h2>
+              <div class="comment even">
+                <div class="avatar"><a href="/members/noreturn"><img alt="NoReturn" height="48" src="/images/avatars/small.png?1745249885" width="48" /></a></div>
+                <div class="body">
+                  <strong><a href="/members/noreturn">NoReturn</a></strong>
+                  <span>on</span>
+                  <a href="#comment-582852" name="comment-582852">July 13, 2016 at  4:55 pm</a>
+                  <p>Is it for sale?</p>
+                </div>
+              </div>
+              <div class="comment odd">
+                <div class="avatar"><a href="/members/rivest266"><img alt="rivest266" height="48" src="https://photos.cinematreasures.org/production/users/1477/1307916355/small.jpg?1307916355" width="48" /></a></div>
+                <div class="body">
+                  <strong><a href="/members/rivest266">rivest266</a></strong>
+                  <span>on</span>
+                  <a href="#comment-598034" name="comment-598034">March 13, 2017 at  2:34 am</a>
+                  <ul>
+                  <li><p>This opened as a twin cinema on November 12th, 1980 and not to be confused with the old Golden Harvest theater at 1378 S. Beretania, which opened on July 19th, 1975. Grand opening ad in the photo section.</p></li>
+                  <li><p>這是1980年11月12日作為一個雙電影院打開，不要與舊的金色收穫劇院在1378 S. Beretania，於1975年7月19日開幕混淆。在照片部分盛大開幕廣告。 由Google翻譯</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <form action="/theaters/6334/comments" class="new_comment" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="LBBYjcmJs11mvNHxtPPYNqLxSkM9OOEFUNiHYGbPLLE=" /></div>
+              <div id="login_prompt">
+                You must
+                <a href="/login?return_to=https%3A%2F%2Fcinematreasures.org%2Ftheaters%2F6334">login</a>
+                before making a comment.
+              </div>
+              <h2>New Comment</h2>
+              <p>
+                <textarea cols="40" disabled="disabled" id="comment_body" name="comment[body]" rows="5"></textarea>
+              </p>
+              <div class="tips">
+                <ul>
+                  <li>Contribute something to the conversation</li>
+                  <li>No personal attacks</li>
+                  <li>Stay on-topic</li>
+                  <li class="link"><a href="/community">Please read our community guidelines before posting &rarr;</a></li>
+                </ul>
+              </div>
+              <p>
+                <input disabled="disabled" id="comment_submit" name="commit" type="submit" value="Add Comment" />
+              </p>
+            </form>
+            <div id="subscriptions">
+              <img alt="Subscribe" height="32" src="/images/app/subscribe.gif?1745249885" width="48" />
+              Want to be emailed when a new comment is posted about this theater?
+              <br>
+              Just
+              <a href="/session/new">login to your account</a>
+              and subscribe to this theater.
+            </div>
+          </div>
+          <br class="clear">
+        </div>
+      </div>
+    </div>
+    <footer>
+      <span>
+        <div id="social">
+          <div class="service"><a href="http://www.facebook.com/pages/Cinema-Treasures/206217392742703"><img alt="Facebook" src="/images/icons/facebook.png?1745249885" /></a></div>
+          <div class="service"><a href="http://twitter.com/movie_theaters"><img alt="Twitter" src="/images/icons/twitter.png?1745249885" /></a></div>
+          <div class="service"><a href="http://feeds.feedburner.com/cinematreasures"><img alt="Feed" src="/images/icons/feed.png?1745249885" /></a></div>
+        </div>
+        <div id="sitemap">
+          <h3>Roger Ebert on Cinema Treasures:</h3>
+          <p>&ldquo;The ultimate web site about movie theaters&rdquo;</p>
+        </div>
+        <div id="credits">
+          <a href="/"><img alt="Cinema Treasures" height="68" src="/images/app/logo_footer.png?1745249885" width="200" /></a>
+        </div>
+        <div id="terms">
+          Cinema Treasures, LLC
+          &copy; 2000 -
+          2025.
+          Cinema Treasures is a registered trademark of Cinema Treasures, LLC.
+          <a href="/privacy">Privacy Policy</a>.
+          <a href="/terms">Terms of Use</a>.
+        </div>
+      </span>
+    </footer>
+    <script>
+      //<![CDATA[
+        try {
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', '']);
+          _gaq.push(['_trackPageview']);
+      
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        } catch(err) {
+        }
+      //]]>
+    </script>
+  </body>
+</html>

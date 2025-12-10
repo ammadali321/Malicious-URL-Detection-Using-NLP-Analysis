@@ -1,0 +1,598 @@
+
+<HTML><HEAD><TITLE>Login to Primus Webmail</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=5" />
+
+<link rel="stylesheet" href="html/login.css" type="text/css">
+
+<script language="Javascript">
+
+var Expand = 0;
+
+// Reload to the master frame if we are inside a frameset
+if (parent.frames[1]) top.window.location=self.location;
+
+function help()	{
+helpwin('loginhelp.html');
+}
+
+function switchtype()	{
+
+if(document.getElementById('mailserver').style.display == 'none')	{
+
+document.loginPage.pop3host.name="pop3hostdisable";
+document.loginPage.pop3hostexternal.name="pop3host";
+//pop3hosttext.name.value="pop3host_disabled";
+
+document.getElementById('mailserver').style.display = "";
+document.getElementById('mailservertrans').style.display = "";
+document.getElementById('externalaccount').style.display = "";
+document.getElementById('localaccount').style.display = "none";
+document.getElementById('externalinfo').style.display = "none";
+document.getElementById('localinfo').style.display = "";
+
+
+
+} else	{
+
+document.loginPage.pop3hostexternal.name="pop3hostexternal";
+document.loginPage.pop3host.name="pop3host";
+
+document.getElementById('mailserver').style.display = "none";
+document.getElementById('mailservertrans').style.display = "none";
+document.getElementById('externalaccount').style.display = "none";
+document.getElementById('localaccount').style.display = "";
+document.getElementById('externalinfo').style.display = "";
+document.getElementById('localinfo').style.display = "none";
+
+
+
+
+}
+
+}
+
+function check_newwindow()	{
+
+if(Expand == 1)	{
+
+//	var login = document.loginPage.LoginType[document.loginPage.LoginType.selectedIndex].value;
+    var login;
+
+    for (i=0;i<document.loginPage.LoginType.length;i++) {
+      if (document.loginPage.LoginType[i].checked) {
+        login = document.loginPage.LoginType[i].value;
+      }
+    }
+
+	if(login == 'xp')	{
+	document.getElementById('NewWindowDisplayTr').style.display='';
+	document.getElementById('NewWindowDisplay').style.display='';
+	} else if(login == 'xul')	{
+	document.getElementById('NewWindowDisplayTr').style.display='';
+	document.getElementById('NewWindowDisplay').style.display='';
+	} else	{
+	document.getElementById('NewWindowDisplayTr').style.display='none';
+	document.getElementById('NewWindowDisplay').style.display='none';
+	}
+
+	}
+
+}
+
+function check_default()	{
+
+// Check if Webadmin set to use a default interface
+}
+
+function BrowserVerChk() {
+	this.Type = false;
+	this.TypeLong = false;
+	this.Version = false;
+	this.LateGen = false;
+
+	if (navigator.appVersion.indexOf("MSIE") != -1) {
+		this.Type = "MSIE";
+		this.TypeLong = "Internet Explorer";
+		var TempArray = navigator.appVersion.split("MSIE");
+		this.Version = parseFloat(TempArray[1]);
+		if (this.Version >= 6) this.LateGen = true;
+		if (parseFloat(navigator.appVersion.split("Trident/")[1]) >= 7) this.Type = "MSIE11";
+	} else if (navigator.userAgent.indexOf("Firefox") != -1) {
+		this.Type = "Firefox";
+		this.TypeLong = "Firefox";
+		var VersionIndex = navigator.userAgent.indexOf("Firefox") + 8;
+		this.Version = (navigator.userAgent.charAt(VersionIndex) + "." + navigator.userAgent.charAt(VersionIndex + 2)) * 1;
+		if (this.Version >= 1.5) this.LateGen = true;
+	} else if(navigator.userAgent.indexOf("Safari") != -1)	{
+		this.Type = "Safari";
+		this.TypeLong = "Safari";
+		this.LateGen = true;
+	}
+
+}
+
+var BrowserVer = new BrowserVerChk();
+
+function BrowserVsInterface() {
+	document.body.style.cursor = "wait";
+	var SelectedInterface = document.loginPage.LoginType.selectedIndex;
+	var ConfirmUser = false;
+	if (SelectedInterface > 0) {
+		if (SelectedInterface == 1 && BrowserVer.LateGen != true) {
+			if (BrowserVer.Type == "Firefox") {
+				ConfirmUser = "Firefox Version 1.5 or later";
+			} else {
+				ConfirmUser = "Internet Explorer Version 6 or later";
+			}
+		} else if (SelectedInterface == 2 && (BrowserVer.Type != "MSIE" || BrowserVer.LateGen != true)) {
+			ConfirmUser = "Internet Explorer Version 6 or later";
+		} else if (SelectedInterface == 3 && BrowserVer.Type != "Firefox") {
+			ConfirmUser = "Firefox Version 1.0 or later";
+		} else {
+			ConfirmUser = false;
+		}
+	}
+
+	if (ConfirmUser != false) {
+		if (confirm ("Your Browser does not match the recommended requirements for this Interface.\nYou are using" + BrowserVer.TypeLong + " Version " + BrowserVer.Version + ", You need " + ConfirmUser + ".\nAre you sure you want to continue logging in?") == true) {
+			ConfirmUser = false;
+		}
+	}
+
+	if (ConfirmUser == false) {
+		document.loginPage.submit();
+	} else {
+		document.body.style.cursor = "";
+	}
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return 0;
+}
+
+function setField(theForm, theValue)	{
+
+if(!theValue)
+	return;
+
+try{
+  theForm.value = theValue;
+} catch(e) {
+	//alert(e);
+ return 0;
+}
+
+}
+
+function setRadio(theForm, theValue) {
+    if (theValue == "xp") {
+        try{
+        theForm[1].checked = true;
+        } catch(e) {
+
+        }
+    } else if (theValue=="xul") {
+        try{
+        theForm[2].checked = true;
+        } catch(e) {
+
+        }
+   } else {
+        try{
+          theForm[0].checked = true;
+        } catch(e) {
+        }
+    }
+}
+
+function setCheckbox(theForm, theValue)	{
+	try{
+	theForm.checked = true;
+	} catch(e) {
+
+	}
+}
+function setSelect(theForm, theValue)	{
+
+try{
+
+	var i;
+	for(i=theForm.length-1;i>=0;i--)
+	{
+
+	if(theForm[i].value == theValue) {
+		theForm[i].selected = true;
+		break;
+	}
+	}
+
+} catch(e) {
+	//alert(e);
+ return 0;
+}
+
+}
+function RememberMe()	{
+
+
+var Remember = new Array();
+
+RememberArray = readCookie('atmailuser');
+if(RememberArray)	{
+RememberValues = RememberArray.split(/&|%26/);
+for (var i in RememberValues)	{
+	var n = i;
+	n++;
+	//alert(i + ":" + RememberValues[i]);
+
+	if(RememberValues[i] == 'MailServer' || RememberValues[i] == 'NewWindow' || RememberValues[i] == 'Language' || RememberValues[i] == 'username' || RememberValues[i] == 'pop3host' || RememberValues[i] == 'LoginType' || RememberValues[i] == 'MailType')
+	Remember[RememberValues[i]] = RememberValues[n];
+
+}
+
+setField(document.loginPage.username, Remember["username"]);
+var type = 'standalone';
+
+if(Remember["MailType"] == 'file' && type != 'standalone')	{
+	setSelect(document.loginPage.pop3host, Remember["pop3host"]);
+	setSelect(document.loginPage.Language, Remember["Language"]);
+	setSelect(document.loginPage.LoginType, Remember["LoginType"]);
+	setSelect(document.loginPage.NewWindow, Remember["NewWindow"]);
+	setCheckbox(document.loginPage.RememberMe, '1');
+	document.loginPage.password.focus();
+	check_default();
+    check_interface();
+	check_newwindow();
+
+} else if(Remember["username"])	{
+	// Switch the External mailboxes
+	if(type != 'standalone')
+	switchtype();
+
+	setField(document.loginPage.pop3hostexternal, Remember["pop3host"]);
+//	setField(document.loginPage.MailServer, Remember["MailServer"]);
+	setSelect(document.loginPage.Language, Remember["Language"]);
+//	setSelect(document.loginPage.LoginType, Remember["LoginType"]);
+	setRadio(document.loginPage.LoginType, Remember["LoginType"]);
+    setSelect(document.loginPage.NewWindow, Remember["NewWindow"]);
+//	setSelect(document.loginPage.MailType, Remember["MailType"]);
+	setCheckbox(document.loginPage.RememberMe, '1');
+	document.loginPage.password.focus();
+	check_default();
+    check_interface();
+	check_newwindow();
+} else	{
+
+	// Else, there is no remember me set, or a brand new login
+	browsercheck();
+	document.loginPage.username.focus();
+	check_default();
+    check_interface();
+	check_newwindow();
+}
+
+} else	{
+	// If a user logged off, don't show the cookie of the users details if set
+	browsercheck();
+	document.loginPage.username.focus();
+	check_default();
+    check_interface();
+	check_newwindow();
+	return;
+}
+
+}
+
+function ExpandOptions()	{
+
+	Expand = 1;
+	document.getElementById('LanguageDisplayTr').style.display='';
+	document.getElementById('LanguageDisplay').style.display='';
+
+	document.getElementById('RememberMeDisplayTr').style.display='';
+	document.getElementById('RememberMeDisplay').style.display='';
+
+	document.getElementById('MoreOptionsTr').style.display='none';
+	document.getElementById('MoreOptions').style.display='none';
+
+//if(document.getElementById('mailserver').style.display == '')	{
+//	document.getElementById('protocol').style.display = "";
+//	document.getElementById('protocoltrans').style.display = "";
+//}
+	check_newwindow();
+
+}
+
+function check_interface() {
+        if (BrowserVer.Type == "MSIE") {
+          document.getElementById('AdvancedIEDisplay').style.display='';
+        } else if (BrowserVer.Type == "Firefox") {
+          document.getElementById('AdvancedMozillaDisplay').style.display='';
+        }
+}
+
+
+</script>
+
+<script language="Javascript" src="javascript/browsercheck.js"></script>
+<script language="Javascript" src="html/english/javascript/xp.js"></script>
+<script language="Javascript">
+function disclaimer() {
+open('index.php?func=disclaimer', '_blank', 'width=600,height=400,left=100,top=100,scrollbars=yes,resizable=yes,status=yes,toolbar=no');
+}
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-135015-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body onload="RememberMe(); ExpandOptions();" bgcolor="#FFFFFF" link="#6699CC" vlink="#6699CC" alink="#336699">
+<center>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+
+
+	<td bgcolor="#FFFFFF"><table width="540" border="0" align="center" cellpadding="0" cellspacing="0" style="border-right: 1px solid #FFFFFF;">
+		<tr>
+		  <td width="15" bgcolor="#FFFFFF"  style="border-right: 1px solid #FFFFFF;"><p><img src="imgs/trans.gif" width="15" height="83"></p></td>
+		  <td bgcolor="#FFFFFF" style="border-top: 1px solid #FFFFFF;">&nbsp;<img src="imgs/primus/primus-logo.jpg"></td>
+		</tr>
+	  </table>
+
+
+	  <table width="540" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+		  <td width="15" nowrap bgcolor="#FFFFFF"><img src="imgs/trans.gif" height='8' width='15'></td>
+		  <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="6">
+			  <tr>
+				<td style="border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" >
+					<tr>
+						<td align="center">
+							<div style="padding: 5px; border: 1px solid red; width:100%;">
+								<font color="red" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+									<center>
+										Primus will never ask for your personal login information via email. 
+										<br>
+										If you receive an email message asking you for this information, please delete it immediately.
+										<br><br>
+										Primus ne demandera jamais votre information d'ouverture par couriel. 
+										Si vous recevez un couriel vous demandant cette information, supprimez-le imm&eacute;diatement. 
+									</center>
+								</font>
+							</div>
+							<br>
+						</td>
+					</tr>
+					<tr >
+					  <td ><font class="loginhead"><b>
+
+Login Details
+</b></font></td>
+					</tr>
+					<tr>
+					  <td><img src="imgs/loginline.gif" width="500" height="1"></td>
+					</tr>
+					<tr>
+					  <td>
+<font class="logintext"><img src="imgs/trans.gif" width='4'>Please  provide login and password information to access your  mail-account
+
+
+						</font></td>
+					</tr>
+				  </table>
+				  <br>
+				  <table width="100%" border="0" cellpadding="2" cellspacing="0" style="background-repeat: no-repeat; background-image: url(imgs/securebackground.gif)">
+					<FORM action="atmail.php" method="post" name="loginPage" target="_top" onsubmit="BrowserVsInterface(); return false;">
+                        <input name="MailServer" type="hidden" value="localhost:5143">
+                        <input name="pop3host" type="hidden" value="magma.ca">
+                        <input name="MailType" type="hidden" value="imap">
+					  <tr >
+						<td width="54" >&nbsp;</td>
+						<td width="144" align="right" valign="top" nowrap > <input name="username" type=text class="logininput" id="username" value="">
+						</td>
+						<td width="18" ><img src="imgs/atsymbol.gif" width="18" height="17"></td>
+						<td align="left" valign="top" >
+
+
+<div id="localaccount" style="display:none">
+							<select class="loginselect" name="pop3host">
+
+							</select>
+						  </div>
+						  <div id="externalaccount" class="inputtext" style="display:">
+                            <b>magma.ca</b>
+						  </div>
+
+						  </td>
+
+						<td width="131" >&nbsp;</td>
+					  </tr>
+
+					  <tr >
+						<td colspan="5" height='6'><img src="imgs/trans.gif" height='8'></td>
+					  </tr>
+					  <tr >
+						<td >&nbsp;</td>
+						<td colspan="2" align="right" ><font class="inputtext">Password:</font></td>
+						<td align="left" ><input name="password" type=password class="logininput" id="password" value=""></td>
+						<td width="131" >&nbsp;</td>
+					  </tr>
+					  <tr >
+						<td colspan="5" height='6'><img src="imgs/trans.gif" height='8'></td>
+					  </tr>
+<!--
+					  <tr >
+						<td >&nbsp;</td>
+						<td colspan="2" align="right" ><font class="inputtext">Interface:</font></td>
+						<td align="left" ><select name="LoginType" class="loginselect" onchange="check_newwindow()">
+							<option value="simple">Low-speed (Dial-up)</option>
+							<option value="ajax">Simple (Ajax)</option>
+							<option value="xp">High-speed (DSL)</option>
+							<option value="xul">High-speed (DSL)</option>
+						  </select> </td>
+						<td width="131" >&nbsp;</td>
+					  </tr>
+-->
+					  <tr id="MoreOptionsTr">
+						<td colspan="5" height='6'><img src="imgs/trans.gif" height='8'></td>
+					  </tr>
+					  <tr id="MoreOptions">
+						<td >&nbsp;</td>
+						<td colspan="2" align="right" ><font class="inputtext">More Options:</font></td>
+						<td align="left" > <a href="javascript:ExpandOptions()"><img src="imgs/expandoptions.gif" width="25" height="25" border="0"></a> </td>
+						<td width="131" >&nbsp;</td>
+					  </tr>
+<tr>
+  <td>&nbsp;</td>
+  <td colspan="2" align="right">
+    <font class="inputtext">Interface</font>
+  </td>
+  <td align="left">
+    <input type="radio" name="LoginType" value="simple" onclick="check_newwindow();">
+      <font class="logintext" style="font-size: 11px">Low-speed (Dial-up)</font>
+    </input>
+  </td>
+</tr>
+<tr id="AdvancedIEDisplay" style="display: none">
+  <td>&nbsp;</td>
+  <td colspan="2">&nbsp;</td>
+  <td align="left">
+    <input type="radio" name="LoginType" value="xp" onclick="check_newwindow();">
+      <font class="logintext" style="font-size: 11px">High-speed (DSL)</font>
+    </input>
+  </td>
+</tr>
+<tr id="AdvancedMozillaDisplay" style="display: none">
+  <td>&nbsp;</td>
+  <td colspan="2">&nbsp;</td>
+  <td align="left">
+    <input type="radio" name="LoginType" value="xul" onclick="check_newwindow();">
+      <font class="logintext" style="font-size: 11px">High-speed (DSL)</font>
+    </input>
+  </td>
+</tr>
+
+					  <tr id="NewWindowDisplayTr" style="display:none">
+						<td colspan="5" height='6'><img src="imgs/trans.gif" height='8'></td>
+					  </tr>
+
+					  <tr id="NewWindowDisplay" style="display:none">
+						<td >&nbsp;</td>
+						<td colspan="2" align="right" ><font class="inputtext">Open in new window:</font></td>
+						<td align="left" >
+						<select name="NewWindow" class="loginselect">
+
+							<option id="NewWindow" value="1">Yes</option>
+							<option id="NewWindow" value="0" selected>No</option>
+
+</select>
+						</td>
+						<td >&nbsp;</td>
+					  </tr>
+
+					  <tr id="LanguageDisplayTr" style="display:none">
+						<td colspan="5" height='6'><img src="imgs/trans.gif" height='8'></td>
+					  </tr>
+					  <tr id="LanguageDisplay" style="display:none">
+						<td >&nbsp;</td>
+						<td colspan="2" align="right" ><font class="inputtext">Language:</font></td>
+						<td align="left" ><select name="Language" class="loginselect">
+							<option value="" selected>Default</option> <option value='english'>English</option>
+<option value='french'>Francais</option>
+
+						  </select>
+						</td>
+						<td >&nbsp;</td>
+					  </tr>
+
+<tr id="RememberMeDisplayTr" style="display:none">
+	<td colspan="5" height='6'><img src="imgs/trans.gif" height='8'></td>
+</tr>
+<tr id="RememberMeDisplay" style="display:none">
+	<td >&nbsp;</td>
+	<td colspan="2" align="right" ><font class="inputtext">Remember Me:</font></td>
+	<td align="left" > <input type='checkbox' name='RememberMe' value='1'></td>
+	<td width="131" >&nbsp;</td>
+</tr>
+
+					  <tr >
+						<td >&nbsp;</td>
+						<td align="right" >&nbsp;</td>
+						<td width="18" >&nbsp;</td>
+						<td align="right" >&nbsp;<input type="submit" name="Submit" value="Login" class="loginsubmit">&nbsp;&nbsp;</td>
+						<td width="131" >&nbsp;</td>
+					  </tr>
+					</form>
+				  </table>
+
+				  <br>
+				  <img src="imgs/loginline.gif" width="500" height="1"></td>
+			  </tr>
+			</table></td>
+		</tr>
+	  </table>
+	  <table width="554" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+		  <td width="15" nowrap bgcolor="#FFFFFF"><img src="imgs/trans.gif" height='8' width='30'></td>
+		  <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+					  <td valign="top" style="border-left: 1px solid #FFFFFF;">
+<table width="100%" border="0" cellspacing="1" cellpadding="2" >
+						  <tr >
+							<td ><div align="center"><font class="loginhead"><b>
+
+<a href="javascript:disclaimer();">Acceptable Use Policy</a> | 
+
+<a href="javascript:helpwin('loginhelp.html')">User Guide</a> | <a href="http://www.primus.ca/">About</a>
+
+
+</b></font></div></td>
+						  </tr>
+						  <tr>
+							<td><div align="center"><font class="logintext">© 2021 Primus. All rights reserved.</font></div></td>
+						  </tr>
+                          <tr>
+						</table></td>
+					  <td bgcolor="#FFFFFF" width="76" height="63">&nbsp;</td>
+					</tr>
+					<tr>
+					  <td bgcolor="#FFFFFF" width="449" height="19">&nbsp;</td>
+					  <td bgcolor="#FFFFFF"><img src="imgs/trans.gif" width="90" height="19"></td>
+					</tr>
+				  </table></td>
+			  </tr>
+			</table></td>
+		</tr>
+	  </table> </td>
+  </tr></table>
+</center>
+<script language="Javascript">
+document.loginPage.pop3host.name="pop3hostdisable";
+document.loginPage.pop3hostexternal.name="pop3host";
+</script>
+
+
+</body>
+</html>
+

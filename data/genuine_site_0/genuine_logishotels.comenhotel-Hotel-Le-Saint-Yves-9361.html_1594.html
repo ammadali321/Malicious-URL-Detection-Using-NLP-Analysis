@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-mobile-web-app-capable" content="YES" />
+    <link rel="preload" as="font" href="https://www.logishotels.com/templates/sw_logis/fonts/roboto/Roboto-Regular-op.woff2"  crossorigin="anonymous"   type="application/font-woff2" />
+    <link rel="preload" as="font" href="https://www.logishotels.com/templates/sw_logis/fonts/roboto/Roboto-Regular-op.woff" crossorigin="anonymous" type="font/woff" />
+    <link rel="preload" as="font" href="https://www.logishotels.com/templates/sw_logis/fonts/roboto/roboto-medium-op.woff2"  crossorigin="anonymous"  type="application/font-woff2" />
+    <link rel="preload" as="font" href="https://www.logishotels.com/templates/sw_logis/fonts/roboto/roboto-medium-op.woff" crossorigin="anonymous" type="font/woff" />
+    <link rel="preload" as="font" href="https://www.logishotels.com/templates/sw_logis/fonts/roboto/roboto-bold-op.woff2"  crossorigin="anonymous"  type="application/font-woff2" />
+    <link rel="preload" as="font" href="https://www.logishotels.com/templates/sw_logis/fonts/roboto/roboto-bold-op.woff" crossorigin="anonymous" type="font/woff" />
+
+	<link rel="icon" type="image/x-icon" href="/templates/sw_logis/favicon.ico?v=63" />
+    <link rel="apple-touch-icon" href="/templates/sw_logis/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="16x16" href="/templates/sw_logis/apple-touch-icon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="32x32" href="/templates/sw_logis/apple-touch-icon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/templates/sw_logis/apple-touch-icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/templates/sw_logis/apple-touch-icon-512x512.png" />
+
+
+    <meta charset="utf-8">
+	<base href="https://www.logishotels.com/">
+	<meta name="generator" content="Logishotels">
+	<meta name="msvalidate.01" content="3C65A7C266731AC1645F6A2ADA14FE05" /><title>Find my hotel</title>
+	<link href="https://www.logishotels.com/fr/trouver-hotel" rel="alternate" hreflang="fr-FR">
+	<link href="https://www.logishotels.com/en/find-my-hotel" rel="alternate" hreflang="en-GB">
+	<link href="https://www.logishotels.com/de/mein-hotel-finden" rel="alternate" hreflang="de-DE">
+	<link href="https://www.logishotels.com/es/encontrar-mi-hotel" rel="alternate" hreflang="es-ES">
+	<link href="https://www.logishotels.com/it/trova-un-hotel" rel="alternate" hreflang="it-IT">
+	<link href="https://www.logishotels.com/nl/mijn-hotel-vinden" rel="alternate" hreflang="nl-NL">
+	<link href="/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+<link href="/plugins/system/jce/css/content.css?badb4208be409b1335b815dde676300e" rel="stylesheet" />
+	<link href="/templates/sw_logis/uikit/css/uikit.min.css?v=63" rel="stylesheet" media="screen,print" as="style" />
+	<link href="/templates/sw_logis/css/theme.css?v=63" rel="stylesheet" media="screen,print" as="style" />
+<script src="/media/vendor/jquery/js/jquery.min.js?3.7.1"></script>
+	
+	<script src="/media/com_swhotel/js/resp/jquery-ui.min.1.12.1.js?v=63"></script>
+	<script src="/templates/sw_logis/uikit/js/uikit.min.js?v=63"></script>
+	<script src="https://www.logishotels.com/plugins/system/swseoscripts/assets/js/script.js?v=63"></script>
+	<script src="https://10959617.collect.igodigital.com/collect.js"></script>
+	<script>var base_url = "https://www.logishotels.com/";</script>
+	<script>var autocomplete_displayall = "1";</script>
+	<script>var url_hotels = "/en/hotels";</script>
+	<script>var url_restaurants = "/en/restaurants";</script>
+	<script>var erreurs = new Array();</script>
+	<script>erreurs["err_global"] = "Please check the conditions of occupation for the selected rooms";</script>
+	<script>erreurs["err_affectation_personnes_chambres"] = "Please fill in the blank the missing information";</script>
+	<script>erreurs["chambres"] = "Please choose a room";</script>
+	<script>erreurs["adultes"] = "Please indicate the number of adults per room";</script>
+	<script>erreurs["maxoccupsansenf"] = "Le nombre d'adultes sans enfants dépasse le max";</script>
+	<script>erreurs["err_maxoccup"] = "Le nombre d'occupation dépasse le max";</script>
+	<script>erreurs["err_minoccup"] = "Le nombre d'occupation est moins du min";</script>
+	<script>erreurs["destination"] = "Please select a destination";</script>
+	<script>erreurs["options"] = "Please select valid criteria";</script>
+	<script>erreurs["nbenfants"] = "Veuillez renseigner l\'age des enfants";</script>
+	<script>erreurs["datein_empty"] = "Please select a departure date";</script>
+	<script>var textes = new Array();</script>
+	<script>textes["adultes"] = "Adult(s)";</script>
+	<script>textes["enfants"] = "Children";</script>
+	<script>textes["composition"] = "Enter the people in  <strong>the room %s </strong>";</script>
+	<script>textes["suivant"] = "Next";</script>
+	<script>textes["precedent"] = "Previous";</script>
+	<script>textes["nuits"] = "Night(s)";</script>
+	<script>textes["COM_SWHOTEL_ENFANT_AGE_DE_ENFANT"] = "Child's age";</script>
+	<script>textes["COM_SWHOTEL_AN"] = "year old";</script>
+	<script>textes["COM_SWHOTEL_ANS"] = "years old";</script>
+	<script>textes["voyageurs"] = "travellers";</script>
+	<script>textes["voyageur"] = "traveller";</script>
+	<script>textes["COM_SWHOTEL_SELECTIONNER"] = "Select";</script>
+	<script>textes["chambre"] = "room";</script>
+	<script>textes["chambres"] = "Rooms";</script>
+	<script>textes["chambre_selectionne"] = "room selected";</script>
+	<script>textes["chambres_selectionne"] = "rooms selected";</script>
+	<script>textes["personnes"] = "travellers";</script>
+	<script>erreurs["url_annex"] = "https://www.logishotels.com/en/firstresult";</script>
+	<script>textes["COM_SWHOTEL_ERROR_CHAMBRE_VOYAGEUR"] = "Enter rooms for all your travellers";</script>
+	<script>textes["COM_SWHOTEL_MUTIPLE_VOYAGEUR_NO_CHAMBRE"] = " travellers do not have any rooms yet. What would you like to do?";</script>
+	<script>textes["COM_SWHOTEL_SINGLE_VOYAGEUR_NO_CHAMBRE"] = " traveller do not have any rooms yet. What would you like to do?";</script>
+	<script>textes["COM_SWHOTEL_COMPLETER_RESERVATION"] = "Complete the booking";</script>
+	<script>textes["COM_SWHOTEL_VOYAGEURS"] = "travellers";</script>
+	<script>textes["COM_SWHOTEL_MANQUE_VOYAGEURS_1"] = "Add travellers to the room!";</script>
+	<script>textes["COM_SWHOTEL_MANQUE_VOYAGEURS_2"] = " The room accommodates at least ";</script>
+	<script>textes["COM_SWHOTEL_CHAMBRE_MAX_OCCUP_1"] = "This room can accommodate up to";</script>
+	<script>textes["COM_SWHOTEL_CHAMBRE_MAX_OCCUP_2"] = " adults and ";</script>
+	<script>textes["COM_SWHOTEL_CHAMBRE_MAX_OCCUP_3"] = " children";</script>
+	<script>textes["COM_SWHOTEL_AJOUTER_CHAMBRES"] = "Add rooms";</script>
+	<script>textes["COM_SWHOTEL_VOTRE_SELECTION"] = "Your choice";</script>
+	<script>textes["COM_SWHOTEL_GLOBAL_CHAMBRE"] = "room";</script>
+	<script>textes["COM_SWHOTEL_GLOBAL_PERSONNE_S"] = "person(s)";</script>
+	<script>textes["adulte"] = "adult";</script>
+	<script>textes["adultes"] = "adults";</script>
+	<script>textes["enfant"] = "child";</script>
+	<script>textes["enfants"] = "children";</script>
+	<script>textes["pour"] = "Pour";</script>
+	<script>textes["COM_SWHOTEL_DESTINATIONS"] = "DESTINATIONS";</script>
+	<script>textes["COM_SWHOTEL_HOTELS"] = "HOTELS";</script>
+	<script>textes["COM_SWHOTEL_MES_DERNIERS_RECHERCHE"] = "Latest searches";</script>
+	<script>textes["nbr_pers"] = " trav";</script>
+	<script>var ifmobile = "false";</script>
+	<script>var viewmap = "false";</script>
+	<script>var view = "hotelsearch";</script>
+	<script>var markers = new Array();</script>
+	<script>var show_prices = true;</script>
+	<script>var hotels = new Array();</script>
+	<script>var hotels_init = new Array();</script>
+	<script>var markersArray = new Array();</script>
+	<script>var first_loaded = true;</script>
+	<script>var first_loaded_gplace = true;</script>
+	<script>var texte = new Array();</script>
+	<script>texte["COM_SWHOTEL_TRIER_PAR"] = "Sort by";</script>
+	<script>texte["COM_SWHOTEL_DISTANCE"] = "Distance";</script>
+	<script>texte["COM_SWHOTEL_GLOBAL_TRI"] = "Sort";</script>
+	<script>texte["COM_SWHOTEL_SE_RENSEIGNER_SUR_PLACE"] = "Find out more on site";</script>
+	<script>texte["COM_SWHOTEL_CAL_ALT_VALIDER"] = "Confirm";</script>
+	<script>msg_txt_date_indispo = "This date ### is unavailable. Select another date.";</script>
+	<script>msg_txt_dates_indispos = "Those dates ### are unavailable. Select another date";</script>
+	<script>msg_txt_date_minimum_stay = "Book a minimum of ### nights to benefit from this rate";</script>
+	<script>msg_txt_dates_minimum_stay = "For the selected dates, this hotel is available only for stays of ### or above";</script>
+	<script>msg_txt_arrivee_interdite = "Select another arrival date";</script>
+	<script>msg_txt_depart_interdit = "Select another departure date";</script>
+	<script>msg_txt_arrivee_i_depart_i = "Change your arrival and departure days to take advantage of this rate";</script>
+	<script>msg_txt_arrivee_i_minimum_stay = "Change your arrival date and book a minimum of ### nights to benefit from this rate";</script>
+	<script>msg_txt_depart_i_minimum_stay = "Change your departure date and book a minimum of ### nights to benefit from this rate";</script>
+	<script>msg_txt_depart_i_arrivee_i_minimum_stay = "Change your departure and arrival days and book a minimum of ### nights to benefit from this rate";</script>
+	<script>texte["COM_SWHOTEL_DATES_NON_FLEXIBLE_MOTEUR"] = "<span class='flexible'>Your dates aren't flexible?</span><span>Find a similar hotel</span>";</script>
+	<link href="https://www.logishotels.com/fr/trouver-hotel" rel="alternate" hreflang="x-default">
+
+
+
+<script>window.dataLayer = window.dataLayer || [];dataLayer.push({'event': 'not_logged'});</script><script>dataLayer.push({'event': 'pageView','envTemplate':'','pageName':'Find my hotel','envWork':'prod','envChannel':'desktop','envCountry':'en','envLanguage':'en','userDevice':'desktop',});</script>
+<script>
+								 /* initiation datalayer 4*/
+								  	window.dataLayer = window.dataLayer || [];
+								  	dataLayer.push({
+								  		'event' : 'page_view',
+								      	'page_type' : 'Find my hotel'
+								      	    
+								  	});
+								</script>
+
+<!-- Google Tag Manager  GTM-->
+					<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+					})(window,document,'script','dataLayer','GTM-NBGXX9J');</script>
+					<!-- End Google Tag Manager -->
+
+<script type='text/javascript'>var langpre = 'en'; </script>
+ </head>
+<body class="com_swhotel hotelsearch   marque_5">
+   
+               
+    <!-- header -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBGXX9J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header role="banner">
+        <input type="hidden" name="partid" value="" />
+        <nav id="headTop" class="GlobHeader uk-grid uk-grid-collapse" uk-navbar uk-sticky=" " >
+          
+            <div class="contentHeader uk-width-1-2 uk-width-2-3@m uk-width-3-5@l  uk-flex uk-flex-middle ">
+                <a href="#" uk-toggle="target: #my-MenuMobile" title="Menu mobile" class="uk-hidden@m btnMobile  uk-icon" uk-icon="menu"></a>
+                <div class="logo-head">
+                    
+<a href="/" title="Logis">
+	<img itemprop="image" class="logo-img" src="https://www.logishotels.com/images/LOGIS_HOTELS_DEPUIS_1948_LOGOTYPE_EXECUTE_POSITIF_RVB_1_1.png" data-src="https://www.logishotels.com/images/LOGIS_HOTELS_DEPUIS_1948_LOGOTYPE_EXECUTE_POSITIF_RVB_1_1.png" uk-img="" width="107" height="68" >
+</a>	                        
+                </div>
+                <div id="MenuDesktop" class="MenuHeader uk-visible@m">
+                    <div id="topMenuID">
+ 						<ul class="uk-navbar-nav  mod-list" >
+<li class="item-4732"><a href="#" class="item-1-menu-principal lien-menu-parent ">Hotels &amp; Restaurants</a></li><li class="item-4733 uk-parent"><a href="#" class="s-menu-nos-offres">Offers</a></li><li class="item-4752 uk-parent"><a href="#" class="s-menu-sous-fidelite">Loyalty</a></li><li class="item-4756 uk-parent"><a href="#" class="s-menu-nous-decouvrir">Find out more</a></li></ul>
+
+ 						 <div data-category="s-menu-nos-offres" class="SubMenuGlob uk-drop">
+ 						 	<div class="head-menu-1"></div>
+ 						 	<span class="btn-back-submenu uk-hidden@m uk-hidden@l"><i uk-icon="icon:chevron-left;ratio:0.8;" class="uk-icon"></i>Retour</span>
+ 						 	<ul class="nav menu" id="s-menu-nos-offres">
+<li class="item-4734 divider deeper parent" data-title = "Good plans" data-parent ="Good plans" ><span class="separator ">Good plans</span>
+<ul class="nav-child unstyled small"><li class="item-4735" data-title = "Last minute" data-parent ="Good plans" ><a href="https://www.logishotels.com/en/bons-plans-promotions/dernieres-minutes" class=" link-menu-burger">Last minute</a></li><li class="item-4736" data-title = "Advance booking" data-parent ="Good plans" ><a href="https://www.logishotels.com/en/bons-plans-promotions/reservations-anticipees" class=" link-menu-burger">Advance booking</a></li><li class="item-4737" data-title = "Special offers" data-parent ="Good plans" ><a href="https://www.logishotels.com/en/bons-plans-promotions/offres-speciales" class=" link-menu-burger">Special offers</a></li><li class="item-4738" data-title = "See all" data-parent ="Good plans" ><a href="https://www.logishotels.com/en/special-offers" class="lien-voir-tout link-menu-burger">See all</a></li></ul></li><li class="item-5035 divider deeper parent" data-title = "Gifts" data-parent ="Gifts" ><span class="separator ">Gifts</span>
+<ul class="nav-child unstyled small"><li class="item-5036" data-title = "Gift card" data-parent ="Gifts" ><a href="https://www.logishotels.com/en/gift/e-gift-cards" class=" link-menu-burger">Gift card</a></li><li class="item-5037" data-title = "Gift box" data-parent ="Gifts" ><a href="https://logishotels.bonkdo.com/en/networkvouchers/" class=" link-menu-burger">Gift box</a></li><li class="item-5086" data-title = "See all" data-parent ="Gifts" ><a href="https://www.logishotels.com/en/cadeaux" class="lien-voir-tout link-menu-burger">See all</a></li></ul></li><li class="item-4739 divider deeper parent" data-title = "Themed breaks" data-parent ="Themed breaks" ><span class="separator ">Themed breaks</span>
+<ul class="nav-child unstyled small"><li class="item-4740" data-title = "Culinary delights" data-parent ="Themed breaks" ><a href="https://www.logishotels.com/en/our-inspirational-stays/weekends-and-stays/weekends-and-stays-for-the-pleasure-of-good-food" class=" link-menu-burger">Culinary delights</a></li><li class="item-4741" data-title = "For lovers" data-parent ="Themed breaks" ><a href="https://www.logishotels.com/en/our-inspirational-stays/weekends-and-stays/weekends-and-romantic-breaks" class=" link-menu-burger">For lovers</a></li><li class="item-4742" data-title = "Cycling" data-parent ="Themed breaks" ><a href="https://www.logishotels.com/en/our-inspirational-stays/weekends-and-stays/weekends-and-cycling-stays" class=" link-menu-burger">Cycling</a></li><li class="item-4743" data-title = "With the family" data-parent ="Themed breaks" ><a href="https://www.logishotels.com/en/our-inspirational-stays/weekends-and-stays/weekends-and-family-stays" class=" link-menu-burger">With the family</a></li><li class="item-4744" data-title = "See all" data-parent ="Themed breaks" ><a href="https://www.logishotels.com/en/our-inspirational-stays/weekends-and-stays" class="lien-voir-tout link-menu-burger">See all</a></li></ul></li><li class="item-4745 divider deeper parent" data-title = "Services and facilities" data-parent ="Services and facilities" ><span class="separator ">Services and facilities</span>
+<ul class="nav-child unstyled small"><li class="item-4747" data-title = "Business &amp; Groups" data-parent ="Services and facilities" ><a href="https://www.logishotels.com/en/business-and-groups" class=" link-menu-burger">Business &amp; Groups</a></li><li class="item-4748" data-title = "Our pet-friendly hotels" data-parent ="Services and facilities" ><a href="https://www.logishotels.com/en/our-services-and-facilities/our-pet-friendly-hotels" class=" link-menu-burger">Our pet-friendly hotels</a></li><li class="item-4749" data-title = "Our hotels with swimming pool" data-parent ="Services and facilities" ><a href="https://www.logishotels.com/en/our-services-and-facilities/our-hotels-with-swimming-pool" class=" link-menu-burger">Our hotels with swimming pool</a></li><li class="item-5073" data-title = "Breakfast" data-parent ="Services and facilities" ><a href="https://www.logishotels.com/en/our-services-and-facilities/breakfast-included" class=" link-menu-burger">Breakfast</a></li></ul></li></ul>
+
+ 						 </div> 
+ 						 <div data-category="s-menu-sous-fidelite" class="SubMenuGlob GlobOptionMenu uk-drop uk-text-center">
+ 						  	<div class="head-menu-1"></div>
+ 						  	<span class="btn-back-submenu uk-hidden@m uk-hidden@l"><i uk-icon="icon:chevron-left;ratio:0.8;" class="uk-icon"></i>Retour</span>
+ 						 	 <ul class="nav menu" id="s-menu-sous-fidelite">
+<li class="item-4753" data-title = "Your loyalty programme" data-parent ="" ><a href="https://www.logishotels.com/en/etik-your-loyalty-program/earn-euros-with-etik" class=" link-menu-burger"><img src="/images/icon/votre-programme-de-fidelite.png" alt="Your loyalty programme" width="100" height="45" loading="lazy"><span class="image-title">Your loyalty programme</span></a></li><li class="item-4755" data-title = "FAQ | Help and questions" data-parent ="" ><a href="https://www.logishotels.com/en/help/help-fidelite-etik/help-with-the-etik-loyalty-programme" class=" link-menu-burger"><img src="/images/icon/faq-aide-et-questions.png" alt="FAQ | Help and questions" width="16" height="29" loading="lazy"><span class="image-title">FAQ | Help and questions</span></a></li></ul>
+
+ 						 </div>
+ 						  <div data-category="s-menu-nous-decouvrir" class="SubMenuGlob GlobOptionMenu uk-drop uk-text-center">
+ 						   	<div class="head-menu-1"></div>
+ 						   	<span class="btn-back-submenu uk-hidden@m uk-hidden@l"><i uk-icon="icon:chevron-left;ratio:0.8;" class="uk-icon"></i>Retour</span>
+ 						  	<ul class="nav menu" id="s-menu-nos-offres">
+<li class="item-4760" data-title = "Our hotels and accommodation" data-parent ="" ><a href="https://www.logishotels.com/en/learn-more-about-us/our-hotels-and-accommodation/our-accommodations" class=" link-menu-burger"><img src="/images/icon/nos-hotels-et-hebergements.png" alt="Our hotels and accommodation" width="37" height="34" loading="lazy"><span class="image-title">Our hotels and accommodation</span></a></li><li class="item-5053" data-title = "Our restaurants" data-parent ="" ><a href="https://www.logishotels.com/en/our-services-and-facilities/our-restaurants" class=" link-menu-burger"><img src="/images/icones-header/nos-restaurants.png" alt="Our restaurants" width="26" height="34" loading="lazy"><span class="image-title">Our restaurants</span></a></li><li class="item-4759" data-title = "Our brands : Urban, Premium, Table distinguée" data-parent ="" ><a href="https://www.logishotels.com/en/learn-more-about-us/our-brands/" class=" link-menu-burger"><img src="/images/icon/toutes-nos-marques-urbaines-premium-table-distinguee.png" alt="Our brands : Urban, Premium, Table distinguée" width="61" height="40" loading="lazy"><span class="image-title">Our brands : Urban, Premium, Table distinguée</span></a></li><li class="item-4758" data-title = "Our commitments" data-parent ="" ><a href="https://www.logishotels.com/en/learn-more-about-us/our-commitments" class=" link-menu-burger"><img src="/images/icon/nos-engagements.png" alt="Our commitments" width="28" height="30" loading="lazy"><span class="image-title">Our commitments</span></a></li></ul>
+
+ 						  </div>
+
+                    </div>
+                </div>
+                <!-- Menu mobile -->
+                <div id="my-MenuMobile" uk-offcanvas class="uk-hidden@m uk-hidden@l MenuMobile">
+                    <div id="MobileMenu" class="uk-offcanvas-bar">
+                        <div class="headerMobRe">
+                            <button class="uk-offcanvas-close" type="button" uk-close></button>
+                            <div class="logo-head">
+                                
+<a href="/" title="Logis">
+	<img itemprop="image" class="logo-img" src="https://www.logishotels.com/images/LOGIS_HOTELS_DEPUIS_1948_LOGOTYPE_EXECUTE_POSITIF_RVB_1_1.png" data-src="https://www.logishotels.com/images/LOGIS_HOTELS_DEPUIS_1948_LOGOTYPE_EXECUTE_POSITIF_RVB_1_1.png" uk-img="" width="107" height="68" >
+</a>	                        
+                            </div>
+                            <div id="HelpCompte-1" class="uk-float-right"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            
+            <!-- connexion lang-->
+            <div class="LangConnexion uk-width-1-2 uk-width-1-3@m uk-width-2-5@l ">
+                
+                <!-- lang -->
+                <div id="langDesktop" class="langDesktop ">
+                    <div id="TopLangId" class="ModLangDevis">
+                    <div class="navLanguage ">
+
+			<!--  <p class="uk-hidden@m">Language</p>-->
+         <a href="javascript:void(0);" class="MenuLangswitch btn_Bg_lang_en" title="langswitch"  ><span class="LangActiveText "></span><i uk-icon="icon:chevron-down;ratio:0.8"></i></a>
+             <div id="ModalLang" uk-dropdown="mode: click">
+                 <div class="uk-hidden@m uk-hidden@l toplang">
+                         	<div class="h3_site">Select your language</div>
+                         	  <button id="closeDropD" class="uk-close-default" type="button" uk-close></button>
+                         </div>
+                 <ul class="uk-nav uk-dropdown-nav">
+		              						 								<li class="" data-lang="fr" dir="ltr">
+									<a href="/fr/trouver-hotel" title="Français">
+																					<span class="flag_img bg-fr"></span>
+											<span class="TextFlag">Français</span>
+									</a>
+								</li>
+																			 								<li class="lang-active" data-lang="en" dir="ltr">
+									<a href="/en/find-my-hotel" title="English">
+																					<span class="flag_img bg-en"></span>
+											<span class="TextFlag">English</span>
+									</a>
+								</li>
+																			 								<li class="" data-lang="de" dir="ltr">
+									<a href="/de/mein-hotel-finden" title="Deutsch">
+																					<span class="flag_img bg-de"></span>
+											<span class="TextFlag">Deutsch</span>
+									</a>
+								</li>
+																			 								<li class="" data-lang="es" dir="ltr">
+									<a href="/es/encontrar-mi-hotel" title="Español">
+																					<span class="flag_img bg-es"></span>
+											<span class="TextFlag">Español</span>
+									</a>
+								</li>
+																			 								<li class="" data-lang="it" dir="ltr">
+									<a href="/it/trova-un-hotel" title="Italiano">
+																					<span class="flag_img bg-it"></span>
+											<span class="TextFlag">Italiano</span>
+									</a>
+								</li>
+																			 								<li class="" data-lang="nl" dir="ltr">
+									<a href="/nl/mijn-hotel-vinden" title="Nederlands">
+																					<span class="flag_img bg-nl"></span>
+											<span class="TextFlag">Nederlands</span>
+									</a>
+								</li>
+															         </ul>
+            </div>
+ 
+        
+</div>
+
+<script>
+var LangText = jQuery('.lang-active').attr('data-lang');
+jQuery('.LangActiveText').text(LangText);
+if (jQuery(window).width() < 960) {
+	 
+	jQuery('#closeDropD').click(function(){
+		 UIkit.dropdown("#ModalLang").hide();
+	});
+	jQuery(".ClssWithModal").parent().append("<div class='modalMenu MenuPagePlus' uk-dropdown='mode:click'><div class='mobHead'></div>"+jQuery(".modalMenu").html()+"</div>");		
+}else{
+ 	//jQuery(".MenuHeader").find(".uk-navbar-nav .uk-parent").appendTo(".MonCompteDesktopDiv ");
+ 	
+	
+}
+</script>	
+	 	 
+
+<form class="formdevise" name="form_devise" id="form_devise" method="post">
+        <!--<p class="uk-hidden@m ">Currency</p>-->
+        <button type="button" class="BtnDevisModal "  uk-toggle="target: #modal-Devise" >
+         
+        <span class="Devise-1"> USD</span>
+                          <span class="Devise-2 uk-hidden@m uk-hidden@l"> US DOLLAR</span>        <i uk-icon="icon:chevron-down;ratio:0.8;"></i>
+         <input type="hidden" id="devise_client" value="USD" />
+         </button>
+        <div class="ModalContainerDevise "><div id="modal-Devise" class="ModalDevise" uk-modal></div></div>
+       <input type="hidden" name="currency" id="currency" value="" />
+</form>
+	
+  
+  
+  
+                    
+                    </div>
+                </div>
+                <div class="helpMenu">
+                
+                                  
+                <a href="https://www.logishotels.com/en/help/help-with-bookings/help-with-holiday-bookings" target="_blank" uk-icon="icon:question;ratio:2.2;"></a>
+                </div>
+                <div class="connexionTop">
+                    <style>
+
+.version_mobile .uk-button-primary{background-color:var(--primary-color) !important;color:#fff !important;}
+.PanneauMonCompte .grecaptcha-badge{
+transform: scale(.70);
+    -webkit-transform: scale(0.70);
+    transform-origin: 110px 0;
+    -webkit-transform-origin: 110px 0;
+}
+#recaptchaLogin_modal{height:40px !important;}
+.PanneauMonCompte .lienPanneau{margin-top:30px;}
+</style>
+
+
+<div class="version_mobile uk-hidden@s uk-hidden@m uk-hidden@l">
+                        <a class="hors_ligne  uk-button uk-button-primary" href="#PanneauCompte" uk-toggle><i  uk-icon="icon:sw-user;ratio:1.2;"></i></a>      
+            
+          
+     
+</div>
+
+<div class="version_desktop uk-visible@s">
+                    <a class="hors_ligne uk-button uk-button-primary" href="#PanneauCompte" uk-toggle>
+                <i  uk-icon="icon:sw-user;ratio:1.2;"></i>
+                <span class="uk-visible@m">
+                    <strong>My account</strong>
+                    See my loyalty pot                </span>
+            </a>
+        </div>
+<!--  -->
+<div id="PanneauCompte" class="PanneauMonCompte" uk-offcanvas="flip: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        
+
+                    <div class="modeNonConnecter ">
+                <div class="h2_site">Log in</div>
+                <div class="PanneauEtik">
+                    <div><img src="/images/icones-header/votre-programme-de-fidelite.png" width="53" /></div>
+                    <div>
+                        <strong>The free loyalty programme.</strong>
+                        <p> Valid at the hotel and restaurant</p>
+                    </div>
+                </div>
+
+
+                    <div id="rendered-creat-account" class="Content_form rendered-form">
+                        <form id="form-rendered-creat-account-modal" action="" method="post" class="form_login_dash_modal" >
+                                        
+                            <div class="champsInput">
+
+                                <label for="card-login" class="fb-text-label">E-mail</label>
+                                <input onkeyup="this.value = this.value.toLowerCase();" value="" type="email" class="form-control" type="text" id="text-votre-email-modal" name="card-login" placeholder="Email" autocomplete="off" aria-label="E-mail" required />
+                                <span class="validate-email">Enter a valid email address</span>
+                                <span class="highlight"></span>
+                                
+
+                            </div>
+                            
+                            <div class="champsInput">
+                                <label for="card-password">Password</label>
+                                <div class="uk-position-relative">
+
+                                    <input type="password" id="password_login_modal" name="card-password" placeholder="Password"  autocomplete="off" aria-label="Password" />
+
+                                     <button type="button" class=" input-password-toggle">
+                                       <span class="icon-fw" aria-hidden="true"></span>
+                                     </button>
+                                      <span class="validate-password"> Enter your password</span>
+                                </div>
+                                <div class="uk-text-right"><a href="#ModalOptions_PasswordOublie" uk-toggle>Forgotten password ?</a></div>
+                            </div>
+
+
+                            <input type="hidden" name="option" value="com_ologis"> 
+                            <input type="hidden" name="view" value="compte"> 
+                            <input type="hidden" name="task" value="authentification"> 
+                            <input type="hidden" name="url" value="https://www.logishotels.com/my-account"> 
+                            
+                            <div class=" form-group field-button-valider">
+                                
+                                <button type="button" disabled="disabled" onclick="validateForm(this,'form-rendered-creat-account-modal','recaptchaLogin_modal');"  class="uk-button uk-button-primary btn-login" name="button-valider"  id="button-valider-modal">Log in</button> 
+
+                            </div>              
+                           <!-- #######################  BEGIN RECAPTCHA INVISIBLE #######################  -->  
+                                                   
+                            <div id='recaptchaLogin_modal'></div>                     
+                            <input id="public_key_invisible" type="hidden" value="6Le-2qgUAAAAAImRsvXfc3j93HN3p4B2fjD14R6N"/>
+                            <!-- #######################  END RECAPTCHA INVISIBLE #######################  -->  
+                        </form>
+                    </div>    
+
+
+
+                <div class="champsInput">
+                    <button class="uk-button uk-button-secondary" onclick="window.location.href='https://www.logishotels.com/create-account';">Join the loyalty program</button>
+                </div>
+                <div class="lienPanneau">
+                    <a href="https://www.logishotels.com/en/acces-a-mes-reservations">View my bookings without an account</a>
+                    <a href="https://www.logishotels.com//en/help/help-fidelite-etik/help-with-the-etik-loyalty-programme" class="besoin_daide">Help</a>
+                </div>
+            </div>
+
+
+        
+    </div>
+</div>
+
+
+
+<!-- modal -->
+<div id="ModalOptions_PasswordOublie" class="PasswordForget Content_form" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="modal-body" id="modal-send">
+            <div class="h2_site uk-modal-title uk-text-center">
+                Forgotten password ?            </div>
+            <form method="post" id="PasswordOublie" action="?option=com_ologis&task=PasswordOublie">
+                <div class="form-group field-text-votre-email">
+                    <span style="display: none;" id="msg_identifiant_invalide" class="error error_msg">
+                        COM_SWOLOGIS_EMAIL_INEXISTANT</span>
+                    <label for="courriel_in" class="fb-text-label">E-mail</label>
+                    <input onkeyup="this.value=this.value.toLowerCase()" type="text" name="courriel_in" id="courriel_in" placeholder="Email" />
+                    <span class="validate-email">Enter a valid email address</span>
+                    <span class="highlight"></span>
+                    
+
+                </div>
+                <p class="txt_forgetpass_msg">
+                    You will receive a link to reset your password                </p>
+                <div id='recaptchaLogin_forgetPassword'></div>
+            </form>
+            <div class="fb-button form-group field-button-valider">
+                <button onclick="validateForm_forgetPassword(this,'PasswordOublie','recaptchaLogin_forgetPassword');" id="button-valider_mps" name="text-votre-email" class="uk-button uk-button-primary">
+                    Valider</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="emailConfSend" class="PasswordForget Content_form" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="modal-body" id="modal_message" >
+            <div class="h2_site uk-modal-title uk-text-center">
+                Forgotten your password?            </div>
+            <div class="img_etape uk-text-center">
+                <img data-src="https://www.logishotels.com/components/com_ologis/assets/images/check.svg" alt="Forgotten your password?" width="60" height="61" uk-img>
+            </div>
+            <p class="txt_reini_pss">
+                A link has been sent to you! <br />Click on the link to reset your password            </p>
+        </div>
+    </div>
+</div>
+
+<!-- fin -->
+
+<script type="text/javascript">
+
+   jQuery ( document ).ready ( function () {
+
+        var isshow = localStorage.getItem('isshow');
+        if (isshow== null) {
+            localStorage.setItem('isshow', 1);
+        }
+        $(".input-password-toggle").click(function() {
+
+            $(this).toggleClass("icon-eye");
+                input = $(this).parent().find("input");
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+
+
+
+    show_password ();
+    forget_password ();
+    //mdp_oublie ();
+    jQuery( "#form-rendered-creat-account-modal input" ).keyup(function() {
+        jQuery( this ).parent().find("label").show();
+         if(!jQuery( this ).val() ){
+             jQuery( this ).parent().find("label").hide();
+         }
+    });
+
+
+    if(jQuery('#form-rendered-creat-account-modal').length){
+        
+        if ( jQuery ( '#form-rendered-creat-account-modal' ).validate().checkForm() ) {
+            jQuery ( '#form-rendered-creat-account-modal #button-valider-modal' ).prop ( "disabled" , false );
+        }
+    }
+
+
+
+    jQuery ( "#form-rendered-creat-account-modal" ).validate ( { 
+    rules : {
+        "card-password" : "required" , "card-login" : {
+        required : true , email : true
+        }
+    } , errorPlacement : function ( error , element ) {
+    }
+
+    } );
+
+    jQuery ( '#form-rendered-creat-account-modal input' ).on ( 'keyup blur' , function (event) {
+        //var form_account = jQuery( "#form-rendered-creat-account-modal" ).validate();
+        if (event.keyCode === 13 && form_account.valid() ==true) {
+            validateForm(this,'form-rendered-creat-account-modal','recaptchaLogin_modal');
+        }   
+
+    } );
+
+    jQuery ( '#form-rendered-creat-account-modal #text-votre-email-modal' ).on ( 'blur' , function (event) {
+        var form_account = jQuery( "#form-rendered-creat-account-modal" ).validate();
+        
+        if ( jQuery ( '#form-rendered-creat-account-modal' ).validate().checkForm() ) {
+            jQuery ( '#form-rendered-creat-account-modal #button-valider-modal' ).addClass ( 'valid' );
+            jQuery ( '#form-rendered-creat-account-modal #button-valider-modal' ).prop ( "disabled" , false );
+            
+        }else {
+            jQuery ( '#form-rendered-creat-account-modal #button-valider-modal' ).removeClass ( 'valid' );
+            jQuery ( '#form-rendered-creat-account-modal #button-valider-modal' ).prop ( "disabled" , true );
+        }
+
+        //check si l'email est valide ou pas (ticket 60388)
+        var emailIsValid = jQuery ( '#form-rendered-creat-account-modal' ).validate().element(jQuery('#text-votre-email-modal'));
+        if(emailIsValid){
+            jQuery ( '#form-rendered-creat-account-modal .validate-email' ).hide();
+        }else{
+            jQuery ( '#form-rendered-creat-account-modal .validate-email' ).show();
+        }
+
+
+    });
+
+    $('#form-rendered-creat-account-modal #password_login_modal').on('blur', function(event) {
+
+        var passwordField = jQuery('#password_login_modal').val().trim();
+
+        // Vérifier manuellement si le champ de mot de passe a une valeur
+        if (passwordField !== '') {
+            // Si le champ a une valeur, on cache le message d'erreur
+            jQuery('#form-rendered-creat-account-modal .validate-password').hide();
+        } else {
+            // Si le champ est vide, on affiche le message d'erreur
+            jQuery('#form-rendered-creat-account-modal .validate-password').show();
+        }
+
+        // Vérifier la validité du formulaire
+        if (jQuery('#form-rendered-creat-account-modal').validate().checkForm()) {
+            jQuery('#form-rendered-creat-account-modal #button-valider-modal').addClass('valid');
+            jQuery('#form-rendered-creat-account-modal #button-valider-modal').prop("disabled", false);
+        } else {
+            jQuery('#form-rendered-creat-account-modal #button-valider-modal').removeClass('valid');
+            jQuery('#form-rendered-creat-account-modal #button-valider-modal').prop("disabled", true);
+        }
+
+    });
+});
+//-->
+</script>
+
+
+                </div>
+            </div>
+            <!--  -->            
+                
+        </nav>
+    </header>
+    <!-- fin -->
+    <!-- contenu -->
+    <main role="main">
+        <div class="pageMain">
+        
+        
+        		              <!-- fin historique -->
+                        
+                        
+            <!-- fin moteur -->
+                        <!-- bottom -->
+          
+            <!-- contenu -->
+            
+        
+            
+            
+
+                        <div id="PathwayDesktop">
+            <div class="topBackBtn ">
+                <a href="javascript: history.back();" title="Back" class="uk-icon bback" uk-icon="arrow-left">
+                    Back</a>
+                <div class="uk-container uk-container-center">
+                     
+                         
+                      		 
+
+<nav aria-label="Breadcrumb" role="navigation">
+              
+<ul itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+	<li class="active"><span class="hasTooltip"><i class="icon-map-marker" data-toggle="tooltip" title="You are here: "></i></span></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="/en/" class="pathway"><span itemprop="name">Home</span></a><span class="divider"></span> <meta itemprop="position" content=0 /></li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Find my hotel</span><meta itemprop="position" content=1 /></li></ul>
+</nav>
+
+
+    
+   	<script type="application/ld+json">
+         {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.logishotels.com/en/"},{"@type":"ListItem","position":2,"name":"Find my hotel","item":"https://www.logishotels.com/en/find-my-hotel"}]}    </script>
+    
+    
+     
+                                         
+                </div>
+            </div>
+            </div>
+                                            
+<div class="MoteurRechercheHome MoteurTrouvezHotel">
+<div class="MoteurSarchHome">
+	
+			<!-- tab -->
+		<div class="tabMoteur" >
+		   <h1><a onclick="show_tab_moteur('hotel');" title="I am looking for accommodation" id="Iddormir" class="dormir">I am looking for accommodation</a></h1>
+		</div>
+	<!-- recap moteur -->
+
+<div id="ModalSearchMobHome" class="ContentSearch"  >
+         <div class=" TitreMoteurSearch">
+    
+              I look for a hotel, a cottage, a villa, a tent trailer...              
+    </div>
+    
+	<div>
+    		
+    <form method="get" action="/en/hotels" onsubmit="return verifForm_annex(this);" id="hotelsearchForm" >
+       
+        <div class="MoteurSub uk-grid-small" uk-grid>
+                        <div class="uk-width-1-1 uk-width-1-4@m uk-width-1-2@s DestinationMoteur  ">
+                <span id="destination-clean" class="clean-input uk-hidden" uk-icon="close"></span>
+                <img id="destination-spinner" src="https://www.logishotels.com/images/spinner-1.gif" alt="spinner">
+                <label for="destination">Destination</label>
+                <span class="BtnDestination ColorPrimary"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+								<path d="M6 20C4.23333 20 2.79167 19.7208 1.675 19.1625C0.558333 18.6042 0 17.8833 0 17C0 16.4167 0.241667 15.9083 0.725 15.475C1.20833 15.0417 1.875 14.7 2.725 14.45L3.3 16.35C3.01667 16.4333 2.75833 16.5375 2.525 16.6625C2.29167 16.7875 2.13333 16.9 2.05 17C2.26667 17.2667 2.76667 17.5 3.55 17.7C4.33333 17.9 5.15 18 6 18C6.85 18 7.67083 17.9 8.4625 17.7C9.25417 17.5 9.75833 17.2667 9.975 17C9.89167 16.9 9.73333 16.7875 9.5 16.6625C9.26667 16.5375 9.00833 16.4333 8.725 16.35L9.3 14.45C10.15 14.7 10.8125 15.0417 11.2875 15.475C11.7625 15.9083 12 16.4167 12 17C12 17.8833 11.4417 18.6042 10.325 19.1625C9.20833 19.7208 7.76667 20 6 20ZM6 13.325C6.3 12.775 6.61667 12.2708 6.95 11.8125C7.28333 11.3542 7.60833 10.9167 7.925 10.5C8.54167 9.7 9.03333 8.97917 9.4 8.3375C9.76667 7.69583 9.95 6.9 9.95 5.95C9.95 4.85 9.56667 3.91667 8.8 3.15C8.03333 2.38333 7.1 2 6 2C4.9 2 3.96667 2.38333 3.2 3.15C2.43333 3.91667 2.05 4.85 2.05 5.95C2.05 6.9 2.23333 7.69583 2.6 8.3375C2.96667 8.97917 3.45833 9.7 4.075 10.5C4.39167 10.9167 4.71667 11.3542 5.05 11.8125C5.38333 12.2708 5.7 12.775 6 13.325ZM6 17C5.81667 17 5.65 16.9458 5.5 16.8375C5.35 16.7292 5.24167 16.5833 5.175 16.4C4.79167 15.2167 4.30833 14.225 3.725 13.425C3.14167 12.625 2.575 11.8583 2.025 11.125C1.49167 10.3917 1.02917 9.63333 0.6375 8.85C0.245833 8.06667 0.05 7.1 0.05 5.95C0.05 4.28333 0.625 2.875 1.775 1.725C2.925 0.575 4.33333 0 6 0C7.66667 0 9.075 0.575 10.225 1.725C11.375 2.875 11.95 4.28333 11.95 5.95C11.95 7.1 11.7583 8.06667 11.375 8.85C10.9917 9.63333 10.525 10.3917 9.975 11.125C9.44167 11.8583 8.87917 12.625 8.2875 13.425C7.69583 14.225 7.20833 15.2167 6.825 16.4C6.75833 16.5833 6.65 16.7292 6.5 16.8375C6.35 16.9458 6.18333 17 6 17ZM6 8.075C6.58333 8.075 7.08333 7.86667 7.5 7.45C7.91667 7.03333 8.125 6.53333 8.125 5.95C8.125 5.36667 7.91667 4.86667 7.5 4.45C7.08333 4.03333 6.58333 3.825 6 3.825C5.41667 3.825 4.91667 4.03333 4.5 4.45C4.08333 4.86667 3.875 5.36667 3.875 5.95C3.875 6.53333 4.08333 7.03333 4.5 7.45C4.91667 7.86667 5.41667 8.075 6 8.075Z" fill="#13484D"/>
+				</svg></span>
+				
+				
+                <input aria-label="Destination" type="text" name="destination" 
+                id="destination" 
+                value="" 
+                    class="inputbox span12" title="Destination, city, hotel name" 
+                    placeholder="Destination, city, hotel name" autocomplete="off" />
+		<input id="destination_val" name="destination_val" type="hidden" 
+		value = "" />
+		<input id="destination_lat" name="destination_lat" type="hidden" value = "" />
+		<input id="destination_long" name="destination_long" type="hidden" value = "" />				
+		<input id="destination_short" name="destination_short" type="hidden" value = "" />
+		<input id="destination_hotel_code" name="destination_hotel_code" type="hidden" value = "" />	
+		<input id="autocomplet_val" name="autocomplet_val" type="hidden" value = "" />
+		<input name="type_liste" id="type_liste" type="hidden" value="hotels"/>
+        <input id="search_by" name="search_by" type="hidden" value = "" />
+
+		
+		         			<input id="zoneid" name="zoneid" type="hidden" value = "" />
+        			
+		
+				
+
+		
+			
+		
+		              </div>
+                        <input type="hidden" name="opt_chambre" id="opt_chambre" value="3" />
+            <input type="hidden" id="current_url" value='https://www.logishotels.com/en/find-my-hotel' />
+          
+                    
+            <div class="uk-width-1-1 uk-width-1-4@m uk-width-1-2@s DateMoteur ">
+                <div class="DateGlob">
+                    <label for="DateIn">ARRIVAL</label>
+                    <div class="uk-position-relative">
+                        <input type="text" id="DateIn" name="DateIn" value="09/08/2025" class="DateArrive"  readonly="readonly" />
+                        <i class="sw-DateIn" uk-icon="sw-calendar"></i>
+                    </div>
+                </div>
+                <div class="DateGlob">
+                    <label for="DateOut"> DEPARTURE</label>
+                    <div class="uk-position-relative">
+                    	<input type="text" id="DateOut" name="DateOut" value="10/08/2025" class="DateDepart"  readonly="readonly"/>
+                    	<i class="sw-DateOut" uk-icon="sw-calendar"></i>
+                    </div>
+                </div>
+            </div>
+            
+          
+            <div class="uk-width-1-1 uk-width-1-6@m uk-width-1-2@s ChampVoyage">
+                <label class="VoyageLabel" for="voyageur">travellers</label>
+                <button class="uk-button buttonvoyage uk-width-1-1" type="button" aria-label="voyageur">
+                   <i class="ColorPrimary" uk-icon="sw-user"></i>
+                   <span id="nb_personne">
+                        2  travellers 
+                   </span>
+                   <span class="uk-icon icon-arrow" ></span>
+                </button>
+                <div class="BlocRommPop" uk-dropdown="mode: click;">
+                    <hr class="HomeSep">
+                    <div class="adultLine lineRoom uk-flex uk-flex-middle">
+                        <label for="input_adulte">
+                            Adult(s)</label>
+                        <button onclick="ChangeNumberOccupation(this,1,15,'adulte');" class="minus" type="button" aria-label="Cancel"><span class="sr-only">
+                                Cancel</span></button>
+                        <input readonly="readonly" id="input_adulte" class="adultsNumber number" name="nb_adultes" type="text" value="2" tabindex="-1">
+                        <button onclick="ChangeNumberOccupation(this,1,15,'adulte');" class="plus" type="button" aria-label=" Add"><span class="sr-only">
+                                Add</span></button>
+                    </div>
+                    <hr>
+                    <div class="EnfantLine lineRoom uk-flex uk-flex-middle">
+                        <label for="input_enfant">
+                            Child(ren) <span>From 0 to 12 years</span></label>
+                        <button onclick="ChangeNumberOccupation(this,0,10,'enfant');"  class="minus" type="button" aria-label="Cancel"><span class="sr-only">
+                                Cancel</span></button>
+                        <input readonly="readonly" id="input_enfant" class="EnfantNumber number" name="nb_enfants" id="nb_enfants" type="text" value="0" tabindex="-1">
+                        <button onclick="ChangeNumberOccupation(this,0,10,'enfant');"  class="plus" type="button" aria-label="Add"><span class="sr-only">
+                                Add</span></button>
+                    </div>
+                    
+                    <div id="AgeEnfant_container" class="AgeEnfant lineRoom">
+                   
+                                                
+                    </div>
+                    
+                                         <a onclick="closeMe('BlocRommPop')" class="ValiderBtn">Save</a>
+                </div>
+            </div>
+            
+            
+                       <div class=" uk-width-1-1 uk-width-1-4@s ChampChambre SelectChambre">
+                    <select name="nb_chambres" id="nb_chambres" class="middleVal" aria-label="nb_chambres" hidden>
+                        <option value="1" selected>1 room</option><option value="2" >2 Rooms</option><option value="3" >3 Rooms</option><option value="4" >4 Rooms</option><option value="5" >5 Rooms</option>                    </select>
+            </div> 
+                        
+            
+    
+            
+                                     <div class="uk-width-1-1 uk-width-1-6@m uk-width-1-4@s TravelMoteur">
+                <label for="you-travel">
+                    <span class="globchek">
+                        <input type="checkbox" name="you-travel" id="you-travel" >
+                        <span class="travelcheck"></span>
+                    </span>
+                    Traveling for work                </label>
+            </div>
+              	
+          	          	<div class="uk-width-1-1 uk-width-1-6@m uk-width-1-4@s btnModifier">
+                        <input type="submit" value="Search"  class="uk-button uk-button-primary " title="Search">
+            </div>   
+                     
+                       
+	      
+     
+       
+            
+            
+            
+             
+                          
+        </div>
+        <!-- type  chambre -->
+       
+        
+		    <input name="ratetype[]" type="hidden"  disabled="disabled"  class="input_from_moteur" id="inpt_rate_type" value = "" />
+		
+			    <input name="rateid[]" type="hidden"  disabled="disabled"  class="input_from_moteur" id="inpt_rate_id" value = "" />
+		
+	
+		
+
+			
+	
+			
+			
+	
+		
+	
+		
+			
+        
+			<div id="filterSelected_container_global"></div>
+
+    </form>
+    </div>
+        	    	<div id="bloc_mobile_etik"></div>
+    
+</div>
+
+<div  id="ModalOptionsRooms" class="Modal_cal_alt" uk-hidden uk-modal>
+    <div class="uk-modal-dialog">
+         <div class="uk-alert-danger" uk-alert>
+	   <button class="uk-modal-close-default" type="button" uk-close></button>
+	    <p class="modal-body-msg-cal" aria-hidden="true"></p>
+	   </div>
+	</div>
+</div>
+
+
+
+
+<div  id="modalResa" class="Modal_cal_alt" uk-hidden uk-modal>
+
+
+    <div class="uk-modal-dialog uk-modal-body modal-submit">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="uk-alert-danger" uk-alert>
+            <div class="h2_site uk-modal-title"></div>
+
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-primary finaliser-resa" type="button">Finalise the booking</button>
+                <button class="uk-button uk-button-primary add-room" type="button">Add room(s) </button>
+            </p>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<input id="search_destination" type="hidden" value = "" />
+<input id="search_destination_lat" type="hidden" value = "" />
+<input id="search_destination_long" type="hidden" value = "" />  
+<input id="search_destination_by" type="hidden" value = "hotels" />
+<input id="search_destination_nbr_personne" type="hidden" value = "2" />
+<input id="search_destination_date_in" type="hidden" value = "09/08/2025" />
+<input id="search_destination_date_out" type="hidden" value = "10/08/2025" />
+<input id="search_nbr_adultes" type="hidden" value = "2" />
+<input id="search_nbr_enfants" type="hidden" value = "0" />
+<input id="search_nbr_chambres" type="hidden" value = "1" />
+<input id="search_age_enfant" type="hidden" value = "" />
+<div   id="ModalOptions_error" class="Modal_cal_alt uk-hidden" uk-modal>
+	    <div class="uk-modal-dialog">
+	         <div class="uk-alert-danger" uk-alert>
+		   <button class="uk-modal-close-default" type="button" uk-close></button>
+		    <p class="modal-body-msg-cal" aria-hidden="true"></p>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="map_canvas" style="display:none;"></div>
+
+</div>	
+</div>
+                           
+                      
+            
+            <a href="/.GlobHeader" class="ScrollToTop uk-hidden" uk-scroll title="scrollTotop">scroll to</a>
+                        
+           
+           
+       
+        </div>
+    </main>
+    <!-- fin -->
+    <!-- footer -->
+
+    <footer role="contentinfo" class=" ">
+        <div class="FooterGlob">
+             <div class="NewsFooter">	
+            	<div class="uk-container uk-container-center ">
+                    <div  class=" uk-grid-collapse" uk-grid>
+<div class="uk-width-1-1 uk-width-1-2@s uk-width-1-2@m">
+    <p>Subscribe to our newsletter <span>and get good deals and all the news from our hotels</span></p>  
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    jQuery("#submit_news").click(function(){
+    jQuery(".msg_erreur").html("");
+    var email = jQuery(".mailnewsletter").val();
+     var reg = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
+
+         if(reg.test(email))
+         {
+              return true;
+         }else{
+                jQuery(".msg_erreur").html("Please enter your email address");
+            return false;
+         }
+        
+    });
+    
+});
+
+
+</script>
+    <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-2@m formNews">
+        <form action="//cl.exct.net/DEManager.aspx" name="subscribeForm" method="post">
+            <input type="hidden" name="_clientID" value="10959617" />
+            <input type="hidden" name="_deExternalKey" value="79992209-110A-4D2C-9DA7-1460BE2084ED" />
+            <input type="hidden" name="_action" value="add/update" />
+            <input type="hidden" name="_returnXML" value="0" />
+            <input type="hidden" name="_successURL" value="https://www.logishotels.com/en/inscription-newsletter/newsletter-merci" /> 
+            <input type="hidden" name="_errorURL" value="https://www.logishotels.com/en/" /> 
+            <input type="hidden" name="Language" value="en" /> 
+     
+            <input type="hidden" name="JoinDate" value="2025-08-09 09:12:15" /> 
+            
+            <div class="uk-grid-small uk-flex-middle" uk-grid>  
+                <div class="uk-width-2-3@s uk-width-3-4@m "> 
+                    <input placeholder="E-mail" type="text" class="required mailnewsletter uk-input" tabindex="0" name="email" id="email" aria-label="email" />
+                </div>  
+                <div class="uk-width-1-3@s uk-width-1-4@m">
+                    <input class="uk-button uk-button-primary subbutton btn-subscribe-newsletter" type="submit" value="Subscribe" name="submit_news" id="submit_news" size="30" aria-label="submit" />
+               </div>
+           </div>
+            
+                        <div class="msg_erreur"></div>
+    
+            
+        </form>
+
+</div>
+</div>
+
+
+                </div>
+            </div>
+            <div class="NavFooter">
+            	<div class="uk-container uk-container-center ">
+                	<div class="uk-width-1-1@m MenuFooter">
+                            
+<div id="mod-custom597" class="mod-custom custom ">
+	<div class="uk-grid-small uk-child-width-1-4@s uk-child-width-1-4@m uk-grid" uk-grid>
+<div class="logoFooter">
+<p><span style="font-size: 14pt;">Contact Customer Service</span></p>
+<div class="footercontact">
+<p><strong><span uk-icon="sw-tel"></span> +33(0)1 45 84 83 84</strong></p>
+<p>An adviser is available</p>
+<p>Monday to friday &amp; public holidays: <br /> From 9am to 6pm</p>
+<p><img src="/images/2023/langues.svg" alt="icon" width="107" height="68" /></p>
+</div>
+</div>
+<div class="MenuF">
+<ul class="SubMenuF">
+<li><span>Support &amp; FAQ</span></li>
+<li><a href="/en/acces-a-mes-reservations">My Bookings</a></li>
+<li><a href="/en/help/help-with-bookings/help-with-holiday-bookings">Help with reservations &amp; stays</a></li>
+<li><a href="/en/help/help-fidelite-etik/help-with-the-etik-loyalty-programme">Help with the ETIK loyalty programme</a></li>
+<li><a href="/en/footer/contact-us">Contact us</a></li>
+</ul>
+</div>
+<div class="MenuF">
+<ul class="SubMenuF">
+<li><span>About</span></li>
+<li><a href="https://groupe.logishotels.com/en/who-are-we/">Who are we?</a></li>
+<li><a href="https://extranet.logishotels.com/en/accueil" target="_blank" rel="noopener">Extranet hotel</a></li>
+<li><a href="https://groupe.logishotels.com/en/hoteliers/" target="_blank" rel="noopener">Join the group</a></li>
+<li><a href="/en/gift/e-gift-cards">E-gift card</a></li>
+<li><a href="/en/business-and-groups">Business &amp; Groups</a></li>
+<li><a href="https://jobs.logishotels.com/fr">Logis is recruiting</a></li>
+<li><a href="https://groupe.logishotels.com/en/press/">Press Section</a></li>
+</ul>
+</div>
+<div class="MenuF">
+<ul class="SubMenuF">
+<li><span>Website terms and condition</span></li>
+<li><a href="/en/footer/legal-notice">Legal notice</a></li>
+<li><a href="/en/footer/personal-information">Personal data (GDPR)</a></li>
+<li><a href="javascript:openAxeptioCookies()">Cookie settings</a></li>
+<li><a href="/en/terms-conditions">CGV</a></li>
+<li><a href="/en/footer/site-map">Site map</a></li>
+<li><a href="/en/footer/photo-credits">Photo credits</a></li>
+</ul>
+</div>
+</div></div>
+
+                        </div>
+                                                     <div class=" uk-width-1-1@m bloc_footer_5">
+                                 <div class="SuiviBloc">
+	<p>
+		<span class="title_modsuivi">Follow us</span>
+	</p>
+<ul>
+        		<li><a href="https://www.facebook.com/Logishotels" target="_blank"
+    			rel="noopener" title="Facebook"> <span uk-icon="sw-facebook"></span></a>
+    		</li>
+            		<li><a href="https://www.instagram.com/logishotels" target="_blank"
+    			rel="noopener" title="instagram"><span uk-icon="sw-instagram"></span></a>
+    		</li>
+                
+    		<li><a href="https://fr.linkedin.com/company/logishotels" target="_blank"
+    			rel="noopener" title="linkedin"><span uk-icon="sw-linkedin"></span></a>
+    		</li>
+        </ul>
+</div>
+                            </div>
+                                        </div>
+            </div>
+            <div class="uk-container uk-container-center ">
+                <div id="copyfooter" class="Bloccopyright">
+                    
+<div id="mod-custom533" class="mod-custom custom ">
+	<p>Logis copyright © 2025 All rights reserved Website created by <a href="https://www.siway.fr" target="_blank" rel="noopener" title="Digital agency and websites for hotel groups and chains">SIWAY</a></p></div>
+
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="pageTitle" id="pageTitle" value="Find my hotel">
+    </footer>
+
+
+
+
+
+    <script src="/templates/sw_logis/javascript/moteur.min.js?v=63" type='text/javascript'></script>
+  
+
+
+            <!-- <script src="/templates/sw_logis/javascript/gplaces.min.js?v=63" type="text/javascript"></script> -->
+        <script src="/templates/sw_logis/javascript/mapbox_searchbox.min.js?v=63" type="text/javascript"></script>
+                <script src="//maps.googleapis.com/maps/api/js?v=3&amp;libraries=places&amp;language=en&amp;key=AIzaSyCz5gP5RubrLkegshVnF8crjobXTFib4YQ"
+        async defer></script>
+
+
+		<script src="/templates/sw_logis/javascript/general.min.js?v=63" type="text/javascript"></script>
+     
+    		<script src="/media/com_swhotel/js/jquery.validate.js?v=63" type="text/javascript"></script>
+     	<script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptchaCallBack&amp;render=explicit&amp;hl=en" async defer></script>
+    	<script src="/components/com_ologis/assets/js/captcha_ologis.js?v=63" type="text/javascript"></script>
+
+
+
+
+
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c571af6a8b5300',t:'MTc1NDcyMzUzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

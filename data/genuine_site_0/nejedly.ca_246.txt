@@ -1,0 +1,220 @@
+<HTML>
+<HEAD>
+<TITLE>Authored and co-authored publications and conference presentations of Dr. Zdenek Nejedly</TITLE>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</HEAD>
+
+<BODY TEXT="#000000" LINK="#0000ff" VLINK="#551a8b" ALINK="#ff0000" BGCOLOR="#ffffff">
+
+<P><b>&nbsp;&nbsp;&nbsp; Authored and co-authored publications or conference presentations:<BR> </b>
+<!--<i>
+<font size="1">
+<STRONG style="font-weight: 400"> (publication listing from
+<a target="_blank" href="http://scirus.com/ausearch?author=Nejedly+Z.">Elsevier 
+Science</a> </STRONG> and
+<a target="_blank" href="http://discover-decouvrir.cisti-icist.nrc-cnrc.gc.ca/dcvr/ctrl?action=dsere&req=&quot;Nejedly+Zdenek&quot;&index=aw">
+NRC-CISTI</a> where I am a (co)author - watch for Z. Nejedly - - will
+open in a new window<STRONG style="font-weight: 400">)</STRONG> </font></i> --></P>
+
+<p>Z. Nejedly: <i>Keeping access control while moving to the cloud</i>,
+Presentation at the <a href="http://collaborate.oaug.org/" title="Click to see the conference website">COLLABORATE15 Oracle Applications User Group Conference (OAUG)</a> focussing on the Oracle Access Manager technology (solutions, product extensions, lessons learned): <a href="misc/KeepingAccessControlWhileMigratingToTheCloud_PPT.pdf" target="_blank">session slides</a> and a <a href="misc/KeepingAccessControlWhileMigratingToTheCloud_WP.pdf" target="_blank">detailed whitepaper</a> incl. BI Publisher report setup and java REST client development.
+</p>
+<p>Z. Nejedly: <i>Keeping access control while moving to the cloud</i>,
+Presentation at the <a href="http://webapps.uwindsor.ca/conferences/oucc/call-for-papers/program-description.php?category=concurrent&id=19" title="Click to see the conference presentation website">Ontario Universities Computing Conference (OUCC) 2014</a>. Available in <a href="http://www.uoguelph.ca/~znejedly/oucc_2014/OUCC_2014_Zdenek_Nejedly.pptx" target="_blank" title="Right click and Download thePowerPoint file">PowerPoint</a> and <a href="http://www.uoguelph.ca/~znejedly/oucc_2014/OUCC_2014_Zdenek_Nejedly.pdf" target="_blank">PDF format </a>
+</p>
+
+<P>Z. Nejedly: <i>
+<a target="_blank" href="https://events.educause.edu/annual-conference/2012/proceedings/transitioning-between-access-management-products-sun-to-oracle">
+Transitioning between Access Management Products: Sun to Oracle</a></i>, 
+Conference presentation at <a target="_blank" href="http://www.educause.edu">
+EDUCAUSE 2012</a> </P>
+
+<P>Z. Nejedly: <i>
+<a title="OUCC 2012 presentation" target="_blank" href="https://2012.oucc.ca/sessions/access-management-anyone">
+Access Management Anyone?</a></i> Conference presentation at
+<a title="OUCC " target="_blank" href="https://2012.oucc.ca/">OUCC 2012</a> </P>
+
+<P>J.Voltr, Z.Nejedly: <i>Measurement of proton beam fluence by PIXE analysis of 
+residual gas</i>, X-Ray Spectrometry, Volume 41, Issue 4, pages 235�239, July/August 2012</P>
+
+<P>Z. Nejedly:
+<a title="click to see the presentation in PDF" target="_blank" href="http://www.mcmaster.ca/canheit2011/Canheit%20presentations/Session%209%20WAM_SSO_Sun_Oracle.pdf">
+Web Access Management and SSO: Transitioning from Sun to Oracle</a>, Conference 
+presentation at
+<a target="_blank" href="http://www.mcmaster.ca/canheit2011/index.html">CANHEIT 
+2011</a>, Hamilton, Ontario, Canada</P>
+
+<P>T.Pemberton,  Z. Nejedly:&nbsp; Developing applications with Desire2Learn Web 
+Services, Conference 
+presentation at Fusion 2010, July 2010, Chicago IL, USA</P>
+
+<P>Z. Nejedly, H.Smith, M. Searle, C. Wells, B. Teesdale, T.Pemberton, K.Mackie:
+<i><a title="Download the presentation" target="_blank" href="docs/oucc.pdf">
+Developing applications with Desire2Learn Web Services and Single Sign On</a></i>, Conference 
+presentation at OUCC 2010, May 2010, Ottawa, Ontario, Canada </P>
+
+<P>Z. Nejedly, M. Searle, H. Smith: <i>Implementing Web Access Management at the 
+University of Guelph</i>, Conference
+<a title="click to see the oral presentation" target="_blank" href="https://events.educause.edu/annual-conference/2008/proceedings/implementing-web-access-management-at-the-university-of-guelph">
+talk</a> and
+<a title="click to see the poster presentation" target="_blank" href="https://events.educause.edu/sites/default/files/library/presentations/E08/PS042/educause2008_WAM_UofG_poster.pdf">
+poster</a> at EDUCAUSE 2008 </P>
+
+<P>Z. Nejedly, M. Searle, H. Smith, S. Patara, B. Tsang: <i>
+<a title="click to see the conference presentation" target="_blank" href="misc/oucc2008.pdf">
+Web Access Management with the Sun Identity Suite</a></i>, Conference 
+presentation at OUCC 2008, May 2008, Toronto, Ontario, Canada</P>
+
+<P>James C. Hower, J.L. (Iain) Campbell, William J. Teesdale, Zdenek Nejedly, J. 
+David Robertson:<i> Scanning proton microprobe analysis of mercury and other 
+trace elements in Fe-sulfides from a Kentucky coal,</i> International Journal of 
+Coal Geology 75 (2008) 88�92 </P>
+
+<P>C. Banic, W. R. Leaitch, K. Strawbridge, R. Tanabe, H. Wong, C. Gariepy, A. 
+Simonetti, Z. Nejedly, J.L. Campbell, J. Lu, et al. <i>The physical and chemical 
+evolution of aerosols in smelter and power plant plumes: an airborne study</i> 
+Geochemistry: Exploration, Environment, Analysis, August 1, 2006; 6(2-3): 111 - 
+120</P>
+
+<P>Henry K. T. Wong, Catharine M. Banic, St�phane Robert, Zdenek Nejedly and J. 
+L. (Iain) Campbell <i>In-stack and in-plume characterization of particulate 
+metals emitted from a copper smelter</i> Geochemistry: Exploration, Environment, 
+Analysis; August 2006; v. 6; no. 2-3; p. 131-137</P>
+
+<P>Z. Nejedly, R. Duric, L. Fulgenzi, D. MacDougall: <i>IP Phone Services - 
+<a href="misc/oucc2005.pdf">Integration of campus IT services with IP phones at the University of Guelph</a></i> 
+- presentation at the <a target="_blank" href="http://www.its.queensu.ca/oucc/">
+OUCC conference</a>, May 2005</P>
+
+<P>Z. Nejedly, J. L. Campbell, S. Gama:<i> An Excel utility for the rapid 
+characterization of &quot;funny filters&quot; in PIXE analysis, </i>Nuclear 
+Instruments and Methods in Physics Research Section B: Beam Interactions with 
+Materials and Atoms, Volumes 219-220 , June 2004, Pages 136-139 </P>
+
+<P>T. Papp, J.A. Maxwell, A. Papp, Z. Nejedly and J. L. Campbell: <i>On the role 
+of the signal processing electronics in x-ray analytical measurements, </i>
+Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions 
+with Materials and Atoms, Volumes 219-220 , June 2004, Pages 503-507 </P>
+
+<P>author of a chapter on X-ray detection and PIXE calibration in a book:&nbsp; 
+J. Kr�l, L. Frank, et al.: <i>Methods of Surface Analysis. Ionic, Probe and 
+Special Methods</i>, Academia, 490pp, hardcover ISBN 80-200-0594-3</P>
+
+<P>Z. Nejedl�, J. L. Campbell, J. Brook, R. Vet, and R. Eldred: <i>Evaluation of 
+Elemental and Black Carbon Measurements from the GAViM and IMPROVE Networks,</i> 
+Aerosol Science &amp; Technology, Volume 37 (2003) 96-108</P>
+
+<P>L.J. Cabri, J.M.D. Wilson, V.V. Distler, D. Kingston, Z. Nejedly, and S.F. 
+Sluzheniken, <i>Mineralogical distribution of trace platinum-group elements in 
+the disseminated sulphide ores of Noril'sk 1 layered introduction</i>, 
+Transactions of the Institution of Mining and metallurgy - Applied Earth 
+Science, Vol.111(2002) B15-B22</P>
+
+<P>Tibor Papp, Tam�s Lakatos, Zdenek Nejedly and John L. Campbell: <i>
+Improvement in limit of detection in particle induced X-ray emission by means of 
+rise time and pulse shape discrimination</i><br>
+Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions 
+with Materials and Atoms Volume 189, Issues 1-4 April 2002 Pages 66-71<br>
+<br>
+T. L. Hopman, Z. Nejedly, J. A. Maxwell and J. L. Campbell: <i>Extension of to 
+2H, 3He and 4He excitation,</i> Nuclear Instruments and Methods in Physics 
+Research Section B: Beam Interactions with Materials and Atoms Volume 189, 
+Issues 1-4 April 2002 Pages 138-142<br>
+<br>
+J. L. Campbell, J. A. Babaluk, M. Cooper, G. W. Grime, N. M. Halden, Z. Nejedly, 
+I. Rajta and J. D. Reist, <i>Strontium distribution in young-of-the-year Dolly 
+Varden otoliths: Potential for stock discrimination, </i>Nuclear Instruments and 
+Methods in Physics Research Section B: Beam Interactions with Materials and 
+Atoms Volume 189, Issues 1-4 April 2002 Pages 185-189<br>
+<br>
+J. A. Babaluk, J. L. Campbell, C. L. Evans, N. M. Halden, S. R. Mejia, Z. 
+Nejedly, J. D. Reist and W. J. Teesdale, <i>Micro-PIXE analysis of strontium in 
+Arctic char, Salvelinus alpinus, otoliths from Quttinirpaaq National Park, 
+Nunavut, Canada</i>, Nuclear Instruments and Methods in Physics Research Section 
+B: Beam Interactions with Materials and Atoms Volume 189, Issues 1-4 April 2002 
+Pages 190-195<br>
+<br>
+M. Saqueta, N. M. Halden, J. Babaluk, J. L. Campbell and Z. Nejedly, <i>Micro-PIXE 
+analysis of trace element variation in otoliths from fish collected near acid 
+mine tailings: Potential for monitoring contaminant dispersal,</i> Nuclear 
+Instruments and Methods in Physics Research Section B: Beam Interactions with 
+Materials and Atoms Volume 189, Issues 1-4 April 2002 Pages 196-201<br>
+<br>
+S. Beaulieu, Z. Nejedly, J. L. Campbell, G. C. Edwards and G. M. Dias, <i>
+Improvement of detection limits of PIXE by substrate signal reduction, </i>
+Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions 
+with Materials and Atoms Volume 189, Issues 1-4 April 2002 Pages 289-292<br>
+<br>
+Graham C. Wilson, John C. Rucklidge, John L. Campbell, Zdenek Nejedly and 
+William J. Teesdale, <i>Applications of PIXE to mineral characterization, </i>
+Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions 
+with Materials and Atoms Volume 189, Issues 1-4 April 2002 Pages 387-393 <br>
+<br>
+<STRONG style="font-weight: 400">Z. Nejedl&yacute;, </STRONG>J.L. Campbell: <i>Standardization of a
+micro-PIXE system using NIST iron- and nickel-based alloy reference materials</i>, Nuclear Instruments and Methods B
+160 (2000) 415-423</P>
+
+<P>J. Voltr; J. Kral, Z. Nejedly, S. Simcik: <i>Sub-milliprobe at the CTU in Prague</i> Nuclear Instruments and Methods B
+161 (2000) 344-347</P>
+
+<P>J.L. Campbell, T.L. Hopman, J.A. Maxwell, Z. Nejedly: <i>The Guelph PIXE software package III: Alternative proton database</i> Nuclear Instruments and Methods B
+170 (2000) 193-204</P>
+
+<P>Karen McDonald, Alana Hudson, Bruce McArthur, Zdenek Nejedly and Iain 
+Campbell: <i>Radiative effects of mid-continental aerosol at northern latitudes</i><br>
+Journal of Aerosol Science, Volume 31, Supplement 1, September 2000, Pages 
+330-331 (European Aerosol Conference 2000)</P>
+
+<P> <STRONG style="font-weight: 400">Z. Nejedl&yacute;, </STRONG>J.L. Campbell, S.N. Rogak, R.M. Hoff, and W.J. Teesdale: <EM>Air quality work at Guelph: GAViM and a
+traffic tunnel study</EM>, Nuclear Instruments and Methods B 150 (1999) 398-402</P>
+
+<P>J. Voltr, J. Kral, Z. Nejedly: <i>PESA as a complementary tool to PIXE at CTU Prague
+</i> Nuclear Instruments and Methods B 150 (1999) 554-558</P>
+
+<P>Z.<STRONG style="font-weight: 400"> Nejedly</STRONG>, J.Kral, J.Voltr, R. Krejci, E. Swietlicki, J. Cerny, P. Kubik, and J. Svejda: <EM>Quality Assurance of
+environmental PIXE analysis in Prague</EM>, presented at IBA-13, Nuclear Instruments and Methods B, issue 136-138 (1998)
+page 981-985.</P>
+
+<P>Z. <STRONG style="font-weight: 400">Nejedly</STRONG>, J.L. Campbell, W.J. Teesdale, J.F. Dlouhy, T.F. Dann, R.M. Hoff, J.R. Brook, and H.A. Wiebe:
+<EM>Inter-laboratory Comparison of Air Particulate Monitoring Data</EM>,  Journal of Air &amp; Waste Management Association 48
+(1998) 386-397</P>
+
+<P>Brook, J.R., T.F. Dann, A. Wiebe, S.-M. Li, S. Sharma, Z. Nejedly, J.Chow and Y.Z. Tang 1998: <i> "Intercomparison of sampling and analysis
+techniques for PM2.5 monitoring&quot;</i>, J. Aerosol Sci., 29, p. S145 <font size="1">(presented
+at the 5th Intl. Aerosol Conference)</font><br>
+</P>
+
+<P>R. Hoff, L. Guise-Bagley, M. Moran, K. McDonald, Z. 
+<STRONG style="font-weight: 400">Nejedly</STRONG>, J.L. Campbell, S. Pryor, Y. Golestani and W. Malm:
+<EM>Recent Visibility Measurements in Canada</EM>, 97-WA70.05, Air &amp; Waste Management Association's 90th Annual Meeting
+&amp; Exhibition, 1997, Toronto, Ontario, Canada
+</P>
+
+<P>S.N. Rogak, U. Pott, J.L. Campbell, Z. <STRONG style="font-weight: 400">Nejedly</STRONG>: <EM>Fine Particulate Emissions from Heavy-Duty Vehicles in Vancouver,
+BC</EM>,97-WP96.02, Air &amp; Waste Management Association's 90th Annual Meeting &amp; Exhibition, 1997, Toronto, Ontario,
+Canada</P>
+
+<P>D. Fox, K. McDonald, P. Zannetti, <STRONG style="font-weight: 400">Z. Nejedly</STRONG>, <EM>Impact of north-western emission changes on visibility in the Rocky
+Mountain parks</EM>, 97-WA70.03, Air &amp; Waste Management Association's 90th Annual Meeting &amp; Exhibition, 1997,
+Toronto, Ontario, Canada</P>
+
+<P>Z. <STRONG style="font-weight: 400">Nejedly</STRONG>, J.L. Campbell, W.J. Teesdale, C. Gielen: <EM>PIXE and PESA aspects of the Guelph Fine Particulate and
+Visibility Monitoring program</EM>, Nuclear Instruments and Methods B132 (1997) 489-500</P>
+
+<P>Z. <STRONG style="font-weight: 400">Nejedly</STRONG>, J.L. Campbell, W.J. Teesdale, J.R. Brook , H.A. Wiebe, R.M. Hoff, J.F. Dlouhy and T.F. Dann:
+<EM>Comparison of multielemental analyses of aerosol samples by PIXE, PESA, EDXRF, and IC</EM>; presented in Denton 1994,
+Nuclear Instruments and Methods B 103 (1995) 473-476 </P>
+
+<P>J.Kral, J.Voltr, Z.<STRONG style="font-weight: 400">Nejedly</STRONG>: <EM>PIXE setup for liquid sample analysis</EM>. Nucl. Instr. and Meth. B109/110 (1996) 167-169</P>
+
+<P>V.Potocek, Z.<STRONG style="font-weight: 400">Nejedl&yacute;</STRONG>: <EM>PIXE data evaluation in Prague</EM>. 11th Intl. Conf. on Ion Beam Analysis, IBA-11, Nucl. Instr.
+and Meth. B 85 (1994), p. 611</P>
+
+<P>H.-E. Zschau, J.Vogt, G.Otto, R.Salomonovic, Z.<STRONG style="font-weight: 400">Nejedly</STRONG>, J.Kr&aacute;l: <EM>Modelling of Particle Spectra for the Analysis of
+Solid State Surface</EM>, International Journal of Modern Physics Jul/Aug 1992 <BR>
+<BR>
+</P>
+
+</BODY>
+</HTML>

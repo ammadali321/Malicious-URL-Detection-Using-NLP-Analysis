@@ -1,0 +1,1197 @@
+ 
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+    <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Seeking a Friend for the End of the World - MovieStock
+ | HSX.com
+</title>
+
+<meta
+    name="og:title"
+    content="
+Seeking a Friend for the End of the World - MovieStock
+ | HSX.com"
+/>
+
+<meta property="og:site_name" content="Hollywood Stock Exchange" />
+
+    <meta name="description" content="Steve Carell is Seeking a Friend for the End of the World with the help of Keira Knightley.  A lonely man is joined by his female neighbor in a journey to locate his high school sweetheart before an asteroid hits earth. The romantic comedy is written and directed by Lorene Scafaria.
+
+" />
+    <meta property="og:description" content="Steve Carell is Seeking a Friend for the End of the World with the help of Keira Knightley.  A lonely man is joined by his female neighbor in a journey to locate his high school sweetheart before an asteroid hits earth. The romantic comedy is written and directed by Lorene Scafaria.
+
+" />
+    <meta property="twitter:image" content="https://www.hsx.com/images/security/detail/SAFEW.jpg" />
+    <meta property="og:image" content="https://www.hsx.com/images/security/detail/SAFEW.jpg" />
+        <meta property="og:image:type" content="image/jpg" />
+    
+    <meta property="og:url" content="https://www.hsx.com/security/view/SAFEW" />
+
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<meta http-equiv="imagetoolbar" content="no" />
+
+<meta name="MSSmartTagsPreventParsing" content="true" />
+
+<!-- Validation of Domain / Site Ownership -->
+<meta name="msvalidate.01" content="DB7493ED467C4E480A4E33D640616BE4" />
+
+<link rel="Shortcut Icon" href="https://www.hsx.com/favicon.ico">
+<link rel="icon" href="https://www.hsx.com/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/icon-57x57.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.hsx.com/icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.hsx.com/icon-180x180.png">
+<link rel="apple-touch-icon" sizes="167x167" href="https://www.hsx.com/icon-167x167.png">
+
+<!-- Twitter -->
+<link rel="me" href="https://twitter.com/hsxmovies">
+<meta name="twitter:site" content="@hsxmovies" />
+<meta name="twitter:site:id" content="@hsxmovies" />
+<meta name="twitter:creator" content="@hsxmovies" />
+<meta name="twitter:card" content="summary" />
+    <!-- Google Tag Manager -->
+<!-- MUST BE IN THE <head> -->
+<script>
+        
+(function(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-PJ2GM6S');
+function gtag(){dataLayer.push(arguments);}
+        
+</script>
+<!-- End Google Tag Manager -->
+    <link href="/stylesheets/v.v9f9e/global.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/stylesheets/v.v9f9e/layout.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/stylesheets/v.v9f9e/ticker.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/stylesheets/v.v9f9e/cazary.css"  rel="stylesheet" type="text/css" />
+
+        <!-- Begin 33Across SiteCTRL -->
+    <script defer>
+        
+        (function () {
+            var h, s = document.createElement('script');
+            s.src = (window.location.protocol === 'https:' ?
+                            'https' : 'http') + '://cdn.tynt.com/t3p.js';
+            h = document.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })();
+        
+    </script>
+    <script defer>
+        
+        var Tynt = Tynt || [];
+        Tynt.push('aX5MzoX8Kr5RzZrkHcnnVW');
+        (function () {
+            var h, s = document.createElement('script');
+            s.src = (window.location.protocol === 'https:' ?
+                            'https' : 'http') + '://cdn.tynt.com/ti.js';
+            h = document.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })();
+        
+    </script>
+    <!-- End 33Across SiteCTRL -->
+    <!-- Begin: Send Google Events for text and image copies -->
+    <script async>
+        
+        (function() {
+            var intervalTmr, timeoutTmr,
+                    intervalAmt = 50,  // check if Tynt API has loaded every 50 ms
+                    timeoutAmt = 5000; // stop checking after 5 seconds
+
+            function gaSetup() {
+                Tynt.addTextCopyListener(function(guid, content) {
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'tynt',
+                        eventAction: 'textCopy',
+                        dimension2: Tynt.getViewType()
+                    });
+                });
+                Tynt.addImageCopyListener(function(guid, src) {
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'tynt',
+                        eventAction: 'imageCopy',
+                        eventLabel: src,
+                        dimension2: Tynt.getViewType()
+                    });
+                });
+            }
+
+            intervalTmr = window.setInterval(function() {
+                if (Tynt.addTextCopyListener && Tynt.TIL) {
+                    window.clearTimeout(timeoutTmr);
+                    window.clearInterval(intervalTmr);
+                    gaSetup();
+                }
+            }, intervalAmt);
+
+            timeoutTmr = window.setTimeout(function() {
+                window.clearInterval(intervalTmr);
+                //console.log('Timed-out waiting for Tynt API to load');
+            }, timeoutAmt);
+        })();
+        
+    </script>
+    <!-- End: Send Google Events for text and image copies -->
+
+</head>
+    <body id="pgSecurityViewSafew" class="secSecurity secSecurityView" >
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ2GM6S"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        
+        
+        <div id="header" class="column-row google-anno-skip">
+    <div id="top" class="columns" style="display: flex; align-items: center;">
+        <a href="/">
+            <img src="/images/logos/logo4-brandonly-trans.png"
+                    id="logo4"
+                    alt="HSX - Hollywood Stock Exchange">
+        </a>
+        <div id="logo-text">
+            <span style="color: #00DCFF;">HOLLYWOOD STOCK EXCHANGE</span><br>THE ENTERTAINMENT MARKET
+        </div>
+    </div>
+    <div id="actions" class="columns">
+
+        <div id="account-actions">
+                            <a href="/register/" style="color: white; padding-left: 5px; padding-right: 5px; margin-right: 10px; font-size: 13px">Sign Up</a>
+                <a href="/login/" style="color: white; padding-left: 5px; padding-right: 5px; margin-left: 10px; font-size: 13px">Login</a>
+                    </div>
+
+        
+
+        <div id="tagline">
+        IT'S NOT WHO YOU KNOW, IT'S WHO YOU OWN &reg;
+        </div>
+
+    </div>
+
+</div>
+            <div id="navigation" class="column-row google-anno-skip">
+        <div id="nav-menu" class="columns">
+            <ul id="nav-ul">
+                            <li class="has_dropdown"><span href="/security/">Now Trading</span>
+                    <div class="sub_nav_canvas long">
+                        <ul class="primary">
+                            <li><a href="/security/" class="sublink">All Types</a></li>
+                            <li><a href="/security/list.php?id=1&sfield=price_change" class="sublink">Moviestocks</a></li>
+                            <li><a href="/security/list.php?id=2&code=SB" class="sublink">StarBonds</a></li>
+                            <li><a href="/security/list.php?id=2&sfield=price_change" class="sublink">CelebStock</a></li>
+                            <li><a href="/security/feature.php?type=tvstock" class="sublink">TVStocks</a></li>
+                            <li><a href="/security/list.php?id=4" class="sublink">Movie Funds</a></li>
+                            <li><a href="/security/list.php?id=3" class="sublink">All Derivatives</a></li>
+                        </ul>
+                        <ul class="secondary long"">
+                            <li class="featured">
+                                <a href="/security/view/ROSNV">Latest IPO &raquo;</a>
+                                <p style="max-width: 200px;">
+                                    <strong>Rose of Nevada</strong> George MacKay and Callum Turner star as two men who board a fishing boat that had vanished 30 years ago and find...
+                                </p>
+                            </li>
+                            <li><a href="/security/feature.php?type=boxoffice">Box Office &raquo;</a></li>
+                                                    </ul>
+                        <div class="close-menu"><span class="up-arrow"></span></div>
+                    </div>
+                </li>
+                <li class="has_dropdown"><span href="/calendar/">News & Events</span>
+                    <div class="sub_nav_canvas long">
+                        <ul class="primary">
+                            <li><a href="/calendar/" class="sublink">Market Calendar</a></li>
+                            <li><a href="/security/feature.php?type=opening">Opening This Week</a></li>
+                            <li><a href="/security/feature.php?type=upcoming">Release Schedule</a></li>
+                            <li><a href="/security/feature.php?type=boxoffice">Box Office</a></li>
+                            <li><a href="/blog/" class="sublink">Spin Factor Blog</a></li>
+                            <li><a href="/forum/forum.php?id=1" class="sublink">Site Announcements</a></li>
+                        </ul>
+                        <ul class="secondary long">
+                            <li class="featured">
+                                <a href="/security/view/SKETC">Opening &raquo;</a>
+                                <p style="max-width: 200px;">
+                                    <strong>Sketch</strong> A girl's <I>Sketch</I> drawings come to life and unleash monsters on her small town. Tony Hale, D'Arcy Carden and Bianca...
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="close-menu"><span class="up-arrow"></span></div>
+                    </div>
+                </li>
+                <li class="has_dropdown"><span href="/forum/">Community</span>
+                    <div class="sub_nav_canvas">
+                        <ul class="primary">
+                            <li><a href="/forum/" class="sublink">Forums</a></li>
+                            <li><a href="/league/" class="sublink">Leagues</a></li>
+                            <li><a href="/leader/" class="sublink">Leaderboards</a></li>
+                            <li><a href="/help/index.php?page=tools" class="sublink">Tools of the Trade</a></li>
+                            <li><a href="/help/index.php?page=fansites" class="sublink">HSX Fan Sites</a></li>
+                        </ul>
+                        <ul class="secondary">
+                            <li class="featured">
+                                <a href="/leader/watchlist.php">Trader Watchlist &raquo;</a>
+                                <p style="max-width: 200px;">
+                                    The trader watchlist let's you keep an eye on the Net Worth of your
+                                    friends and fellow traders.  Build yours now!
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="close-menu"><span class="up-arrow"></span></div>
+                    </div>
+                </li>
+                <li class="has_dropdown"><span href="/games/">Earn H$</span>
+                    <div class="sub_nav_canvas">
+                        <ul class="primary">
+                            <li><a href="/games/index.php" class="sublink">Classic Cash</a></li>
+                            <li><a href="/games/learn_and_earn.php" class="sublink">Movie Mogul</a></li>
+                            <li><a href="/games/box_office_battle.php" class="sublink">Box Office Battle</a></li>
+                        </ul>
+                        <ul class="secondary">
+                            <li class="featured">
+                                <a href="/refer/">Tell a Friend &raquo;</a>
+                                <p style="max-width: 200px;">Get your friends into HSX and earn H$25,000 each!</p>
+                            </li>
+                        </ul>
+                        <div class="close-menu"><span class="up-arrow"></span></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="search" class="columns nowrap">
+            <div style="
+                display: flex;
+            ">
+                <a href="/search/" class="search-advanced">advanced</a>
+            </div>
+            <div style="
+                    display: flex;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-right: 10px;
+                 ">
+                <form action="/search/" id="search-form" _lpchecked="1">
+
+                    <div style="
+                        display: flex;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    ">
+                        <input type="text" id="search-criteria" name="keyword" value="" title="Search Keyword(s)">
+                        <span   class="btn black small"
+                                style="
+                                    border-radius: 31px;
+                                    text-transform: capitalize;
+                                    margin-left: -24px;
+                                    z-index: 99;"
+                                onClick="javascript:$('#search-form').submit();">Go</span>
+                        <input type="hidden" name="action" value="submit_nav">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+        <div id="bodywrap">
+
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!--                  Begin: Page Body                      -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+<div class="column-row flex">
+	<div class="eight columns" style="order:1">
+
+		<div id="security-info" class="whitebox_content">
+
+						<div class="security_data">
+				<div>
+					<span class="security movie">
+						<div>
+							<div style="
+								width: 90px;
+								height: 130px;
+								opacity: 0.5;
+								box-shadow: inset 0 0 0 2px #ffc343;
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-image: url(/images/icons/movie_security_icon.gif);
+								">
+							</div>
+							<img src="
+																	/images/security/detail/SAFEW.jpg
+																" id="security_poster" onerror="this.style.display='none'" style="width:90px;height:130px;top:0px;position:absolute;"/>
+															<img class="icon" src="/images/icons/movie_security_icon.gif" />
+													</div>
+					</span>
+				</div>
+				<div style="float:left;">
+					<div>
+						<h1>Seeking a Friend for the End of the World</h1>
+					</div>
+					<div>
+												<div class="data_column left_col">
+							<table>
+							<tr><td class="label">Symbol:</td><td>SAFEW</td></tr>
+							<tr><td class="label">Status:</td><td>Inactive</td></tr>
+							<tr><td class="label">Delist&nbsp;Date:</td><td>Jul 16, 2012</td></tr></td></tr>
+							<tr><td class="label">Genre:</td><td>Romance / RomCom</td></tr>
+							<tr><td class="label">MPAA Rating:</td><td>R</td></tr>
+							</table>
+						</div>
+						<div class="data_column last">
+							<table>
+							<tr><td class="label">Phase:</td><td>Release</td></tr>
+							<tr><td class="label">Release&nbsp;Date:</td><td>Jun 22, 2012</td></tr>
+							<tr><td class="label">Release&nbsp;Pattern:</td><td>wide</td></tr>							<tr><td class="label">Gross:</td><td>$6,619,173</td></tr>
+							<tr><td class="label">Theaters:</td><td>1618</td></tr>
+							</table>
+						</div>
+											</div>
+				</div>
+			</div>
+
+			<div id="description">
+								<h3>Description</h3>
+				<p>Steve Carell is <i>Seeking a Friend for the End of the World</i> with the help of Keira Knightley.  A lonely man is joined by his female neighbor in a journey to locate his high school sweetheart before an asteroid hits earth. The romantic comedy is written and directed by Lorene Scafaria.
+<p>
+<div><iframe frameborder="0" width="576" height="324" src="http://d.yimg.com/nl/movies/site/player.html#startScreenCarouselUI=hide&repeat=0&shareUrl=http%3A%2F%2Fmovies.yahoo.com%2Fmovie%2Fseeking-a-friend-for-the-end-of-the-world%2Ftrailers%2Fseeking-a-friend-at-the-end-of-the-world-theatrical-trailer-28244110.html&vid=28244110&browseCarouselUI=hide"></iframe></div></p><br/><br/></p>
+			</div>
+
+	        <div id="fb-root"></div>
+
+<!-- Load Facebook SDK for JavaScript -->
+<!--
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=222888217801257&autoLogAppEvents=1" nonce="bSV8zAQy"></script>
+-->
+
+
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#appId=151918441555568&xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+<!-- Social Network Buttons -->
+<div style="display:flex;">
+    <!-- Twitter -->
+    <div class="social-button" style="margin-right: 10px;">
+        <div style="width: 100px; height: 30px;">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+        </div>
+    </div>
+
+    <!-- Facebook Share -->
+    <div class="social-button">
+        <!-- Facebook like button code -->
+        <div id="fb-like" class="fb-like"
+            data-href="https://www.hsx.com/security/view/SAFEW"
+            data-width=""
+            data-layout="button_count"
+            data-action="like"
+            data-size="small"
+            data-share="true"
+            data-lazy="true">
+        </div>
+    </div>
+</div>
+			<div class="column-row flex">
+
+				<!-- CREDITS -->
+
+				<div id="credits" class="whitebox_content">
+					 					<h3>Credits</h3>
+					<h4>Distributor</h4>
+					<p>Focus Features</p>
+
+					<h4>Director</h4>
+					<ul class="credit">
+  											<li>
+						<h5></h5>
+						</li>
+											</ul>
+
+					<h4>Cast</h4>
+					<ul class="credit">
+  											<li>
+							<p>Adam Brody (<a href="/security/view/ADBRO">ADBRO</a>)</p>
+						</li>
+												<li>
+							<p>Connie Britton (<a href="/security/view/CBRIT">CBRIT</a>)</p>
+						</li>
+												<li>
+							<p>Derek Luke (<a href="/security/view/DLUKE">DLUKE</a>)</p>
+						</li>
+												<li>
+							<p>Keira Knightley (<a href="/security/view/KKNIG">KKNIG</a>)</p>
+						</li>
+												<li>
+							<p>Melanie Lynskey (<a href="/security/view/MLYNS">MLYNS</a>)</p>
+						</li>
+												<li>
+							<p>Patton Oswalt (<a href="/security/view/POSWA">POSWA</a>)</p>
+						</li>
+												<li>
+							<p>Rob Corddry (<a href="/security/view/RCORD">RCORD</a>)</p>
+						</li>
+												<li>
+							<p>Steve Carell (<a href="/security/view/SCARE">SCARE</a>)</p>
+						</li>
+												<li>
+							<p>T.J. Miller (<a href="/security/view/TJMIL">TJMIL</a>)</p>
+						</li>
+											</ul>
+
+					
+				</div>
+
+				<!-- RELATED POSTS -->
+
+				<div id="related-posts" class="whitebox_content">
+					<h3>Related Posts</h3>
+          					<h4>HSX Blog<a href="/search/?keyword=SAFEW&status=ALL&show_calendar=on&show_forums=on&show_blog=on&action=submit_advanced"><div class="more-hack">More »</div></a></h4>
+					<ul class="discussions">
+            						<li>
+							<p class="poster">Antibody &ndash; Jun 24, 2012</p>
+							<p class="comment">Box Score: Brave shoots into... <a href="/blog/1282">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Box Office Whisperer &ndash; Jun 21, 2012</p>
+							<p class="comment">Whisper Numbers: Brave aims... <a href="/blog/1281">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Antibody &ndash; Feb  9, 2012</p>
+							<p class="comment">First trailer for Seeking a... <a href="/blog/1140">Read &raquo;</a></p>
+						</li>
+            					</ul>
+          	<br />
+          					<h4>Forum Discussions<a href="/search/?keyword=SAFEW&status=ALL&show_calendar=on&show_forums=on&show_blog=on&action=submit_advanced"><div class="more-hack">More »</div></a></h4>
+					<ul class="discussions">
+            						<li>
+							<p class="poster">Antibody &ndash; Jul  6, 2012</p>
+							<p class="comment">BOM: Focus has stopped... <a href="/forum/forum.php?id=3&pid=190104">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Antibody &ndash; Jun 24, 2012</p>
+							<p class="comment">MovieStock Adjusts for Brave,... <a href="/forum/forum.php?id=1&pid=187314">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Antibody &ndash; Jun 24, 2012</p>
+							<p class="comment">Official Adjusts <a href="/forum/forum.php?id=3&pid=187313">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Antibody &ndash; Jun 21, 2012</p>
+							<p class="comment">Theater Counts [ALVH] [BRAVE]... <a href="/forum/forum.php?id=1&pid=186922">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">dioneta &ndash; Jun 18, 2012</p>
+							<p class="comment">Tagging: [BRAVE], [ALVH],... <a href="/forum/forum.php?id=3&pid=186279">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">karspov &ndash; Jun 17, 2012</p>
+							<p class="comment">Tagging RS... <a href="/forum/forum.php?id=3&pid=186066">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Antibody &ndash; Jun 14, 2012</p>
+							<p class="comment">Theater Counts: [TMBOY]... <a href="/forum/forum.php?id=1&pid=185411">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Antibody &ndash; Feb  9, 2012</p>
+							<p class="comment">Trailer for [SAFEW] <a href="/forum/forum.php?id=3&pid=158720">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Antibody &ndash; Feb  8, 2012</p>
+							<p class="comment">Poster for [SAFEW] - KNNIG... <a href="/forum/forum.php?id=3&pid=158502">Read &raquo;</a></p>
+						</li>
+            						<li>
+							<p class="poster">Antibody &ndash; Jan 26, 2012</p>
+							<p class="comment">New Release Dates: Mirror... <a href="/forum/forum.php?id=1&pid=156694">Read &raquo;</a></p>
+						</li>
+            					</ul>
+				</div>
+				<div class="clearing_block" /></div>
+			</div>
+
+		</div>
+
+
+	</div>
+	<div class="four columns">
+		    <div id="adspace" class="whitebox_content">
+            <!-- Begin 33Across RevCTRL InPage -->
+        <script id="x33x1000000">
+            
+            var Tynt=Tynt||[];Tynt.push('aX5MzoX8Kr5RzZrkHcnnVW');
+            Tynt.cmd=Tynt.cmd||[];Tynt.cmd.push(function(){
+                Tynt.ads.display(
+                    
+                                            '300x250',
+                                        
+                    'x33x'+'1000000',
+                    'inpage');
+                }
+            );
+            (function(){var h,s=document.createElement('script');
+            s.src='https://cdn.tynt.com/siab.js';
+            h=document.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s,h);})();
+            
+        </script>
+        <!-- End 33Across RevCTRL InPage -->
+    </div>    
+		<div class="whitebox_content">
+			<div class="security_summary">
+				<p class="security_name">Seeking a Friend for the End of  (SAFEW)</p>
+				<p class="value">
+				H$6.62
+									<span style="font-weight: bold; color: #999; text-align: right"> July 16, 2012</span>
+								</p>
+				<p class="labels">
+					<span>
+												Delist Date
+											</span>
+										Delist Price
+									</p>
+			</div>
+			<div class="holdings_summary">
+				<p style="color: #333;">
+							Shares Held Long on HSX: <span style="text-align: right; color: #333;">0</span><br />
+							Shares Held Short on HSX: <span style="text-align: right; color: #333;">0</span><br />
+							Trading Volume on HSX (Today): <span style="text-align: right; color: #333;">915,353</span><br />
+				</p>
+			</div>
+				</div>
+		
+		<div class="whitebox_content">
+						  			<h3><span></span>High and Low Trading Prices</h3>
+			<table class="light">
+				<tbody>
+					<tr>
+						<td>This Week</td>
+						<td><span class="high">H$7.00</span></td>
+						<td><span class="low">H$6.64</span></td>
+					</tr>
+					<tr>
+						<td>This Month</td>
+						<td><span class="high">H$24.78</span></td>
+						<td><span class="low">H$6.64</span></td>
+					</tr>
+					<tr>
+						<td>This Season</td>
+						<td><span class="high">H$35.62</span></td>
+						<td><span class="low">H$6.64</span></td>
+					</tr>
+					<tr>
+						<td>This Year</td>
+						<td><span class="high">H$41.66</span></td>
+						<td><span class="low">H$6.64</span></td>
+					</tr>
+				</tbody>
+			</table>
+						<div>
+				<h3>Quick Help
+					<a href="/help/?page=glossary" class="more">
+						<div class="more-hack">Glossary &raquo;</div>
+					</a>
+				</h3>
+								<p>What is a: <a href="/help/?page=glossary#moviestocks">MovieStock&reg;</a>, <a href="/help/?page=glossary#status">Status</a>, <a href="/help/?page=glossary#change-from-yesterday">Change Today</a></p>
+						</div>
+			<!--
+			<br />
+			<h3>Think you can manage?</h3>
+			<p>Think you have what it takes to manage a Movie Fund?  If you have a portfolio worth over H$100 million, then submit your fund idea proposal to <a HREF="mailto:macdaddy@hsx.com">macdaddy@hsx.com</a>. </p>
+			-->
+		</div>
+    	</div>
+</div>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!--                  End: Page Body                        -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+					<div id="adspace-mobile" class="column-row whitebox_content">
+            <!-- Begin 33Across RevCTRL InPage -->
+        <script id="x33x9999999">
+            
+            var Tynt=Tynt||[];Tynt.push('aX5MzoX8Kr5RzZrkHcnnVW');
+            Tynt.cmd=Tynt.cmd||[];Tynt.cmd.push(function(){
+                Tynt.ads.display(
+                    
+                                            '300x250',
+                                        
+                    'x33x'+'9999999',
+                    'inpage');
+                }
+            );
+            (function(){var h,s=document.createElement('script');
+            s.src='https://cdn.tynt.com/siab.js';
+            h=document.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s,h);})();
+            
+        </script>
+        <!-- End 33Across RevCTRL InPage -->
+    </div>		
+        </div><!-- #bodywrap -->
+
+        <div id="footer" class="column-row google-anno-skip">
+            <div class="columns">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="/help/">What is HSX?</a></li>
+                    <li><a href="/help/?page=topics">Help Topics</a></li>
+                    <li><a href="/help/?page=faq">FAQs</a></li>
+                    <li><a href="/help/?page=glossary">Glossary</a></li>
+                </ul>
+            </div>
+            <div class="columns">
+                <h4>About HSX</h4>
+                <ul>
+                    <li><a href="/about/">About HSX</a></li>
+                    <li><a href="/about/?page=contact">Contact Us</a></li>
+                    <li><a href="/about/?page=press">Media and Press Releases</a></li>
+                    <li><a href="/about/?page=privacy">Privacy Policy</a> | <a href="/about/?page=terms">Terms of Use</a></li>
+                    <li><a href="/documents/hsx.com-SelectUSStatesConsumerPrivacyNotices-December2024.pdf">Select US States Consumer Privacy Notices</a></li>
+                </ul>
+            </div>
+            <div class="columns" style="max-width: 400px;">
+                <h4>What is HSX all about?</h4>
+                <p>Hollywood Stock Exchange is The Entertainment Market<sup style="font-size: 9px;">TM</sup> where you can buy and trade movies, stars and more using Hollywood Dollars®. Sign up and we'll get you started with H$2,000,000.<br /><a href="/register/" id="footer-sign-up">Sign up now &raquo;</a>
+                    <br /><br />
+                    <!-- div id="e39226e7-4ee0-4a0f-a91c-bedaefb5ef4a"> <script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/Hollywood-Stock-Exchange,-LLC/asc?rid=e39226e7-4ee0-4a0f-a91c-bedaefb5ef4a"></script><a href="//privacy.truste.com/privacy-seal/Hollywood-Stock-Exchange,-LLC/validation?rid=d75a73ec-dfe6-4937-a1c4-b41ec2c9feab" title="TRUSTe online privacy certification" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/privacy-seal/Hollywood-Stock-Exchange,-LLC/seal?rid=d75a73ec-dfe6-4937-a1c4-b41ec2c9feab" alt="TRUSTe online privacy certification"/></a></div -->
+                </p>
+            </div>
+        </div>
+
+        
+        	<div class="list_trade_dropdown google-anno-skip">
+		<h2 id="title"></h2>
+		<form id="quickTrade" name="quickTrade" action="/trade/" method="get" fix_ie="true">
+			<input id="symbol" type="hidden" name="symbol" value="" />
+			<input type="text" name="shares" autocomplete="off" class="short" value="Qty" onfocus="doClear(this,'Qty')"/>
+			<input id="action" name="action" value="place order" type="hidden" />
+			<input id="tradeType" name="tradeType" type="hidden" />
+			<input type="hidden" name="trade_origin_url" value="/security/view/SAFEW" />
+			<ul class="broker_actions">
+				<li><a href="javascript:QuickTrade('quickTrade','buy');">Buy</a></li>
+				<li><a href="javascript:QuickTrade('quickTrade','sell');">Sell</a></li>
+				<li><a href="javascript:QuickTrade('quickTrade','short');">Short</a></li>
+				<li><a href="javascript:QuickTrade('quickTrade','cover');">Cover</a></li>
+			</ul><br />
+					<p class="default-quick-trader-link">
+				<a class="btn tiny black" href="/trade/index.php?symbol=**symbol**&amp;tradeType=buy&amp;shares=max&amp;action=submit&amp;trade_origin_url=/security/view/SAFEW">Buy Max</a>
+				&nbsp;&nbsp;
+				<a class="btn tiny black" href="/trade/index.php?symbol=**symbol**&amp;tradeType=sell&amp;shares=max&amp;action=submit&amp;trade_origin_url=/security/view/SAFEW">Sell All</a>
+				&nbsp;&nbsp;
+				<a class="btn tiny black" href="/trade/index.php?symbol=**symbol**&amp;tradeType=short&amp;shares=max&amp;action=submit&amp;trade_origin_url=/security/view/SAFEW">Short Max</a>
+				&nbsp;&nbsp;
+				<a class="btn tiny black" href="/trade/index.php?symbol=**symbol**&amp;tradeType=cover&amp;shares=max&amp;action=submit&amp;trade_origin_url=/security/view/SAFEW">Cover All</a>
+				&nbsp;&nbsp;
+				<a class="btn tiny black" href="/trade/index.php?symbol=**symbol**&amp;tradeType=buy&amp;shares=1&amp;action=submit&amp;trade_origin_url=/security/view/SAFEW">Radar</a>
+			</p>
+					<img class="close" src="/images/close_window.gif" onclick="javascript:$('.list_trade_dropdown').hide(100)"/>
+		</form>
+	</div>
+        <script src="/javascript/plugins/v.v9f9e/jquery.js"                         type="text/javascript"></script>
+        <script src="/javascript/plugins/v.v9f9e/browsers.js"                       type="text/javascript"></script>
+        <script src="/javascript/plugins/v.v9f9e/jquery.marquee.js"                 type="text/javascript"></script>
+        <script src="/javascript/plugins/v.v9f9e/jquery-ui-1.7.2._core.min.js"      type="text/javascript"></script>
+        <script src="/javascript/plugins/v.v9f9e/jquery-ui-1.7.2.draggable.min.js"  type="text/javascript"></script>
+        <script src="/javascript/plugins/v.v9f9e/sorttable.js"                      type="text/javascript"></script>
+
+        <script src="/javascript/v.v9f9e/misc.js"   type="text/javascript"></script>
+        <script src="/javascript/v.v9f9e/menu.js"   type="text/javascript"></script>
+        <script src="/javascript/v.v9f9e/trader.js" type="text/javascript"></script>
+
+        	<div id="ticker"
+			 			 style="background: url(/images/ticker_background.png) repeat-x;">
+		<a href="#" id="ticker-close"></a>
+		<div id="ticker-scroll">
+			<marquee width="100%" scrollamount="2" behavior="scroll">
+									<a href="/security/view/1OTD2">
+						One of Them Days 2 (1OTD2) 10000
+						<span style="color:
+							#58cb48
+							;">
+							22.51 (+0.40)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/WNTGM">
+						Winter Games (WNTGM) 50000
+						<span style="color:
+							#cc3d43
+							;">
+							21.12 (-2.18)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ITHOD">
+						In the Hand of Dante (ITHOD) 9999
+						<span style="color:
+							#cc3d43
+							;">
+							8.88 (-0.03)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/JUMN3">
+						Jumanji sequel (JUMN3) 30000
+						<span style="color:
+							#cc3d43
+							;">
+							133.78 (-0.16)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ITHOD">
+						In the Hand of Dante (ITHOD) 59999
+						<span style="color:
+							#cc3d43
+							;">
+							8.88 (-0.03)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/RAMB6">
+						John Rambo (RAMB6) 50000
+						<span style="color:
+							#58cb48
+							;">
+							38.03 (+0.30)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/FREK2">
+						Freakier Friday (FREK2) 1000
+						<span style="color:
+							#cc3d43
+							;">
+							104.24 (-1.12)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/SUPGR">
+						Supergirl (SUPGR) 100000
+						<span style="color:
+							#58cb48
+							;">
+							157.40 (+0.60)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/FREK2">
+						Freakier Friday (FREK2) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							104.24 (-1.12)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ARMWR">
+						Armor Wars (ARMWR) 75000
+						<span style="color:
+							#58cb48
+							;">
+							36.62 (+0.11)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/HTRTC">
+						The Hand That Rocks the Cradle (HTRTC) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							10.99 (-5.06)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/XMEN8">
+						X-Men aka Mutants (XMEN8) 150000
+						<span style="color:
+							#58cb48
+							;">
+							143.63 (+1.00)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/WUTHR">
+						Wuthering Heights (WUTHR) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							45.66 (-1.42)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/WUTHR">
+						Wuthering Heights (WUTHR) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							45.66 (-1.42)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ROSNV">
+						Rose of Nevada (ROSNV) 150000
+						<span style="color:
+							#999999
+							;">
+							2.00 (0.00)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/DRST3">
+						Doctor Strange 3 (DRST3) 40000
+						<span style="color:
+							#58cb48
+							;">
+							130.61 (+2.05)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/SIRAT">
+						Sirat (SIRAT) 150000
+						<span style="color:
+							#999999
+							;">
+							2.00 (0.00)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/HDONT.OW">
+						Honey Don't - Opening Weekend (HDONT.OW) 100000
+						<span style="color:
+							#cc3d43
+							;">
+							4.06 (-0.21)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/HGAM6">
+						The Hunger Games: Sunrise on the (HGAM6) 25000
+						<span style="color:
+							#cc3d43
+							;">
+							150.90 (-0.58)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/DPTHT">
+						Dude Perfect: The Hero Tour (DPTHT) 150000
+						<span style="color:
+							#58cb48
+							;">
+							3.99 (+0.14)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/TROSE">
+						The Roses (TROSE) 2000
+						<span style="color:
+							#cc3d43
+							;">
+							14.45 (-0.69)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/SPAWK">
+						Spa Weekend (SPAWK) 2000
+						<span style="color:
+							#cc3d43
+							;">
+							14.00 (-0.34)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ITHOD">
+						In the Hand of Dante (ITHOD) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							8.88 (-0.03)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/DEPER">
+						Deeper (DEPER) 10000
+						<span style="color:
+							#cc3d43
+							;">
+							57.23 (-3.01)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ASSNT">
+						Assassination (ASSNT) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							9.40 (-0.08)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/28LT4">
+						28 Years Later: The Bone Temple  (28LT4) 50000
+						<span style="color:
+							#cc3d43
+							;">
+							64.08 (-0.15)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ISGOD">
+						Is God Is (ISGOD) 3
+						<span style="color:
+							#58cb48
+							;">
+							3.77 (+1.37)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ISGOD">
+						Is God Is (ISGOD) 150000
+						<span style="color:
+							#58cb48
+							;">
+							3.77 (+1.37)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ITHOD">
+						In the Hand of Dante (ITHOD) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							8.88 (-0.03)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/SIRAT">
+						Sirat (SIRAT) 150000
+						<span style="color:
+							#999999
+							;">
+							2.00 (0.00)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ROSNV">
+						Rose of Nevada (ROSNV) 150000
+						<span style="color:
+							#999999
+							;">
+							2.00 (0.00)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/KILLC">
+						KIlling Castro (KILLC) 150000
+						<span style="color:
+							#58cb48
+							;">
+							6.37 (+0.02)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/EWLTZ">
+						Easy's Waltz (EWLTZ) 150000
+						<span style="color:
+							#58cb48
+							;">
+							7.94 (+0.03)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/FANF2">
+						The Fantastic Four: First Steps (FANF2) 55000
+						<span style="color:
+							#cc3d43
+							;">
+							248.50 (-1.51)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/LEREX">
+						Lear Rex (LEREX) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							6.26 (-0.04)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/WEPNS">
+						Weapons (WEPNS) 150000
+						<span style="color:
+							#58cb48
+							;">
+							94.92 (+7.16)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/IHLKY">
+						If I Had Legs I'd Kick You (IHLKY) 1000
+						<span style="color:
+							#58cb48
+							;">
+							4.69 (+0.31)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/MODGL">
+						Modi - Three Days on the Wing of (MODGL) 150000
+						<span style="color:
+							#999999
+							;">
+							0.05 (0.00)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/SKETC">
+						Sketch (SKETC) 1000
+						<span style="color:
+							#58cb48
+							;">
+							12.09 (+0.75)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/WUTHR">
+						Wuthering Heights (WUTHR) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							45.66 (-1.42)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/FREK2">
+						Freakier Friday (FREK2) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							104.24 (-1.12)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/MASER">
+						Maserati: The Brothers (MASER) 150000
+						<span style="color:
+							#999999
+							;">
+							8.22 (0.00)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/FREK2">
+						Freakier Friday (FREK2) 906
+						<span style="color:
+							#cc3d43
+							;">
+							104.24 (-1.12)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/PCHRM">
+						Prince Charming (PCHRM) 50000
+						<span style="color:
+							#cc3d43
+							;">
+							36.59 (-0.09)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/ENGPT">
+						The Engagement Party (ENGPT) 150000
+						<span style="color:
+							#cc3d43
+							;">
+							3.98 (-0.10)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/MTRX5">
+						The Matrix 5 (MTRX5) 25000
+						<span style="color:
+							#cc3d43
+							;">
+							22.78 (-0.01)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/RNTLF">
+						Rental Family (RNTLF) 1000
+						<span style="color:
+							#58cb48
+							;">
+							7.22 (+0.10)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/KENTS">
+						Kent State (KENTS) 50000
+						<span style="color:
+							#58cb48
+							;">
+							2.52 (+0.01)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/DONGJ">
+						Dongji Rescue (DONGJ) 150000
+						<span style="color:
+							#58cb48
+							;">
+							0.70 (+0.01)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="/security/view/CHORL">
+						The Choral (CHORL) 1000
+						<span style="color:
+							#58cb48
+							;">
+							3.82 (+0.09)
+						</span>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</marquee>
+		</div>
+	</div>
+
+	<script src="/javascript/v.v9f9e/ticker.js" type="text/javascript"></script>
+	
+		<script type="text/javascript">
+			var marquee_list = [];
+			$(function() {
+				// this is how many times the content of each marquee is duplicated
+				// to prevent the loop from ever getting to the end
+				var number_of_loops = 10
+				$("marquee")
+					.each(function() {
+						var $this_html = $(this).html();
+						for (var x = 0; x < number_of_loops; x++) {
+							$(this).append($this_html);
+						}
+					})
+					.marquee('pointer')
+					.each(function() {
+						marquee_list.push(this);
+					})
+					.mouseover(function() {
+						$(this).trigger('stop');
+					})
+					.mouseout(function() {
+						$(this).trigger('start');
+					})
+					.bind('textfieldfocus', function() {
+						$(this).trigger('stop');
+					})
+					.bind('textfieldblur', function() {
+						$(this).trigger('start');
+					});
+			});
+
+			// HTML5 forward-compatible autofocus of input fields
+			if (!("autofocus" in document.createElement("input"))) {
+				$('input[autofocus]').focus();
+			}
+		</script>
+	
+
+        
+<script src="https://www.amcharts.com/lib/4/core.js" defer></script>
+<script src="https://www.amcharts.com/lib/4/charts.js" defer></script>
+<script src="https://www.amcharts.com/lib/4/themes/microchart.js" defer></script>
+<script src="/javascript/charts/v.v9f9e/sparkline.js" defer></script>
+        
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5339836112286486" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="//platform.twitter.com/widgets.js" defer></script>
+
+        <!--
+		/security/view/SAFEW
+        www.hsx.com
+        Fri, 08 Aug 2025 21:08:51 -0700
+        -->
+    </body>
+</html>

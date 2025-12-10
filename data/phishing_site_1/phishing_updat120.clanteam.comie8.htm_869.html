@@ -1,0 +1,976 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/jpeg" href="https://news.stonking.com/0x0-f2l.jpg" sizes="32x32">
+  <meta property="og:image" content="https://news.stonking.com/stonking-news.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stonking News</title>
+  <meta name="description" content="View the most popular and latest trending stonking news from popular social networks. Updated in real-time.">
+  <meta name="keywords" content="bluesky, trending, bsky, social media, top posts, social network, real-time">
+  <meta property="og:title" content="Stonking News">
+  <meta property="og:description" content="View the most popular and latest trending stonking news from popular social networks. Updated in real-time.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/jpeg" href="/0x0-f2l.jpg" sizes="32x32">
+  <link rel="canonical" href="https://news.stonking.com/news">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stonking News">
+  <meta name="twitter:description" content="View the most popular and latest trending stonking news from popular social networks. Updated in real-time.">
+  <meta name="twitter:image" content="https://news.stonking.com/stonking-news.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Stonking News",
+      "description": "View the most popular and latest trending stonking news from popular social networks. Updated in real-time.",
+      "url": "https://news.stonking.com/news"
+    }
+  </script>
+  
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#ff6600">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bluesky News">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>ð¦</text></svg>">
+  
+  <!-- Web Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <style>
+    /* Restore original dark styling */
+    :root {
+      --background-color: #1a1a1a;
+      --text-color: #fdfdfd;
+      --accent-color: #25ff00;
+      --secondary-color: #dddddd;
+      --link-color: #fdfdfd;
+      --visited-link-color: #aaaaaa;
+      --header-background: #ff6600;
+      --header-text-color: #ffffff;
+    }
+    
+    body.light-mode {
+      --background-color: #f9f8f0;
+      --text-color: #3a2e1a;
+      --accent-color: #2900ff;
+      --secondary-color: #bba98c;
+      --secondary-dark-color: #4a3a23;
+      --link-color: #1a1a1a;
+      --visited-link-color: #6b4e23;
+      --header-background: #1976d2;
+      --header-text-color: #fff;
+    }
+    
+    body.light-mode .page-description,
+    body.light-mode .meta,
+    body.light-mode footer,
+    body.light-mode footer p {
+      color: var(--secondary-dark-color) !important;
+    }
+    
+    /* Remove unnecessary media query since we're using dark by default */
+    @media (prefers-color-scheme: dark) {
+      /* Removed */
+    }
+    
+    /* Remove toggle-related styles */
+    .switch, .slider, .toggle-label {
+      display: none;
+    }
+    
+    body {
+      font-family: Verdana, Geneva, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+    
+    header {
+      background-color: var(--header-background);
+      padding: 5px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+    
+    .header-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      box-sizing: border-box;
+    }
+    
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 4px;
+    }
+    
+    .logo {
+      font-weight: bold;
+      color: var(--header-text-color);
+      text-decoration: none;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      display: inline;
+    }
+    
+    h1 {
+      margin: 0 0 4px 0;
+      padding: 0;
+      font-size: inherit;
+      display: inline;
+    }
+    
+    h2.visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    
+    nav a {
+      color: var(--header-text-color);
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    
+    nav a:last-of-type {
+      margin-right: 0;
+    }
+    
+    nav a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    
+    .container {
+      padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    ol {
+      padding-left: 30px;
+      list-style-position: outside;
+      list-style-type: decimal;
+    }
+    
+    /* Control the list marker appearance directly */
+    ::marker {
+      color: var(--secondary-color);
+      font-size: 16px;
+      font-family: Verdana, Geneva, sans-serif;
+      font-weight: normal;
+    }
+    
+    li {
+      margin-bottom: 12px;
+      padding-left: 5px;
+    }
+    
+    /* Remove all our custom rank styling elements */
+    .post-num, .post-container, .post-content {
+      display: none;
+    }
+    
+    .title {
+      font-size: 16px;
+      text-decoration: none;
+      color: var(--link-color);
+    }
+    
+    .title:visited {
+      color: var(--visited-link-color);
+    }
+    
+    .meta {
+      font-size: 12px;
+      color: var(--secondary-color);
+      margin-top: 3px;
+    }
+    
+    .score {
+      color: var(--accent-color);
+    }
+    
+    .domain {
+      color: var(--secondary-color);
+      margin-left: 5px;
+      font-size: 10px;
+    }
+    
+    .domain a {
+      color: #4caf50;
+      text-decoration: none;
+      font-size: 10px;
+    }
+    
+    .domain a:visited {
+      color: #2e7d32;
+    }
+    
+    footer {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 13px;
+      color: var(--secondary-color);
+    }
+    
+    footer a {
+      color: #4caf50;
+      text-decoration: none;
+    }
+    
+    footer a:visited {
+      color: #4caf50;
+    }
+    
+    @media (max-width: 768px) {
+      .title {
+        font-size: 16px;
+      }
+      
+      .meta {
+        font-size: 11px;
+      }
+      
+      ol {
+        padding-left: 25px;
+      }
+      
+      nav {
+        justify-content: flex-start;
+      }
+      
+      .header-content {
+        padding: 0 10px;
+      }
+    }
+    
+    /* Text-only animations for changes */
+    @keyframes scoreChange {
+      0% { color: #4caf50; font-weight: bold; }
+      100% { color: var(--accent-color); font-weight: normal; }
+    }
+    
+    .score-change {
+      animation: scoreChange 2s ease-out;
+    }
+    
+    @keyframes statChange {
+      0% { color: #4caf50; }
+      100% { color: var(--secondary-color); }
+    }
+    
+    .stat-change {
+      animation: statChange 1.5s ease-out;
+    }
+    
+    @keyframes positionChange {
+      0% { color: #ff9800; }
+      100% { color: var(--secondary-color); }
+    }
+    
+    .position-change {
+      animation: positionChange 1.5s ease-out;
+    }
+    
+    /* Page description styling */
+    .page-description {
+      color: var(--secondary-color);
+      font-size: 14px;
+      margin: 0 0 20px 0;
+      padding: 0;
+      line-height: 1.4;
+    }
+    
+    /* Add to homescreen prompt */
+    #install-prompt {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background-color: var(--header-background);
+      color: var(--header-text-color);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: none;
+      z-index: 1000;
+      text-align: center;
+    }
+    
+    /* Visually hidden but accessible to screen readers */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    #install-prompt button {
+      background-color: var(--header-text-color);
+      color: var(--header-background);
+      border: none;
+      padding: 8px 16px;
+      margin: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.4em;
+      margin-right: 10px;
+      padding: 2px 8px;
+      color: var(--header-text-color);
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .theme-toggle:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    
+    .static-content {
+      background: var(--background-color);
+      color: var(--text-color);
+      max-width: 800px;
+      margin: 40px auto 40px auto;
+      padding: 32px 24px;
+      border-radius: 12px;
+      font-size: 1.1em;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      line-height: 1.7;
+    }
+    .static-content a {
+      color: #4caf50;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+    
+    .back-btn {
+      display: block;
+      margin: 32px auto 0 auto;
+      padding: 10px 28px;
+      font-size: 1em;
+      background: var(--header-background);
+      color: var(--header-text-color);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .back-btn:hover {
+      background: var(--accent-color);
+      color: #fff;
+    }
+    
+    .repost-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      padding: 1px 2px;
+      margin-left: 4px;
+      margin-right: 2px;
+      font-size: 16px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s, transform 0.2s;
+      vertical-align: middle;
+      outline: none;
+    }
+    .repost-btn svg {
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      fill: #fff;
+      transition: fill 0.2s, transform 0.2s;
+    }
+    body.light-mode .repost-btn svg {
+      fill: #111;
+    }
+    .repost-btn:hover,
+    .repost-btn:focus {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+    .repost-btn:active svg {
+      transform: scale(0.95);
+    }
+    .repost-btn[aria-busy="true"] {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    
+    /* Discuss button, styled like repost */
+    .discuss-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      padding: 1px 2px;
+      margin-left: 2px;
+      margin-right: 2px;
+      font-size: 16px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s, transform 0.2s;
+      vertical-align: middle;
+      outline: none;
+      text-decoration: none;
+    }
+    .discuss-btn svg {
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      fill: #fff;
+      transition: fill 0.2s, transform 0.2s;
+    }
+    body.light-mode .discuss-btn svg {
+      fill: #111;
+    }
+    .discuss-btn:hover,
+    .discuss-btn:focus {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+    .discuss-btn:active svg {
+      transform: scale(0.95);
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="top-header">
+        <h1><a class="logo" href="/news">Stonking News</a></h1>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle light or dark mode">â¼</button>
+      </div>
+      <nav>
+        <a href="/news" id="news-link">News</a>
+        <a href="/gaming" id="gaming-link">Gaming</a>
+        <a href="/tech" id="tech-link">Tech</a>
+        <a href="/sports" id="sports-link">Sports</a>
+        <a href="/all" id="all-link">Other</a>
+        <a href="/gift" id="gift-link">Gift</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <h2 class="visually-hidden">Trending Bluesky Posts</h2>
+    <div class="container">
+      <ol id="posts-list"><li data-uri="at://did:plc:flfa7b6kgjqp3bbh223tmpjk/app.bsky.feed.post/3lvwssbpjds2l"><a href="https://www.usatoday.com/story/entertainment/tv/2025/08/08/south-park-kristi-noem-dog-portrayal-comments/85577885007/" class="title" target="_blank" rel="noopener">Kristi Noem slams 'South Park' for 'petty' and 'lazy' spoof of her: 'Only the liberals'</a><button type="button" class="repost-btn" data-url="https://www.usatoday.com/story/entertainment/tv/2025/08/08/south-park-kristi-noem-dog-portrayal-comments/85577885007/" data-title="Kristi Noem slams 'South Park' for 'petty' and 'lazy' spoof of her: 'Only the liberals'" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fentertainment%2Ftv%2F2025%2F08%2F08%2Fsouth-park-kristi-noem-dog-portrayal-comments%2F85577885007%2F" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.usatoday.com/story/entertainment/tv/2025/08/08/south-park-kristi-noem-dog-portrayal-comments/85577885007/" target="_blank" rel="noopener">usatoday.com</a>)</span><div class="meta"><span class="score">1450 points</span> | <span class="stats">751 likes, 123 reposts, 66 replies</span> | <span class="time-ago" data-timestamp="1754709705367" title="8/9/2025, 3:21:45 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:fmbhzkguyy4wcmdq6jw6z67x/app.bsky.feed.post/3lvx2n3xal72r"><a href="https://www.reuters.com/investigations/american-nazis-aryan-freedom-network-is-riding-high-trump-era-2025-08-08/" class="title" target="_blank" rel="noopener">American Nazis: The Aryan Freedom Network is riding high in Trump era</a><button type="button" class="repost-btn" data-url="https://www.reuters.com/investigations/american-nazis-aryan-freedom-network-is-riding-high-trump-era-2025-08-08/" data-title="American Nazis: The Aryan Freedom Network is riding high in Trump era" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.reuters.com%2Finvestigations%2Famerican-nazis-aryan-freedom-network-is-riding-high-trump-era-2025-08-08%2F" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.reuters.com/investigations/american-nazis-aryan-freedom-network-is-riding-high-trump-era-2025-08-08/" target="_blank" rel="noopener">reuters.com</a>)</span><div class="meta"><span class="score">393 points</span> | <span class="stats">3 likes, 0 reposts, 78 replies</span> | <span class="time-ago" data-timestamp="1754718151182" title="8/9/2025, 5:42:31 AM">19 minutes ago</span></div></li><li data-uri="at://did:plc:6m7rbdgaz5vyg4bnbefi7kh6/app.bsky.feed.post/3lvwue2yuls2e"><a href="https://www.nytimes.com/2025/08/08/world/americas/mexico-trump-military-cartels.html?smid=nytcore-ios-share&referringSource=articleShare" class="title" target="_blank" rel="noopener">Mexicoâs President Says U.S. Forces Are Unwelcome in Her Country</a><button type="button" class="repost-btn" data-url="https://www.nytimes.com/2025/08/08/world/americas/mexico-trump-military-cartels.html?smid=nytcore-ios-share&referringSource=articleShare" data-title="Mexicoâs President Says U.S. Forces Are Unwelcome in Her Country" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.nytimes.com%2F2025%2F08%2F08%2Fworld%2Famericas%2Fmexico-trump-military-cartels.html%3Fsmid%3Dnytcore-ios-share%26referringSource%3DarticleShare" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.nytimes.com/2025/08/08/world/americas/mexico-trump-military-cartels.html?smid=nytcore-ios-share&referringSource=articleShare" target="_blank" rel="noopener">nytimes.com</a>)</span><div class="meta"><span class="score">992 points</span> | <span class="stats">511 likes, 112 reposts, 29 replies</span> | <span class="time-ago" data-timestamp="1754711373849" title="8/9/2025, 3:49:33 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:rjr6nfdzrfngjgc34jjyty6a/app.bsky.feed.post/3lvwrshklis2y"><a href="https://www.nytimes.com/2025/08/07/nyregion/andrew-cuomo-trump.html?unlocked_article_code=1.c08.tGN_.rHn96MF1bwv4&smid=bs-share" class="title" target="_blank" rel="noopener">Cuomo and Trump, Two âQueens Boys,â Go Way Back</a><button type="button" class="repost-btn" data-url="https://www.nytimes.com/2025/08/07/nyregion/andrew-cuomo-trump.html?unlocked_article_code=1.c08.tGN_.rHn96MF1bwv4&smid=bs-share" data-title="Cuomo and Trump, Two âQueens Boys,â Go Way Back" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.nytimes.com%2F2025%2F08%2F07%2Fnyregion%2Fandrew-cuomo-trump.html%3Funlocked_article_code%3D1.c08.tGN_.rHn96MF1bwv4%26smid%3Dbs-share" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.nytimes.com/2025/08/07/nyregion/andrew-cuomo-trump.html?unlocked_article_code=1.c08.tGN_.rHn96MF1bwv4&smid=bs-share" target="_blank" rel="noopener">nytimes.com</a>)</span><div class="meta"><span class="score">659 points</span> | <span class="stats">302 likes, 74 reposts, 27 replies</span> | <span class="time-ago" data-timestamp="1754708635948" title="8/9/2025, 3:03:55 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:vovinwhtulbsx4mwfw26r5ni/app.bsky.feed.post/3lvwyox4lqs2k"><a href="https://www.theguardian.com/commentisfree/2025/aug/09/spain-economy-strawberries-pickers-migrant-gdp?utm_term=Autofeed&CMP=bsky_gu&utm_medium=&utm_source=Bluesky#Echobox=1754713442" class="title" target="_blank" rel="noopener">Spainâs economy is the envy of Europe, but the plight of its strawberry pickers tells another story | Tone Sutterud</a><button type="button" class="repost-btn" data-url="https://www.theguardian.com/commentisfree/2025/aug/09/spain-economy-strawberries-pickers-migrant-gdp?utm_term=Autofeed&CMP=bsky_gu&utm_medium=&utm_source=Bluesky#Echobox=1754713442" data-title="Spainâs economy is the envy of Europe, but the plight of its strawberry pickers tells another story | Tone Sutterud" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.theguardian.com%2Fcommentisfree%2F2025%2Faug%2F09%2Fspain-economy-strawberries-pickers-migrant-gdp%3Futm_term%3DAutofeed%26CMP%3Dbsky_gu%26utm_medium%3D%26utm_source%3DBluesky%23Echobox%3D1754713442" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.theguardian.com/commentisfree/2025/aug/09/spain-economy-strawberries-pickers-migrant-gdp?utm_term=Autofeed&CMP=bsky_gu&utm_medium=&utm_source=Bluesky#Echobox=1754713442" target="_blank" rel="noopener">theguardian.com</a>)</span><div class="meta"><span class="score">179 points</span> | <span class="stats">59 likes, 30 reposts, 6 replies</span> | <span class="time-ago" data-timestamp="1754716033447" title="8/9/2025, 5:07:13 AM">55 minutes ago</span></div></li><li data-uri="at://did:plc:vovinwhtulbsx4mwfw26r5ni/app.bsky.feed.post/3lvx263jltc2w"><a href="https://www.theguardian.com/world/2025/aug/09/nagasaki-japan-atomic-bomb-twin-bells-urakami-cathedral?utm_source=dlvr.it&utm_medium=bluesky&CMP=bsky_gu" class="title" target="_blank" rel="noopener">Nagasakiâs twin bells ring in unison for first time in 80 years to mark atomic bombing</a><button type="button" class="repost-btn" data-url="https://www.theguardian.com/world/2025/aug/09/nagasaki-japan-atomic-bomb-twin-bells-urakami-cathedral?utm_source=dlvr.it&utm_medium=bluesky&CMP=bsky_gu" data-title="Nagasakiâs twin bells ring in unison for first time in 80 years to mark atomic bombing" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2025%2Faug%2F09%2Fnagasaki-japan-atomic-bomb-twin-bells-urakami-cathedral%3Futm_source%3Ddlvr.it%26utm_medium%3Dbluesky%26CMP%3Dbsky_gu" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.theguardian.com/world/2025/aug/09/nagasaki-japan-atomic-bomb-twin-bells-urakami-cathedral?utm_source=dlvr.it&utm_medium=bluesky&CMP=bsky_gu" target="_blank" rel="noopener">theguardian.com</a>)</span><div class="meta"><span class="score">170 points</span> | <span class="stats">83 likes, 29 reposts, 0 replies</span> | <span class="time-ago" data-timestamp="1754717615262" title="8/9/2025, 5:33:35 AM">28 minutes ago</span></div></li><li data-uri="at://did:plc:xtrzqicesfwterpbweugpl4u/app.bsky.feed.post/3lvwtb5yibs2o"><a href="https://www.nytimes.com/2018/03/27/opinion/john-paul-stevens-repeal-second-amendment.html?unlocked_article_code=1.c08.kgRV.7tX1YOCcA6no&smid=nytcore-ios-share&referringSource=articleShare" class="title" target="_blank" rel="noopener">Opinion | John Paul Stevens: Repeal the Second Amendment (Published 2018)</a><button type="button" class="repost-btn" data-url="https://www.nytimes.com/2018/03/27/opinion/john-paul-stevens-repeal-second-amendment.html?unlocked_article_code=1.c08.kgRV.7tX1YOCcA6no&smid=nytcore-ios-share&referringSource=articleShare" data-title="Opinion | John Paul Stevens: Repeal the Second Amendment (Published 2018)" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.nytimes.com%2F2018%2F03%2F27%2Fopinion%2Fjohn-paul-stevens-repeal-second-amendment.html%3Funlocked_article_code%3D1.c08.kgRV.7tX1YOCcA6no%26smid%3Dnytcore-ios-share%26referringSource%3DarticleShare" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.nytimes.com/2018/03/27/opinion/john-paul-stevens-repeal-second-amendment.html?unlocked_article_code=1.c08.kgRV.7tX1YOCcA6no&smid=nytcore-ios-share&referringSource=articleShare" target="_blank" rel="noopener">nytimes.com</a>)</span><div class="meta"><span class="score">478 points</span> | <span class="stats">240 likes, 46 reposts, 20 replies</span> | <span class="time-ago" data-timestamp="1754710204163" title="8/9/2025, 3:30:04 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:ebyirfmcml2wmydrexhxu27t/app.bsky.feed.post/3lvwyp3ohxc2k"><a href="https://www.theguardian.com/australia-news/2025/aug/09/israel-gaza-city-takeover-plan-joint-statement-uk-germany-italy-new-zealand" class="title" target="_blank" rel="noopener">Australia joins UK, Germany, Italy and New Zealand in condemning Israelâs planned Gaza City takeover</a><button type="button" class="repost-btn" data-url="https://www.theguardian.com/australia-news/2025/aug/09/israel-gaza-city-takeover-plan-joint-statement-uk-germany-italy-new-zealand" data-title="Australia joins UK, Germany, Italy and New Zealand in condemning Israelâs planned Gaza City takeover" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.theguardian.com%2Faustralia-news%2F2025%2Faug%2F09%2Fisrael-gaza-city-takeover-plan-joint-statement-uk-germany-italy-new-zealand" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.theguardian.com/australia-news/2025/aug/09/israel-gaza-city-takeover-plan-joint-statement-uk-germany-italy-new-zealand" target="_blank" rel="noopener">theguardian.com</a>)</span><div class="meta"><span class="score">135 points</span> | <span class="stats">48 likes, 14 reposts, 9 replies</span> | <span class="time-ago" data-timestamp="1754716046664" title="8/9/2025, 5:07:26 AM">54 minutes ago</span></div></li><li data-uri="at://did:plc:dwaduijo6ngdgzmir5vovzrh/app.bsky.feed.post/3lvwt4npsv22o"><a href="https://www.nytimes.com/2025/08/08/technology/ai-chatbots-delusions-chatgpt.html?smid=nytcore-ios-share&referringSource=articleShare" class="title" target="_blank" rel="noopener">Chatbots Can Go Into a Delusional Spiral. Hereâs How It Happens.</a><button type="button" class="repost-btn" data-url="https://www.nytimes.com/2025/08/08/technology/ai-chatbots-delusions-chatgpt.html?smid=nytcore-ios-share&referringSource=articleShare" data-title="Chatbots Can Go Into a Delusional Spiral. Hereâs How It Happens." title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.nytimes.com%2F2025%2F08%2F08%2Ftechnology%2Fai-chatbots-delusions-chatgpt.html%3Fsmid%3Dnytcore-ios-share%26referringSource%3DarticleShare" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.nytimes.com/2025/08/08/technology/ai-chatbots-delusions-chatgpt.html?smid=nytcore-ios-share&referringSource=articleShare" target="_blank" rel="noopener">nytimes.com</a>)</span><div class="meta"><span class="score">395 points</span> | <span class="stats">175 likes, 45 reposts, 17 replies</span> | <span class="time-ago" data-timestamp="1754710051770" title="8/9/2025, 3:27:31 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:adcredief5mqmyhsvzo6ewtq/app.bsky.feed.post/3lvwshtugx226"><a href="https://www.nytimes.com/2025/08/08/us/emory-university-cdc-shooting.html" class="title" target="_blank" rel="noopener">Suspect and Officer Are Dead After Shooting Outside C.D.C. in Atlanta</a><button type="button" class="repost-btn" data-url="https://www.nytimes.com/2025/08/08/us/emory-university-cdc-shooting.html" data-title="Suspect and Officer Are Dead After Shooting Outside C.D.C. in Atlanta" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.nytimes.com%2F2025%2F08%2F08%2Fus%2Femory-university-cdc-shooting.html" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.nytimes.com/2025/08/08/us/emory-university-cdc-shooting.html" target="_blank" rel="noopener">nytimes.com</a>)</span><div class="meta"><span class="score">328 points</span> | <span class="stats">97 likes, 57 reposts, 12 replies</span> | <span class="time-ago" data-timestamp="1754709355379" title="8/9/2025, 3:15:55 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:6ma4ud7ovt2cpuj6bncaf6gw/app.bsky.feed.post/3lvwujdhmis2z"><a href="https://www.huffpost.com/entry/pete-hegseth-women-vote-pastors_n_68968202e4b0e3a604530b65" class="title" target="_blank" rel="noopener">Hegseth Reposts Video Featuring Pastors Saying Women Shouldn't Be Allowed To Vote</a><button type="button" class="repost-btn" data-url="https://www.huffpost.com/entry/pete-hegseth-women-vote-pastors_n_68968202e4b0e3a604530b65" data-title="Hegseth Reposts Video Featuring Pastors Saying Women Shouldn't Be Allowed To Vote" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.huffpost.com%2Fentry%2Fpete-hegseth-women-vote-pastors_n_68968202e4b0e3a604530b65" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.huffpost.com/entry/pete-hegseth-women-vote-pastors_n_68968202e4b0e3a604530b65" target="_blank" rel="noopener">huffpost.com</a>)</span><div class="meta"><span class="score">251 points</span> | <span class="stats">91 likes, 35 reposts, 11 replies</span> | <span class="time-ago" data-timestamp="1754711550379" title="8/9/2025, 3:52:30 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:5u54z2qgkq43dh2nzwzdbbhb/app.bsky.feed.post/3lvwzdbc2iv2w"><a href="https://on.ft.com/4mgTTpa" class="title" target="_blank" rel="noopener">Benjamin Netanyahuâs Gaza occupation plan opens rift with IDF</a><button type="button" class="repost-btn" data-url="https://on.ft.com/4mgTTpa" data-title="Benjamin Netanyahuâs Gaza occupation plan opens rift with IDF" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fon.ft.com%2F4mgTTpa" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://on.ft.com/4mgTTpa" target="_blank" rel="noopener">on.ft.com</a>)</span><div class="meta"><span class="score">72 points</span> | <span class="stats">24 likes, 11 reposts, 3 replies</span> | <span class="time-ago" data-timestamp="1754716715060" title="8/9/2025, 5:18:35 AM">43 minutes ago</span></div></li><li data-uri="at://did:plc:h55nabz5glwdanw73qqzmfag/app.bsky.feed.post/3lvwssegrdk2g"><a href="https://www.wsj.com/business/deals/nextar-tegna-deal-talks-0e1d7524" class="title" target="_blank" rel="noopener">Exclusive | Two Big TV Broadcasters in Advanced Deal Talks</a><button type="button" class="repost-btn" data-url="https://www.wsj.com/business/deals/nextar-tegna-deal-talks-0e1d7524" data-title="Exclusive | Two Big TV Broadcasters in Advanced Deal Talks" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.wsj.com%2Fbusiness%2Fdeals%2Fnextar-tegna-deal-talks-0e1d7524" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.wsj.com/business/deals/nextar-tegna-deal-talks-0e1d7524" target="_blank" rel="noopener">wsj.com</a>)</span><div class="meta"><span class="score">245 points</span> | <span class="stats">59 likes, 17 reposts, 27 replies</span> | <span class="time-ago" data-timestamp="1754709708146" title="8/9/2025, 3:21:48 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:aonrplpou355iyrtvtimbj2q/app.bsky.feed.post/3lvwxb26t6b2c"><a href="https://www.newsweek.com/green-card-mom-us-47-years-detained-ice-2110263?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754712026" class="title" target="_blank" rel="noopener">Mom in US for 47 years who previously had green card detained by ICE</a><button type="button" class="repost-btn" data-url="https://www.newsweek.com/green-card-mom-us-47-years-detained-ice-2110263?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754712026" data-title="Mom in US for 47 years who previously had green card detained by ICE" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.newsweek.com%2Fgreen-card-mom-us-47-years-detained-ice-2110263%3Futm_term%3DAutofeed%26utm_medium%3DSocial%26utm_source%3DBluesky%23Echobox%3D1754712026" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.newsweek.com/green-card-mom-us-47-years-detained-ice-2110263?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754712026" target="_blank" rel="noopener">newsweek.com</a>)</span><div class="meta"><span class="score">140 points</span> | <span class="stats">29 likes, 22 reposts, 9 replies</span> | <span class="time-ago" data-timestamp="1754714492657" title="8/9/2025, 4:41:32 AM">1 hour ago</span></div></li><li data-uri="at://did:plc:5u54z2qgkq43dh2nzwzdbbhb/app.bsky.feed.post/3lvwwrhr4wi2i"><a href="https://on.ft.com/3HeJ73p" class="title" target="_blank" rel="noopener">The problem with Sydney Sweeney is you</a><button type="button" class="repost-btn" data-url="https://on.ft.com/3HeJ73p" data-title="The problem with Sydney Sweeney is you" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fon.ft.com%2F3HeJ73p" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://on.ft.com/3HeJ73p" target="_blank" rel="noopener">on.ft.com</a>)</span><div class="meta"><span class="score">135 points</span> | <span class="stats">4 likes, 2 reposts, 25 replies</span> | <span class="time-ago" data-timestamp="1754713970546" title="8/9/2025, 4:32:50 AM">1 hour ago</span></div></li><li data-uri="at://did:plc:5u54z2qgkq43dh2nzwzdbbhb/app.bsky.feed.post/3lvwyp6reyx2n"><a href="https://on.ft.com/4loN2bU" class="title" target="_blank" rel="noopener">Sunday at the garden party for Curtis Yarvin and the new, new right</a><button type="button" class="repost-btn" data-url="https://on.ft.com/4loN2bU" data-title="Sunday at the garden party for Curtis Yarvin and the new, new right" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fon.ft.com%2F4loN2bU" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://on.ft.com/4loN2bU" target="_blank" rel="noopener">on.ft.com</a>)</span><div class="meta"><span class="score">60 points</span> | <span class="stats">13 likes, 4 reposts, 7 replies</span> | <span class="time-ago" data-timestamp="1754716041661" title="8/9/2025, 5:07:21 AM">54 minutes ago</span></div></li><li data-uri="at://did:plc:aonrplpou355iyrtvtimbj2q/app.bsky.feed.post/3lvwrqa4wc62n"><a href="https://www.newsweek.com/donald-trump-gets-new-nobel-peace-prize-nomination-2110310?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754707597" class="title" target="_blank" rel="noopener">Donald Trump gets new Nobel Peace Prize nomination</a><button type="button" class="repost-btn" data-url="https://www.newsweek.com/donald-trump-gets-new-nobel-peace-prize-nomination-2110310?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754707597" data-title="Donald Trump gets new Nobel Peace Prize nomination" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.newsweek.com%2Fdonald-trump-gets-new-nobel-peace-prize-nomination-2110310%3Futm_term%3DAutofeed%26utm_medium%3DSocial%26utm_source%3DBluesky%23Echobox%3D1754707597" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.newsweek.com/donald-trump-gets-new-nobel-peace-prize-nomination-2110310?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754707597" target="_blank" rel="noopener">newsweek.com</a>)</span><div class="meta"><span class="score">183 points</span> | <span class="stats">7 likes, 2 reposts, 34 replies</span> | <span class="time-ago" data-timestamp="1754708559769" title="8/9/2025, 3:02:39 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:o3xvoouo2ryfsnmgiq5jt3wn/app.bsky.feed.post/3lvwx7bb3jc2m"><a href="https://www.scmp.com/lifestyle/food-drink/article/3320895/cronut-inventors-new-bakery-papa-damour-brings-asian-inspired-pastries-new-york?module=top_story&pgtype=section" class="title" target="_blank" rel="noopener">Cronut inventorâs new bakery brings Asian-inspired pastries to New York</a><button type="button" class="repost-btn" data-url="https://www.scmp.com/lifestyle/food-drink/article/3320895/cronut-inventors-new-bakery-papa-damour-brings-asian-inspired-pastries-new-york?module=top_story&pgtype=section" data-title="Cronut inventorâs new bakery brings Asian-inspired pastries to New York" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.scmp.com%2Flifestyle%2Ffood-drink%2Farticle%2F3320895%2Fcronut-inventors-new-bakery-papa-damour-brings-asian-inspired-pastries-new-york%3Fmodule%3Dtop_story%26pgtype%3Dsection" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.scmp.com/lifestyle/food-drink/article/3320895/cronut-inventors-new-bakery-papa-damour-brings-asian-inspired-pastries-new-york?module=top_story&pgtype=section" target="_blank" rel="noopener">scmp.com</a>)</span><div class="meta"><span class="score">51 points</span> | <span class="stats">16 likes, 0 reposts, 7 replies</span> | <span class="time-ago" data-timestamp="1754714438446" title="8/9/2025, 4:40:38 AM">1 hour ago</span></div></li><li data-uri="at://did:plc:hopmfdwkfldzd3fqlbgrxkhv/app.bsky.feed.post/3lvwu5rjtvs2y"><a href="https://www.wsj.com/economy/trade/why-poor-nations-got-hit-with-higher-tariffs-than-rich-ones-de6881b8?st=VSqjoT&reflink=desktopwebshare_permalink" class="title" target="_blank" rel="noopener">Why Poor Nations Got Hit With Higher Tariffs Than Rich Ones</a><button type="button" class="repost-btn" data-url="https://www.wsj.com/economy/trade/why-poor-nations-got-hit-with-higher-tariffs-than-rich-ones-de6881b8?st=VSqjoT&reflink=desktopwebshare_permalink" data-title="Why Poor Nations Got Hit With Higher Tariffs Than Rich Ones" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.wsj.com%2Feconomy%2Ftrade%2Fwhy-poor-nations-got-hit-with-higher-tariffs-than-rich-ones-de6881b8%3Fst%3DVSqjoT%26reflink%3Ddesktopwebshare_permalink" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.wsj.com/economy/trade/why-poor-nations-got-hit-with-higher-tariffs-than-rich-ones-de6881b8?st=VSqjoT&reflink=desktopwebshare_permalink" target="_blank" rel="noopener">wsj.com</a>)</span><div class="meta"><span class="score">50 points</span> | <span class="stats">14 likes, 7 reposts, 3 replies</span> | <span class="time-ago" data-timestamp="1754711164456" title="8/9/2025, 3:46:04 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:6kv5inxd5x4tuydxlob27f36/app.bsky.feed.post/3lvx2hlf5pc2q"><a href="https://www.huffpost.com/entry/reacher-alan-ritchson-trump-rapist-con-man_n_661ebd22e4b015646f796589" class="title" target="_blank" rel="noopener">âReacherâs Alan Ritchson Gave A Scathing Takedown Of Trump â And Conservatives Are Not Happy</a><button type="button" class="repost-btn" data-url="https://www.huffpost.com/entry/reacher-alan-ritchson-trump-rapist-con-man_n_661ebd22e4b015646f796589" data-title="âReacherâs Alan Ritchson Gave A Scathing Takedown Of Trump â And Conservatives Are Not Happy" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.huffpost.com%2Fentry%2Freacher-alan-ritchson-trump-rapist-con-man_n_661ebd22e4b015646f796589" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.huffpost.com/entry/reacher-alan-ritchson-trump-rapist-con-man_n_661ebd22e4b015646f796589" target="_blank" rel="noopener">huffpost.com</a>)</span><div class="meta"><span class="score">50 points</span> | <span class="stats">23 likes, 9 reposts, 0 replies</span> | <span class="time-ago" data-timestamp="1754717935757" title="8/9/2025, 5:38:55 AM">23 minutes ago</span></div></li><li data-uri="at://did:plc:wxah4qzzxfjfdcsg2i62p3mx/app.bsky.feed.post/3lvwvxmmwek2p"><a href="https://www.cbsnews.com/newyork/news/westchester-county-volunteer-firefighter-detained-by-ice/" class="title" target="_blank" rel="noopener">Westchester County volunteer firefighter detained by ICE, sent to Michigan correctional center</a><button type="button" class="repost-btn" data-url="https://www.cbsnews.com/newyork/news/westchester-county-volunteer-firefighter-detained-by-ice/" data-title="Westchester County volunteer firefighter detained by ICE, sent to Michigan correctional center" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.cbsnews.com%2Fnewyork%2Fnews%2Fwestchester-county-volunteer-firefighter-detained-by-ice%2F" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.cbsnews.com/newyork/news/westchester-county-volunteer-firefighter-detained-by-ice/" target="_blank" rel="noopener">cbsnews.com</a>)</span><div class="meta"><span class="score">99 points</span> | <span class="stats">39 likes, 20 reposts, 0 replies</span> | <span class="time-ago" data-timestamp="1754713104554" title="8/9/2025, 4:18:24 AM">1 hour ago</span></div></li><li data-uri="at://did:plc:ohgy2fg7tx37he7nxvtf6c73/app.bsky.feed.post/3lvwwking3k25"><a href="https://www.nytimes.com/2025/08/08/us/politics/trump-kennedy-vaccines.html" class="title" target="_blank" rel="noopener">Trump Just Shrugs as Kennedy Undermines His Vaccine Legacy</a><button type="button" class="repost-btn" data-url="https://www.nytimes.com/2025/08/08/us/politics/trump-kennedy-vaccines.html" data-title="Trump Just Shrugs as Kennedy Undermines His Vaccine Legacy" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.nytimes.com%2F2025%2F08%2F08%2Fus%2Fpolitics%2Ftrump-kennedy-vaccines.html" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.nytimes.com/2025/08/08/us/politics/trump-kennedy-vaccines.html" target="_blank" rel="noopener">nytimes.com</a>)</span><div class="meta"><span class="score">95 points</span> | <span class="stats">24 likes, 12 reposts, 7 replies</span> | <span class="time-ago" data-timestamp="1754713737569" title="8/9/2025, 4:28:57 AM">1 hour ago</span></div></li><li data-uri="at://did:plc:sblju4a66qwthmosnm4m7k4e/app.bsky.feed.post/3lvwsjmumxs2k"><a href="https://www.wsj.com/politics/us-gerrymandering-political-divide-a2a83a28?st=1ktMgE&reflink=article_copyURL_share" class="title" target="_blank" rel="noopener">Gerrymandering by Both Parties Is Deepening Americaâs Political Divide</a><button type="button" class="repost-btn" data-url="https://www.wsj.com/politics/us-gerrymandering-political-divide-a2a83a28?st=1ktMgE&reflink=article_copyURL_share" data-title="Gerrymandering by Both Parties Is Deepening Americaâs Political Divide" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.wsj.com%2Fpolitics%2Fus-gerrymandering-political-divide-a2a83a28%3Fst%3D1ktMgE%26reflink%3Darticle_copyURL_share" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.wsj.com/politics/us-gerrymandering-political-divide-a2a83a28?st=1ktMgE&reflink=article_copyURL_share" target="_blank" rel="noopener">wsj.com</a>)</span><div class="meta"><span class="score">158 points</span> | <span class="stats">48 likes, 10 reposts, 16 replies</span> | <span class="time-ago" data-timestamp="1754709413856" title="8/9/2025, 3:16:53 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:awyncbnck2xzf4obkdqep7ms/app.bsky.feed.post/3lvwzyqwjxc2y"><a href="https://apnews.com/article/kennedy-vaccines-mrna-pfizer-moderna-1fb5b9436f2957075064c18a6cbbe3c9" class="title" target="_blank" rel="noopener">RFK Jr. pulls $500 million in funding for vaccine development</a><button type="button" class="repost-btn" data-url="https://apnews.com/article/kennedy-vaccines-mrna-pfizer-moderna-1fb5b9436f2957075064c18a6cbbe3c9" data-title="RFK Jr. pulls $500 million in funding for vaccine development" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fapnews.com%2Farticle%2Fkennedy-vaccines-mrna-pfizer-moderna-1fb5b9436f2957075064c18a6cbbe3c9" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://apnews.com/article/kennedy-vaccines-mrna-pfizer-moderna-1fb5b9436f2957075064c18a6cbbe3c9" target="_blank" rel="noopener">apnews.com</a>)</span><div class="meta"><span class="score">46 points</span> | <span class="stats">28 likes, 6 reposts, 0 replies</span> | <span class="time-ago" data-timestamp="1754717438160" title="8/9/2025, 5:30:38 AM">31 minutes ago</span></div></li><li data-uri="at://did:plc:aonrplpou355iyrtvtimbj2q/app.bsky.feed.post/3lvwsafi7sf2x"><a href="https://www.newsweek.com/vance-kayak-trip-secret-service-water-levels-2110095?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754667608" class="title" target="_blank" rel="noopener">JD Vance accused of changing water levels for kayaking trip</a><button type="button" class="repost-btn" data-url="https://www.newsweek.com/vance-kayak-trip-secret-service-water-levels-2110095?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754667608" data-title="JD Vance accused of changing water levels for kayaking trip" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.newsweek.com%2Fvance-kayak-trip-secret-service-water-levels-2110095%3Futm_term%3DAutofeed%26utm_medium%3DSocial%26utm_source%3DBluesky%23Echobox%3D1754667608" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.newsweek.com/vance-kayak-trip-secret-service-water-levels-2110095?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754667608" target="_blank" rel="noopener">newsweek.com</a>)</span><div class="meta"><span class="score">157 points</span> | <span class="stats">22 likes, 15 reposts, 18 replies</span> | <span class="time-ago" data-timestamp="1754709102279" title="8/9/2025, 3:11:42 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:7dbbjqgbj56qpe4x7pjtcoey/app.bsky.feed.post/3lvwxihz3qc26"><a href="https://apnews.com/article/women-hegseth-defense-secretary-religion-d962f472910fb47a0c66cd37b01f550d" class="title" target="_blank" rel="noopener">Hegseth reposts video on social media featuring pastors saying women shouldn't be allowed to vote</a><button type="button" class="repost-btn" data-url="https://apnews.com/article/women-hegseth-defense-secretary-religion-d962f472910fb47a0c66cd37b01f550d" data-title="Hegseth reposts video on social media featuring pastors saying women shouldn't be allowed to vote" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fapnews.com%2Farticle%2Fwomen-hegseth-defense-secretary-religion-d962f472910fb47a0c66cd37b01f550d" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://apnews.com/article/women-hegseth-defense-secretary-religion-d962f472910fb47a0c66cd37b01f550d" target="_blank" rel="noopener">apnews.com</a>)</span><div class="meta"><span class="score">92 points</span> | <span class="stats">25 likes, 14 reposts, 5 replies</span> | <span class="time-ago" data-timestamp="1754714744763" title="8/9/2025, 4:45:44 AM">1 hour ago</span></div></li><li data-uri="at://did:plc:aonrplpou355iyrtvtimbj2q/app.bsky.feed.post/3lvwv2obe2p2n"><a href="https://www.newsweek.com/h1b-green-card-applicants-children-protections-change-trump-administration-2111075?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754688795" class="title" target="_blank" rel="noopener">Green card applicants' kids may lose legal status after Trump admin move</a><button type="button" class="repost-btn" data-url="https://www.newsweek.com/h1b-green-card-applicants-children-protections-change-trump-administration-2111075?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754688795" data-title="Green card applicants' kids may lose legal status after Trump admin move" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.newsweek.com%2Fh1b-green-card-applicants-children-protections-change-trump-administration-2111075%3Futm_term%3DAutofeed%26utm_medium%3DSocial%26utm_source%3DBluesky%23Echobox%3D1754688795" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.newsweek.com/h1b-green-card-applicants-children-protections-change-trump-administration-2111075?utm_term=Autofeed&utm_medium=Social&utm_source=Bluesky#Echobox=1754688795" target="_blank" rel="noopener">newsweek.com</a>)</span><div class="meta"><span class="score">92 points</span> | <span class="stats">13 likes, 18 reposts, 5 replies</span> | <span class="time-ago" data-timestamp="1754712131847" title="8/9/2025, 4:02:11 AM">2 hours ago</span></div></li><li data-uri="at://did:plc:vovinwhtulbsx4mwfw26r5ni/app.bsky.feed.post/3lvwzhaacbn2t"><a href="https://www.theguardian.com/news/2025/aug/09/six-great-reads-a-saudi-weapons-scandal-five-weeks-with-david-lammy-and-the-expert-who-became-the-patient?utm_term=Autofeed&CMP=bsky_gu&utm_medium=&utm_source=Bluesky#Echobox=1754715901" class="title" target="_blank" rel="noopener">Six great reads: a Saudi weapons scandal, five weeks with David Lammy and the expert who became the patient</a><button type="button" class="repost-btn" data-url="https://www.theguardian.com/news/2025/aug/09/six-great-reads-a-saudi-weapons-scandal-five-weeks-with-david-lammy-and-the-expert-who-became-the-patient?utm_term=Autofeed&CMP=bsky_gu&utm_medium=&utm_source=Bluesky#Echobox=1754715901" data-title="Six great reads: a Saudi weapons scandal, five weeks with David Lammy and the expert who became the patient" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.theguardian.com%2Fnews%2F2025%2Faug%2F09%2Fsix-great-reads-a-saudi-weapons-scandal-five-weeks-with-david-lammy-and-the-expert-who-became-the-patient%3Futm_term%3DAutofeed%26CMP%3Dbsky_gu%26utm_medium%3D%26utm_source%3DBluesky%23Echobox%3D1754715901" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.theguardian.com/news/2025/aug/09/six-great-reads-a-saudi-weapons-scandal-five-weeks-with-david-lammy-and-the-expert-who-became-the-patient?utm_term=Autofeed&CMP=bsky_gu&utm_medium=&utm_source=Bluesky#Echobox=1754715901" target="_blank" rel="noopener">theguardian.com</a>)</span><div class="meta"><span class="score">43 points</span> | <span class="stats">21 likes, 4 reposts, 2 replies</span> | <span class="time-ago" data-timestamp="1754716848264" title="8/9/2025, 5:20:48 AM">41 minutes ago</span></div></li><li data-uri="at://did:plc:vod3g6ecxortnzyrrsivgwzc/app.bsky.feed.post/3lvwzaexoec2i"><a href="https://www.nytimes.com/2025/08/07/world/europe/usaid-contraceptives-trump.html" class="title" target="_blank" rel="noopener">As Trump Administration Plans to Burn Contraceptives, Europeans Are Alarmed</a><button type="button" class="repost-btn" data-url="https://www.nytimes.com/2025/08/07/world/europe/usaid-contraceptives-trump.html" data-title="As Trump Administration Plans to Burn Contraceptives, Europeans Are Alarmed" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.nytimes.com%2F2025%2F08%2F07%2Fworld%2Feurope%2Fusaid-contraceptives-trump.html" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.nytimes.com/2025/08/07/world/europe/usaid-contraceptives-trump.html" target="_blank" rel="noopener">nytimes.com</a>)</span><div class="meta"><span class="score">42 points</span> | <span class="stats">33 likes, 3 reposts, 0 replies</span> | <span class="time-ago" data-timestamp="1754716621153" title="8/9/2025, 5:17:01 AM">45 minutes ago</span></div></li><li data-uri="at://did:plc:fvtccvoqk46ufoqb5x46p4il/app.bsky.feed.post/3lvwvqcjhsk2r"><a href="https://www.theguardian.com/lifeandstyle/2025/aug/02/richard-fidler-walk-with-interview-abc-radio-conversations-host?CMP=Share_iOSApp_Other" class="title" target="_blank" rel="noopener">Richard Fidler: âLove at first sight is profoundly shocking. You have this thought â oh, itâs youâ</a><button type="button" class="repost-btn" data-url="https://www.theguardian.com/lifeandstyle/2025/aug/02/richard-fidler-walk-with-interview-abc-radio-conversations-host?CMP=Share_iOSApp_Other" data-title="Richard Fidler: âLove at first sight is profoundly shocking. You have this thought â oh, itâs youâ" title="Repost on Bluesky" aria-label="Repost on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg></button><a href="https://bsky.app/search?q=https%3A%2F%2Fwww.theguardian.com%2Flifeandstyle%2F2025%2Faug%2F02%2Frichard-fidler-walk-with-interview-abc-radio-conversations-host%3FCMP%3DShare_iOSApp_Other" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg></a><span class="domain">(<a href="https://www.theguardian.com/lifeandstyle/2025/aug/02/richard-fidler-walk-with-interview-abc-radio-conversations-host?CMP=Share_iOSApp_Other" target="_blank" rel="noopener">theguardian.com</a>)</span><div class="meta"><span class="score">90 points</span> | <span class="stats">32 likes, 6 reposts, 8 replies</span> | <span class="time-ago" data-timestamp="1754712860350" title="8/9/2025, 4:14:20 AM">1 hour ago</span></div></li>
+        <!-- Posts will be inserted here -->
+      </ol>
+    </div>
+  </main>
+  
+  <footer>
+  <p>Sign up for <a href="https://stonking.0x0.boo/" target="_blank" rel="noopener">EARLY ACCESS</a> to Stonking Social</p>
+    <p class="footer-links"><a href="/privacy">Privacy Policy</a> | <a href="/about">About Us</a> | <a href="/contact">Contact Us</a></p>
+    <p><a href='https://ko-fi.com/W7W21EB0TD' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a></p>
+  
+    </footer>
+
+  <!-- PWA Install Prompt -->
+  <div id="install-prompt">
+    <p>Add to Home Screen for a better experience!</p>
+    <button id="install-btn">Install</button>
+    <button id="dismiss-btn">Not Now</button>
+  </div>
+  
+  <script>
+    // Define timeSince globally
+    function timeSince(timestamp) {
+      // Try to determine if timestamp is a string date or numeric timestamp
+      let date;
+      if (typeof timestamp === 'string' && isNaN(parseInt(timestamp, 10))) {
+        // If it's a string date that can't be parsed as a number
+        date = new Date(timestamp);
+      } else {
+        // If it's a number or numeric string
+        date = new Date(parseInt(timestamp, 10));
+      }
+      
+      const now = new Date();
+      
+      const seconds = Math.floor((now - date) / 1000);
+      
+      if (isNaN(seconds) || seconds < 0) {
+        return "just now";
+      }
+      
+      let interval = seconds / 31536000;
+      if (interval > 1) {
+        const years = Math.floor(interval);
+        return years + (years === 1 ? " year ago" : " years ago");
+      }
+      
+      interval = seconds / 2592000;
+      if (interval > 1) {
+        const months = Math.floor(interval);
+        return months + (months === 1 ? " month ago" : " months ago");
+      }
+      
+      interval = seconds / 86400;
+      if (interval > 1) {
+        const days = Math.floor(interval);
+        return days + (days === 1 ? " day ago" : " days ago");
+      }
+      
+      interval = seconds / 3600;
+      if (interval > 1) {
+        const hours = Math.floor(interval);
+        return hours + (hours === 1 ? " hour ago" : " hours ago");
+      }
+      
+      interval = seconds / 60;
+      if (interval > 1) {
+        const minutes = Math.floor(interval);
+        return minutes + (minutes === 1 ? " minute ago" : " minutes ago");
+      }
+      
+      return "just now";
+    }
+    
+    // Define updatePostTimestamps globally
+    window.updatePostTimestamps = function() {
+      const timeElements = document.querySelectorAll('.time-ago');
+      timeElements.forEach(element => {
+        const timestamp = element.getAttribute('data-timestamp');
+        if (timestamp) {
+          // Use the global timeSince function
+          element.textContent = timeSince(timestamp);
+        }
+      });
+    };
+    
+    // Set the active nav link
+    const path = window.location.pathname;
+    if (path === '/all') {
+      document.getElementById('all-link').classList.add('active');
+      document.title = "Other Posts from Bluesky";
+    } else if (path === '/tech') {
+      document.getElementById('tech-link').classList.add('active');
+      document.title = "Tech News from Stonking";
+    } else if (path === '/sports') {
+      document.getElementById('sports-link').classList.add('active');
+      document.title = "Sports News from Stonking";
+    } else if (path === '/gift') {
+      document.getElementById('gift-link').classList.add('active');
+      document.title = "Gift Posts from Bluesky";
+    } else if (path === '/gaming') {
+      document.getElementById('gaming-link').classList.add('active');
+      document.title = "Gaming News from Stonking";
+    } else {
+      document.getElementById('news-link').classList.add('active');
+      document.title = "News from Stonking";
+    }
+    
+    // Function to update the post data
+    async function updatePosts() {
+      try {
+        // Determine if we're on news, tech, gift, or other
+        const path = window.location.pathname;
+        const isOther = path === '/all';
+        const isTech = path === '/tech';
+        const isSports = path === '/sports';
+        const isGift = path === '/gift';
+        const isGaming = path === '/gaming';
+        
+        // Use our own API endpoint that proxies the requests
+        const endpoint = isOther ? '/api/trending' : 
+                        isTech ? '/api/tech' : 
+                        isSports ? '/api/sports' :
+                        isGift ? '/api/gift' : 
+                        isGaming ? '/api/gaming' :
+                        '/api/news';
+        
+        // Fetch the latest data
+        const response = await fetch(endpoint);
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch updates');
+        }
+        
+        const posts = await response.json();
+        
+        // Exclude posts with empty, null, or 'Untitled Post' titles, and filter out Amazon affiliate links
+        const filteredPosts = posts.filter(post => {
+          // Exclude empty/null/untitled
+          if (!post.title || post.title.trim() === '' || post.title === 'Untitled Post') return false;
+          // Exclude if URL contains both 'amazon' and '&tag='
+          if (post.url && /amazon.*&tag=/.test(post.url)) return false;
+          return true;
+        });
+        
+        // Sort by gravity_score
+        filteredPosts.sort((a, b) => b.gravity_score - a.gravity_score);
+        
+        // Get the current posts list
+        const postsList = document.getElementById('posts-list');
+        const existingItems = Array.from(postsList.children);
+        // Map for O(1) lookup
+        const existingMap = new Map(existingItems.map(item => [item.dataset.uri, item]));
+
+        // Keep track of URIs actually processed/updated/added from the new fetch
+        const processedUris = new Set();
+        
+        // Update existing posts or add new ones
+        filteredPosts.forEach((post, index) => {
+          processedUris.add(post.uri); // Mark this URI as present in the latest fetch
+          
+          // Reuse Date object
+          const date = new Date(post.seen_at);
+          const timestamp = date.getTime();
+          const formattedDate = date.toLocaleString();
+          
+          // Calculate initial time server-side
+          const initialTimeAgo = timeSince(post.seen_at);
+          
+          // O(1) lookup
+          const existingItem = existingMap.get(post.uri);
+          
+          if (existingItem) {
+            // Update the existing post
+            const scoreElem = existingItem.querySelector('.score');
+            if (scoreElem) {
+              const oldScore = parseInt(scoreElem.textContent);
+              const newScore = post.score;
+              scoreElem.textContent = post.score + ' points';
+              
+              if (oldScore !== newScore) {
+                scoreElem.classList.remove('score-change');
+                void scoreElem.offsetWidth; // Force reflow
+                scoreElem.classList.add('score-change');
+              }
+            }
+            
+            const statsElem = existingItem.querySelector('.stats');
+            if (statsElem) {
+              const oldStats = statsElem.textContent;
+              const newStats = post.likes + ' likes, ' + post.reposts + ' reposts, ' + post.replies + ' replies';
+              statsElem.textContent = newStats;
+              
+              if (oldStats !== newStats) {
+                statsElem.classList.remove('stat-change');
+                void statsElem.offsetWidth; // Force reflow
+                statsElem.classList.add('stat-change');
+              }
+            }
+            
+            const timeElem = existingItem.querySelector('.time-ago');
+            if (timeElem) {
+              const currentTimestamp = timeElem.getAttribute('data-timestamp');
+              const currentText = timeElem.textContent;
+              // Update timestamp, title, and text content if timestamp changed
+              if (currentTimestamp !== String(timestamp)) {
+                timeElem.setAttribute('data-timestamp', timestamp);
+                timeElem.title = formattedDate;
+                const newText = timeSince(timestamp); // Calculate new time text immediately
+                if (newText !== currentText) {
+                  timeElem.textContent = newText;
+                  // Optional: Add animation for time change if needed
+                  // timeElem.classList.remove('time-change-animation'); // Example class
+                  // void timeElem.offsetWidth;
+                  // timeElem.classList.add('time-change-animation');
+                }
+              }
+            }
+            
+            // Update the position if needed
+            const currentIndex = Array.from(postsList.children).indexOf(existingItem);
+            if (currentIndex !== index) {
+              // Add position change animation to the meta elements before moving
+              const metaElements = existingItem.querySelectorAll('.meta > *');
+              metaElements.forEach(el => {
+                el.classList.remove('position-change');
+                void el.offsetWidth; // Force reflow
+                el.classList.add('position-change');
+              });
+              
+              postsList.removeChild(existingItem);
+              
+              // Find where to insert
+              if (index >= postsList.children.length) {
+                postsList.appendChild(existingItem);
+              } else {
+                postsList.insertBefore(existingItem, postsList.children[index]);
+              }
+            }
+          } else {
+            // Create a new post item
+            const li = document.createElement('li');
+            // Add data-uri attribute here
+            li.dataset.uri = post.uri;
+            
+            // Extract the domain from the URL
+            let domain = '';
+            try {
+              domain = new URL(post.url).hostname;
+              domain = domain.startsWith('www.') ? domain.substring(4) : domain;
+            } catch (e) {
+              domain = '';
+            }
+            
+            const repostBtnHtml = '<button type="button" class="repost-btn" data-url="' + post.url + '" data-title="' + (post.title || 'Untitled Post') + '" title="Repost on Bluesky" aria-label="Repost on Bluesky">' +
+              '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 1 0 7.5 7.5h-1.5a6 6 0 1 1-1.76-4.24l-2.24.01v1.5l4-2.5-4-2.5v1.5l2.24-.01A7.5 7.5 0 0 0 10.5 3z"/></svg>' +
+            '</button>';
+            // Add discuss button (speech bubble icon)
+            const discussBtnHtml = '<a href="https://bsky.app/search?q=' + encodeURIComponent(post.url) + '" class="discuss-btn" target="_blank" rel="noopener" title="Discuss on Bluesky" aria-label="Discuss on Bluesky">' +
+              '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5v7A2.5 2.5 0 0 1 14.5 14H7.91l-3.2 2.4A1 1 0 0 1 3 15.56V4.5zm2.5-1A1.5 1.5 0 0 0 4 4.5v11.06l3.2-2.4A1 1 0 0 1 7.91 13h6.59A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-9z"/></svg>' +
+            '</a>';
+            const domainHtml = domain ? '<span class="domain">(<a href="' + post.url + '" target="_blank" rel="noopener">' + domain + '</a>)</span>' : '';
+            
+            li.innerHTML = 
+              '<a href="' + post.url + '" class="title" target="_blank" rel="noopener">' + (post.title || 'Untitled Post') + '</a>' +
+              repostBtnHtml +
+              discussBtnHtml +
+              domainHtml +
+              '<div class="meta">' +
+                '<span class="score">' + post.score + ' points</span> | ' + 
+                '<span class="stats">' + post.likes + ' likes, ' + post.reposts + ' reposts, ' + post.replies + ' replies</span> | ' + 
+                '<span class="time-ago" data-timestamp="' + timestamp + '" title="' + formattedDate + '">' + initialTimeAgo + '</span>' +
+              '</div>';
+            
+            // Insert at the correct position
+            if (index >= postsList.children.length) {
+              postsList.appendChild(li);
+            } else {
+              postsList.insertBefore(li, postsList.children[index]);
+            }
+          }
+        });
+        
+        // After all posts are updated/added, update the timestamps for any new elements
+        // or potentially missed updates (though immediate update is preferred)
+        if (window.updatePostTimestamps) {
+          window.updatePostTimestamps();
+        }
+        
+        // Remove posts that are no longer in the feed (simpler logic)
+        const currentDomItems = Array.from(postsList.children);
+        currentDomItems.forEach(item => {
+            const itemUri = item.dataset.uri;
+            // If an item in the DOM has a URI but that URI wasn't in the latest fetch, remove it
+            if (itemUri && !processedUris.has(itemUri)) {
+                postsList.removeChild(item);
+            }
+        });
+        
+      } catch (error) {
+        console.error('Error updating posts:', error);
+      }
+      
+      // Schedule next update in 10 seconds
+      setTimeout(updatePosts, 10000);
+    }
+    
+    // Start post updates immediately and then schedule regular updates
+    updatePosts();
+    
+    // Theme toggle logic
+    (function() {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const body = document.body;
+      // Set initial mode from localStorage, default dark
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') {
+        body.classList.add('light-mode');
+        toggleBtn.textContent = 'â¾';
+      } else {
+        toggleBtn.textContent = 'â¼';
+      }
+      toggleBtn.addEventListener('click', function() {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        toggleBtn.textContent = isLight ? 'â¾' : 'â¼';
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      });
+    })();
+    
+    // PWA Installation
+    let deferredPrompt;
+    const installPrompt = document.getElementById('install-prompt');
+    const installBtn = document.getElementById('install-btn');
+    const dismissBtn = document.getElementById('dismiss-btn');
+    
+    // Check if user has already dismissed the prompt
+    const hasUserDismissedPrompt = () => {
+      return localStorage.getItem('pwa-prompt-dismissed') === 'true';
+    };
+    
+    // Save user's preference not to be prompted again
+    const saveUserDismissal = () => {
+      localStorage.setItem('pwa-prompt-dismissed', 'true');
+    };
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      e.preventDefault();
+      
+      // Stash the event so it can be triggered later
+      deferredPrompt = e;
+      
+      // Show the install prompt if user hasn't dismissed it before
+      if (!hasUserDismissedPrompt()) {
+        installPrompt.style.display = 'block';
+      }
+    });
+    
+    installBtn.addEventListener('click', () => {
+      // Hide the app install prompt
+      installPrompt.style.display = 'none';
+      
+      // Show the install prompt
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        
+        // Wait for the user to respond to the prompt
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the install prompt');
+          } else {
+            console.log('User dismissed the install prompt');
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+    
+    dismissBtn.addEventListener('click', () => {
+      // Hide the app install prompt
+      installPrompt.style.display = 'none';
+      
+      // Remember user's dismissal
+      saveUserDismissal();
+    });
+    
+    // Check if service worker is supported
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+    
+    // Add client-side repost handler
+    document.addEventListener('click', async function(e) {
+      const btn = e.target.closest('.repost-btn');
+      if (btn) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('[Repost] Button clicked');
+        const url = btn.getAttribute('data-url');
+        const title = btn.getAttribute('data-title');
+        let shortlink = url; // Default to original URL
+        
+        // Show visual indication that processing is happening
+        btn.setAttribute('aria-busy', 'true');
+        
+        try {
+          // Try direct API call to the shortener
+          try {
+            // Create a direct fetch to the shortener with proper headers
+            const response = await fetch('https://go.stonking.com/api/shorten', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Origin': window.location.origin
+              },
+              body: JSON.stringify({ target: url })
+            });
+            
+            if (response.ok) {
+              const responseText = await response.text();
+              try {
+                // Try to parse the JSON
+                const data = JSON.parse(responseText);
+                if (data && data.shortlink) {
+                  shortlink = data.shortlink;
+                  console.log('Successfully created shortlink:', shortlink);
+                }
+              } catch (parseErr) {
+                console.warn('JSON parse error, using original URL');
+              }
+            } else {
+              console.warn('Shortener API call failed, using original URL');
+            }
+          } catch (fetchErr) {
+            console.warn('Fetch to shortener failed, using original URL');
+          }
+        } catch (err) {
+          console.error('Error in shortlink processing:', err);
+          // Fallback to original URL (already set as default)
+        } finally {
+          // Reset button appearance
+          btn.removeAttribute('aria-busy');
+          // Create the compose link with the URL (shortlink or original)
+          const composeUrl = 'https://bsky.app/intent/compose?text=' + encodeURIComponent(title + ' ' + shortlink);
+          
+          // Open the compose window
+          window.open(composeUrl, '_blank');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

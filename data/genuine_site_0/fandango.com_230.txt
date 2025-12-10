@@ -1,0 +1,75 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fandango | Page Not Found</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- static pages stylesheet -->
+    
+        <!-- fandango:critical-path -->
+        
+        <style data-qa="critical-path__error">
+            @font-face{font-family:alternate-gothic-no-1-d;src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.385de3dc8d4.eot);src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.385de3dc8d4.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.e51b88e2752.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.f4100372f7c.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.a61aa58d0a9.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.51062984fba.svg#alternate_gothic_no1_proRg) format('svg');font-weight:400;font-style:normal;font-display:fallback}@font-face{font-family:proxima-nova;src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.2636f179d38.eot);src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.2636f179d38.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.92affc9f7d5.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.63625dba7f3.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.3bcfd265b4b.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.67bc3e888a6.svg#proxima_novaregular) format('svg');font-weight:400;font-style:normal;font-display:fallback}@font-face{font-family:proxima-nova;src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.ae7a58f2215.eot);src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.ae7a58f2215.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.d47def19c1c.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.cb7c09afd5c.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.de26fc34122.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.724b839a357.svg#proxima_novaitalic) format('svg');font-weight:400;font-style:italic;font-display:fallback}@font-face{font-family:proxima-nova;src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.97bd7ce156c.eot);src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.97bd7ce156c.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.22c920045cf.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.0afb923296b.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.be89e0f0415.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.b85661b6470.svg#proxima_novabold) format('svg');font-weight:700;font-style:normal;font-display:fallback}@font-face{font-family:proxima-nova;src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.4a9159d0117.eot);src:url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.4a9159d0117.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.170970ee557.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.5c195808de0.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.c0e436c6b22.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.243ee08e413.svg#proxima_novabold_italic) format('svg');font-weight:700;font-style:italic;font-display:fallback}.font-sans-serif{font-family:alternate-gothic-no-1-d,'Futura Condensed','Arial Narrow',Arial,sans-serif}.font-sans-serif-alt{font-family:proxima-nova,Helvetica,Arial,sans-serif}.uppercase{text-transform:uppercase}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{margin:0}a{text-decoration:none}img{vertical-align:middle}h1,h2,h3{margin:0;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.error-message--404{background:#ff7e00;background-size:cover;max-width:1280px;margin-left:auto;margin-right:auto;padding:0 40px 45px 40px;box-shadow:0 0 15px 0 rgba(50,50,50,.75);min-height:548px}.error-page{background-color:#f3f3f3;color:#fff;line-height:1;margin:0;padding:0}.error-page__header{background-color:#4c4c4c;z-index:10;max-height:74px;position:relative}.brand-img{display:block;width:242px;margin-left:auto;margin-right:auto;height:64px}.error-message__status-wrapper,.error-page__logo{width:100%;margin:0 auto;max-width:91.429em}.error-page__subheader{background-color:#333}.error-message__large-text{margin:0 0 15px 0;font-weight:700;font-size:112px;padding-top:70px;line-height:108px}.error-message__small-text{font-size:36px;line-height:50px;margin:0}.error-page__btn{background-color:#3478c1;color:#fff;padding:10px 15px;font-size:28px;text-align:center;line-height:40px;margin-top:70px;max-width:340px}.error-message__status{font-size:32px;line-height:32px;padding:12px 0 6px 40px;margin:0;font-weight:300}@media (min-width:768px){.error-message--404{background-image:url(https://images.fandango.com/r1.0.747/redesign/areas/staticpages/img/bg-error-404.jpg);padding:0 100px 45px 100px}.error-message__large-text{font-size:240px;padding-top:90px;line-height:175px}.brand-img{margin-left:100px;margin-right:unset}.error-message__status{padding-left:100px}.error-message__status-wrapper,.error-page__logo{width:1280px}}
+        </style>
+        <!-- endfandango -->
+    
+
+    <script>
+        window.Fandango = {};
+    </script>
+
+    
+        <script>
+            window.dataLayer = window.dataLayer || [];
+        </script>
+    
+
+    
+</head>
+<body class="error-page">
+    <header role="banner" id="site-header" class="error-page__header">
+        <nav>
+            <div class="error-page__logo">
+                <a href="">
+                    <img class="brand-img" alt="Fandango Logo" src="//images.fandango.com/fandango-www/screenplay/assets/images/desktop/icons/global/fandango-logo.svg">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="error-page__subheader">
+        <div class="error-message__status-wrapper">
+            <h1 class="font-sans-serif uppercase error-message__status">Error 404: page not found</h1>
+        </div>
+    </div>
+    <main>
+        <div class="font-sans-serif error-message--404">
+            <h2 class="error-message__large-text uppercase">Hold up</h2>
+            <h3 class="error-message__small-text">Looks like the page you are looking for cannot be found</h3>
+            <a href="">
+                <div class="error-page__btn font-sans-serif-alt uppercase">Head back home</div>
+            </a>
+        </div>
+    </main>
+
+
+    
+        <script>
+            window.dataLayer.push({"event":"pageview","loggedInStatus":"not logged in","pageName":"404 Error Page","pageType":"error page"});
+        </script>
+    
+    <script>
+        window.Fandango.dtmData = {"loggedInStatus":"logged out","webVersion":"node","site":"desktop","pageName":"404 Error Page","errorType":"404","errorTypeDescription":"Not Found"}
+    </script>
+    
+        <script type="text/javascript">
+            if (typeof (window._satellite) == 'object' && window._satellite.pageBottom) {
+                window._satellite.pageBottom();
+            }
+        </script>
+    
+
+
+</body></html>

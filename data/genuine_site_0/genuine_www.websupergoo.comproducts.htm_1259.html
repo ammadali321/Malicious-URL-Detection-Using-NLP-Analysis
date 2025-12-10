@@ -1,0 +1,765 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="favicon.ico" rel="shortcut icon" type="image/x-icon" /><link href="https://fonts.googleapis.com/css?family=Lato:400,900,700italic,700,400italic,300,300italic,900italic" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /><link href="/css/wsgTheme.css" rel="stylesheet" /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="verify-v1" content="6VwYuacnskarLwNXueINgbkLtIgJyKXA/mfoLqU8X18=" /><meta name="google-site-verification" content="ujQpf2piZ2RP7QCmlZMfZTeHbG90aEFo8dv7GZyQ5T0" /><meta name="y_key" content="24a58360cafe0ef8" /><link href="https://plus.google.com/105076308570626935577" rel="publisher" />
+    
+        
+    <title>ASP VB and .NET Components for PDF Image and Upload - WebSupergoo</title>
+    <meta name="Keywords" content="dynamic, image, generation, dynamic image generation, manipulation, creation, picture, image, media, gif, tiff, jpeg, jpg, bmp, png, pict, asp, active server pages, IIS, web, ocr, server-side" />
+    <meta name="Description" content="ASP/ASP.NET components for C# and VB.NET developers. Dynamically edit PDF documents and images server-side, OCR images, and upload files with WebSupergoo." />
+
+    <style type="text/css">
+        /* Global*/
+        #productPage h2 {
+            margin: 0;
+        }
+
+        #productPage h3 {
+            text-align: center;
+        }
+
+        #productPage p.para1 {
+            font-weight: 400;
+        }
+
+        .bg-vert-goo, .bg-horiz-goo {
+            background-position: center bottom;
+        }
+
+        #fine-print {
+            margin-top:0;
+            margin-bottom: 3em;
+        }
+
+        div#footer {
+            margin-top: 0;
+        }
+
+        @media screen and (min-width:1400px) {
+            .container {
+                width: 1400px;
+            }
+        }
+
+        @media screen and (max-width:1399px) {
+            .container {
+                width: 100%;
+            }
+
+            section#imageglue .bg-img {
+                background-size: 600px;
+            }
+        }
+
+        /* Settings for small screens for all sections */
+        @media screen and (max-width:767px) {
+            section .bg-img {
+                background-image: none !important;
+                min-height: initial !important;
+                text-align: center;
+            }
+
+            section .panel-wrap, section .panel-wrap p {
+                margin: 2ex 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                height: initial !important;
+            }
+
+            a.btn-more {
+                float: none !important;
+                margin: 2ex auto !important;
+            }
+        }
+
+        /* ABCpdf */
+        section#abcpdf .bg-img {
+            background-image: url("../img/products/section-bg/ABCpdf.jpg");
+            background-position: left bottom;
+            min-height: 590px;
+        }
+
+        section#abcpdf .para1 {
+            margin-top: 10px;
+        }
+
+        section#abcpdf .para2 {
+            margin-top: 100px;
+        }
+
+        /* ImageGlue */
+        section#imageglue .bg-img {
+            background-image: url("../img/products/section-bg/ImageGlue.jpg");
+            background-position: right bottom;
+            min-height: 590px;
+        }
+
+        @media screen and (max-width:1399px) {
+            section#imageglue .bg-img {
+                background-size: 600px;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            section#imageglue div.panel-wrap {
+                margin-top: 4ex;
+            }
+
+            section#imageglue p.para2 {
+                margin-top: 8ex !important;
+            }
+        }
+
+        @media screen and (max-width:849px) {
+            section#imageglue .bg-img {
+                background-size: 550px;
+            }
+        }
+
+        /* WordGlue */
+        section#wordglue .bg-img {
+            background-image: url("../img/products/section-bg/WordGlue.jpg");
+            background-position: left bottom;
+            min-height: 590px;
+        }
+
+        section#wordglue a.btn-more {
+            display: inline-block;
+            margin: 2ex auto;
+        }
+
+        section#wordglue p.para2 {
+            margin-top: 5ex;
+            text-align: justify;
+        }
+        @media screen and (min-width:1430px) {
+            section#wordglue .bg-img {
+                background-size: 650px;
+            }
+        }
+
+        @media screen and (max-width:1430px) {
+            section#wordglue .bg-img {
+                background-size: 600px;
+            }
+        }
+
+        @media screen and (max-width:1199px) {
+            section#wordglue .bg-img {
+                background-size: 500px;
+            }
+            section#wordglue p.para1 {
+                width:100% !important;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            section#wordglue .bg-img {
+                background-size: 440px;
+            }
+        }
+        /* ABCocr */
+        section#abcocr .bg-img {
+            background-image: url("../img/products/section-bg/ABCocr.jpg");
+            background-position: right bottom;
+            min-height: 570px;
+            background-size:400px;
+        }
+
+        @media screen and (min-width:1200px) {
+            section#abcocr .panel-wrap {
+                margin-top: 5ex;
+            }
+
+                section#abcocr .panel-wrap p.para2 {
+                    margin-top: 20ex;
+                }
+        }
+
+        /* ABCUpload ASP */
+
+        section#abcuploadasp .bg-img {
+            background-image: url("../img/products/section-bg/ABCUploadASP.jpg");
+            background-position: left bottom;
+            min-height: 570px;
+            background-repeat: no-repeat;
+        }
+
+
+        /* ABCUpload NET */
+        section#abcuploadnet .bg-img {
+            background-image: url("../img/products/section-bg/ABCUploadNET.jpg");
+            background-position: right bottom;
+            min-height: 580px;
+            background-repeat: no-repeat;
+        }
+
+        /* Space paragraphs as per Sophie's full-width design */
+        @media screen and (min-width:1200px) {
+
+
+            section#abcpdf p.para1, section#abcpdf p.para2 {
+                margin-top: 8ex !important;
+            }
+
+            section#imageglue div.panel-wrap {
+                margin-top: 4ex;
+            }
+
+            section#imageglue p.para2 {
+                margin-top: 8ex !important;
+            }
+
+            section#abcocr p.para2 {
+                margin-top: 5ex;
+            }
+
+            section#taskgarden p.para2 {
+                margin-top: 10ex;
+            }
+
+            section#abcuploadasp div.panel-wrap {
+                margin-top: 10ex;
+            }
+        }
+        /* Collapse paragraph at bootstrap breakpoint */
+        @media screen and (max-width:1199px) {
+            section#abcpdf p.para1, section#abcpdf p.para2 {
+                margin-top: 2ex !important;
+            }
+
+            section#abcpdf a.btn-more {
+                float: right;
+            }
+
+            section#imageglue a.btn-more {
+                float: left;
+            }
+        }
+    </style>
+
+
+    <style type="text/css">
+        #logoimage {
+            z-index: 200;
+            position:relative;  
+            display:block;
+            margin-left:50px;
+        }
+
+        #logo-hdr {
+            position:relative;
+            z-index:1001;
+            margin:10px;
+        }
+
+        img#sm-logo {
+            width:300px;
+        }
+
+        @media screen and (min-width: 78em) {
+            #logoimage {
+                margin-bottom: -50px !important;
+            }
+        }
+        .navbar {
+            position:initial;
+        }
+
+        @media screen and (max-width: 78em) {
+            #logoimage {
+               margin-bottom: 0;
+            }        
+       }
+        @media (min-width: 992px) {
+            .nav-wrapper {
+                height:50px;
+            }
+        }
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+        overflow:visible; /* stop slidey purple navbar */
+        margin-bottom:15px;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+        .search-box {
+            margin-top: 50px;
+        }
+
+        form#searchForm .search-box {
+            width:400px;
+        }
+
+        @media screen and (max-width:830px) {
+            form#searchForm {
+                clear:both;
+                width:100% !important;
+                margin:0;
+            }
+             form#searchForm .search-box {
+                max-width:none;
+                width:100% !important;
+                margin:0;
+            }
+        }
+    /*
+        header {
+            background-image:none !important;
+            height:initial !important;
+        }
+            header h1 {
+                color:#B94F8B;
+            }
+*/
+
+}
+    </style>
+<title>
+	webSupergoo - Our Products
+</title></head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GW1TH344ZC"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-GW1TH344ZC');
+</script>
+<body>
+
+<!-- Ajax Modal HTML -->
+<div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div> <!-- /.modal-content -->
+    </div> <!-- /.modal-dialog -->
+</div> 
+
+ <div class="container-fluid" id="page-wrapper">
+                    <div id="logo-hdr">
+                     <a href="/" id="logo">
+                         <img src="/img//branding/wsg-logo-lrg.png" id="sm-logo" alt="Logo" class="hidden-lg hidden-md hidden-print hidden-sm" />
+                    <img src="/img//branding/wsg-logo-l.png"  alt="Logo" class="logo-l pull-left hidden-xs" id="logoimage" /></a>
+                    <img src="/img//branding/wsg-logo-r.png"  alt="Logo" class="logo-r pull-left hidden-xs" id="Img1" />
+					
+                    <form method="get" action="search.aspx" id="searchForm" class="pull-right">
+                        <div class="search-box">
+                            <i class="glyphicon glyphicon-search" id="searchIcon"></i>
+                            <input type="text" name="search" id="query" class="form-control" placeholder="SEARCH:" />
+                        </div>
+                    </form></div>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <!-- Toggle for mobile display (hamburger) -->
+            <div class="topbar-wrapper">
+                <div class="navbar-header">
+                    <div class="col-xs-12" style="background-color:#CEF0D8;padding-right:0;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                        </div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding:0;">
+                    <div class="nav-wrapper">
+                        <ul class="nav navbar-nav navbar-right main-menu">
+                            <li>
+                                <a href="products.htm">Products</a>
+                            </li>
+                            <li>
+                                <a href="download.htm">Downloads</a>
+                            </li>
+                            <li>
+                                <a href="purchase.htm">Purchase</a>
+                            </li>
+                            <li>
+                                <a href="support.htm">Support</a>
+                            </li>
+                            <li>
+                                <a href="contactus.htm">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+            
+
+        <div id="page-header">
+            
+   
+    <header id="product-hdr" style="background-image: url('img/headers/products-header.svg');">
+        <div class="container">
+            
+    <h1>Products</h1>
+    <p>Cutting edge PDF, image and document manipulation components for use in C# and other .NET languages.</p>
+
+        </div>
+    </header>
+    <div class="navbar" id="product-nav">
+        <div class="container-fluid nav" id="submenu-wrapper">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#prodmenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="prodmenu">
+                <ul id="submenu" class="nav navbar-nav">
+                    
+    <li><a href="#abcpdf">ABCpdf .NET</a></li>
+    <li><a href="#imageglue">ImageGlue</a></li>
+    <li><a href="#wordglue">WordGlue .NET</a></li>
+    <li><a href="#abcocr">ABCocr .NET</a></li>
+    <li><a href="#abcuploadasp">ABCUpload ASP</a></li>
+    <li><a href="#abcuploadnet">ABCUpload .NET</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div id="page-content">
+            
+    
+    <div id="productPage">
+        <section id="abcpdf">
+            <h2>ABCpdf .NET<span class="tm">&trade;</span> 13</h2>
+            <div class="container bg-img">
+                <h3>Use ABCpdf to create Adobe PDF documents on the fly. You won’t believe how simple - yet powerful - it is.</h3>
+                <div class="col-lg-10 col-lg-offset-2 col-xs-9 col-xs-offset-3 panel-wrap">
+                    <p class="para1 col-lg-6 text-center">A truly remarkable Best-Of-Class PDF component. With features ranging from simple PDF construction to complex multi-color space, spot rendering, ABCpdf provides more than you could ever need, yet still remains easy to understand and use. Why not check out our <a href="abcpdf-8.htm">Feature Chart...</a></p>
+                    <div class="col-lg-3 bg-vert-goo hidden-md hidden-sm hidden-xs"></div>
+                    <div class="col-lg-3 text-center">
+                        <p class="para2">ABCpdf .NET is a .NET Native product encapsulated in an easy-to-deploy set of DLLs. It also offers a virtualized COM interface designed for backwards-compatibility with ABCpdf ASP and Classic ASP/COM.</p>
+                        <a href="abcpdf-1.htm" class="btn btn-more">FIND OUT MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="imageglue">
+            <h2>ImageGlue .NET<span class="tm">&trade;</span> 9</h2>
+
+            <div class="container bg-img">
+                <h3>ImageGlue is a component suite for professional quality image manipulation. Designed for use in highly threaded environments like ASP.NET.</h3>
+                <div class="col-lg-9 col-md-8 col-sm-7 panel-wrap">
+                    <div class="col-md-6">
+                        <div class="col-md-12 bg-horiz-goo hidden-md hidden-sm hidden-xs"></div>
+                        <p class="col-md-12 col-sm-12 col-xs-8 para2 text-center">Because ImageGlue Pro incorporates a full PostScript-compatible rendering engine you get all the power of PostScript and PostScript drawing instructions applied directly into ImageGlue canvasses. </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="col-md-12 col-sm-12 col-xs-8 para1 text-center">
+                            Read and write core image types like BMP, PNG, TIFF, JPEG/JFIF, GIF, Photoshop, QuickDraw PICT, Targa, PDF, EPS, Macromedia Flash™ 5, QuickTime Image, Silicon Graphics, MacPaint and FlashPix. Read images from movie types like AVI and MOV. Plus ImageGlue supports over 50 other graphic file formats.<br />
+                            <a href="imageglue-1.htm" class="btn btn-more">FIND OUT MORE</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="wordglue">
+            <h2>WordGlue .NET<span class="tm">&trade;</span> 4.0</h2>
+            <div class="container bg-img">
+                <h3>WordGlue is our own custom DOC / DOCX rendering engine. It allows you to view Word documents and convert them to different formats quickly, easily and reliably.</h3>
+                <div class="col-lg-10 col-sm-12 panel-wrap">
+                    <div class="col-sm-12">
+                        <div class="col-lg-5 col-lg-offset-7">
+                            <p class="para1">So why would you want to do this? Well if you want to convert a format like DOCX to PDF or XPS, currently your choices are to leverage MS Office or OpenOffice.org. While these are great applications for interactive use, neither of them are an ideal choice for an automated solution.</p>
+                        </div>
+                        <div class="col-sm-5 col-sm-offset-7 text-center">
+                            <a href="wordglue-1.htm" class="btn btn-more">FIND OUT MORE</a>
+                    <p class="para2">WordGlue provides an alternative here for rendering real world DOC and DOCX format documents in a way that interoperates well with output formats from PDF, to SVG to PNG. Indeed, any format you require is simple using WordGlue. All this in a 100% managed, 100% application free component.</p></div>
+                </div>
+                       
+                </div>
+                <div class="col-lg-2 bg-vert-goo hidden-md hidden-sm hidden-xs"></div>
+
+
+                <!--
+
+                <div class="col-lg-4 col-lg-offset-6 col-sm-12 panel-wrap">
+                    <p class="para1 col-lg-12 col-sm-12">So why would you want to do this? Well if you want to convert a format like DOC to PDF or XPS, currently your choices are to leverage MS Office or OpenOffice.org. While these are great applications for interactive use neither of them is an ideal choice for an automated solution. <a href="#">Find out what's new...</a></p>
+                    <div class="text-center">
+                        <a href="wordglue-1.htm" class="btn btn-more">FIND OUT MORE</a>
+                    </div>
+                    <div class="col-sm-12">
+
+                <div class="col-lg-2 bg-vert-goo hidden-md hidden-sm hidden-xs"></div>
+                    -->
+            </div>
+        </section>
+        <section id="abcocr">
+            <h2>ABCocr .NET<span class="tm">&trade;</span> 3.0</h2>
+            <div class="container bg-img">
+                <h3>Performing Optical Character Recognition (OCR) on your images is as simple as pie with ABCocr.</h3>
+                <div class="col-lg-11 col-xs-8 panel-wrap">
+                    <div class="col-lg-4 col-sm-6">
+                        <p class="para1">We use a custom variant of the Tesseract 3 OCR engine for unparalleled accuracy of text recognition within a multithreaded .NET base.</p>
+                        <p class="para2">So what do we add to this code base? ABCocr adds stability, performance, compatibility, consistency and simplicity! What do we mean? Find out more...</p>
+                    </div>
+                    <div class="col-lg-7 text-center">
+                        <div class="col-lg-12 bg-horiz-goo hidden-md hidden-sm hidden-xs"></div>
+                        <a href="abcocr-1.htm" class="btn btn-more">FIND OUT MORE</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <section id="abcuploadasp">
+            <h2>ABCUpload ASP<span class="tm">&trade;</span> 4.6</h2>
+            <div class="container bg-img">
+                <h3>Uploading files is as simple as ABC with ABCUpload. </h3>
+                <div class="col-lg-9 col-lg-offset-3 col-sm-8 col-sm-offset-4 panel-wrap">
+                    <div class="col-lg-4 col-lg-push-3">
+                        <p class="para1">Our Pure HTML Progress Bar™ allows your visitors to see the progress of their upload in real time with absolutely no client side software. ABCUpload is Unicode Compliant, 120% MacBinary Compatible and BLOB Aware. Why not <a href="abcupload-1.htm">check it out...</a></p>
+                    </div>
+                    <div class="col-lg-3 col-lg-pull-4"><a href="abcupload-1.htm" class="btn btn-more">FIND OUT MORE</a></div>
+
+                <div class="col-md-5">
+                    <div class="bg-horiz-goo hidden-md hidden-sm hidden-xs"></div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="abcuploadnet">
+            <h2>ABCUpload .NET<span class="tm">&trade;</span></h2>
+            <div class="container bg-img">
+                <h3 class="col-lg-8 col-lg-offset-2">ABCUpload .NET is a completely new product designed to leverage the combined power of ABCUpload and .NET 100% Managed Code.</h3>
+                <div class="col-sm-8 panel-wrap">
+                    <div class="col-sm-4  hidden-md hidden-sm hidden-xs">
+                        <div class="bg-vert-goo"></div>
+                    </div>
+                    <div class="col-sm-8 text-center">
+                        <p class="para1">ABCUpload .NET offers a number of advanced features such as Pure HTML Progress Bar<span class="tm">&trade;</span> support, GigUpload<span class="tm">&trade;</span> technology for truly massive uploads, Corruption Autofix<span class="tm">&trade;</span>, Unicode compliant and MacBinary compatible.</p>
+                        <a href="abcupload.net-1.htm" class="btn btn-more">FIND OUT MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <div id="fine-print" class="text-center padded-row">
+            <p id="other">When we feel that one of our products has become redundant we discontinue it. This typically happens because the functionality provided becomes more easily available via another one of our products.  Please see our <a href="products2.htm">discontinued products page</a> for details of products which have been retired. Should you feel you might need to use one of these, please contact us and we will suggest a suitable alternative.</p>
+        </div>
+    </div>
+    <!-- end  id="productPage" -->
+
+
+        </div>
+         <div id="footer">
+            <footer class="container">
+                <div class="col-md-3 panel-footer">
+                    <h4>WebSupergoo Software</h4>
+                    <p>
+                        New York<br />
+                        Denver<br />
+                        London<br />
+                        Hong Kong</p>
+                    <a href="contactus.htm">Contact Us</a>
+                </div>
+                <div class="col-md-3 panel-footer">
+                    <h4>About Us</h4>
+                    <p>
+                        We have been developing cutting edge software components since 1999 and can boast tens of thousands of clients including Enterprise Level customers like Microsoft and Hewlett-Packard.
+                    </p>
+                    <a href="aboutus.htm">About Us</a>
+                </div>
+                <div class="col-md-3 panel-footer">
+                    <h4>Products</h4>
+                    <ul class ="col-md-6">
+                        <li><a href="abcpdf-1.htm">ABCpdf .NET</a></li>
+                        <li><a href="imageglue-1.htm">ImageGlue</a></li>
+                        <li><a href="wordglue-1.htm">WordGlue</a></li>
+                        <li><a href="abcocr-1.htm">ABCocr</a></li>
+                        </ul>
+                    <ul class ="col-md-6">
+                        <li><a href="abcupload.net-1.htm">ABCUpload .NET</a></li>
+                        <li><a href="taskgarden-1.htm">TaskGarden</a></li>
+                        <li><a href="abcupload-1.htm">ABCUpload ASP</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3 panel-footer">
+                    <h4>Essentials</h4>
+                    <ul>
+                        <li><a href="support.htm">Support Page</a></li>
+                        <li><a href="sitemap_visual.aspx">Sitemap</a></li>
+                        <li><a href="privacy.htm#cookies">Cookies & Privacy</a></li>
+                        <li><a href="info_language.htm" data-toggle="modal" data-target="#ajaxModal" target="_blank">Languages Supported</a></li>
+                        <li><a href="info_reseller.htm" data-toggle="modal" data-target="#ajaxModal">Preferred Reseller</a></li>
+                    </ul>
+                </div>
+
+            </footer><p class="small text-center">&copy;1999-2025 WebSupergoo Software</p>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/jquery.highlight.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/js/agency.js"></script>  <!-- NB Peter doesn't think we need this JV 16Mar2017 -->
+    
+    
+
+
+
+    
+    <script type="text/javascript">
+        /* PGTODO Move to separate file and bundle with minification */
+        function qs(key) { // Get query string value for specific key
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function () {
+
+            
+            $('body').on('hidden.bs.modal', '.modal', function () {
+                $(this).removeData('bs.modal');
+            });
+
+            if ($.cookie("ID") == null) {
+				var num = Math.floor(Math.random() * 1000 * 1000 * 1000);
+                $.cookie("ID", num, { expires: 3650 });
+            }
+
+            if ($.cookie('searchQuery')) {
+                $('#query').val($.cookie('searchQuery'));
+            }
+            $('#searchForm').submit(function (e) {
+                if ($('#query').val()) {
+                    $.cookie('searchQuery', $('#query').val(), { expires: 14 });
+                } else {
+                   e.preventDefault();
+                }
+            });
+            $('#searchIcon').click(function () {
+                $('#searchForm').submit();
+            });
+
+			var exact = false;
+            var terms = qs('q');
+            if (!terms) {
+				terms = qs('qe');
+				if (terms)
+					exact = true;
+			}
+            //if (!terms) terms = qs('search');
+            if (terms) {
+                var theWords = exact ? [terms] : terms.split(" ");
+                for (var i = 0; i < theWords.length; i++) {
+                    var lcWord = ' ' + theWords[i] + ' ';
+                    lcWord.toLowerCase();
+                    var skipWords = " the of and a to in is you that it he for was on are as with his they " +
+                            "at be this from I have or by one had not but what all were when we " +
+                            "there can an your which their said if do will each about how up out " +
+                            "them then she many some so these would other into has more her two " +
+                            "like him see time could no make than first been its who now people " +
+                            "my made over did down only way find use may water long little very " +
+                            "after words called just where most know ";
+                    if (skipWords.indexOf(lcWord) == -1) {
+                        $('body').highlight(theWords[i]);
+					}
+					$('html, body').animate({
+						scrollTop: ($('.highlight').first().offset().top)
+					},500);
+                }
+            }
+        });
+
+
+
+        $('.trackedDownload').click(function () { // Used to track downloads redirects
+            
+            console.log('Title: ' + $(this).data('title') + ' Tracking code: ' + $(this).data('trackingcode') + ' Target: ' + $(this).attr('href'));
+            
+            var form = $('<form action="thank-you-for-downloading.aspx" method="post" id="thankyouform">' +
+		        '<input id="target" type="hidden" name="target" value="' + $(this).attr('href') + '" />' +
+		        '<input id="title" type="hidden" name="title" value="' + $(this).data('title') + '" />' +
+		        '<input id="track" type="hidden" name="track" value="' + $(this).data('trackingcode') + '" /></form>');
+            form.hide();
+            setTimeout(function () {
+               $('body').append(form);
+               form.submit();
+            }, 3000);
+            return true;
+        });
+
+        $('.trackedPurchase').click(function () { // Used to track purchase redirects
+            pageTracker._link($(this).attr('href'));
+            
+            console.log($(this).attr('href'));
+            
+            return false;
+        });
+
+        $('.carousel').carousel({
+            interval: 3000
+        });
+
+	</script>
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-1226930-1");
+        pageTracker._setDomainName("none");
+        pageTracker._setAllowLinker(true);
+        pageTracker._trackPageview();
+    </script>
+</body>
+
+</html>

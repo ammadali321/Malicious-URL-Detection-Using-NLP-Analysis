@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+			window.location.replace('https://www.createafreewebsite.net/phpmysql/index.html');
+		</script>
+
+<script>
+			window.location.assign('https://www.createafreewebsite.net/phpmysql/index.html');
+		</script>
+<title>Create MySQL Database on Your PC -  PHP MySQL</title>
+<meta name="keywords" content="PHP MySQL , PHP, MySQL , create ,  create mysql database, Apache server">
+<meta name="description" content="Learn to create a MySQL database on your PC and Export it to your web hosting account. Includes installing the Apache server.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../vnavbar8.css" type="text/css">
+<link rel="stylesheet" href="../style-401.css" type="text/css">
+<meta name="author" content="Charles Alban" >
+</head>
+<body>
+<header id="heading">
+<p><a href="https://www.createafreewebsite.net">CreateaFreeWebsite</a>&nbsp;<span class="slogan"> with&nbsp;Responsive&nbsp;Web&nbsp;Design</span></p> 
+
+</header>
+
+<div class="main">
+<div class="iframemenu">
+<p><button id="toggleButton">Open - Close Menu</button></p>
+</div>
+<div id="menu-display" style="display:none">
+<iframe id="myiframe" src="lmenu.html">
+</iframe>
+</div>
+
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+      const element = document.getElementById('menu-display');
+      element.style.display = (element.style.display === 'none' || element.style.display === '') ? 'block' : 'none';
+    });
+  </script>
+
+<nav class="navigate8">
+<ul class="vnavbar8">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../html_introduction.html">Introduction</a></li>
+<li><a href="#heading">PHPMySQL</a>
+<ul>
+<li><a href="index.html">Introduction</a></li>
+<li><a href="connect.html">Connect to Server</a></li>
+<li><a href="creating.html">Create Database</a></li>
+<li><a href="create_table.html">Create a Table</a></li>
+<li><a href="insert.html">Adding Records</a></li>
+<li><a href="display_data.html">Display Records</a></li>
+<li><a href="update.html">Editing Records</a></li>
+<li><a href="delete.html">Delete Records</a></li>
+<li><a href="alter.html">Altering Tables</a></li>
+<li><a href="export-table.html">Export Table</a></li>
+</ul></li>
+<li><a href="#heading">Web Design</a>
+<ul>
+<li><a href="../web-design/index.html">Home</a></li>
+<li><a href="#heading">Researching</a>
+<ul>
+<li><a href="../web-design/research-trends.html">Research Trends</a></li>
+<li><a href="../web-design/researching_a_website.html">Research Keywords</a></li>
+<li><a href="../web-design/understanding-keywords.html">Read the Experts</a></li>
+</ul> </li>
+<li><a href="#heading">Planning</a>
+<ul>
+<li><a href="../web-design/planning_a_website.html">Planning Appearance</a></li>
+<li><a href="../web-design/planning_content.html">Planning Content</a></li>
+</ul> </li>
+<li><a href="#heading">Color</a>
+<ul>
+<li><a href="../web-design/choosing_colors.html">Choosing Colors</a></li>
+<li><a href="../web-design/web-design-complementary-color.html">Complementary</a></li>
+<li><a href="../web-design/web-design-neighboring-color.html">Neighboring</a></li>
+<li><a href="../web-design/web-design-tints-tones-shades.html">Pastels</a></li>
+<li><a href="https://www.createafreewebsite.net/html-color-tool.html">Color Tool</a></li>
+<li><a href="../web-design/using-color-tool.html">Using color Tool</a></li>
+<li><a href="../web-design/web-design-blatant-errors.html">Common Errors</a></li>
+</ul></li>
+<li><a href="#heading">Build a Template</a>
+<ul>
+<li><a href="../web-design/web-design-keep-it-simple.html">Keep it Simple</a></li>
+<li><a href="../web-design/build_template.html">Build Your Template</a></li>
+<li><a href="../web-design/web-design-template-diagram.html">Template Diagram</a></li>
+<li><a href="../web-design/webpage_layout.html">Sample Layouts</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#heading">Free Templates</a>
+<ul>
+<li><a href="../responsive-templates/index.html">Home</a></li>
+<li><a href="../responsive-templates/single-page-single-column.html">Single Page Single Column</a></li>
+<li><a href="../responsive-templates/single-page-multi-column.html">Single Page Multi Column</a></li>
+<li><a href="../responsive-templates/multi-page-multi-column.html">Multiple Page  Templates</a></li>
+</ul></li>
+<li><a href="#heading">9 Step Tutor</a>
+<ul>
+<li><a href="../basics-liquid-web-pages-1.html">#1 Basic Web Page</a></li>
+<li><a href="../basics-liquid-web-pages-2.html">#2 Basic Structure</a></li>
+<li><a href="../basics-liquid-web-pages-3.html">#3 Page Header</a></li>
+<li><a href="../basics-liquid-web-pages-4.html">#4 Navigation</a></li>
+<li><a href="../basics-liquid-web-pages-5.html">#5 Add Paragraphs</a></li>
+<li><a href="../basics-liquid-web-pages-5a.html">#5a Using Web Tools</a></li>
+<li><a href="../basics-liquid-web-pages-5b.html">#5b Add lmenu.html</a></li>
+<li><a href="../basics-liquid-web-pages-6.html">#6 Add Images</a></li>
+<li><a href="../basics-liquid-web-pages-7.html">#7 Drop Down Menu</a></li>
+</ul></li>
+<li><a href="#heading">Structure</a>
+<ul>
+<li><a href="../basic_html_page.html"> Basic HTML Page</a></li>
+<li><a href="../doctype.html">Doctype</a></li>
+<li><a href="../body_tag.html">The Body Tag</a></li>
+<li><a href="#heading">Head Section</a>
+<ul>
+<li><a href="../meta_tags.html">Meta Tags</a></li>
+<li><a href="../basic_html_page.html">Required Elements</a></li>
+</ul></li>
+<li><a href="#heading">Box Elements</a>
+<ul>
+<li><a href="../header.html">Header Element</a></li>
+<li><a href="../nav.html">Nav Element</a></li>
+<li><a href="../main-element.html"> The Main Element</a></li>
+<li><a href="../division_tag.html">The Division Tag</a></li>
+<li><a href="../footer.html">Footer Element</a></li>
+<li><a href="../article.html">Article Element</a></li>
+<li><a href="../section.html">Section Element</a></li>
+<li><a href="../hgroup.html">HGroup Element</a></li>
+<li><a href="../aside.html">Aside Element</a></li>
+</ul></li>
+<li><a href="#heading">Text Elements</a>
+<ul>
+<li><a href="../header_tag.html">Heading Tag</a></li>
+<li><a href="../paragraph_tag.html">Paragraph Tag</a></li>
+<li><a href="../paragraph_images.html">Paragraphs-Images</a></li>
+<li><a href="../lists.html">Using Lists</a></li>
+<li><a href="../pre_tag.html">Pre Tag</a></li>
+<li><a href="../line_break.html">Line Break Tag</a></li>
+<li><a href="../horizontal_rule.html">HR Tag</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#heading">Navigation</a>
+<ul>
+<li><a href="../nav.html">Nav Element</a></li>
+<li><a href="../id_attribute.html">The ID Attribute</a></li>
+<li><a href="../anchor_tag.html">Anchor Tag</a></li>
+<li><a href="../anchor_tag_intra.html">Intra-document Links</a></li>
+<li><a href="../anchor_tag_image.html">Anchor Tag - Image</a></li>
+<li><a href="../multi-tier-menus.html">Multi Tier Menus</a></li>
+<li><a href="../navbars/navbars.html">Vertical Navbar Kits</a></li>
+</ul></li>
+<li><a href="#heading">CSS</a>
+<ul>
+<li><a href="../what-is-responsive-web-design.html">Responsive Design</a></li>
+<li><a href="../what-are-media-queries.html">Media Queries</a></li>
+<li><a href="#heading">Style Sheets</a>
+<ul>
+<li><a href="../style_sheets.html">Style Sheets</a></li>
+<li><a href="../style_sheets_linked.html">Linked</a></li>
+<li><a href="../style_sheets_embed.html">Embedded</a></li>
+<li><a href="../style_sheets_inline.html">Inline</a></li>
+</ul>
+</li>
+<li><a href="#heading">Properties-Attributes</a>
+<ul>
+<li><a href="../fonts.htm">Fonts</a></li>
+<li><a href="../class-attribute.html">Class Attribute</a></li>
+<li><a href="../float-property.html">Float Property</a></li>
+<li><a href="../text-shadow.html">Text Shadow</a></li>
+<li><a href="../box-shadow.html">Box Shadow</a></li>
+<li><a href="../round-corners.html">Round Corners</a></li>
+<li><a href="../borders.html">Borders</a></li>
+<li><a href="../buttons.html">Create CSS Buttons</a></li>
+<li><a href="../id_attribute.html">ID Attribute</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#heading">Forms</a>
+<ul>
+<li><a href="../forms.htm">Form Basics</a></li>
+<li><a href="../formscheckbox.htm">Check Boxes</a></li>
+<li><a href="../formstext.htm">Text Boxes</a></li>
+<li><a href="../formselections.htm">Selection Boxes</a></li>
+</ul></li>
+<li><a href="#heading">Miscellaneous</a>
+<ul>
+<li><a href="../using-a-browser.html">Browser Previewing</a></li>
+<li><a href="#heading">Tables</a>
+<ul>
+<li><a href="../tables.htm">Tables Overview</a></li>
+<li><a href="../colspan.htm">Colspan</a></li>
+<li><a href="../rowspan.html">Rowspan</a></li>
+<li><a href="../tables_color.html">With Color Cells</a></li>
+<li><a href="../tables_background.html">With Backgrounds</a></li>
+<li><a href="../responsive-table.html">Responsive Table</a></li>
+</ul></li>
+<li><a href="#heading">Color</a>
+<ul>
+<li><a href="../color.html">Color Overview</a>
+<li><a href="../color_chart.html">Color Chart</a></li>
+<li><a href="../html-color-tool.html">Scheme Generator</a></li>
+</ul></li>
+<li><a href="#heading">Images or Pictures</a>
+<ul>
+<li><a href="../images.html">Responsive Images</a></li>
+<li><a href="../paragraph_images.html">Images with Text</a></li>
+<li><a href="../anchor_tag_image.html">Images as Links</a></li>
+</ul></li>
+<li><a href="../usingtemps.htm">Using Templates</a></li>
+<li><a href="#heading">Tools and Software</a>
+<ul>
+<li><a href="../uploading_1.html">Free FTP Client</a></li>
+<li><a href="../validator-tutor.html">W3C Validator</a></li>
+<li><a href="../web-dev-emulator.html">Emulator Tool</a></li>
+<li><a href="../using-a-browser.html">Browsers Offline</a></li>
+</ul></li>
+<li><a href="#heading">Code Editors</a>
+<ul>
+<li><a href="../using-html-editor.html">Using a Text Editor</a></li>
+<li><a href="../using-html-editor2.html">HTML Editor Cons</a></li>
+<li><a href="../using-html-editor3.html">Geany</a></li>
+<li><a href="../using-html-editor4.html">Alleycode</a></li>
+<li><a href="../using-html-editor5.html">Coffee Cup</a></li>
+<li><a href="../free-website-builders-2.html">NoteTab Light</a></li>
+<li><a href="../website-builder-freeware-downloads-4.html">HTML Kit 292</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+<h1>PHP MySQL<br><span STYLE="font-size:24px">Create &amp; Test MySQL Database</span></h1>
+<h2>Build a MySQL Database on Your PC then Export it to Your Website</h2>
+<hr/>
+<p>The scripts in this tutorial were <b>Last Tested</b> on : August 8, 2014.</p>
+<p>At that time PHP 5 was the current version. Today's version is PHP 8.4.3 and we have not retested. Information for installing a localhost was based on Windows 7. Might still work. Might Not. I'm old, tired, lazy and have traded Windows for Linux. Nuff said?<br>
+<b>Note:</b>By the by, you'll need at least a 1024 screen width to complete the lessons. Sorry FOLKS, the lines of code don't wrap!!</p>
+<hr/>
+<h2>Introduction</h2>
+<p>The combination of PHP and MYSQL, when used together can create some pretty impressive results for dynamic interactive websites.</p><p>Unfortunately, PHP/MySQL has always been a confusing subject for beginner website authors and even some with experience.</p><p>It has always been a hassle to create your database <strong>on your web host's server</strong> and then use scripts to add data or records to to the database and provide access for your website users.</p>
+<p>This tutorial will show you <strong>A BETTER WAY</strong>.</p> <p>I'll show you how, <strong>step by step</strong>,to build your database and your scripts right on your PC and then Export everything to your web hosting account after you've worked out all the bugs.</p><p>I'll introduce you to 2 tools that will make the experience easier and successful for almost everyone that tries.</p>
+<p class="clear">&nbsp;</p>
+<h2>The Lessons</h2>
+<p>The lessons provided in this tutorial will be short and simple.  You'll learn to create and manipulate a simple database of names and birthdates.</p>
+<ol type="1"  STYLE="padding-left : 35%;text-align : left">
+<li>Connecting to the MySQL Server</li>
+<li>Creating the Database</li>
+<li>Creating a Table </li>
+<li>Adding a Record</li>
+<li>Displaying Records</li>
+<li>Updating a Record  </li>
+<li>Deleting a Record </li>
+<li>Altering Tables</li>
+<li>Exporting to Your Website</li>
+</ol>
+<p class="clear">&nbsp;</p>
+<h2 id="test">Building Your Database on Your PC</h2>
+<p>In order to build your database on your PC and later Export it to your website requires setting up a localhost server on your PC and finding an HTML editor that will sync up with the server.</p>
+<p>If you use Windows, the process of setting up and running a localhost so that you can test and edit  scripts and build databases is very easy.</p>
+<p>I recommend the <strong>IndigoAMPP</strong> web server and the <strong>HTMLPad 2014</strong> HTML editor.</p>
+<p>I recently installed <strong>IndigoAMPP</strong> for Windows on my Windows 7 system and it ran on the first try after installation.  Setting up HTMLPad 2014 to work with it is also an easy process.</p>
+<p><strong>Note=> Windows Vista User:</strong> You will need to turn off the Windows User Account security feature when installing and using both the IndigoAMPP server and the PostCast mailserver (if using to test email scripts).<br>(Windows Control Panel - User Account) Just uncheck the box when installing and using these tools.</p>
+<p><strong>Note:</strong> The server is FREE and you can try the HTML editor for 30 sessions or 30 days free.  If you can't learn to build your database in that amount of time, don't pay for the editor.  <strong>NO RISK!!</strong></p>
+<h2>Using Other Editors</h2>
+<p>You can complete this mini course with an HTML&nbsp;editor other than <strong>HTMLPad 2014</strong>.</p>
+<p>The procedure for looking at your web pages and running scripts will be much more involved.</p>
+<p>You will download the scripts to the htdocs folder of the indigoAMPP server.</p>
+<p>To run the scripts, you will start the IndigoAMPP server, open your browser and enter the url of the script manually as: <br>
+<strong>http://localhost/nameofscript.php</strong></p>
+<p>When you get tired of doing that, download a free trial of <strong>HTMLPad 2014</strong></p>
+<h2>MySQL Tutorial</h2>
+<p>To extend your knowledge of MySQL study the Docs and Tutorials at the official MySQL website. <a href="http://www.mysql.com/">MYSQL.com</a> <br>
+The best information on using PHP with MySQL will be found at <a href="http://www.php.net" target="_blank">PHP.net</a>   </p>
+<p class="clear">&nbsp;</p>
+</div>
+<footer>
+<div class="ftr-left"><button title="Go Back" onclick="history.back()"><span>&#128072;</span></button>
+</div>
+<div class="ftr-middle">
+<p>More HTML5 Help:&nbsp;<a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools.com</a> &nbsp;&nbsp;<a href="https://www.htmldog.com/guides/css/beginner/" target="_blank">HTML&nbsp;Dog</a> &nbsp;&nbsp;<a href="https://codetofun.com/html/basic/" target="_blank">CodetoFun</a> &nbsp;&nbsp;<a href="https://www.dofactory.com/html/intro" target="_blank">dofactory</a></p>
+<p>More CSS Help:&nbsp;<a href="https://www.tutorialspoint.com/css/index.htm" target="_blank">tutorialspoint</a> &nbsp;&nbsp;<a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">TutorialRepublic</a> &nbsp;&nbsp;<a href="https://css3-tutorial.net/introduction/what-is-css/ " target="_blank">CSS3 Tutorial</a></p>
+<p>&copy; 1997-2016 - www.createafreewebsite.net - Somerset KY 42502<br>
+<SCRIPT>
+<!--
+var date
+date=document.lastModified
+document.write("Last Modified: "+date)
+// -->
+</SCRIPT></p>
+</div>
+<div class="ftr-right"><a href="connect.html">&#128073;</a>
+</div>
+</footer> 
+</body>
+</html>

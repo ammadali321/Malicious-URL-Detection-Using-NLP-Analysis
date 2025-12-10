@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html id="XenForo" lang="en-US" dir="LTR" class="Public NoJs LoggedOut Sidebar  Responsive" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	
+		<base href="https://forums.majorgeeks.com/" />
+		<script>
+			var _b = document.getElementsByTagName('base')[0], _bH = "https://forums.majorgeeks.com/";
+			if (_b && _b.href != _bH) _b.href = _bH;
+		</script>
+	
+
+	<title>MajorGeeks.Com Support Forums</title>
+	
+	<noscript><style>.JsOnly, .jsOnly { display: none !important; }</style></noscript>
+	<link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style=1&amp;dir=LTR&amp;d=1744212019" />
+	<link rel="stylesheet" href="css.php?css=login_bar,node_category,node_forum,node_link,node_list,node_page,thread_list_simple&amp;style=1&amp;dir=LTR&amp;d=1744212019" />
+	
+	
+
+	
+		<script src="js/jquery/jquery-1.11.0.min.js"></script>	
+		
+	<script src="js/xenforo/xenforo.js?_v=24a78702"></script>
+
+	
+	<link rel="apple-touch-icon" href="https://forums.majorgeeks.com/styles/default/xenforo/logo.og.png" />
+	<link rel="alternate" type="application/rss+xml" title="RSS feed for MajorGeeks.Com Support Forums" href="forums/-/index.rss" />
+	
+	<link rel="canonical" href="https://forums.majorgeeks.com/" />
+	<meta name="description" content="MajorGeeks.Com Support Forum" />
+		<meta property="og:site_name" content="MajorGeeks.Com Support Forums" />
+	
+	<meta property="og:image" content="https://forums.majorgeeks.com/styles/default/xenforo/logo.og.png" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://forums.majorgeeks.com/" />
+	<meta property="og:title" content="MajorGeeks.Com Support Forums" />
+	<meta property="og:description" content="MajorGeeks.Com Support Forum" />
+	
+	
+	
+
+
+<!-- API -->
+<script>
+	var _paq = window._paq || [];
+	_paq.push(["setRequestMethod", "POST"]);
+	_paq.push(["disableAlwaysUseSendBeacon"]);
+	_paq.push(["trackPageView"]);
+	_paq.push(["enableLinkTracking"]);
+	
+	(function () {
+		var u = "//api.majorgeeks.com/";
+		_paq.push(["setTrackerUrl", u + "api.php"]);
+		_paq.push(["setSiteId", "3"]);
+		var d = document, g = d.createElement("script"),s = d.getElementsByTagName("script")[0];
+		g.type = "text/javascript";g.async = true;g.defer = true;g.src = u + "api.js";s.parentNode.insertBefore(g, s);
+	})();
+</script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body>
+
+
+
+	
+
+<div id="loginBar">
+	<div class="pageWidth">
+		<div class="pageContent">	
+			<h3 id="loginBarHandle">
+				<label for="LoginControl"><a href="login/" class="concealed noOutline">Log in or Sign up</a></label>
+			</h3>
+			
+			<span class="helper"></span>
+
+			
+		</div>
+	</div>
+</div>
+
+
+<div id="headerMover">
+	<div id="headerProxy"></div>
+
+<div id="content" class="forum_list">
+	<div class="pageWidth">
+		<div class="pageContent">
+			<!-- main content area -->
+			
+			
+			
+			
+				<div class="mainContainer">
+					<div class="mainContent">
+																
+						
+
+<div align="center">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6960825562757852"
+     crossorigin="anonymous"></script>
+<!-- Forum  Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6960825562757852"
+     data-ad-slot="9552882429"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+						
+						
+						<div class="breadBoxTop ">
+							
+							
+
+<nav>
+	
+
+	<fieldset class="breadcrumb">
+		<a href="misc/quick-navigation-menu" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Open quick navigation"><!--Jump to...--></a>
+			
+		<div class="boardTitle"><strong>MajorGeeks.Com Support Forums</strong></div>
+		
+		<span class="crumbs">
+			
+				<span class="crust homeCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="https://www.majorgeeks.com" class="crumb" rel="up" itemprop="url"><span itemprop="title">Home</span></a>
+					<span class="arrow"><span></span></span>
+				</span>
+			
+			
+			
+				<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="https://forums.majorgeeks.com/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+		</span>
+	</fieldset>
+</nav>
+						</div>
+						
+						
+						
+					
+						<!--[if lt IE 8]>
+							<p class="importantMessage">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</p>
+						<![endif]-->
+
+						
+						
+	
+
+	
+						
+						
+						
+						
+												
+							<!-- h1 title, description -->
+							<div class="titleBar">
+								
+								<h1>MajorGeeks.Com Support Forums</h1>
+								
+								
+							</div>
+						
+						
+						
+						
+						
+						<!-- main template -->
+						
+
+
+
+
+
+
+	
+
+
+	<ol class="nodeList sectionMain" id="forums">
+	
+		
+
+
+<li class="node link level_1 groupNoChildren node_74">
+
+	<div class="categoryStrip"></div>
+	
+	<div class="nodeInfo linkNodeInfo">
+		<span class="nodeIcon"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="link-forums/buy-us-a-coffee.74/" data-description-x="#nodeDescription-74">Buy Us a Coffee</a></h3>
+			<blockquote class="nodeDescription muted baseHtml" id="nodeDescription-74">If you like what you found here remember, geeks run on coffee and attitude. Thank you!</blockquote>
+		</div>		
+	</div>
+	
+	
+</li>
+
+
+<li class="node category level_1 node_13" id="welcome.13">
+
+	<div class="nodeInfo categoryNodeInfo categoryStrip">
+	
+		<div class="categoryText">
+			<h3 class="nodeTitle"><a href="#welcome.13">----------= Welcome =----------</a></h3>
+			
+		</div>
+		
+	</div>
+	
+			
+		<ol class="nodeList">
+			
+
+
+<li class="node page level_2  node_69">
+
+	
+
+	<div class="nodeInfo pageNodeInfo">
+		<span class="nodeIcon"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="pages/windows-repair/">Fix Most Errors For FREE With Windows Repair</a></h3>
+			
+				<blockquote class="nodeDescription baseHtml muted" id="nodeDescription-69"><b><a href="http://www.majorgeeks.com/files/details/tweaking_com_windows_repair.html" target="_top_">Windows not working properly? Tweaking.com - Windows Repair fixes almost all known Windows problems including  Action Center, Windows Updates, Windows Firewall, Windows registry errors, file permissions and Internet Explorer.  5 star rated by MajorGeeks and their readers. Download for FREE at http://www.majorgeeks.com/files/details/tweaking_com_windows_repair.html</a></b></blockquote>
+			
+		</div>
+	</div>
+	
+	
+	
+</li>
+
+
+<li class="node forum level_2  node_41">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/majorgeeks-welcome-center.41/" data-description="#nodeDescription-41">Majorgeeks Welcome Center</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-41">Welcome! Never used a forum? Try a test post here; saying hi or introduce yourself.</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>4,393</dd></dl>
+				<dl><dt>Messages:</dt> <dd>24,187</dd></dl>
+				
+					<div class="Popup subForumsPopup">
+						<a href="forums/majorgeeks-welcome-center.41/" rel="Menu" class="cloaked" data-closemenu="true"><span class="dt">Sub-Forums:</span> 1</a>
+						
+						<div class="Menu JsOnly subForumsMenu">
+							<div class="primaryContent menuHeader">
+								<h3>Majorgeeks Welcome Center</h3>
+								<div class="muted">Sub-Forums</div>
+							</div>
+							<ol class="secondaryContent blockLinksList">
+							
+								<li class="node forum level-n node_43">
+	<div class="unread">
+		<h4 class="nodeTitle"><a href="forums/using-majorgeeks-and-the-forums.43/" class="menuRow">Using MajorGeeks and the forums</a></h4>
+	</div>
+	
+</li>
+							
+							</ol>
+						</div>
+					</div>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2067166/" title="Major Geeks Site Changes">Major Geeks Site Changes</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/philipp.1/" class="username" dir="auto">Philipp</a>,</span>
+					<abbr class="DateTime muted lastThreadDate" data-latest="Latest: " data-time="1754257601" data-diff="454966" data-datestring="Aug 3, 2025" data-timestring="5:46 PM">Aug 3, 2025 at 5:46 PM</abbr>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/majorgeeks-welcome-center.41/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+
+
+<li class="node forum level_2  node_6">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/the-lounge.6/" data-description="#nodeDescription-6">The Lounge</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-6">Hang out and have some fun with your fellow Majorgeeks!</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>19,115</dd></dl>
+				<dl><dt>Messages:</dt> <dd>269,378</dd></dl>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2067245/" title="Got A Funny Pic? Post It !">Got A Funny Pic? Post It !</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/chew-the-fat.516317/" class="username" dir="auto">chew the fat</a>,</span>
+					<abbr class="DateTime muted lastThreadDate" data-latest="Latest: " data-time="1754681393" data-diff="31174" data-datestring="Aug 8, 2025" data-timestring="3:29 PM">Aug 8, 2025 at 3:29 PM</abbr>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/the-lounge.6/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+
+
+<li class="node forum level_2  node_33">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/latest-videos-from-majorgeeks-youtube-channel.33/" data-description="#nodeDescription-33">Latest Videos From MajorGeeks YouTube Channel</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-33">This forum contains video tutorials from Majorgeeks plus frequently asked questions and guides. Subscribe @ <a href="https://www.youtube.com/user/majorgeeks">https://www.youtube.com/user/majorgeeks</a></blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>239</dd></dl>
+				<dl><dt>Messages:</dt> <dd>322</dd></dl>
+				
+					<div class="Popup subForumsPopup">
+						<a href="forums/latest-videos-from-majorgeeks-youtube-channel.33/" rel="Menu" class="cloaked" data-closemenu="true"><span class="dt">Sub-Forums:</span> 3</a>
+						
+						<div class="Menu JsOnly subForumsMenu">
+							<div class="primaryContent menuHeader">
+								<h3>Latest Videos From MajorGeeks YouTube Channel</h3>
+								<div class="muted">Sub-Forums</div>
+							</div>
+							<ol class="secondaryContent blockLinksList">
+							
+								<li class="node forum level-n node_47">
+	<div class="unread">
+		<h4 class="nodeTitle"><a href="forums/malware-spam-viruses-trojans.47/" class="menuRow">Malware (Spam, viruses, trojans)</a></h4>
+	</div>
+	
+</li>
+							
+								<li class="node forum level-n node_45">
+	<div class="unread">
+		<h4 class="nodeTitle"><a href="forums/backup-format-or-restore-your-pc.45/" class="menuRow">Backup, format or restore your PC</a></h4>
+	</div>
+	
+</li>
+							
+								<li class="node forum level-n node_49">
+	<div class="unread">
+		<h4 class="nodeTitle"><a href="forums/other.49/" class="menuRow">Other</a></h4>
+	</div>
+	
+</li>
+							
+							</ol>
+						</div>
+					</div>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2062445/" title="Majorgeeks News And Software Updater">Majorgeeks News And Software Updater</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/corporal-punishment.54/" class="username" dir="auto">Corporal Punishment</a>,</span>
+					<span class="DateTime muted lastThreadDate" data-latest="Latest: " title="May 23, 2024 at 11:57 AM">May 23, 2024</span>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/latest-videos-from-majorgeeks-youtube-channel.33/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+		</ol>
+	
+	
+	<span class="tlc"></span>
+	<span class="trc"></span>
+	<span class="blc"></span>
+	<span class="brc"></span>
+</li>
+
+
+<li class="node category level_1 node_20" id="pc-desktop-and-laptop-support.20">
+
+	<div class="nodeInfo categoryNodeInfo categoryStrip">
+	
+		<div class="categoryText">
+			<h3 class="nodeTitle"><a href="#pc-desktop-and-laptop-support.20">----------= PC, Desktop and Laptop Support =------</a></h3>
+			<blockquote class="nodeDescription baseHtml">The original! Support for your PC, desktop and laptop. Windows and Mac.</blockquote>
+		</div>
+		
+	</div>
+	
+			
+		<ol class="nodeList">
+			
+
+
+<li class="node forum level_2  node_21">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/software.21/" data-description="#nodeDescription-21">Software</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-21">Software such as operating systems like Windows XP, Windows Vista, Windows 7 etc., or specific programs.</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>92,528</dd></dl>
+				<dl><dt>Messages:</dt> <dd>540,425</dd></dl>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2067224/" title="Clearing The Cache For Firefox Specific Accounts?">Clearing The Cache For Firefox Specific Accounts?</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/itswendy.322750/" class="username" dir="auto">ItsWendy</a>,</span>
+					<abbr class="DateTime muted lastThreadDate" data-latest="Latest: " data-time="1754597645" data-diff="114922" data-datestring="Aug 7, 2025" data-timestring="4:14 PM">Aug 7, 2025 at 4:14 PM</abbr>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/software.21/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+
+
+<li class="node forum level_2  node_22">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/hardware.22/" data-description="#nodeDescription-22">Hardware</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-22">Hardware like hard drives, motherboards, video cards, printers, CD-ROMs, etc.</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>50,381</dd></dl>
+				<dl><dt>Messages:</dt> <dd>290,604</dd></dl>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2067095/" title="Mb Utilities Loaded Before Windows?">Mb Utilities Loaded Before Windows?</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/the-mekanic.185947/" class="username" dir="auto">the mekanic</a>,</span>
+					<span class="DateTime muted lastThreadDate" data-latest="Latest: " title="Jul 27, 2025 at 6:30 AM">Jul 27, 2025</span>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/hardware.22/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+
+
+<li class="node forum level_2  node_73">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/malware-help-public-anyone-can-post-respond.73/" data-description="#nodeDescription-73">Malware Help - Public (Anyone Can Post &amp; Respond)</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-73">If the READ ME FIRST method seems difficult please post here. Anyone can post. Anyone can respond.</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>311</dd></dl>
+				<dl><dt>Messages:</dt> <dd>2,491</dd></dl>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2065404/" title="Just Heard Of Evilloader For Android Telegram Anyone Know About It Already?">Just Heard Of Evilloader For Android Telegram Anyone Know About It Already?</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/dkgoodwin.215327/" class="username" dir="auto">dkgoodwin</a>,</span>
+					<span class="DateTime muted lastThreadDate" data-latest="Latest: " title="Mar 10, 2025 at 12:20 AM">Mar 10, 2025</span>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/malware-help-public-anyone-can-post-respond.73/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+
+
+<li class="node forum level_2  node_35">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/malware-help-mg-a-specialist-will-reply.35/" data-description="#nodeDescription-35">Malware Help - MG (A Specialist Will Reply)</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-35">Malware removal by team MajorGeeks. Must be able to do the READ ME FIRST thread and post logs.  Only Team MajorGeeks will help you here and everyone is taken on a  first-come, first-serve basis.</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>47,437</dd></dl>
+				<dl><dt>Messages:</dt> <dd>363,211</dd></dl>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2067246/" title="Windows 11 Home Not Working After Windows Tweaking">Windows 11 Home Not Working After Windows Tweaking</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/oh-my.534994/" class="username" dir="auto">Oh My!</a>,</span>
+					<abbr class="DateTime muted lastThreadDate" data-latest="Latest: " data-time="1754698428" data-diff="14139" data-datestring="Aug 8, 2025" data-timestring="8:13 PM">Aug 8, 2025 at 8:13 PM</abbr>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/malware-help-mg-a-specialist-will-reply.35/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+
+
+<li class="node forum level_2  node_32">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/virus-software-updates-read-only.32/" data-description="#nodeDescription-32">Virus Software Updates (Read Only)</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-32">Make sure your anti-virus is up to date and protecting you.</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>17</dd></dl>
+				<dl><dt>Messages:</dt> <dd>9,654</dd></dl>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2067237/" title="Doctor Web Anti virus">Doctor Web Anti virus</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/nick-adsl-uk.6302/" class="username" dir="auto">NICK ADSL UK</a>,</span>
+					<abbr class="DateTime muted lastThreadDate" data-latest="Latest: " data-time="1754604748" data-diff="107819" data-datestring="Aug 7, 2025" data-timestring="6:12 PM">Aug 7, 2025 at 6:12 PM</abbr>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/virus-software-updates-read-only.32/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+		</ol>
+	
+	
+	<span class="tlc"></span>
+	<span class="trc"></span>
+	<span class="blc"></span>
+	<span class="brc"></span>
+</li>
+
+
+<li class="node category level_1 node_66" id="smartphones-and-tablets.66">
+
+	<div class="nodeInfo categoryNodeInfo categoryStrip">
+	
+		<div class="categoryText">
+			<h3 class="nodeTitle"><a href="#smartphones-and-tablets.66">----------= Smartphones and Tablets =----------</a></h3>
+			<blockquote class="nodeDescription baseHtml">Smartphones, tablets, cameras, etc.</blockquote>
+		</div>
+		
+	</div>
+	
+			
+		<ol class="nodeList">
+			
+
+
+<li class="node forum level_2  node_67">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/smartphones-and-tablets-software.67/" data-description="#nodeDescription-67">Smartphones and Tablets - Software</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-67">Mobile device software forum for your tablets or smartphone.</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>634</dd></dl>
+				<dl><dt>Messages:</dt> <dd>3,070</dd></dl>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2066874/" title="Galaxy S23 Fe Sends The Same Spam Message To Contacts">Galaxy S23 Fe Sends The Same Spam Message To Contacts</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/plodr.104374/" class="username" dir="auto">plodr</a>,</span>
+					<span class="DateTime muted lastThreadDate" data-latest="Latest: " title="Jul 17, 2025 at 6:27 AM">Jul 17, 2025</span>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/smartphones-and-tablets-software.67/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+
+
+<li class="node forum level_2  node_68">
+
+	
+
+	<div class="nodeInfo forumNodeInfo primaryContent unread">
+
+		<span class="nodeIcon" title="Unread messages"></span>
+
+		<div class="nodeText">
+			<h3 class="nodeTitle"><a href="forums/smartphones-and-tablets-hardware.68/" data-description="#nodeDescription-68">Smartphones and Tablets - Hardware</a></h3>
+
+			
+				<blockquote class="nodeDescription nodeDescriptionTooltip baseHtml" id="nodeDescription-68">Mobile device hardware forum for your tablets or smartphone.</blockquote>
+			
+
+			<div class="nodeStats pairsInline">
+				<dl><dt>Discussions:</dt> <dd>169</dd></dl>
+				<dl><dt>Messages:</dt> <dd>1,050</dd></dl>
+				
+			</div>
+			
+			
+		</div>
+
+		
+		
+		
+
+		<div class="nodeLastPost secondaryContent">
+			
+				<span class="lastThreadTitle"><span>Latest:</span> <a href="posts/2064102/" title="No Internet Error When I Click Link In Google">No Internet Error When I Click Link In Google</a></span>
+				<span class="lastThreadMeta">
+					<span class="lastThreadUser"><a href="members/dangitallredux.538038/" class="username" dir="auto">DangitallRedux</a>,</span>
+					<span class="DateTime muted lastThreadDate" data-latest="Latest: " title="Nov 12, 2024 at 5:40 AM">Nov 12, 2024</span>
+				</span>
+			
+		</div>
+
+		<div class="nodeControls">
+			<a href="forums/smartphones-and-tablets-hardware.68/index.rss" class="tinyIcon feedIcon" title="RSS">RSS</a>
+		</div>
+		
+	</div>
+
+	
+
+</li>
+		</ol>
+	
+	
+	<span class="tlc"></span>
+	<span class="trc"></span>
+	<span class="blc"></span>
+	<span class="brc"></span>
+</li>
+	
+	</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+						
+						
+						
+						
+							<!-- login form, to be moved to the upper drop-down -->
+							
+
+
+
+
+
+
+
+<form action="login/login" method="post" class="xenForm " id="login" style="display:none">
+
+	
+
+	<div class="ctrlWrapper">
+		<dl class="ctrlUnit">
+			<dt><label for="LoginControl">Your name or email address:</label></dt>
+			<dd><input type="text" name="login" id="LoginControl" class="textCtrl" tabindex="101" /></dd>
+		</dl>
+	
+	
+		<dl class="ctrlUnit">
+			<dt>
+				<label for="ctrl_password">Do you already have an account?</label>
+			</dt>
+			<dd>
+				<ul>
+					<li><label for="ctrl_not_registered"><input type="radio" name="register" value="1" id="ctrl_not_registered" tabindex="105" />
+						No, create an account now.</label></li>
+					<li><label for="ctrl_registered"><input type="radio" name="register" value="0" id="ctrl_registered" tabindex="105" checked="checked" class="Disabler" />
+						Yes, my password is:</label></li>
+					<li id="ctrl_registered_Disabler">
+						<input type="password" name="password" class="textCtrl" id="ctrl_password" tabindex="102" />
+						<div class="lostPassword"><a href="lost-password/" class="OverlayTrigger OverlayCloser" tabindex="106">Forgot your password?</a></div>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+	
+		
+		<dl class="ctrlUnit submitUnit">
+			<dt></dt>
+			<dd>
+				<input type="submit" class="button primary" value="Log in" tabindex="104" data-loginPhrase="Log in" data-signupPhrase="Sign up" />
+				<label for="ctrl_remember" class="rememberPassword"><input type="checkbox" name="remember" value="1" id="ctrl_remember" tabindex="103" /> Stay logged in</label>
+			</dd>
+		</dl>
+	</div>
+
+	<input type="hidden" name="cookie_check" value="1" />
+	<input type="hidden" name="redirect" value="/" />
+	<input type="hidden" name="_xfToken" value="" />
+
+</form>
+						
+						
+					</div>
+				</div>
+				
+				<!-- sidebar -->
+				<aside>
+					<div class="sidebar">
+						
+						
+						
+
+<div class="section loginButton">		
+	<div class="secondaryContent">
+		<label for="LoginControl" id="SignupButton"><a href="login/" class="inner">Sign up now!</a></label>
+	</div>
+</div>
+
+
+
+
+						
+	
+	
+	
+		
+			
+
+<!-- block: sidebar_online_staff -->
+
+<!-- end block: sidebar_online_staff -->
+
+<!-- block: sidebar_online_users -->
+<div class="section membersOnline userList">		
+	<div class="secondaryContent">
+		<h3><a href="online/" title="See all online users">Members Online Now</a></h3>
+		
+		
+		
+			
+			
+			<ol class="listInline">
+				
+					
+						<li>
+						
+							<a href="members/michaelreima.559959/" dir="auto"
+								class="username">MichaelReima</a>,
+						
+						</li>
+					
+				
+					
+						<li>
+						
+							<a href="members/charlesevapy.559958/" dir="auto"
+								class="username">CharlesEvapy</a>,
+						
+						</li>
+					
+				
+					
+						<li>
+						
+							<a href="members/williamhek.559957/" dir="auto"
+								class="username">WilliamHek</a>,
+						
+						</li>
+					
+				
+					
+						<li>
+						
+							<a href="members/zaycev-net-music_ikpa.559956/" dir="auto"
+								class="username">Zaycev net music_ikpa</a>
+						
+						</li>
+					
+				
+				
+			</ol>
+		
+		
+		<div class="footnote">
+			Total: 1,287 (members: 6, guests: 1,266, robots: 15)
+		</div>
+	</div>
+</div>
+<!-- end block: sidebar_online_users -->
+		
+		
+		
+			<div class="section threadList">
+				<div class="secondaryContent">
+					<h3><a href="find-new/posts" rel="nofollow">New Posts</a></h3>
+					
+
+<ul>
+
+	<li id="thread-326382" class="threadListItem" data-author="Oh My!">
+
+		<a href="members/oh-my.534994/" class="avatar Av534994s" data-avatarhtml="true"><img src="data/avatars/s/534/534994.jpg?1681087089" width="48" height="48" alt="Oh My!" /></a>
+		
+		<div class="messageInfo">
+			
+			<div class="messageContent">
+				<div class="title">
+				
+					<a href="posts/2067246/">Windows 11 Home Not Working After Windows Tweaking</a>
+				
+				</div>
+			</div>
+
+			<div class="additionalRow muted">
+				Latest: Oh My!, <abbr class="DateTime" data-time="1754698428" data-diff="14139" data-datestring="Aug 8, 2025" data-timestring="8:13 PM">Aug 8, 2025 at 8:13 PM</abbr>
+			</div>
+			
+			<div class="additionalRow muted">
+				<a href="forums/malware-help-mg-a-specialist-will-reply.35/" class="forumLink">Malware Help - MG (A Specialist Will Reply)</a>
+			</div>
+		</div>
+	</li>
+
+	<li id="thread-314660" class="threadListItem" data-author="chew the fat">
+
+		<a href="members/chew-the-fat.516317/" class="avatar Av516317s" data-avatarhtml="true"><img src="data/avatars/s/516/516317.jpg?1625714963" width="48" height="48" alt="chew the fat" /></a>
+		
+		<div class="messageInfo">
+			
+			<div class="messageContent">
+				<div class="title">
+				
+					<a href="posts/2067245/">Got A Funny Pic? Post It !</a>
+				
+				</div>
+			</div>
+
+			<div class="additionalRow muted">
+				Latest: chew the fat, <abbr class="DateTime" data-time="1754681393" data-diff="31174" data-datestring="Aug 8, 2025" data-timestring="3:29 PM">Aug 8, 2025 at 3:29 PM</abbr>
+			</div>
+			
+			<div class="additionalRow muted">
+				<a href="forums/the-lounge.6/" class="forumLink">The Lounge</a>
+			</div>
+		</div>
+	</li>
+
+	<li id="thread-25181" class="threadListItem" data-author="NICK ADSL UK">
+
+		<a href="members/nick-adsl-uk.6302/" class="avatar Av6302s" data-avatarhtml="true"><img src="data/avatars/s/6/6302.jpg?1749854689" width="48" height="48" alt="NICK ADSL UK" /></a>
+		
+		<div class="messageInfo">
+			
+			<div class="messageContent">
+				<div class="title">
+				
+					<a href="posts/2067237/">Doctor Web Anti virus</a>
+				
+				</div>
+			</div>
+
+			<div class="additionalRow muted">
+				Latest: NICK ADSL UK, <abbr class="DateTime" data-time="1754604748" data-diff="107819" data-datestring="Aug 7, 2025" data-timestring="6:12 PM">Aug 7, 2025 at 6:12 PM</abbr>
+			</div>
+			
+			<div class="additionalRow muted">
+				<a href="forums/virus-software-updates-read-only.32/" class="forumLink">Virus Software Updates (Read Only)</a>
+			</div>
+		</div>
+	</li>
+
+	<li id="thread-282194" class="threadListItem" data-author="NICK ADSL UK">
+
+		<a href="members/nick-adsl-uk.6302/" class="avatar Av6302s" data-avatarhtml="true"><img src="data/avatars/s/6/6302.jpg?1749854689" width="48" height="48" alt="NICK ADSL UK" /></a>
+		
+		<div class="messageInfo">
+			
+			<div class="messageContent">
+				<div class="title">
+				
+					<a href="posts/2067236/">Spybot S&amp;D</a>
+				
+				</div>
+			</div>
+
+			<div class="additionalRow muted">
+				Latest: NICK ADSL UK, <abbr class="DateTime" data-time="1754604686" data-diff="107881" data-datestring="Aug 7, 2025" data-timestring="6:11 PM">Aug 7, 2025 at 6:11 PM</abbr>
+			</div>
+			
+			<div class="additionalRow muted">
+				<a href="forums/virus-software-updates-read-only.32/" class="forumLink">Virus Software Updates (Read Only)</a>
+			</div>
+		</div>
+	</li>
+
+	<li id="thread-319753" class="threadListItem" data-author="NICK ADSL UK">
+
+		<a href="members/nick-adsl-uk.6302/" class="avatar Av6302s" data-avatarhtml="true"><img src="data/avatars/s/6/6302.jpg?1749854689" width="48" height="48" alt="NICK ADSL UK" /></a>
+		
+		<div class="messageInfo">
+			
+			<div class="messageContent">
+				<div class="title">
+				
+					<a href="posts/2067235/">Superantispyware.</a>
+				
+				</div>
+			</div>
+
+			<div class="additionalRow muted">
+				Latest: NICK ADSL UK, <abbr class="DateTime" data-time="1754604648" data-diff="107919" data-datestring="Aug 7, 2025" data-timestring="6:10 PM">Aug 7, 2025 at 6:10 PM</abbr>
+			</div>
+			
+			<div class="additionalRow muted">
+				<a href="forums/virus-software-updates-read-only.32/" class="forumLink">Virus Software Updates (Read Only)</a>
+			</div>
+		</div>
+	</li>
+
+</ul>
+				</div>
+			</div>
+		
+		
+		
+		
+		<!-- block: forum_stats -->
+		<div class="section">
+			<div class="secondaryContent statsList" id="boardStats">
+				<h3>Forum Statistics</h3>
+				<div class="pairsJustified">
+					<dl class="discussionCount"><dt>Discussions:</dt>
+						<dd>221,975</dd></dl>
+					<dl class="messageCount"><dt>Messages:</dt>
+						<dd>1,559,470</dd></dl>
+					<dl class="memberCount"><dt>Members:</dt>
+						<dd>276,999</dd></dl>
+					<dl><dt>Latest Member:</dt>
+						<dd><a href="members/edukaro.559593/" class="username" dir="auto">EduKaro</a></dd></dl>
+					<!-- slot: forum_stats_extra -->
+				</div>
+			</div>
+		</div>
+		<!-- end block: forum_stats -->
+		
+		
+		
+	
+
+						
+						
+					</div>
+				</aside>
+			
+			
+						
+			<div class="breadBoxBottom">
+
+<nav>
+	
+
+	<fieldset class="breadcrumb">
+		<a href="misc/quick-navigation-menu" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Open quick navigation"><!--Jump to...--></a>
+			
+		<div class="boardTitle"><strong>MajorGeeks.Com Support Forums</strong></div>
+		
+		<span class="crumbs">
+			
+				<span class="crust homeCrumb">
+					<a href="https://www.majorgeeks.com" class="crumb"><span>Home</span></a>
+					<span class="arrow"><span></span></span>
+				</span>
+			
+			
+			
+				<span class="crust selectedTabCrumb">
+					<a href="https://forums.majorgeeks.com/" class="crumb"><span>Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+		</span>
+	</fieldset>
+</nav></div>
+			
+						
+			
+
+
+
+<hr>
+<div align="center">
+<p><b>MajorGeeks.Com Menu</b><p>
+</div>
+<b>Downloads</b> <a href="https://www.majorgeeks.com/mg/sortname/all_in_one.html">All In One Tweaks</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/android.html">Android</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/anti_spyware.html">Anti-Malware</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/anti_virus.html">Anti-Virus</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/appearance.html">Appearance</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/back_up.html">Backup</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/browsers.html">Browsers</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/cddvdblu_ray.html">CD\DVD\Blu-Ray</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/covert_ops.html">Covert Ops</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/drive_utilities.html">Drive Utilities</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/drivers.html">Drivers</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/graphics.html">Graphics</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/internet_tools.html">Internet Tools</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/multimedia.html">Multimedia</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/networking.html">Networking</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/office_tools.html">Office Tools</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/games.html">PC Games</a>
+\ <a href="https://www.majorgeeks.com/mg/sortname/system_tools.html">System Tools</a>
+\ <a href="https://mac.majorgeeks.com/">Mac/Apple/Ipad Downloads</a>
+
+<p><B>Other News:</b>
+<a href="https://www.majorgeeks.com/mg/topdownloads/index.html">Top Downloads</a>
+\ <a href="https://www.majorgeeks.com/news/index.html">News (Tech)</a> 
+\ <a href="https://www.majorgeeks.com/news/channels/off_base.html">Off Base (Other Websites News)</a>
+\ <a href="https://www.majorgeeks.com/news/channels/way_off_base.html">Way Off Base (Offbeat Stories and Pics)</a>
+<p>
+<b>Social:</b>
+<a href="https://www.facebook.com/majorgeeksdotcom">Facebook</a> 
+\ <a href="https://www.youtube.com/user/majorgeeks">YouTube</a> 
+\ <a href="https://twitter.com/#!/majorgeeks">Twitter</a> 
+\ <a href="https://majorgeeks.tumblr.com/">Tumblr</a> 
+\ <a href="https://pinterest.com/majorgeeks/">Pintrest</a> 
+\ <a href="https://www.majorgeeks.com/content/page/majorgeeks_rss_feeds.html">RSS Feeds</a>
+<hr>
+
+						
+		</div>
+	</div>
+</div>
+
+<header>
+	
+
+
+<div id="header">
+	<div id="logoBlock">
+	<div class="pageWidth">
+		<div class="pageContent">
+			
+			
+			<div id="logo"><a href="https://www.majorgeeks.com">
+				<span></span>
+				<img src="logo/mg.gif" alt="MajorGeeks.Com Support Forums" />
+			</a></div>
+			
+			<span class="helper"></span>
+		</div>
+	</div>
+</div>
+	
+
+<div id="navigation" class="pageWidth withSearch">
+	<div class="pageContent">
+		<nav>
+
+<div class="navTabs">
+	<ul class="publicTabs">
+	
+		<!-- home -->
+		
+			<li class="navTab home PopupClosed"><a href="https://www.majorgeeks.com" class="navLink">Home</a></li>
+		
+		
+		
+		<!-- extra tabs: home -->
+		
+		
+		
+		<!-- forums -->
+		
+			<li class="navTab forums selected">
+			
+				<a href="https://forums.majorgeeks.com/" class="navLink">Forums</a>
+				<a href="https://forums.majorgeeks.com/" class="SplitCtrl" rel="Menu"></a>
+				
+				<div class="tabLinks forumsTabLinks">
+					<div class="primaryContent menuHeader">
+						<h3>Forums</h3>
+						<div class="muted">Quick Links</div>
+					</div>
+					<ul class="secondaryContent blockLinksList">
+					
+						
+						<li><a href="search/?type=post">Search Forums</a></li>
+						
+						<li><a href="find-new/posts" rel="nofollow">Recent Posts</a></li>
+					
+					</ul>
+				</div>
+			</li>
+		
+		
+		
+		<!-- extra tabs: middle -->
+		
+		
+		
+		<!-- members -->
+		
+			<li class="navTab members Popup PopupControl PopupClosed">
+			
+				<a href="https://forums.majorgeeks.com/members/" class="navLink">Members</a>
+				<a href="https://forums.majorgeeks.com/members/" class="SplitCtrl" rel="Menu"></a>
+				
+				<div class="Menu JsOnly tabMenu membersTabLinks">
+					<div class="primaryContent menuHeader">
+						<h3>Members</h3>
+						<div class="muted">Quick Links</div>
+					</div>
+					<ul class="secondaryContent blockLinksList">
+					
+						<li><a href="members/">Notable Members</a></li>
+						
+						<li><a href="online/">Current Visitors</a></li>
+						<li><a href="recent-activity/">Recent Activity</a></li>
+						
+					
+					</ul>
+				</div>
+			</li>
+						
+		
+		<!-- extra tabs: end -->
+		
+
+		<!-- responsive popup -->
+		<li class="navTab navigationHiddenTabs Popup PopupControl PopupClosed" style="display:none">	
+						
+			<a rel="Menu" class="navLink NoPopupGadget"><span class="menuIcon">Menu</span></a>
+			
+			<div class="Menu JsOnly blockLinksList primaryContent" id="NavigationHiddenMenu"></div>
+		</li>
+			
+		
+		<!-- no selection -->
+		
+		
+	</ul>
+	
+	
+</div>
+
+<span class="helper"></span>
+			
+		</nav>	
+	</div>
+</div>
+	
+
+<div id="searchBar" class="pageWidth">
+	
+	<span id="QuickSearchPlaceholder" title="Search">Search</span>
+	<fieldset id="QuickSearch">
+		<form action="search/search" method="post" class="formPopup">
+			
+			<div class="primaryControls">
+				<!-- block: primaryControls -->
+				<input type="search" name="keywords" value="" class="textCtrl" placeholder="Search..." title="Enter your search and hit enter" id="QuickSearchQuery" />				
+				<!-- end block: primaryControls -->
+			</div>
+			
+			<div class="secondaryControls">
+				<div class="controlsWrapper">
+				
+					<!-- block: secondaryControls -->
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+							<li><label><input type="checkbox" name="title_only" value="1"
+								id="search_bar_title_only" class="AutoChecker"
+								data-uncheck="#search_bar_thread" /> Search titles only</label></li>
+						</ul></dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_users">Posted by Member:</label></dt>
+						<dd>
+							<input type="text" name="users" value="" class="textCtrl AutoComplete" id="searchBar_users" />
+							<p class="explain">Separate names with a comma.</p>
+						</dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_date">Newer Than:</label></dt>
+						<dd><input type="date" name="date" value="" class="textCtrl" id="searchBar_date" /></dd>
+					</dl>
+					
+					
+				</div>
+				<!-- end block: secondaryControls -->
+				
+				<dl class="ctrlUnit submitUnit">
+					<dt></dt>
+					<dd>
+						<input type="submit" value="Search" class="button primary Tooltip" title="Find Now" />
+						<div class="Popup" id="commonSearches">
+							<a rel="Menu" class="button NoPopupGadget Tooltip" title="Useful Searches" data-tipclass="flipped"><span class="arrowWidget"></span></a>
+							<div class="Menu">
+								<div class="primaryContent menuHeader">
+									<h3>Useful Searches</h3>
+								</div>
+								<ul class="secondaryContent blockLinksList">
+									<!-- block: useful_searches -->
+									<li><a href="find-new/posts?recent=1" rel="nofollow">Recent Posts</a></li>
+									
+									<!-- end block: useful_searches -->
+								</ul>
+							</div>
+						</div>
+						<a href="search/" class="button moreOptions Tooltip" title="Advanced Search">More...</a>
+					</dd>
+				</dl>
+				
+			</div>
+			
+			<input type="hidden" name="_xfToken" value="" />
+		</form>		
+	</fieldset>
+	
+</div>
+</div>
+
+	
+	
+</header>
+
+</div>
+
+<footer>
+	
+
+
+<div class="footer">
+	<div class="pageWidth">
+		<div class="pageContent">
+		
+
+
+			
+			
+			
+			
+			<ul class="footerLinks">
+			
+				
+				<li><a href="help/">Help</a></li>
+				<li><a href="https://www.majorgeeks.com" class="homeLink">Home</a></li>
+				<li><a href="/#navigation" class="topLink">Top</a></li>
+				<li><a href="forums/-/index.rss" rel="alternate" class="globalFeed" target="_blank"
+					title="RSS feed for MajorGeeks.Com Support Forums">RSS</a></li>
+			
+			</ul>
+			
+			<span class="helper"></span>
+		</div>
+	</div>
+</div>
+
+<div class="footerLegal">
+	<div class="pageWidth">
+		<div class="pageContent">
+			<ul id="legal">
+			
+				<li><a href="help/terms">Terms and Rules</a></li>
+				<li><a href="">Privacy Policy</a></li>
+			
+			</ul>
+			
+			<div id="copyright"><a href="https://www.majorgeeks.com" class="concealed">All content Copyright &copy;2000 - 2015 MajorGeeks.com</a><br /><a href="https://xenforo.com" class="concealed">Forum software by XenForo&trade; <span>&copy; 2010-2018 XenForo Ltd.</span></a> </div>
+			
+		
+			
+			
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4W9911K1GX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4W9911K1GX');
+</script>
+
+
+
+</footer>
+
+<script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 0 },
+	serverTimeInfo:
+	{
+		now: 1754712567,
+		today: 1754712000,
+		todayDow: 6
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "0",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 0,
+		closeSpeed: 0,
+		mask:
+		{
+			color: "rgb(255, 255, 255)",
+			opacity: "0.6",
+			loadSpeed: 0,
+			closeSpeed: 0
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: {"node_list":true,"node_link":true,"node_category":true,"node_page":true,"node_forum":true,"thread_list_simple":true,"login_bar":true},
+	_cookieConfig: { path: "/", domain: "", prefix: "xf_"},
+	_csrfToken: "",
+	_csrfRefreshUrl: "login/csrf-token-refresh",
+	_jsVersion: "24a78702",
+	_noRtnProtect: false,
+	_noSocialLogin: false
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Cancel",
+
+	a_moment_ago:    "A moment ago",
+	one_minute_ago:  "1 minute ago",
+	x_minutes_ago:   "%minutes% minutes ago",
+	today_at_x:      "Today at %time%",
+	yesterday_at_x:  "Yesterday at %time%",
+	day_x_at_time_y: "%day% at %time%",
+
+	day0: "Sunday",
+	day1: "Monday",
+	day2: "Tuesday",
+	day3: "Wednesday",
+	day4: "Thursday",
+	day5: "Friday",
+	day6: "Saturday",
+
+	_months: "January,February,March,April,May,June,July,August,September,October,November,December",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "The following error occurred",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Logging in",
+	click_image_show_full_size_version: "Click this image to show the full-size version.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "";
+XenForo.Facebook.forceInit = false;
+
+
+</script>
+
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "https://forums.majorgeeks.com/",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "https://forums.majorgeeks.com/search/search?keywords={search_keywords}",
+		"query-input": "required name=search_keywords"
+	}
+}
+</script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-956038-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

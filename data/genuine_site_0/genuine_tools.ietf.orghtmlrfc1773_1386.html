@@ -1,0 +1,1555 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html data-bs-theme="auto" lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            
+                RFC 1773 - Experience with the BGP-4 protocol
+            
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://static.ietf.org/fonts/inter/import.css" rel="stylesheet">
+        <link href="https://static.ietf.org/fonts/noto-sans-mono/import.css" rel="stylesheet">
+        
+            <link rel="stylesheet" href="https://static.ietf.org/dt/12.45.0/ietf/css/document_html_referenced.css">
+            
+            <script type="module" crossorigin="" src="https://static.ietf.org/dt/12.45.0/assets/embedded-12b6e5e7.js"></script>
+<link href="https://static.ietf.org/dt/12.45.0/assets/create-pinia-singleton-6a0ec72c.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://static.ietf.org/dt/12.45.0/assets/Scrollbar-a7264c62.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+            <script src="https://static.ietf.org/dt/12.45.0/ietf/js/document_html.js"></script>
+            <script src="https://static.ietf.org/dt/12.45.0/ietf/js/theme.js"></script>
+        
+        <link rel="alternate" type="application/atom+xml" title="Document changes" href="/feed/document-changes/rfc1773/">
+        <meta name="description"
+            
+                content="Experience with the BGP-4 protocol (RFC 1773, )"
+            >
+        
+
+<link rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-180.png">
+<link rel="icon"
+      sizes="32x32"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-32.png">
+<link rel="icon"
+      sizes="16x16"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-mask.svg"
+      color="#ffffff">
+<meta name="msapplication-TileColor"
+      content="#ffffff">
+<meta name="theme-color"
+      content="#ffffff">
+        
+
+
+
+
+<meta property="og:title" content="RFC 1773: Experience with the BGP-4 protocol">
+<meta property="og:url" content="https://datatracker.ietf.org/doc/html/rfc1773">
+<link rel="canonical" href="https://datatracker.ietf.org/doc/html/rfc1773">
+<meta property="og:site_name" content="IETF Datatracker">
+<meta property="og:description" content="The purpose of this memo is to document how the requirements for advancing a routing protocol to Draft Standard have been satisfied by Border Gateway Protocol version 4 (BGP-4). This report documents experience with BGP. This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind.">
+<meta property="og:type" content="article">
+
+<meta property="og:image" content="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-card.png">
+<meta property="og:image:alt" content="Logo of the IETF">
+<meta property="article:section" content="IETF - Internet Engineering Task Force">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="article:author" content="Paul S. Traina">
+
+
+
+        
+        <style>
+            
+            .diff-form .select2-selection__rendered {
+                direction: rtl;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <noscript><iframe class="status" title="Site status" src="/status/latest"></iframe></noscript>
+<div class="vue-embed" data-component="Status"></div>
+        <div class="btn-toolbar sidebar-toolbar position-fixed top-0 end-0 m-2 m-lg-3 d-print-none">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm me-1 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                    aria-label="Toggle theme">
+                        <i class="theme-icon-active bi bi-circle-half"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="bd-theme">
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="light" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-sun-fill"></i>
+                            Light<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-moon-stars-fill"></i>
+                            Dark<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                            data-bs-theme-value="auto" aria-pressed="true">
+                            <i class="me-2 opacity-50 theme-icon bi bi-circle-half"></i>
+                            Auto<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm sidebar-toggle"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar"
+                    aria-expanded="true"
+                    aria-controls="sidebar"
+                    aria-label="Toggle metadata sidebar"
+                    title="Toggle metadata sidebar">
+            <i class="bi bi-arrow-bar-left sidebar-shown"></i>
+            <i class="bi bi-arrow-bar-right sidebar-collapsed"></i>
+            </button>
+        </div>
+        <nav class="navbar bg-light-subtle px-1 fixed-top d-print-none d-md-none">
+            <a class="nav-link ps-1"
+               href="/doc/rfc1773/">
+                
+                    RFC 1773
+                
+                <br class="d-sm-none">
+
+                <span class="ms-sm-3 badge rounded-pill badge-inf">
+                    
+                        Informational
+                    
+                </span>
+            </a>
+            <button class="navbar-toggler p-1"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#docinfo-collapse"
+                    aria-controls="docinfo-collapse"
+                    aria-expanded="false"
+                    aria-label="Show document information">
+                <span class="navbar-toggler-icon small"></span>
+            </button>
+            <div class="navbar-nav navbar-nav-scroll overscroll-none collapse pt-1" id="docinfo-collapse">
+                <div class="bg-light-subtle p-0">
+                    <table class="table table-sm table-borderless small">
+                        <tbody class="meta align-top">
+                            <tr>
+                                <th scope="row"></th>
+                                <th scope="row">Title</th>
+                                <td class="edit"></td>
+                                <td>Experience with the BGP-4 protocol</td>
+                            </tr>
+                        </tbody>
+                        
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Informational
+    
+</span>
+
+            
+                
+                    <br>March 1995
+                
+                <br>
+                
+                
+                    <a class="btn btn-sm btn-warning"
+                       title="Click to report an error in the document."
+                       href="https://www.rfc-editor.org/errata.php#reportnew"
+                       target="_blank">
+                        Report errata
+                    </a>
+                
+                
+                
+                
+                <div>Obsoletes <a href="/doc/html/rfc1656" title="BGP-4 Protocol Document Roadmap and Implementation Experience">RFC 1656</a></div>
+                
+                
+                
+                
+                    <div>
+                        Was
+                        <a href="/doc/draft-ietf-idr-bgp4-experience/00/">draft-ietf-idr-bgp4-experience</a>
+                        (<a href="/wg/idr/about/">idr WG</a>)
+                    </div>
+                
+            
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+            
+                
+                    <li class="page-item">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-idr-bgp4-experience-00"
+                        rel="nofollow">
+                            00
+                        </a>
+                    </li>
+                
+            
+            
+            <li class="page-item rfc active">
+                <a class="page-link"
+                href="/doc/html/rfc1773">
+                    RFC 1773
+                </a>
+            </li>
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+            <tr>
+                <td></td>
+                <th scope="row">Compare versions</th>
+                <td class="edit"></td>
+                <td>
+                    
+
+
+
+<form class="form-horizontal diff-form"
+      action="https://author-tools.ietf.org/iddiff"
+      method="get"
+      target="_blank">
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="From revision"
+                    name="url1">
+                
+                    <option value="rfc1773">
+                        RFC 1773
+                        
+                    </option>
+                
+                    <option value="draft-ietf-idr-bgp4-experience-00" selected>
+                        draft-ietf-idr-bgp4-experience-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="To revision"
+                    name="url2">
+                
+                    <option value="rfc1773" selected>
+                        RFC 1773
+                        
+                    </option>
+                
+                    <option value="draft-ietf-idr-bgp4-experience-00">
+                        draft-ietf-idr-bgp4-experience-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--html"
+                    name="difftype">
+                Side-by-side
+            </button>
+            
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--hwdiff"
+                    name="difftype">
+                Inline
+            </button>
+
+</form>
+                </td>
+            </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Author</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Paul S. Traina"
+            href="/person/pst+confed@juniper.net" >Paul S. Traina</a> <a 
+               href="mailto:pst%2Bconfed%40juniper.net"
+               aria-label="Compose email to pst+confed@juniper.net"
+               title="Compose email to pst+confed@juniper.net">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:rfc1773@ietf.org?subject=rfc1773" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        
+
+
+
+<img alt="IETF Logo"
+     class="d-lm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-white.svg"
+        
+     
+     >
+
+<img alt="IETF Logo"
+     class="d-dm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor.svg"
+        
+     
+     >
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc1773.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc1773.html">
+            
+                <i class="bi bi-file-code"></i> html
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+            download="rfc1773.pdf"
+          
+         
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/pdfrfc/rfc1773.txt.pdf">
+            
+                <i class="bi bi-file-pdf"></i> pdf
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/rfc1773/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+            <tr>
+                <td>
+                </td>
+                <th scope="row">
+                    Additional resources
+                </th>
+                <td class="edit">
+                    
+                </td>
+                <td>
+                    
+                        
+                        
+                            
+                                <a href="https://mailarchive.ietf.org/arch/browse/idr/?q=rfc1773 OR %22draft-ietf-idr-bgp4-experience%22">
+                                    Mailing list discussion
+                                </a>
+                            
+                        
+                    
+                </td>
+            </tr>
+        
+    
+</tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <td class="edit"></td>
+                            <td>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </nav>
+        <div class="row g-0">
+            <div class="col-md-9 d-flex justify-content-center lh-sm"
+                 data-bs-spy="scroll"
+                 data-bs-target="#toc-nav"
+                 data-bs-smooth-scroll="true"
+                 tabindex="0"
+                 id="content">
+                
+                    <div class="rfcmarkup">
+                        <br class="noprint">
+                        <!-- [html-validate-disable-block attr-quotes, void-style, element-permitted-content, heading-level -- FIXME: rfcmarkup/rfc2html generates HTML with issues] -->
+                        <div class="rfcmarkup"><pre>Network Working Group                                          P. Traina
+Request for Comments: 1773                                 cisco Systems
+Obsoletes: <a href="/doc/html/rfc1656">1656</a>                                               March 1995
+Category: Informational
+
+
+                   <span class="h1">Experience with the BGP-4 protocol</span>
+
+Status of this Memo
+
+   This memo provides information for the Internet community.  This memo
+   does not specify an Internet standard of any kind.  Distribution of
+   this memo is unlimited.
+
+Introduction
+
+   The purpose of this memo is to document how the requirements for
+   advancing a routing protocol to Draft Standard have been satisfied by
+   Border Gateway Protocol version 4 (BGP-4).  This report documents
+   experience with BGP.  This is the second of two reports on the BGP
+   protocol.  As required by the Internet Architecure Board (IAB) and
+   the Internet Engineering Steering Group (IESG), the first report will
+   present a performance analysis of the BGP protocol.
+
+   The remaining sections of this memo document how BGP satisfies
+   General Requirements specified in <a href="#section-3.0">Section 3.0</a>, as well as
+   Requirements for Draft Standard specified in <a href="#section-5.0">Section 5.0</a> of the
+   &quot;Internet Routing Protocol Standardization Criteria&quot; document [<a href="#ref-1" title="&quot;Internet Routing Protocol Standardization Criteria&quot;">1</a>].
+
+   This report is based on the initial work of Peter Lothberg (Ebone),
+   Andrew Partan (Alternet), and several others.  Details of their work
+   were presented at the Twenty-fifth IETF meeting and are available
+   from the IETF proceedings.
+
+   Please send comments to iwg@ans.net.
+
+Acknowledgments
+
+   The BGP protocol has been developed by the IDR (formerly BGP) Working
+   Group of the Internet Engineering Task Force.  I would like to
+   express deepest thanks to Yakov Rekhter and Sue Hares, co-chairs of
+   the IDR working group.  I&#x27;d also like to explicitly thank Yakov
+   Rekhter and Tony Li for the review of this document as well as
+   constructive and valuable comments.
+
+
+
+
+
+
+
+<span class="grey">Traina                                                          [Page 1]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-2" ></span>
+<span class="grey"><a href="/doc/html/rfc1773">RFC 1773</a>           Experience with the BGP-4 Protocol         March 1995</span>
+
+
+Documentation
+
+   BGP is an inter-autonomous system routing protocol designed for
+   TCP/IP internets.  Version 1 of the BGP protocol was published in <a href="/doc/html/rfc1105">RFC</a>
+   <a href="/doc/html/rfc1105">1105</a>. Since then BGP Versions 2, 3, and 4 have been developed.
+   Version 2 was documented in <a href="/doc/html/rfc1163">RFC 1163</a>. Version 3 is documented in <a href="/doc/html/rfc1267">RFC</a>
+   <a href="/doc/html/rfc1267">1267</a>.  The changes between versions 1, 2 and 3 are explained in
+   Appendix 2 of [<a href="#ref-2" title="&quot;A Border Gateway Protocol 4 (BGP-4)&quot;">2</a>].  All of the functionality that was present in the
+   previous versions is present in version 4.
+
+   BGP version 2 removed from the protocol the concept of &quot;up&quot;, &quot;down&quot;,
+   and &quot;horizontal&quot; relations between autonomous systems that were
+   present in version 1.  BGP version 2 introduced the concept of path
+   attributes.  In addition, BGP version 2 clarified parts of the
+   protocol that were &quot;under-specified&quot;.
+
+   BGP version 3 lifted some of the restrictions on the use of the
+   NEXT_HOP path attribute, and added the BGP Identifier field to the
+   BGP OPEN message.  It also clarifies the procedure for distributing
+   BGP routes between the BGP speakers within an autonomous system.
+
+   BGP version 4 redefines the (previously class-based) network layer
+   reachability portion of the updates to specify prefixes of arbitrary
+   length in order to represent multiple classful networks in a single
+   entry as discussed in [<a href="#ref-5" title="&quot;Classless Inter- Domain Routing (CIDR): an Address Assignment and Aggregation Strategy&quot;">5</a>].  BGP version 4 has also modified the AS-
+   PATH attribute so that sets of autonomous systems, as well as
+   individual ASs may be described.  In addition, BGP version for has
+   redescribed the INTER-AS METRIC attribute as the MULTI-EXIT
+   DISCRIMINATOR and added new LOCAL-PREFERENCE and AGGREGATOR
+   attributes.
+
+   Possible applications of BGP in the Internet are documented in [<a href="#ref-3" title="&quot;Application of the Border Gateway Protocol in the Internet&quot;">3</a>].
+
+   The BGP protocol was developed by the IDR Working Group of the
+   Internet Engineering Task Force. This Working Group has a mailing
+   list, iwg@ans.net, where discussions of protocol features and
+   operation are held. The IDR Working Group meets regularly during the
+   quarterly Internet Engineering Task Force conferences. Reports of
+   these meetings are published in the IETF&#x27;s Proceedings.
+
+MIB
+
+   A BGP-4 Management Information Base has been published [<a href="#ref-4" title="&quot;Definitions of Managed Objects for the Fourth Version of the Border Gateway Protocol (BGP-4) using SMIv2&quot;">4</a>].  The MIB
+   was written by Steve Willis (Wellfleet), John Burruss (Wellfleet),
+   and John Chu (IBM).
+
+   Apart from a few system variables, the BGP MIB is broken into two
+   tables: the BGP Peer Table and the BGP Received Path Attribute Table.
+
+
+
+<span class="grey">Traina                                                          [Page 2]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-3" ></span>
+<span class="grey"><a href="/doc/html/rfc1773">RFC 1773</a>           Experience with the BGP-4 Protocol         March 1995</span>
+
+
+   The Peer Table reflects information about BGP peer connections, such
+   as their state and current activity. The Received Path Attribute
+   Table contains all attributes received from all peers before local
+   routing policy has been applied. The actual attributes used in
+   determining a route are a subset of the received attribute table.
+
+Security Considerations
+
+   BGP provides flexible and extendible mechanism for authentication and
+   security.  The mechanism allows to support schemes with various
+   degree of complexity.  All BGP sessions are authenticated based on
+   the BGP Identifier of a peer.  In addition, all BGP sessions are
+   authenticated based on the autonomous system number advertised by a
+   peer.  As part of the BGP authentication mechanism, the protocol
+   allows to carry encrypted digital signature in every BGP message.
+   All authentication failures result in sending the NOTIFICATION
+   messages and immediate termination of the BGP connection.
+
+   Since BGP runs over TCP and IP, BGP&#x27;s authentication scheme may be
+   augmented by any authentication or security mechanism provided by
+   either TCP or IP.
+
+   However, since BGP runs over TCP and IP, BGP is vulnerable to the
+   same denial of service or authentication attacks that are present in
+   any other TCP based protocol.
+
+Implementations
+
+   There are multiple independent interoperable implementations of BGP
+   currently available.  This section gives a brief overview of the
+   implementations that are currently used in the operational Internet.
+   They are:
+
+         - cisco Systems
+         - gated consortium
+         - 3COM
+         - Bay Networks (Wellfleet)
+         - Proteon
+
+   To facilitate efficient BGP implementations, and avoid commonly made
+   mistakes, the implementation experience with BGP-4 in with cisco&#x27;s
+   implementation was documented as part of <a href="/doc/html/rfc1656">RFC 1656</a> [<a href="#ref-4" title="&quot;Definitions of Managed Objects for the Fourth Version of the Border Gateway Protocol (BGP-4) using SMIv2&quot;">4</a>].
+
+   Implementors are strongly encouraged to follow the implementation
+   suggestions outlined in that document and in the appendix of [<a href="#ref-2" title="&quot;A Border Gateway Protocol 4 (BGP-4)&quot;">2</a>].
+
+
+
+
+
+
+<span class="grey">Traina                                                          [Page 3]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-4" ></span>
+<span class="grey"><a href="/doc/html/rfc1773">RFC 1773</a>           Experience with the BGP-4 Protocol         March 1995</span>
+
+
+   Experience with implementing BGP-4 showed that the protocol is
+   relatively simple to implement. On the average BGP-4 implementation
+   takes about 2 man/months effort, not including any restructuring that
+   may be needed to support CIDR.
+
+   Note that, as required by the IAB/IESG for Draft Standard status,
+   there are multiple interoperable completely independent
+   implementations.
+
+Operational experience
+
+   This section discusses operational experience with BGP and BGP-4.
+
+   BGP has been used in the production environment since 1989, BGP-4
+   since 1993.  This use involves at least two of the implementations
+   listed above.  Production use of BGP includes utilization of all
+   significant features of the protocol.  The present production
+   environment, where BGP is used as the inter-autonomous system routing
+   protocol, is highly heterogeneous.  In terms of the link bandwidth it
+   varies from 28 Kbits/sec to 150 Mbits/sec.  In terms of the actual
+   routes that run BGP it ranges from a relatively slow performance
+   PC/RT to a very high performance RISC based CPUs, and includes both
+   the special purpose routers and the general purpose workstations
+   running UNIX.
+
+   In terms of the actual topologies it varies from a very sparse
+   (spanning tree of ICM) to a quite dense (NSFNET backbone).
+
+   At the time of this writing BGP-4 is used as an inter-autonomous
+   system routing protocol between ALL significant autonomous systems,
+   including, but by all means not limited to: Alternet, ANS, Ebone,
+   ICM, IIJ, MCI, NSFNET, and Sprint.  The smallest know backbone
+   consists of one router, whereas the largest contains nearly 90 BGP
+   speakers.  All together, there are several hundred known BGP speaking
+   routers.
+
+   BGP is used both for the exchange of routing information between a
+   transit and a stub autonomous system, and for the exchange of routing
+   information between multiple transit autonomous systems.  There is no
+   distinction between sites historically considered backbones vs
+   &quot;regional&quot; networks.
+
+   Within most transit networks, BGP is used as the exclusive carrier of
+   the exterior routing information.  At the time of this writing within
+   a few sites use BGP in conjunction with an interior routing protocol
+   to carry exterior routing information.
+
+
+
+
+
+<span class="grey">Traina                                                          [Page 4]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-5" ></span>
+<span class="grey"><a href="/doc/html/rfc1773">RFC 1773</a>           Experience with the BGP-4 Protocol         March 1995</span>
+
+
+   The full set of exterior routes that is carried by BGP is well over
+   20,000 aggregate entries representing several times that number of
+   connected networks.
+
+   Operational experience described above involved multi-vendor
+   deployment (cisco, and &quot;gated&quot;).
+
+   Specific details of the operational experience with BGP in Alternet,
+   ICM and Ebone were presented at the Twenty-fifth IETF meeting
+   (Toronto, Canada) by Peter Lothberg (Ebone), Andrew Partan (Alternet)
+   and Paul Traina (cisco).
+
+   Operational experience with BGP exercised all basic features of the
+   protocol, including authentication, routing loop suppression and the
+   new features of BGP-4, enhanced metrics and route aggregation.
+
+   Bandwidth consumed by BGP has been measured at the interconnection
+   points between CA*Net and T1 NSFNET Backbone. The results of these
+   measurements were presented by Dennis Ferguson during the Twenty-
+   first IETF, and are available from the IETF Proceedings. These
+   results showed clear superiority of BGP as compared with EGP in the
+   area of bandwidth consumed by the protocol. Observations on the
+   CA*Net by Dennis Ferguson, and on the T1 NSFNET Backbone by Susan
+   Hares confirmed clear superiority of the BGP protocol family as
+   compared with EGP in the area of CPU requirements.
+
+Migration to BGP version 4
+
+   On multiple occasions some members of IETF expressed concern about
+   the migration path from classful protocols to classless protocols
+   such as BGP-4.
+
+   BGP-4 was rushed into production use on the Internet because of the
+   exponential growth of routing tables and the increase of memory and
+   CPU utilization required by BGP.  As such,  migration issues that
+   normally would have stalled deployment were cast aside in favor of
+   pragmatic and intelligent deployment of BGP-4 by network operators.
+
+   There was much discussion about creating &quot;route exploders&quot; which
+   would enumerate individual class-based networks of CIDR allocations
+   to BGP-3 speaking routers,  however a cursory examination showed that
+   this would vastly hasten the requirement for more CPU and memory
+   resources for these older implementations.  There would be no way
+   internal to BGP to differentiate between known used networks and the
+   unused portions of the CIDR allocation.
+
+   The migration path chosen by the majority of the operators was known
+   as &quot;CIDR, default, or die!&quot;
+
+
+
+<span class="grey">Traina                                                          [Page 5]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-6" ></span>
+<span class="grey"><a href="/doc/html/rfc1773">RFC 1773</a>           Experience with the BGP-4 Protocol         March 1995</span>
+
+
+   To test BGP-4 operation, a virtual &quot;shadow&quot; Internet was created by
+   linking Alternet, Ebone, ICM, and cisco over GRE based tunnels.
+   Experimentation was done with actual live routing information by
+   establishing BGP version 3 connections with the production networks
+   at those sites.  This allowed extensive regression testing before
+   deploying BGP-4 on production equipment.
+
+   After testing on the shadow network, BGP-4 implementations were
+   deployed on the production equipment at those sites.  BGP-4 capable
+   routers negotiated BGP-4 connections and interoperated with other
+   sites by speaking BGP-3.  Several test aggregate routes were injected
+   into this network in addition to class-based networks for
+   compatibility with BGP-3 speakers.
+
+   At this point, the shadow-Internet was re-chartered as an
+   &quot;operational experience&quot; network.  tunnel connections were
+   established with most major transit service operators so that
+   operators could gain some understanding of how the introduction of
+   aggregate networks would affect routing.
+
+   After being satisfied with the initial deployment of BGP-4, a number
+   of sites chose to withdraw their class-based advertisements and rely
+   only on their CIDR aggregate advertisements.  This provided
+   motivation for transit providers who had not migrated to either do
+   so, accept a default route, or lose connectivity to several popular
+   destinations.
+
+Metrics
+
+   BGP version 4 re-defined the old INTER-AS metric as a MULTI-EXIT-
+   DISCRIMINATOR.  This value may be used in the tie breaking process
+   when selecting a preferred path to a given address space.  The MED is
+   meant to only be used when comparing paths received from different
+   external peers in the same AS to indicate the preference of the
+   originating AS.
+
+   The MED was purposely designed to be a &quot;weak&quot; metric that would only
+   be used late in the best-path decision process.  The BGP working
+   group was concerned that any metric specified by a remote operator
+   would only affect routing in a local AS if no other preference was
+   specified.  A paramount goal of the design of the MED was insure that
+   peers could not &quot;shed&quot; or &quot;absorb&quot; traffic for networks that they
+   advertise.
+
+   The LOCAL-PREFERENCE attribute was added so a local operator could
+   easily configure a policy that overrode the standard best path
+   determination mechanism without configuring local preference on each
+   router.
+
+
+
+<span class="grey">Traina                                                          [Page 6]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-7" ></span>
+<span class="grey"><a href="/doc/html/rfc1773">RFC 1773</a>           Experience with the BGP-4 Protocol         March 1995</span>
+
+
+   One shortcoming in the BGP4 specification was a suggestion for a
+   default value of LOCAL-PREF to be assumed if none was provided.
+   Defaults of 0 or the maximum value each have range limitations, so a
+   common default would aid in the interoperation of multi-vendor
+   routers in the same AS (since LOCAL-PREF is a local administration
+   knob, there is no interoperability drawback across AS boundaries).
+
+   Another area where more exploration is required is a method whereby
+   an originating AS may influence the best path selection process.  For
+   example, a dual-connected site may select one AS as a primary transit
+   service provider and have one as a backup.
+
+                    /---- transit B ----\
+        end-customer                     transit A----
+                    \---- transit C ----/
+
+   In a topology where the two transit service providers connect to a
+   third provider,  the real decision is performed by the third provider
+   and there is no mechanism for indicating a preference should the
+   third provider wish to respect that preference.
+
+   A general purpose suggestion that has been brought up is the
+   possibility of carrying an optional vector corresponding to the AS-
+   PATH where each transit AS may indicate a preference value for a
+   given route.  Cooperating ASs may then chose traffic based upon
+   comparison of &quot;interesting&quot; portions of this vector according to
+   routing policy.
+
+   While protecting a given ASs routing policy is of paramount concern,
+   avoiding extensive hand configuration of routing policies needs to be
+   examined more carefully in future BGP-like protocols.
+
+Internal BGP in large autonomous systems
+
+   While not strictly a protocol issue, one other concern has been
+   raised by network operators who need to maintain autonomous systems
+   with a large number of peers.  Each speaker peering with an external
+   router is responsible for propagating reachability and path
+   information to all other transit and border routers within that AS.
+   This is typically done by establishing internal BGP connections to
+   all transit and border routers in the local AS.
+
+   In a large AS, this leads to an n^2 mesh of TCP connections and some
+   method of configuring and maintaining those connections.  BGP does
+   not specify how this information is to be propagated,  so
+   alternatives, such as injecting BGP attribute information into the
+   local IGP have been suggested.  Also, there is effort underway to
+   develop internal BGP &quot;route reflectors&quot; or a reliable multicast
+
+
+
+<span class="grey">Traina                                                          [Page 7]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-8" ></span>
+<span class="grey"><a href="/doc/html/rfc1773">RFC 1773</a>           Experience with the BGP-4 Protocol         March 1995</span>
+
+
+   transport of IBGP information which would reduce configuration,
+   memory and CPU requirements of conveying information to all other
+   internal BGP peers.
+
+Internet Dynamics
+
+   As discussed in [<a href="#ref-7" title="&quot;BGP Version 4 Protocol Analysis&quot;">7</a>], the driving force in CPU and bandwidth
+   utilization is the dynamic nature of routing in the Internet.  As the
+   net has grown, the number of changes per second has increased.  We
+   automatically get some level of damping when more specific NLRI is
+   aggregated into larger blocks, however this isn&#x27;t sufficient.  In
+   Appendix 6 of [<a href="#ref-2" title="&quot;A Border Gateway Protocol 4 (BGP-4)&quot;">2</a>] are descriptions of dampening techniques that
+   should be applied to advertisements.  In future specifications of
+   BGP-like protocols,  damping methods should be considered for
+   mandatory inclusion in compliant implementations.
+
+Acknowledgments
+
+   The BGP-4 protocol has been developed by the IDR/BGP Working Group of
+   the Internet Engineering Task Force.  I would like to express thanks
+   to Yakov Rekhter for providing <a href="/doc/html/rfc1266">RFC 1266</a>.  I&#x27;d also like to explicitly
+   thank Yakov Rekhter and Tony Li for their review of this document as
+   well as their constructive and valuable comments.
+
+Author&#x27;s Address
+
+   Paul Traina
+   cisco Systems, Inc.
+   170 W. Tasman Dr.
+   San Jose, CA 95134
+
+   EMail: pst@cisco.com
+
+References
+
+   [<a id="ref-1">1</a>] Hinden, R., &quot;Internet Routing Protocol Standardization Criteria&quot;,
+       <a href="/doc/html/rfc1264">RFC 1264</a>, BBN, October 1991.
+
+   [<a id="ref-2">2</a>] Rekhter, Y., and T. Li, &quot;A Border Gateway Protocol 4 (BGP-4)&quot;,
+       <a href="/doc/html/rfc1771">RFC 1771</a>, T.J. Watson Research Center, IBM Corp., cisco Systems,
+       March 1995.
+
+   [<a id="ref-3">3</a>] Rekhter, Y., and P. Gross, Editors, &quot;Application of the Border
+       Gateway Protocol in the Internet&quot;, <a href="/doc/html/rfc1772">RFC 1772</a>, T.J. Watson Research
+       Center, IBM Corp., MCI, March 1995.
+
+
+
+
+
+
+<span class="grey">Traina                                                          [Page 8]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-9" ></span>
+<span class="grey"><a href="/doc/html/rfc1773">RFC 1773</a>           Experience with the BGP-4 Protocol         March 1995</span>
+
+
+   [<a id="ref-4">4</a>] Willis, S., Burruss, J., and J. Chu, &quot;Definitions of Managed
+       Objects for the Fourth Version of the Border Gateway Protocol
+       (BGP-4) using SMIv2&quot;, <a href="/doc/html/rfc1657">RFC 1657</a>, Wellfleet Communications Inc.,
+       IBM Corp., July 1994.
+
+   [<a id="ref-5">5</a>] Fuller V., Li. T., Yu J., and K. Varadhan, &quot;Classless Inter-
+       Domain Routing (CIDR): an Address Assignment and Aggregation
+       Strategy&quot;, <a href="/doc/html/rfc1519">RFC 1519</a>, BARRNet, cisco, MERIT, OARnet, September
+       1993.
+
+   [<a id="ref-6">6</a>] Traina P., &quot;BGP-4 Protocol Document Roadmap and Implementation
+       Experience&quot;, <a href="/doc/html/rfc1656">RFC 1656</a>, cisco Systems, July 1994.
+
+   [<a id="ref-7">7</a>] Traina P., &quot;BGP Version 4 Protocol Analysis&quot;, <a href="/doc/html/rfc1774">RFC 1774</a>, cisco
+       Systems, March 1995.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Traina                                                          [Page 9]
+</pre></div>
+                    </div>
+                
+            </div>
+            <div class="d-print-none col-md-3 bg-light-subtle collapse show" id="sidebar">
+                <div class="position-fixed border-start sidebar overflow-scroll overscroll-none no-scrollbar">
+                    <div class="d-flex flex-column vh-100 pt-2 pt-lg-3 ps-3 pl-md-2 pl-lg-3">
+                        <div>
+                            <a class="btn btn-primary btn-sm" href="/doc/rfc1773/">Datatracker</a>
+                            <p class="fw-bold pt-2">
+                                
+                                    RFC 1773
+                                
+                                <br>
+                                
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Informational
+    
+</span>
+
+                            </p>
+                        </div>
+                        
+                        <ul class="nav nav-tabs nav-fill small me-2" role="tablist">
+                            <li class="nav-item" role="presentation" title="Document information">
+                                <button class="nav-link px-2"
+                                        id="docinfo-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#docinfo-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="docinfo-tab-pane"
+                                        aria-selected="true">
+                                    <i class="bi bi-info-circle"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Info</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Table of contents">
+                                <button class="nav-link px-2"
+                                        id="toc-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#toc-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="toc-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-list-ol"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Contents</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Preferences">
+                                <button class="nav-link px-2"
+                                        id="pref-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#pref-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="pref-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-gear"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Prefs</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="overflow-auto tab-content pt-2 me-2">
+                            <div class="tab-pane"
+                                 id="docinfo-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="docinfo-tab"
+                                 tabindex="0">
+                                <table class="table table-sm table-borderless">
+                                    
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Informational
+    
+</span>
+
+            
+                
+                    <br>March 1995
+                
+                <br>
+                
+                
+                    <a class="btn btn-sm btn-warning"
+                       title="Click to report an error in the document."
+                       href="https://www.rfc-editor.org/errata.php#reportnew"
+                       target="_blank">
+                        Report errata
+                    </a>
+                
+                
+                
+                
+                <div>Obsoletes <a href="/doc/html/rfc1656" title="BGP-4 Protocol Document Roadmap and Implementation Experience">RFC 1656</a></div>
+                
+                
+                
+                
+                    <div>
+                        Was
+                        <a href="/doc/draft-ietf-idr-bgp4-experience/00/">draft-ietf-idr-bgp4-experience</a>
+                        (<a href="/wg/idr/about/">idr WG</a>)
+                    </div>
+                
+            
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+            
+                
+                    <li class="page-item">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-idr-bgp4-experience-00"
+                        rel="nofollow">
+                            00
+                        </a>
+                    </li>
+                
+            
+            
+            <li class="page-item rfc active">
+                <a class="page-link"
+                href="/doc/html/rfc1773">
+                    RFC 1773
+                </a>
+            </li>
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+            <tr>
+                <td></td>
+                <th scope="row">Compare versions</th>
+                <td class="edit"></td>
+                <td>
+                    
+
+
+
+<form class="form-horizontal diff-form"
+      action="https://author-tools.ietf.org/iddiff"
+      method="get"
+      target="_blank">
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="From revision"
+                    name="url1">
+                
+                    <option value="rfc1773">
+                        RFC 1773
+                        
+                    </option>
+                
+                    <option value="draft-ietf-idr-bgp4-experience-00" selected>
+                        draft-ietf-idr-bgp4-experience-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="To revision"
+                    name="url2">
+                
+                    <option value="rfc1773" selected>
+                        RFC 1773
+                        
+                    </option>
+                
+                    <option value="draft-ietf-idr-bgp4-experience-00">
+                        draft-ietf-idr-bgp4-experience-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--html"
+                    name="difftype">
+                Side-by-side
+            </button>
+            
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--hwdiff"
+                    name="difftype">
+                Inline
+            </button>
+
+</form>
+                </td>
+            </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Author</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Paul S. Traina"
+            href="/person/pst+confed@juniper.net" >Paul S. Traina</a> <a 
+               href="mailto:pst%2Bconfed%40juniper.net"
+               aria-label="Compose email to pst+confed@juniper.net"
+               title="Compose email to pst+confed@juniper.net">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:rfc1773@ietf.org?subject=rfc1773" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        
+
+
+
+<img alt="IETF Logo"
+     class="d-lm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-white.svg"
+        
+     
+     >
+
+<img alt="IETF Logo"
+     class="d-dm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor.svg"
+        
+     
+     >
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc1773.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc1773.html">
+            
+                <i class="bi bi-file-code"></i> html
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+            download="rfc1773.pdf"
+          
+         
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/pdfrfc/rfc1773.txt.pdf">
+            
+                <i class="bi bi-file-pdf"></i> pdf
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/rfc1773/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+            <tr>
+                <td>
+                </td>
+                <th scope="row">
+                    Additional resources
+                </th>
+                <td class="edit">
+                    
+                </td>
+                <td>
+                    
+                        
+                        
+                            
+                                <a href="https://mailarchive.ietf.org/arch/browse/idr/?q=rfc1773 OR %22draft-ietf-idr-bgp4-experience%22">
+                                    Mailing list discussion
+                                </a>
+                            
+                        
+                    
+                </td>
+            </tr>
+        
+    
+</tbody>
+                                </table>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a datatracker bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </div>
+                            <div class="tab-pane mb-5"
+                                 id="toc-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="toc-tab"
+                                 tabindex="0">
+                                <nav class="nav nav-pills flex-column small" id="toc-nav">
+                                </nav>
+                            </div>
+                            <div class="tab-pane mb-5 small"
+                                 id="pref-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="pref-tab"
+                                 tabindex="0">
+                                <label class="form-label fw-bold mb-2">Show sidebar by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="sidebar" id="on-radio">
+                                    <label class="btn btn-outline-primary" for="on-radio">Yes</label>
+                                    <input type="radio" class="btn-check" name="sidebar" id="off-radio">
+                                    <label class="btn btn-outline-primary" for="off-radio">No</label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Tab to show by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="deftab" id="docinfo-radio">
+                                    <label class="btn btn-outline-primary" for="docinfo-radio">
+                                        <i class="bi bi-info-circle me-1"></i>Info
+                                    </label>
+                                    <input type="radio" class="btn-check" name="deftab" id="toc-radio">
+                                    <label class="btn btn-outline-primary" for="toc-radio">
+                                        <i class="bi bi-list-ol me-1"></i>Contents
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">HTMLization configuration</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="htmlconf" id="txt-radio">
+                                    <label class="btn btn-outline-primary" for="txt-radio" title="This is the traditional HTMLization method.">
+                                        <i class="bi bi-badge-sd me-1"></i>HTMLize the plaintext
+                                    </label>
+                                    <input type="radio" class="btn-check" name="htmlconf" id="html-radio">
+                                    <label class="btn btn-outline-primary" for="html-radio" title="This is the modern HTMLization method.">
+                                        <i class="bi bi-badge-hd me-1"></i>Plaintextify the HTML
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2" for="ptsize">Maximum font size</label>
+                                <input type="range" class="form-range" min="7" max="16" id="ptsize" oninput="ptdemo.value = ptsize.value">
+                                <label class="form-label fw-bold mt-4 mb-2">Page dependencies</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="pagedeps" id="inline-radio">
+                                    <label class="btn btn-outline-primary" for="inline-radio" title="Generate larger, standalone web pages that do not require network access to render.">
+                                        <i class="bi bi-box me-1"></i>Inline
+                                    </label>
+                                    <input type="radio" class="btn-check" name="pagedeps" id="reference-radio">
+                                    <label class="btn btn-outline-primary" for="reference-radio" title="Generate regular web pages that require network access to render.">
+                                        <i class="bi bi-link-45deg me-1"></i>Reference
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Citation links</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="reflinks" id="refsection-radio">
+                                    <label class="btn btn-outline-primary" for="refsection-radio" title="Citation links go to the reference section.">
+                                        <i class="bi bi-arrow-clockwise"></i> Go to reference section
+                                    </label>
+                                    <input type="radio" class="btn-check" name="reflinks" id="citation-radio">
+                                    <label class="btn btn-outline-primary" for="citation-radio" title="Citation links go directly to the cited document.">
+                                        <i class="bi bi-link-45deg me-1"></i>Go to linked document
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+  var _paq = window._paq || [];
+  
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ietf.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 7]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.ietf.org/matomo.php?idsite=7" style="border:0;" alt="" /></p></noscript>
+
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c5556b8a317b25',t:'MTc1NDcyMjM3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,977 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><BASE HREF="https://www.ourcampaigns.com/">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<title>Our Campaigns - Candidate - George J. Mitchell</title>
+</head>
+
+<style type="text/css">
+<!--
+.Text1 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #330000}
+.Text1Y { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #660000}
+.TextY1 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #EEEEEE}
+.TextY1Y { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #660000}
+.Text2 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #ffff00}
+.Headline1 { font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #ffffff}
+.Headline2 { font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #ffffff}
+.Small1 { font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #330000}
+
+td { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #330000}
+a { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #330000}
+body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #330000}
+.infotable {border:1px solid black;border-color:black white white black;border-radius:8px;background-color:#993333;width:100%;margin:0;padding:0;border-spacing:0px;}
+.infotable tr th {font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:normal;color:#ffffff;text-align:left;margin:0;padding:4px;}
+.infotable tr td {border-spacing:0;margin:0;padding:2px;border-color:#6084C8;}
+.HeadlineBig { font-family: Arial, Helvetica, sans-serif; font-size: 35px; color: #ffffff}
+.MainHeaderBar { font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #ffffff; background-color: #993333}
+.SubHeaderBar { font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #ffffff; background-color: #333366}
+.SubHeaderBar td { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #ffffff; background-color: #333366; text-align:center; }
+.Switch0 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #330000; background-color: #6084C8}
+.Switch1 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #330000; background-color: #7094D8}
+.Quoted { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style:italic; color: #000000; background-color: #80A4E8; border: 1px dashed #000000; padding:4px;}
+.maprestbl { border:thin solid black; }
+.maprestbl td { font-size:8px; border-bottom: thin solid black; padding:0px; margin:0px; border-spacing:0px;}
+.gm-style .gm-style-iw, .gm-style .gm-style-iw a, .gm-style .gm-style-iw span, .gm-style .gm-style-iw label, .gm-style .gm-style-iw div {
+    font-size: 8px;
+    font-weight: 300;
+}
+-->
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<body bgcolor="#6084C8" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="whenLoaded()">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+<!--
+var dylasty=0; var isdy=false; var lastyr=0;
+function DYDown(fld,e) {
+  dylasty=e.clientY;
+  lastyr=parseInt(fld.value);
+  isdy=true;
+}
+function DYMove(fld,e) {
+  if (isdy) {
+    fld.value=String(lastyr-(e.clientY-dylasty));
+  }
+}
+function DYUp(fld,e) {
+  isdy=false;
+}
+//-->
+</script>
+
+<script src="ajax.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<script>
+$( function() {
+    $('.datepicker').change(function() {
+    	var id=$(this).attr('id').slice(0,-3);
+    	var newdate=$('#'+id+'_DP').val();
+    	$('input[name="'+id+'_year"]').val(newdate.substr(0,4));
+   		$('select[name="'+id+'_month"]').val(newdate.substr(5,2));
+   		$('select[name="'+id+'_day"]').val(newdate.substr(8,2));   	
+    });
+    $('.datepicker').datepicker({
+      showOn: "button",
+      buttonImage: "/images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date",
+      dateFormat: "yy-mm-dd",
+      beforeShow: DPSetFromDate
+	});
+    $('.datepicker2').change(function() {
+    	var id=$(this).attr('id').slice(0,-3);
+    	var newdate=$('#'+id+'_DP').val();
+    	$('input[name="'+id+'_year"]').val(newdate.substr(0,4));
+   		$('input[name="'+id+'_month"]').val(newdate.substr(5,2));
+   		$('input[name="'+id+'_day"]').val(newdate.substr(8,2));   	
+    });
+    $('.datepicker2').datepicker({
+      showOn: "button",
+      buttonImage: "/images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date",
+      dateFormat: "yy-mm-dd",
+      beforeShow: DPSetFromDate2
+	});
+} );
+function DPSetFromDate(input, inst) {
+	var id=inst.id.slice(0,-3);
+	$('#'+id+'_DP').val($('input[name="'+id+'_year"]').val()+'-'+$('select[name="'+id+'_month"]').val()+'-'+$('select[name="'+id+'_day"]').val());
+}
+function DPSetFromDate2(input, inst) {
+	var id=inst.id.slice(0,-3);
+	$('#'+id+'_DP').val($('input[name="'+id+'_year"]').val()+'-'+$('input[name="'+id+'_month"]').val()+'-'+$('input[name="'+id+'_day"]').val());
+}
+function NowDateInfo() {
+	alert('This date is a virtual time machine which makes the site display in most cases as if the day was actually the date set.  For instance, setting it to July 4, 1800 and going to the US container would show the President as John Adams and the 16 states and two territories.'); 
+}
+function AdjustIFrame(frame) {
+	var maxW = frame.scrollWidth;
+	var minW = maxW;
+	var FrameH = 100; //IFrame starting height
+	frame.style.height = FrameH + "px"
+
+	while (minW == maxW && FrameH < 800) {
+		FrameH = FrameH + 50; //Increment
+		frame.style.height = FrameH + "px";
+		minW = frame.scrollWidth;
+	}
+}
+</script>
+
+<map name="nav">
+<area shape="poly" coords="8,87,6,75,44,65,47,77" href="home.html" alt="Home">
+<area shape="poly" coords="52,75,50,64,89,60,91,72" href="about.html" alt="About">
+<area shape="poly" coords="95,73,95,60,128,61,129,73" href="javascript:popChat()" alt="Chat">
+<area shape="poly" coords="133,73,135,60,171,64,172,76" href="UserList.html" alt="Users">
+<area shape="poly" coords="206,78,208,68,251,72,249,83" href="IssueDetail.html?IssueID=1" alt="Issues">
+<area shape="poly" coords="252,83,255,72,297,75,298,86" href="PartyList.html" alt="Party">
+<area shape="poly" coords="301,86,301,75,368,77,369,88" href="CandidateList.html" alt="Candidates">
+<area shape="poly" coords="374,88,372,77,430,74,432,85" href="PollingFirmList.html" alt="Polling Firms">
+<area shape="poly" coords="434,86,434,74,471,69,472,82" href="MediaList.html" alt="Media">
+<area shape="poly" coords="474,82,473,70,507,66,509,78" href="NewsList.html" alt="News">
+<area shape="poly" coords="510,78,509,65,538,64,539,77" href="PollList.html" alt="Polls">
+<area shape="poly" coords="16,97,13,87,68,76,70,88" href="Calendar.html" alt="Calendar">
+<area shape="poly" coords="74,88,73,75,141,75,141,87" href="KeyRaceList.html" alt="Key Races">
+<area shape="poly" coords="145,87,145,76,226,82,226,93" href="ContainerDetail.html?ContainerID=1" alt="United States">
+<area shape="poly" coords="230,94,231,83,291,87,290,98" href="PresidentList.html" alt="President">
+<area shape="poly" coords="294,98,295,87,339,89,340,99" href="SenateList.html" alt="Senate">
+<area shape="poly" coords="343,98,344,89,384,89,386,98" href="HouseList.html" alt="House">
+<area shape="poly" coords="389,99,390,89,453,85,455,96" href="StateOfficeList.html" alt="Governors">
+<area shape="poly" coords="458,96,456,85,534,78,535,91" href="CountryList.html" alt="International">
+<area shape="default" href="home.html">
+</map>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" width="539"><a href="home.html"><img src="images/NewHeader.gif" border="0" usemap="#nav" width="539" height="120"></a></td>
+<td background="images/NewHeaderBack.gif" align="right" width="100%" valign="top"><img src="images/spacer.gif" width="180" height="1"><br>
+<div style="position: absolute; top:4; right:8">
+<form name="dateForm" method="post" action="CandidateDetail.html?SetNow=Y&CandidateID=4743"><input type="button" value="?" onclick="NowDateInfo()">
+
+
+
+
+
+
+
+
+
+<select name="NowDate_month" class="Text1">
+<option value="00">--</option>
+<option value="01">Jan</option><option value="02">Feb</option><option value="03">Mar</option><option value="04">Apr</option><option value="05">May</option><option value="06">Jun</option><option value="07">Jul</option><option value="08" SELECTED>Aug</option><option value="09">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select>
+<select name="NowDate_day" class="Text1">
+<option value="00">--</option>
+<option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option SELECTED>08</option><option>09</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select>
+
+<input type="text" name="NowDate_year" size="5" maxlength="4" value="2025" onMouseDown="DYDown(this,event)" onMouseUp="DYUp(this,event)" onMouseMove="DYMove(this,event)">
+<input type="submit" value="Set" class="Small1"></form>
+</div>
+<div style="position: absolute; top:35; right:8">
+<form name="searchForm" method="post" action="SearchResults.html"><input type="text" name="SrchTxt" size="15" class="Small1"><input type="submit" value="Search" class="Small1"></form>
+</div>
+<div style="position: absolute; top:63; right:8">
+
+<a href="newaccountStep1.html" class="Text2">New User Account</a>
+
+
+</div>
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%"><tr>
+<td class="Text1" valign="top" align="center">
+<table border="0" cellspacing="0" cellpadding="0" width="95%"><tr>
+<td align="left">
+</td>
+<td align="right" class="Headline1"><i>&quot;A comprehensive, collaborative elections resource.&quot;&nbsp;</i><br></td>
+
+</tr></table>
+<div align="right" class="Headline1">
+
+
+
+
+<form method="POST" action="home.php"><input type="hidden" name="LogIn" value="Y">
+Email:<input type="text" name="Username" size="10" class="Text1" value="">
+Password:<input type="password" name="PWord" size="10" class="Text1">
+<input type="submit" value="Login" class="Text1">
+</form>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<script language="javascript">
+<!--
+var piccnt=3;
+var cpic=new Array;
+
+cpic[1]='1982-01-01';
+
+cpic[2]='1995-01-01';
+
+cpic[3]='2009-01-01';
+var curpic=3;
+
+function lastPic() {
+	if (curpic > 1) {
+		curpic--;
+		document.getElementById('CandPic').src='../images/candidates/b4/C4743D'+cpic[curpic]+'.jpg';
+		document.getElementById('CandPicLink').href='../images/candidates/b4/FullC4743D'+cpic[curpic]+'.jpg';
+		document.getElementById('CandPicDate').innerHTML=cpic[curpic];
+		if (curpic == 1) {
+			document.getElementById('CandPicLast').innerHTML='';
+		}
+		document.getElementById('CandPicNext').innerHTML='-&gt;';
+	}
+}
+function nextPic() {
+	if (curpic < piccnt) {
+		curpic++;
+		document.getElementById('CandPic').src='../images/candidates/b4/C4743D'+cpic[curpic]+'.jpg';
+		document.getElementById('CandPicLink').href='../images/candidates/b4/FullC4743D'+cpic[curpic]+'.jpg';
+		document.getElementById('CandPicDate').innerHTML=cpic[curpic];
+		if (curpic == piccnt) {
+			document.getElementById('CandPicNext').innerHTML='';
+		}
+		document.getElementById('CandPicLast').innerHTML='&lt;-';
+	}
+}
+//-->
+</script>
+
+
+
+<div class="Headline1" align="left"><font size="+3">&nbsp;&nbsp;Mitchell, George J.</font></div>
+<table border="0" width="90%"><tr><td valign="top" class="Text1" width="65%">
+
+
+
+<table border="0" width="100%">
+<tr bgcolor="#993333"><td colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td width="42"></td>
+<td class="Headline1" align="center">CANDIDATE DETAILS</td>
+<td width="42"></td></tr></table></td></tr>
+
+<tr><td bgcolor="#333366" align="right" class="Headline1">Affiliation</td><td bgcolor="#0000FF"><a href="PartyDetail.html?PartyID=1"class="Headline1">Democratic</a></td>
+<td rowspan="8" align="right" valign="top">&nbsp;<table border="0"><tr><td colspan="3" align="center">
+<a href="../images/candidates/b4/FullC4743D2009-01-01.jpg" id="CandPicLink" target="_blank"><img src="../images/candidates/b4/C4743D2009-01-01.jpg" id="CandPic" width="150" border="0"></a>
+</td></tr>
+
+<tr>
+<td align="left" width="15px"><a href="javascript:lastPic()" id="CandPicLast">&lt;-</a>&nbsp;</td>
+<td align="center" id="CandPicDate">2009-01-01</td>
+<td align="right" width="15px">&nbsp;<a href="javascript:nextPic()" id="CandPicNext"></a></td>
+</tr>
+
+</table>&nbsp;
+</td></tr>
+<tr><td bgcolor="#333366" align="right" class="Headline1">Name</td><td class="Text1">George J. Mitchell</td></tr>
+
+
+
+<tr><td bgcolor="#333366" align="right" class="Headline1">Email</td><td class="Text1">None<a href="mailto:" class="Text1"></a></td></tr>
+<tr><td bgcolor="#333366" align="right" class="Headline1">Website</td><td class="Text1">None<a href="" target="_blank" class="Text1"> </a></td></tr>
+
+
+
+
+
+<tr><td bgcolor="#333366" align="right" class="Headline1">Born</td>
+<td class="Text1"> August 20, 1933
+
+(91 years)
+</td></tr>
+
+
+</td></tr>
+</IF>
+<tr><td bgcolor="#333366" align="right" class="Headline1">Contributor</td><td class="Text1">...</td></tr>
+<tr><td bgcolor="#333366" align="right" class="Headline1">Last Modifed</td><td class="Text1">Mr. Matt<br>Oct 23, 2012 08:59am</td></tr>
+<tr><td bgcolor="#333366" align="right" class="Headline1">Tags</td><td class="Text1" colspan="2">
+
+Arab - Irish - Married - Cancer - Army - Catholic - 
+</td></tr>
+<tr><td bgcolor="#333366" align="right" class="Headline1">Info</td><td class="Text1" colspan="2">born in Waterville, Kennebec County, Maine, August 20, 1933; attended the public schools; graduated, Bowdoin College, Brunswick, Maine, 1954; graduated, Georgetown University Law Center, Washington, D.C., 1960; served in the United States Army Counter Intelligence Corps, Berlin, Germany, 1954-1956; admitted to the District of Columbia and Maine bars in 1960 and commenced practice in Portland, Maine, 1965; trial attorney, Antitrust Division, Department of Justice, Washington, D.C., 1960-1962; executive assistant to Senator Edmund S. Muskie 1962-1965; practiced law, Portland, 1965-1977; assistant county attorney for Cumberland County, Maine, 1971; United States Attorney for Maine 1977-1979; United States District Judge for Maine 1979-1980; appointed as a Democrat by the Governor to the United States Senate, May 17, 1980, to fill the vacancy caused by the resignation of Edmund S. Muskie for the term ending January 3, 1983; sworn in May 19, 1980; reelected in 1982 and again in 1988 and served from May 19, 1980 to January 3, 1995; not a candidate for reelection in 1994; chairman, Democratic Senatorial Campaign Committee (Ninety-ninth Congress); co-chairman, Democatic Policy Committee, Democratic Conference (One Hundredth through One Hundred Third Congresses); majority leader (1989-1995); Special Advisor to the President and the Secretary of State for Economic Initiatives in Ireland (1995-); engaged in the practice of law in Washington, D.C. (1995-). <br><br></td></tr>
+</table>
+<br>
+
+
+<table border="0" width="100%">
+<tr bgcolor="#993333"><td colspan="6"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td width="42"><img src="../images/spacer.gif" width="40" height="15"></td><td class="Headline1" align="center"><a href="CandidateDetail.html?CandidateID=4743&ShowAllPoll=Y" class="Headline1">JOB APPROVAL POLLS</a></td>
+<td width="42"></td></tr></table></td></tr>
+
+
+
+
+
+
+
+
+</table>
+
+<br>
+
+<table class="infotable" cellspacing="0" cellpadding="0" width="100%">
+<tr bgcolor="#993333"><td colspan="4"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td width="42"><img src="../images/spacer.gif" width="40" height="15"></td><td class="Headline1" align="center">BOOKS</td>
+<td width="42"><a href="BookEdit.html?AttachTo=Candidate&AttachID=4743"><img src="../images/ButtonAdd.gif" width="40" height="15" border="0"></a></td></tr></table></td></tr>
+<tr bgcolor="#333366" align="center">
+<td class="Headline1">Title</td>
+<td class="Headline1">Purchase</td>
+<td class="Headline1">Contributor</td>
+</tr>
+
+
+</table>
+
+<br>
+
+
+
+<table class="infotable" cellspacing="0" cellpadding="0" width="100%">
+<tr bgcolor="#993333"><td colspan="5"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td width="42"><img src="../images/spacer.gif" width="40" height="15"></td><td class="Headline1" align="center"><a href="CandidateDetail.html?CandidateID=4743&ShowAllEvent=Y" class="Headline1">EVENTS</a></td>
+<td width="42"></td></tr></table></td></tr>
+<tr bgcolor="#333366" align="center">
+<td class="Headline1">Start Date</td>
+<td class="Headline1">End Date</td>
+<td class="Headline1">Type</td>
+<td class="Headline1">Title</td>
+<td class="Headline1">Contributor</td>
+</tr>
+
+
+
+</table>
+
+<br>
+
+
+
+
+
+<table class="infotable" cellspacing="0" cellpadding="0" width="100%">
+<tr bgcolor="#993333"><td colspan="5"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td width="42"><img src="../images/spacer.gif" width="40" height="15"></td><td class="Headline1" align="center"><a href="CandidateDetail.html?CandidateID=4743&ShowAllNews=Y" class="Headline1">NEWS</a></td>
+<td width="42"></td></tr></table></td></tr>
+<tr bgcolor="#333366" align="center">
+<td class="Headline1">Date</td>
+<td class="Headline1">Category</td>
+<td class="Headline1">Headline</td>
+<td class="Headline1">Article</td>
+<td class="Headline1">Contributor</td>
+</tr>
+
+<tr>
+<td class="Switch1">Aug&nbsp;11,&nbsp;2007 11:00pm</td>
+<td class="Switch1">News</td>
+<td class="Switch1">
+
+
+
+<a href="NewsDetail.html?NewsID=42578" class="Text1">Ex-Senate leader Mitchell has cancer&nbsp;</a>
+</td>
+<td class="Switch1"> <a href="http://news.yahoo.com/s/ap/20070811/ap_on_re_us/george_mitchell_illness;_ylt=AjKtPeJOBB_yLGZ1.BrvFIuyFz4D" class="Text1" target="_blank">Article</a> </td>
+<td class="Switch1"><a href="UserDetail.html?UserID=1656" class="Text1">The Sunset Provision&nbsp;</a></td>
+</tr>
+<tr>
+<td class="Switch0">Mar&nbsp;05,&nbsp;2004 12:00am</td>
+<td class="Switch0">News</td>
+<td class="Switch0">
+
+
+
+<a href="NewsDetail.html?NewsID=8969" class="Text1">For a Diplomat, Task Is Quelling Disney's Unrest&nbsp;</a>
+</td>
+<td class="Switch0"> <a href="http://www.nytimes.com/2004/03/05/business/media/05DISN.html?ei=5062&en=be241fedd2a32e6b&ex=1079067600&partner=GOOGLE&pagewanted=print&position=" class="Text1" target="_blank">Article</a> </td>
+<td class="Switch0"><a href="UserDetail.html?UserID=13" class="Text1">User 13&nbsp;</a></td>
+</tr>
+
+
+</table>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript">
+<!--
+var epid=0; var etype='';
+var doffset=0;
+function emotePanel(type,id,e) {
+    if (!e) { var e = window.event; }
+    if (e.pageX || e.pageY) { posx=e.pageX; posy=e.pageY; }	else if (e.clientX || e.clientY) { posx=e.clientX+document.body.scrollLeft+document.documentElement.scrollLeft; posy=e.clientY+document.body.scrollTop+document.documentElement.scrollTop; }    
+	epid=id; etype=type;
+	var p=document.getElementById('EmoteSelect');
+	p.style.left=(posx - 10) + 'px';
+	p.style.top=(posy - 5) + 'px';
+	p.style.display='block';
+	return false;
+}
+function emote(num) {
+	var p=document.getElementById('EmoteSelect');
+	p.style.display='none';
+	if (num > 0) {
+		var ajax = new Ajax();
+		ajax.send_params = 'TYPE='+etype+'&DID='+epid+'&EM='+num;
+		ajax.send_url = 'https://www.ourcampaigns.com/ajax/SetEmote.html';
+		ajax.send_method = 'GET';
+		ajax.response_handler = function(resp) {
+			if (resp != '') {
+				document.getElementById('Emote'+etype+epid).innerHTML=resp;
+			}
+		}
+		ajax.sendRequest();
+	}
+}
+function emoteView(type,id,num,e) {
+    if (!e) { var e = window.event; }
+    if (e.pageX || e.pageY) { posx=e.pageX; posy=e.pageY; }	else if (e.clientX || e.clientY) { posx=e.clientX+document.body.scrollLeft+document.documentElement.scrollLeft; posy=e.clientY+document.body.scrollTop+document.documentElement.scrollTop; }    
+	var p=document.getElementById('EmotePeople');
+	p.style.left=(posx - 10) + 'px';
+	p.style.top=(posy - 5) + 'px';
+	var ajax = new Ajax();
+	ajax.send_params = 'TYPE='+type+'&DID='+id+'&EM='+num;
+	ajax.send_url = 'https://www.ourcampaigns.com/ajax/EmoteViewPeople.html';
+	ajax.send_method = 'GET';
+	ajax.response_handler = function(resp) {
+		if (resp != '') {
+			var p=document.getElementById('EmotePeople');
+			p.innerHTML=resp;
+			p.style.display='block';
+		}
+	}
+	ajax.sendRequest();
+}
+function emoteBlur(id,num) {
+	var p=document.getElementById('EmotePeople');
+	p.style.display='none';
+}
+function prevDiscussion(num) {
+	if (doffset > 0) {
+		var ajax = new Ajax();
+		var odo=doffset;
+		doffset-=num; if (doffset < 0) { doffset=0; }
+		if (doffset < 26) {
+			var ppdiv=document.getElementById('PrevPageDiv');
+			if (ppdiv) { ppdiv.style.display='none'; }
+		}
+		if (doffset == 0) {
+			var pmdiv=document.getElementById('PreviousMsgTR');
+			if (pmdiv) { pmdiv.style.display='none'; }
+		}
+		document.getElementById('PreviousCount').innerHTML=''+doffset;
+		ajax.send_params = 'IsAjax=Y&To=Candidate&CandidateID=4743&ODO='+odo+'&DOffset='+doffset+'&IgnoreIDs=0&Sub=0&ArchiveCount=0&Page=CandidateDetail.html';
+		ajax.send_url = 'https://www.ourcampaigns.com/discussion.html';
+		ajax.send_method = 'GET';
+		ajax.response_handler = function(resp) {
+			if (resp != '') {
+				var md=document.getElementById('DiscussDiv');
+				var newdiv=document.createElement('div');
+				newdiv.innerHTML=resp+' ';
+				md.insertBefore(newdiv,md.firstChild);
+				twttr.widgets.load();
+			}
+		}
+		ajax.sendRequest();
+	}
+}
+//-->
+</script>
+<div id="EmoteSelect" style="display:none;position:absolute;background-color:white;border:2px solid red;padding:4px;width:100px;z-index:300;"><b>Add Your 2&cent;</b><br><a href="javascript:emote(1)">Agree</a><br><a href="javascript:emote(2)">Disagree</a><br>
+<a href="javascript:emote(4)">Laugh</a><br><a href="javascript:emote(5)">Groan</a><br><a href="javascript:emote(3)">Troll</a><br><a href="javascript:emote(7)">Befuddled</a><br><a href="javascript:emote(6)">Work Complete</a><br><a href="javascript:emote(8)">Prediction</a><br><a href="javascript:emote(0)">[close]</a><br>
+</div>
+<div id="EmotePeople" style="display:none;position:absolute;background-color:white;border:2px solid red;padding:4px;width:100px;" onmouseout="emoteBlur()">
+</div>
+
+<table class="infotable" cellspacing="0" cellpadding="0"><tr><th colspan="3">DISCUSSION</td></tr>
+
+
+
+
+
+
+
+
+<tr><td colspan="3"><div id="DiscussDiv" class="Switch0">
+
+
+
+
+
+
+
+
+
+</td></tr>
+
+
+
+
+
+
+</table>
+
+<script language="JavaScript">
+<!--
+var fitem='';
+function noChangeF(itm) {
+  fitem=itm.value;
+}
+function noChangeU(itm) {
+  itm.value=fitem;
+}
+function upIRV(fid,vnum) {
+  var snum=vnum-1;
+  var f1=eval('document.UserPoll'+fid+'.UPO'+snum);
+  var f2=eval('document.UserPoll'+fid+'.UPO'+vnum);
+  var fi1=eval('document.UserPoll'+fid+'.UPOI'+snum);
+  var fi2=eval('document.UserPoll'+fid+'.UPOI'+vnum);
+  var ftmp=f1.value;
+  f1.value=f2.value;
+  f2.value=ftmp;
+  ftmp=fi1.value;
+  fi1.value=fi2.value;
+  fi2.value=ftmp;
+}
+function pubvotewin(upid) {
+  var prw=window.open('userpollpub.html?UserPollID='+upid,'PubVote','scrollbars=yes,width=500,height=350');
+}
+function quoteMsg(msgid,userid) {
+	f=document.DiscussForm;
+	f.DiscussText.value=f.DiscussText.value + '<q ' + userid + '>' + document.getElementById('MsgC'+msgid).innerHTML + '</q>\n';
+}
+//-->
+</script>
+
+
+
+</td><td valign="top" class="Text1" width="35%">
+
+
+
+<table border="0" width="100%">
+<tr><td bgcolor="#993333" colspan="13" align="center" class="Headline1" width="100%">Importance? <a href="javascript:keywin()" class="Headline1">8.66670 Average</a></td></tr>
+
+</table>
+<br>
+
+
+<table border="0" width="100%">
+<tr><td colspan="3" bgcolor="#993333" align="center" class="Headline1">FAMILY</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+<br>
+
+
+
+
+<table class="infotable" cellspacing="0" cellpadding="0" width="100%">
+<tr bgcolor="#993333"><td colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td width="42"><img src="../images/spacer.gif" width="40" height="15"></td><td class="Headline1" align="center">INFORMATION LINKS</td>
+<td width="42"></td></tr></table></td></tr>
+
+<tr>
+
+<td class="Switch1"><a href="http://www.medaloffreedom.com/GeorgeMitchell.htm" class="Text1" target="_blank">Presidential Medal of Freedom Recipient Senator George J. Mitchell&nbsp;</a></td>
+<td class="Switch1"><a href="InfoLinkDetail.html?InfoLinkID=1984" class="Text1">Discuss</a></td>
+</tr>
+
+
+
+
+
+
+</table>
+
+
+<table border="0" width="100%">
+<tr><td bgcolor="#993333" colspan="4" align="center" class="Headline1" width="100%">RACES</td></tr>
+
+<tr bgcolor="#6084C8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">01/03/1993</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=39774" class="Text1">Majority Leader</td>
+<td class="Text1">
+
+
+
+
+Won 100.00% (+100.00%)
+
+
+</td>
+</tr>
+<tr bgcolor="#7094D8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">01/01/1991</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=39775" class="Text1">Majority Leader</td>
+<td class="Text1">
+
+
+
+
+Won 100.00% (+100.00%)
+
+
+</td>
+</tr>
+<tr bgcolor="#6084C8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">11/29/1988</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=39776" class="Text1">Majority Leader</td>
+<td class="Text1">
+
+
+
+
+Won 49.09% (+23.64%)
+
+
+</td>
+</tr>
+<tr bgcolor="#7094D8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">11/08/1988</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=3555" class="Text1">ME US Senate</td>
+<td class="Text1">
+
+
+
+
+Won 81.30% (+62.60%)
+
+
+</td>
+</tr>
+<tr bgcolor="#6084C8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">11/02/1982</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=3786" class="Text1">ME US Senate</td>
+<td class="Text1">
+
+
+
+
+Won 60.87% (+21.74%)
+
+
+</td>
+</tr>
+<tr bgcolor="#7094D8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">06/08/1982</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=879197" class="Text1">ME US Senate - D Primary</td>
+<td class="Text1">
+
+
+
+
+Won 100.00% (+100.00%)
+
+
+</td>
+</tr>
+<tr bgcolor="#6084C8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">05/17/1980</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=6308" class="Text1">ME US Senate Appointment</td>
+<td class="Text1">
+
+
+
+
+Won 100.00% (+100.00%)
+
+
+</td>
+</tr>
+<tr bgcolor="#7094D8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">11/05/1974</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=174314" class="Text1">ME Governor</td>
+<td class="Text1">
+
+
+
+Lost 36.33% (-2.81%)
+
+
+
+</td>
+</tr>
+<tr bgcolor="#6084C8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">06/11/1974</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=480740" class="Text1">ME Governor - D Primary</td>
+<td class="Text1">
+
+
+
+
+Won 37.52% (+11.12%)
+
+
+</td>
+</tr>
+<tr bgcolor="#7094D8">
+
+<td class="Text1" bgcolor="#0000FF">&nbsp;</td>
+<td class="Text1">12/09/1972</td>
+<td class="Text1"><a href="RaceDetail.html?RaceID=246422" class="Text1">DNC Chair</td>
+<td class="Text1">
+
+
+
+Lost 34.98% (-17.24%)
+
+
+
+</td>
+</tr>
+
+
+
+
+
+
+</table>
+
+<table border="0" width="100%">
+<tr bgcolor="#993333"><td colspan="3" class="Headline1" align="center">ENDORSEMENTS</td></tr>
+
+<tr bgcolor="#6084C8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=92718" class="Text1">Good Friday Agreement (Belfast Agreement) - May 22, 1998</a></td>
+
+<td class="Text1" bgcolor="#00FF32">YES</td>
+<td class="Text1"> Yes</td>
+</tr>
+<tr bgcolor="#7094D8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1586" class="Text1">Supreme Court - Associate Justice - Jul 29, 1994</a></td>
+
+<td class="Headline1" bgcolor="#0000FF">D</td>
+<td class="Text1">Stephen G. Breyer</td>
+</tr>
+<tr bgcolor="#6084C8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=372976" class="Text1">U.S. Surgeon General - Sep 07, 1993</a></td>
+
+<td class="Headline1" bgcolor="#0000FF">D</td>
+<td class="Text1">M. Joycelyn Elders</td>
+</tr>
+<tr bgcolor="#7094D8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1585" class="Text1">Supreme Court - Associate Justice - Aug 03, 1993</a></td>
+
+<td class="Headline1" bgcolor="#0000FF">D</td>
+<td class="Text1">Ruth Bader Ginsburg</td>
+</tr>
+<tr bgcolor="#6084C8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1584" class="Text1">Supreme Court - Associate Justice - Oct 15, 1991</a></td>
+
+<td class="Headline1" bgcolor="#767676">NPA</td>
+<td class="Text1"> Reject</td>
+</tr>
+<tr bgcolor="#7094D8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1583" class="Text1">Supreme Court - Associate Justice - Oct 02, 1990</a></td>
+
+<td class="Headline1" bgcolor="#FF0000">R</td>
+<td class="Text1">David Souter</td>
+</tr>
+<tr bgcolor="#6084C8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=236924" class="Text1">US Ambassador to Bahamas - Jul 08, 1989</a></td>
+
+<td class="Headline1" bgcolor="#767676">NPA</td>
+<td class="Text1"> Reject</td>
+</tr>
+<tr bgcolor="#7094D8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1581" class="Text1">Supreme Court - Associate Justice - Feb 03, 1988</a></td>
+
+<td class="Headline1" bgcolor="#FF0000">R</td>
+<td class="Text1">Anthony M. Kennedy</td>
+</tr>
+<tr bgcolor="#6084C8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1582" class="Text1">Supreme Court - Associate Justice - Oct 23, 1987</a></td>
+
+<td class="Headline1" bgcolor="#767676">NPA</td>
+<td class="Text1"> Reject</td>
+</tr>
+<tr bgcolor="#7094D8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1577" class="Text1">Supreme Court - Chief Justice - Sep 17, 1986</a></td>
+
+<td class="Headline1" bgcolor="#767676">NPA</td>
+<td class="Text1"> Reject</td>
+</tr>
+<tr bgcolor="#6084C8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1580" class="Text1">Supreme Court - Associate Justice - Sep 17, 1986</a></td>
+
+<td class="Headline1" bgcolor="#FF0000">R</td>
+<td class="Text1">Antonin Scalia</td>
+</tr>
+<tr bgcolor="#7094D8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=55208" class="Text1">US President - D Primaries - Jul 01, 1984</a></td>
+
+<td class="Headline1" bgcolor="#0000FF">DFL</td>
+<td class="Text1">Walter F. Mondale</td>
+</tr>
+<tr bgcolor="#6084C8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=372968" class="Text1">U.S. Surgeon General - Nov 16, 1981</a></td>
+
+<td class="Headline1" bgcolor="#767676">NPA</td>
+<td class="Text1"> Reject</td>
+</tr>
+<tr bgcolor="#7094D8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=296009" class="Text1">US Ambassador to Romania - Oct 02, 1981</a></td>
+
+<td class="Headline1" bgcolor="#767676">NPA</td>
+<td class="Text1"> Reject</td>
+</tr>
+<tr bgcolor="#6084C8" valign="top">
+<td class="Text1"><a href="RaceDetail.html?RaceID=1579" class="Text1">Supreme Court - Associate Justice - Sep 21, 1981</a></td>
+
+<td class="Headline1" bgcolor="#FF0000">R</td>
+<td class="Text1">Sandra Day O'Connor</td>
+</tr>
+
+</table>
+
+
+
+
+
+
+</td></tr></table>
+<div align="right">
+</div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+</body>
+</html>

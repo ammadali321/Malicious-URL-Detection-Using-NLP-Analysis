@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Speedtorrent.com">
+    <meta name="robots" content="index,follow">
+
+        <title>Speedtorrent.com  - Torrentfile Downloads for free - Movies, Series, Games and Applications</title>
+    <meta name="description" content="Download Torrentfiles for Free, legal and anonymous" />
+    <meta name="keywords" content="movies, cinema, series, Filme, Kinofilme, Movies, Spiele, Games, Apps, Programme, XXX, Torrent, Download, File" />
+    
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+
+    <style>
+    html,
+    button,
+    input,
+    select,
+    textarea {
+      color: #222;
+    }
+
+    ::-moz-selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    ::selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    /* ==========================================================================
+       Helper classes
+       ========================================================================== */
+    .ir {
+      background-color: transparent;
+      border: 0;
+      overflow: hidden;
+      *text-indent: -9999px;
+    }
+
+    .ir:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 150%;
+    }
+
+    .hidden {
+      display: none !important;
+      visibility: hidden;
+    }
+
+    .invisible {
+      visibility: hidden;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      content: " ";
+      display: table;
+    }
+
+    .clearfix:after {
+      clear: both;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    /* ==========================================================================
+        Forms
+       ========================================================================== */
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form input[type="password"] {
+      background: #fff;
+      border: 1px solid #fff;
+      padding: 7px 10px;
+      width: 60%;
+    }
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form input[type="number"]:focus,
+    form input[type="password"]:focus {
+      outline: none !important;
+    }
+    form .button {
+      background: #fff;
+      border: 1px solid #fff;
+      padding: 7px 20px;
+      text-transform: uppercase;
+    }
+    form .button:focus, form .button:active {
+      outline: none !important;
+    }
+    form .button.yellow {
+      background: #e7af2a;
+      color: #fff;
+      border: 1px solid #c89316;
+    }
+
+    html, body {
+      font-size: 100%;
+      width: 100%;
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: baseline;
+    }
+
+    body {
+      font: 13px/21px "Open Sans", Arial, sans-serif;
+      color: #838383;
+      background-color: white;
+    }
+
+    a {
+      color: #26b864;
+      text-decoration: none !important;
+      -webkit-transition: all 200ms ease-in;
+      -moz-transition: all 200ms ease-in;
+      -ms-transition: all 200ms ease-in;
+      -o-transition: all 200ms ease-in;
+      transition: all 200ms ease-in;
+    }
+
+    a:hover {
+      color: #f5a200;
+    }
+
+    button.btn {
+      background-color: #26b864;
+      border-color: transparent;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    button.btn a {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    button.btn:hover {
+      background-color: #26b864;
+      border-color: transparent;
+    }
+
+    button.btn:hover a {
+      color: #333;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Open Sans", Arial, sans-serif;
+      color: #444444;
+    }
+
+    h1 {
+      font-size: 2.6em;
+    }
+
+    h2 {
+      font-size: 2.2em;
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+
+    h4 {
+      font-size: 1.4em;
+    }
+
+    h5 {
+      font-size: 1em;
+    }
+
+    h6 {
+      font-size: .8em;
+    }
+
+    *, *:before, *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    aside ol {
+      list-style: none;
+      padding: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    aside ol li {
+      padding: 0;
+    }
+
+    aside ol li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px 0px 12px 5px;
+      border-bottom: 1px solid #ccc;
+      display: block;
+      line-height: 1;
+      position: relative;
+    }
+
+    aside ol li ol li a {
+      padding: 12px 0px 12px 15px;
+    }
+
+    aside ol li ol li ol li a {
+      padding: 12px 0px 12px 25px;
+    }
+
+
+    .pagination>li>a, .pagination>li>span {
+      color: #26b864;
+    }
+
+    .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+      color: #26b864;
+    }
+
+    .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+      color: #f5a200;
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      background-color: #f9f9f9;
+      color: #999;
+      padding: 10px 0;
+      margin-top: 40px;
+      font-size: 11px;
+    }
+
+    </style>
+
+      </head>
+
+  <body>    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-70403737-38', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+        <nav class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Speedtorrent.com</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/category/movies">Movies</a></li>
+            <li><a href="/category/tv">Series & TV</a></li>
+            <li><a href="/category/hdtv">HD</a></li>
+            <li><a href="/category/spiele">Games</a></li>
+            <li><a href="/category/apps">Apps</a></li>
+            <li><a href="/category/xxx">XXX</a></li>
+            <li><a href="/kinocharts">Cinema</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/usenet.nl-kostenlos-nutzen-gratis-anleitung">How to Download</a></li>
+          </ul>
+
+  				<form class="navbar-form navbar-right" action="/search" role="search">
+  					<div class="input-group">
+  						<input type="text" name="q" value="" class="form-control" placeholder="Search">
+  						<span class="input-group-btn">
+  							<button type="submit" class="btn btn-default">
+  								<span class="glyphicon glyphicon-search">
+  									<span class="sr-only">Search</span>
+  								</span>
+  							</button>
+  						</span>
+  					</div>
+  				</form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    		<main class="container">
+
+      <div class="row">
+        <div class="col-md-10 col-sm-12">
+          
+<section>
+  <h2>Welcome to Speedtorrent.com</h2>
+  <h5>We provide you with the latest free downloads and torrents! For the downloads you need a VPN protection, you get this <a href="https://c.vu/download">here</a>. Everything on Speedtorrent.com and Saugstube is completely free of charge! For the latest series also visit our partners <a href="https://serienstream.ch">Serienstream.ch</a>, <a href="https://burningseries.to">Burningseries.to</a> and for Movies <a href="https://hdfilme.to">Hdfilme.to</a>.</h5>
+</section>
+
+<hr />
+
+<section>
+  <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-2">
+      <a href="/download/108590/mr-no-pain" class="thumbnail">
+        <img name="Mr. No Pain" alt="Mr. No Pain" src="/cover/m/r/mr-no-pain.jpg">
+      </a>
+    </div>
+        <div class="col-xs-12 col-sm-4 col-md-2">
+      <a href="/download/108495/mickey-17" class="thumbnail">
+        <img name="Mickey 17" alt="Mickey 17" src="/cover/m/i/mickey-17.jpg">
+      </a>
+    </div>
+        <div class="col-xs-12 col-sm-4 col-md-2">
+      <a href="/download/107146/a-real-pain" class="thumbnail">
+        <img name="A Real Pain" alt="A Real Pain" src="/cover/a/-/a-real-pain.jpg">
+      </a>
+    </div>
+        <div class="col-xs-12 col-sm-4 col-md-2">
+      <a href="/download/107067/nosferatu-der-untote" class="thumbnail">
+        <img name="Nosferatu - Der Untote" alt="Nosferatu - Der Untote" src="/cover/n/o/nosferatu-der-untote.jpg">
+      </a>
+    </div>
+        <div class="col-xs-12 col-sm-4 col-md-2">
+      <a href="/download/106889/mufasa-der-konig-der-lowen" class="thumbnail">
+        <img name="Mufasa: Der König der Löwen" alt="Mufasa: Der König der Löwen" src="/cover/m/u/mufasa-der-konig-der-lowen.jpg">
+      </a>
+    </div>
+        <div class="col-xs-12 col-sm-4 col-md-2">
+      <a href="/download/106890/the-brutalist" class="thumbnail">
+        <img name="The Brutalist" alt="The Brutalist" src="/cover/t/h/the-brutalist.jpg">
+      </a>
+    </div>
+      </div>
+</section>
+
+<section>
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Top Apps</h3>
+      <ol>
+                <li><a href="/download/40925/microsoft-azure-devops-server">Microsoft Azure DevOps Server</a></li>
+                <li><a href="/download/12731/steinberg-cubase-pro-9">Steinberg Cubase Pro 9</a></li>
+                <li><a href="/download/12730/microsoft-office-2016">Microsoft Office 2016</a></li>
+                <li><a href="/download/12729/adobe-photoshop-cc">Adobe Photoshop CC</a></li>
+                <li><a href="/download/12728/microsoft-windows-10">Microsoft Windows 10</a></li>
+              </ol>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Top Series</h3>
+      <ol>
+                <li><a href="/download/105272/dragon-ball-daima">Dragon Ball Daima</a></li>
+                <li><a href="/download/90568/der-herr-der-ringe-die-ringe-der-macht">Der Herr der Ringe: Die Ringe der Macht</a></li>
+                <li><a href="/download/90264/she-hulk">She-Hulk</a></li>
+                <li><a href="/download/90016/moon-knight">Moon Knight</a></li>
+                <li><a href="/download/89997/ms-marvel">Ms. Marvel</a></li>
+              </ol>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Top Games</h3>
+      <ol>
+                <li><a href="/download/80943/cyberpunk-2077">Cyberpunk 2077</a></li>
+                <li><a href="/download/78537/microsoft-flight-simulator">Microsoft Flight Simulator 2020</a></li>
+                <li><a href="/download/66252/the-outer-worlds">The Outer Worlds</a></li>
+                <li><a href="/download/66125/wwe-2k20">WWE 2K20</a></li>
+                <li><a href="/download/64874/gears-5">Gears 5</a></li>
+              </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Latest Movies</h3>
+
+  
+<table class="table table-hover table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Release</th>
+            <th>Video / Audio</th>
+            <th>Type</th>
+      <th class="text-right">Seeder / Leecher</th>
+      <th class="text-right">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110830/weapons-die-stunde-des-verschwindens">Weapons.2025.1080p.HDTS.x264-RGB</a><br />
+        <small>
+      Weapons - Die Stunde des Verschwindens @ 08.08.25 by RGB
+        - Sprache: Englisch    </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-1080p">Hd-1080p</a> 
+  </td>
+  <td class="text-right">392 / 373</td>
+  <td class="text-right">5908 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110831/oslo-stories-traume">Oslo.Stories-.Traeume.2024.German.DL.EAC3.1080p.WEB.H264-SiXTYNiNE</a><br />
+        <small>
+      Oslo Stories - Träume @ 08.08.25 by SiXTYNiNE
+          </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-1080p">Hd-1080p</a> 
+  </td>
+  <td class="text-right">454 / 253</td>
+  <td class="text-right">7280 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/109600/the-wedding-banquet">The.Wedding.Banquet.2025.German.DL.EAC3.1080p.WEB.H264-SiXTYNiNE</a><br />
+        <small>
+      The Wedding Banquet @ 08.08.25 by SiXTYNiNE
+          </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-1080p">Hd-1080p</a> 
+  </td>
+  <td class="text-right">165 / 8</td>
+  <td class="text-right">4840 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110832/checkmates-ziemlich-schrage-figuren">Checkmates.Ziemlich.schraege.Figuren.2024.German.DL.EAC3.1080p.WEB.H264-SiXTYNiNE</a><br />
+        <small>
+      Checkmates - Ziemlich schräge Figuren @ 08.08.25 by SiXTYNiNE
+          </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-1080p">Hd-1080p</a> 
+  </td>
+  <td class="text-right">351 / 211</td>
+  <td class="text-right">7090 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/81549/skandal-ewenement-molesty">Heretics.Der.Satanskult.2024.German.EAC3.1080p.WEB.H264-SiXTYNiNE</a><br />
+        <small>
+      Skandal. Ewenement Molesty @ 08.08.25 by SiXTYNiNE
+          </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-1080p">Hd-1080p</a> 
+  </td>
+  <td class="text-right">451 / 348</td>
+  <td class="text-right">5350 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110822/harvest">Harvest.2024.1080p.AMZN.WEB-DL.DDP5.1.H.264-MADSKY</a><br />
+        <small>
+      Harvest @ 08.08.25 by MADSKY
+        - Sprache: Englisch    </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-1080p">Hd-1080p</a> 
+  </td>
+  <td class="text-right">418 / 233</td>
+  <td class="text-right">8590 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110822/harvest">Harvest.2024.720p.AMZN.WEB-DL.DDP5.1.H.264-MADSKY</a><br />
+        <small>
+      Harvest @ 08.08.25 by MADSKY
+        - Sprache: Englisch    </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-720p">Hd-720p</a> 
+  </td>
+  <td class="text-right">195 / 339</td>
+  <td class="text-right">3640 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/4818/malastrana">Short.Night.Of.Glass.Dolls.1971.2160p.UHD.BluRay.x265-4KDVS</a><br />
+        <small>
+      Malastrana @ 08.08.25 by 4KDVS
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Blu-ray<br />Stereo</td>
+    <td>
+    <a href="/category/movies">Movies</a> 
+  </td>
+  <td class="text-right">343 / 470</td>
+  <td class="text-right">38161 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110199/divinity">Divinity.2023.COMPLETE.BLURAY-B3LLUM</a><br />
+        <small>
+      Divinity @ 08.08.25 by B3LLUM
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Blu-ray<br />DTS</td>
+    <td>
+    <a href="/category/movies">Movies</a> 
+  </td>
+  <td class="text-right">217 / 457</td>
+  <td class="text-right">35467 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110812/black-tea">Black.Tea.2024.1080p.BluRay.x264-D3US</a><br />
+        <small>
+      Black Tea @ 08.08.25 by D3US
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Blu-ray<br />DTS</td>
+    <td>
+    <a href="/category/movies">Movies</a> 
+  </td>
+  <td class="text-right">218 / 189</td>
+  <td class="text-right">16741 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110809/secret-of-shaolin-kung-fu">Secret.Of.Shaolin.1979.iNTERNAL.DVDRip.x264-UPRiSiNG</a><br />
+        <small>
+      Secret of Shaolin Kung Fu @ 08.08.25 by UPRiSiNG
+        - Sprache: Englisch    </small>
+  </td>
+    <td>DVD-Rip<br />AAC</td>
+    <td>
+    <a href="/category/internal">Internal</a> 
+  </td>
+  <td class="text-right">466 / 386</td>
+  <td class="text-right">894 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/92809/das-schlitzohr-mit-der-affentechnik">Monkey.Kung.Fu.1979.INTERNAL.DVDRIP.X264-UPRiSiNG</a><br />
+        <small>
+      Das Schlitzohr mit der Affentechnik @ 08.08.25 by UPRiSiNG
+        - Sprache: Englisch    </small>
+  </td>
+    <td>DVD-Rip<br />AAC</td>
+    <td>
+    <a href="/category/internal">Internal</a> 
+  </td>
+  <td class="text-right">228 / 187</td>
+  <td class="text-right">1491 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110810/method-man">Method.Man.1979.iNTERNAL.DVDRip.x264-UPRiSiNG</a><br />
+        <small>
+      Method Man @ 08.08.25 by UPRiSiNG
+        - Sprache: Englisch    </small>
+  </td>
+    <td>DVD-Rip<br />AAC</td>
+    <td>
+    <a href="/category/internal">Internal</a> 
+  </td>
+  <td class="text-right">285 / 365</td>
+  <td class="text-right">893 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110833/15-days">15.Days.2025.1080p.AMZN.WEB-DL.DD+2.0.H.264-playWEB</a><br />
+        <small>
+      15 Days @ 08.08.25 by playWEB
+        - Sprache: Englisch    </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-1080p">Hd-1080p</a> 
+  </td>
+  <td class="text-right">32 / 122</td>
+  <td class="text-right">6090 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110820/dark-force-lautlos-kommt-der-tod">The.Silencers.1996.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.2.0-HDT</a><br />
+        <small>
+      Dark Force - Lautlos kommt der Tod @ 08.08.25 by HDT
+        - Sprache: Englisch    </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-1080p">Hd-1080p</a> 
+  </td>
+  <td class="text-right">467 / 345</td>
+  <td class="text-right">15200 MB</td>
+</tr>
+      </tbody>
+</table>
+</section>
+
+<section>
+  <h3>Latest Games</h3>
+
+  
+<table class="table table-hover table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Release</th>
+            <th>Type</th>
+      <th class="text-right">Seeder / Leecher</th>
+      <th class="text-right">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/109662/capcom-fighting-collection-2">Capcom.Fighting.Collection.2.Update.v1.0.0.3-RUNE</a><br />
+        <small>
+      Capcom Fighting Collection 2 @ 08.08.25 by RUNE
+          </small>
+  </td>
+    <td>
+    <a href="/category/update">Update</a> 
+  </td>
+  <td class="text-right">438 / 38</td>
+  <td class="text-right">196 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/105246/heavy-cargo-the-truck-simulator">Heavy.Cargo.The.Truck.Simulator.Mission.Pack-SKIDROW</a><br />
+        <small>
+      Heavy Cargo - The Truck Simulator @ 08.08.25 by SKiDROW
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">454 / 306</td>
+  <td class="text-right">7163 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/76260/indie-spiele">SLACKJAW-DOGE</a><br />
+        <small>
+      Indie-Spiele @ 08.08.25 by DOGE
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">292 / 254</td>
+  <td class="text-right">3717 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/7945/stasis">Stasis_Update_v1.0.2_NSW-VENOM</a><br />
+        <small>
+      Stasis @ 08.08.25 by VENOM
+          </small>
+  </td>
+    <td>
+    <a href="/category/console">Console</a> 
+  </td>
+  <td class="text-right">486 / 342</td>
+  <td class="text-right">465 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/76260/indie-spiele">Promethium-bADkARMA</a><br />
+        <small>
+      Indie-Spiele @ 08.08.25 by bADkARMA
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">489 / 279</td>
+  <td class="text-right">234 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110813/iron-core-mech-survivor">Iron_Core_Mech_Survivor-FLT</a><br />
+        <small>
+      Iron Core: Mech Survivor @ 08.08.25 by FLT
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">47 / 479</td>
+  <td class="text-right">4053 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/76260/indie-spiele">Rachels_Journal_MacOS-bADkARMA</a><br />
+        <small>
+      Indie-Spiele @ 08.08.25 by bADkARMA
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">306 / 328</td>
+  <td class="text-right">195 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/76260/indie-spiele">Rachels_Journal_Linux-bADkARMA</a><br />
+        <small>
+      Indie-Spiele @ 08.08.25 by bADkARMA
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">235 / 431</td>
+  <td class="text-right">198 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/76260/indie-spiele">Rachels_Journal-bADkARMA</a><br />
+        <small>
+      Indie-Spiele @ 08.08.25 by bADkARMA
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">77 / 470</td>
+  <td class="text-right">188 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/92457/chained-echoes">Chained_Echoes_Ashes_of_Elrant_Linux-Razor1911</a><br />
+        <small>
+      Chained Echoes @ 08.08.25 by Razor1911
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">25 / 303</td>
+  <td class="text-right">779 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/547/virtual-rides-3-fahrgeschaeft-simulator">Virtual_Rides_3_Ride_Pack_3_Noise_Machine_And_Power_Dive_MacOS-Razor1911</a><br />
+        <small>
+      Virtual Rides 3 – Fahrgeschäft-Simulator @ 08.08.25 by Razor1911
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">443 / 497</td>
+  <td class="text-right">3055 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/92457/chained-echoes">Chained_Echoes_Ashes_of_Elrant_MacOS-Razor1911</a><br />
+        <small>
+      Chained Echoes @ 08.08.25 by Razor1911
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">99 / 314</td>
+  <td class="text-right">777 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/102428/reus-2">Reus_2_Everglades_MacOS-Razor1911</a><br />
+        <small>
+      Reus 2 @ 08.08.25 by Razor1911
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">78 / 277</td>
+  <td class="text-right">2247 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/76260/indie-spiele">Absent-bADkARMA</a><br />
+        <small>
+      Indie-Spiele @ 08.08.25 by bADkARMA
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">335 / 143</td>
+  <td class="text-right">2275 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/76260/indie-spiele">Hollow_Floor-bADkARMA</a><br />
+        <small>
+      Indie-Spiele @ 08.08.25 by bADkARMA
+          </small>
+  </td>
+    <td>
+    <a href="/category/full-game">Full Game</a> 
+  </td>
+  <td class="text-right">148 / 243</td>
+  <td class="text-right">246 MB</td>
+</tr>
+      </tbody>
+</table>
+</section>
+
+<section>
+  <h3>Latest Series & TV</h3>
+
+  
+<table class="table table-hover table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Release</th>
+            <th>Video / Audio</th>
+            <th>Type</th>
+      <th class="text-right">Seeder / Leecher</th>
+      <th class="text-right">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/40196/strukturen-neues-aus-der-roboter-welt">Watari-kuns.Is.About.To.Collapse.S01E06.720p.WEB.H264-SKYANiME</a><br />
+        <small>
+      Strukturen Neues aus der Roboter Welt @ 08.08.25 by SKYANiME
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AAC</td>
+    <td>
+    <a href="/category/anime">Anime</a> 
+  </td>
+  <td class="text-right">71 / 392</td>
+  <td class="text-right">717 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110334/tougen-anki-dark-demon-of-paradise">TOUGEN.ANKI.S01E05.720p.WEB.H264-SKYANiME</a><br />
+        <small>
+      Tougen Anki: Dark Demon of Paradise @ 08.08.25 by SKYANiME
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AAC</td>
+    <td>
+    <a href="/category/anime">Anime</a> 
+  </td>
+  <td class="text-right">255 / 305</td>
+  <td class="text-right">724 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/59706/paul-jacobs-und-die-atombombe">Secrets.Of.The.Silent.Witch.S01E06.720p.WEB.H264-SKYANiME</a><br />
+        <small>
+      Paul Jacobs und die Atombombe @ 08.08.25 by SKYANiME
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AAC</td>
+    <td>
+    <a href="/category/anime">Anime</a> 
+  </td>
+  <td class="text-right">326 / 422</td>
+  <td class="text-right">724 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/59986/die-roboter-kommen">Betrothed.To.My.Sisters.Ex.S01E06.720p.WEB.H264-SKYANiME</a><br />
+        <small>
+      Die Roboter kommen @ 08.08.25 by SKYANiME
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AAC</td>
+    <td>
+    <a href="/category/anime">Anime</a> 
+  </td>
+  <td class="text-right">464 / 297</td>
+  <td class="text-right">740 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/201/expedition-ins-unbekannte">Expedition.Unknown.S16E07.720p.WEB.h264-CBFM</a><br />
+        <small>
+      Expedition ins Unbekannte @ 08.08.25 by CBFM
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AAC</td>
+    <td>
+    <a href="/category/tvdoc">Dokumentation</a> 
+  </td>
+  <td class="text-right">252 / 241</td>
+  <td class="text-right">1042 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/59986/die-roboter-kommen">Betrothed.to.My.Sisters.Ex.S01E06.1080p.WEB.H264-KAWAII</a><br />
+        <small>
+      Die Roboter kommen @ 08.08.25 by KAWAII
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AAC</td>
+    <td>
+    <a href="/category/anime">Anime</a> 
+  </td>
+  <td class="text-right">339 / 445</td>
+  <td class="text-right">1431 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/59706/paul-jacobs-und-die-atombombe">Secrets.of.the.Silent.Witch.S01E06.1080p.WEB.H264-KAWAII</a><br />
+        <small>
+      Paul Jacobs und die Atombombe @ 08.08.25 by KAWAII
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AAC</td>
+    <td>
+    <a href="/category/anime">Anime</a> 
+  </td>
+  <td class="text-right">103 / 452</td>
+  <td class="text-right">1406 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/40196/strukturen-neues-aus-der-roboter-welt">Watari-kuns.______.Is.about.to.Collapse.S01E06.1080p.WEB.H264-KAWAII</a><br />
+        <small>
+      Strukturen Neues aus der Roboter Welt @ 08.08.25 by KAWAII
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AAC</td>
+    <td>
+    <a href="/category/anime">Anime</a> 
+  </td>
+  <td class="text-right">171 / 478</td>
+  <td class="text-right">1384 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/81284/stilles-wasser">Stilles.Wasser.2020.S04.German.DL.AC3.720p.ATVP.WEB.H264-BUTTERCUP</a><br />
+        <small>
+      Stilles Wasser @ 08.08.25 by BUTTERCUP
+          </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-720p">Hd-720p</a> 
+  </td>
+  <td class="text-right">361 / 315</td>
+  <td class="text-right">3710 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/81284/stilles-wasser">Stilles.Wasser.2020.S03.German.DL.AC3.720p.ATVP.WEB.H264-BUTTERCUP</a><br />
+        <small>
+      Stilles Wasser @ 08.08.25 by BUTTERCUP
+          </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-720p">Hd-720p</a> 
+  </td>
+  <td class="text-right">446 / 334</td>
+  <td class="text-right">7050 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/81284/stilles-wasser">Stilles.Wasser.2020.S02.German.DL.AC3.720p.ATVP.WEB.H264-BUTTERCUP</a><br />
+        <small>
+      Stilles Wasser @ 08.08.25 by BUTTERCUP
+          </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-720p">Hd-720p</a> 
+  </td>
+  <td class="text-right">409 / 325</td>
+  <td class="text-right">5110 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/81284/stilles-wasser">Stilles.Wasser.2020.S01.German.DL.AC3.720p.ATVP.WEB.H264-BUTTERCUP</a><br />
+        <small>
+      Stilles Wasser @ 08.08.25 by BUTTERCUP
+          </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-720p">Hd-720p</a> 
+  </td>
+  <td class="text-right">83 / 132</td>
+  <td class="text-right">9420 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/100961/the-valley">The.Valley.After.Show.S01.720p.AMZN.WEB-DL.DDP2.0.H.264-NTb</a><br />
+        <small>
+      The Valley @ 08.08.25 by NTb
+        - Sprache: Englisch    </small>
+  </td>
+    <td>HDTV<br />AC3</td>
+    <td>
+    <a href="/category/hd-720p">Hd-720p</a> 
+  </td>
+  <td class="text-right">91 / 381</td>
+  <td class="text-right">9900 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/75716/the-joy-of-painting">Bob.Ross.The.Joy.of.Painting.S18E13.Rippling.Waters.720p.WEB.h264-BOBROSS</a><br />
+        <small>
+      The Joy of Painting @ 08.08.25 by BOBROSS
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AC3</td>
+    <td>
+    <a href="/category/tvdoc">Dokumentation</a> 
+  </td>
+  <td class="text-right">65 / 158</td>
+  <td class="text-right">602 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/75716/the-joy-of-painting">Bob.Ross.The.Joy.of.Painting.S18E13.Rippling.Waters.1080p.WEB.h264-BOBROSS</a><br />
+        <small>
+      The Joy of Painting @ 08.08.25 by BOBROSS
+        - Sprache: Englisch    </small>
+  </td>
+    <td>Web-Rip<br />AC3</td>
+    <td>
+    <a href="/category/tvdoc">Dokumentation</a> 
+  </td>
+  <td class="text-right">67 / 203</td>
+  <td class="text-right">1024 MB</td>
+</tr>
+      </tbody>
+</table>
+</section>
+
+<section>
+  <h3>Latest Software & Apps</h3>
+
+  
+<table class="table table-hover table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Release</th>
+            <th>Type</th>
+      <th class="text-right">Seeder / Leecher</th>
+      <th class="text-right">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110816/key-metric-sql-backup-master">Key.Metric.SQL.Backup.Master.v7.9.908.0.Incl.Keygen-BTCR</a><br />
+        <small>
+      Key Metric SQL Backup Master @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">482 / 409</td>
+  <td class="text-right">38 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110817/gravitational-inc-teleport-enterprise">Gravitational.Inc.Teleport.Enterprise.v18.1.2.Linux.arm32.Incl.Keyfilemaker-BTCR</a><br />
+        <small>
+      Gravitational Inc Teleport Enterprise @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">470 / 36</td>
+  <td class="text-right">208 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110817/gravitational-inc-teleport-enterprise">Gravitational.Inc.Teleport.Enterprise.v18.1.2.Fedora.Linux.x64.Incl.Keyfilemaker-BTCR</a><br />
+        <small>
+      Gravitational Inc Teleport Enterprise @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">158 / 204</td>
+  <td class="text-right">226 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110817/gravitational-inc-teleport-enterprise">Gravitational.Inc.Teleport.Enterprise.v18.1.2.Fedora.Linux.arm32.Incl.Keyfilemaker-BTCR</a><br />
+        <small>
+      Gravitational Inc Teleport Enterprise @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">62 / 145</td>
+  <td class="text-right">205 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110817/gravitational-inc-teleport-enterprise">Gravitational.Inc.Teleport.Enterprise.v18.1.2.Debian.Linux.arm64.Incl.Keyfilemaker-BTCR</a><br />
+        <small>
+      Gravitational Inc Teleport Enterprise @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">484 / 155</td>
+  <td class="text-right">208 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110817/gravitational-inc-teleport-enterprise">Gravitational.Inc.Teleport.Enterprise.v18.1.2.CentOS.RedHat.Linux.x64.Incl.Keyfilemaker-BTCR</a><br />
+        <small>
+      Gravitational Inc Teleport Enterprise @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">272 / 26</td>
+  <td class="text-right">228 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110818/flexense-sysgauge-server">Flexense.SysGauge.Server.v11.9.18.x86.Incl.Keygen-BTCR</a><br />
+        <small>
+      Flexense SysGauge Server @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">194 / 406</td>
+  <td class="text-right">13 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110819/elasticsearch-enterprise">Elasticsearch.Enterprise.v9.1.0.MacOS.arm64.Incl.Keygen.and.Patch-BTCR</a><br />
+        <small>
+      Elasticsearch Enterprise @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">21 / 316</td>
+  <td class="text-right">499 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110819/elasticsearch-enterprise">Elasticsearch.Enterprise.v9.1.0.Linux.x64.Incl.Keygen.and.Patch-BTCR</a><br />
+        <small>
+      Elasticsearch Enterprise @ 06.08.25 by BTCR
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">312 / 216</td>
+  <td class="text-right">667 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/36115/linkedin-learning">Linkedin.Learning.ServiceNow-Basic.Administration.UPDATED.2025-08-01.BOOKWARE-SCHOLASTiC</a><br />
+        <small>
+      LinkedIn Learning @ 02.08.25 by SCHOLASTiC
+          </small>
+  </td>
+    <td>
+    <a href="/category/elearning">Elearning</a> 
+  </td>
+  <td class="text-right">230 / 19</td>
+  <td class="text-right">344 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/36115/linkedin-learning">Linkedin.Learning.ServiceNow-Basic.Administration.UPDATED.2025-08-01.BOOKWARE-SCHOLASTiC</a><br />
+        <small>
+      LinkedIn Learning @ 02.08.25 by SCHOLASTiC
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">39 / 469</td>
+  <td class="text-right">344 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/36115/linkedin-learning">Linkedin.Learning.Revit-Tips.Tricks.And.Troubleshooting.UPDATED.2025-07-29.BOOKWARE-SCHOLASTiC</a><br />
+        <small>
+      LinkedIn Learning @ 02.08.25 by SCHOLASTiC
+          </small>
+  </td>
+    <td>
+    <a href="/category/elearning">Elearning</a> 
+  </td>
+  <td class="text-right">24 / 78</td>
+  <td class="text-right">22420 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/36115/linkedin-learning">Linkedin.Learning.Revit-Tips.Tricks.And.Troubleshooting.UPDATED.2025-07-29.BOOKWARE-SCHOLASTiC</a><br />
+        <small>
+      LinkedIn Learning @ 02.08.25 by SCHOLASTiC
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">79 / 109</td>
+  <td class="text-right">22420 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/36115/linkedin-learning">Linkedin.Learning.InDesign.Tips.For.Design.Geeks.UPDATED.2025-07-25.BOOKWARE-SCHOLASTiC</a><br />
+        <small>
+      LinkedIn Learning @ 02.08.25 by SCHOLASTiC
+          </small>
+  </td>
+    <td>
+    <a href="/category/apps">Apps</a> 
+  </td>
+  <td class="text-right">86 / 39</td>
+  <td class="text-right">3058 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/36115/linkedin-learning">Linkedin.Learning.InDesign.Tips.For.Design.Geeks.UPDATED.2025-07-25.BOOKWARE-SCHOLASTiC</a><br />
+        <small>
+      LinkedIn Learning @ 02.08.25 by SCHOLASTiC
+          </small>
+  </td>
+    <td>
+    <a href="/category/elearning">Elearning</a> 
+  </td>
+  <td class="text-right">165 / 75</td>
+  <td class="text-right">3058 MB</td>
+</tr>
+      </tbody>
+</table>
+</section>
+
+<section>
+  <h3>Latest XXX Movies</h3>
+
+  
+<table class="table table-hover table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Release</th>
+            <th>Type</th>
+      <th class="text-right">Seeder / Leecher</th>
+      <th class="text-right">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110787/anal-deluxxxe">Anal.Deluxxxe.2.ITALiAN.XXX.DVDRip.XviD-LUST</a><br />
+        <small>
+      Anal Deluxxxe @ 06.08.25 by LUST
+          </small>
+  </td>
+    <td>
+    <a href="/category/xvid">Xvid</a> 
+  </td>
+  <td class="text-right">367 / 378</td>
+  <td class="text-right">1411 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110651/fucking-my-step-mom">Fucking.My.Step.Mom.DiSC4.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Fucking My Step Mom @ 28.07.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">353 / 296</td>
+  <td class="text-right">1291 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110651/fucking-my-step-mom">Fucking.My.Step.Mom.DiSC3.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Fucking My Step Mom @ 28.07.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">442 / 349</td>
+  <td class="text-right">1666 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110651/fucking-my-step-mom">Fucking.My.Step.Mom.DiSC2.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Fucking My Step Mom @ 28.07.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">301 / 42</td>
+  <td class="text-right">1475 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110651/fucking-my-step-mom">Fucking.My.Step.Mom.DiSC1.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Fucking My Step Mom @ 28.07.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">356 / 51</td>
+  <td class="text-right">1643 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110652/the-older-woman">The.Older.Woman.XXX.DVDRip.x264-CiCXXX</a><br />
+        <small>
+      The Older Woman @ 28.07.25 by CiCXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">64 / 61</td>
+  <td class="text-right">1477 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110653/milfs-abroad">Milfs.Abroad.XXX.DVDRip.x264-CiCXXX</a><br />
+        <small>
+      Milfs Abroad @ 28.07.25 by CiCXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">370 / 468</td>
+  <td class="text-right">1683 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/97177/scoundrels">Scoundrels.1982.XXX.BDRIP.X264-WATCHABLE</a><br />
+        <small>
+      Scoundrels @ 12.07.25 by WATCHABLE
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">193 / 201</td>
+  <td class="text-right">1064 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110356/hardcore-treats">Hardcore.Treats.7.DiSC4.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Hardcore Treats @ 12.07.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">117 / 202</td>
+  <td class="text-right">1587 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110356/hardcore-treats">Hardcore.Treats.7.DiSC3.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Hardcore Treats @ 12.07.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">176 / 46</td>
+  <td class="text-right">1502 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110356/hardcore-treats">Hardcore.Treats.7.DiSC2.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Hardcore Treats @ 12.07.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">347 / 162</td>
+  <td class="text-right">2085 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110356/hardcore-treats">Hardcore.Treats.7.DiSC1.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Hardcore Treats @ 12.07.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">220 / 15</td>
+  <td class="text-right">1679 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110107/fetish-fashion-fantasy">Fetish.Fashion.Fantasy.DiSC4.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Fetish Fashion Fantasy @ 27.06.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">420 / 10</td>
+  <td class="text-right">1061 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110107/fetish-fashion-fantasy">Fetish.Fashion.Fantasy.DiSC3.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Fetish Fashion Fantasy @ 27.06.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">295 / 261</td>
+  <td class="text-right">2302 MB</td>
+</tr>
+          <tr>
+  <td style="word-wrap: break-all; word-break: break-all; hyphens: auto; overflow: hidden">
+        <a href="/download/110107/fetish-fashion-fantasy">Fetish.Fashion.Fantasy.DiSC2.XXX.DVDRiP.X264-LOVEXXX</a><br />
+        <small>
+      Fetish Fashion Fantasy @ 27.06.25 by LOVEXXX
+          </small>
+  </td>
+    <td>
+    <a href="/category/xxx">XXX</a> 
+  </td>
+  <td class="text-right">382 / 180</td>
+  <td class="text-right">1437 MB</td>
+</tr>
+      </tbody>
+</table>
+</section>
+        </div>
+
+                        <br><br>
+
+      </div>
+		</main>
+        
+    <footer>
+      <div class="container">
+    		<div class="row">
+    			<div class="col-xs-6">
+  					© 2005 - 2025 by <a href="https://www.speedtorrent.com/">speedtorrent.com & Saugstube</a>
+    			</div>
+
+          <div class="col-xs-6">
+          </div>
+    		</div>
+      </div>
+    </footer>
+    
+        <script
+  src="//code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		  </body>
+</html>

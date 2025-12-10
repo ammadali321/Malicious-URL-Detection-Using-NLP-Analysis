@@ -1,0 +1,869 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head><script>(function(w,i,g){w[g]=w[g]||[];if(typeof w[g].push=='function')w[g].push(i)})
+(window,'GTM-MDNCSZD','google_tags_first_party');</script><script>(function(w,d,s,l){w[l]=w[l]||[];(function(){w[l].push(arguments);})('set', 'developer_id.dY2E1Nz', true);
+		var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s);j.async=true;j.src='/tower/';
+		f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roman Catholic History - On This Day</title>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MDNCSZD');</script>
+<script>(function(){var host=window.location.hostname;var element=document.createElement('script');var firstScript=document.getElementsByTagName('script')[0];var url='https://cmp.inmobi.com'.concat('/choice/','GANCBjEfRH5Fe','/',host,'/choice.js?tag_version=V3');var uspTries=0;var uspTriesLimit=3;element.async=true;element.type='text/javascript';element.src=url;firstScript.parentNode.insertBefore(element,firstScript);function makeStub(){var TCF_LOCATOR_NAME='__tcfapiLocator';var queue=[];var win=window;var cmpFrame;function addFrame(){var doc=win.document;var otherCMP=!!(win.frames[TCF_LOCATOR_NAME]);if(!otherCMP){if(doc.body){var iframe=doc.createElement('iframe');iframe.style.cssText='display:none';iframe.name=TCF_LOCATOR_NAME;doc.body.appendChild(iframe)}else{setTimeout(addFrame,5)}}
+return!otherCMP}
+function tcfAPIHandler(){var gdprApplies;var args=arguments;if(!args.length){return queue}else if(args[0]==='setGdprApplies'){if(args.length>3&&args[2]===2&&typeof args[3]==='boolean'){gdprApplies=args[3];if(typeof args[2]==='function'){args[2]('set',!0)}}}else if(args[0]==='ping'){var retr={gdprApplies:gdprApplies,cmpLoaded:!1,cmpStatus:'stub'};if(typeof args[2]==='function'){args[2](retr)}}else{if(args[0]==='init'&&typeof args[3]==='object'){args[3]=Object.assign(args[3],{tag_version:'V3'})}
+queue.push(args)}}
+function postMessageEventHandler(event){var msgIsString=typeof event.data==='string';var json={};try{if(msgIsString){json=JSON.parse(event.data)}else{json=event.data}}catch(ignore){}
+var payload=json.__tcfapiCall;if(payload){window.__tcfapi(payload.command,payload.version,function(retValue,success){var returnMsg={__tcfapiReturn:{returnValue:retValue,success:success,callId:payload.callId}};if(msgIsString){returnMsg=JSON.stringify(returnMsg)}
+if(event&&event.source&&event.source.postMessage){event.source.postMessage(returnMsg,'*')}},payload.parameter)}}
+while(win){try{if(win.frames[TCF_LOCATOR_NAME]){cmpFrame=win;break}}catch(ignore){}
+if(win===window.top){break}
+win=win.parent}
+if(!cmpFrame){addFrame();win.__tcfapi=tcfAPIHandler;win.addEventListener('message',postMessageEventHandler,!1)}};makeStub();function makeGppStub(){const CMP_ID=10;const SUPPORTED_APIS=['2:tcfeuv2','6:uspv1','7:usnatv1','8:usca','9:usvav1','10:uscov1','11:usutv1','12:usctv1'];window.__gpp_addFrame=function(n){if(!window.frames[n]){if(document.body){var i=document.createElement("iframe");i.style.cssText="display:none";i.name=n;document.body.appendChild(i)}else{window.setTimeout(window.__gpp_addFrame,10,n)}}};window.__gpp_stub=function(){var b=arguments;__gpp.queue=__gpp.queue||[];__gpp.events=__gpp.events||[];if(!b.length||(b.length==1&&b[0]=="queue")){return __gpp.queue}
+if(b.length==1&&b[0]=="events"){return __gpp.events}
+var cmd=b[0];var clb=b.length>1?b[1]:null;var par=b.length>2?b[2]:null;if(cmd==="ping"){clb({gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:SUPPORTED_APIS,cmpId:CMP_ID,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{},},!0)}else if(cmd==="addEventListener"){if(!("lastId" in __gpp)){__gpp.lastId=0}
+__gpp.lastId++;var lnr=__gpp.lastId;__gpp.events.push({id:lnr,callback:clb,parameter:par,});clb({eventName:"listenerRegistered",listenerId:lnr,data:!0,pingData:{gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:SUPPORTED_APIS,cmpId:CMP_ID,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{},},},!0)}else if(cmd==="removeEventListener"){var success=!1;for(var i=0;i<__gpp.events.length;i++){if(__gpp.events[i].id==par){__gpp.events.splice(i,1);success=!0;break}}
+clb({eventName:"listenerRemoved",listenerId:par,data:success,pingData:{gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:SUPPORTED_APIS,cmpId:CMP_ID,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{},},},!0)}else if(cmd==="hasSection"){clb(!1,!0)}else if(cmd==="getSection"||cmd==="getField"){clb(null,!0)}else{__gpp.queue.push([].slice.apply(b))}};window.__gpp_msghandler=function(event){var msgIsString=typeof event.data==="string";try{var json=msgIsString?JSON.parse(event.data):event.data}catch(e){var json=null}
+if(typeof json==="object"&&json!==null&&"__gppCall" in json){var i=json.__gppCall;window.__gpp(i.command,function(retValue,success){var returnMsg={__gppReturn:{returnValue:retValue,success:success,callId:i.callId,},};event.source.postMessage(msgIsString?JSON.stringify(returnMsg):returnMsg,"*")},"parameter" in i?i.parameter:null,"version" in i?i.version:"1.1")}};if(!("__gpp" in window)||typeof window.__gpp!=="function"){window.__gpp=window.__gpp_stub;window.addEventListener("message",window.__gpp_msghandler,!1);window.__gpp_addFrame("__gppLocator")}};makeGppStub();var uspStubFunction=function(){var arg=arguments;if(typeof window.__uspapi!==uspStubFunction){setTimeout(function(){if(typeof window.__uspapi!=='undefined'){window.__uspapi.apply(window.__uspapi,arg)}},500)}};var checkIfUspIsReady=function(){uspTries++;if(window.__uspapi===uspStubFunction&&uspTries<uspTriesLimit){console.warn('USP is not accessible')}else{clearInterval(uspInterval)}};if(typeof window.__uspapi==='undefined'){window.__uspapi=uspStubFunction;var uspInterval=setInterval(checkIfUspIsReady,6000)}})();</script>
+<link rel="preload" as="script" href="https://www.googletagservices.com/tag/js/gpt.js">
+<script>const p=new URLSearchParams(window.location.search);const h=p.get('sh_kit')||localStorage.getItem('hem_sha256')||JSON.parse(localStorage.getItem('adt_ei'))?.sha256Hash;
+window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.setPageTargeting({param1:'Topics'});
+if(h?.length===64){localStorage.setItem('hem_sha256',h);tude.setIdProfile({e:h})}});
+if(p.has('sh_kit')){p.delete('sh_kit');history.replaceState(null,'',window.location.pathname+(p.toString()?'?'+p.toString():''))};</script>
+<script async src='https://htlbid.com/stage/v3/onthisday.com/htlbid.js'></script><script>window.htlbid=window.htlbid||{};window.htlbid.cmd=window.htlbid.cmd||[];htlbid.cmd.push(()=>{htlbid.layout()})</script>
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<link rel="stylesheet" href="/_assets/css/main.css?v41" type="text/css" media="all">
+<link rel="preload" href="/_assets/fonts/proximanova.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/_assets/fonts/proximanova-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="On This Day">
+<meta name="application-name" content="On This Day">
+<meta name="msapplication-TileColor" content="#0f1217">
+<meta name="theme-color" content="#0f1217">
+<meta name="description" content="Roman Catholic History. Important events, famous birthdays and historical deaths from our searchable today in history archives.">
+<link rel="canonical" href="https://www.onthisday.com/religion/christianity/roman-catholic">
+<meta name="twitter:site" content="@OnThisDaycom">
+<meta name="twitter:card" content="summary_large_image">	
+<meta property="fb:admins" content="647215231">
+<meta property="og:type" content="article">
+<meta property="article:publisher" content="https://www.facebook.com/OnThisDaycom">
+<meta property="og:site_name" content="On This Day">
+<meta property="og:title" content="Roman Catholic History">
+<meta property="og:url" content="https://www.onthisday.com/religion/christianity/roman-catholic">
+<meta property="og:description" content="Roman Catholic History. Important events, famous birthdays and historical deaths from our searchable today in history archives.">
+<meta property="og:image" content="https://www.onthisday.com/images/people/chubby-checker.jpg?w=360">
+</head>
+<body>
+<header class="header header--alt"><nav class="site-nav site-nav--primary"><div class="wrapper">
+<div class="header__left-block"><button class="site-nav__button site-nav__categories-toggle" id="#nav" title="Show Menu"><span class="accessibility">Menu</span><span class="icon-bar-1"></span><span class="icon-bar-2"></span><span class="icon-bar-3"></span></button></div>
+<div class="site-nav__button site-nav__channels-toggle"><span class="site-nav__channels-toggle__desktop">Channels</span><a href="/" class="site-nav__logo"><span class="logo"></span>On This Day</a></div>
+<ul class="site-nav__toggle-menu"><li><a href="/search.php" class="site-nav__button site-nav__search-toggle" id="#search" title="Show Search"><span class="accessibility">Search</span></a></li></ul>
+<div class="new-nav-wrap">
+<p class="site-nav__title"><a href="/" style="color:#fff; text-decoration:none;">Today in History</a></p>
+<ul class="site-nav__list site-nav__list--categories">
+<li class="site-nav__item"><a href="/today/events.php" class="site-nav__link">Events</a></li>
+<li class="site-nav__item"><a href="/today/birthdays.php" class="site-nav__link">Birthdays</a></li>
+<li class="site-nav__item"><a href="/calendar.php" class="site-nav__link">Calendar</a></li>
+<li class="site-nav__item"><a href="/dates-by-year.php" class="site-nav__link">Dates</a></li>
+<li class="site-nav__item"><a href="/dates-by-year.php" class="site-nav__link">People</a></li>
+<li class="site-nav__item"><a href="/articles.php" class="site-nav__link">Articles</a></li>
+<li class="site-nav__item"><a href="/photos/" class="site-nav__link">Photos</a></li>
+<li class="site-nav__item"><a href="/quiz/" class="site-nav__link">Quiz</a></li>
+</ul>
+<ul class="site-nav__list site-nav__list--channels" id="channels">
+<li class="site-nav__item site-nav__item--history"><a href="/history/" class="site-nav__link">History</a></li>
+<li class="site-nav__item site-nav__item--film-tv"><a href="/film-tv/" class="site-nav__link">Film &amp; TV</a></li>
+<li class="site-nav__item site-nav__item--music"><a href="/music/" class="site-nav__link">Music</a></li>
+<li class="site-nav__item site-nav__item--sport"><a href="/sport/" class="site-nav__link">Sport</a></li></ul>
+<p style="clear:both"></p>
+</div></div></nav>
+<div class="header__content"><div class="wrapper"><a href="/" class="header__link"><span class="header__text">On This Day</span></a>
+<div id="sp-header" class="sponsor"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-header',baseDivId:'header_wide'}])});</script></div></div>
+<nav class="site-nav site-nav--categories site-nav--categories-2" id="nav"><div class="wrapper">
+<ul class="site-nav__list site-nav__list--categories">
+<li class="site-nav__item site-nav__item--heading"><a href="/" class="site-nav__link">Today in History</a></li>
+<li class="site-nav__item"><a href="/today/events.php" class="site-nav__link">Events</a></li>
+<li class="site-nav__item"><a href="/today/birthdays.php" class="site-nav__link">Birthdays</a></li>
+<li class="site-nav__item"><a href="/calendar.php" class="site-nav__link">Calendar</a></li>
+<li class="site-nav__item"><a href="/dates-by-year.php" class="site-nav__link">Dates</a></li>
+<li class="site-nav__item"><a href="/famous-people.php" class="site-nav__link">People</a></li>
+<li class="site-nav__item"><a href="/articles.php" class="site-nav__link">Articles</a></li>
+<li class="site-nav__item"><a href="/photos/" class="site-nav__link">Photos</a></li>
+<li class="site-nav__item"><a href="/quiz/" class="site-nav__link">Quiz</a></li>
+</ul></div></nav>
+<div class="header__search"><div class="wrapper">
+<form method="post" action="/search.php">
+<ul class="search__list">
+<li class="search__item"><input name="text" type="text" autocomplete="off" minlength="2" placeholder="Enter Date, Event or Person" value="" class="search__text" aria-label="Date, Event or Person"></li>
+<li class="search__item"><select name="day" class="search__select" aria-label="Day">
+<option>All Days</option>
+<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select></li>
+<li class="search__item">
+<select name="month" class="search__select" aria-label="Month">
+<option value="all" selected="selected">All Months</option>
+<option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></li>
+<li class="search__item"><input name="year" type="number" placeholder="All Years" min="1" max="2050" aria-label="Year"></li>
+<li class="search__item">
+<select name="type" class="search__select" aria-label="Entry Type">
+<option value="all" selected="selected">All Types</option><option value="e">Events</option><option value="b">Birthdays</option><option value="d">Deaths</option><option value="w">Weddings</option></select></li>
+<li class="search__item"><button aria-label="Search" class="search__button">Search</button></li></ul><input type="hidden" name="searchBox" value="T"></form></div></div></header><main class="content">
+<section class="section no-padding-bottom"><header class="page-heading">
+<div class="wrapper"><h1><span class="header-icon" style="background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20width%3D%2246%22%20height%3D%2245.997%22%20viewBox%3D%220%200%2046%2045.997%22%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h46v45.996h-46z%22/%3E%3C/defs%3E%3CclipPath%20id%3D%22b%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20overflow%3D%22visible%22/%3E%3C/clipPath%3E%3Cpath%20clip-path%3D%22url%28%23b%29%22%20fill%3D%22%23009BFF%22%20d%3D%22M22.985%2045.997c-2.047%200-4.087-.275-6.064-.819-.612-.169-.971-.802-.804-1.414.169-.611.796-.975%201.415-.803%203.468.954%207.156.979%2010.678.064%209.121-2.371%2015.49-10.602%2015.49-20.013%200-1.752-.226-3.51-.672-5.224-.158-.612.19-1.289.8-1.453.616-.165%201.224.142%201.393.747l.041.161c.487%201.87.738%203.822.738%205.769%200%2010.458-7.078%2019.604-17.213%2022.238-1.903.496-3.856.747-5.802.747m-21.134-16.323c-.499%200-.95-.317-1.088-.823l-.033-.141c-.479-1.829-.73-3.782-.73-5.727%200-10.459%207.078-19.604%2017.213-22.239%203.884-1.012%207.963-.991%2011.812.057.612.166.975.799.807%201.411-.165.61-.782.98-1.411.807-3.463-.941-7.129-.961-10.63-.051-9.121%202.373-15.49%2010.603-15.49%2020.015%200%201.751.224%203.508.671%205.223.159.612-.199%201.264-.811%201.427-.103.028-.208.041-.31.041M23.015%2042.542c-.293%200-.588-.007-.886-.021-4.097-.183-7.963-1.612-11.18-4.136-.499-.392-.586-1.115-.196-1.614.396-.502%201.116-.585%201.617-.194%202.836%202.224%206.246%203.485%209.861%203.647%209.56.414%2017.574-6.959%2017.997-16.458l1.152-.021%201.147.095c-.468%2010.499-9.038%2018.702-19.512%2018.702m-18.393-19.198l-.025-.001c-.625-.014-1.125-.506-1.125-1.131l.013-.199c.469-10.65%209.561-19.01%2020.386-18.542%204.086.182%207.94%201.605%2011.151%204.114.5.39.589%201.113.196%201.613-.391.502-1.11.589-1.615.198-2.829-2.212-6.23-3.466-9.834-3.628-9.547-.416-17.575%206.96-17.998%2016.459-.027.616-.535%201.117-1.149%201.117%22/%3E%3Cpath%20clip-path%3D%22url%28%23b%29%22%20fill%3D%22%23009BFF%22%20d%3D%22M23.011%2039.095c-1.143%200-2.29-.123-3.409-.365-.62-.136-1.014-.748-.879-1.368.134-.622.754-1.009%201.368-.88%203.094.674%206.323.257%209.162-1.187%204.656-2.368%207.547-7.085%207.547-12.312%200-2.181-.505-4.28-1.501-6.239l.993-.584%201.037-.497-1.037.497%201.043-.483c1.175%202.309%201.766%204.759%201.766%207.306%200%206.097-3.374%2011.599-8.805%2014.36-2.285%201.163-4.736%201.752-7.285%201.752m-14.361-8.811l1.044-.481-1.046.479c-1.158-2.275-1.747-4.727-1.747-7.272%200-6.096%203.373-11.599%208.804-14.36%203.3-1.679%207.055-2.168%2010.657-1.393.62.133%201.015.744.883%201.365-.133.622-.742%201.02-1.366.883-3.079-.662-6.3-.244-9.13%201.194-4.657%202.368-7.548%207.085-7.548%2012.311%200%202.18.506%204.28%201.502%206.24l-2.053%201.034zM23%2035.644c-1.534%200-3.037-.273-4.463-.811-.594-.223-.894-.887-.671-1.48.225-.596.891-.897%201.481-.67%201.167.438%202.396.662%203.653.662%205.705%200%2010.347-4.643%2010.347-10.348-.001-3.998-2.342-7.677-5.961-9.375-.574-.27-.822-.954-.552-1.529.271-.574.952-.818%201.529-.553%204.422%202.074%207.282%206.571%207.284%2011.457%200%206.974-5.673%2012.647-12.647%2012.647m-9.702-5.327c-.381%200-.751-.189-.971-.532-1.292-2.028-1.974-4.375-1.974-6.787%200-5.964%204.231-11.171%2010.061-12.383.622-.131%201.23.269%201.36.892.13.621-.271%201.23-.891%201.359-4.769.991-8.23%205.252-8.23%2010.132%200%201.975.558%203.895%201.613%205.551.341.536.184%201.246-.353%201.589-.19.12-.405.179-.615.179M23.041%2032.194c-5.068%200-9.213-4.105-9.239-9.151%200-5.074%204.107-9.218%209.152-9.243%203.889%200%207.38%202.437%208.698%206.065.216.596-.093%201.256-.689%201.472-.599.218-1.256-.092-1.474-.688-.988-2.721-3.611-4.55-6.528-4.55-3.779.019-6.859%203.131-6.859%206.938.02%203.779%203.132%206.858%206.939%206.858.635%200%201.15.515%201.15%201.149%200%20.636-.515%201.15-1.15%201.15%22/%3E%3C/svg%3E');"></span>
+Roman Catholic History</h1></div></header></section>
+<div class="wrapper"><ul class="breadcrumb__list"><li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+<li class="breadcrumb__item"><a href="/topics.php" class="breadcrumb__link">Topics</a></li>
+<li class="breadcrumb__item"><a href="/religion" class="breadcrumb__link">Religion</a></li>
+<li class="breadcrumb__item"><a href="/religion/christianity" class="breadcrumb__link">Christianity</a></li>
+</ul>
+</div>
+<section style="padding:20px 0 0;">
+<div class="wrapper">
+<p><b>Christianity:</b> 
+<a href="/religion/christianity/anglican">Anglican</a> - 
+<a href="/religion/christianity/baptist">Baptist</a> - 
+<a href="/religion/christianity/calvinist">Calvinist</a> - 
+<a href="/religion/christianity/lutheran">Lutheran</a> - 
+<a href="/religion/christianity/methodist">Methodist</a> - 
+<a href="/religion/christianity/mormonism">Mormonism</a> - 
+<a href="/religion/christianity/orthodox">Orthodox</a> - 
+<a href="/religion/christianity/presbyterian">Presbyterian</a></p>
+</div>
+</section>
+<article class="section no-padding-top no-padding-bottom">
+<div class="wrapper"><header class="section__heading"><h2>Historical Events</h2></header>
+<ul class="event-list event-list--with-advert">
+<li class="event"><a href="/date/230/july/21" class="date">0230-07-21</a> St Pontianus begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/235/september/29" class="date">0235-09-29</a> St Pontianus ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/235/november/21" class="date">0235-11-21</a> St Anterus begins his reign as Catholic Pope, will only rule for 40 days</li>
+</ul>
+<div class="event-list__banner"><div id="sp-sidebar_tall"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-sidebar_tall',baseDivId:'sidebar_tall'}])});</script></div>
+<ul class="event-list event-list--with-advert">
+<li class="event"><a href="/date/236/january/3" class="date">0236-01-03</a> Reign of St Anterus as Catholic Pope ends with his death after only 40 days</li>
+<li class="event"><a href="/date/236/january/10" class="date">0236-01-10</a> Fabian begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/250/january/20" class="date">0250-01-20</a> St Fabian ends his reign as Catholic Pope (236-50)</li>
+<li class="event"><a href="/date/253/june/25" class="date">0253-06-25</a> St Lucius I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/254/may/12" class="date">0254-05-12</a> Stephan I succeeds Lucius I as Catholic Pope</li>
+<li class="event"><a href="/date/257/august/2" class="date">0257-08-02</a> St Stephen I&#039;s death ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/257/august/30" class="date">0257-08-30</a> St Sixtus II begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/258/august/6" class="date">0258-08-06</a> Pope St Sixtus II beheaded in Rome under persecutions by Roman Emperor Valerian</li>
+<li class="event"><a href="/date/269/january/5" class="date">0269-01-05</a> Felix I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/274/january/4" class="date">0274-01-04</a> St Eutychian begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/283/december/17" class="date">0283-12-17</a> St. Caius begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/296/april/22" class="date">0296-04-22</a> St Gaius ends his reign as Catholic Pope</li>
+<li class="event no-border"><a href="/date/296/june/30" class="date">0296-06-30</a> St Marcellinus begins his reign as Catholic Pope</li>
+</ul><span class="list-clearfix"></span></div><div class="wrapper"><ul class="event-list">
+<li><div id="sp-incontent-1" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-1',baseDivId:'incontent'}])});</script>
+</li><li class="event"><a href="/date/308/may/27" class="date">0308-05-27</a> Marcellus I begins his reign as Catholic Pope, serving until his death in 309</li>
+<li class="event"><a href="/date/310/april/18" class="date">0310-04-18</a> St. Eusebius begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/310/october/21" class="date">0310-10-21</a> St. Eusebius ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/311/july/2" class="date">0311-07-02</a> St Miltiades begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/314/january/31" class="date">0314-01-31</a> St Silvester I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/336/january/18" class="date">0336-01-18</a> St Mark elected Catholic Pope</li>
+<li class="event"><a href="/date/336/october/7" class="date">0336-10-07</a> Pope Saint Mark&#039;s death ends his reign as Catholic Pope leaving the papacy vacant</li>
+<li class="event"><a href="/date/337/february/6" class="date">0337-02-06</a> St Julius I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/352/may/17" class="date">0352-05-17</a> Liberius begins his reign as Catholic Pope replacing Julius I</li>
+<li class="event"><a href="/date/366/september/24" class="date">0366-09-24</a> Liberius ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/366/october/1" class="date">0366-10-01</a> Damasus I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/384/december/11" class="date">0384-12-11</a> St Damasus I dies and ends his reign as Catholic Pope. Began reign 366</li>
+<li class="event"><a href="/date/399/november/27" class="date">0399-11-27</a> Anastasius I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/401/december/19" class="date">0401-12-19</a> St Anastasius I ends his reign as Catholic Pope</li>
+<li class="event no-border"><a href="/date/401/december/22" class="date">0401-12-22</a> St. Innocent I begins his reign as Catholic Pope</li>
+</ul><span class="list-clearfix"></span></div><div class="wrapper"><ul class="event-list">
+<li><div id="sp-incontent-2" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-2',baseDivId:'incontent'}])});</script>
+</li><li class="event"><a href="/date/417/march/18" class="date">0417-03-18</a> Saint Zosimus begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/418/december/27" class="date">0418-12-27</a> [Etalius] begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/418/december/28" class="date">0418-12-28</a> St Boniface I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/419/april/3" class="date">0419-04-03</a> Antipope Eulalius loses to Pope Boniface I after both were elected in a dual election and becomes bishop of Napete</li>
+<li class="event"><a href="/date/422/september/4" class="date">0422-09-04</a> Saint Boniface I ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/422/september/10" class="date">0422-09-10</a> St. Celestine I begins his reign as the Catholic Pope</li>
+<li class="event"><a href="/date/432/july/27" class="date">0432-07-27</a> St. Celestine I ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/432/july/31" class="date">0432-07-31</a> St Sixtus III begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/440/august/18" class="date">0440-08-18</a> St Sixtus III ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/461/november/19" class="date">0461-11-19</a> St Hilary begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/468/march/3" class="date">0468-03-03</a> St. Simplicius is elected to succeed Pope Hilarius</li>
+<li class="event"><a href="/date/483/march/13" class="date">0483-03-13</a> Felix III begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/492/march/1" class="date">0492-03-01</a> Gelasius I elected Catholic Pope; in office until his death in 496</li>
+<li class="event"><b>0492-03-01</b> St Felix III ends his reign as Catholic Pope</li>
+<li class="event no-border"><a href="/date/496/november/24" class="date">0496-11-24</a> Anastasius II succeeds Gelasius I as Catholic Pope</li>
+</ul><span class="list-clearfix"></span></div><div class="wrapper"><ul class="event-list">
+<li><div id="sp-incontent-3" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-3',baseDivId:'incontent'}])});</script>
+</li><li class="event"><a href="/date/496/december/25" class="date">0496-12-25</a> King Clovis I is baptized a Roman Catholic in Reims cathedral - first Germanic king to do so, according to Henry of Tours (year disputed)</li>
+<li class="event"><a href="/date/523/august/6" class="date">0523-08-06</a> Pope Hormisdas reign as Catholic Pope ends with his death</li>
+<li class="event"><a href="/date/523/august/13" class="date">0523-08-13</a> St John I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/526/july/12" class="date">0526-07-12</a> St Felix IV begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/530/september/22" class="date">0530-09-22</a> Boniface II begins his reign as Catholic Pope on the death of Pope Felix IV</li>
+<li class="event"><b>0530-09-22</b> Discorus begins his reign as Catholic anti-Pope</li>
+<li class="event"><b>0530-09-22</b> St Felix IV reign as Catholic Pope ends</li>
+<li class="event"><a href="/date/530/october/14" class="date">0530-10-14</a> Discorus short reign as Catholic antipope ends with his death</li>
+<li class="event"><a href="/date/532/october/17" class="date">0532-10-17</a> Boniface II ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/533/january/2" class="date">0533-01-02</a> John II begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/535/may/8" class="date">0535-05-08</a> John II&#039;s reign as Catholic Pope ends, upon his death</li>
+<li class="event"><a href="/date/535/may/13" class="date">0535-05-13</a> St Agapitus I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/536/april/22" class="date">0536-04-22</a> St. Agapetus I ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/536/june/8" class="date">0536-06-08</a> St Silverius begins his reign as Catholic Pope</li>
+<li class="event no-border"><a href="/date/555/june/7" class="date">0555-06-07</a> Vigilius ends his reign as Catholic Pope</li>
+</ul><span class="list-clearfix"></span></div><div class="wrapper"><ul class="event-list">
+<li><div id="sp-incontent-4" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-4',baseDivId:'incontent'}])});</script>
+</li><li class="event"><a href="/date/556/april/16" class="date">0556-04-16</a> Pelagius I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/561/july/17" class="date">0561-07-17</a> John III begins his reign as Catholic Pope succeeding Pelagius I</li>
+<li class="event"><a href="/date/574/july/13" class="date">0574-07-13</a> John III ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/575/june/2" class="date">0575-06-02</a> Benedict I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/579/july/30" class="date">0579-07-30</a> Benedict I ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/579/november/26" class="date">0579-11-26</a> Pelagius II begins his reign as Catholic Pope</li>
+</ul><span class="list-clearfix"></span></div>
+<div class="section section--highlight section--poi"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><img class="section--icon" src="/images/beatification.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Pope Gregory I</span></h3></header>
+<p><a href="/date/590/september/3" class="date">0590-09-03</a> Roman noble <a href="/people/gregory-i">Gregory I</a> begins his reign as Catholic Pope</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/gregory-i"><figure><img src="/images/people/pope-gregory-i.jpg?w=200"  srcset="/images/people/pope-gregory-i.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="">
+<figcaption>Bishop of Rome and Pope <span class="blue">Gregory I</span></figcaption></figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="event"><a href="/date/607/february/19" class="date">0607-02-19</a> Boniface III begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/608/september/15" class="date">0608-09-15</a> Saint Boniface IV begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/609/may/13" class="date">0609-05-13</a> Pope Boniface I turns the Pantheon in Rome into a Catholic church</li>
+<li class="event"><a href="/date/615/may/8" class="date">0615-05-08</a> Saint Boniface IV&#039;s reign as Catholic Pope ends</li>
+<li class="event"><a href="/date/615/october/19" class="date">0615-10-19</a> Pope Deusdedit [Adeodatus I] elected to succeed Boniface IV as Catholic Pope</li>
+<li class="event"><a href="/date/619/december/23" class="date">0619-12-23</a> Boniface V begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/625/october/25" class="date">0625-10-25</a> Boniface V ends his reign as Catholic Pope</li>
+<li class="event no-border"><a href="/date/625/october/27" class="date">0625-10-27</a> Honorius I begins his reign as Catholic Pope</li>
+<li><div id="sp-incontent-5" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-5',baseDivId:'incontent'}])});</script>
+</li><li class="event"><a href="/date/638/october/12" class="date">0638-10-12</a> Honorius I ends his reign as Catholic Pope; Pope Severinus elected</li>
+<li class="event"><a href="/date/640/may/28" class="date">0640-05-28</a> Severinus begins his reign as Catholic Pope (elected in 638)</li>
+<li class="event"><a href="/date/640/december/24" class="date">0640-12-24</a> John IV begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/642/october/12" class="date">0642-10-12</a> John IV ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/642/november/24" class="date">0642-11-24</a> Theodore I begins his reign as Catholic Pope, rules till 649</li>
+<li class="event"><a href="/date/649/may/14" class="date">0649-05-14</a> Theodore I&#039;s reign as Catholic Pope ends with his death</li>
+<li class="event"><a href="/date/649/july/5" class="date">0649-07-05</a> St Martin I begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/653/june/17" class="date">0653-06-17</a> St Martin I ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/657/june/2" class="date">0657-06-02</a> St Eugene I ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/657/july/30" class="date">0657-07-30</a> St Vitalian begins his reign as Catholic Pope succeeding Eugene I</li>
+<li class="event"><a href="/date/672/january/27" class="date">0672-01-27</a> St Vitalian ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/672/april/11" class="date">0672-04-11</a> Deusdedit II begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/676/june/17" class="date">0676-06-17</a> Pope Adeodatus II&#039;s (Deusdetit II) reign ends with his death</li>
+<li class="event"><a href="/date/676/november/2" class="date">0676-11-02</a> Donus begins his reign as Catholic Pope replacing Pope Adeodatus II</li>
+<li class="event no-border"><a href="/date/678/june/27" class="date">0678-06-27</a> St Agatho begins his reign as Catholic Pope</li>
+<li><div id="sp-incontent-6" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-6',baseDivId:'incontent'}])});</script>
+</li><li class="event"><a href="/date/682/august/17" class="date">0682-08-17</a> Leo II begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/683/june/28" class="date">0683-06-28</a> Leo II ends his reign as Catholic Pope</li>
+<li class="event"><a href="/date/684/june/26" class="date">0684-06-26</a> St Benedict II begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/685/may/8" class="date">0685-05-08</a> St Benedict II&#039;s reign as Catholic Pope ends after 11 months, upon his death</li>
+<li class="event"><a href="/date/685/july/23" class="date">0685-07-23</a> John V begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/686/october/21" class="date">0686-10-21</a> Conon begins his reign as Catholic Pope</li>
+<li class="event"><a href="/date/687/december/15" class="date">0687-12-15</a> St Sergius I begins his reign as Catholic Pope succeeding Conon</li>
+<li class="event"><a href="/date/701/september/9" class="date">0701-09-09</a> St Sergius I reign as Catholic Pope ends</li>
+<li class="event"><a href="/date/701/october/30" class="date">0701-10-30</a> John VI of Greece begins his reign as Catholic Pope</li>
+</ul>
+<ul class="pag">
+<li><span class="pag__prev disabled">Previous</span></li>
+<li>1</li>
+<li><a href="/religion/christianity/roman-catholic?p=2" rel="next">2</a></li>
+<li><a href="/religion/christianity/roman-catholic?p=3">3</a></li>
+<li><a href="/religion/christianity/roman-catholic?p=4">4</a></li>
+<li><a href="/religion/christianity/roman-catholic?p=2" class="pag__next" rel="next"><span>Next</span></a></li>
+</ul>
+</div>
+<div id="sp-incontent-7" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-7',baseDivId:'incontent'}])});</script>
+<div class="wrapper"><header class="section__heading"><h2>Famous Birthdays</h2></header>
+<ul class="event-list">
+<li class="person"><a href="/date/801/september/8" class="birthDate">0801-09-08</a> Ansgar, German Catholic archbishop and Saint, born in Amiens, France (d. 865)</li>
+<li class="person"><a href="/date/973/may/6" class="birthDate">0973-05-06</a> Henry II, Holy Roman Emperor (1014-24) and King of Germany (1002-24), born in Abbach, Bavaria, Holy Roman Empire (d. 1024)</li>
+<li class="person"><a href="/date/1002/june/21" class="birthDate">1002-06-21</a> Pope Leo IX [Bruno, Graf von Egisheim und Dagsburg], Catholic Church&#039;s 151st pope (1049-54), born in Egisheim, Alsace, Upper Lorraine, France (d. 1054)</li>
+<li class="person"><a href="/date/1017/october/28" class="birthDate">1017-10-28</a> Henry III, Holy Roman emperor (1046-56), born in Pfalz Bodfeld, near Goslar, Saxony (d. 1056)</li>
+<li class="person"><a href="/date/1170/august/8" class="birthDate">1170-08-08</a> Saint Dominic, Castilian Catholic priest, founder of the Dominican Order, and patron saint of astronomers, born in Caleruega, Spain (d. 1221)</li>
+<li class="person"><a href="/date/1211/february/12" class="birthDate">1211-02-12</a> Henry VII, King of Germany and Sicily(1220-35), who rebelled against his father Holy Roman Emperor King Frederick II, born in Sicily (d. 1242)</li>
+<li class="person"><a href="/date/1253/october/17" class="birthDate">1253-10-17</a> Ivo of Kermartin, Catholic saint and patron of Brittany, born in Kermartin, Duchy of Brittany (d. 1303)</li>
+<li class="person"><a href="/date/1283/april/1" class="birthDate">1283-04-01</a> Ludwig IV, Duke of Bavaria (1301-47), King of the Romans (1314-47) and Holy Roman Emperor (1328-47), born in Munich (d. 1347)</li>
+<li class="person"><a href="/date/1352/may/5" class="birthDate">1352-05-05</a> Rupert, King of Germany (1400-10), born in Amberg, Germany (d. 1410)</li>
+<li class="person"><a href="/date/1361/february/26" class="birthDate">1361-02-26</a> Wenceslas IV of Bohemia &quot;the Idle&quot;, King of Bohemia (1378-1419) and Germany (1376-1400), born in Nuremberg (d. 1419)</li>
+<li class="person"><a href="/date/1378/december/31" class="birthDate">1378-12-31</a> Pope Callixtus III [Alfonso de Borgia], head of the Catholic Church &amp; ruler of the Papal States (1455-58), born in Kingdom of Valencia (d. 1458)</li>
+<li class="person"><a href="/date/1381/july/1" class="birthDate">1381-07-01</a> St. Laurence Justinian [Lorenzo Giustiniani], Italian catholic bishop and 1st Patriarch of Venice, born in Venice, Republic of Venice (d. 1456)</li>
+<li class="person"><a href="/date/1386/june/24" class="birthDate">1386-06-24</a> Saint John of Capistrano, Franciscan friar and Catholic priest from the Italian town of Capestrano, Abruzzo, born in Capestrano, Abruzzi, Kingdom of Naples (d. 1456)</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/joan-of-arc" class="section__link"><img class="section--icon" src="/images/religious-leader.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Joan of Arc <span class="poi__date">(1412-1431)</span></span></a></h3></header>
+<p><a href="/date/1412/january/6" class="birthDate">1412-01-06</a> Roman Catholic <a href="/people/profession/saints">Saint</a> and national heroine of France, born in Domrémy, Duchy of Bar, France</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/joan-of-arc"><figure><img src="/images/people/joan-of-arc.jpg?w=200"  srcset="/images/people/joan-of-arc.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Joan of Arc">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/ferdinand-ii-of-aragon" class="section__link"><img class="section--icon" src="/images/crown.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Ferdinand II of Aragon <span class="poi__date">(1452-1516)</span></span></a></h3></header>
+<p><a href="/date/1452/march/10" class="birthDate">1452-03-10</a> <a href="/people/kings">King</a> of Aragon (1479-1516), King of Naples (1504-16), born in Sada Palace, Sos, Aragon</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/ferdinand-ii-of-aragon"><figure><img src="/images/people/ferdinand-ii-of-aragon.jpg?w=200"  srcset="/images/people/ferdinand-ii-of-aragon.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Ferdinand II of Aragon">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person no-border"><a href="/date/1455/march/15" class="birthDate">1455-03-15</a> Pietro Accolti, Italian Catholic cardinal (Dean of the Roman Rota), born in Florence (d. 1532)</li>
+<li><div id="sp-incontent-8" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-8',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1458/october/3" class="birthDate">1458-10-03</a> Saint Casimir, Kingdom of Poland prince and Roman Catholic saint, born in Wawel, Kraków, Kingdom of Poland (d. 1484)</li>
+<li class="person"><a href="/date/1464/april/23" class="birthDate">1464-04-23</a> Joan of France, Duchess of Berry and Queen of France (1498-1505) and catholic saint who founded several religious orders, born in Nogent-le-Roi, County of Dreux (d. 1505)</li>
+<li class="person"><a href="/date/1469/october/9" class="birthDate">1469-10-09</a> John Fisher, British Catholic clergyman (Bishop of Rochester, 1504-35; Cardinal, 1535), martyr, and saint who was beheaded [birthdate disputed], born in Beverley, England (d. 1535)</li>
+<li class="person"><a href="/date/1477/january/14" class="birthDate">1477-01-14</a> Hermann of Wied, German Catholic Archbishop-Elector of Cologne (1515-46), Protestant convert who was excommunicated by the Pope, birthplace unknown (d. 1552)</li>
+<li class="person"><a href="/date/1480/february/13" class="birthDate">1480-02-13</a> Girolamo Aleandro, Italian Catholic cardinal, born in Treviso, Venice, Italy (d. 1542)</li>
+<li class="person"><a href="/date/1480/june/1" class="birthDate">1480-06-01</a> Tiedemann Giese, Polish Catholic bishop and theologian, born in Danzig, Kingdom of Poland (d. 1550) <a href="https://www.lindahall.org/about/news/scientist-of-the-day/tiedemann-giese/" title="Tiedemann Giese - Linda Hall Library" target="_blank" rel="noopener" class="ref">[1]</a> <a href="https://www.deutsche-biographie.de/sfz20919.html#ndbcontent" title="Giese, Tiedemann Bartholomew - German Biography" target="_blank" rel="noopener" class="ref">[2]</a></li>
+<li class="person"><a href="/date/1488/march/19" class="birthDate">1488-03-19</a> Johannes Magnus, last functioning Catholic Archbishop of Sweden, born in Linköping, Sweden (d. 1544)</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/henry-viii" class="section__link"><img class="section--icon" src="/images/crown.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Henry VIII <span class="poi__date">(1491-1547)</span></span></a></h3></header>
+<p><a href="/date/1491/june/28" class="birthDate">1491-06-28</a> <a href="/people/kings">King</a> of England (1509-47) who separated the Church of England from the Roman Catholic Church, born in London</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/henry-viii"><figure><img src="/images/people/henry-viii.jpg?w=200"  srcset="/images/people/henry-viii.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Henry VIII">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person"><a href="/date/1495/november/21" class="birthDate">1495-11-21</a> John Bale, English bishop and anti-catholic playwright (Kynge Johan), born in Cove, Suffolk, England (d. 1563)</li>
+<li class="person"><a href="/date/1519/july/20" class="birthDate">1519-07-20</a> Pope Innocent IX [Giovanni Antonio Facchinetti], 230th Catholic pope (1591), born in Bologna, Papal States (now Italy) (d. 1591)</li>
+<li class="person"><a href="/date/1521/may/8" class="birthDate">1521-05-08</a> Saint Peter Canisius, Dutch Jesuit priest, born in Nijmegen, Habsburg Netherlands (d. 1597)</li>
+<li class="person"><a href="/date/1521/december/13" class="birthDate">1521-12-13</a> Pope Sixtus V [Felice Piergentile], Pope of the Catholic Church (1585-90), born in Grottammare, Papal States (d. 1590)</li>
+<li class="person"><a href="/date/1533/february/14" class="birthDate">1533-02-14</a> Christianus Adrichomius, Dutch Catholic priest and writer (Vita Jesu Christi), born in Delft, Netherlands (d. 1585)</li>
+<li class="person"><a href="/date/1535/february/11" class="birthDate">1535-02-11</a> Gregory XIV [Niccolo Sfondrati], Italian Roman Catholic Pope (1590-91), born in Somma Lombardo, Duchy of Milan (d. 1591)</li>
+<li class="person no-border"><a href="/date/1540/january/25" class="birthDate">1540-01-25</a> Edmund Campion, English Catholic Jesuit priest &amp; martyr, born in London, England (d. 1581)</li>
+<li><div id="sp-incontent-9" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-9',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1548/march/13" class="birthDate">1548-03-13</a> Sasbout Vosmeer, Dutch Catholic theologist and apostole vicar, born in Delft, Netherlands (d. 1614)</li>
+<li class="person"><a href="/date/1549/october/1" class="birthDate">1549-10-01</a> Anne of Saint Bartholomew, Flemish Roman Catholic nun, born in Almendral de la Cañada, Old Castile, Crown of Castile (d. 1626)</li>
+<li class="person"><a href="/date/1550/may/25" class="birthDate">1550-05-25</a> Camillus de Lellis, Italian Roman Catholic saint (founder of the Ministers of the Sick), born in Bucchianico, Kingdom of Naples (d. 1614)</li>
+<li class="person"><a href="/date/1550/december/31" class="birthDate">1550-12-31</a> Henri I de Lorraine, Duke of Guise and French leader of the Catholic League during the French Wars of Religion, born in Joinville, Kingdom of France (d. 1588) <a href="https://www.britannica.com/biography/Henri-I-de-Lorraine-3e-duc-de-Guise" title="Henri I de Lorraine, 3 duc de Guise - Britannica" target="_blank" rel="noopener" class="ref">[1]</a></li>
+<li class="person"><a href="/date/1556/november/15" class="birthDate">1556-11-15</a> Jacques Davy Duperron, French Roman Catholic cardinal, born in Saint-Lô, Normandy, France (d. 1618)</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/guy-fawkes" class="section__link"><img class="section--icon" src="/images/revolutionary.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Guy Fawkes <span class="poi__date">(1570-1606)</span></span></a></h3></header>
+<p><a href="/date/1570/april/13" class="birthDate">1570-04-13</a> English Catholic conspirator who was convicted in the "Gunpowder Plot" to blow up the British Parliament, born in York, England</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/guy-fawkes"><figure><img src="/images/people/guy-fawkes.jpg?w=200"  loading="lazy" width="200" height="250" alt="Guy Fawkes">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person"><a href="/date/1581/february/17" class="birthDate">1581-02-17</a> Fausto Poli, Italian Catholic Cardinal. private secretary to Pope Urban, born in Usigni (d. 1653)</li>
+<li class="person"><a href="/date/1581/april/24" class="birthDate">1581-04-24</a> Vincent de Paul, French Roman Catholic Saint, born in Pouy, Gascony, France (d. 1660)</li>
+<li class="person"><a href="/date/1585/october/28" class="birthDate">1585-10-28</a> Cornelius Jansen, Dutch Roman Catholic reform leader (Jansenism), born in Acquoy, County of Holland, Dutch Republic (d. 1638)</li>
+<li class="person"><a href="/date/1599/march/13" class="birthDate">1599-03-13</a> Johannes Berchmans, Dutch Jesuit and Roman Catholic saint, born in Diest, Seventeen Provinces (d. 1621)</li>
+<li class="person"><a href="/date/1608/may/15" class="birthDate">1608-05-15</a> René Goupil, French Jesuit missionary and first canonized Catholic martyr in Canada, born in Saint-Martin-du-Bois, Kingdom of France (d. 1642) <a href="https://www.biographi.ca/en/bio/goupil_rene_1E.html" title="Goupil, René - Dictionary of Canadian Biography" target="_blank" rel="noopener" class="ref">[1]</a></li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/infante-ferdinand" class="section__link"><img class="section--icon" src="/images/general.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Infante Ferdinand <span class="poi__date">(1609-1641)</span></span></a></h3></header>
+<p><a href="/date/1609/may/16" class="birthDate">1609-05-16</a> Governor of the Spanish Netherlands, Cardinal of the Holy Catholic Church and military commander during the Thirty Years' War, born in San Lorenzo de El Escorial, Spain</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/infante-ferdinand"><figure><img src="/images/people/infante-ferdinand.jpg?w=200"  srcset="/images/people/infante-ferdinand.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Infante Ferdinand">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person"><a href="/date/1612/february/6" class="birthDate">1612-02-06</a> Antoine Arnauld, French Roman Catholic theologian and philosopher and mathematician, born in Paris, France (d. 1694)</li>
+<li class="person"><a href="/date/1623/april/30" class="birthDate">1623-04-30</a> François de Laval, French clergyman, 1st Roman Catholic bishop of Québec, and saint, born in Montigny-sur-Avre, Kingdom of France (d. 1708)</li>
+<li class="person no-border"><a href="/date/1626/december/8" class="birthDate">1626-12-08</a> Christina, Queen of Sweden who abdicated after becoming Catholic (1644-54), born in Tre Kronor Castle, Stockholm (d. 1689)</li>
+<li><div id="sp-incontent-10" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-10',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1629/september/21" class="birthDate">1629-09-21</a> Philip Howard, English Roman Catholic cardinal, born in London (d. 1694)</li>
+<li class="person"><a href="/date/1629/november/1" class="birthDate">1629-11-01</a> St. Oliver Plunkett, Catholic Archbishop of Armagh and last Catholic martyr to die in England, born in Loughcrew, County Meath, Ireland (d. 1681)</li>
+<li class="person"><a href="/date/1638/november/25" class="birthDate">1638-11-25</a> Catherine of Braganza, Portuguese Roman Catholic Queen of Charles II of England, born in Vila Vicosa, Portugal (d. 1705)</li>
+<li class="person"><a href="/date/1645/august/10" class="birthDate">1645-08-10</a> Eusebio Kino, Italian Catholic missionary and explorer in Mexico and Arizona, born in Segno, Bishopric of Trent (d. 1711)</li>
+<li class="person"><a href="/date/1647/july/22" class="birthDate">1647-07-22</a> Margaretha Mary Alacoque, French Roman Catholic saint and mystic, born in L&#039;Hautecour, France (d. 1690)</li>
+<li class="person"><a href="/date/1648/november/27" class="birthDate">1648-11-27</a> Petrus Codde, Dutch Roman Catholic clergyman (Apostolic Vicar of the Dutch Mission, 1688-1704; Archbishop of Utrecht, 1688-1710), born in Amsterdam, Dutch Republic (d. 1710)</li>
+<li class="person"><a href="/date/1651/april/30" class="birthDate">1651-04-30</a> Jean-Baptiste de la Salle, French priest and saint of the Catholic Church, born in Reims, Champagne, Kingdom of France (d. 1719)</li>
+<li class="person"><a href="/date/1651/august/6" class="birthDate">1651-08-06</a> François Fénelon, French Roman Catholic theologian and writer (Playing for Time), born in Sainte-Mondane, France (d. 1715)</li>
+<li class="person"><a href="/date/1663/february/1" class="birthDate">1663-02-01</a> Mother Ignacia del Espiritu Santo, Filipino Religious Sister of the Roman Catholic Church, born in Bonondo, Manila, Philippines (d. 1748)</li>
+<li class="person"><a href="/date/1673/january/31" class="birthDate">1673-01-31</a> Louis de Montfort, French catholic priest and saint who preached Mariology (Secret of the Rosary; True Devotion to Mary), born in Montfort-sur-Meu, France (d. 1716)</li>
+<li class="person"><a href="/date/1678/march/15" class="birthDate">1678-03-15</a> Dominique Marie Valet, French Roman Catholic bishop and missionary (Diocese of Quebec), born in Paris, France (d. 1742)</li>
+<li class="person"><a href="/date/1678/july/26" class="birthDate">1678-07-26</a> Joseph I Habsburg, German King of Hungary (1687-1711), King in Germany (1690-1711) and Holy Roman Emperor (1705-11), born in Vienna, Austria (d. 1711)</li>
+<li class="person"><a href="/date/1690/september/12" class="birthDate">1690-09-12</a> Peter Dens, Flemish Catholic theologian, born in Antwerp, Belgium (d. 1775)</li>
+<li class="person"><a href="/date/1691/september/29" class="birthDate">1691-09-29</a> Richard Challoner, English leading Catholic bishop (Douay–Rheims bible translation), born in Lewes, England (d. 1781)</li>
+<li class="person"><a href="/date/1692/november/15" class="birthDate">1692-11-15</a> Eusebius Amort, German Roman Catholic theologian, born in Bibermuehle, Bavaria (d. 1775)</li>
+<li class="person"><a href="/date/1710/october/24" class="birthDate">1710-10-24</a> Alban Butler, English Catholic priest and writer, born in Northampton, England (d. 1773)</li>
+<li class="person"><a href="/date/1719/august/20" class="birthDate">1719-08-20</a> Christian Mayer, Czech Catholic priest and astronomer, born in Modřice, Moravia (d. 1783)</li>
+<li class="person"><a href="/date/1720/february/26" class="birthDate">1720-02-26</a> Gian Francesco Albani, Italian Catholic cardinal, born in Rome (d. 1803)</li>
+<li class="person no-border"><a href="/date/1725/april/23" class="birthDate">1725-04-23</a> Saint Gerard Majella, Catholic saint, born in Muro, Naples, Italy (d. 1755)</li>
+<li><div id="sp-incontent-11" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-11',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1735/january/8" class="birthDate">1735-01-08</a> John Carroll, American Roman Catholic archbishop, born in Upper Marlboro, Maryland (d. 1815)</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/miguel-hidalgo-y-costilla" class="section__link"><img class="section--icon" src="/images/person-of-interest.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Miguel Hidalgo y Costilla <span class="poi__date">(1753-1811)</span></span></a></h3></header>
+<p><a href="/date/1753/may/8" class="birthDate">1753-05-08</a> Spanish Catholic priest, and leader of Mexican independence, born in Pénjamo, Guanajuato, Viceroyalty of New Spain</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/miguel-hidalgo-y-costilla"><figure><img src="/images/people/miguel-hidalgo-y-costilla.jpg?w=200"  srcset="/images/people/miguel-hidalgo-y-costilla.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Miguel Hidalgo y Costilla">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person"><a href="/date/1757/june/8" class="birthDate">1757-06-08</a> Ercole Consalvi, Italian Roman Catholic Cardinal, born in Rome, Italy (d. 1824)</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/elizabeth-ann-bayley-seton" class="section__link"><img class="section--icon" src="/images/religious-leader.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Elizabeth Ann Seton <span class="poi__date">(1774-1821)</span></span></a></h3></header>
+<p><a href="/date/1774/august/28" class="birthDate">1774-08-28</a> 1st American Catholic <a href="/people/profession/saints">saint</a> (canonized 1975), born in New York City</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/elizabeth-ann-bayley-seton"><figure><img src="/images/people/elizabeth-ann-bayley-seton.jpg?w=200"  srcset="/images/people/elizabeth-ann-bayley-seton.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Elizabeth Ann Seton">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person"><a href="/date/1774/september/8" class="birthDate">1774-09-08</a> Anna Katharina Emmerick, Roman Catholic Augustinian Canoness Regular of Windesheim, Marian visionary, ecstatic and stigmatist, born in Coesfeld, Westphalia, Holy Roman Empire (d. 1824)</li>
+<li class="person"><a href="/date/1775/november/27" class="birthDate">1775-11-27</a> Joachim le Sage ten Broek, Dutch notary and publicist, born in Groningen, Netherlands (d. 1847)</li>
+<li class="person"><a href="/date/1782/june/19" class="birthDate">1782-06-19</a> Hugues Felicité Robert de Lamennais, French Catholic priest and writer (L&#039;avenir), born in Saint-Malo, Brittany, France (d. 1854)</li>
+<li class="person"><a href="/date/1786/may/8" class="birthDate">1786-05-08</a> Jean Vianney, French Catholic priest, and eventual saint, born in Dardilly, Lyonnais, Kingdom of France (d. 1859)</li>
+<li class="person"><a href="/date/1795/april/21" class="birthDate">1795-04-21</a> Vincenzo Pallotti, Italian saint (founder of the Society of the Catholic Apostolate), born in Rome (d. 1850)</li>
+<li class="person"><a href="/date/1803/november/18" class="birthDate">1803-11-18</a> Cornelis Broere, Dutch Roman Catholic priest and poet, born in Amsterdam (d. 1860)</li>
+<li class="person"><a href="/date/1804/july/4" class="birthDate">1804-07-04</a> Désiré de Haerne, Belgian Catholic priest and Congressional leader, born in Ypres, Belgium (d. 1890)</li>
+<li class="person"><a href="/date/1804/september/14" class="birthDate">1804-09-14</a> Louis Désiré Maigret, French Catholic prelate, born in Saint-Pierre-de-Maillé, France (d. 1882)</li>
+<li class="person"><a href="/date/1809/july/30" class="birthDate">1809-07-30</a> Charles Chiniquy, Canadian Catholic priest who left the Roman Catholic Church and became a Presbyterian minister, born in Kamouraska, Quebec (d. 1899)</li>
+<li class="person"><a href="/date/1809/october/27" class="birthDate">1809-10-27</a> Peter Donders, Dutch Roman Catholic missionary to Suriname, born in Tilburg, Netherlands (d. 1887)</li>
+<li class="person"><a href="/date/1815/april/11" class="birthDate">1815-04-11</a> Clara Fey, German Roman Catholic Nun and the founder of the Sisters of the Poor Child Jesus, born in Aachen, Prussia (d. 1894)</li>
+<li class="person"><a href="/date/1820/february/17" class="birthDate">1820-02-17</a> Elzéar-Alexandre Taschereau, Catholic cardinal, Archbishop of Quebec, born in Sainte-Marie-de-la-Nouvelle-Beauce, Lower Canada (d. 1898)</li>
+<li class="person"><a href="/date/1821/march/1" class="birthDate">1821-03-01</a> Joseph Hubert Reinkens, German Catholic bishop, leader of the Old Catholic dissidents, born in Burtscheid, Prussia (d. 1896)</li>
+<li class="person"><a href="/date/1822/october/29" class="birthDate">1822-10-29</a> Mieczysław Halka-Ledóchowski, Polish Catholic Cardinal who defended Polish culture against Bismarck’s Kulturkampf, born in Górki, Congress Poland (d. 1902)</li>
+<li class="person no-border"><a href="/date/1824/march/15" class="birthDate">1824-03-15</a> Jules Chevalier, French Roman Catholic priest (Missionaries of the Sacred Heart, Daughters of Our Lady of the Sacred Heart), born in Richelieu, Touraine, France (d. 1907)</li>
+<li><div id="sp-incontent-12" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-12',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1824/june/18" class="birthDate">1824-06-18</a> Johannes Heykamp, Dutch theologian and 16th Catholic archbishop of Utrecht (Declaration of Utrecht), born in Utrecht, Netherlands (d. 1892) <a href="https://myocci.org/?page_id=102" title="Declaration of Utrecht - Old Catholic Churches International" target="_blank" rel="noopener" class="ref">[1]</a> <a href="https://www.oldromancatholic.org.uk/history/extended-history" title="The History of the Old Roman Catholic Church: The Declaration of Utrecht - The Old Roman Catholic Church" target="_blank" rel="noopener" class="ref">[2]</a></li>
+<li class="person"><a href="/date/1824/august/28" class="birthDate">1824-08-28</a> Carel van Nispen of Sevenaer, Dutch Catholic politician, born in Zevenaar, Netherlands (d. 1884)</li>
+<li class="person"><a href="/date/1825/october/31" class="birthDate">1825-10-31</a> Charles Lavigerie, French Catholic cardinal, born in Bayonne, France (d. 1892)</li>
+<li class="person"><a href="/date/1827/april/23" class="birthDate">1827-04-23</a> Johann Friedrich von Schulte, German Catholic lawyer, born in Winterberg, Germany (d. 1914)</li>
+<li class="person"><a href="/date/1828/january/10" class="birthDate">1828-01-10</a> Herman Koeckemann, German Catholic prelate, born in Ostbevern, Germany (d. 1892)</li>
+<li class="person"><a href="/date/1828/july/9" class="birthDate">1828-07-09</a> Luigi Oreglia di Santo Stefano, Italian Catholic churchman and last surviving cardinal of Pius IX, born in Bene Vagienna, Italy (d. 1913)</li>
+<li class="person"><a href="/date/1830/april/6" class="birthDate">1830-04-06</a> James Augustine Healy, 1st African American Roman Catholic bishop (Diocese of Portland), born in Macon, Georgia (d. 1900)</li>
+<li class="person"><a href="/date/1832/september/4" class="birthDate">1832-09-04</a> Antonio Agliardi, Italian diplomat and Roman Catholic cardinal, born in Cologno al Serio, Italy (d. 1915)</li>
+<li class="person"><a href="/date/1833/october/2" class="birthDate">1833-10-02</a> William Corby, American Catholic priest and President of the University of Notre Dame, born in Detroit, Michigan (d. 1897)</li>
+<li class="person"><a href="/date/1833/november/24" class="birthDate">1833-11-24</a> Antoine Labelle, Quebec catholic priest, helped resettle French Canadians in northern Canada, born in Sainte-Rose, Lower Canada,  (d. 1891)</li>
+<li class="person"><a href="/date/1834/august/2" class="birthDate">1834-08-02</a> Isaac Capadose, Dutch clergyman in the Catholic Apostolic Church, born in The Hague, Netherlands (d. 1920)</li>
+<li class="person"><a href="/date/1835/june/2" class="birthDate">1835-06-02</a> Pius X [Giuseppe Sarto], Italian 257th Roman Catholic Pope (1903-14 - lowered age of Communion from 12 to 7,) and saint, born in Riese, Kingdom of Lombardy–Venetia, Austrian Empire (d. 1914)</li>
+<li class="person"><a href="/date/1837/february/9" class="birthDate">1837-02-09</a> José Burgos, Filipino Catholic priest (advocated for greater Filipino self-determination), born in Vigan, Philippines (d. 1872)</li>
+<li class="person"><a href="/date/1837/september/18" class="birthDate">1837-09-18</a> Aires de Ornelas e Vasconcelos, Portuguese Roman Catholic Archbishop of Goa, born in Funchal, Madeira, Portugal (d. 1880)</li>
+<li class="person"><a href="/date/1839/august/30" class="birthDate">1839-08-30</a> Gulstan Ropert, French Roman Catholic prelate, born in Kerfago, Brittany, France (d. 1903)</li>
+<li class="person"><a href="/date/1844/march/2" class="birthDate">1844-03-02</a> Herman Schaepman &#039;the Doctor&#039;, Dutch poet, Roman Catholic priest, theologian, and politician, born in Tubbergen, Netherlands (d. 1903)</li>
+</ul>
+<ul class="pag">
+<li><span class="pag__prev disabled">Previous</span></li>
+<li>1</li>
+<li><a href="/religion/christianity/roman-catholic?p=2" rel="next">2</a></li>
+<li><a href="/religion/christianity/roman-catholic?p=3">3</a></li>
+<li><a href="/religion/christianity/roman-catholic?p=2" class="pag__next" rel="next"><span>Next</span></a></li>
+</ul>
+</div>
+<div id="sp-incontent-13" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-13',baseDivId:'incontent'}])});</script>
+<div class="wrapper"><header class="section__heading"><h2>Famous Weddings</h2></header>
+</div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/martin-luther" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Martin Luther</span></a></h3></header>
+<p><a href="/date/1525/june/13" class="date">1525-06-13</a> Theologian and excommunicated priest <a href="/people/martin-luther">Martin Luther</a> (41) weds ex-nun Katharina von Bora (26), against the celibacy rule decreed by the Roman Catholic Church for priests and nuns</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/martin-luther"><figure><img src="/images/people/martin-luther.jpg?w=200"  srcset="/images/people/martin-luther.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Martin Luther">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/george-dewey" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">George Dewey</span></a></h3></header>
+<p><a href="/date/1899/november/9" class="date">1899-11-09</a> US Admiral of the Navy <a href="/people/george-dewey">George Dewey</a> (61) weds Mildred McLean Hazen at the rectory St. Paul's Catholic Church in Washington, D.C.</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/george-dewey"><figure><img src="/images/people/george-dewey.jpg?w=200"  srcset="/images/people/george-dewey.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="George Dewey">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/konrad-adenauer" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Konrad Adenauer</span></a></h3></header>
+<p><a href="/date/1904/january/28" class="date">1904-01-28</a> German chancellor <a href="/people/konrad-adenauer">Konrad Adenauer</a> (28) weds Emma Weyer at St. Stephan Catholic Church in Lindenthal, Germany</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/konrad-adenauer"><figure><img src="/images/people/konrad-adenauer.jpg?w=200"  srcset="/images/people/konrad-adenauer.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Konrad Adenauer">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/jim-thorpe" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Jim Thorpe</span></a></h3></header>
+<p><a href="/date/1913/october/14" class="date">1913-10-14</a> Athlete <a href="/people/jim-thorpe">Jim Thorpe</a> (25) weds Margaret Iva Miller at St. Patrick's Catholic Church in Carlisle, Pennsylvania</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/jim-thorpe"><figure><img src="/images/people/jim-thorpe.jpg?w=200"  srcset="/images/people/jim-thorpe.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Jim Thorpe">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/babe-ruth" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Babe Ruth</span></a></h3></header>
+<p><a href="/date/1914/october/17" class="date">1914-10-17</a> American baseball legend <a href="/people/babe-ruth">Babe Ruth</a> (19) weds waitress Helen Woodford (17) at St. Paul's Catholic Church in Ellicott City, Maryland</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/babe-ruth"><figure><img src="/images/people/babe-ruth.jpg?w=200"  srcset="/images/people/babe-ruth.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Babe Ruth">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/j-r-r-tolkien" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">J. R. R. Tolkien</span></a></h3></header>
+<p><a href="/date/1916/march/22" class="date">1916-03-22</a> British author of "The <a href="/people/j-r-r-tolkien">Lord of the Rings</a>", J.R.R. <a href="/people/j-r-r-tolkien">Tolkien</a> marries Edith Mary Bratt at St. Mary Immaculate Roman Catholic Church, Warwick</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/j-r-r-tolkien"><figure><img src="/images/people/jrr-tolkien.jpg?w=200"  srcset="/images/people/jrr-tolkien.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="J. R. R. Tolkien">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-w"><div class="wrapper"><div class="grid"><div class="grid__item one-whole five-twelfths--1024">
+<header><h3 class="poi__heading"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Jackie Coogan &amp; Betty Grable</span></h3></header>
+<p><a href="/date/1937/november/20" class="date">1937-11-20</a> American actor <a href="/people/jackie-coogan">Jackie Coogan</a> (23) weds American actress <a href="/people/betty-grable">Betty Grable</a> (20) at St. Brendan Catholic Church in Los Angeles; divorce in 1939</p></div>
+<div class="grid__item one-whole seven-twelfths--1024"><div class="poi__list">
+<a href="/people/jackie-coogan"><figure><img src="/images/people/jackie-coogan-sml.jpg?w=200"  loading="lazy" width="200" height="250" alt="Jackie Coogan">
+</figure></a>
+<a href="/people/betty-grable"><figure><img src="/images/people/betty-grable.jpg?w=200"  srcset="/images/people/betty-grable.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Betty Grable"></figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-w"><div class="wrapper"><div class="grid"><div class="grid__item one-whole five-twelfths--1024">
+<header><h3 class="poi__heading"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Robert F. Kennedy &amp; Ethel Kennedy</span></h3></header>
+<p><a href="/date/1950/june/17" class="date">1950-06-17</a> Future US Attorney General and US  Senator <a href="/people/robert-francis-kennedy">Robert F. Kennedy</a> (24) weds Ethel <a href="/people/ethel-kennedy">Skakel</a> (22) at St. Mary's Roman Catholic Church in Greenwich, Connecticut, until his death in 1968</p></div>
+<div class="grid__item one-whole seven-twelfths--1024"><div class="poi__list">
+<a href="/people/robert-francis-kennedy"><figure><img src="/images/people/robert-francis-kennedy.jpg?w=200"  srcset="/images/people/robert-francis-kennedy.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Robert F. Kennedy">
+</figure></a>
+<a href="/people/ethel-kennedy"><figure><img src="/images/people/ethel-kennedy.jpg?w=200"  srcset="/images/people/ethel-kennedy.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Ethel Kennedy"></figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-w"><div class="wrapper"><div class="grid"><div class="grid__item one-whole five-twelfths--1024">
+<header><h3 class="poi__heading"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Imelda Marcos &amp; Ferdinand Marcos</span></h3></header>
+<p><a href="/date/1954/april/1" class="date">1954-04-01</a> Future Philippine President <a href="/people/ferdinand-marcos">Ferdinand Marcos</a> (36) weds <a href="/people/imelda-marcos">Imelda Romualdez</a> (24) in a Catholic church</p></div>
+<div class="grid__item one-whole seven-twelfths--1024"><div class="poi__list">
+<a href="/people/imelda-marcos"><figure><img src="/images/people/imelda-marcos.jpg?w=200"  srcset="/images/people/imelda-marcos.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Imelda Marcos">
+</figure></a>
+<a href="/people/ferdinand-marcos"><figure><img src="/images/people/ferdinand-marcos.jpg?w=200"  srcset="/images/people/ferdinand-marcos.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Ferdinand Marcos"></figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/joe-biden" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Joe Biden</span></a></h3></header>
+<p><a href="/date/1966/august/27" class="date">1966-08-27</a> American law student, and future politician, <a href="/people/joe-biden">Joe Biden</a> of Delaware (21) weds fellow Syracuse University student, and future teacher, Neilia Hunter (22) of Skaneateles, New York, at a Catholic church in Skaneateles, until her death in 1972</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/joe-biden"><figure><img src="/images/people/joe-biden.jpg?w=200"  srcset="/images/people/joe-biden.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Joe Biden">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/rudy-giuliani" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Rudy Giuliani</span></a></h3></header>
+<p><a href="/date/1968/october/26" class="date">1968-10-26</a> Lawyer and politician <a href="/people/rudy-giuliani">Rudy Giuliani</a> (24) weds second cousin Regina Peruggi (22) in a large Roman Catholic ceremony in Bedford Park, The Bronx</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/rudy-giuliani"><figure><img src="/images/people/rudolph-giuliani.jpg?w=200"  srcset="/images/people/rudolph-giuliani.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Rudy Giuliani">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="event no-border"><a href="/date/1969/march/8" class="date">1969-03-08</a> 12-year-old Marcella Rosciglione becomes Italy&#039;s youngest bride in Palermo after Catholic Church gives special permission after she eloped</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/judi-dench" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Judi Dench</span></a></h3></header>
+<p><a href="/date/1971/february/5" class="date">1971-02-05</a> Actress <a href="/people/judi-dench">Judi Dench</a> (36) weds actor Michael Williams (35) at St Mary's Catholic Church in Hampstead, London</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/judi-dench"><figure><img src="/images/people/judi-dench.jpg?w=200"  srcset="/images/people/judi-dench.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Judi Dench">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/dan-marino" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Dan Marino</span></a></h3></header>
+<p><a href="/date/1985/january/30" class="date">1985-01-30</a> NFL Quarterback <a href="/people/dan-marino">Dan Marino</a> (23) weds Claire Veazey at St. Regis Roman Catholic Church in Pennsylvania</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/dan-marino"><figure><img src="/images/people/dan-marino.jpg?w=200"  srcset="/images/people/dan-marino.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Dan Marino">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/bruce-springsteen" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Bruce Springsteen</span></a></h3></header>
+<p><a href="/date/1985/may/13" class="date">1985-05-13</a> American rock singer-songwriter <a href="/people/bruce-springsteen">Bruce Springsteen</a> (35) weds American actress Julianne Phillips (25) at Our Lady of the Lake Catholic Church in Lake Oswego, Oregon; divorce in 1989</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/bruce-springsteen"><figure><img src="/images/people/bruce-springsteen.jpg?w=200"  srcset="/images/people/bruce-springsteen.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Bruce Springsteen">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/don-shula" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Don Shula</span></a></h3></header>
+<p><a href="/date/1993/october/16" class="date">1993-10-16</a> NFL coach <a href="/people/don-shula">Don Shula</a> (63) weds second wife Mary Anne Stephens at St Joseph's Catholic Church in Miami Beach</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/don-shula"><figure><img src="/images/people/don-shula.jpg?w=200"  srcset="/images/people/don-shula.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Don Shula">
+</figure></a>
+</div></div></div></div></div>
+<div id="sp-incontent-14" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-14',baseDivId:'incontent'}])});</script>
+<div class="wrapper"><ul class="event-list">
+<li class="event"><a href="/date/1994/october/8" class="date">1994-10-08</a> &quot;Growing Pains&quot; actress Tracey Gold (25) weds Roby Marshall (29) at St. Charles Catholic Church</li>
+<li class="event"><a href="/date/1996/may/18" class="date">1996-05-18</a> NFL Buffalo Bills quarterback Jim Kelly (36) weds former marketing director Jill Waggoner (27) at St. Christopher&#039;s Catholic Church in suburban Buffalo</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/brett-favre" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Brett Favre</span></a></h3></header>
+<p><a href="/date/1996/july/14" class="date">1996-07-14</a> "Green Bay Packer" quarterback <a href="/people/brett-favre">Brett Favre</a> (26) weds Deanna Tynes (27) at St. Agnes Catholic Church in Green Bay, Wisconsin</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/brett-favre"><figure><img src="/images/people/brett-favre.jpg?w=200"  srcset="/images/people/brett-favre.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Brett Favre">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/lucy-lawless" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Lucy Lawless</span></a></h3></header>
+<p><a href="/date/1998/may/28" class="date">1998-05-28</a> "Xena: The Warrior Princess" <a href="/people/lucy-lawless">Lucy Lawless</a> (30) weds executive producer Rob Tapert (43) at Saint Monica Catholic Church in Santa Monica, California</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/lucy-lawless"><figure><img src="/images/people/lucy-lawless.jpg?w=200"  srcset="/images/people/lucy-lawless.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Lucy Lawless">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/kobe-bryant" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Kobe Bryant</span></a></h3></header>
+<p><a href="/date/2001/april/18" class="date">2001-04-18</a> NBA star player <a href="/people/kobe-bryant">Kobe Bryant</a> (22) weds Vanessa Laine at St. Edward Roman Catholic Church in Dana Point, California</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/kobe-bryant"><figure><img src="/images/people/kobe-bryant.jpg?w=200"  srcset="/images/people/kobe-bryant.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Kobe Bryant">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/christy-turlington" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Christy Turlington</span></a></h3></header>
+<p><a href="/date/2003/june/7" class="date">2003-06-07</a> "Sidewalks of New York" actor-director Edward Burns (34) weds Calvin Klein model <a href="/people/christy-turlington">Christy Turlington</a> (32) at St. Peter and Paul's Catholic Church in San Francisco, California</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/christy-turlington"><figure><img src="/images/people/christy-turlington.jpg?w=200"  srcset="/images/people/christy-turlington.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Christy Turlington">
+</figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/john-leguizamo" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">John Leguizamo</span></a></h3></header>
+<p><a href="/date/2003/june/28" class="date">2003-06-28</a> Colombian American actor <a href="/people/john-leguizamo">John Leguizamo</a> (42) weds estate planner Justine Maurer (35) on a Catholic-Jewish ceremony in New York</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/john-leguizamo"><figure><img src="/images/people/john-leguizamo.jpg?w=200"  srcset="/images/people/john-leguizamo.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="John Leguizamo">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="event"><a href="/date/2004/july/31" class="date">2004-07-31</a> &quot;Ed&quot; actor Tom Cavanagh (35) weds &quot;Sports Illustrated&quot; photo editor Maureen Grise (33) at a 19th-century, cedar-shingled Roman Catholic church in Nantucket, Massachusetts</li>
+<li class="event"><a href="/date/2005/january/29" class="date">2005-01-29</a> &quot;New York Mets&quot; catcher Mike Piazza (36) weds former &quot;Baywatch&quot; actress Alicia Rickter (32) at St. Jude Catholic Church in Miami, Florida</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/justin-trudeau" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Justin Trudeau</span></a></h3></header>
+<p><a href="/date/2005/may/28" class="date">2005-05-28</a> Politician <a href="/people/justin-trudeau">Justin Trudeau</a> (33) weds tv host Sophie Grégoire (30) in a Catholic ceremony at Montreal's Sainte-Madeleine d'Outremont Church</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/justin-trudeau"><figure><img src="/images/people/justin-trudeau.jpg?w=200"  srcset="/images/people/justin-trudeau.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Justin Trudeau">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="event"><a href="/date/2006/may/26" class="date">2006-05-26</a> Soccer star player Joshua Kennedy (23) weds Australian Opals player Jacinta Hamilton at St. Joseph&#039;s Catholic Church in Port Melbourne</li>
+<li class="event"><a href="/date/2007/february/17" class="date">2007-02-17</a> Australian TV presenter Natalie Gruzlewski (30) weds pro surfer Luke Egan at St. Augustine&#039;s Catholic Church</li>
+<li class="event"><a href="/date/2008/july/12" class="date">2008-07-12</a> &quot;Black Eyed Peas&quot; rapper Taboo (32) weds fashion publicist Jaymie Dizon (29) at St. Andrews Catholic Church in Pasadena, California</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-w"><div class="wrapper"><div class="grid"><div class="grid__item one-whole five-twelfths--1024">
+<header><h3 class="poi__heading"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Tom Brady &amp; Gisele Bündchen</span></h3></header>
+<p><a href="/date/2009/february/26" class="date">2009-02-26</a> Brazilian supermodel <a href="/people/gisele-bundchen">Gisele Bündchen</a> (29) weds American NFL New England Patriots quarterback <a href="/people/tom-brady">Tom Brady</a> (32) at St. Monica Catholic Church in Santa Monica, California; divorce in 2022</p></div>
+<div class="grid__item one-whole seven-twelfths--1024"><div class="poi__list">
+<a href="/people/tom-brady"><figure><img src="/images/people/tom-brady.jpg?w=200"  srcset="/images/people/tom-brady.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Tom Brady">
+</figure></a>
+<a href="/people/gisele-bundchen"><figure><img src="/images/people/gisele-bundchen.jpg?w=200"  srcset="/images/people/gisele-bundchen.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Gisele Bündchen"></figure></a>
+</div></div></div></div></div>
+<span class="grid__sep-dark"></span>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/mark-wahlberg" class="section__link"><img class="section--icon" src="/images/heart.svg" width="69" height="69" alt=""><span class="poi__heading-txt">Mark Wahlberg</span></a></h3></header>
+<p><a href="/date/2009/august/1" class="date">2009-08-01</a> Fashion model Rhea Durham (34) weds actor and producer <a href="/people/mark-wahlberg">Mark Wahlberg</a> (41) at Good Shepherd Catholic Church in Beverly Hills</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/mark-wahlberg"><figure><img src="/images/people/mark-wahlberg.jpg?w=200"  srcset="/images/people/mark-wahlberg.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Mark Wahlberg">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="event"><a href="/date/2010/april/9" class="date">2010-04-09</a> Philadelphia Eagles long snapper Jon Dorenbos (30) weds Julie Lesicki at St. Augstine Catholic Church in Philadelphia</li>
+<li class="event"><a href="/date/2012/july/7" class="date">2012-07-07</a> &quot;The Office&quot; Ellie Kemper (32) weds former &quot;Conan O&#039;Brien&quot; writer Michael Koman at the Blessed Sacrament Roman Catholic Church in New York City</li>
+<li class="event"><a href="/date/2012/december/1" class="date">2012-12-01</a> Minnesota Twins baseball catcher Joe Mauer (29) weds Maddie Bisanz at Nativity of Our Lord Catholic Church in St. Paul, Minnesota</li>
+<li class="event"><a href="/date/2013/july/6" class="date">2013-07-06</a> Actress Elisha Cuthbert (30) weds ice hockey player Dion Phaneuf at St James Catholic Church in Summerfield, Canada</li>
+<li class="event"><a href="/date/2014/november/29" class="date">2014-11-29</a> Reality TV personality Snooki (27) weds Jionni LaValle at St. Rose of Lima Catholic Church in East Hanover, New Jersey</li>
+<li class="event"><a href="/date/2015/august/1" class="date">2015-08-01</a> Actor Declan Donnelly weds Ali Astall at St Michael&#039;s Roman Catholic Church in Elswick, Tyne and Wear</li>
+<li class="event"><a href="/date/2019/january/1" class="date">2019-01-01</a> Austrian women Nicole Kopaunik (37) and Daniela Paier (37) become the 1st same-sex couple to be officially married in the predominantly Catholic country, in a ceremony in Velden, southern Austria, shortly after midnight</li>
+</ul>
+</div>
+<div class="wrapper"><header class="section__heading"><h2>Famous Deaths</h2></header>
+<ul class="event-list">
+<li class="person"><a href="/date/236/january/3" class="deathDate">0236-01-03</a> St Anterus, Catholic Pope (235-36), dies in office and buried in Rome</li>
+<li class="person"><a href="/date/274/december/30" class="deathDate">0274-12-30</a> St Felix I, dies and ends his reign as Catholic Pope</li>
+<li class="person"><a href="/date/283/december/7" class="deathDate">0283-12-07</a> Catholic Pope Saint Eutychian</li>
+<li class="person"><a href="/date/309/january/16" class="deathDate">0309-01-16</a> Marcellus I, Roman Catholic Pope (308-09), and saint, dies at 54</li>
+<li class="person"><a href="/date/335/december/31" class="deathDate">0335-12-31</a> St. Silvester I, Catholic Pope, dies in office</li>
+<li class="person"><a href="/date/384/december/11" class="deathDate">0384-12-11</a> Pope Saint Damasus I, Pope of the Catholic Church, dies</li>
+<li class="person"><a href="/date/496/november/19" class="deathDate">0496-11-19</a> Pope Gelasius I, Catholic Pope (492-496) of Berber extraction, and writer (Doctrine of the Two Powers), dies at about 86 [birth details murky]</li>
+<li class="person"><a href="/date/705/january/11" class="deathDate">0705-01-11</a> John VI, Catholic Pope (701-05), dies</li>
+<li class="person"><a href="/date/707/october/18" class="deathDate">0707-10-18</a> John VII, Catholic Pope (705-07), of Greek ancestry, dies</li>
+<li class="person"><a href="/date/741/november/28" class="deathDate">0741-11-28</a> Syrian Catholic Pope Saint Gregory III</li>
+<li class="person"><a href="/date/757/april/26" class="deathDate">0757-04-26</a> Stephen II, Catholic Pope (752-757), dies at 43</li>
+<li class="person"><a href="/date/772/january/24" class="deathDate">0772-01-24</a> Stephen III, Greek Sicilian-born Catholic Pope (768-72), dies. (b. 720)</li>
+<li class="person"><a href="/date/865/february/3" class="deathDate">0865-02-03</a> Ansgar, German Catholic archbishop and Saint, dies at 63</li>
+<li class="person"><a href="/date/867/december/16" class="deathDate">0867-12-16</a> Eberhard of Friuli, Frankish Duke and catholic saint, dies at about 51</li>
+<li class="person"><a href="/date/965/july/4" class="deathDate">0965-07-04</a> Pope Benedict V, Italian Roman Catholic Pope (b. unknown)</li>
+<li class="person no-border"><a href="/date/1054/april/19" class="deathDate">1054-04-19</a> Pope Leo IX [Bruno, Graf von Egisheim und Dagsburg], Catholic Church&#039;s 151st pope (1049-54), dies at 51</li>
+</ul><span class="list-clearfix"></span></div><div class="wrapper"><ul class="event-list">
+<li><div id="sp-incontent-15" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-15',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1063/march/21" class="deathDate">1063-03-21</a> Blessed Richeza of Lotharingia, venerated in Roman Catholicism, wife of King Mieszko II of Poland</li>
+<li class="person"><a href="/date/1131/april/30" class="deathDate">1131-04-30</a> Adjutor, French Catholic Saint and knight in the First Crusade, patron saint of swimmers, boaters, and drowning victims</li>
+<li class="person"><a href="/date/1197/september/28" class="deathDate">1197-09-28</a> Henry VI von Hohenstaufen, King of Germany and Holy Roman Emperor, dies in Messina, Sicily</li>
+<li class="person"><a href="/date/1221/august/6" class="deathDate">1221-08-06</a> Saint Dominic, Castilian Catholic priest, founder of the Dominican Order, and patron saint of astronomers, dies at 50</li>
+<li class="person"><a href="/date/1242/february/12" class="deathDate">1242-02-12</a> Henry VII, King of Germany (1220-35) and Sicily, who rebelled against his father Holy Roman Emperor King Frederick II, falls off a horse or possibly commits suicide at 30 or 31</li>
+<li class="person"><a href="/date/1276/june/22" class="deathDate">1276-06-22</a> Catholic Pope Innocent V [Pierre the Tarantaise], 1st Dominican Order pope, dies after just over five months in the job, at about 51</li>
+<li class="person"><a href="/date/1297/august/19" class="deathDate">1297-08-19</a> Saint Louis of Toulouse, French Catholic bishop (b. 1274)</li>
+<li class="person"><a href="/date/1303/may/19" class="deathDate">1303-05-19</a> Ivo of Kermartin, Catholic saint and patron of Brittany, dies at 49</li>
+<li class="person"><a href="/date/1313/august/24" class="deathDate">1313-08-24</a> Henry VII, Roman Catholic German King (1308-1313) and Holy Roman Emperor (1312-13), dies of fever</li>
+<li class="person"><a href="/date/1410/may/18" class="deathDate">1410-05-18</a> Rupert, King of Germany (1400-10), dies at 58</li>
+<li class="person"><a href="/date/1419/december/22" class="deathDate">1419-12-22</a> Antipope Pope John XXIII [Baldassare Cossa], Italian Pope (1410-15) who opposed Pope Gregory XII and is considered an antipope by the Catholic Church, dies at 81</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/joan-of-arc" class="section__link"><img class="section--icon" src="/images/battle.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Joan of Arc <span class="poi__date">(1412-1431)</span></span></a></h3></header>
+<p><a href="/date/1431/may/30" class="deathDate">1431-05-30</a> Roman Catholic <a href="/people/profession/saints">Saint</a> and national heroine of France, <a href="/people/cause-of-death/execution">executed</a> and burnt at the stake at about 19  (birthdate uncertain)</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/joan-of-arc"><figure><img src="/images/people/joan-of-arc.jpg?w=200"  srcset="/images/people/joan-of-arc.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Joan of Arc">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person"><a href="/date/1442/december/18" class="deathDate">1442-12-18</a> Pierre Cauchon, French Catholic bishop (b. 1371)</li>
+<li class="person"><a href="/date/1456/january/8" class="deathDate">1456-01-08</a> St. Laurence Justinian [Lorenzo Giustiniani], Italian catholic bishop and 1st Patriarch of Venice, dies at 74</li>
+<li class="person no-border"><a href="/date/1456/october/23" class="deathDate">1456-10-23</a> Saint John of Capistrano, Franciscan friar and Catholic priest from the Italian town of Capestrano, Abruzzo, dies at 70</li>
+<li><div id="sp-incontent-16" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-16',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1468/september/26" class="deathDate">1468-09-26</a> Juan de Torquemada, Spanish Catholic cardinal (b. 1388)</li>
+<li class="person"><a href="/date/1471/february/22" class="deathDate">1471-02-22</a> John of Rokycan, Czech Catholic archbishop dies at about 74 [birthdate uncertain]</li>
+<li class="person"><a href="/date/1472/november/19" class="deathDate">1472-11-19</a> Bessarion, Byzantine Greek Catholic bishop and famed Greek scholar who revived work of Plato and donated his library to Venice, dies at about 69</li>
+<li class="person"><a href="/date/1500/october/1" class="deathDate">1500-10-01</a> John Alcock, English bishop and chancellor (founded Jesus College, Cambridge), dies at about 70</li>
+<li class="person"><a href="/date/1505/february/4" class="deathDate">1505-02-04</a> Joan of France, Duchess of Berry and Queen of France (1498-1505) and catholic saint who founded several religious orders, dies at 40</li>
+<li class="person"><a href="/date/1510/may/25" class="deathDate">1510-05-25</a> Georges d&#039;Amboise, French Roman Catholic cardinal, minister of state and viceroy in North Italy, dies at 49</li>
+<li class="person"><a href="/date/1521/april/22" class="deathDate">1521-04-22</a> Juan de Padilla, Spanish Roman Catholic missionary, killed at 52</li>
+<li class="person"><a href="/date/1521/june/15" class="deathDate">1521-06-15</a> Tamás Bakócz, Hungarian Catholic cardinal and statesman (b. 1442)</li>
+<li class="person"><a href="/date/1525/september/15" class="deathDate">1525-09-15</a> Jan de Bakker [Johannes Pistorius], Roman Catholic priest who was the first preacher in Northern Netherlands to be put to death as a direct result of his Protestant beliefs, burned at the stake at 26</li>
+<li class="person"><a href="/date/1532/december/11" class="deathDate">1532-12-11</a> Pietro Accolti, Italian Catholic cardinal (Dean of the Roman Rota), dies at 77</li>
+<li class="person"><a href="/date/1535/june/22" class="deathDate">1535-06-22</a> John Fisher, British Catholic clergyman (Bishop of Rochester, 1504-35; Cardinal, 1535), martyr, and saint, executed and beheaded by order of Henry VIII at about 65</li>
+<li class="person"><a href="/date/1542/february/1" class="deathDate">1542-02-01</a> Girolamo Aleandro, Italian Catholic cardinal, dies at 61</li>
+<li class="person"><a href="/date/1544/march/22" class="deathDate">1544-03-22</a> Johannes Magnus, last functioning Catholic Archbishop of Sweden, dies at 56</li>
+<li class="person"><a href="/date/1545/august/27" class="deathDate">1545-08-27</a> Piotr Gamrat, Polish Catholic archbishop (b. 1487)</li>
+<li class="person no-border"><a href="/date/1547/january/11" class="deathDate">1547-01-11</a> Pietro Bembo, Italian writer, literary theorist, and Catholic cardinal, dies at 77</li>
+<li><div id="sp-incontent-17" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-17',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1548/june/3" class="deathDate">1548-06-03</a> Juan de Zumárraga, 1st Spanish Catholic bishop of Mexico, author of &quot;Doctrina breve&quot; first complete book published in the Americas, dies at 79 or 80</li>
+<li class="person"><a href="/date/1550/october/23" class="deathDate">1550-10-23</a> Tiedemann Giese, Polish Catholic bishop and theologian, dies at 70 <a href="https://www.lindahall.org/about/news/scientist-of-the-day/tiedemann-giese/" title="Tiedemann Giese - Linda Hall Library" target="_blank" rel="noopener" class="ref">[1]</a> <a href="https://www.deutsche-biographie.de/sfz20919.html#ndbcontent" title="Giese, Tiedemann Bartholomew - German Biography" target="_blank" rel="noopener" class="ref">[2]</a></li>
+<li class="person"><a href="/date/1550/november/7" class="deathDate">1550-11-07</a> Jon Arason, the last Roman Catholic bishop of Iceland prior to the reformation, beheaded in Skalholt with his two sons Are and Bjorn. (b. 1484)</li>
+<li class="person"><a href="/date/1552/august/15" class="deathDate">1552-08-15</a> Hermann of Wied, German Catholic Archbishop-Elector of Cologne (1515-46), Protestant convert who was excommunicated by the Pope, dies at 75</li>
+<li class="person"><a href="/date/1560/february/16" class="deathDate">1560-02-16</a> Jean du Bellay, French Catholic cardinal and diplomat</li>
+<li class="person"><a href="/date/1571/june/1" class="deathDate">1571-06-01</a> John Story, English Catholic martyr, executed at Tyburn by being hung, drawn and quartered</li>
+<li class="person"><a href="/date/1577/november/29" class="deathDate">1577-11-29</a> Cuthbert Mayne, English catholic saint, executed for high treason by being hung, drawn and quartered (b. 1543)</li>
+<li class="person"><a href="/date/1579/august/5" class="deathDate">1579-08-05</a> Stanislaus Hosius, Polish Catholic cardinal (b. 1504)</li>
+<li class="person"><a href="/date/1581/april/3" class="deathDate">1581-04-03</a> Huibert Duifhuis, Roman Catholic pastor (Rotterdam/Utrecht), dies</li>
+<li class="person"><a href="/date/1581/december/1" class="deathDate">1581-12-01</a> Alexander Briant, English Catholic saint, hanged, drawn and quartered (b. around 1556)</li>
+<li class="person"><b>1581-12-01</b> Ralph Sherwin, English Catholic saint, hanged, drawn and quartered at 31</li>
+<li class="person"><a href="/date/1584/november/3" class="deathDate">1584-11-03</a> Saint Charles Borromeo, Italian cardinal and Archbishop of Milan (1564-84), dies at 46</li>
+<li class="person"><a href="/date/1585/june/20" class="deathDate">1585-06-20</a> Christianus Adrichomius, Dutch Catholic priest and writer (Vita Jesu Christi), dies at 52</li>
+<li class="person"><a href="/date/1585/july/6" class="deathDate">1585-07-06</a> Thomas Aufield, English Catholic martyr (b. 1552)</li>
+<li class="person"><a href="/date/1588/october/1" class="deathDate">1588-10-01</a> Blessed Edward James, Catholic martyr and priest, executed (beatified 1929)</li>
+<li class="person"><a href="/date/1588/december/23" class="deathDate">1588-12-23</a> Henri I de Lorraine, Duke of Guise and French leader of the Catholic League during the French Wars of Religion, assassinated at 37 on the orders of King Henri III <a href="https://www.britannica.com/biography/Henri-I-de-Lorraine-3e-duc-de-Guise" title="Henri I de Lorraine, 3 duc de Guise - Britannica" target="_blank" rel="noopener" class="ref">[1]</a></li>
+<li class="person"><a href="/date/1590/august/27" class="deathDate">1590-08-27</a> Pope Sixtus V [Felice Piergentile], Pope of the Catholic Church (1585-90), dies at 68</li>
+<li class="person"><a href="/date/1591/december/30" class="deathDate">1591-12-30</a> Pope Innocent IX [Giovanni Antonio Facchinetti], 230th Catholic pope (1591), dies at 72</li>
+<li class="person no-border"><a href="/date/1594/july/24" class="deathDate">1594-07-24</a> John Boste, Catholic saint and martyr (b. 1544)</li>
+<li><div id="sp-incontent-18" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-18',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1597/december/21" class="deathDate">1597-12-21</a> Saint Peter Canisius, Dutch Jesuit priest, dies at 76</li>
+<li class="person"><a href="/date/1599/november/8" class="deathDate">1599-11-08</a> Francisco Guerrero, Spanish composer and Catholic priest, dies at 71</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/guy-fawkes" class="section__link"><img class="section--icon" src="/images/battle.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Guy Fawkes <span class="poi__date">(1570-1606)</span></span></a></h3></header>
+<p><a href="/date/1606/january/31" class="deathDate">1606-01-31</a> English Catholic conspirator convicted in the "Gunpowder Plot" to blow up the British Parliament, <a href="/people/cause-of-death/hanging">hanged</a> at 35</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/guy-fawkes"><figure><img src="/images/people/guy-fawkes.jpg?w=200"  loading="lazy" width="200" height="250" alt="Guy Fawkes">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person"><a href="/date/1614/may/3" class="deathDate">1614-05-03</a> Sasbout Vosmeer, Dutch Catholic theologist and apostole vicar, dies at 66</li>
+<li class="person"><a href="/date/1614/july/14" class="deathDate">1614-07-14</a> Camillus de Lellis, Italian Roman Catholic saint (founder of the Ministers of the Sick), dies at 64</li>
+<li class="person"><a href="/date/1616/october/17" class="deathDate">1616-10-17</a> John Pitts, Catholic scholar and writer. (b. 1560)</li>
+<li class="person"><a href="/date/1618/december/6" class="deathDate">1618-12-06</a> Jacques Davy Duperron, French Roman Catholic cardinal, dies at 62</li>
+<li class="person"><a href="/date/1619/march/20" class="deathDate">1619-03-20</a> Matthias, Holy Roman Emperor (1612-19), dies at 62</li>
+<li class="person"><a href="/date/1626/june/7" class="deathDate">1626-06-07</a> Anne of Saint Bartholomew, Flemish Roman Catholic nun, dies at 76</li>
+<li class="person"><a href="/date/1632/april/30" class="deathDate">1632-04-30</a> Johann Tserclaes, Count of Tilly, Holy Roman field marshal who commanded the Catholic League&#039;s forces in the Thirty Years&#039; War, dies of tetanus after being wounded by a cannonball at 73</li>
+<li class="person"><a href="/date/1638/may/6" class="deathDate">1638-05-06</a> Cornelius Jansen, Dutch Roman Catholic reform leader (Jansenism), dies at 52</li>
+<li class="person"><a href="/date/1640/december/9" class="deathDate">1640-12-09</a> Pierre Fourier, Roman Catholic saint and French priest (b.1565)</li>
+</ul></div>
+<div class="section section--highlight section--poi section--poi-b"><div class="wrapper"><div class="grid"><div class="grid__item one-half--768 five-twelfths--1024">
+<header><h3 class="poi__heading"><a href="/people/infante-ferdinand" class="section__link"><img class="section--icon" src="/images/general.svg" loading="lazy" width="69" height="69" alt=""><span class="poi__heading-txt">Infante Ferdinand <span class="poi__date">(1609-1641)</span></span></a></h3></header>
+<p><a href="/date/1641/november/9" class="deathDate">1641-11-09</a> Governor of the Spanish Netherlands, Cardinal of the Holy Catholic Church and military commander during the Thirty Years' War, dies at 32</p></div>
+<div class="grid__item one-half--768 seven-twelfths--1024"><div class="poi__list">
+<a href="/people/infante-ferdinand"><figure><img src="/images/people/infante-ferdinand.jpg?w=200"  srcset="/images/people/infante-ferdinand.jpg?w=360 2x" loading="lazy" width="200" height="250" alt="Infante Ferdinand">
+</figure></a>
+</div></div></div></div></div>
+<div class="wrapper"><ul class="event-list">
+<li class="person"><a href="/date/1642/september/29" class="deathDate">1642-09-29</a> René Goupil, French Jesuit missionary and first canonized Catholic martyr in Canada, killed by Mohawks at 34 <a href="https://www.biographi.ca/en/bio/goupil_rene_1E.html" title="Goupil, René - Dictionary of Canadian Biography" target="_blank" rel="noopener" class="ref">[1]</a></li>
+<li class="person"><a href="/date/1648/march/12" class="deathDate">1648-03-12</a> Tirso de Molina, Spanish Baroque dramatist, poet and Roman Catholic monk (The Trickster of Seville and the Stone Guest), dies at about 63</li>
+<li class="person"><a href="/date/1653/october/7" class="deathDate">1653-10-07</a> Fausto Poli, Italian Catholic priest (b. 1581)</li>
+<li class="person"><a href="/date/1657/april/2" class="deathDate">1657-04-02</a> Jean-Jacques Olier - French catholic priest, founder of the Society of Saint-Sulpice (b. 1608)</li>
+<li class="person"><a href="/date/1660/september/27" class="deathDate">1660-09-27</a> Vincent de Paul, French Roman Catholic Saint, dies at 79</li>
+<li class="person no-border"><a href="/date/1680/august/19" class="deathDate">1680-08-19</a> Jean Eudes, French catholic priest, founder of the Eudists, dies at 78</li>
+<li><div id="sp-incontent-19" class="sponsor--center"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-incontent-19',baseDivId:'incontent'}])});</script>
+</li><li class="person"><a href="/date/1681/july/1" class="deathDate">1681-07-01</a> Oliver Plunkett, Catholic Archbishop of Armagh and last Catholic martyr (later canonized) to die in England, hanged, drawn and quartered for treason at Tyburn at 55</li>
+<li class="person"><a href="/date/1682/april/1" class="deathDate">1682-04-01</a> Franz Egon of Fürstenberg, Bavarian Catholic archbishop (b. 1625)</li>
+<li class="person"><a href="/date/1689/april/19" class="deathDate">1689-04-19</a> Christina, Queen of Sweden who abdicated after becoming Catholic (1644-54), dies at 62</li>
+<li class="person"><a href="/date/1694/june/17" class="deathDate">1694-06-17</a> Philip Howard, English Roman Catholic Cardinal, dies at 64</li>
+<li class="person"><a href="/date/1695/august/6" class="deathDate">1695-08-06</a> François de Harlay de Champvallon, Archbishop of Paris, dies at 69</li>
+<li class="person"><a href="/date/1705/november/30" class="deathDate">1705-11-30</a> Catherine of Braganza, Portuguese Roman Catholic Queen of Charles II of England, dies at 67</li>
+<li class="person"><a href="/date/1708/may/6" class="deathDate">1708-05-06</a> François de Laval, French clergyman, 1st Roman Catholic bishop of Québec, and saint, dies at 85</li>
+<li class="person"><a href="/date/1710/december/18" class="deathDate">1710-12-18</a> Petrus Codde, Dutch Roman Catholic clergyman (Apostolic Vicar of the Dutch Mission, 1688-1704; Archbishop of Utrecht, 1688-1710), dies at 62</li>
+<li class="person"><a href="/date/1711/march/15" class="deathDate">1711-03-15</a> Eusebio Kino, Italian Catholic missionary and explorer in Mexico and Arizona, dies at 65</li>
+<li class="person"><a href="/date/1715/january/7" class="deathDate">1715-01-07</a> François Fénelon, French Roman Catholic theologian and writer (Playing for Time), dies at 63</li>
+<li class="person"><a href="/date/1716/april/28" class="deathDate">1716-04-28</a> Louis de Montfort, French catholic priest and saint who preached Mariology (Secret of the Rosary; True Devotion to Mary), dies at 43</li>
+<li class="person"><a href="/date/1719/april/7" class="deathDate">1719-04-07</a> Jean-Baptiste de la Salle, French priest and saint of the Catholic Church, dies at 67</li>
+<li class="person"><a href="/date/1727/january/20" class="deathDate">1727-01-20</a> John van Bylevelt, Catholic apostole, dies</li>
+<li class="person"><a href="/date/1734/april/4" class="deathDate">1734-04-04</a> Johann C van Erckel, old Catholic theologist, dies at about 79</li>
+<li class="person"><a href="/date/1742/may/14" class="deathDate">1742-05-14</a> Dominique Marie Valet, French Roman Catholic bishop and missionary (Diocese of Quebec), dies at 64</li>
+<li class="person"><a href="/date/1748/september/10" class="deathDate">1748-09-10</a> Mother Ignacia del Espiritu Santo, Filipino Religious Sister of the Roman Catholic Church, dies at 85</li>
+</ul>
+<ul class="pag">
+<li><span class="pag__prev disabled">Previous</span></li>
+<li>1</li>
+<li><a href="/religion/christianity/roman-catholic?p=2" rel="next">2</a></li>
+<li><a href="/religion/christianity/roman-catholic?p=3">3</a></li>
+<li><a href="/religion/christianity/roman-catholic?p=2" class="pag__next" rel="next"><span>Next</span></a></li>
+</ul>
+</div>
+<div class="wrapper"><div id="sp-belowpost" class="sponsor--footer"></div><script>window.tude=window.tude||{cmd:[]};tude.cmd.push(function(){tude.refreshAdsViaDivMappings([{divId:'sp-belowpost',baseDivId:'belowpost'}])});</script><br><header class="section__heading">
+				<a href="/people/popes" class="section__link">
+				<h2>Famous Popes</h2></a>
+</header>
+				<ul class="photo-list">
+<li class="photo-list__item"><a href="/people/pope-clement-vii"><img src="/images/people/pope-clement-vii.jpg" loading="lazy" width="180" height="225" alt="">Clement VII</a></li>
+<li class="photo-list__item"><a href="/people/john-paul-ii"><img src="/images/people/john-paul-ii.jpg" loading="lazy" width="180" height="225" alt="">John Paul II</a></li>
+<li class="photo-list__item"><a href="/people/julius-ii"><img src="/images/people/pope-julius-ii.jpg" loading="lazy" width="180" height="225" alt="">Julius II</a></li>
+<li class="photo-list__item"><a href="/people/julius-iii"><img src="/images/people/julius-iii.jpg" loading="lazy" width="180" height="225" alt="">Julius III</a></li>
+<li class="photo-list__item"><a href="/people/leo-xiii"><img src="/images/people/leo-xiii.jpg" loading="lazy" width="180" height="225" alt="">Leo XIII</a></li>
+<li class="photo-list__item"><a href="/people/pope-francis"><img src="/images/people/pope-francis.jpg" loading="lazy" width="180" height="225" alt="">Pope Francis</a></li>
+</ul>
+</div>
+</article>		
+</main>
+<div class="search section--search" id="search" style="display:none">
+<div class="wrapper">
+<form method="post" action="/search.php">
+<ul class="search__list">
+<li class="search__item"><input name="text" type="text" autocomplete="off" minlength="2" placeholder="Enter Date, Event or Person" value="" class="search__text" aria-label="Date, Event or Person"></li>
+<li class="search__item"><select name="day" class="search__select" aria-label="Day">
+<option>All Days</option>
+<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select></li>
+<li class="search__item">
+<select name="month" class="search__select" aria-label="Month">
+<option value="all" selected="selected">All Months</option>
+<option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></li>
+<li class="search__item"><input name="year" type="number" placeholder="All Years" min="1" max="2050" aria-label="Year"></li>
+<li class="search__item">
+<select name="type" class="search__select" aria-label="Entry Type">
+<option value="all" selected="selected">All Types</option><option value="e">Events</option><option value="b">Birthdays</option><option value="d">Deaths</option><option value="w">Weddings</option></select></li>
+<li class="search__item"><button aria-label="Search" class="search__button">Search</button></li></ul><input type="hidden" name="searchBox" value="M"></form>&nbsp;</div></div>
+<div class="footer__search">
+<div class="wrapper">
+<p>Search the largest and most accurate independent site for today in history.</p>
+<form method="post" action="/search.php">
+<ul class="search__list">
+<li class="search__item"><input name="text" type="text" autocomplete="off" minlength="2" placeholder="Enter Date, Event or Person" value="" class="search__text" aria-label="Date, Event or Person"></li>
+<li class="search__item"><select name="day" class="search__select" aria-label="Day">
+<option>All Days</option>
+<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select></li>
+<li class="search__item">
+<select name="month" class="search__select" aria-label="Month">
+<option value="all" selected="selected">All Months</option>
+<option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></li>
+<li class="search__item"><input name="year" type="number" placeholder="All Years" min="1" max="2050" aria-label="Year"></li>
+<li class="search__item">
+<select name="type" class="search__select" aria-label="Entry Type">
+<option value="all" selected="selected">All Types</option><option value="e">Events</option><option value="b">Birthdays</option><option value="d">Deaths</option><option value="w">Weddings</option></select></li>
+<li class="search__item"><button aria-label="Search" class="search__button">Search</button></li></ul><input type="hidden" name="searchBox" value="B"></form></div></div>
+<footer class="footer"><div class="footer__nav"><div class="wrapper"><ul><li><a href="/about.php">About</a></li><li><a href="/contact.php">Contact</a></li><li><a href="/corrections.php">Corrections</a></li><li><a href="/privacy.php">Privacy</a></li><li><a href="/terms.php">Terms</a></li></ul></div></div>
+<div class="footer__subscribe">Get Our Daily Email</div>
+<form action="/newsletter/" method="post" name="subscribe-form"><ul class="subscribe__list"><li class="subscribe__item"><input type="email" name="email" class="subscribe__input" placeholder="Email Address" autocomplete="email" required aria-label="Email Address"></li>
+<li class="subscribe__item"><button type="submit" name="subscribe" class="subscribe__button" aria-label="Add Me">Add<span> Me</span>!</button></li></ul></form>
+<ul class="social-icons"><li class="social-icons__item"><a href="https://www.facebook.com/OnThisDaycom" class="social-icons__link" target="_blank" rel="noopener"><img src="/images/facebook.svg" loading="lazy" width="30" height="30" alt="On This Day on Facebook" title="On This Day on Facebook"></a></li>
+<li class="social-icons__item"><a href="https://www.instagram.com/onthisdaycom/" class="social-icons__link" target="_blank" rel="noopener"><img src="/images/instagram.svg" loading="lazy" width="30" height="30" alt="On This Day on Instagram" title="On This Day on Instagram"></a></li>
+<li class="social-icons__item"><a href="https://twitter.com/OnThisDaycom" class="social-icons__link" target="_blank" rel="noopener"><img src="/images/twitter.svg" loading="lazy" width="30" height="30" alt="On This Day on Twitter" title="On This Day Twitter"></a></li></ul>
+<p class="footer__copyright">&copy; 2000-2025 On This Day Pte. Ltd.</p></footer>
+<script async src="/_assets/js/main.js?v6"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c46b0bc98ce765',t:'MTc1NDcxMjc3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

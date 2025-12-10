@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html data-bs-theme="auto" lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            
+                RFC 2195 - IMAP/POP AUTHorize Extension for Simple Challenge/Response
+            
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://static.ietf.org/fonts/inter/import.css" rel="stylesheet">
+        <link href="https://static.ietf.org/fonts/noto-sans-mono/import.css" rel="stylesheet">
+        
+            <link rel="stylesheet" href="https://static.ietf.org/dt/12.45.0/ietf/css/document_html_referenced.css">
+            
+            <script type="module" crossorigin="" src="https://static.ietf.org/dt/12.45.0/assets/embedded-12b6e5e7.js"></script>
+<link href="https://static.ietf.org/dt/12.45.0/assets/create-pinia-singleton-6a0ec72c.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://static.ietf.org/dt/12.45.0/assets/Scrollbar-a7264c62.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+            <script src="https://static.ietf.org/dt/12.45.0/ietf/js/document_html.js"></script>
+            <script src="https://static.ietf.org/dt/12.45.0/ietf/js/theme.js"></script>
+        
+        <link rel="alternate" type="application/atom+xml" title="Document changes" href="/feed/document-changes/rfc2195/">
+        <meta name="description"
+            
+                content="IMAP/POP AUTHorize Extension for Simple Challenge/Response (RFC 2195, )"
+            >
+        
+
+<link rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-180.png">
+<link rel="icon"
+      sizes="32x32"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-32.png">
+<link rel="icon"
+      sizes="16x16"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-mask.svg"
+      color="#ffffff">
+<meta name="msapplication-TileColor"
+      content="#ffffff">
+<meta name="theme-color"
+      content="#ffffff">
+        
+
+
+
+
+<meta property="og:title" content="RFC 2195: IMAP/POP AUTHorize Extension for Simple Challenge/Response">
+<meta property="og:url" content="https://datatracker.ietf.org/doc/html/rfc2195">
+<link rel="canonical" href="https://datatracker.ietf.org/doc/html/rfc2195">
+<meta property="og:site_name" content="IETF Datatracker">
+<meta property="og:description" content="This specification provides a simple challenge-response authentication protocol that is suitable for use with IMAP4. [STANDARDS-TRACK]">
+<meta property="og:type" content="article">
+
+<meta property="article:section" content="Individual Internet-Draft">
+
+<meta property="article:author" content="Paul Krumviede">
+<meta property="article:author" content="Randy Catoe">
+<meta property="article:author" content="Dr. John C. Klensin">
+
+
+
+        
+        <style>
+            
+            .diff-form .select2-selection__rendered {
+                direction: rtl;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <noscript><iframe class="status" title="Site status" src="/status/latest"></iframe></noscript>
+<div class="vue-embed" data-component="Status"></div>
+        <div class="btn-toolbar sidebar-toolbar position-fixed top-0 end-0 m-2 m-lg-3 d-print-none">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm me-1 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                    aria-label="Toggle theme">
+                        <i class="theme-icon-active bi bi-circle-half"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="bd-theme">
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="light" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-sun-fill"></i>
+                            Light<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-moon-stars-fill"></i>
+                            Dark<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                            data-bs-theme-value="auto" aria-pressed="true">
+                            <i class="me-2 opacity-50 theme-icon bi bi-circle-half"></i>
+                            Auto<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm sidebar-toggle"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar"
+                    aria-expanded="true"
+                    aria-controls="sidebar"
+                    aria-label="Toggle metadata sidebar"
+                    title="Toggle metadata sidebar">
+            <i class="bi bi-arrow-bar-left sidebar-shown"></i>
+            <i class="bi bi-arrow-bar-right sidebar-collapsed"></i>
+            </button>
+        </div>
+        <nav class="navbar bg-light-subtle px-1 fixed-top d-print-none d-md-none">
+            <a class="nav-link ps-1"
+               href="/doc/rfc2195/">
+                
+                    RFC 2195
+                
+                <br class="d-sm-none">
+
+                <span class="ms-sm-3 badge rounded-pill badge-ps">
+                    
+                        Proposed Standard
+                    
+                </span>
+            </a>
+            <button class="navbar-toggler p-1"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#docinfo-collapse"
+                    aria-controls="docinfo-collapse"
+                    aria-expanded="false"
+                    aria-label="Show document information">
+                <span class="navbar-toggler-icon small"></span>
+            </button>
+            <div class="navbar-nav navbar-nav-scroll overscroll-none collapse pt-1" id="docinfo-collapse">
+                <div class="bg-light-subtle p-0">
+                    <table class="table table-sm table-borderless small">
+                        <tbody class="meta align-top">
+                            <tr>
+                                <th scope="row"></th>
+                                <th scope="row">Title</th>
+                                <td class="edit"></td>
+                                <td>IMAP/POP AUTHorize Extension for Simple Challenge/Response</td>
+                            </tr>
+                        </tbody>
+                        
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Proposed Standard
+    
+</span>
+
+            
+                
+                    <br>September 1997
+                
+                <br>
+                
+                
+                    <a class="btn btn-sm btn-warning"
+                       title="Click to report an error in the document."
+                       href="https://www.rfc-editor.org/errata.php#reportnew"
+                       target="_blank">
+                        Report errata
+                    </a>
+                
+                
+                
+                
+                <div>Obsoletes <a href="/doc/html/rfc2095" title="IMAP/POP AUTHorize Extension for Simple Challenge/Response">RFC 2095</a></div>
+                
+                
+                
+                
+            
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+            
+            
+            <li class="page-item rfc active">
+                <a class="page-link"
+                href="/doc/html/rfc2195">
+                    RFC 2195
+                </a>
+            </li>
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Authors</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Paul Krumviede"
+            href="/person/Paul@mci.net" >Paul Krumviede</a> <a 
+               href="mailto:Paul%40mci.net"
+               aria-label="Compose email to Paul@mci.net"
+               title="Compose email to Paul@mci.net">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Randy Catoe"
+            href="/person/randy@mci.net" >Randy Catoe</a> <a 
+               href="mailto:randy%40mci.net"
+               aria-label="Compose email to randy@mci.net"
+               title="Compose email to randy@mci.net">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Dr. John C. Klensin"
+            href="/person/john-ietf@jck.com" >Dr. John C. Klensin</a> <a 
+               href="mailto:john-ietf%40jck.com"
+               aria-label="Compose email to john-ietf@jck.com"
+               title="Compose email to john-ietf@jck.com">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:rfc2195@ietf.org?subject=rfc2195" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        Legacy
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc2195.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc2195.html">
+            
+                <i class="bi bi-file-code"></i> html
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+            download="rfc2195.pdf"
+          
+         
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/pdfrfc/rfc2195.txt.pdf">
+            
+                <i class="bi bi-file-pdf"></i> pdf
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/rfc2195/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+    
+</tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <td class="edit"></td>
+                            <td>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </nav>
+        <div class="row g-0">
+            <div class="col-md-9 d-flex justify-content-center lh-sm"
+                 data-bs-spy="scroll"
+                 data-bs-target="#toc-nav"
+                 data-bs-smooth-scroll="true"
+                 tabindex="0"
+                 id="content">
+                
+                    <div class="rfcmarkup">
+                        <br class="noprint">
+                        <!-- [html-validate-disable-block attr-quotes, void-style, element-permitted-content, heading-level -- FIXME: rfcmarkup/rfc2html generates HTML with issues] -->
+                        <div class="rfcmarkup"><pre>Network Working Group                                       J. Klensin
+Request for Comments: 2195                                    R. Catoe
+Category: Standards Track                                 P. Krumviede
+Obsoletes: <a href="/doc/html/rfc2095">2095</a>                                                    MCI
+                                                        September 1997
+
+
+       <span class="h1">IMAP/POP AUTHorize Extension for Simple Challenge/Response</span>
+
+Status of this Memo
+
+   This document specifies an Internet standards track protocol for the
+   Internet community, and requests discussion and suggestions for
+   improvements.  Please refer to the current edition of the &quot;Internet
+   Official Protocol Standards&quot; (STD 1) for the standardization state
+   and status of this protocol.  Distribution of this memo is unlimited.
+
+Abstract
+
+   While IMAP4 supports a number of strong authentication mechanisms as
+   described in <a href="/doc/html/rfc1731">RFC 1731</a>, it lacks any mechanism that neither passes
+   cleartext, reusable passwords across the network nor requires either
+   a significant security infrastructure or that the mail server update
+   a mail-system-wide user authentication file on each mail access.
+   This specification provides a simple challenge-response
+   authentication protocol that is suitable for use with IMAP4.  Since
+   it utilizes Keyed-MD5 digests and does not require that the secret be
+   stored in the clear on the server, it may also constitute an
+   improvement on APOP for POP3 use as specified in <a href="/doc/html/rfc1734">RFC 1734</a>.
+
+<span class="h2"><a class="selflink" id="section-1" href="#section-1">1</a>. Introduction</span>
+
+   Existing Proposed Standards specify an AUTHENTICATE mechanism for the
+   IMAP4 protocol [<a href="#ref-IMAP" title="&quot;Internet Message Access Protocol - Version 4rev1&quot;">IMAP</a>, <a href="#ref-IMAP-AUTH" title="&quot;IMAP4 Authentication Mechanisms&quot;">IMAP-AUTH</a>] and a parallel AUTH mechanism for
+   the POP3 protocol [<a href="#ref-POP3-AUTH" title="&quot;POP3 AUTHentication command&quot;">POP3-AUTH</a>].  The AUTHENTICATE mechanism is
+   intended to be extensible; the four methods specified in [<a href="#ref-IMAP-AUTH" title="&quot;IMAP4 Authentication Mechanisms&quot;">IMAP-AUTH</a>]
+   are all fairly powerful and require some security infrastructure to
+   support.  The base POP3 specification [<a href="#ref-POP3" title="&quot;Post Office Protocol - Version 3&quot;">POP3</a>] also contains a
+   lightweight challenge-response mechanism called APOP.  APOP is
+   associated with most of the risks associated with such protocols: in
+   particular, it requires that both the client and server machines have
+   access to the shared secret in cleartext form. CRAM offers a method
+   for avoiding such cleartext storage while retaining the algorithmic
+   simplicity of APOP in using only MD5, though in a &quot;keyed&quot; method.
+
+
+
+
+
+
+
+<span class="grey">Klensin, Catoe &amp; Krumviede  Standards Track                     [Page 1]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-2" ></span>
+<span class="grey"><a href="/doc/html/rfc2195">RFC 2195</a>              IMAP/POP AUTHorize Extension        September 1997</span>
+
+
+   At present, IMAP [<a href="#ref-IMAP" title="&quot;Internet Message Access Protocol - Version 4rev1&quot;">IMAP</a>] lacks any facility corresponding to APOP.
+   The only alternative to the strong mechanisms identified in [IMAP-
+   AUTH] is a presumably cleartext username and password, supported
+   through the LOGIN command in [<a href="#ref-IMAP" title="&quot;Internet Message Access Protocol - Version 4rev1&quot;">IMAP</a>].  This document describes a
+   simple challenge-response mechanism, similar to APOP and PPP CHAP
+   [PPP], that can be used with IMAP (and, in principle, with POP3).
+
+   This mechanism also has the advantage over some possible alternatives
+   of not requiring that the server maintain information about email
+   &quot;logins&quot; on a per-login basis.  While mechanisms that do require such
+   per-login history records may offer enhanced security, protocols such
+   as IMAP, which may have several connections between a given client
+   and server open more or less simultaneous, may make their
+   implementation particularly challenging.
+
+<span class="h2"><a class="selflink" id="section-2" href="#section-2">2</a>. Challenge-Response Authentication Mechanism (CRAM)</span>
+
+   The authentication type associated with CRAM is &quot;CRAM-MD5&quot;.
+
+   The data encoded in the first ready response contains an
+   presumptively arbitrary string of random digits, a timestamp, and the
+   fully-qualified primary host name of the server.  The syntax of the
+   unencoded form must correspond to that of an <a href="/doc/html/rfc822">RFC 822</a> &#x27;msg-id&#x27;
+   [<a href="/doc/html/rfc822">RFC822</a>] as described in [<a href="#ref-POP3" title="&quot;Post Office Protocol - Version 3&quot;">POP3</a>].
+
+   The client makes note of the data and then responds with a string
+   consisting of the user name, a space, and a &#x27;digest&#x27;.  The latter is
+   computed by applying the keyed MD5 algorithm from [<a href="#ref-KEYED-MD5" title="&quot;HMAC: Keyed-Hashing for Message Authentication&quot;">KEYED-MD5</a>] where
+   the key is a shared secret and the digested text is the timestamp
+   (including angle-brackets).
+
+   This shared secret is a string known only to the client and server.
+   The `digest&#x27; parameter itself is a 16-octet value which is sent in
+   hexadecimal format, using lower-case ASCII characters.
+
+   When the server receives this client response, it verifies the digest
+   provided.  If the digest is correct, the server should consider the
+   client authenticated and respond appropriately.
+
+   Keyed MD5 is chosen for this application because of the greater
+   security imparted to authentication of short messages. In addition,
+   the use of the techniques described in [<a href="#ref-KEYED-MD5" title="&quot;HMAC: Keyed-Hashing for Message Authentication&quot;">KEYED-MD5</a>] for precomputation
+   of intermediate results make it possible to avoid explicit cleartext
+   storage of the shared secret on the server system by instead storing
+   the intermediate results which are known as &quot;contexts&quot;.
+
+
+
+
+
+
+<span class="grey">Klensin, Catoe &amp; Krumviede  Standards Track                     [Page 2]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-3" ></span>
+<span class="grey"><a href="/doc/html/rfc2195">RFC 2195</a>              IMAP/POP AUTHorize Extension        September 1997</span>
+
+
+   CRAM does not support a protection mechanism.
+
+   Example:
+
+   The examples in this document show the use of the CRAM mechanism with
+   the IMAP4 AUTHENTICATE command [<a href="#ref-IMAP-AUTH" title="&quot;IMAP4 Authentication Mechanisms&quot;">IMAP-AUTH</a>].  The base64 encoding of
+   the challenges and responses is part of the IMAP4 AUTHENTICATE
+   command, not part of the CRAM specification itself.
+
+     S: * OK IMAP4 Server
+     C: A0001 AUTHENTICATE CRAM-MD5
+     S: + PDE4OTYuNjk3MTcwOTUyQHBvc3RvZmZpY2UucmVzdG9uLm1jaS5uZXQ+
+     C: dGltIGI5MTNhNjAyYzdlZGE3YTQ5NWI0ZTZlNzMzNGQzODkw
+     S: A0001 OK CRAM authentication successful
+
+      In this example, the shared secret is the string
+      &#x27;tanstaaftanstaaf&#x27;.  Hence, the Keyed MD5 digest is produced by
+      calculating
+
+        MD5((tanstaaftanstaaf XOR opad),
+            MD5((tanstaaftanstaaf XOR ipad),
+            &lt;1896.697170952@postoffice.reston.mci.net&gt;))
+
+      where ipad and opad are as defined in the keyed-MD5 Work in
+      Progress [<a href="#ref-KEYED-MD5" title="&quot;HMAC: Keyed-Hashing for Message Authentication&quot;">KEYED-MD5</a>] and the string shown in the challenge is the
+      base64 encoding of &lt;1896.697170952@postoffice.reston.mci.net&gt;. The
+      shared secret is null-padded to a length of 64 bytes. If the
+      shared secret is longer than 64 bytes, the MD5 digest of the
+      shared secret is used as a 16 byte input to the keyed MD5
+      calculation.
+
+      This produces a digest value (in hexadecimal) of
+
+           b913a602c7eda7a495b4e6e7334d3890
+
+      The user name is then prepended to it, forming
+
+           tim b913a602c7eda7a495b4e6e7334d3890
+
+      Which is then base64 encoded to meet the requirements of the IMAP4
+      AUTHENTICATE command (or the similar POP3 AUTH command), yielding
+
+           dGltIGI5MTNhNjAyYzdlZGE3YTQ5NWI0ZTZlNzMzNGQzODkw
+
+
+
+
+
+
+
+
+<span class="grey">Klensin, Catoe &amp; Krumviede  Standards Track                     [Page 3]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-4" ></span>
+<span class="grey"><a href="/doc/html/rfc2195">RFC 2195</a>              IMAP/POP AUTHorize Extension        September 1997</span>
+
+
+<span class="h2"><a class="selflink" id="section-3" href="#section-3">3</a>. References</span>
+
+   [<a id="ref-CHAP">CHAP</a>]  Lloyd, B., and W. Simpson, &quot;PPP Authentication Protocols&quot;,
+       <a href="/doc/html/rfc1334">RFC 1334</a>, October 1992.
+
+   [<a id="ref-IMAP">IMAP</a>] Crispin, M., &quot;Internet Message Access Protocol - Version
+       4rev1&quot;, <a href="/doc/html/rfc2060">RFC 2060</a>, University of Washington, December 1996.
+
+   [<a id="ref-IMAP-AUTH">IMAP-AUTH</a>] Myers, J., &quot;IMAP4 Authentication Mechanisms&quot;,
+       <a href="/doc/html/rfc1731">RFC 1731</a>, Carnegie Mellon, December 1994.
+
+   [<a id="ref-KEYED-MD5">KEYED-MD5</a>] Krawczyk, Bellare, Canetti, &quot;HMAC: Keyed-Hashing for
+       Message Authentication&quot;, <a href="/doc/html/rfc2104">RFC 2104</a>, February 1997.
+
+   [<a id="ref-MD5">MD5</a>]  Rivest, R., &quot;The MD5 Message Digest Algorithm&quot;,
+       <a href="/doc/html/rfc1321">RFC 1321</a>, MIT Laboratory for Computer Science, April 1992.
+
+   [<a id="ref-POP3">POP3</a>] Myers, J., and M. Rose, &quot;Post Office Protocol - Version 3&quot;,
+       STD 53, <a href="/doc/html/rfc1939">RFC 1939</a>, Carnegie Mellon, May 1996.
+
+   [<a id="ref-POP3-AUTH">POP3-AUTH</a>] Myers, J., &quot;POP3 AUTHentication command&quot;, <a href="/doc/html/rfc1734">RFC 1734</a>,
+       Carnegie Mellon, December, 1994.
+
+<span class="h2"><a class="selflink" id="section-4" href="#section-4">4</a>. Security Considerations</span>
+
+   It is conjectured that use of the CRAM authentication mechanism
+   provides origin identification and replay protection for a session.
+   Accordingly, a server that implements both a cleartext password
+   command and this authentication type should not allow both methods of
+   access for a given user.
+
+   While the saving, on the server, of &quot;contexts&quot; (see <a href="#section-2">section 2</a>) is
+   marginally better than saving the shared secrets in cleartext as is
+   required by CHAP [<a href="#ref-CHAP" title="&quot;PPP Authentication Protocols&quot;">CHAP</a>] and APOP [<a href="#ref-POP3" title="&quot;Post Office Protocol - Version 3&quot;">POP3</a>], it is not sufficient to
+   protect the secrets if the server itself is compromised.
+   Consequently, servers that store the secrets or contexts must both be
+   protected to a level appropriate to the potential information value
+   in user mailboxes and identities.
+
+   As the length of the shared secret increases, so does the difficulty
+   of deriving it.
+
+   While there are now suggestions in the literature that the use of MD5
+   and keyed MD5 in authentication procedures probably has a limited
+   effective lifetime, the technique is now widely deployed and widely
+   understood.  It is believed that this general understanding may
+   assist with the rapid replacement, by CRAM-MD5, of the current uses
+   of permanent cleartext passwords in IMAP.   This document has been
+
+
+
+<span class="grey">Klensin, Catoe &amp; Krumviede  Standards Track                     [Page 4]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-5" ></span>
+<span class="grey"><a href="/doc/html/rfc2195">RFC 2195</a>              IMAP/POP AUTHorize Extension        September 1997</span>
+
+
+   deliberately written to permit easy upgrading to use SHA (or whatever
+   alternatives emerge) when they are considered to be widely available
+   and adequately safe.
+
+   Even with the use of CRAM, users are still vulnerable to active
+   attacks.  An example of an increasingly common active attack is &#x27;TCP
+   Session Hijacking&#x27; as described in CERT Advisory CA-95:01 [CERT95].
+
+   See <a href="#section-1">section 1</a> above for additional discussion.
+
+<span class="h2"><a class="selflink" id="section-5" href="#section-5">5</a>. Acknowledgements</span>
+
+   This memo borrows ideas and some text liberally from [<a href="#ref-POP3" title="&quot;Post Office Protocol - Version 3&quot;">POP3</a>] and
+   [<a href="/doc/html/rfc1731">RFC-1731</a>] and thanks are due the authors of those documents.  Ran
+   Atkinson made a number of valuable technical and editorial
+   contributions to the document.
+
+<span class="h2"><a class="selflink" id="section-6" href="#section-6">6</a>. Authors&#x27; Addresses</span>
+
+   John C. Klensin
+   MCI Telecommunications
+   800 Boylston St, 7th floor
+   Boston, MA 02199
+   USA
+
+   EMail: klensin@mci.net
+   Phone: +1 617 960 1011
+
+   Randy Catoe
+   MCI Telecommunications
+   2100 Reston Parkway
+   Reston, VA 22091
+   USA
+
+   EMail: randy@mci.net
+   Phone: +1 703 715 7366
+
+   Paul Krumviede
+   MCI Telecommunications
+   2100 Reston Parkway
+   Reston, VA 22091
+   USA
+
+   EMail: paul@mci.net
+   Phone: +1 703 715 7251
+
+
+
+
+
+
+Klensin, Catoe &amp; Krumviede  Standards Track                     [Page 5]
+</pre></div>
+                    </div>
+                
+            </div>
+            <div class="d-print-none col-md-3 bg-light-subtle collapse show" id="sidebar">
+                <div class="position-fixed border-start sidebar overflow-scroll overscroll-none no-scrollbar">
+                    <div class="d-flex flex-column vh-100 pt-2 pt-lg-3 ps-3 pl-md-2 pl-lg-3">
+                        <div>
+                            <a class="btn btn-primary btn-sm" href="/doc/rfc2195/">Datatracker</a>
+                            <p class="fw-bold pt-2">
+                                
+                                    RFC 2195
+                                
+                                <br>
+                                
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Proposed Standard
+    
+</span>
+
+                            </p>
+                        </div>
+                        
+                        <ul class="nav nav-tabs nav-fill small me-2" role="tablist">
+                            <li class="nav-item" role="presentation" title="Document information">
+                                <button class="nav-link px-2"
+                                        id="docinfo-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#docinfo-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="docinfo-tab-pane"
+                                        aria-selected="true">
+                                    <i class="bi bi-info-circle"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Info</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Table of contents">
+                                <button class="nav-link px-2"
+                                        id="toc-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#toc-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="toc-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-list-ol"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Contents</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Preferences">
+                                <button class="nav-link px-2"
+                                        id="pref-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#pref-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="pref-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-gear"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Prefs</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="overflow-auto tab-content pt-2 me-2">
+                            <div class="tab-pane"
+                                 id="docinfo-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="docinfo-tab"
+                                 tabindex="0">
+                                <table class="table table-sm table-borderless">
+                                    
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Proposed Standard
+    
+</span>
+
+            
+                
+                    <br>September 1997
+                
+                <br>
+                
+                
+                    <a class="btn btn-sm btn-warning"
+                       title="Click to report an error in the document."
+                       href="https://www.rfc-editor.org/errata.php#reportnew"
+                       target="_blank">
+                        Report errata
+                    </a>
+                
+                
+                
+                
+                <div>Obsoletes <a href="/doc/html/rfc2095" title="IMAP/POP AUTHorize Extension for Simple Challenge/Response">RFC 2095</a></div>
+                
+                
+                
+                
+            
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+            
+            
+            <li class="page-item rfc active">
+                <a class="page-link"
+                href="/doc/html/rfc2195">
+                    RFC 2195
+                </a>
+            </li>
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Authors</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Paul Krumviede"
+            href="/person/Paul@mci.net" >Paul Krumviede</a> <a 
+               href="mailto:Paul%40mci.net"
+               aria-label="Compose email to Paul@mci.net"
+               title="Compose email to Paul@mci.net">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Randy Catoe"
+            href="/person/randy@mci.net" >Randy Catoe</a> <a 
+               href="mailto:randy%40mci.net"
+               aria-label="Compose email to randy@mci.net"
+               title="Compose email to randy@mci.net">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Dr. John C. Klensin"
+            href="/person/john-ietf@jck.com" >Dr. John C. Klensin</a> <a 
+               href="mailto:john-ietf%40jck.com"
+               aria-label="Compose email to john-ietf@jck.com"
+               title="Compose email to john-ietf@jck.com">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:rfc2195@ietf.org?subject=rfc2195" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        Legacy
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc2195.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc2195.html">
+            
+                <i class="bi bi-file-code"></i> html
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+            download="rfc2195.pdf"
+          
+         
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/pdfrfc/rfc2195.txt.pdf">
+            
+                <i class="bi bi-file-pdf"></i> pdf
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/rfc2195/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+    
+</tbody>
+                                </table>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a datatracker bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </div>
+                            <div class="tab-pane mb-5"
+                                 id="toc-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="toc-tab"
+                                 tabindex="0">
+                                <nav class="nav nav-pills flex-column small" id="toc-nav">
+                                </nav>
+                            </div>
+                            <div class="tab-pane mb-5 small"
+                                 id="pref-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="pref-tab"
+                                 tabindex="0">
+                                <label class="form-label fw-bold mb-2">Show sidebar by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="sidebar" id="on-radio">
+                                    <label class="btn btn-outline-primary" for="on-radio">Yes</label>
+                                    <input type="radio" class="btn-check" name="sidebar" id="off-radio">
+                                    <label class="btn btn-outline-primary" for="off-radio">No</label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Tab to show by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="deftab" id="docinfo-radio">
+                                    <label class="btn btn-outline-primary" for="docinfo-radio">
+                                        <i class="bi bi-info-circle me-1"></i>Info
+                                    </label>
+                                    <input type="radio" class="btn-check" name="deftab" id="toc-radio">
+                                    <label class="btn btn-outline-primary" for="toc-radio">
+                                        <i class="bi bi-list-ol me-1"></i>Contents
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">HTMLization configuration</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="htmlconf" id="txt-radio">
+                                    <label class="btn btn-outline-primary" for="txt-radio" title="This is the traditional HTMLization method.">
+                                        <i class="bi bi-badge-sd me-1"></i>HTMLize the plaintext
+                                    </label>
+                                    <input type="radio" class="btn-check" name="htmlconf" id="html-radio">
+                                    <label class="btn btn-outline-primary" for="html-radio" title="This is the modern HTMLization method.">
+                                        <i class="bi bi-badge-hd me-1"></i>Plaintextify the HTML
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2" for="ptsize">Maximum font size</label>
+                                <input type="range" class="form-range" min="7" max="16" id="ptsize" oninput="ptdemo.value = ptsize.value">
+                                <label class="form-label fw-bold mt-4 mb-2">Page dependencies</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="pagedeps" id="inline-radio">
+                                    <label class="btn btn-outline-primary" for="inline-radio" title="Generate larger, standalone web pages that do not require network access to render.">
+                                        <i class="bi bi-box me-1"></i>Inline
+                                    </label>
+                                    <input type="radio" class="btn-check" name="pagedeps" id="reference-radio">
+                                    <label class="btn btn-outline-primary" for="reference-radio" title="Generate regular web pages that require network access to render.">
+                                        <i class="bi bi-link-45deg me-1"></i>Reference
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Citation links</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="reflinks" id="refsection-radio">
+                                    <label class="btn btn-outline-primary" for="refsection-radio" title="Citation links go to the reference section.">
+                                        <i class="bi bi-arrow-clockwise"></i> Go to reference section
+                                    </label>
+                                    <input type="radio" class="btn-check" name="reflinks" id="citation-radio">
+                                    <label class="btn btn-outline-primary" for="citation-radio" title="Citation links go directly to the cited document.">
+                                        <i class="bi bi-link-45deg me-1"></i>Go to linked document
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+  var _paq = window._paq || [];
+  
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ietf.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 7]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.ietf.org/matomo.php?idsite=7" style="border:0;" alt="" /></p></noscript>
+
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c54a620f1e4cb3',t:'MTc1NDcyMTkyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

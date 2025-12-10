@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Mathematical Markup Language (MathML) Version 2.0</title>
+<link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/W3C-WD.css">
+<style type="text/css">
+  .error { color: red }
+  .minitoc { border-style: solid;
+             border-color: #0050B2; 
+             border-width: 1px ; }
+  .attention { border-style: solid; 
+               border-width: 1px ; 
+               color: #5D0091;
+               background: #F9F5DE; 
+               border-color: red;
+               margin-left: 1em;
+               margin-right: 1em;
+               margin-top: 0.25em;
+               margin-bottom: 0.25em; }
+  h4 { text-align: left;
+       font-family: sans-serif;
+       font-weight: normal;
+       color: #0050B2; }
+  h5 { text-align: left;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: #0050B2; }
+  p, blockquote, h4 { font-family: sans-serif; }
+  dt, dd, dl, ul, li { font-family: sans-serif; }
+  pre, code { font-family: monospace }
+  </style>
+</head>
+<body>
+<div class="head">
+<a href="https://www.w3.org/"><img src="https://www.w3.org/Icons/WWW/w3c_home.gif" alt="W3C" height="48" width="72"></a>
+<h1>Mathematical Markup Language (MathML) Version 2.0</h1>
+<h2>W3C Working Draft 11 February 2000</h2>
+<dl>
+<dt>This version:</dt>
+<dd>
+<a href="https://www.w3.org/TR/2000/WD-MathML2-20000211">http://www.w3.org/TR/2000/WD-MathML2-20000211</a>
+<br>Also available as: <a href="WD-MathML2-20000211.zip">HTML zip archive</a>, <a href="XHTML-MathML-20000211.zip">XHTML zip archive</a>, <a href="XML-MathML-20000211.zip">XML zip archive</a>, <a href="PDF-s-MathML-20000211.pdf">PDF (screen)</a>, <a href="PDF-p-MathML-20000211.pdf">PDF (paper)</a>
+</dd>
+<dt>Latest version:</dt>
+<dd>
+<a href="https://www.w3.org/TR/MathML2">http://www.w3.org/TR/MathML2</a>
+<br>
+</dd>
+<dt>Previous versions:</dt>
+<dd>
+<a href="https://www.w3.org/TR/1999/WD-MathML2-19991222">http://www.w3.org/TR/1999/WD-MathML2-19991222</a>
+<br>
+<a href="https://www.w3.org/TR/1999/WD-MathML2-19991201">http://www.w3.org/TR/1999/WD-MathML2-19991201</a>
+<br>
+</dd>
+<dt>Editors:
+  </dt>
+<dd>
+Nico Poppelier
+
+  (Salience)
+
+<br>
+Robert Miner
+
+  (Geometry Technologies, Inc.)
+
+<br>
+Patrick Ion
+
+  (Mathematical Reviews, American Mathematical Society)
+
+<br>
+</dd>
+<dt>Principal Writers:
+  </dt>
+<dd>Stephen Buswell, Stan Devitt, Angel Diaz, Bruce Smith, Neil Soiffer, Robert Sutor, Stephen Watt, St&eacute;phane Dalmas, David Carlisle, Roger Hunter, Ron Ausbrooks</dd>
+</dl>
+<p class="copyright">
+<a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">
+   Copyright</a>&nbsp;&copy;&nbsp;1998-2000&nbsp;<a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>&reg;</sup><a href="http://www.lcs.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+  <a href="http://www.inria.fr/"><abbr lang="fr" title="Institut National de Recherche en     Informatique et Automatique">INRIA</abbr></a>,
+  <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
+  <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+  <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
+<a href="https://www.w3.org/Consortium/Legal/copyright-documents-19990405">document
+use</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-software-19980720">software
+licensing</a> rules apply.</p>
+<hr>
+</div>
+<h2>
+<a name="abstract">Abstract</a>
+</h2>
+
+<p>This specification defines the Mathematical Markup Language, or <a name="td-mathml"></a>MathML. MathML is an XML application
+for describing mathematical notation and capturing both its structure and
+content. The goal of MathML is to enable mathematics to be served,
+received, and processed on the World Wide Web, just as <a name="td-html"></a>HTML has enabled this functionality for
+text.</p>
+
+<p>This specification of the markup language MathML is intended
+primarily for a readership consisting of those who will be developing
+or implementing renderers or editors using it, or software that will
+communicate using MathML as a protocol for input or output. It is not
+a User's Guide but rather a reference document.</p>
+
+<p>This document begins with background information on mathematical
+notation, the problems it poses, and the philosophy underlying the
+solutions MathML proposes. MathML can be used to encode both
+mathematical notation and mathematical content. About thirty of the
+MathML tags describe abstract notational structures, while another
+one hundred provide a way of unambiguously specifying the intended
+meaning of an expression. Additional chapters discuss how the MathML
+content and presentation elements interact, and how MathML renderers
+might be implemented and should interact with browsers. Finally, this
+document addresses the issue of MathML entities (extended characters)
+and their relation to fonts.</p>
+
+<p>While MathML is human-readable it is anticipated that, in all but
+the simplest cases, authors will use equation editors, conversion
+programs, and other specialized software tools to generate
+MathML. Several early versions of such MathML tools already exist, and
+a number of others, both freely available software and commercial
+products, are under development.</p>
+<h2>
+<a name="status">Status of this document</a>
+</h2>
+<p>This is a W3C working draft for review by W3C members and other
+interested parties. It is a draft document and may be updated, replaced or
+obsoleted by other documents at any time. It is inappropriate to use W3C
+working drafts as reference material or to cite them as other than
+`work in progress'. This is work in progress and does not
+imply endorsement by, or the consensus of, either W3C or members of the
+Math working group.</p>
+
+<p>This document has been produced by the
+<a href="https://www.w3.org/Math">W3C Math Working Group</a>.
+</p>
+
+<p>A list of current W3C Technical Reports can be found at
+<a href="https://www.w3.org/TR">http://www.w3.org/TR</a>.</p>
+
+<p>It is expected that there will be at least two more Working Drafts,
+appearing at roughly one month intervals, before finalization of the
+Working Group's proposed specification MathML 2.0.</p>
+
+<p>The present draft is a revision of the earlier corrected
+<a href="https://www.w3.org/1999/07/REC-MathML-19990707">W3C
+Recommendation MathML 1.01</a>. It differs from it in that several chapters
+have been modified and one added. The introductory chapters 1 and
+Chapter 2 are almost unchanged in this draft. They remain essentially
+correct, but will later be revised to reflect the changes in the rest of
+the document when these have settled down.</p>
+
+<p>Chapters 3 and 4 have been extended to describe new functionalities
+added, as well as smaller improvements of material already
+proposed. Chapter 5 has been newly written to reflect changes in the
+technology available. The major tables in chapter 6 are being
+regenerated to reflect an improved list of characters useful for
+mathematics. However, since the outcomes of several initiatives with
+respect to mathematics in Unicode are not yet clear, the main text of this
+chapter has not yet been revised, and the character tables are
+omitted. Chapter 7 has been completely revised. A new chapter 8 on the
+DOM for MathML has been added; the latter points to a new appendix E for
+a detailed listing.</p>
+
+<p>The appendices have been reorganized into normative and non-normative
+groups. The former have draft updates. Appendices E and H are completely
+new.</p>
+
+<p>Comments on this document should be sent to the 
+<a href="mailto:www-math@w3.org">public mailing list of the 
+Math Working Group</a>.</p>
+
+
+<h2>
+<a name="contents">Table of contents</a>
+</h2>1 <a href="chapter1.html">Introduction</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1.1 <a href="chapter1.html#intro:notation">Mathematics and its Notation</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1.2 <a href="chapter1.html#intro:origin">Origins and Goals</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1.3 <a href="chapter1.html#intro:role">The Role of MathML on the Web</a>
+<br>2 <a href="chapter2.html">MathML Fundamentals</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;2.1 <a href="chapter2.html#fund:overview">MathML Overview</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;2.2 <a href="chapter2.html#fund:examples">Some MathML Examples</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;2.3 <a href="chapter2.html#fund:syntax">MathML Syntax and Grammar</a>
+<br>3 <a href="chapter3.html">Presentation Markup</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.1 <a href="chapter3.html#presm:intro">Introduction</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.2 <a href="chapter3.html#presm:tokel">Token Elements</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.3 <a href="chapter3.html#presm:genlayout">General Layout Schemata</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.4 <a href="chapter3.html#presm:scrlim">Script and Limit Schemata</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.5 <a href="chapter3.html#presm:tabmat">Tables and Matrices</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;3.6 <a href="chapter3.html#presm:enliven">Enlivening Expressions</a>
+<br>4 <a href="chapter4.html">Content Markup</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;4.1 <a href="chapter4.html#contm:intro">Introduction</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;4.2 <a href="chapter4.html#contm:usage">Content Element Usage Guide</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;4.3 <a href="chapter4.html#contm:attrib">Content Element Attributes</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;4.4 <a href="chapter4.html#contm:elem">The Content Markup Elements</a>
+<br>5 <a href="chapter5.html">Combining Presentation and Content Markup</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;5.1 <a href="chapter5.html#mixing:why">Why Two Different Kinds of Markup?</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;5.2 <a href="chapter5.html#mixing:markup">Mixed Markup</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;5.3 <a href="chapter5.html#mixing:parallel">Parallel Markup</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;5.4 <a href="chapter5.html#mixing:tools">Tools, Style Sheets and Macros for Combined Markup</a>
+<br>6 <a href="chapter6.html">Entities, Characters and Fonts</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;6.1 <a href="chapter6.html#chars:intro">Introduction</a>
+<br>7 <a href="chapter7.html">The MathML Interface</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;7.1 <a href="chapter7.html#interf:embed">Embedding MathML in HTML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;7.2 <a href="chapter7.html#interf:genproc">Generating, Processing and Rendering MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;7.3 <a href="chapter7.html#interf:future">Future Extensions</a>
+<br>8 <a href="chapter8.html">Document Object Model for MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;8.1 <a href="chapter8.html#dom-intro:intro">Introduction</a>
+<br>
+<h3>Appendices</h3>A <a href="appendixa.html">Parsing MathML</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;A.1 <a href="appendixa.html#parsing:dtd">The MathML DTD</a>
+<br>B <a href="appendixb.html">Content Markup Validation Grammar</a>
+<br>C <a href="appendixc.html">Content Element Definitions</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;C.1 <a href="appendixc.html#cedef:about">About Content Markup Elements</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;C.2 <a href="appendixc.html#cedef:def">Definitions of MathML Content Elements</a>
+<br>D <a href="appendixd.html">Operator Dictionary</a> (Non-normative)<br>&nbsp;&nbsp;&nbsp;&nbsp;D.1 <a href="appendixd.html#oper-dict:format">Format of operator dictionary entries</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.2 <a href="appendixd.html#oper-dict:index">Indexing of operator dictionary</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.3 <a href="appendixd.html#oper-dict:names">Choice of entity names</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.4 <a href="appendixd.html#oper-dict:space">Notes on <code>lspace</code> and 
+<code>rspace</code> attributes</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;D.5 <a href="appendixd.html#oper-dict:entries">Operator dictionary entries</a>
+<br>E <a href="appendixe.html">Document Object Model for MathML</a> (Non-normative)<br>&nbsp;&nbsp;&nbsp;&nbsp;E.1 <a href="appendixe.html#dom:interfaces">IDL Interfaces</a>
+<br>F <a href="appendixf.html">Glossary</a> (Non-normative)<br>G <a href="appendixg.html">Working Group Membership</a> (Non-normative)<br>H <a href="appendixh.html">Changes</a> (Non-normative)<br>I &nbsp;<a href="appendixi.html">References</a> (Non-normative)<br>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+</html>

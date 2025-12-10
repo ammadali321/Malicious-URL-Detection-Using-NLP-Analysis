@@ -1,0 +1,676 @@
+<html><head>
+	<meta name="Author" content="">
+	<meta name="copyright" content="">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-language" content="cs">
+	<meta name="robots" content="index,follow">
+	<meta name="keywords" content="Magazín, Diskuse, Návody, Recepty, Rady, Soutěže, Výhry, Slevy, Domov, Dovolená, Testy">
+	<meta name="description" content="Babinet.cz: Legendární portál pro ženy. Magazín plný článků, Moderované diskuse, Návody, Recepty, Rady, Soutěže, Výhry, Slevy, Domov, Dovolená, Testy.">
+
+	<meta property="og:title" content="Babinet.cz">
+  <meta property="og:site_name" content="Babinet.cz">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="www.babinet.cz">
+  <meta property="og:description" content="Babinet.cz: Legendární portál pro ženy. Magazín plný článků, Moderované diskuse, Návody, Recepty, Rady, Soutěže, Výhry, Slevy, Domov, Dovolená, Testy.">
+  <meta property="og:image" content="">
+  <meta property="og:locale" content="cs-cz">
+
+	<meta property="fb:app_id" content="280779435364893">
+  <meta property="fb:admins" content="116873061246">
+
+  <meta name="google-site-verification" content="8atPcU5KPTDUCguf8y5bcGYczNCHWIiTwPxc2gLaifg">
+	<script src="https://connect.facebook.net/cs_CZ/all.js?hash=b50a0e5e64e4919529e15d4d4454b3ee" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-DY25HZ8EXM&amp;cx=c&amp;gtm=45He5861v9201521848za200&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~105033766~105033768~105103161~105103163~105135708~105135710"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202508060101/show_ads_impl.js?bust=31093920"></script><script async="async" defer="defer" src="https://spir.hit.gemius.pl/xgemius.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TWH5HMLS"></script><script src="https://ssp.seznam.cz/static/js/ssp.js"></script><script src="//h.seznam.cz/js/dot-small.js"></script>
+	<script src="https://ssp.seznam.cz/static/js/popup.js"></script>
+	<script src="https://pocitadlolibise.seznam.cz/pocitadlolibise.js" async=""></script>
+	<script src="https://h.imedia.cz/js/dot-small.js"></script>
+	<script src="https://unpkg.com/naja@2/dist/Naja.min.js"></script>
+	<script type="text/javascript">naja.initialize();</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="/js/lightbox.min.js"></script>
+	<script type="text/javascript" src="/js/datetimepicker.js"></script>
+	<script type="text/javascript" src="/js/scripts.js"></script>
+  <script type="text/javascript" src="/js/jquery.colorbox.js"></script>
+  <script type="text/javascript" src="/js/ag.js"></script>
+  <script type="text/javascript" src="/js/fb.js"></script>
+	<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.forms.js"></script>
+  <script type="text/javascript" src="/js/jquery.metadata.js"></script>
+  <script type="text/javascript" src="/js/messages_cs.js"></script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w,d,s,l,i){
+			w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TWH5HMLS');
+	</script>
+	<!-- End Google Tag Manager -->
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/swiper-gallery.css">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/colorbox.css">
+	<link rel="canonical" href="https://babinet.cz/error4xx/">
+
+
+	<title>Babinet.cz</title>
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script id="facebook-jssdk" async="" src="//connect.facebook.net/cs_CZ/all.js"></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style><script async="" src="https://fundingchoicesmessages.google.com/i/ca-pub-9672009236699006?href=https%3A%2F%2Fbabinet.cz%2Favatars%2F19889%2Fhires%2Fdir%2F950bfa31df7949b609037a63b5509bc2&amp;ers=2"></script><script src="https://cdn.performax.cz/yi/px_adsense_psbck.js?v0.5.24" async=""></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxXqi03ybkbWZUpn1HQ6v2CgLqTM0rTq9PCBg2sAdi64D2YNB5IhseE86_wp6xc_HD5yjeJ0bjBBQj9NbjTXY0eSO1XaVUrYPRZ2T9KGwejColC3phGuQyDtO4dMYx8JralzgLnNZA==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzU0NzEyNzc4LDQ0MDAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly9iYWJpbmV0LmN6L2F2YXRhcnMvMTk4ODkvaGlyZXMvZGlyLzk1MGJmYTMxZGY3OTQ5YjYwOTAzN2E2M2I1NTA5YmMyLyIsbnVsbCxbWzI2LCIxIl0sWzgsInJ5b21GM3M5cndZIl0sWzksImVuLVVTIl0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyNSwiW1s5NTM1OTI2MV1dIl0sWzI5LCJmYWxzZSJdXV0"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxXRi5TQNQB7erbd7zzNNPBpFZ7nc0g4a9lbKgwCLgA-4rQtvyLvyLVyiFc-qS6-7du7gSexpoIYWEDMFBlA12Y5I21h-nDmL_zu0Quz0c4SbAMA741Ck0Nkxfn-qGVDIgbwDUfETw==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzU0NzEyNzc4LDUzMzAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOV0sbnVsbCwyLG51bGwsImNzIl0sImh0dHBzOi8vYmFiaW5ldC5jei9hdmF0YXJzLzE5ODg5L2hpcmVzL2Rpci85NTBiZmEzMWRmNzk0OWI2MDkwMzdhNjNiNTUwOWJjMi8iLG51bGwsW1syNiwiMSJdLFs4LCJyeW9tRjNzOXJ3WSJdLFs5LCJlbi1VUyJdLFsxOSwiMiJdLFsxNywiWzBdIl0sWzI0LCIiXSxbMjUsIltbOTUzNTkyNjFdXSJdLFsyOSwiZmFsc2UiXV1d"></script></head>
+
+<body style=""><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="padding-bottom: 20px; padding-right: 0px; display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWH5HMLS"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+		<!-- (C)2000-2024 Gemius SA - gemiusPrism  / http://www.babinet.cz//Ostatni -->
+		<script type="text/javascript">
+			var pp_gemius_identifier = 'zZ2QBK7k932Us7zMad4gIJevfbogvSMw4PG62XtBKHX.C7';
+			var gemius_get_title = true;
+			var pp_gemius_use_cmp = true;
+			// lines below shouldn't be edited
+			function gemius_pending(i) {
+				window[i] = window[i] || function() {
+					var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=Array.prototype.slice.call(arguments, 0);
+				};
+			};
+			(function(cmds) {
+				var c; while(c = cmds.pop()) gemius_pending(c)
+			})(['gemius_cmd', 'gemius_hit', 'gemius_event', 'gemius_init', 'pp_gemius_hit', 'pp_gemius_event', 'pp_gemius_init']);
+			window.pp_gemius_cmd = window.pp_gemius_cmd || window.gemius_cmd;
+			(function(d,t) {
+				try {
+					var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
+					gt.setAttribute('defer','defer'); gt.src=l+'://spir.hit.gemius.pl/xgemius.min.js'; s.parentNode.insertBefore(gt,s);
+				} catch (e) {}
+			})(document,'script');
+		</script>
+	<div id="page" style="height: auto !important;">
+<div id="header">
+  <div class="header_wrap">
+<div class="ad-hp-1">
+  <script async="" src="https://cdn.performax.cz/px2/flexo.js?1" data-state="done"></script>
+    <div id="PX_30941_36340664607747"><div class="px-w-s30941" data-visible="100" style="min-height: 1px;"><!-- req_id t0pl1l-s30941-1cocob --><div class="px-creative" data-id="258536">
+
+
+
+<style>
+    .px-w-s30941 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .px-w-s30941 .px-creative {
+        position: sticky;
+        top: 0px;
+        z-index: 999;
+        background: #fff;
+        width: 100%;
+        display: block;
+        border: none;
+    }
+
+    .px-w-s30941 .px2-ifr {
+        max-width: 100%;
+        height: 210px;
+    }
+</style>
+
+<script data-recreated="0">
+(function () {
+	var WRAP_SELECTOR = ".px-w-s30941";
+	var SCRIPT_SRC = "https://cdn.performax.cz/yi/px_adsense_psbck.js?v0.5.24";
+
+	var wrap = document.currentScript.closest(WRAP_SELECTOR) || top.document.querySelector(WRAP_SELECTOR);
+	if (!wrap) {
+		console.warn("[px_adsense_psbck] Wrap element not found:", WRAP_SELECTOR);
+		return;
+	}
+
+	function tryCallWatcher(maxWaitMs) {
+		var waited = 0;
+		var step = 50;
+		var interval = setInterval(function () {
+			if (window.pxAdsensePassback && window.pxAdsensePassback.startWatcher) {
+				clearInterval(interval);
+				window.pxAdsensePassback.startWatcher(wrap);
+			} else {
+				waited += step;
+				if (waited >= maxWaitMs) {
+					clearInterval(interval);
+					console.error("[px_adsense_psbck] pxAdsensePassback not available after timeout");
+				}
+			}
+		}, step);
+	}
+
+	if (window.pxAdsensePassback && window.pxAdsensePassback.startWatcher) {
+		// ✅ dostupné okamžitě
+		window.pxAdsensePassback.startWatcher(wrap);
+	} else {
+		// ➕ načti skript a pak zkus periodicky volat watcher
+		var script = document.createElement("script");
+		script.src = SCRIPT_SRC;
+		script.async = true;
+		script.onload = function () {
+			tryCallWatcher(5000); // ⏱ timeout navýšen na 5s
+		};
+		document.head.appendChild(script);
+	}
+})();
+</script>
+
+<div id="px-5787104832" data-px2-ifr="true" align="center"><iframe class="px2-ifr" scrolling="no" width="970" height="210" style="border: none; display: block; overflow: hidden;"></iframe></div></div></div></div>
+    <script async="">
+      window.px2 = window.px2 || { conf: {},queue: [] };
+      px2.queue.push(function () {
+        px2.render({
+          slot: {
+            id: 30941
+          },
+          elem: "PX_30941_36340664607747"
+        })
+      });
+    </script>
+</div>
+    <div class="header_inner">
+
+        <div id="login-form-container" class="bubbleinfo">
+          <a href="javascript:void(0);" class="login fright trigger" id="login_link"></a>
+          <div id="login-form-inner" class="popup" style="opacity: 0;">
+<div class="form">
+<div class="close_image fright" style="margin-right:20px;"><a id="closeButton" href="javascript:void(0);">zavřít</a></div>
+	<h1>Přihlášení uživatele</h1>
+	<form method="post" action="/error4xx/?do=login" class="login-form fleft" id="login" name="login" novalidate="novalidate">
+		<fieldset>
+			<div id="username_box">
+        <div id="username_box_email">
+          <label for="username">Vaše e-mailová adresa:</label>
+          <input type="text" name="username" id="username" placeholder="@" class="required email" value="" required="" autofocus="">
+        </div>
+        <div id="username_box_nick" style="display:none;">
+          <label for="usernick">Vaše přezdívka na fórech Babinet.cz</label>
+          <input type="text" name="usernick" id="usernick" class="required" autofocus="" required="">
+
+          <label for="userpassword">Vaše heslo:</label>
+          <input type="password" name="userpassword" id="userpassword" required="">
+
+          <label for="useremail" id="useremail_label" style="display:none;">Váš email na fórech Babinet.cz</label>
+          <input type="text" name="useremail" id="useremail" style="display:none;" autofocus="">
+          <label for="useremail" id="useremail_label_error" class="error" style="display:none;"></label>
+
+          <a href="javascript:find_email();" class="all_discuss mt20 mb20" id="nick_search_button">Najít email</a>
+          <a href="javascript:back_to_login();" class="all_discuss mt20 mb20" id="nick_back_button" style="display:none;">Zpět k přihlášení</a>
+        </div>
+			</div>
+			<div id="login_rest">
+				<div class="mb20">
+					<a href="javascript:void(0);" class="zapomenuty_email" id="zapomenuty_email">Neznáte svoji emailovou adresu na Babinet.cz?</a>
+				</div>
+				<label for="password">Vaše heslo:</label>
+				<input type="password" name="password" id="password" required="">
+				<a href="javascript:void(0);" class="all_discuss mt20 mb20" id="submit_login">Přihlásit</a>
+				<a href="/home/recoverpassword">Zapomněli jste heslo?</a>
+			</div>
+		</fieldset>
+	</form>
+
+	<div class="fleft facebook-login">
+		<a href="javascript:initFBlogin(&quot;&quot;);" class="login-facebook">Přihlásit přes Facebook</a>
+		<span class="fb-info">Pro registraci a přihlášení můžete snadno použít svůj Facebook účet. Po kliknutí na modré tlačítko stačí potvrdit propojení s&nbsp;Babinet.cz a začít rovnou využívat všech našich služeb.</span>
+	</div>
+	<div class="tom_cleaner2"></div>
+</div>
+	<script type="text/javascript">
+	$(function () {
+    $('#closeButton').click(function() {
+      $("#username_box_email").show();
+      $("#username_box_nick").hide();
+			$("#login_rest").show();
+      closeLoginWindow();
+    });
+
+		$('#submit_login').click(function(e) {
+			e.preventDefault();
+			$("#login").submit();
+		});
+
+	  $("#login").validate({
+			rules: {
+				username: {
+					required:true,
+					email: true
+				},
+				password: {
+					required: true
+				}
+	     	},
+		});
+
+		$("#zapomenuty_email").click(function(){
+			$("#username_box_email").hide();
+      $("#username_box_nick").show();
+			$("#login_rest").hide();
+		});
+	});
+
+	function find_email(){
+		$.ajax({
+      type: "POST",
+      url: "/error4xx/?do=findMailByNick",
+      data: {
+        nick:$("#usernick").val(),
+        password:$("#userpassword").val()
+      },
+      async: false,
+      success: function(response)
+      {
+        if (response.hasOwnProperty('data')) {
+          if(response.data.status == true){
+						$("#useremail").val(response.data.data);
+						$("#nick_search_button").hide();
+						$("#useremail_label_error").hide();
+
+						$("#useremail_label").show();
+						$("#useremail").show();
+						$("#nick_back_button").show();
+					}else{
+						$("#useremail_label_error").text(response.data.error);
+						$("#useremail_label_error").show();
+					}
+        }
+      }
+    });
+	}
+
+	function back_to_login(){
+		$("#useremail_label_error").hide();
+		email = $("#useremail").val();
+
+		//prohodim inputy
+		$.post("/ajax/load_email_input_fragment",{
+      email:email
+    },function(data){
+			$("#username_box").html(data);
+			$("#login_rest").show();
+		});
+	}
+
+	</script>          </div>
+        </div>
+        <a href="/home/registration" class="user fright"></a>
+      <div class="fright" style="width: 400px; margin-right: 110px; margin-top: 16px;">
+        <form action="/home/search" method="post" id="seznam_search">
+          <input type="text" name="vyraz" id="vyraz" placeholder="Hledej na Babinet.cz">
+          <a href="#" onclick="document.getElementById('seznam_search').submit()" class="hledej" style="height: 24px;">
+            <svg class="SearchForm-ico-search" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="svgtitle">
+              <title id="svgtitle">Vyhledat</title>
+              <path d="M10.5 17C6.916 17 4 14.084 4 10.5C4 6.916 6.916 4 10.5 4C14.084 4 17 6.916 17 10.5C17 14.084 14.084 17 10.5 17ZM21 18.666C20.198 17.985 18.502 16.569 17.15 15.785C18.306 14.334 19 12.499 19 10.5C19 5.806 15.194 2 10.5 2C5.806 2 2 5.806 2 10.5C2 15.194 5.806 19 10.5 19C12.498 19 14.331 18.306 15.782 17.152C16.568 18.505 17.986 20.204 18.666 21C19.305 21.748 19.672 22 20.5 22C21.328 22 22 21.328 22 20.5C22 19.672 21.659 19.227 21 18.666Z" fill="currentColor"></path>
+            </svg>
+          </a>
+        </form>
+		</div>
+    <a href="/" class="logo"></a>
+    <input class="mobile-menu" type="checkbox" id="mobile-menu">
+    <label class="hamb" for="mobile-menu">Menu <span class="hamb-line"></span></label>
+<!-- MENU -->
+<div class="menu ">
+  <ul class="main_menu">
+  	<li class="black "><a href="/"><img src="/_img_/domecek.png" class="menu-home"></a></li>
+    <li class="green "><a href="/magazin">Magazín</a>
+    </li>
+		<li class="podcasty "><a href="/podcasty">Podcasty</a>
+		</li>
+    <li class="orange "><a href="/souteze">Soutěže</a>
+    	<ul class="submenu">
+        <li></li>
+      </ul>
+    </li>
+    <li class="blue2"><a href="https://www.zdraviamy.cz" target="_blank">Zdraví a my</a>  </li>
+		<li class="vdt"><a href="https://autaprozeny.cz/" target="_blank">Auta pro ženy</a>  </li>
+    <li class="purple "><a href="/tajemno">Tajemno</a>
+      <ul class="submenu">
+      <li></li>
+      </ul>
+    </li>
+    <li class="brown "><a href="/recepty">Recepty</a>
+    </li>
+    <li class="tvd "><a href="/tvurci-dilna">Tvůrčí dílna</a>
+    </li>
+    <li class="kvt "><a href="/kam-vyrazit">Kam vyrazit</a>
+      <!-- ul class="submenu" style="background: url(_img_/pruh-vylety.png);"><li></li></ul -->
+    </li>
+			<li class="blue1"><a href="https://fora.babinet.cz">Diskuse</a></li>
+			<!-- <li style="border-radius: 4px 4px 0 0; background-color:rgb(14, 1, 151);"class=""><a href="https://babinet.cz/swap.php" >Swap</a>  </li> -->
+	</ul>
+</div>
+<!-- / MENU -->
+
+<!-- START: toplist -->
+
+<a href="https://www.toplist.cz" id="toplistcz25207" title="TOPlist"><img src="https://toplist.cz/dot.asp?id=25207&amp;http=&amp;t=Babinet.cz&amp;l=https%3A%2F%2Fbabinet.cz%2Favatars%2F19889%2Fhires%2Fdir%2F950bfa31df7949b609037a63b5509bc2%2F&amp;wi=800&amp;he=600&amp;cd=24" width="1" height="1" border="0" alt="TOPlist"></a>
+
+<!-- END:  toplist  -->
+    </div>
+  </div>
+  <div class="mobil_seznam_search">
+    <form action="/home/search" method="post" id="seznam_search_mobile">
+      <input type="text" name="vyraz" id="vyraz_mobile" placeholder="Hledej na Babinet.cz">
+      <a href="#" onclick="document.getElementById('seznam_search_mobile').submit()" class="hledej" style="height: 24px;">
+        <svg class="SearchForm-ico-search" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="svgtitle">
+          <title id="svgtitle">Vyhledat</title>
+          <path d="M10.5 17C6.916 17 4 14.084 4 10.5C4 6.916 6.916 4 10.5 4C14.084 4 17 6.916 17 10.5C17 14.084 14.084 17 10.5 17ZM21 18.666C20.198 17.985 18.502 16.569 17.15 15.785C18.306 14.334 19 12.499 19 10.5C19 5.806 15.194 2 10.5 2C5.806 2 2 5.806 2 10.5C2 15.194 5.806 19 10.5 19C12.498 19 14.331 18.306 15.782 17.152C16.568 18.505 17.986 20.204 18.666 21C19.305 21.748 19.672 22 20.5 22C21.328 22 22 21.328 22 20.5C22 19.672 21.659 19.227 21 18.666Z" fill="currentColor"></path>
+        </svg>
+      </a>
+    </form>
+  </div>
+</div>		<div id="content">
+<div class="inner" style="padding-bottom: 30px;">
+	<h1>Chyba 404: Stránka nenalezena</h1>
+	<div style="color: #3e3e3e; font-size: 14px; margin: 10px 0; line-height: 19px;">Bohužel se nám nepodařilo najít stránku, kterou hledáte. Navštivte prosím naší hlavní stránku, která je nejvhodnější pro další pokračování.</div>
+	<a href="/"><h2>Přejít na hlavní stránku</h2></a>
+	<img style="margin: 30px 0 5px 0;" src="/_img_/404.jpg" alt="Chyba 404"><br>
+	Foto: <a href="http://www.sxc.hu/profile/lusi">lusi</a>
+</div>
+		</div>
+<!-- FOOTER -->
+		<div style="height-max: 310px !important; text-align: center; margin-left: auto;margin-right: auto;">
+			<script async="" type="text/javascript"><!--//<![CDATA[
+				var m3_u = (location.protocol=='https:'?'https://openx.babinet.cz/www/delivery/ajs.php':'http://openx.babinet.cz/www/delivery/ajs.php');
+				var m3_r = Math.floor(Math.random()*99999999999);
+				if (!document.MAX_used) document.MAX_used = ',';
+				document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+				document.write ("?zoneid=11");
+				document.write ('&amp;cb=' + m3_r);
+				if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+				document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+				document.write ("&amp;loc=" + escape(window.location));
+				if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+				if (document.context) document.write ("&context=" + escape(document.context));
+				if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+				document.write ("'><\/scr"+"ipt>");
+			//]]>--></script><script type="text/javascript" src="https://openx.babinet.cz/www/delivery/ajs.php?zoneid=11&amp;cb=83195546815&amp;charset=UTF-8&amp;loc=https%3A//babinet.cz/avatars/19889/hires/dir/950bfa31df7949b609037a63b5509bc2/"></script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9672009236699006" crossorigin="anonymous" data-checked-head="true"></script>
+<!-- Babinet - Rectangle -->
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-client="ca-pub-9672009236699006" data-ad-slot="6732325271" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_1_host" style="border: none; height: 0px; width: 1200px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_1" name="aswift_1" browsingtopics="true" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 1200px; height: 0px; min-height: auto; max-height: none; min-width: auto; max-width: none;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1200" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9672009236699006&amp;output=html&amp;h=280&amp;slotname=6732325271&amp;adk=3485030135&amp;adf=226233620&amp;pi=t.ma~as.6732325271&amp;w=1200&amp;abgtt=6&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1754712776&amp;rafmt=1&amp;format=1200x280&amp;url=https%3A%2F%2Fbabinet.cz%2Favatars%2F19889%2Fhires%2Fdir%2F950bfa31df7949b609037a63b5509bc2%2F&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;uach=WyJMaW51eCIsIiIsIiIsIiIsIiIsbnVsbCwwLG51bGwsIiIsbnVsbCwwXQ..&amp;dt=1754712775796&amp;bpp=37&amp;bdt=3503&amp;idt=536&amp;shv=r20250805&amp;mjsv=m202508060101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=4473780793420&amp;frm=20&amp;pv=1&amp;u_tz=0&amp;u_his=33&amp;u_h=600&amp;u_w=800&amp;u_ah=600&amp;u_aw=800&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=76&amp;ady=808&amp;biw=1351&amp;bih=681&amp;scr_x=0&amp;scr_y=0&amp;eid=95362656%2C95368228%2C31093920%2C95368936%2C95359265&amp;oid=2&amp;pvsid=4307130537273477&amp;tmod=808286770&amp;uas=0&amp;nvt=1&amp;fc=1920&amp;brdim=10%2C10%2C10%2C10%2C800%2C0%2C1366%2C768%2C1366%2C681&amp;vis=1&amp;rsz=%7C%7CEebr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;tdf=2&amp;nt=1&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;dtd=556" data-google-container-id="a!2" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true" data-google-query-id="CMCf4L3u_I4DFYqwOgUdoPQRxA"></iframe></div></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><div id="beacon_6b533c0230" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://openx.babinet.cz/www/delivery/lg.php?bannerid=145&amp;campaignid=3&amp;zoneid=11&amp;loc=1&amp;referer=https%3A%2F%2Fbabinet.cz%2Favatars%2F19889%2Fhires%2Fdir%2F950bfa31df7949b609037a63b5509bc2%2F&amp;cb=6b533c0230" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+<noscript><a href='http://openx.babinet.cz/www/delivery/ck.php?n=af761f62&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://openx.babinet.cz/www/delivery/avw.php?zoneid=11&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=af761f62' border='0' alt='' /></a></noscript>
+		</div>
+
+<!-- Mobile popup -->
+	<style>
+		.modal-ith {
+			display: none; /* Hidden by default */
+			position: fixed; /* Stay in place */
+			z-index: 100; /* Sit on top */
+			/* padding-top: 100px; /* Location of the box */
+			left: 0;
+			bottom: 0;
+			width: 100%; /* Full width */
+			min-height: 130px; /* Full height */ /* 190px */
+			overflow: auto; /* Enable scroll if needed */
+
+		}
+
+		.modal-content-ith {
+			/* margin: auto; */
+			padding: 15px;
+			width: 100%;
+			height: 100%;
+			/* min-height: 280px; */
+			z-index: 4;
+			/* bottom: 0;
+			position: absolute; */
+			/* background-color: #00002e; */
+			background-color: rgba(0, 0, 0, 0.5);
+			box-sizing: border-box;
+			position: fixed;
+		}
+
+		#close-ith {
+			position: absolute;
+			right: 0;
+			top: -52px;
+			color: #ffffff;
+			background-color: #000000;
+			float: right;
+			font-size: 14px;
+			line-height: 32px;
+			font-weight: bold;
+			padding: 10px;
+			z-index: 5;
+			min-height: 32px;
+			min-width: 60px;
+			text-align: center;
+			border-top: 1px solid #ffffff;
+			border-left: 1px solid #ffffff;
+		}
+
+		#close-ith:hover,
+		#close-ith:focus {
+			color: #a6a6a6;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	</style>
+
+<div class="footer">
+  <div class="footer_inner">
+  <div class="cover">
+    <div class="foot_box fleft wide">
+      <h2>O firmě</h2>
+      <ul>
+      	<li><a href="/static-page/generalstaticpage/1">Prohlášení o ochraně osobních údajů</a></li>
+      	<li><a href="/static-page/generalstaticpage/4" title="Všeobecná pravidla soutěží na Babinet.cz">Všeobecná pravidla soutěží na Babinet.cz</a></li>
+        <li><a href="/static-page/generalstaticpage/2">Kontakty</a></li>
+        <li><a href="/static-page/generalstaticpage/3">Reklama</a></li>
+        <!-- li><a href="#" id="open-cmp-btn">Spravovat souhlas s nastavením osobních údajů</a></li -->
+        <script>
+          document.getElementById('open-cmp-btn').addEventListener('click', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            scmp.open();
+          })
+        </script>
+      </ul>
+      <div class="b3net_box">
+        <p><a href="https://www.samisro.cz" class="b3net"></a>Copyright © 2000-2025, SAMI spol. s r.o.<br>Všechna práva vyhrazena. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="tom_cleaner"></div>
+  </div>
+  </div>
+</div>
+<!-- / FOOTER -->
+<script type="text/javascript">
+function getPopUp(breakPoint, onScrollElementId, zoneId) {
+    //Check if exist cookie with name "cname"
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    //Set cookie with 30 min expiration
+    function setCookie(value) {
+        var d = new Date();
+        d.setTime(d.getTime() + (30 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = "seznam-pop-up-ad-first-look=" + value + ";" + expires + ";path=/";
+    }
+    //Add necessarily styles to head of page
+    function appendStyles() {
+        var css = '#seznam-pop-up-ad{ position: fixed; height: 100px; width: 100%; background: rgba(0,0,0,.7);bottom: 0; left: 0; right: 0;  text-align: center; padding: 2px 0; z-index: 1001; transition: height 0.5s; }' +
+            '#seznam-pop-up-ad-close{ background: rgba(0,0,0,.7); margin-top: -22px; position: absolute; top: 0; right: 0; color: #CCC; cursor: pointer; text-align: center; padding: 2px; height: 22px;}' +
+            '.seznam-pop-up-ad-hide{ height: 0 !important; padding: 0!important; margin: 0!important;}';
+        var style = document.createElement('style');
+        style.innerHTML = css;
+        document.head.appendChild(style);
+    }
+    //Create Ad divs
+    function createAdDivs() {
+        var div = document.createElement('div');
+        div.setAttribute('id', 'seznam-pop-up-ad');
+        div.innerHTML = ('<div id="seznam-pop-up-ad-close">Zavrit reklamu</div>' + '<div id="ssp-zone-' + zoneId + '" style="margin: 0 auto;"></div>');
+        document.body.appendChild(div);
+    }
+    //Hide Ad
+    function hideAd() {
+        document.getElementById("seznam-pop-up-ad").classList.add("seznam-pop-up-ad-hide");
+        document.getElementById("seznam-pop-up-ad-close").style.display = "none";
+    }
+    if ( window.innerWidth <= breakPoint && sssp.displaySeznamAds() && document.getElementById(onScrollElementId)) {
+        if (!getCookie("seznam-pop-up-ad-first-look")){
+            setCookie(false);
+        }
+        appendStyles();
+        window.addEventListener("scroll", function () {
+            var createdAd = document.getElementById("seznam-pop-up-ad");
+            var elementTarget = document.getElementById(onScrollElementId);
+            if (window.scrollY > (elementTarget.offsetTop - window.innerHeight)) {
+                if (!createdAd && getCookie("seznam-pop-up-ad-first-look") === "false") {
+                    setCookie(true);
+                    createAdDivs();
+                    sssp.getAds([
+                        {
+                            "zoneId": zoneId,
+                           "id": "ssp-zone-" + zoneId,
+                            "width": 320,
+                            "height": 100
+                        }
+                    ]);
+                }
+                if(document.getElementById("seznam-pop-up-ad-close")){
+                  document.getElementById("seznam-pop-up-ad-close").addEventListener("click", function () {
+                    hideAd();
+                  });
+                }
+            }
+        });
+    }
+}
+sssp.getAdsByTags();
+</script>
+<div id="l-sky" style="display: none;">
+<!--/* Revive Adserver Javascript Tag v3.0.5 */-->
+
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://openx.babinet.cz/www/delivery/ajs.php':'http://openx.babinet.cz/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' data-cookiecategory='ads' src='"+m3_u);
+   document.write ("?zoneid=28&amp;target=_blank");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script type="text/javascript" data-cookiecategory="ads" src="https://openx.babinet.cz/www/delivery/ajs.php?zoneid=28&amp;target=_blank&amp;cb=21151768137&amp;charset=UTF-8&amp;loc=https%3A//babinet.cz/avatars/19889/hires/dir/950bfa31df7949b609037a63b5509bc2/"></script><a href="" target="_blank"><img src="https://" border="0" alt=""></a>
+
+<noscript>
+  <a href='http://openx.babinet.cz/www/delivery/ck.php?n=ab17af9d&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'>
+    <img src='http://openx.babinet.cz/www/delivery/avw.php?zoneid=28&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ab17af9d' border='0' alt='' />
+  </a>
+</noscript>
+</div>
+<div id="r-sky" style="display: none;">
+  <!--/* Revive Adserver Javascript Tag v3.0.5 */-->
+
+  <script type="text/javascript"><!--//<![CDATA[
+    var m3_u = (location.protocol=='https:'?'https://openx.babinet.cz/www/delivery/ajs.php':'http://openx.babinet.cz/www/delivery/ajs.php');
+    var m3_r = Math.floor(Math.random()*99999999999);
+    if (!document.MAX_used) document.MAX_used = ',';
+    document.write ("<scr"+"ipt type='text/javascript' data-cookiecategory='ads' src='"+m3_u);
+    document.write ("?zoneid=29&amp;target=_blank");
+    document.write ('&amp;cb=' + m3_r);
+    if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+    document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+    document.write ("&amp;loc=" + escape(window.location));
+    if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+    if (document.context) document.write ("&context=" + escape(document.context));
+    if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+    document.write ("'><\/scr"+"ipt>");
+  //]]>--></script><script type="text/javascript" data-cookiecategory="ads" src="https://openx.babinet.cz/www/delivery/ajs.php?zoneid=29&amp;target=_blank&amp;cb=23333828175&amp;charset=UTF-8&amp;loc=https%3A//babinet.cz/avatars/19889/hires/dir/950bfa31df7949b609037a63b5509bc2/"></script><a href="" target="_blank"><img src="https://" border="0" alt=""></a>
+
+  <noscript>
+    <a href='http://openx.babinet.cz/www/delivery/ck.php?n=ae63304f&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'>
+      <img src='http://openx.babinet.cz/www/delivery/avw.php?zoneid=29&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ae63304f' border='0' alt='' />
+    </a>
+  </noscript>
+</div>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if the sssp object and the displaySeznamAds function exist
+  if (typeof sssp !== 'undefined' && typeof sssp.displaySeznamAds === 'function') {
+    // If Seznam ads are to be displayed
+    if (sssp.displaySeznamAds()) {
+      // Get the element with id "seznam_search"
+      var seznamSearchElement = document.getElementById("seznam_search");
+      // If the element exists, hide it
+      if (seznamSearchElement) {
+        seznamSearchElement.style.display = "none";
+      }
+    }
+  }
+});
+</script>
+	</div><div id="_ads2" style="visibility:visible; position:absolute;" class="ad_leader advert-banner reklama banner_250x250 sklik reklamy promo-box--ad sklikReklama banner_ad_leaderboard LeaderAdvertisement bmone2n adv_container advtop afs_ads sklik-ads sklik-ad etargetReklama AdTop ads_body_page"></div><iframe id="px-id-hub" style="height: 0px; width: 0px; display: none; border: 0px; position: absolute;"></iframe><iframe src="https://cdn.performax.cz/px2/cookie_sync_bundle.html?" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;min-height:auto;max-height:none;min-width:auto;max-width:none;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9672009236699006&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;abgtt=6&amp;lmt=1754712776&amp;plaf=1%3A2&amp;plat=1%3A128%2C2%3A128%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&amp;plas=143x616_l%7C143x616_r&amp;format=0x0&amp;url=https%3A%2F%2Fbabinet.cz%2Favatars%2F19889%2Fhires%2Fdir%2F950bfa31df7949b609037a63b5509bc2%2F&amp;pra=5&amp;wgl=1&amp;aihb=0&amp;aiudt=1&amp;asro=0&amp;aifxl=29_18~30_19&amp;itsi=-1&amp;aiapm=0.1542&amp;aiapmd=0.36666&amp;aiapmi=0.16&amp;aiapmid=1&amp;aiact=0.5423&amp;aiactd=0.7&amp;aicct=0.7&amp;aicctd=0.5799&amp;ailct=0.5849&amp;ailctd=0.65&amp;aimart=4&amp;aimartd=4&amp;uach=WyJMaW51eCIsIiIsIiIsIiIsIiIsbnVsbCwwLG51bGwsIiIsbnVsbCwwXQ..&amp;dt=1754712775369&amp;bpp=427&amp;bdt=3076&amp;idt=690&amp;shv=r20250805&amp;mjsv=m202508060101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=4473780793420&amp;frm=20&amp;pv=2&amp;u_tz=0&amp;u_his=33&amp;u_h=600&amp;u_w=800&amp;u_ah=600&amp;u_aw=800&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1351&amp;bih=681&amp;scr_x=0&amp;scr_y=0&amp;eid=95362656%2C95368228%2C31093920%2C95368936%2C95359265&amp;oid=2&amp;pvsid=4307130537273477&amp;tmod=808286770&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=10%2C10%2C10%2C10%2C800%2C0%2C1366%2C768%2C1366%2C681&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;td=1&amp;tdf=2&amp;nt=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=923" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins>
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+
+	<script type="text/javascript" data-cookiecategory="analytics">
+		var facebook_app_id = "280779435364893";
+		var facebook_channel_id = "//channel.php";
+		$(function() {
+			initializeFb();
+		});
+	</script>
+    <script async="" src="https://serving.grapemedia.cz/player/grapemedia.js"></script>
+    <script>
+		(
+			function(){
+				var s=document.querySelector('script[data-playerPro="current"]');
+				s.removeAttribute("data-playerPro");
+				(playerPro=window.playerPro||[]).push({
+					id:"AHjHzYQMAXu9",
+					after:s
+				});
+			}
+		)();
+	</script>
+	<!-- script>
+		sssp.config({
+			webId: 28813
+		})
+	</script -->
+
+
+<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" tabindex="-1" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev" aria-label="Previous image" href=""></a><a class="lb-next" aria-label="Next image" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe src="https://ep2.adtrafficquality.google/sodar/sodar2/237/runner.html" width="0" height="0" style="display: none;"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><div class="gAdSky large-btn-ad ad_claim dartiframe ad-click" style="width: 1px; height: 1px; position: absolute; left: -10000px; top: -9991px;"></div></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20250805/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>

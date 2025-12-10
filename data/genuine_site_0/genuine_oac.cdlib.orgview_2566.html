@@ -1,0 +1,3837 @@
+<!-- BEGIN /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/layouts/blacklight.html.erb -->
+<!-- BEGIN app/views/layouts/blacklight/base.html.erb --><!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Added to disbale turbolinks -->
+     <meta name="turbo-prefetch" content="false">
+
+
+    <title>OAC</title>
+    <script>
+      document.querySelector('html').classList.remove('no-js');
+    </script>
+    <link href="https://oac.cdlib.org/search/opensearch.xml" title="OAC" type="application/opensearchdescription+xml" rel="search" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-213defb83bf8a35458526d66f5801632a9d4f2b511236c9e5cefd4a7a48fa4ff.ico" />
+    <link rel="stylesheet" href="/assets/application-85ac89d922e60f25dcb7efc6742a22d61bf0e58e3a29fd6fc392832ab848368b.css" media="all" data-turbo-track="reload" />
+      <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-b33bae1e0d85a175e4b050d0496cc5c621e5ec10f1c9627d5b19abeef78cf05d.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-4cfe7c6aaeb9120821760aa53763dff54fbc561e500da6482fc43c54c7384929.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js",
+    "@github/auto-complete-element": "https://cdn.skypack.dev/@github/auto-complete-element",
+    "@popperjs/core": "https://ga.jspm.io/npm:@popperjs/core@2.11.6/dist/umd/popper.min.js",
+    "bootstrap": "https://ga.jspm.io/npm:bootstrap@5.3.2/dist/js/bootstrap.js",
+    "arclight": "/assets/arclight/arclight-5ab382d47357bb603250a735d667a3d450882fa90304c650b2a65f71d6551015.js",
+    "arclight/oembed_controller": "/assets/arclight/oembed_controller-3754c1de2d5e5e9dac39b04f8e7427737b2a522e644ffafc0215854fc942961b.js",
+    "arclight/truncate_controller": "/assets/arclight/truncate_controller-7c4ca7ce02d69de45340c089f98a9b0c58a65b1af5ed1cdfea9cd6171d21fafe.js",
+    "blacklight/bookmark_toggle": "/assets/blacklight/bookmark_toggle-97b6e8357b4b80f49f7978d752d5b6e7e7f728fe9415742ab71b74418d689fad.js",
+    "blacklight/button_focus": "/assets/blacklight/button_focus-9e15a08a7a1886d78f54ed5d25655a8a07a535dcdd4de584da5c6c6d47e4188c.js",
+    "blacklight/checkbox_submit": "/assets/blacklight/checkbox_submit-9ebcfa4e973e594a41674f2cc3b507dc5475ca17b0014abd4279c75f754cb9fe.js",
+    "blacklight/core": "/assets/blacklight/core-9a0b4447c74a8b80416ff14a7b5e9ec78c884b95b5ed0155cae0eb01c83af0dc.js",
+    "blacklight": "/assets/blacklight/index-267e64c5525f71bbc998c7dcc67340a3a40ae3464988e067f0a65d7a8f5f58b3.js",
+    "blacklight/modal": "/assets/blacklight/modal-078e84adaa222dc2b0cf169c11d30e174ffcb65d87fe2065907ac39e369461c5.js",
+    "blacklight/modalForm": "/assets/blacklight/modalForm-02d8c117d37bf34110a491a76d0889980cb960ebfe1c1c2445e9de64e8637fee.js",
+    "blacklight/search_context": "/assets/blacklight/search_context-44e4fd3e85c6cd91c9e5ed38ecd310f75a259d38f8f70c0c6ad75644c40097f9.js",
+    "controllers/application": "/assets/controllers/application-cd9bb30bb05c197b04a22668e126d99345c188fdd736eada064a62d0e38d2426.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js",
+    "controllers": "/assets/controllers/index-31a9bee606cbc5cdb1593881f388bbf4c345bf693ea24e124f84b6d5c98ab648.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-b33bae1e0d85a175e4b050d0496cc5c621e5ec10f1c9627d5b19abeef78cf05d.js">
+<link rel="modulepreload" href="/assets/turbo.min-4cfe7c6aaeb9120821760aa53763dff54fbc561e500da6482fc43c54c7384929.js">
+<link rel="modulepreload" href="/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js">
+<link rel="modulepreload" href="https://cdn.skypack.dev/@github/auto-complete-element">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:@popperjs/core@2.11.6/dist/umd/popper.min.js">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:bootstrap@5.3.2/dist/js/bootstrap.js">
+<link rel="modulepreload" href="/assets/arclight/arclight-5ab382d47357bb603250a735d667a3d450882fa90304c650b2a65f71d6551015.js">
+<link rel="modulepreload" href="/assets/arclight/oembed_controller-3754c1de2d5e5e9dac39b04f8e7427737b2a522e644ffafc0215854fc942961b.js">
+<link rel="modulepreload" href="/assets/arclight/truncate_controller-7c4ca7ce02d69de45340c089f98a9b0c58a65b1af5ed1cdfea9cd6171d21fafe.js">
+<link rel="modulepreload" href="/assets/blacklight/bookmark_toggle-97b6e8357b4b80f49f7978d752d5b6e7e7f728fe9415742ab71b74418d689fad.js">
+<link rel="modulepreload" href="/assets/blacklight/button_focus-9e15a08a7a1886d78f54ed5d25655a8a07a535dcdd4de584da5c6c6d47e4188c.js">
+<link rel="modulepreload" href="/assets/blacklight/checkbox_submit-9ebcfa4e973e594a41674f2cc3b507dc5475ca17b0014abd4279c75f754cb9fe.js">
+<link rel="modulepreload" href="/assets/blacklight/core-9a0b4447c74a8b80416ff14a7b5e9ec78c884b95b5ed0155cae0eb01c83af0dc.js">
+<link rel="modulepreload" href="/assets/blacklight/index-267e64c5525f71bbc998c7dcc67340a3a40ae3464988e067f0a65d7a8f5f58b3.js">
+<link rel="modulepreload" href="/assets/blacklight/modal-078e84adaa222dc2b0cf169c11d30e174ffcb65d87fe2065907ac39e369461c5.js">
+<link rel="modulepreload" href="/assets/blacklight/modalForm-02d8c117d37bf34110a491a76d0889980cb960ebfe1c1c2445e9de64e8637fee.js">
+<link rel="modulepreload" href="/assets/blacklight/search_context-44e4fd3e85c6cd91c9e5ed38ecd310f75a259d38f8f70c0c6ad75644c40097f9.js">
+<link rel="modulepreload" href="/assets/controllers/application-cd9bb30bb05c197b04a22668e126d99345c188fdd736eada064a62d0e38d2426.js">
+<link rel="modulepreload" href="/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js">
+<link rel="modulepreload" href="/assets/controllers/index-31a9bee606cbc5cdb1593881f388bbf4c345bf693ea24e124f84b6d5c98ab648.js">
+<script type="module">import "application"</script>
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="K9eNlp5WlBAY4oLOR_nSV4OmbiUPGEU_UxMV_oPH3my9lBrmgignpIBEWToYZ23OsQIZE7ntif311mvCvCW5OA" />
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+  </head>
+  <body class="blacklight-static_pages blacklight-static_pages-home">
+    <!-- BEGIN app/components/oac/skip_link_component.html.erb --><nav id="skip-link" class="visually-hidden-focusable" aria-label="Skip links">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#main-container">Skip to main content</a>
+    <a class="d-inline-flex p-2 m-1" href="#q">Skip to search</a>
+    
+
+  </div>
+</nav>
+<!-- END app/components/oac/skip_link_component.html.erb -->
+    <!-- BEGIN /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/shared/_header_navbar.html.erb --><!-- BEGIN app/components/header_component.html.erb --><header>
+  <div class="container-fluid announcement d-flex justify-content-center">
+      <p class="m-0 text-center">2025 July 29: OAC is currently experiencing site performance issues due to an extreme increase in traffic.<br/>
+Please see our <a href="https://help.oac.cdlib.org/support/discussions/topics/9000063508">status page</a> for more information.</p>
+      <!--<p class="m-0 text-center"><strong>🎉 Welcome to the new OAC! 🎉</strong> 🙋 Visit our <a href="/quickstart">quick start guide</a> for tips to get started.</p>-->
+  </div>
+
+  <div class="container">
+    <nav class="navbar" aria-label="Search and top-level navigation" id="main-navbar">
+      <a class="mb-3 navbar-brand navbar-logo" href="/">OAC</a>
+
+      <!-- TODO: not sure what the aria-label for this should be,
+                 or if it should be aria-hidden="true" -->
+      <nav class="navbar-expand-md" aria-label="Togglers" id="header-toggle">
+        <button class="navbar-toggler navbar-toggler-right align-self-end" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#top-level-nav" data-bs-target="#top-level-nav" aria-controls="top-level-nav" aria-expanded="false" aria-label="Toggle top-level navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+
+
+      <nav class="nav navbar-expand-md" aria-label="Top-level navigation">
+        <div class="collapse navbar-collapse border" id="top-level-nav">
+          <!-- BEGIN app/views/shared/_user_util_links.html.erb --><a class="nav-item nav-link" href="/">Home</a>
+<a class="nav-item nav-link" href="/institutions">Contributing Institutions</a>
+<a class="nav-item nav-link" href="/about">About</a>
+<a class="nav-item collection-guides-help btn btn-orange" href="/overview">What are Collection Guides?</a>
+<!-- END app/views/shared/_user_util_links.html.erb -->
+        </div>
+      </nav>
+    </nav>
+  </div>
+</header>
+<!-- END app/components/header_component.html.erb --><!-- END /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/shared/_header_navbar.html.erb -->
+
+    <main id="main-container" class="container" role="main" aria-label="Main content">
+      
+
+      <!-- BEGIN /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/shared/_flash_messages.html.erb --><div class="row">
+  <div class="col-md-12">
+    <div id="main-flashes" class="">
+      <!-- BEGIN /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/shared/_flash_msg.html.erb --><div class="flash_messages">
+    
+    
+    
+    
+</div>
+<!-- END /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/shared/_flash_msg.html.erb -->
+    </div>
+  </div>
+</div>
+<!-- END /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/shared/_flash_messages.html.erb -->
+
+      <div class="row">
+            <section class="col-md-12">
+      <!-- BEGIN app/views/static_pages/home.html.erb -->
+<div class="container home">
+    <div class="row mb-4 p-0 home-banner">
+        <h1 class="text-center align-self-center">
+            Explore 60,000+ collection guides from <br/>
+            California's libraries, archives, and museums
+        </h1>
+        <div class="col-md-6 offset-md-3 col-12" id="search-col">
+        <div class="text-center" role="navigation" aria-label="Search">
+            <!-- BEGIN app/components/oac/search_bar_component.html.erb --><search>
+  <form class="search-query-form" action="/search" accept-charset="UTF-8" method="get">
+    <input type="hidden" name="group" value="true" autocomplete="off" />
+    <div class="input-group">
+
+      <input value="all_fields" autocomplete="off" type="hidden" name="search_field" id="search_field" />
+
+      <label class="visually-hidden" for="q">search for</label>
+        <input placeholder="Search collection guides" class="search-q q form-control rounded-0" aria-label="search for" type="search" name="q" id="q" />
+
+      <button class="btn btn-primary search-btn" type="submit" id="search" aria-label="Submit search term"><span class="d-none me-sm-1 submit-search-text" aria-hidden="true">Submit search term</span><span class="blacklight-icons blacklight-icons-search"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+  <path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+</svg>
+</span></button>
+    </div>
+</form></search>
+<!-- END app/components/oac/search_bar_component.html.erb -->
+        </div>
+        </div>
+        <p class="text-end align-self-end">
+            <span class="sr-only visually-hidden">Background image: Handwritten journal including a sketch of the South Fork of Kings River in Kings Canyon, California.</span>
+            <a class="caption" href="/findaid/ark:%2F13030%2Ftf8p3006xd">LeConte Family Papers / UC Berkeley, Bancroft Library</a>
+        </p>
+    </div>
+</div>
+
+<div class="home mb-4">
+    <div class="grid">
+        <div class="g-col-md-4 g-col-12 home-textbox p-4">
+            <h2>
+            OAC is your gateway to detailed descriptions of the unique
+            holdings of over 350 archival institutions throughout the state.
+            </h2>
+            <a class="btn btn-primary" href="/institutions">Browse all contributing institutions</a>
+        </div>
+        <div class="g-col-md-8 g-col-12" style="grid-row: span 2;">
+            <div class="visually-hidden-focusable">
+                <h2>Map of OAC's Contributing Institutions</h2>
+                <p class="visually-hidden">Go to the <a href="/institutions">Contributing Institutions</a> page to see a list of all institutions alphabetically sorted.</p>
+                <a href="#featured-image" class="d-inline-block p2 m1">Skip Map</a>
+                <p>Use +/- to zoom and the arrow keys to pan around the map. Use the tab key to navigate to the next marker, and click on or press the enter key to select a marker to see the repository name and location.</p>
+
+                <!-- TODO :Use the escape key to exit the map after tabbing into markers. -->
+
+            </div>
+            <div id="home-map"></div>
+        </div>
+        <div class="g-col-md-4 g-col-12 home-image" style="background-image: url('/assets/arclight/homepage/featured_images/02-1846934ed85e8ba505ce1acfc510c0be14a3a4e0d53331fcf6fc776a96e35847.png');">
+            <p>
+                <span class="sr-only visually-hidden">Featured image: Group of people in an archive, posing between shelves. This photo is in black and white.</span>
+                <a class="caption" id="featured-image" href="/institutions/lapl">Courtesy of the Los Angeles Public Library</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="calisphere-banner" class="container home calisphere-banner-wrapper">
+    <a href="https://calisphere.org">
+    <div class="row mb-4 p-4 calisphere-banner">
+        <div class="col-xl-auto col-lg-8 col-md-6 col-sm-auto">
+            <div class="row flex-lg-nowrap">
+                <div class="col-lg-auto mb-lg-0 mb-4">
+                    <img alt="Calisphere" class="img-fluid calisphere-thumbnail me-1" src="/assets/arclight/thumb-inst_riverside-65009dc87e2ed18a6bac9739545f532c699c70dc611ee385185fa2f5cafbcafc.jpg" />
+                    <img alt="Calisphere" class="img-fluid calisphere-thumbnail me-1" src="/assets/arclight/thumb-uc_merced-223729b55156899814bc3e7112d22bcd4f0e28cb45ef22f450d5a3bd3f79522f.jpg" />
+                    <img alt="Calisphere" class="img-fluid calisphere-thumbnail" src="/assets/arclight/thumb-inst_marin-da17396fb681d86929c9c60a89046e6fa8564008f7f016a208bb5f11fb3b384e.jpg" />
+                </div>
+                <div class="flex-shrink-1 col-lg-auto mb-4">
+                    <h3>Need to find a digital image?</h3>
+                    <p>A world of primary source materials is available to you online.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col text-md-end align-self-center">
+            <img alt="Calisphere" class="img-fluid calisphere-logo" src="/assets/arclight/calisphere-logo-91dc2c04d4b4321c33a91d60253a2a3436afc71a3451bf25629fb5ad74fd424e.svg" />
+        </div>
+    </div>
+    </a>
+</div>
+
+<script>
+    var map = L.map('home-map', { scrollWheelZoom: false }).setView([37.152, -120.594], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+    }).addTo(map);
+    var tealIcon = L.icon({
+        iconUrl: "/assets/arclight/map/marker-teal-92073f581447de72fd7ce2b6aeff30568f185ebd0a3dce351a3fb070ce5e0b8c.png",
+        shadowUrl: "/assets/arclight/map/marker-shadow-a2d94406ba198f61f68a71ed8f9f9c701122c0c33b775d990edceae4aece567f.png",
+        iconSize:     [25, 41],
+        shadowSize:   [41, 41],
+        iconAnchor:   [12, 41],
+        shadowAnchor: [12, 41],
+        popupAnchor:  [1, -34]
+    });
+
+    var marker = L.marker([34.0603659125, -118.376709223], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Academy of Motion Picture Arts and Sciences, Margaret Herrick Library<br/>
+        <div class="al-repository-street-address-address1">333 S. La Cienega Blvd</div>
+<div class="al-repository-street-address-city_state_zip_country">Beverly Hills, CA 90211, US</div>
+
+        <a href="/institutions/ampas_clac">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.703392, -121.918269], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Alameda County Library, Dublin Library<br/>
+        <div class="al-repository-street-address-address1">200 Civic Plaza</div>
+<div class="al-repository-street-address-city_state_zip_country">Dublin, CA 94568, US</div>
+
+        <a href="/institutions/cfra">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.76341, -122.2443079], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Alameda Museum<br/>
+        <div class="al-repository-street-address-address1">2324 Alameda Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA 94501, US</div>
+
+        <a href="/institutions/caalamu">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.887663, -122.293164], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Albany Library<br/>
+        <div class="al-repository-street-address-address1">1247 Marin Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Albany, CA 94706-2043, US</div>
+
+        <a href="/institutions/calb">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.781126, -122.402527], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        American Bookbinders Museum<br/>
+        <div class="al-repository-street-address-address1">355 Clementina St.</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94103, US</div>
+
+        <a href="/institutions/casfabm">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1278499635, -118.4716326], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        American Jewish University<br/>
+        <div class="al-repository-street-address-address1">Bel and Jack M. Ostrow Library, </div>
+<div class="al-repository-street-address-address2">15600 Mulholland Dr.</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90077, US</div>
+
+        <a href="/institutions/cajuol">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.8314691292, -117.919338942], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Anaheim Public Library<br/>
+        <div class="al-repository-street-address-address1">500 West Broadway</div>
+<div class="al-repository-street-address-city_state_zip_country">Anaheim, CA 92805, US</div>
+
+        <a href="/institutions/cana">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1296372859, -118.028612137], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Arcadia Public Library<br/>
+        <div class="al-repository-street-address-address1">20 West Duarte Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Arcadia, CA 91006, US</div>
+
+        <a href="/institutions/caarpl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.454172, -122.162877], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Archives of the Archdiocese of San Francisco<br/>
+        <div class="al-repository-street-address-address1">320 Middlefield Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Menlo Park, CA 94025, US</div>
+
+        <a href="/institutions/camenasf">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.906793, -122.305995], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Arhoolie Foundation<br/>
+        <div class="al-repository-street-address-address1">10341 San Pablo Ave.</div>
+<div class="al-repository-street-address-city_state_zip_country">El Cerrito, CA 94530, US</div>
+
+        <a href="/institutions/caelaf">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1679612567, -118.184866905], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Artcenter College of Design, Archives<br/>
+        <div class="al-repository-street-address-address1">950 S. Raymond Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Pasadena, CA 91105, US</div>
+
+        <a href="/institutions/clart_arch">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.129426, -118.148109], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Artcenter College of Design, Hoffmitz Milken Center for Typography Archive<br/>
+        <div class="al-repository-street-address-address1">950 S. Raymond Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Pasadena, CA 91105, US</div>
+
+        <a href="/institutions/clart_hmct">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1488513891, -118.281624913], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Autry Museum of the American West<br/>
+        <div class="al-repository-street-address-address1">4700 Western Heritage Way</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90027, US</div>
+
+        <a href="/institutions/clgam">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9285481686, -116.878051758], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Banning Library District<br/>
+        <div class="al-repository-street-address-address1">21 West Nicolet Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Banning, CA 92220, US</div>
+
+        <a href="/institutions/cban">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.769399, -122.156476], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Bay Area Lesbian Archives<br/>
+        <div class="al-repository-street-address-address1">P.O. Box 18684</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA 94619-0684, US</div>
+
+        <a href="/institutions/cabala">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.932443, -116.9809953], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Beaumont Library District<br/>
+        <div class="al-repository-street-address-address1">125 East 8th Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Beaumont, CA 92223, US</div>
+
+        <a href="/institutions/cbea">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8700781, -122.2718157], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Berkeley Historical Society<br/>
+        <div class="al-repository-street-address-address1">1931 Center Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94704, US</div>
+
+        <a href="/institutions/cbhi">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.868163, -122.268611], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Berkeley Public Library<br/>
+        <div class="al-repository-street-address-address1">2090 Kittredge Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94704, US</div>
+
+        <a href="/institutions/cb">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.903772, -118.015151], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Biola University Archives and Special Collections<br/>
+        <div class="al-repository-street-address-address1">13800 Biola Ave.</div>
+<div class="al-repository-street-address-city_state_zip_country">La Miraada, CA 90639, US</div>
+
+        <a href="/institutions/CLamB">Browse collections</a>
+    `);
+
+    var marker = L.marker([35.2534299, -120.666932], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Black Gold Cooperative Library System<br/>
+        <div class="al-repository-street-address-address1">3437 Empresa Drive, Suite C</div>
+<div class="al-repository-street-address-city_state_zip_country">San Luis Obispo, CA 93401, US</div>
+
+        <a href="/institutions/cvtb">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7702058885, -122.466788292], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California Academy of Sciences<br/>
+        <div class="al-repository-street-address-address1">55 Music Concourse Drive</div>
+<div class="al-repository-street-address-address2">Golden Gate Park</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94118, US</div>
+
+        <a href="/institutions/csfa">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.116024, -117.71907], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California Botanic Garden<br/>
+        <div class="al-repository-street-address-address1">1500 N College Avenue </div>
+<div class="al-repository-street-address-city_state_zip_country">Claremont, CA 91711, US</div>
+
+        <a href="/institutions/ccr">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.762902, -122.393949], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California College of the Arts Libraries <br/>
+        <div class="al-repository-street-address-address1">Simpson Library</div>
+<div class="al-repository-street-address-address2">1111 8th Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94107, US</div>
+
+        <a href="/institutions/cocac">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.133869, -118.127486], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California Institute of Technology (Caltech)<br/>
+        <div class="al-repository-street-address-address1">1200 E. California Blvd.</div>
+<div class="al-repository-street-address-address2">MC B215-74</div>
+<div class="al-repository-street-address-city_state_zip_country">Pasadena, CA 91125, US</div>
+
+        <a href="/institutions/caltech">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.392481, -118.566101], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California Institute of the Arts Institute Archives<br/>
+        <div class="al-repository-street-address-address1">24700 McBean Pkwy</div>
+<div class="al-repository-street-address-city_state_zip_country">Valencia, CA 91355, US</div>
+
+        <a href="/institutions/cvala">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.78101, -122.417994], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California Judicial Center Library, Special Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">455 Golden Gate Avenue, Room 4617</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94102-7013, US</div>
+
+        <a href="/institutions/casfcjc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.225145, -118.877373], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California Lutheran University<br/>
+        <div class="al-repository-street-address-address1">60 West Olsen Road #5100</div>
+<div class="al-repository-street-address-city_state_zip_country">Thousand Oaks, CA 91360, US</div>
+
+        <a href="/institutions/ctol">Browse collections</a>
+    `);
+
+    var marker = L.marker([35.301012, -120.658538], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California Polytechnic State University - San Luis Obispo, Special Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">Robert E. Kennedy Library, Rm 409</div>
+<div class="al-repository-street-address-city_state_zip_country">San Luis Obispo, CA 93407, US</div>
+
+        <a href="/institutions/cslusp_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([35.301012, -120.658538], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California Polytechnic State University - San Luis Obispo, University Archives<br/>
+        <div class="al-repository-street-address-address1">Special Collections and Archives</div>
+<div class="al-repository-street-address-address2">Robert E. Kennedy Library, Rm 409</div>
+<div class="al-repository-street-address-city_state_zip_country">San Luis Obispo, CA 93407, US</div>
+
+        <a href="/institutions/cslusp_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.574623, -121.495256], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State Archives<br/>
+        <div class="al-repository-street-address-address1">1020 &quot;O&quot; Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95814, US</div>
+
+        <a href="/institutions/csa">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5758373382, -121.496445537], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State Library, California History Room<br/>
+        <div class="al-repository-street-address-address1">900 N Street, Room 200, P.O. Box 942837</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 94237-0001, US</div>
+
+        <a href="/institutions/csl_chr">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.72147, -122.478166], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State Library, Sutro Library<br/>
+        <div class="al-repository-street-address-address1">SFSU - J. Paul Leonard Library</div>
+<div class="al-repository-street-address-address2">1630 Holloway Ave, Room 610</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94132-4030, US</div>
+
+        <a href="/institutions/csl_sutro">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.657084, -121.420341], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State Parks, Archives<br/>
+        <div class="al-repository-street-address-address1">4940 Lang Ave. Suite 114</div>
+<div class="al-repository-street-address-city_state_zip_country">McClellan, CA 95652, US</div>
+
+        <a href="/institutions/casp_cspr">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.657084, -121.420341], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State Parks, Photographic Archives<br/>
+        <div class="al-repository-street-address-address1">4940 Lang Ave., Dock H</div>
+<div class="al-repository-street-address-city_state_zip_country">McClellan, CA 95652, US</div>
+
+        <a href="/institutions/casp_casasppa">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0506992, -117.8205095], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State Polytechnic University, Pomona, ENV Archives-Special Collections<br/>
+        <div class="al-repository-street-address-address1">3801 W. Temple Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Pomona, CA 91768, US</div>
+
+        <a href="/institutions/cpomcp_envarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0499748736, -117.815129757], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State Polytechnic University, Pomona, Special Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">3801 West Temple Ave.</div>
+<div class="al-repository-street-address-city_state_zip_country">Pomona, CA 91768, US</div>
+
+        <a href="/institutions/cpomcp_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5839896491, -121.504100561], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State Railroad Museum Library and Archives<br/>
+        <div class="al-repository-street-address-address1">111 I Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95814, US</div>
+
+        <a href="/institutions/csrml">Browse collections</a>
+    `);
+
+    var marker = L.marker([35.3514255, -119.1031573], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Bakersfield<br/>
+        <div class="al-repository-street-address-address1">Walter W. Stiern Library</div>
+<div class="al-repository-street-address-address2">60 LIB 9001 Stockdale Hwy</div>
+<div class="al-repository-street-address-city_state_zip_country">Bakersfield, CA 93311-1022, US</div>
+
+        <a href="/institutions/cbas">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1630255101, -119.043388367], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University Channel Islands<br/>
+        <div class="al-repository-street-address-address1">One University Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Camarillo, CA 93012, US</div>
+
+        <a href="/institutions/csuci">Browse collections</a>
+    `);
+
+    var marker = L.marker([39.7279668517, -121.846436262], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Chico<br/>
+        <div class="al-repository-street-address-address1">California State University, Chico, Special Collections Meriam Library</div>
+<div class="al-repository-street-address-address2">400 West First Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Chico, CA 95929-0295, US</div>
+
+        <a href="/institutions/chico">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.8637341737, -118.255956173], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Dominguez Hills, Archives and Special Collections<br/>
+        <div class="al-repository-street-address-address1">University Library, 5th Flr (5039)</div>
+<div class="al-repository-street-address-address2">1000 E. Victoria Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Carson, CA 90747, US</div>
+
+        <a href="/institutions/csudh_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.8640192565, -118.255913258], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Dominguez Hills, The California State University System Archives<br/>
+        <div class="al-repository-street-address-address1">1000 E. Victoria Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Carson, CA 90747, US</div>
+
+        <a href="/institutions/csudh_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.8647141418, -118.256106377], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Dominguez Hills, University Archives<br/>
+        <div class="al-repository-street-address-address1">1000 E. Victoria Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Carson, CA 90747, US</div>
+
+        <a href="/institutions/csudh_archives">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.6589088, -122.0626505], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, East Bay University Archives<br/>
+        <div class="al-repository-street-address-address1">25800 Carlos Bee Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Hayward, CA 94542, US</div>
+
+        <a href="/institutions/csueb">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.8119646959, -119.749453068], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Fresno, Central Valley Political Archive<br/>
+        <div class="al-repository-street-address-address1">5200 North Barton Avenue, M/S ML 34</div>
+<div class="al-repository-street-address-city_state_zip_country">Fresno, CA 93740-8014, US</div>
+
+        <a href="/institutions/csuf_cvpa">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.812119308, -119.749388695], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Fresno, Special Collections Research Center<br/>
+        <div class="al-repository-street-address-address1">5200 North Barton Avenue, M/S ML 34</div>
+<div class="al-repository-street-address-city_state_zip_country">Fresno, CA 93740-8014, US</div>
+
+        <a href="/institutions/csuf_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.8796082711, -117.888300419], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Fullerton<br/>
+        <div class="al-repository-street-address-address1">800 N. State College Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Fullerton, CA 92831-3599, US</div>
+
+        <a href="/institutions/cfls">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.8818484013, -117.885344625], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Fullerton, Center for Oral and Public History<br/>
+        <div class="al-repository-street-address-address1">P.O. Box 6846</div>
+<div class="al-repository-street-address-city_state_zip_country">Fullerton, CA 92834, US</div>
+
+        <a href="/institutions/cfls_coph">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.8740731, -117.9026351], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Fullerton, University Archives and Special Collections<br/>
+        <div class="al-repository-street-address-address1">800 N. State College Blvd.</div>
+<div class="al-repository-street-address-address2">Pollak Library South, Room 352</div>
+<div class="al-repository-street-address-city_state_zip_country">Fullerton, CA 92834-4150, US</div>
+
+        <a href="/institutions/cfls_uasc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0670585248, -118.167486191], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Los Angeles<br/>
+        <div class="al-repository-street-address-address1">5151 State University Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90032-8300, US</div>
+
+        <a href="/institutions/cls">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.07392, -122.231117], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University Maritime Academy<br/>
+        <div class="al-repository-street-address-address1">200 Maritime Academy Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Vallejo, CA 94590, US</div>
+
+        <a href="/institutions/cvm">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.6542699262, -121.808252335], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Monterey Bay Library<br/>
+        <div class="al-repository-street-address-address1">Tanimura &amp; Antle Family Memorial Library</div>
+<div class="al-repository-street-address-address2">3054 Divarty Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Seaside, CA 93955-8001, US</div>
+
+        <a href="/institutions/csumbl">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.240275, -118.529896], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Northridge, International Guitar Research Archives (IGRA)<br/>
+        <div class="al-repository-street-address-address1">18111 Nordhoff Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Northridge, CA 91330, US</div>
+
+        <a href="/institutions/cnos_igra">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.2373873, -118.5281649], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Northridge, Map Collection<br/>
+        <div class="al-repository-street-address-address1">18111 Nordhoff Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Northridge, CA 91330, US</div>
+
+        <a href="/institutions/cnos_gdml">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.240167, -118.529893], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Northridge, Old China Hands Archives <br/>
+        <div class="al-repository-street-address-address1">18111 Nordhoff Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Northridge, CA 91330, US</div>
+
+        <a href="/institutions/cnos_ocha">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.240371, -118.529893], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Northridge, Special Collections<br/>
+        <div class="al-repository-street-address-address1">18111 Nordhoff Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Northridge, CA 91330, US</div>
+
+        <a href="/institutions/cnos_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.2389064, -118.530185], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Northridge, Tom and Ethel Bradley Center Collections<br/>
+        <div class="al-repository-street-address-address1">18111 Nordhoff Street </div>
+<div class="al-repository-street-address-city_state_zip_country">Northridge, CA 91330, US</div>
+
+        <a href="/institutions/cnos_tebcc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.240074, -118.529893], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Northridge, University Archives and Campus History<br/>
+        <div class="al-repository-street-address-address1">18111 Nordhoff Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Northridge, CA 91330, US</div>
+
+        <a href="/institutions/cnos_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.239958, -118.52989], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Northridge, Urban Archives<br/>
+        <div class="al-repository-street-address-address1">18111 Nordhoff Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Northridge, CA 91330, US</div>
+
+        <a href="/institutions/cnos_urba">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5596431993, -121.423677206], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Sacramento Library<br/>
+        <div class="al-repository-street-address-address1">University Library, MS 6039</div>
+<div class="al-repository-street-address-address2">6000 J Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95819, US</div>
+
+        <a href="/institutions/css">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.182623, -117.323808], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, San Bernardino<br/>
+        <div class="al-repository-street-address-address1">Special Collections &amp; University Archives</div>
+<div class="al-repository-street-address-address2">5500 University Parkway</div>
+<div class="al-repository-street-address-city_state_zip_country">San Bernardino, CA 92407, US</div>
+
+        <a href="/institutions/csbc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.1400311, -117.1816775], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, San Marcos<br/>
+        <div class="al-repository-street-address-address1">Kellogg Library, 333 S. Twin Oaks Valley Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Marcos, CA 92096-0001, US</div>
+
+        <a href="/institutions/csmars">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.5246222474, -120.858562589], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        California State University, Stanislaus. Library<br/>
+        <div class="al-repository-street-address-address1">801 W. Monte Vista Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Turlock, CA 95382, US</div>
+
+        <a href="/institutions/cturs">Browse collections</a>
+    `);
+
+    var marker = L.marker([40.8766119262, -124.080308676], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Cal Poly Humboldt, Library Special Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">Third Floor, Room 303</div>
+<div class="al-repository-street-address-address2">1 Harpst Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Arcata, CA 95521-8299, US</div>
+
+        <a href="/institutions/humboldt">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5990421529, -121.495876908], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Center for Sacramento History<br/>
+        <div class="al-repository-street-address-address1">551 Sequoia Pacific Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95811, US</div>
+
+        <a href="/institutions/samcc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.010883, -118.415106], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Center for the Study of Political Graphics<br/>
+        <div class="al-repository-street-address-address1">3916 Sepulveda Blvd.</div>
+<div class="al-repository-street-address-address2">Suite 103</div>
+<div class="al-repository-street-address-city_state_zip_country">Culver City, CA 90230, US</div>
+
+        <a href="/institutions/calacsp">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7924133, -122.425833], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        C.G. Jung Institute of San Francisco<br/>
+        <div class="al-repository-street-address-address1">2040 Gough Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94109, US</div>
+
+        <a href="/institutions/casfvad">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8183445405, -122.180349827], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Chabot Space and Science Center<br/>
+        <div class="al-repository-street-address-address1">10000 Skyline Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA 94619, US</div>
+
+        <a href="/institutions/coch">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.7928170249, -117.851184011], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Chapman University, Frank Mt. Pleasant Library of Special Collections and Archives, Center for American War Letters Archives<br/>
+        <div class="al-repository-street-address-address1">One University Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Orange, CA 92866, US</div>
+
+        <a href="/institutions/corc_cawla">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.7928170249, -117.851184011], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Chapman University, Frank Mt. Pleasant Library of Special Collections and Archives, Huell Howser Archives<br/>
+        <div class="al-repository-street-address-address1">One University Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Orange, CA 92866, US</div>
+
+        <a href="/institutions/corc_hha">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.7928170249, -117.851184011], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Chapman University, Frank Mt. Pleasant Library of Special Collections and Archives, Special Collections<br/>
+        <div class="al-repository-street-address-address1">One University Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Orange, CA 92866, US</div>
+
+        <a href="/institutions/corc_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.7928170249, -117.851184011], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Chapman University, Frank Mt. Pleasant Library of Special Collections and Archives, University Archives<br/>
+        <div class="al-repository-street-address-address1">One University Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Orange, CA 92866, US</div>
+
+        <a href="/institutions/corc_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.793604, -117.851581], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Chapman University, Sala and Aron Samueli Holocaust Memorial Library, Oskar Schindler Archive<br/>
+        <div class="al-repository-street-address-address1">One University Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Orange, CA 92866, US</div>
+
+        <a href="/institutions/corc_sashml">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0671308, -118.236268], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Chinese Historical Society of Southern California<br/>
+        <div class="al-repository-street-address-address1">411 and 415 Bernard Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/chihi">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.640606, -117.082592], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Chula Vista Public Library<br/>
+        <div class="al-repository-street-address-address1">365 F Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Chula Vista, CA 91910, US</div>
+
+        <a href="/institutions/cchu">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1353586836, -117.885274887], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Citrus College, Hayden Memorial Library<br/>
+        <div class="al-repository-street-address-address1">1000 W. Foothill Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Glendora, CA 91741-1899, US</div>
+
+        <a href="/institutions/cazc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0003044, -118.1568849], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        City of Commerce Public Library<br/>
+        <div class="al-repository-street-address-address1">5655 Jillson Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Commerce, CA 90040, US</div>
+
+        <a href="/institutions/ccmm">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1021305417, -117.712358236], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Claremont Colleges, Honnold/Mudd Library<br/>
+        <div class="al-repository-street-address-address1">800 N. Dartmouth Ave.</div>
+<div class="al-repository-street-address-city_state_zip_country">Claremont, CA 91711, US</div>
+
+        <a href="/institutions/cuc_mud">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.098046, -117.716116], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Claremont Colleges, Pacific Basin Institute<br/>
+        <div class="al-repository-street-address-address1">420 N. Harvard Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Pomona, CA 91711, US</div>
+
+        <a href="/institutions/cuc_pbi">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.104158, -117.706623], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Claremont Colleges, Pitzer College Archives<br/>
+        <div class="al-repository-street-address-address1">1050 North Mills Ave., Box A-95</div>
+<div class="al-repository-street-address-city_state_zip_country">Claremont, CA 91711, US</div>
+
+        <a href="/institutions/cuc_ccc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0971481, -117.7131912], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Claremont Colleges, Pomona College Archives<br/>
+        <div class="al-repository-street-address-address1">333 N. College Way</div>
+<div class="al-repository-street-address-city_state_zip_country">Claremont, CA 91711, US</div>
+
+        <a href="/institutions/cuc_pac">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1040050238, -117.711263895], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Claremont Colleges, Scripps College, Ella Strong Denison Library<br/>
+        <div class="al-repository-street-address-address1">1030 Columbia Avenue, #2031</div>
+<div class="al-repository-street-address-city_state_zip_country">Claremont, CA 91711, US</div>
+
+        <a href="/institutions/cuc_den">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.103716, -117.711522], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Claremont Colleges, Scripps College, Ruth Chandler Williamson Gallery<br/>
+        <div class="al-repository-street-address-address1">1030 Columbia Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Claremont, CA 91711, US</div>
+
+        <a href="/institutions/cuc_rcwg">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1041585, -117.7135309], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Claremont Colleges, The Drucker Institute<br/>
+        <div class="al-repository-street-address-address1">1021 N. Dartmouth Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Claremont, CA 91711, US</div>
+
+        <a href="/institutions/cuc_dru">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1024243, -117.7195767], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Claremont Heritage<br/>
+        <div class="al-repository-street-address-address1">840 N. Indian Hill Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Claremont, CA 91711, US</div>
+
+        <a href="/institutions/caclah">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0540039, -118.2498686], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Colburn School Special Collections<br/>
+        <div class="al-repository-street-address-address1">200 South Grand Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/ccosc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.414457, -122.07705], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Computer History Museum<br/>
+        <div class="al-repository-street-address-address1">1401 Shoreline Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Mountain View, CA 94043, US</div>
+
+        <a href="/institutions/camvchm">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.0179648, -122.1365044], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Contra Costa County Historical Society<br/>
+        <div class="al-repository-street-address-address1">724 Escobar Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Martinez, CA 94553, US</div>
+
+        <a href="/institutions/cmartch">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.106191, -118.310743], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Corita Art Center<br/>
+        <div class="al-repository-street-address-address1">5515 Franklin Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90028, US</div>
+
+        <a href="/institutions/calacac">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.6911008261, -117.177584767], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Coronado Public Library<br/>
+        <div class="al-repository-street-address-address1">640 Orange Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Coronado, CA 92118, US</div>
+
+        <a href="/institutions/ccoron">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.874956, -117.567413], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Corona Public Library<br/>
+        <div class="al-repository-street-address-address1">650 S. Main Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Corona, CA 92882, US</div>
+
+        <a href="/institutions/ccoro">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0877551708, -117.887565494], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Covina Public Library<br/>
+        <div class="al-repository-street-address-address1">234 N. Second Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Covina, CA 91723, US</div>
+
+        <a href="/institutions/ccov">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5773805, -121.5066015], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Crocker Art Museum <br/>
+        <div class="al-repository-street-address-address1">216 O Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95814, US</div>
+
+        <a href="/institutions/cacrkam">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3207637602, -122.04731226], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        De Anza College. California History Center<br/>
+        <div class="al-repository-street-address-address1">21250 Stevens Creek Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Cupertino, CA 95014, US</div>
+
+        <a href="/institutions/cacupchc">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.453002, -116.863718], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Death Valley National Park<br/>
+        <div class="al-repository-street-address-address1">PO Box 579</div>
+<div class="al-repository-street-address-city_state_zip_country">Death Valley, CA 92328, US</div>
+
+        <a href="/institutions/cadvnp">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.980023, -122.514713], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Dominican Sisters of San Rafael Archives<br/>
+        <div class="al-repository-street-address-address1">1520 Grand Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">San Rafael, CA 94901, US</div>
+
+        <a href="/institutions/casrds">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.979882, -122.513412], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Dominican University of California Archives<br/>
+        <div class="al-repository-street-address-address1">50 Acacia Ave.</div>
+<div class="al-repository-street-address-city_state_zip_country">San Rafael, CA 94901, US</div>
+
+        <a href="/institutions/casrduc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.928386, -118.154495], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Downey Historical Society<br/>
+        <div class="al-repository-street-address-address1">12540 Rives Avenue    </div>
+<div class="al-repository-street-address-city_state_zip_country">Downey, CA 90242, US</div>
+
+        <a href="/institutions/cdohic">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.701363, -121.938487], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Dublin Heritage Park and Museums<br/>
+        <div class="al-repository-street-address-address1">6600 Donlon Way</div>
+<div class="al-repository-street-address-city_state_zip_country">Dublin, CA 94568, US</div>
+
+        <a href="/institutions/cfradhc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.743428, -122.14448], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        East Bay Regional Park District<br/>
+        <div class="al-repository-street-address-address1">2950 Peralta Oaks Ct.</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA , US</div>
+
+        <a href="/institutions/caolebrp">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.056823, -118.238085], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        El Pueblo de Los Angeles Historical Monument<br/>
+        <div class="al-repository-street-address-address1">125 Paseo de la Plaza</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/calaephm">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.12071, -117.079282], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Escondido Public Library, Pioneer Room<br/>
+        <div class="al-repository-street-address-address1">247 South Kalmia Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Escondido, CA 92025, US</div>
+
+        <a href="/institutions/cesc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.365966, -121.906314], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Forever Saroyan, LLC<br/>
+        <div class="al-repository-street-address-city_state_zip_country">San Jose, CA 95112, US</div>
+
+        <a href="/institutions/casjfs">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7645115, -122.4221452], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Freedom Archives<br/>
+        <div class="al-repository-street-address-address1">1615 Hopkins Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94707, US</div>
+
+        <a href="/institutions/casffa">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.728021, -119.920914], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Fresno City and County Historical Society<br/>
+        <div class="al-repository-street-address-address1">7160 West Kearney Boulevard</div>
+<div class="al-repository-street-address-city_state_zip_country">Fresno, CA 93706, US</div>
+
+        <a href="/institutions/fcchs">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.7378523855, -119.786338806], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Fresno County Public Library<br/>
+        <div class="al-repository-street-address-address1">2420 Mariposa Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Fresno, CA 93721, US</div>
+
+        <a href="/institutions/cfcpl">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.7268721055, -119.735205173], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Fresno Pacific University Mennonite Library and Archives<br/>
+        <div class="al-repository-street-address-address1">1717 S. Chestnut Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Fresno, CA 93702, US</div>
+
+        <a href="/institutions/cmbs">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1487607, -118.139982], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Fuller Theological Seminary-David Allan Hubbard Library Archives<br/>
+        <div class="al-repository-street-address-address1">135 North Oakland Ave.</div>
+<div class="al-repository-street-address-city_state_zip_country">Pasadena, CA 91182, US</div>
+
+        <a href="/institutions/cpft">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.87401, -117.919503], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Fullerton College<br/>
+        <div class="al-repository-street-address-address1">321 E. Chapman Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Fullerton, CA 92832, US</div>
+
+        <a href="/institutions/cflj">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0773319447, -118.474974632], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Getty Research Institute<br/>
+        <div class="al-repository-street-address-address1">1200 Getty Center Drive, Suite 1100</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90049-1679, US</div>
+
+        <a href="/institutions/getty">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.077563, -118.474629], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Getty Research Institute, Institutional Archives<br/>
+        <div class="al-repository-street-address-address1">1200 Getty Center Drive, Suite 1100</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90049-1688, US</div>
+
+        <a href="/institutions/getty_inarch">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0774741287, -118.475017548], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Getty Research Institute, Special Collections<br/>
+        <div class="al-repository-street-address-address1">1200 Getty Center Drive, Suite 1100</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90049-1688, US</div>
+
+        <a href="/institutions/getty_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.78671, -122.400839], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        GLBT Historical Society<br/>
+        <div class="al-repository-street-address-address1">989 Market Street, Lower Level</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94103, US</div>
+
+        <a href="/institutions/glhs">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1683045, -118.2282025], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Glendale Community College Library <br/>
+        <div class="al-repository-street-address-address1">1500 North Verdugo Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Glendale, CA 91208, US</div>
+
+        <a href="/institutions/cglc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.182523, -118.276405], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Glendale Library, Arts and Culture, Brand Library and Art Center<br/>
+        <div class="al-repository-street-address-address1">1601 West Mountain Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Glendale, CA 91201, US</div>
+
+        <a href="/institutions/cgl_blac">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.143513, -118.253488], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Glendale Library, Arts and Culture, Glendale Central Library History Room<br/>
+        <div class="al-repository-street-address-address1">222 E. Harvard Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Glendale, CA 91205, US</div>
+
+        <a href="/institutions/cgl_plhr">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0494156, -118.2394707], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Go For Broke National Education Center<br/>
+        <div class="al-repository-street-address-address1">355 East 1st Street, Suite 200</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/catorgfb">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8755436012, -122.261872888], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Graduate Theological Union<br/>
+        <div class="al-repository-street-address-address1">2400 Ridge Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94709, US</div>
+
+        <a href="/institutions/gtu">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.555488, -121.923308], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Harrison Memorial Library<br/>
+        <div class="al-repository-street-address-address1">P.O. Box 800</div>
+<div class="al-repository-street-address-address2">Mission St &amp; 6th Ave</div>
+<div class="al-repository-street-address-city_state_zip_country">Carmel-by-the-Sea, CA 93921, US</div>
+
+        <a href="/institutions/ccarm">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.766507, -122.467254], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Helen Crocker Russell Library of Horticulture San Francisco Botanical Garden<br/>
+        <div class="al-repository-street-address-address1">1199 Ninth Avenue </div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94122, US</div>
+
+        <a href="/institutions/csfsa">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.791361, -122.413037], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Henry W. Coil Library and Museum of Freemasonry<br/>
+        <div class="al-repository-street-address-address1">1111 California Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94108, US</div>
+
+        <a href="/institutions/casfclmf">Browse collections</a>
+    `);
+
+    var marker = L.marker([40.8660164215, -124.077894688], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Historical Sites Society of Arcata<br/>
+        <div class="al-repository-street-address-address1">P.O. Box 4521</div>
+<div class="al-repository-street-address-city_state_zip_country">Arcata, CA 95521, US</div>
+
+        <a href="/institutions/hssa">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.833865, -118.184742], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Historical Society of Long Beach<br/>
+        <div class="al-repository-street-address-address1">4260 Atlantic Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Long Beach, CA 90807, US</div>
+
+        <a href="/institutions/clobhi">Browse collections</a>
+    `);
+
+    var marker = L.marker([35.2801155, -120.6649954], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        History Center of San Luis Obispo County<br/>
+        <div class="al-repository-street-address-address1">696 Monterey Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Luis Obispo, CA 93401, US</div>
+
+        <a href="/institutions/csluhi">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3187842758, -121.859740019], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        History San Jose Research Library<br/>
+        <div class="al-repository-street-address-address1">1661 Senter Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Jose, CA 95112, US</div>
+
+        <a href="/institutions/casjhsj">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.427246188, -122.166337967], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Hoover Institution<br/>
+        <div class="al-repository-street-address-address1">Hoover Institution Library &amp; Archives, Stanford University</div>
+<div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305-6003, US</div>
+
+        <a href="/institutions/hoover">Browse collections</a>
+    `);
+
+    var marker = L.marker([40.842351, -124.063671], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Humboldt Area People&#39;s Archive<br/>
+        <div class="al-repository-street-address-address1">PO Box 632</div>
+<div class="al-repository-street-address-city_state_zip_country">Bayside, CA 95524, US</div>
+
+        <a href="/institutions/capahu">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1296261846, -118.109936714], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Huntington Library, Architecture Collections<br/>
+        <div class="al-repository-street-address-address1">1151 Oxford Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Marino, CA 91108, US</div>
+
+        <a href="/institutions/huntington_arcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1271883116, -118.10997963], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Huntington Library, Manuscript Collections<br/>
+        <div class="al-repository-street-address-address1">1151 Oxford Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Marino, CA 91108, US</div>
+
+        <a href="/institutions/huntington_mss">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1272593617, -118.10997963], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Huntington Library, Photo Archives Collections<br/>
+        <div class="al-repository-street-address-address1">1151 Oxford Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Marino, CA 91108, US</div>
+
+        <a href="/institutions/huntington_parc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1272948868, -118.10997963], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Huntington Library, Prints and Ephemera Collections<br/>
+        <div class="al-repository-street-address-address1">1151 Oxford Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Marino, CA 91108, US</div>
+
+        <a href="/institutions/huntington_preph">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1290355952, -118.11006546], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Huntington Library, Rare Book Collections<br/>
+        <div class="al-repository-street-address-address1">1151 Oxford Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Marino, CA 91108, US</div>
+
+        <a href="/institutions/huntington_rbd">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1247921, -118.1181199], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Huntington Library, The Huntington Institutional Archives<br/>
+        <div class="al-repository-street-address-address1">Institutional Archivist, The Huntington</div>
+<div class="al-repository-street-address-address2">1151 Oxford Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Marino, CA 91108, US</div>
+
+        <a href="/institutions/huntington_inarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.824285, -115.503863], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Imperial County Historical Society Pioneers Museum<br/>
+        <div class="al-repository-street-address-address1">373 E. Aten Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Imperial, CA 92251, US</div>
+
+        <a href="/institutions/caimphs">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.961777, -118.356288], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Inglewood Public Library<br/>
+        <div class="al-repository-street-address-address1">101 W. Manchester Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Inglewood, CA 90301-1771, US</div>
+
+        <a href="/institutions/cing">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3858784709, -121.966481209], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Intel Museum<br/>
+        <div class="al-repository-street-address-address1">2200 Mission College Blvd, RN5-21</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Clara, CA 95054, US</div>
+
+        <a href="/institutions/cstcli">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.7154, -117.1565], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Japanese American Historical Society of San Diego<br/>
+        <div class="al-repository-street-address-address1">4029 43rd Street</div>
+<div class="al-repository-street-address-address2">Suite 100</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92105, US</div>
+
+        <a href="/institutions/casdjah">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.049657, -118.238575], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Japanese American National Museum<br/>
+        <div class="al-repository-street-address-address1">Collections Management &amp; Access Unit</div>
+<div class="al-repository-street-address-address2">100 North Central Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/janm">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.8690356, -117.2432877], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        J. Craig Venter Institute<br/>
+        <div class="al-repository-street-address-address1">4120 Capricorn Lane</div>
+<div class="al-repository-street-address-city_state_zip_country">La Jolla, CA 92037, US</div>
+
+        <a href="/institutions/caljjcv">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0817, -118.385236], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        June L. Mazer Lesbian Archives<br/>
+        <div class="al-repository-street-address-address1">Werle Building</div>
+<div class="al-repository-street-address-address2">626 N. Robertson Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">West Hollywood, CA 90069, US</div>
+
+        <a href="/institutions/cawhomla">Browse collections</a>
+    `);
+
+    var marker = L.marker([35.372915, -119.009306], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Kern County Library<br/>
+        <div class="al-repository-street-address-address1">701 Truxtun Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Bakersfield, CA 93301, US</div>
+
+        <a href="/institutions/cbak">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.561354, -117.772574], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Laguna College of Art and Design<br/>
+        <div class="al-repository-street-address-address1">2222 Laguna Canyon Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Laguna Beach, CA 92651, US</div>
+
+        <a href="/institutions/calgbcad">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9318863843, -117.944208384], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        La Habra Historical Museum<br/>
+        <div class="al-repository-street-address-address1">215 E. La Habra Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">La Habra, CA 90631, US</div>
+
+        <a href="/institutions/claoshs">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.8453812, -117.2773708], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        La Jolla Historical Society<br/>
+        <div class="al-repository-street-address-address1">7846 Eads Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">La Jolla, CA 92037, US</div>
+
+        <a href="/institutions/cljhi">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.7599737, -117.1458876], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Lambda Archives of San Diego<br/>
+        <div class="al-repository-street-address-address1">4545 Park Blvd, Suite 104</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92116, US</div>
+
+        <a href="/institutions/casdla">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.767891, -117.017329], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        La Mesa Historical Society<br/>
+        <div class="al-repository-street-address-address1">P. O. Box 882</div>
+<div class="al-repository-street-address-city_state_zip_country">La Mesa, CA 91944, US</div>
+
+        <a href="/institutions/calmshs">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.2046621, -118.2059214], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Lanterman House History Center and Archives<br/>
+        <div class="al-repository-street-address-address1">4420 Encinas Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">La Canada Flintridge, CA 91011, US</div>
+
+        <a href="/institutions/calcflh">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.935838, -121.694269], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Liberty High School Library<br/>
+        <div class="al-repository-street-address-address1">850 Second Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Brentwood, CA 94513, US</div>
+
+        <a href="/institutions/calhsmc">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.686199, -117.078428], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Little People of America Archive<br/>
+        <div class="al-repository-street-address-address1">2760 E. 4th St. #512</div>
+<div class="al-repository-street-address-city_state_zip_country">National City, CA 91950, US</div>
+
+        <a href="/institutions/camcclpa">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0613079, -118.2410202], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles Contemporary Archive<br/>
+        <div class="al-repository-street-address-address1">709 N Hill Street Suite 104-8</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/calaca">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.056422, -118.232716], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles County Metropolitan Transportation Authority Research Library and Archive<br/>
+        <div class="al-repository-street-address-address1">One Gateway Plaza, Mail Stop: 99-15-1</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/calamta">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0622074, -118.3578161], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles County Museum of Art, Balch Art Research Library<br/>
+        <div class="al-repository-street-address-address1">5905 Wilshire Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90036, US</div>
+
+        <a href="/institutions/cam_barl">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0622074, -118.3578161], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles County Museum of Art, Doris Stein Research Center<br/>
+        <div class="al-repository-street-address-address1">5905 Wilshire Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90036, US</div>
+
+        <a href="/institutions/cam_dsrc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0622074, -118.3578161], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles County Museum of Art, LACMA Institutional Archives<br/>
+        <div class="al-repository-street-address-address1">5905 Wilshire Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90036, US</div>
+
+        <a href="/institutions/cam_lacia">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.7241323, -118.2643567], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles Maritime Museum<br/>
+        <div class="al-repository-street-address-address1">Berth 84</div>
+<div class="al-repository-street-address-address2">Foot of 6th St</div>
+<div class="al-repository-street-address-city_state_zip_country">San Pedro, CA 90043, US</div>
+
+        <a href="/institutions/casplam">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0551838855, -118.249669075], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles Philharmonic Archives<br/>
+        <div class="al-repository-street-address-address1">151 South Grand Avenue </div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012-3034, US</div>
+
+        <a href="/institutions/claphila">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.05111, -118.247634], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles Poverty Department. Skid Row History Museum and Archive<br/>
+        <div class="al-repository-street-address-address1">250 S. Broadway</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/calapov">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0506708, -118.2551963], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Angeles Public Library<br/>
+        <div class="al-repository-street-address-address1">Central Library</div>
+<div class="al-repository-street-address-address2">630 W. 5th Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90071, US</div>
+
+        <a href="/institutions/lapl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.220166, -121.978213], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Los Gatos Library<br/>
+        <div class="al-repository-street-address-address1">100 Villa Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Gatos, CA 95030, US</div>
+
+        <a href="/institutions/clg">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9703554362, -118.419903517], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Loyola Marymount University, Department of Archives and Special Collections, William H. Hannon Library<br/>
+        <div class="al-repository-street-address-address1">1 LMU Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90045-2659, US</div>
+
+        <a href="/institutions/clloy">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.96136, -120.0619648], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Madera County Library, California History and Family Research Room<br/>
+        <div class="al-repository-street-address-address1">121 North G Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Madera, CA 93637, US</div>
+
+        <a href="/institutions/camalch">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.998191823, -122.532856464], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Marin County Free Library. California Room<br/>
+        <div class="al-repository-street-address-address1">3501 Civic Center Drive, Room 427</div>
+<div class="al-repository-street-address-city_state_zip_country">San Rafael, CA 94903, US</div>
+
+        <a href="/institutions/csrcl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.975272, -122.529374], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Marin History Museum<br/>
+        <div class="al-repository-street-address-address1">1125 B Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Rafael, CA 94901, US</div>
+
+        <a href="/institutions/camahm">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.101659, -122.260633], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        McCune Rare Books and Art Collection<br/>
+        <div class="al-repository-street-address-address1">505 Santa Clara St. – lower level</div>
+<div class="al-repository-street-address-city_state_zip_country">Vallejo, CA 94590, US</div>
+
+        <a href="/institutions/cavlmc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.78875, -122.40303], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Mechanics&#39; Institute<br/>
+        <div class="al-repository-street-address-address1">57 Post Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94104, US</div>
+
+        <a href="/institutions/casfmi">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.301404, -120.470115], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Merced County Historical Society and Courthouse Museum<br/>
+        <div class="al-repository-street-address-address1">21st and N Streets</div>
+<div class="al-repository-street-address-city_state_zip_country">Merced, CA 95340, US</div>
+
+        <a href="/institutions/mchscm">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.906012152, -122.554405332], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Mill Valley Public Library<br/>
+        <div class="al-repository-street-address-address1">375 Throckmorton Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Mill Valley, CA 94941, US</div>
+
+        <a href="/institutions/cmlpl">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.731082, -117.151049], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Mingei International Museum<br/>
+        <div class="al-repository-street-address-address1">Balboa Park, Plaza de Panama</div>
+<div class="al-repository-street-address-address2">1439 El Prado</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92101, US</div>
+
+        <a href="/institutions/casdmim">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.5951035672, -117.659368515], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Mission Viejo Library<br/>
+        <div class="al-repository-street-address-address1">100 Civic Center</div>
+<div class="al-repository-street-address-city_state_zip_country">Mission Viejo, CA 92691, US</div>
+
+        <a href="/institutions/camjl">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.92123, -115.06754], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Mojave Desert Archives<br/>
+        <div class="al-repository-street-address-address1">37198 Lanfair Road # G-15</div>
+<div class="al-repository-street-address-city_state_zip_country">Essex, CA 92332, US</div>
+
+        <a href="/institutions/caesmdh">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.69161626, -121.799240112], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Monterey County Free Libraries<br/>
+        <div class="al-repository-street-address-address1">188 Seaside Circle</div>
+<div class="al-repository-street-address-city_state_zip_country">Marina, CA 93933, US</div>
+
+        <a href="/institutions/csalcl">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.597349, -121.89661], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Monterey Museum of Art<br/>
+        <div class="al-repository-street-address-address1">559 Pacific Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Monterey, CA 93940, US</div>
+
+        <a href="/institutions/camtrma">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0591126554, -118.124796152], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Monterey Park Bruggemeyer Library<br/>
+        <div class="al-repository-street-address-address1">318 S. Ramona Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Monterey Park, CA 91754, US</div>
+
+        <a href="/institutions/cmp">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.5893179, -121.8868474], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Monterey Peninsula College Library, Archives and Special Collections Department<br/>
+        <div class="al-repository-street-address-address1">980 Fremont Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Monterey, CA 93940, US</div>
+
+        <a href="/institutions/cmont">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.596316, -121.896846], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Monterey Public Library, California History Room Archives<br/>
+        <div class="al-repository-street-address-address1">625 Pacific Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Monterey, CA 93940, US</div>
+
+        <a href="/institutions/cmontp">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.779, -122.42012], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Museum of Performance and Design, Performing Arts Library<br/>
+        <div class="al-repository-street-address-address1">2200 Jerrold Avenue</div>
+<div class="al-repository-street-address-address2">Suite T</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94124, US</div>
+
+        <a href="/institutions/csfpal">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.7311102, -117.148621], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Museum of Photographic Arts<br/>
+        <div class="al-repository-street-address-address1">1649 El Prado</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92101, US</div>
+
+        <a href="/institutions/casdmpa">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.7315520897, -117.152388096], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Museum of Us<br/>
+        <div class="al-repository-street-address-address1">1350 El Prado</div>
+<div class="al-repository-street-address-address2">Balboa Park</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92101, US</div>
+
+        <a href="/institutions/casdmom">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.2808797, -119.2994443], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Museum of Ventura County<br/>
+        <div class="al-repository-street-address-address1">100 East Main Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Ventura, CA 93001, US</div>
+
+        <a href="/institutions/cvtmha">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4141412129, -122.059392929], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        NASA Ames Research Center<br/>
+        <div class="al-repository-street-address-address1">NASA Ames Research Center Archives</div>
+<div class="al-repository-street-address-address2">Mail Stop 207-1 (Bldg. N207, Rm. 112C)</div>
+<div class="al-repository-street-address-city_state_zip_country">Moffett Field, CA 94035-0001, US</div>
+
+        <a href="/institutions/narc">Browse collections</a>
+    `);
+
+    var marker = L.marker([39.263633, -121.01893], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Nevada County Libraries, Doris Foley Library for Historical Research<br/>
+        <div class="al-repository-street-address-address1">211 North Pine Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Nevada City, CA 95959, US</div>
+
+        <a href="/institutions/cncl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7816880839, -122.18198061], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Northeastern University (Oakland)<br/>
+        <div class="al-repository-street-address-address1">Special Collections, F. W. Olin Library</div>
+<div class="al-repository-street-address-address2">5000 MacArthur Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA 94613, US</div>
+
+        <a href="/institutions/mills">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.798628, -122.264271], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Oakland Museum of California<br/>
+        <div class="al-repository-street-address-address1">1000 Oak Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA 94607, US</div>
+
+        <a href="/institutions/omca">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8061051382, -122.276501656], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Oakland Public Library, African American Museum and Library at Oakland<br/>
+        <div class="al-repository-street-address-address1">659 14th Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA 94612, US</div>
+
+        <a href="/institutions/copl_caolaam">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8007985066, -122.263884544], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Oakland Public Library, Oakland History Center<br/>
+        <div class="al-repository-street-address-address1">125 14th Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA 94612, US</div>
+
+        <a href="/institutions/copl_oakhist">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1258383481, -118.211688995], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Occidental College Library<br/>
+        <div class="al-repository-street-address-address1">1600 Campus Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90041-3314, US</div>
+
+        <a href="/institutions/clo">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.72357, -117.849476], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        OC Public Libraries<br/>
+        <div class="al-repository-street-address-address1">1501 E. St. Andrew Place</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Ana, CA 92705, US</div>
+
+        <a href="/institutions/corcl">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.031025, -118.281545], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        ONE Archives at the USC Libraries<br/>
+        <div class="al-repository-street-address-address1">909 West Adams Boulevard</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90007, US</div>
+
+        <a href="/institutions/calaong">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0660097838, -117.648940086], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Ontario City Library, Robert E. Ellingwood Model Colony History Room<br/>
+        <div class="al-repository-street-address-address1">215 East &quot;C&quot; Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Ontario, CA 91764-4111, US</div>
+
+        <a href="/institutions/con">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.4419729, -119.5811123], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Opus Archives and Research Center<br/>
+        <div class="al-repository-street-address-address1">801 Ladera Lane</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93108, US</div>
+
+        <a href="/institutions/oarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.7881180352, -117.849698067], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Orange Public Library and History Center<br/>
+        <div class="al-repository-street-address-address1">407 E. Chapman Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Orange, CA 92866, US</div>
+
+        <a href="/institutions/cor">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7676628, -122.4220446], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Other Minds Archive<br/>
+        <div class="al-repository-street-address-address1">55 Taylor St.</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94102, US</div>
+
+        <a href="/institutions/casfom">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.2010104474, -119.178564996], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Oxnard Public Library<br/>
+        <div class="al-repository-street-address-address1">251 South A Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Oxnard, CA 93030, US</div>
+
+        <a href="/institutions/oxnard">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1287271, -118.3475675], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Pacifica Radio Archives<br/>
+        <div class="al-repository-street-address-address1">3729 Cahuenga Blvd, West</div>
+<div class="al-repository-street-address-city_state_zip_country">North Hollywood, CA 91604, US</div>
+
+        <a href="/institutions/canhpra">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.8242, -116.5498483], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Palm Springs Art Museum<br/>
+        <div class="al-repository-street-address-address1">101 Museum Dr.</div>
+<div class="al-repository-street-address-city_state_zip_country">Palm Springs, CA 92263, US</div>
+
+        <a href="/institutions/cpsam">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.770514594, -118.371012211], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Palos Verdes Library District<br/>
+        <div class="al-repository-street-address-address1">701 Silver Spur Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Rolling Hills Estates, CA 90274, US</div>
+
+        <a href="/institutions/cpv">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1431331, -118.1203441], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Pasadena City College<br/>
+        <div class="al-repository-street-address-address1">1570 E. Colorado Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Pasadena, CA 91106-2003, US</div>
+
+        <a href="/institutions/cpcic">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1495186, -118.1445894], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Pasadena Digital History Collaboration<br/>
+        <div class="al-repository-street-address-address1">285 E. Walnut St.</div>
+<div class="al-repository-street-address-city_state_zip_country">Pasadena, CA 91101, US</div>
+
+        <a href="/institutions/capsdhc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1490023318, -118.161290288], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Pasadena Museum of History<br/>
+        <div class="al-repository-street-address-address1">470 West Walnut Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Pasadena, CA 91103-3594, US</div>
+
+        <a href="/institutions/phm">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0387, -118.70649], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Pepperdine University. Special Collections and University Archives<br/>
+        <div class="al-repository-street-address-address1">24255 Pacific Coast Highway</div>
+<div class="al-repository-street-address-city_state_zip_country">Malibu, CA 90263-4786, US</div>
+
+        <a href="/institutions/cmalp">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.7794367, -117.2174059], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Perris Valley Museum Historical Archives<br/>
+        <div class="al-repository-street-address-address1">P.O. Box 343</div>
+<div class="al-repository-street-address-city_state_zip_country">Perris, CA 92572, US</div>
+
+        <a href="/institutions/capervmh">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.87166, -117.860773], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Placentia Library District<br/>
+        <div class="al-repository-street-address-address1">411 E Chapman Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Placentia, CA 92870-6101, US</div>
+
+        <a href="/institutions/cpl">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.8965467, -121.0769078], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Placer County Archives<br/>
+        <div class="al-repository-street-address-address1">101 Maple Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Auburn, CA 95603, US</div>
+
+        <a href="/institutions/caaupmd">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0538061063, -117.750493884], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Pomona Public Library<br/>
+        <div class="al-repository-street-address-address1">625 South Garey Avenue, P.O. Box 2271</div>
+<div class="al-repository-street-address-city_state_zip_country">Pomona, CA 91769, US</div>
+
+        <a href="/institutions/cpom">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.992192, -122.130979], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Port Chicago Naval Magazine National Memorial<br/>
+        <div class="al-repository-street-address-address1">4202 Alhambra Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Martinez, CA 94553, US</div>
+
+        <a href="/institutions/camzpcm">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.044743, -122.188611], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Port Costa Museum and Archives Project<br/>
+        <div class="al-repository-street-address-address1">P.O. Box 36</div>
+<div class="al-repository-street-address-address2">1 Plaza del Hambre</div>
+<div class="al-repository-street-address-city_state_zip_country">Port Costa, CA 94569, US</div>
+
+        <a href="/institutions/capcmap">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.407801, -118.789801], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Rancho Camulos Museum<br/>
+        <div class="al-repository-street-address-address1">5164 E. Telegraph Rd., P.O. Box 308</div>
+<div class="al-repository-street-address-city_state_zip_country">Piru, CA 93040, US</div>
+
+        <a href="/institutions/capurcm">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1032054867, -117.575211525], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Rancho Cucamonga Library Services<br/>
+        <div class="al-repository-street-address-address1">10500 Civic Center Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Rancho Cucamonga, CA 91730, US</div>
+
+        <a href="/institutions/crancuca">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4840405418, -122.227385044], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Redwood City Public Library<br/>
+        <div class="al-repository-street-address-address1">1044 Middlefield Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Redwood City, CA 94063, US</div>
+
+        <a href="/institutions/crc">Browse collections</a>
+    `);
+
+    var marker = L.marker([41.752937216, -124.194007516], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Redwood National Park<br/>
+        <div class="al-repository-street-address-address1">Redwood National and State Parks, 1111 Second Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Crescent City, CA 95531, US</div>
+
+        <a href="/institutions/caccnps">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.889120625, -117.819314003], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Richard Nixon Presidential Library and Museum<br/>
+        <div class="al-repository-street-address-address1">18001 Yorba Linda Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Yorba Linda, CA 92886, US</div>
+
+        <a href="/institutions/cylrmn">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.935477, -122.34367], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Richmond Public Library<br/>
+        <div class="al-repository-street-address-address1">325 Civic Center Plaza</div>
+<div class="al-repository-street-address-city_state_zip_country">Richmond, CA 94804, US</div>
+
+        <a href="/institutions/cabri">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.993398, -117.372148], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Riverside Public Library<br/>
+        <div class="al-repository-street-address-address1">3900 Mission Inn Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Riverside, CA 92501, US</div>
+
+        <a href="/institutions/criv">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.7537685, -121.2854875], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Roseville Historical Society<br/>
+        <div class="al-repository-street-address-address1">557 Lincoln Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Roseville, CA 95678, US</div>
+
+        <a href="/institutions/crohis">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.7460172498, -121.284384727], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Roseville Public Library<br/>
+        <div class="al-repository-street-address-address1">225 Taylor Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Roseville, CA 95678, US</div>
+
+        <a href="/institutions/cro">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5395407, -121.4868429], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sacramento City College<br/>
+        <div class="al-repository-street-address-address1">Special Collections Department</div>
+<div class="al-repository-street-address-address2">3835 Freeport Boulevard</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95822, US</div>
+
+        <a href="/institutions/csscic">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5662328633, -121.298498511], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sacramento County Office of Education<br/>
+        <div class="al-repository-street-address-address1">PO Box 269003</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95826-9003, US</div>
+
+        <a href="/institutions/casacoe">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.581604, -121.494863], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sacramento Public Library - Sacramento Room<br/>
+        <div class="al-repository-street-address-address1">828 I Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95814, US</div>
+
+        <a href="/institutions/cscls">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.5505155, -117.6653032], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Saddleback College Library<br/>
+        <div class="al-repository-street-address-address1">28000 Marguerite Parkway</div>
+<div class="al-repository-street-address-city_state_zip_country">Mission Viejo, CA 92692, US</div>
+
+        <a href="/institutions/cmjsc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1095838054, -117.295253277], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Bernardino Public Library<br/>
+        <div class="al-repository-street-address-address1">555 W. 6th Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Bernardino, CA 92410, US</div>
+
+        <a href="/institutions/csb">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.6252236965, -122.41481781], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Bruno Public Library<br/>
+        <div class="al-repository-street-address-address1">701 Angus Avenue West</div>
+<div class="al-repository-street-address-city_state_zip_country">San Bruno, CA 94066, US</div>
+
+        <a href="/institutions/csbrp">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.7268185, -117.1537806], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Diego Air and Space Museum Library and Archives<br/>
+        <div class="al-repository-street-address-address1">2001 Pan American Plaza, Balboa Park</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92101, US</div>
+
+        <a href="/institutions/casdam">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.7169145, -117.162969], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Diego City Clerk&#39;s Archives<br/>
+        <div class="al-repository-street-address-address1">202 C Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92101, US</div>
+
+        <a href="/institutions/csdca">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.839085, -116.97681], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Diego County Archives<br/>
+        <div class="al-repository-street-address-address1">10144 Mission Gorge Road   </div>
+<div class="al-repository-street-address-city_state_zip_country">Santee, CA 92071, US</div>
+
+        <a href="/institutions/casntca">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.731474, -117.149022], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Diego History Center (formerly San Diego Historical Society)<br/>
+        <div class="al-repository-street-address-address1">1649 El Prado, Suite 3</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92101, US</div>
+
+        <a href="/institutions/csdhi">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.7320808, -117.1473395], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Diego Natural History Museum Research Library<br/>
+        <div class="al-repository-street-address-address1">1788 El Prado, Balboa Park</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92101, US</div>
+
+        <a href="/institutions/canhrl">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.708763, -117.153998], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Diego Public Library<br/>
+        <div class="al-repository-street-address-address1">330 Park Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92101, US</div>
+
+        <a href="/institutions/csd">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.7752596192, -117.071224451], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Diego State University, Special Collections and University Archives<br/>
+        <div class="al-repository-street-address-address1">Library and Information Access</div>
+<div class="al-repository-street-address-address2">5500 Campanile Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92182-8050, US</div>
+
+        <a href="/institutions/sdsu_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8038552, -122.4172161], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Art Institute Archive<br/>
+        <div class="al-repository-street-address-address1">20 Hawthorne St.</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94105, US</div>
+
+        <a href="/institutions/casfai">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.781106, -122.406781], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Center for Psychoanalysis<br/>
+        <div class="al-repository-street-address-address1">444 Natoma Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94103, US</div>
+
+        <a href="/institutions/casfcpsy">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.78285, -122.411005], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Cinematheque<br/>
+        <div class="al-repository-street-address-address1">55 Taylor Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94102, US</div>
+
+        <a href="/institutions/casfc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8069273777, -122.430390716], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Maritime National Historical Park<br/>
+        <div class="al-repository-street-address-address1">Building E, Fort Mason</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94123, US</div>
+
+        <a href="/institutions/maritime">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.785923, -122.400751], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Museum of Modern Art<br/>
+        <div class="al-repository-street-address-address1">151 Third Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94103, US</div>
+
+        <a href="/institutions/csfmma">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7792824, -122.4158576], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Public Library, Book Arts and Special Collections Center<br/>
+        <div class="al-repository-street-address-address1">San Francisco Public Library </div>
+<div class="al-repository-street-address-address2">100 Larkin Street </div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94102, US</div>
+
+        <a href="/institutions/csf_bascc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.778864, -122.415783], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Public Library, James C. Hormel LGBTQIA Center<br/>
+        <div class="al-repository-street-address-address1">San Francisco Public Library</div>
+<div class="al-repository-street-address-address2">100 Larkin Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94102, US</div>
+
+        <a href="/institutions/csf_hglc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.779127217, -122.415869236], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Public Library, San Francisco History Center<br/>
+        <div class="al-repository-street-address-address1">San Francisco Public Library</div>
+<div class="al-repository-street-address-address2">100 Larkin Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94102, US</div>
+
+        <a href="/institutions/csf_sfpl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7208592, -122.4772151], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco State University, J. Paul Leonard Library<br/>
+        <div class="al-repository-street-address-address1">1630 Holloway Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94132-1722, US</div>
+
+        <a href="/institutions/sfsu_jpll">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7211363153, -122.47833252], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco State University, Labor Archives and Research Center<br/>
+        <div class="al-repository-street-address-address1">J. Paul Leonard Library, Room 460</div>
+<div class="al-repository-street-address-address2">1630 Holloway Ave</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94132-1722, US</div>
+
+        <a href="/institutions/sfsu_larc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.9695926, -122.5648069], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Francisco Theological Seminary<br/>
+        <div class="al-repository-street-address-address1">105 Seminary Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Anselmo, CA 94960, US</div>
+
+        <a href="/institutions/csat">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.0793115082, -121.272497177], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Joaquin County Historical Society and Museum<br/>
+        <div class="al-repository-street-address-address1">11793 North Micke Grove Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Lodi, CA 95241, US</div>
+
+        <a href="/institutions/sjcmus">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.737817994, -119.786381721], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Joaquin Valley Library System<br/>
+        <div class="al-repository-street-address-address1">2420 Mariposa Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Fresno, CA 93721, US</div>
+
+        <a href="/institutions/cfsjv">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.335755, -121.886102], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Jose Public Library. California Room<br/>
+        <div class="al-repository-street-address-address1">150 East San Fernando Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Jose, CA 95112, US</div>
+
+        <a href="/institutions/csj">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.335497335, -121.885113716], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San José State University, Special Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">One Washington Square</div>
+<div class="al-repository-street-address-city_state_zip_country">San Jose, CA 95192-0028, US</div>
+
+        <a href="/institutions/csju_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.682779, -122.403809], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Mateo County Library, Brisbane Library<br/>
+        <div class="al-repository-street-address-address1">250 Visitacion Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Brisbane, CA 94005, US</div>
+
+        <a href="/institutions/cmsbr">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.561857, -122.327077], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        San Mateo Public Library<br/>
+        <div class="al-repository-street-address-address1">55 West 3rd Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">San Mateo, CA 94402, US</div>
+
+        <a href="/institutions/csmat">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.748568, -117.873964], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Ana Public Library<br/>
+        <div class="al-repository-street-address-address1">26 Civic Center Plaza M-75</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Ana, CA 92701, US</div>
+
+        <a href="/institutions/santapl">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.4557704595, -119.708613753], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Barbara Botanic Garden. Blaksley Library<br/>
+        <div class="al-repository-street-address-address1">1212 Mission Canyon Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93105, US</div>
+
+        <a href="/institutions/cstbbg">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.421699, -119.697059], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Barbara Historical Museum. Gledhill Library<br/>
+        <div class="al-repository-street-address-address1">136 E. De La Guerra</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93101, US</div>
+
+        <a href="/institutions/cstbhi">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.438121, -119.714081], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Bárbara Mission Archive-Library<br/>
+        <div class="al-repository-street-address-address1">2201 Laguna Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93105, US</div>
+
+        <a href="/institutions/castbmal">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.4231449, -119.7041844], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Barbara Museum of Art<br/>
+        <div class="al-repository-street-address-address1">1130 State Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93101, US</div>
+
+        <a href="/institutions/sbmoa">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.423218, -119.69789], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Barbara Trust for Historic Preservation. Presidio Research Center<br/>
+        <div class="al-repository-street-address-address1">215 East Canon Perdido St.</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93101, US</div>
+
+        <a href="/institutions/castbthp">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3404192578, -121.973481774], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Clara City Library<br/>
+        <div class="al-repository-street-address-address1">2635 Homestead Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Clara, CA 95051, US</div>
+
+        <a href="/institutions/cstcl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3150896677, -121.857991219], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Clara County, Archives<br/>
+        <div class="al-repository-street-address-address1">1875 Senter Road</div>
+<div class="al-repository-street-address-city_state_zip_country">San Jose, CA 95112, US</div>
+
+        <a href="/institutions/casjsca_archives">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3493836643, -121.937470436], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Clara University<br/>
+        <div class="al-repository-street-address-address1">Dept. of Archives &amp; Special Collections, University Library,</div>
+<div class="al-repository-street-address-address2">500 El Camino Real</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Clara, CA 95053-0500, US</div>
+
+        <a href="/institutions/scu">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.248524, -121.8748893], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Clara Valley Water District Library<br/>
+        <div class="al-repository-street-address-address1">5750 Almaden Expressway</div>
+<div class="al-repository-street-address-city_state_zip_country">San Jose, CA 95118-3686, US</div>
+
+        <a href="/institutions/csjvwd">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.974491, -122.025357], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Cruz Museum of Art and History  <br/>
+        <div class="al-repository-street-address-address1">705 Front Street   </div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Cruz, CA 95060, US</div>
+
+        <a href="/institutions/cascrmah">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.04931, -122.028572], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Cruz Public Libraries, Santa Cruz Public Libraries, Scotts Valley Branch<br/>
+        <div class="al-repository-street-address-address1">251 Kings Village Rd</div>
+<div class="al-repository-street-address-city_state_zip_country">Scotts Valley, CA 95066, US</div>
+
+        <a href="/institutions/cstcrcl_scvb">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9456829544, -118.083715439], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Fe Springs City Library<br/>
+        <div class="al-repository-street-address-address1">11700 Telegraph Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Fe Springs, CA 90670, US</div>
+
+        <a href="/institutions/csfs">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.018165, -118.4933626], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Monica Public Library<br/>
+        <div class="al-repository-street-address-address1">601 Santa Monica Blvd</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Monica, CA 90401, US</div>
+
+        <a href="/institutions/cstmo">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.4089106, -119.0692659], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Santa Paula Historical Society<br/>
+        <div class="al-repository-street-address-address1">P. O. Box 842</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Paula, CA 93060, US</div>
+
+        <a href="/institutions/castphs">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0172734606, -118.288786411], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Seaver Center for Western History Research, Natural History Museum of Los Angeles County<br/>
+        <div class="al-repository-street-address-address1">900 Exposition Boulevard</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90007-4057, US</div>
+
+        <a href="/institutions/calanhm">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.5286052574, -118.813308477], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sequoia and Kings Canyon National Parks<br/>
+        <div class="al-repository-street-address-address1">47050 Generals Highway</div>
+<div class="al-repository-street-address-city_state_zip_country">Three Rivers, CA 93271, US</div>
+
+        <a href="/institutions/catrskc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9251002, -117.4373535], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sherman Indian Museum<br/>
+        <div class="al-repository-street-address-address1">9010 Magnolia Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Riverside, CA 92503, US</div>
+
+        <a href="/institutions/carivsim">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.601994, -117.873607], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sherman Library and Gardens<br/>
+        <div class="al-repository-street-address-address1">614 Dahlia Ave.</div>
+<div class="al-repository-street-address-city_state_zip_country">Corona del Mar, CA 92625, US</div>
+
+        <a href="/institutions/ccdms">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1618048, -118.0619447], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sierra Madre Public Library<br/>
+        <div class="al-repository-street-address-address1">440 West Sierra Madre Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Sierra Madre, CA 91024, US</div>
+
+        <a href="/institutions/csie">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7787880227, -122.447669506], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sisters of the Presentation, San Francisco<br/>
+        <div class="al-repository-street-address-address1">Presentation Archives</div>
+<div class="al-repository-street-address-address2">2340 Turk Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94118, US</div>
+
+        <a href="/institutions/casfpas">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.419854, -122.2041], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        SLAC National Accelerator Laboratory (Archives, History and Records Office)<br/>
+        <div class="al-repository-street-address-address1">2575 Sand Hill Road M/S 97</div>
+<div class="al-repository-street-address-city_state_zip_country">Menlo Park, CA 94025, US</div>
+
+        <a href="/institutions/camensla">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.781741, -122.401196], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Society of California Pioneers<br/>
+        <div class="al-repository-street-address-address1">300 Fourth Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94107, US</div>
+
+        <a href="/institutions/csfcp">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.4410856255, -122.710622549], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sonoma County Library<br/>
+        <div class="al-repository-street-address-address1">6135 State Farm Drive</div>
+<div class="al-repository-street-address-city_state_zip_country">Rohnert Park, CA 94928, US</div>
+
+        <a href="/institutions/cstr">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.3399395328, -122.676923275], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sonoma State University Library<br/>
+        <div class="al-repository-street-address-address1">Special Collections  </div>
+<div class="al-repository-street-address-address2">1801 E. Cotati Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Rohnert Park, CA 94928, US</div>
+
+        <a href="/institutions/sonoma">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3344608751, -121.884545088], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sourisseau Academy for State and Local History<br/>
+        <div class="al-repository-street-address-address1">One Washington Square</div>
+<div class="al-repository-street-address-city_state_zip_country">San Jose, CA 95192-0117, US</div>
+
+        <a href="/institutions/casjsas">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.984, -118.29148], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Southern California Library for Social Studies and Research<br/>
+        <div class="al-repository-street-address-address1">6120 S. Vermont Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90044, US</div>
+
+        <a href="/institutions/scl">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.113709, -118.156224], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        South Pasadena Public Library<br/>
+        <div class="al-repository-street-address-address1">1100 Oxley Street</div>
+<div class="al-repository-street-address-city_state_zip_country">South Pasadena, CA 91030, US</div>
+
+        <a href="/institutions/csp">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.653272776, -122.436355948], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        South San Francisco Public Library<br/>
+        <div class="al-repository-street-address-address1">History Room</div>
+<div class="al-repository-street-address-address2">306 Walnut Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">South San Francisco, CA 94080, US</div>
+
+        <a href="/institutions/cssf">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4239744194, -122.169384956], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Stanford University, Archive of Recorded Sound<br/>
+        <div class="al-repository-street-address-address1">Braun Music Center, 541 Lasuen Mall</div>
+<div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305-3076, US</div>
+
+        <a href="/institutions/stanford_cstmus">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4266668227, -122.167024612], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Stanford University, California Historical Society Collection at Stanford<br/>
+        <div class="al-repository-street-address-address1">Department of Special Collections, Green Library</div>
+<div class="al-repository-street-address-address2">557 Escondido Mall</div>
+<div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305-6004, US</div>
+
+        <a href="/institutions/stanford_chs">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.426635, -122.166841], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Stanford University, East Asia Library<br/>
+        <div class="al-repository-street-address-address1">Lathrop Library </div>
+<div class="al-repository-street-address-address2">557 Escondido Mall</div>
+<div class="al-repository-street-address-city_state_zip_country">Palo Alto, CA 94305-3106, US</div>
+
+        <a href="/institutions/stanford_casteal">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4266668227, -122.167024612], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Stanford University, Manuscripts Division<br/>
+        <div class="al-repository-street-address-address1">Department of Special Collections, Green Library</div>
+<div class="al-repository-street-address-address2">557 Escondido Mall</div>
+<div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305-6004, US</div>
+
+        <a href="/institutions/stanford_mss">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4237443678, -122.169283032], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Stanford University, Music Library<br/>
+        <div class="al-repository-street-address-address1">Stanford Music Library, Braun Music Center, 541 Lasuen Mall</div>
+<div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305-3076, US</div>
+
+        <a href="/institutions/stanford_cstmusl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4267179434, -122.167067528], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Stanford University, Rare Books Division<br/>
+        <div class="al-repository-street-address-address1">Rare Books Division, Green Library</div>
+<div class="al-repository-street-address-address2">557 Escondido Mall</div>
+<div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305-6004, US</div>
+
+        <a href="/institutions/stanford_rbd">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4338675, -122.1761355], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Stanford University, Stanford Medical History Center<br/>
+        <div class="al-repository-street-address-address1">Lane Medical Library &amp; Knowledge Management Center</div>
+<div class="al-repository-street-address-address2">300 Pasteur Drive, Room L109</div>
+<div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305-5123, US</div>
+
+        <a href="/institutions/stanford_cstl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.4270672668, -122.167925835], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Stanford University, University Archives<br/>
+        <div class="al-repository-street-address-address1">Stanford University Archives, Green Library</div>
+<div class="al-repository-street-address-address2">557 Escondido Mall</div>
+<div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305-6064, US</div>
+
+        <a href="/institutions/stanford_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([39.137550115, -121.624639034], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Sutter County Library<br/>
+        <div class="al-repository-street-address-address1">750 Forbes Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Yuba City, CA 95991, US</div>
+
+        <a href="/institutions/cyccl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.793145, -122.392541], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Tauber Holocaust Library<br/>
+        <div class="al-repository-street-address-address1">JFCS Holocaust Center</div>
+<div class="al-repository-street-address-address2">2245 Post Street</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94115, US</div>
+
+        <a href="/institutions/hcnc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.1653178, -118.3744118], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Television Academy Foundation<br/>
+        <div class="al-repository-street-address-address1">5220 Lankershim Blvd. </div>
+<div class="al-repository-street-address-city_state_zip_country">North Hollywood, CA 91601, US</div>
+
+        <a href="/institutions/canhaat">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.087304, -118.328622], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        The Arc/k Project<br/>
+        <div class="al-repository-street-address-address1">900 N. Cahuenga Blvd., Suite B</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90038, US</div>
+
+        <a href="/institutions/calaarck">Browse collections</a>
+    `);
+
+    var marker = L.marker([39.140201, -121.5880357], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        The Book Club of California	<br/>
+        <div class="al-repository-street-address-address1">312 Sutter Street, Fifth Floor</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94108, US</div>
+
+        <a href="/institutions/csfbk">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.982156, -117.3764785], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        The Center for Social Justice and Civil Liberties<br/>
+        <div class="al-repository-street-address-address1">3855 Market St.</div>
+<div class="al-repository-street-address-city_state_zip_country">Riverside, CA 92501, US</div>
+
+        <a href="/institutions/crivcc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.061248, -118.324914], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        The Ebell of Los Angeles<br/>
+        <div class="al-repository-street-address-address1">743 S Lucerne Blvd</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90005, US</div>
+
+        <a href="/institutions/calaela">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.494773, -121.926109], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        The Lace Museum<br/>
+        <div class="al-repository-street-address-address1">200 Brown Road, Suite 300</div>
+<div class="al-repository-street-address-city_state_zip_country">Fremont, CA 94539, US</div>
+
+        <a href="/institutions/casvlm">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.201137, -118.85205], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Thousand Oaks Library<br/>
+        <div class="al-repository-street-address-address1">1401 E. Janss Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Thousand Oaks, CA 91362, US</div>
+
+        <a href="/institutions/cto">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.892808, -122.265344], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Tracing Patterns Foundation<br/>
+        <div class="al-repository-street-address-address1">972 Euclid Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94708, US</div>
+
+        <a href="/institutions/cabetpf">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.3319809, -119.2934582], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Tulare County Library. Annie R. Mitchell History Room<br/>
+        <div class="al-repository-street-address-address1">200 W. Oak Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Visalia, CA 93291-4993, US</div>
+
+        <a href="/institutions/cvicl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.872101, -122.2593892], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Art History/Classics Library<br/>
+        <div class="al-repository-street-address-address1">308 Doe Library</div>
+<div class="al-repository-street-address-address2">University of California Berkeley</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-6000, US</div>
+
+        <a href="/institutions/berkeley_arthist">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8722534121, -122.258825898], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Bancroft Library<br/>
+        <div class="al-repository-street-address-address1">University of California, Berkeley, The Bancroft Library</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-6000, US</div>
+
+        <a href="/institutions/berkeley_bancroft">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8686962856, -122.255854011], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Berkeley Art Museum and Pacific Film Archive<br/>
+        <div class="al-repository-street-address-address1">2120 Oxford Street</div>
+<div class="al-repository-street-address-address2">#2250</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-2250, US</div>
+
+        <a href="/institutions/bampfa">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8713980235, -122.262328863], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Bioscience and Natural Resources Library<br/>
+        <div class="al-repository-street-address-address1">2101 Valley Life Sciences Building, #6500</div>
+<div class="al-repository-street-address-address2">University of California, Berkeley</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720, US</div>
+
+        <a href="/institutions/berkeley_cabeubnr">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.870151, -122.2594606], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, College of Environmental Design Visual Resources Center<br/>
+        <div class="al-repository-street-address-address1">492 Wurster Hall</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-1820, US</div>
+
+        <a href="/institutions/berkeley_vrc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8738498285008, -122.25904583931], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Davis (Harmer E.) Transportation Library<br/>
+        <div class="al-repository-street-address-address1">412 McLaughlin Hall, MC1720</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-1720, US</div>
+
+        <a href="/institutions/berkeley_hdtl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8709025712, -122.254807949], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Environmental Design Archives<br/>
+        <div class="al-repository-street-address-address1">230 Bauer Wurster Hall #1820 </div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-1820, US</div>
+
+        <a href="/institutions/berkeley_ceda">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.871381085, -122.25754112], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Ethnic Studies Library<br/>
+        <div class="al-repository-street-address-address1">University of California, Berkeley, Dept. of Ethnic Studies, 30 Stephens Hall #2630</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-2360, US</div>
+
+        <a href="/institutions/berkeley_esl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.870934331, -122.257994413], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Institute of Governmental Studies Library<br/>
+        <div class="al-repository-street-address-address1">Institute of Governmental Studies Library </div>
+<div class="al-repository-street-address-address2">109 Moses Hall #2370</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-2370, US</div>
+
+        <a href="/institutions/berkeley_igsl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8700281108, -122.253421247], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Law Library<br/>
+        <div class="al-repository-street-address-address1">School of Law Library (Boalt Hall)</div>
+<div class="al-repository-street-address-address2">University of California, Berkeley</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-7210, US</div>
+
+        <a href="/institutions/berkeley_cabesl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8726124, -122.2608691], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Media Resources Center<br/>
+        <div class="al-repository-street-address-address1">245 Moffit Library</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-6000, US</div>
+
+        <a href="/institutions/berkeley_cabemrc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.871381085, -122.262505889], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Museum of Paleontology<br/>
+        <div class="al-repository-street-address-address1">Museum of Paleontology</div>
+<div class="al-repository-street-address-address2">1101 Valley Life Sciences Building</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720, US</div>
+
+        <a href="/institutions/berkeley_mop">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8711034, -122.2619972], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Museum of Vertebrate Zoology<br/>
+        <div class="al-repository-street-address-address1">3101 Valley Life Sciences Bldg, #3160</div>
+<div class="al-repository-street-address-address2">University of California  Berkeley</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-3160, US</div>
+
+        <a href="/institutions/berkeley_movz">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.870491809, -122.25613296], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Music Library<br/>
+        <div class="al-repository-street-address-address1">Jean Gray Hargrove Music Library</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-6000, US</div>
+
+        <a href="/institutions/berkeley_music">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8695347666, -122.255226374], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, Phoebe A. Hearst Museum of Anthropology<br/>
+        <div class="al-repository-street-address-address1">103 Anthropology and Art Practice Building</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-3712, US</div>
+
+        <a href="/institutions/berkeley_hearst">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8721602514, -122.259550095], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, South/Southeast Asia Library<br/>
+        <div class="al-repository-street-address-address1">120 Doe Library</div>
+<div class="al-repository-street-address-address2">University of California, Berkeley</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720, US</div>
+
+        <a href="/institutions/berkeley_cabeussa">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.859192834, -122.24802196], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, The Magnes Collection of Jewish Art and Life<br/>
+        <div class="al-repository-street-address-address1">The Bancroft Library</div>
+<div class="al-repository-street-address-address2">2121 Allston Way</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94704, US</div>
+
+        <a href="/institutions/berkeley_wjhc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.869526, -122.258938], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, The Robbins Collection<br/>
+        <div class="al-repository-street-address-address1">School of Law (Boalt Hall)</div>
+<div class="al-repository-street-address-address2">University of California, Berkeley</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-7200, US</div>
+
+        <a href="/institutions/berkeley_cul">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8723550417, -122.258906364], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Berkeley, University Archives<br/>
+        <div class="al-repository-street-address-address1">University of California, Berkeley, University Archives, The Bancroft Library</div>
+<div class="al-repository-street-address-city_state_zip_country">Berkeley, CA 94720-6000, US</div>
+
+        <a href="/institutions/berkeley_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5398202315, -121.749549508], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Davis, Special Collections<br/>
+        <div class="al-repository-street-address-address1">University of California, Davis, Special Collections, UC Davis Library</div>
+<div class="al-repository-street-address-address2">100 NW Quad</div>
+<div class="al-repository-street-address-city_state_zip_country">Davis, CA 95616-5292, US</div>
+
+        <a href="/institutions/ucdavis_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5396398069, -121.749629974], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Davis, University Archives<br/>
+        <div class="al-repository-street-address-address1">University of California, Davis, Special Collections, UC Davis Library</div>
+<div class="al-repository-street-address-address2">100 NW Quad </div>
+<div class="al-repository-street-address-city_state_zip_country">Davis, CA 95616-5292, US</div>
+
+        <a href="/institutions/ucdavis_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.5406234, -121.7507298], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Davis, Welga Archive, Bulosan Center for Filipino Studies<br/>
+        <div class="al-repository-street-address-address1">3102 Hart Hall</div>
+<div class="al-repository-street-address-address2">One Shields Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Davis, CA 95616, US</div>
+
+        <a href="/institutions/wpfaa">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.647115587, -117.841123044], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Irvine, Critical Theory Archive<br/>
+        <div class="al-repository-street-address-address1">Special Collections and Archives, Critical Theory Archive</div>
+<div class="al-repository-street-address-address2">The UCI Libraries, P.O. Box 19557</div>
+<div class="al-repository-street-address-city_state_zip_country">Irvine, CA 92623-9557, US</div>
+
+        <a href="/institutions/uci_cta">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.6471580111, -117.841029167], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Irvine, Orange County Regional History Collection<br/>
+        <div class="al-repository-street-address-address1">P.O. Box 19557</div>
+<div class="al-repository-street-address-city_state_zip_country">Irvine, CA , US</div>
+
+        <a href="/institutions/uci_ocrh">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.6471580111, -117.841029167], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Irvine, Southeast Asian Archive<br/>
+        <div class="al-repository-street-address-address1">Southeast Asian Archive</div>
+<div class="al-repository-street-address-address2">The UCI Libraries, P.O. Box 19557</div>
+<div class="al-repository-street-address-city_state_zip_country">Irvine, CA 92623-9557, US</div>
+
+        <a href="/institutions/uci_sea">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.6471959695, -117.841109633], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Irvine, Special Collections<br/>
+        <div class="al-repository-street-address-address1">Special Collections and Archives</div>
+<div class="al-repository-street-address-address2">The UCI Libraries, P.O. Box 19557</div>
+<div class="al-repository-street-address-city_state_zip_country">Irvine, CA 92623-9557, US</div>
+
+        <a href="/institutions/uci_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.6471356826, -117.841114998], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Irvine, University Archives<br/>
+        <div class="al-repository-street-address-address1">Special Collections and Archives</div>
+<div class="al-repository-street-address-address2">The UCI Libraries, P.O. Box 19557</div>
+<div class="al-repository-street-address-city_state_zip_country">Irvine, CA 92623-9557, US</div>
+
+        <a href="/institutions/uci_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0729174595, -118.44116807], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Chicano Studies Research Center<br/>
+        <div class="al-repository-street-address-address1">University of California, Los Angeles, Chicano Studies Research Center Library, 193 Haines Hall</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1544, US</div>
+
+        <a href="/institutions/ucla_clucs">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0330122556, -118.314492702], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Clark (William Andrews) Memorial Library<br/>
+        <div class="al-repository-street-address-address1">2520 Cimarron Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90018, US</div>
+
+        <a href="/institutions/ucla_clark">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.070264, -118.4440562], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Department of Geography Benjamin and Gladys Thomas Air Photo Archives<br/>
+        <div class="al-repository-street-address-address1">1225D Bunche Hall, Box 951524</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1524, US</div>
+
+        <a href="/institutions/ucla_ugap">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0707912263, -118.440116644], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Ethnomusicology Archive<br/>
+        <div class="al-repository-street-address-address1">1630 Schoenberg Music Building</div>
+<div class="al-repository-street-address-address2">Box 951657</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1657, US</div>
+
+        <a href="/institutions/ucla_ethno">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0764033001, -118.439349532], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Film and Television Archive<br/>
+        <div class="al-repository-street-address-address1">302 East Melnitz</div>
+<div class="al-repository-street-address-address2">Box 951323</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095, US</div>
+
+        <a href="/institutions/ucla_cluft">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0591115443, -118.443819433], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Grunwald Center for the Graphic Arts<br/>
+        <div class="al-repository-street-address-address1">University of California, Los Angeles, Hammer Museum, 10899 Wilshire Blvd.</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90024-4201, US</div>
+
+        <a href="/institutions/grunwald">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.070264, -118.4440562], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Library Special Collections, Center for Oral History Research<br/>
+        <div class="al-repository-street-address-address1">11717 Charles E. Young Research Library</div>
+<div class="al-repository-street-address-address2">Box 951575 </div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1575, US</div>
+
+        <a href="/institutions/ucla_cohr">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0749147815, -118.441586494], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Library Special Collections, Charles E. Young Research Library<br/>
+        <div class="al-repository-street-address-address1">A1713 Charles E. Young Research Library</div>
+<div class="al-repository-street-address-address2">Box 951575</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1575, US</div>
+
+        <a href="/institutions/ucla_mss">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0666641375, -118.442829698], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Library Special Collections, Medicine and Science<br/>
+        <div class="al-repository-street-address-address1">Louise M. Darling Biomedical Library </div>
+<div class="al-repository-street-address-address2">12-077 Center for Health Sciences, Box 951798</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1798, US</div>
+
+        <a href="/institutions/ucla_biomed">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0749147815, -118.441586494], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Library Special Collections, Performing Arts<br/>
+        <div class="al-repository-street-address-address1">A1713 Charles E. Young Research Library </div>
+<div class="al-repository-street-address-address2">Box 951575 </div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1575, US</div>
+
+        <a href="/institutions/ucla_pasc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0750214225, -118.441425562], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, Library Special Collections, University Archives<br/>
+        <div class="al-repository-street-address-address1">A1713 Charles E. Young Research Library</div>
+<div class="al-repository-street-address-address2">Box 951575</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1575, US</div>
+
+        <a href="/institutions/ucla_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0730929769, -118.443109989], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, The Fowler Museum at UCLA<br/>
+        <div class="al-repository-street-address-address1">Box 951549</div>
+<div class="al-repository-street-address-address2">University of California, Los Angeles</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095-1549, US</div>
+
+        <a href="/institutions/fowler">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.104979, -118.397692], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UCLA, The Ralph J. Bunche Center for African American Studies<br/>
+        <div class="al-repository-street-address-address1">135 Haines Hall</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90095, US</div>
+
+        <a href="/institutions/ucla_rbcaas">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3662902998, -120.424441695], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Merced, Library and Special Collections<br/>
+        <div class="al-repository-street-address-address1">5200 North Lake Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Merced, CA 95343, US</div>
+
+        <a href="/institutions/ucm_caawucm">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.367044, -120.444405], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Merced, Physical Planning, Design and Construction Archives<br/>
+        <div class="al-repository-street-address-address1">5200 North Lake Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Merced, CA 95343, US</div>
+
+        <a href="/institutions/ucm_ppdca">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.3637343, -120.4311096], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Merced, UC Cooperative Extension Archive<br/>
+        <div class="al-repository-street-address-address1">5200 North Lake Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Merced, CA 95343, US</div>
+
+        <a href="/institutions/ucm_uccea">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9817526402, -117.374598384], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Riverside, California Museum of Photography<br/>
+        <div class="al-repository-street-address-address1">3824 Main Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Riverside, CA 92501, US</div>
+
+        <a href="/institutions/ucrmp">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.975129, -117.3317], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Riverside, Department of the History of Art, Visual Resources Collection<br/>
+        <div class="al-repository-street-address-address1">900 University Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Riverside, CA 92521, US</div>
+
+        <a href="/institutions/ucrvrc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.972508655, -117.327412963], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Riverside, Special Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">University of California, Riverside - Special Collections and University Archives</div>
+<div class="al-repository-street-address-address2">P.O. Box 5900</div>
+<div class="al-repository-street-address-city_state_zip_country">Riverside, CA 92517-5900, US</div>
+
+        <a href="/institutions/ucr_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9725308987, -117.327471972], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Riverside, University Archives<br/>
+        <div class="al-repository-street-address-address1">University of California, Riverside - Special Collections and University Archives</div>
+<div class="al-repository-street-address-address2">P.O. Box 5900</div>
+<div class="al-repository-street-address-city_state_zip_country">Riverside, CA 92517-5900, US</div>
+
+        <a href="/institutions/ucr_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9745239117, -117.324886322], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Riverside, Water Resources Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">University of California, Riverside - Special Collections and University Archives</div>
+<div class="al-repository-street-address-address2">PO Box 5900</div>
+<div class="al-repository-street-address-city_state_zip_country">Riverside, CA 92517-5900, US</div>
+
+        <a href="/institutions/ucr_wrca">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.881155, -117.237511], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC San Diego, Research Data Curation Program<br/>
+        <div class="al-repository-street-address-address1">9500 Gilman Dr., MC 0175-G</div>
+<div class="al-repository-street-address-city_state_zip_country">La Jolla, CA 92093, US</div>
+
+        <a href="/institutions/ucsd_rdcp">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.881479299, -117.237317562], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC San Diego, Special Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">9500 Gilman Drive, Dept. 0175</div>
+<div class="al-repository-street-address-city_state_zip_country">La Jolla, CA 92093-0175, US</div>
+
+        <a href="/institutions/ucsd_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7848826833, -122.439421713], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC San Francisco, Library, UCSF Medical Center at Mount Zion Archives<br/>
+        <div class="al-repository-street-address-address1">Archives &amp; Special Collections</div>
+<div class="al-repository-street-address-address2">530 Parnassus Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94143-0840, US</div>
+
+        <a href="/institutions/ucsf_fishl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7633063855, -122.459224463], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC San Francisco, Special Collections<br/>
+        <div class="al-repository-street-address-address1">UCSF Library &amp; CKM Archives and Special Collections, 530 Parnassus Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94143-0840, US</div>
+
+        <a href="/institutions/ucsf_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7632894222, -122.459272742], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC San Francisco, Tobacco Control Archives<br/>
+        <div class="al-repository-street-address-address1">UCSF Library &amp; CKM Archives and Special Collections, 530 Parnassus Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94143-0840, US</div>
+
+        <a href="/institutions/ucsf_tcarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7633148672, -122.459264696], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC San Francisco, University Archives<br/>
+        <div class="al-repository-street-address-address1">UCSF Library &amp; CKM Archives and Special Collections, 530 Parnassus Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94143-0840, US</div>
+
+        <a href="/institutions/ucsf_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.7633063855, -122.459224463], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC San Francisco, Zuckerberg San Francisco General Hospital Library and Archives<br/>
+        <div class="al-repository-street-address-address1">UCSF Library &amp; CKM Archives and Special Collections, 530 Parnassus Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">San Francisco, CA 94143-0840, US</div>
+
+        <a href="/institutions/ucsf_bbml">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.4121054879, -119.849209785], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Santa Barbara, Architecture and Design Collection, Art, Design and Architecture Museum<br/>
+        <div class="al-repository-street-address-address1">University of California, Santa Barbara</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93106-7130, US</div>
+
+        <a href="/institutions/ucsb_uam">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.41958444, -119.85450983], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Santa Barbara, Cheadle Center for Biodiversity and Ecological Restoration<br/>
+        <div class="al-repository-street-address-address1">University of California</div>
+<div class="al-repository-street-address-address2">Harder South 9615</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93106, US</div>
+
+        <a href="/institutions/ucsb_ccber">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.413778353, -119.845497608], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Santa Barbara, Special Research Collections<br/>
+        <div class="al-repository-street-address-address1">UC Santa Barbara Library</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Barbara, CA 93106-9010, US</div>
+
+        <a href="/institutions/ucsb_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.9769467543, -122.051753998], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Santa Cruz, Special Collections and Archives<br/>
+        <div class="al-repository-street-address-address1">Special Collections and Archives, University Library</div>
+<div class="al-repository-street-address-address2">1156 High Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Cruz, CA 95064, US</div>
+
+        <a href="/institutions/ucsc_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([36.9777010009, -122.05385685], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        UC Santa Cruz, University Archives<br/>
+        <div class="al-repository-street-address-address1">Special Collections and Archives, University Library</div>
+<div class="al-repository-street-address-address2">1156 High Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Santa Cruz, CA 95064, US</div>
+
+        <a href="/institutions/ucsc_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.577551, -121.497587], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Unemployment Insurance Division Library<br/>
+        <div class="al-repository-street-address-address1">800 Capitol Mall, MIC 83</div>
+<div class="al-repository-street-address-city_state_zip_country">Sacramento, CA 95814, US</div>
+
+        <a href="/institutions/uidl">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.063187, -117.164035], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Redlands<br/>
+        <div class="al-repository-street-address-address1">1249 E Colton Ave. </div>
+<div class="al-repository-street-address-city_state_zip_country">Redlands, CA 92374, US</div>
+
+        <a href="/institutions/crediu">Browse collections</a>
+    `);
+
+    var marker = L.marker([32.771257, -117.19348], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of San Diego. Archives, Special Collections, and Digital Initiatives<br/>
+        <div class="al-repository-street-address-address1">5998 Alcalá Park</div>
+<div class="al-repository-street-address-city_state_zip_country">San Diego, CA 92110 2492, US</div>
+
+        <a href="/institutions/csdu">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0179481, -118.2806243], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Boeckmann Center for Iberian and Latin American Studies<br/>
+        <div class="al-repository-street-address-address1">Special Collections</div>
+<div class="al-repository-street-address-address2">Doheny Memorial Library, Room 209</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0189, US</div>
+
+        <a href="/institutions/usc_bcilas">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0223066357, -118.282542229], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, California Social Welfare Archives<br/>
+        <div class="al-repository-street-address-address1">Special Collections</div>
+<div class="al-repository-street-address-address2">Doheny Memorial Library, Room 209</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0411, US</div>
+
+        <a href="/institutions/usc_cswa">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.030456, -118.284246], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Chan Archive at the Center for Occupation and Lifestyle Redesign<br/>
+        <div class="al-repository-street-address-address1">2653 South Hoover St.</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90007, US</div>
+
+        <a href="/institutions/usc_cacol">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0205815174, -118.283658028], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Cinematic Arts Library<br/>
+        <div class="al-repository-street-address-address1">Cinematic Arts Library</div>
+<div class="al-repository-street-address-address2">Doheny Memorial Library, Room G4</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0185, US</div>
+
+        <a href="/institutions/usc_cal">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.021095, -118.284352], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Digital Repository<br/>
+        <div class="al-repository-street-address-address1">USC Digital Repository</div>
+<div class="al-repository-street-address-address2">3550 Trousdale Pkwy, DML 310</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0183, US</div>
+
+        <a href="/institutions/usc_digrepo">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0201147, -118.2837251], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, East Asian Library<br/>
+        <div class="al-repository-street-address-address1">East Asian Library</div>
+<div class="al-repository-street-address-address2">Doheny Memorial Library, 1st floor</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-1825, US</div>
+
+        <a href="/institutions/usc_eal">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0200568611, -118.283743858], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Feuchtwanger Memorial Library<br/>
+        <div class="al-repository-street-address-address1">Special Collections</div>
+<div class="al-repository-street-address-address2">Doheny Memorial Library, Room 209</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0189, US</div>
+
+        <a href="/institutions/usc_fml">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0179481, -118.2806243], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Music Library<br/>
+        <div class="al-repository-street-address-address1">Doheny Memorial Library, Room G-24</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-1822, US</div>
+
+        <a href="/institutions/usc_musi">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0201146624, -118.283797503], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Regional History Collection<br/>
+        <div class="al-repository-street-address-address1">Special Collections </div>
+<div class="al-repository-street-address-address2">Doheny Memorial Library, Room 209</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0182, US</div>
+
+        <a href="/institutions/usc_rhc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0193810278, -118.277982473], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Special Collections<br/>
+        <div class="al-repository-street-address-address1">Special Collections</div>
+<div class="al-repository-street-address-address2">Doheny Memorial Library, Room 209</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0189, US</div>
+
+        <a href="/institutions/usc_spcoll">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0201457861, -118.283877969], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, University Archives<br/>
+        <div class="al-repository-street-address-address1">Doheny Memorial Library, Room 209</div>
+<div class="al-repository-street-address-address2">University of Southern California</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0189, US</div>
+
+        <a href="/institutions/usc_uarc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.023943, -118.286362], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of Southern California, Wilson Dental Library<br/>
+        <div class="al-repository-street-address-address1">Herman Ostrow School of Dentistry of USC, DEN 21</div>
+<div class="al-repository-street-address-address2">University Park Campus</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90089-0641, US</div>
+
+        <a href="/institutions/usc_wdl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.981357, -121.312312], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        University of the Pacific<br/>
+        <div class="al-repository-street-address-address1">University of the Pacific, Holt-Atherton Department of Special Collections, University Library</div>
+<div class="al-repository-street-address-city_state_zip_country">Stockton, CA 95211, US</div>
+
+        <a href="/institutions/uop">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.0990013, -117.6509921], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Upland Public Library<br/>
+        <div class="al-repository-street-address-address1">450 N. Euclid Ave</div>
+<div class="al-repository-street-address-city_state_zip_country">Upland, CA 91786, US</div>
+
+        <a href="/institutions/cupl">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.040403, -118.149481], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Vincent Price Art Museum<br/>
+        <div class="al-repository-street-address-address1">1301 Avenida Cesar Chavez</div>
+<div class="al-repository-street-address-city_state_zip_country">Monterey Park, CA 91754, US</div>
+
+        <a href="/institutions/calvpam">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.050988, -118.239927], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Visual Communications<br/>
+        <div class="al-repository-street-address-address1">120 Judge John Aiso Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90012, US</div>
+
+        <a href="/institutions/calavc">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.011466, -118.40402], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Wende Museum<br/>
+        <div class="al-repository-street-address-address1">10808 Culver Boulevard</div>
+<div class="al-repository-street-address-city_state_zip_country">Culver City, CA 90230, US</div>
+
+        <a href="/institutions/cacuwma">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.2631923929, -122.009911537], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        West Valley College Library<br/>
+        <div class="al-repository-street-address-address1">14000 Fruitvale Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Saratoga, CA 95070, US</div>
+
+        <a href="/institutions/csarw">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.9788211, -118.0308827], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Whittier College - Wardman Library<br/>
+        <div class="al-repository-street-address-address1">7031 Founders Hill Road</div>
+<div class="al-repository-street-address-city_state_zip_country">Whittier, CA 90602, US</div>
+
+        <a href="/institutions/cwcm">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.974114636, -118.034749031], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Whittier Public Library<br/>
+        <div class="al-repository-street-address-address1">7344 S. Washington Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Whittier, CA 90602, US</div>
+
+        <a href="/institutions/cwh">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.8102987, -122.2659978], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        William E. Colby Memorial Library, Sierra Club<br/>
+        <div class="al-repository-street-address-address1">2101 Webster Street, Suite 1300</div>
+<div class="al-repository-street-address-city_state_zip_country">Oakland, CA 94612, US</div>
+
+        <a href="/institutions/csfsc">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.782916, -118.265457], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Wilmington Historical Society<br/>
+        <div class="al-repository-street-address-address1">309 W. Opp St.</div>
+<div class="al-repository-street-address-city_state_zip_country">Wilmington, CA 90744, US</div>
+
+        <a href="/institutions/cawilhs">Browse collections</a>
+    `);
+
+    var marker = L.marker([34.07115, -118.361731], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Writers Guild Foundation Archive<br/>
+        <div class="al-repository-street-address-address1">7000 West Third Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Los Angeles, CA 90048, US</div>
+
+        <a href="/institutions/calawgf">Browse collections</a>
+    `);
+
+    var marker = L.marker([38.6834172, -121.7936709], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Yolo County Archives<br/>
+        <div class="al-repository-street-address-address1">226 Buckeye Street</div>
+<div class="al-repository-street-address-city_state_zip_country">Woodland, CA 95695, US</div>
+
+        <a href="/institutions/cwoy">Browse collections</a>
+    `);
+
+    var marker = L.marker([33.890612, -117.810711], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Yorba Linda Public Library<br/>
+        <div class="al-repository-street-address-address1">4852 Lakeview Avenue</div>
+<div class="al-repository-street-address-city_state_zip_country">Yorba Linda, CA 92886, US</div>
+
+        <a href="/institutions/cyl">Browse collections</a>
+    `);
+
+    var marker = L.marker([37.6696692, -119.8144723], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Yosemite National Park Archives<br/>
+        <div class="al-repository-street-address-address1">5083 Foresta Road</div>
+<div class="al-repository-street-address-city_state_zip_country">El Portal, CA 95318, US</div>
+
+        <a href="/institutions/yosnpa">Browse collections</a>
+    `);
+
+    var marker = L.marker([39.137138, -121.587078], {icon: tealIcon}).addTo(map);
+    marker.bindPopup(`
+        Yuba County Library<br/>
+        <div class="al-repository-street-address-address1">915 8th Street</div>
+<div class="al-repository-street-address-address2">Suite 113</div>
+<div class="al-repository-street-address-city_state_zip_country">Marysville, CA 95901, US</div>
+
+        <a href="/institutions/ycl">Browse collections</a>
+    `);
+</script>
+<!-- END app/views/static_pages/home.html.erb -->
+    </section>
+
+      </div>
+    </main>
+
+    <!-- BEGIN app/views/shared/_footer.html.erb --><footer>
+    <div class="container">
+        <div class="row mb-5 pt-3" id="footer-container">
+        <div class="col-md-6">
+            <img alt="OAC Logo" class="img-fluid mb-3" src="/assets/arclight/logo-5c0eb5b6ab66ef1a6172718f51cfc59a31e50c076b17c41446c73bbb5163285c.png" />
+            <p>The Online Archive of California is a service of the <a href="https://libraries.universityofcalifornia.edu/">UC Libraries</a>,<br/>
+            powered by the <a href="https://cdlib.org/">California Digital Library</a>.</p>
+        </div>
+        <div class="col-md-3">
+            <ul class="list-unstyled">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About OAC</a></li>
+                <li><a href="/institutions">Contributing Institutions</a></li>
+                <li><a href="/help">FAQs</a></li>
+                <li><a href="/quickstart">Quick Start Guide</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul class="list-unstyled">
+                <li><a href="/terms">Terms of Use</a></li>
+                <li><a href="/privacy">Privacy Statement</a></li>
+                <li><a href="https://cdlib.org/about/policies-and-guidelines/accessibility/">Accessibility</a></li>
+                <li><a data-turbo="false" href="/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</footer>
+
+<!-- BEGIN app/views/shared/_matomo.html.erb -->
+<script>
+    console.log("Matomo tracking enabled with site ID: 55");
+    var _paq = window._paq = window._paq || [];
+    (function() {
+        var u="//matomo.cdlib.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '55']); // Replace with your actual site ID
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<!-- END app/views/shared/_matomo.html.erb -->
+<!-- END app/views/shared/_footer.html.erb -->
+    <!-- BEGIN /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/shared/_modal.html.erb --><dialog id="blacklight-modal" class="modal" data-turbo="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
+</dialog>
+<!-- END /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/shared/_modal.html.erb -->
+  </body>
+</html><!-- END app/views/layouts/blacklight/base.html.erb -->
+<!-- END /usr/local/bundle/ruby/3.2.0/gems/blacklight-8.7.0/app/views/layouts/blacklight.html.erb -->

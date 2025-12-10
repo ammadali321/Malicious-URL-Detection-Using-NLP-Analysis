@@ -1,0 +1,94 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex">
+  <title>404 - Page Not Found</title>
+
+  <style>
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+    body {
+      box-sizing: border-box;
+      background-color: #046380;
+      color: #ffffff;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .container {
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0 auto;
+      max-width: 1400px;
+      width: 100%;
+    }
+
+    .row {
+      box-sizing: border-box;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .col {
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0 auto;
+      max-width: 360px;
+      width: 100%;
+    }
+
+    .content-wrap {
+      margin-top: 120px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .new-url-wrap {
+      box-sizing: border-box;
+      border: 1px solid #FFD34E;
+      padding: 10px 20px;
+    }
+
+    a {
+      color: #dfdfdf;
+      display: block;
+      text-decoration: none;
+    }
+
+    a:focus, a:hover {
+      color: #f8f8f8;
+    }
+
+    p {
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="content-wrap center">
+          <div class="detour-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g fill="#DB9E36"><path d="M224 96h64v416h-64z"></path><path d="M323.2 98.133L256 0l-67.2 98.133z"></path></g><g fill="#FFD34E"><path d="M413.867 365.867l98.133-67.2-98.133-67.2z"></path><path d="M381.867 266.667c-86.4 0-157.867 71.467-157.867 157.867V512h64v-87.467c0-52.267 42.667-93.867 93.867-93.867H416v-64h-34.133zM98.133 280.533L0 213.333l98.133-67.2z"></path><path d="M130.133 181.333H96v64h34.133C182.4 245.333 224 288 224 339.2V512h64V339.2c0-86.4-71.467-157.867-157.867-157.867z"></path></g></svg></div>
+          <h1>404</h1>
+          <p>The page you're looking for it's not available, please visit the new homepage URL below.</p>
+          <div class="new-url-wrap">
+            <a href="http://kinglong-bus.com" id="returnUrl" target="_self">http://kinglong-bus.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+	    var href = window.location.href;
+		href = href.replace("http://",'');
+		var strs= href.split("/");
+		document.getElementById("returnUrl").href = "http://" + strs[0];
+		document.getElementById("returnUrl").innerHTML = "http://" + strs[0];
+	</script>
+
+</body></html>

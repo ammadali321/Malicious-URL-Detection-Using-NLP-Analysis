@@ -1,0 +1,2015 @@
+<html><head>
+  <title>4shared - free file sharing and storage</title>
+  <meta name="Description" content="Online file sharing and storage - 15 GB free web space. Folder sharing. File upload progressor. Multiple file transfer. Fast download.">
+  <meta name="Keywords" content="file sharing, free web space, online storage, share files, photo image music mp3 video sharing, dedicated hosting, enterprise sharing, share folder, file hosting">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/common_n.4min.css?ver=-270086403">
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/ui/elements.4min.css?ver=-1193473130">
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/auth-popup.4min.css?ver=2011805563">
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/themes/account/icons.4min.css?ver=156704173">
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/tipTip.4min.css?ver=-1558254190">
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-8TB61LMJKC&amp;cx=c&amp;_slc=1"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/07cvpCr3Xe3g2ttJNUkC6W0J/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-TG5g5Dk43Fs+5i/7xL9a4bBQ4Pg/EAutBT8nLaRiYl1GoFPQDxyCkJYzTQEw2Njo"></script><script async="" src="https://ssl.google-analytics.com/analytics.js"></script><script async="" src="https://ssl.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://static.4shared.com/js/jquery/jquery-1.9.1.4min.js?ver=1965676176"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/jquery/jquery-migrate-1.2.1.4min.js?ver=-1518983214"></script>
+<script type="text/javascript">
+    $(function () {
+
+      function addHeader(cookie, header, jqXHR) {
+        var value = $.cookie(cookie);
+        if (value) jqXHR.setRequestHeader(header, value);
+      };
+
+      $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+        if (!$.cookie) return;
+        if (originalOptions.crossDomain && originalOptions.url.search(".4shared.com") == -1) return;
+        addHeader('Login', 'x-security', jqXHR);
+        addHeader('4langcookie', 'locale', jqXHR);
+      });
+    });
+  </script>
+
+  <script async="" src="https://serv90.com/ab47fe78.js"></script>
+<script type="text/javascript">
+  function Config() {
+    return this
+  }
+
+  Config.isVideo4SyncDomain = false;
+  Config.video4SyncDomain = 'video.4sync.com';
+  Config.mainSiteDomain = '4shared.com';
+  Config.mainSiteUrlPath = 'https://www.4shared.com/';
+  Config.mainSiteUrlHttpsPath  = 'https://www.4shared.com/';
+  Config.isRTLLanguage = false;
+  Config.currentLanguage = 'en';
+  Config.revisionNum = 63839;
+  Config.syncDomain = 'https://www.4sync.com/';
+  Config.cdDomain = 'https://dc774.4shared.com/';
+  Config.mailPatterrn = new RegExp("^[_A-Za-z0-9-]+(?:\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(?:\\.[A-Za-z0-9-]+)+$");
+  Config.isMobile = false;
+  Config.isIpad = false;
+  Config.is4Sync = false;
+  Config.isUserLoggedIn = false;
+  Config.epomHost = 'adserver-e7.com';
+  Config.isMobileVersion = false;
+  Config.isMobileView = Config.isMobileVersion; //'xs' & 'sm'- mobile size
+  Config.useSearchHash = false;
+  Config.searchSeparator = Config.useSearchHash ? "#" : "?";
+  Config.detectAd = {
+    allowedUri: '/empty.js',
+    blockedUri: '/show_ad_.gif',
+    tg: 'link',
+    host : '',
+    applyD1D2 : 'false'
+  };
+  Config.searchDomain = 'search.4shared.com';
+  Config.mainSiteSecure = 'https://www.4shared.com';
+  Config.suggestionsDomain = 'suggestions.4shared.com';
+  Config.facebookVersion = 'v2.12';
+
+  Config.userVerifiedOrNull = true;
+  Config.userJustLogged = false;
+  Config.captchaSiteKey = '6Lfyis0qAAAAAPhOOELkuDxxlES9FBCmppGnIXsz';
+
+  if (!Config.isVideo4SyncDomain) {
+    Config.cookieDomain = (function () {
+      var domain = '4shared.com';
+      var splited = domain.split(".");
+      if (splited.length > 2) {
+        splited = splited.splice(splited.length - 2, splited.length);
+      }
+      return "." + splited.join(".");
+    })();
+  }
+
+  $(function() {
+    //lets detect if user just logged
+    if (typeof $.cookie === "function") {
+      Config.userJustLogged = $.cookie('justLogged') === "1";
+      if (Config.userJustLogged) {
+        $.cookie("justLogged", "0", {expires: new Date(), domain: Config.cookieDomain, path: '/'});
+        Events.fireEvent('just.logged');
+      }
+    }
+  });
+  $(function(){
+      //lets detect touch device
+      try{
+          document.createEvent("TouchEvent");
+        if (window.opera && !/Opera Mobi/.test(navigator.userAgent) && !/Opera Mini/.test(navigator.userAgent)) $("body").addClass("notTouch");
+      } catch(e){
+          $("body").addClass("notTouch");
+      }
+  });
+
+
+  
+  function selectLang(lang){
+    if (!Config.isVideo4SyncDomain) {
+      $.post("/web/user/language", {code: lang}, // save langCode into UserEntity
+          function (data) {
+            if (data.status = 'ok') {
+              document.cookie = '4langcookie=' + lang + '; path=/; domain=' + encodeURIComponent(Config.cookieDomain);
+              window.location.reload();
+            }
+          })
+    }
+  }
+</script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/favicon.4min.js?ver=589791203"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/header.4min.js?ver=1601116636"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/purchaseStats.4min.js?ver=-644521528"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/login_fnc.4min.js?ver=958304654"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/utils.4min.js?ver=-369472536"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/authScripts.4min.js?ver=1561595339"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/tips.4min.js?ver=-877986736"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/cookie.4min.js?ver=408852653"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.jsonWithError.4min.js?ver=881271969"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/smallPlugins.4min.js?ver=-845116982"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/Events.4min.js?ver=-1265666699"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.placeholder.patch.4min.js?ver=-305562918"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.cookie.4min.js?ver=823523918"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.localStorage.4min.js?ver=-1535072197"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.slimscroll.min.js?ver=1455066612"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.tipTip.4min.js?ver=424755820"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/json2.4min.js?ver=1033538422"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.cycle.all.min.js?ver=-713535238"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.mousewheel.4min.js?ver=776397338"></script>
+<script type="text/javascript">
+    function sendVerificationLetter(){
+        $.get('https://www.4shared.com/account/sendEmailVerification.jsp?globSysLang=en&callback=?', {ajax: 'true'} ,function(data) {
+            var msg;
+            if (data.ok) {
+                msg = data.verificationMailSentMsg;
+            }else{
+                msg = data.errorMessage;
+            }
+            PopupModule.popupWithButtons({title:"Check your e-mail", content:msg});
+        }, "jsonp");
+    }
+</script><link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/osfix/linux.4min.css?ver=1"><meta name="viewport" content="width=device-width,minimum-scale=1.0">
+<script type="text/javascript">
+    function feedback() {
+      var windowname="Feedback";
+      var url="/feedback.jsp";
+      OpenWindow = window.open(url,windowname,'toolbar=no,scrollbars=yes,resizable=yes,width=600,height=600,left=50,top=50');
+      OpenWindow.focus();
+    }
+    function reportCopyright() {
+      var windowname="reportCopyright";
+      var url="/web/abuse?&abuseType=2&link=" + " ";
+      OpenWindow = window.open(url,windowname,'toolbar=no,scrollbars=yes,resizable=yes,width=600,height=750,left=50,top=50');
+      OpenWindow.focus();
+    }
+
+    $(function () {
+      reportAbuseAttachEvent();
+    });
+
+    function reportAbuseAttachEvent() {
+      $('.jsReportAbuse').click(function () {
+        reportAbuse(document.location.href);
+      });
+
+      function reportAbuse(alink) {
+        var windowname="abuse";
+        var link =  (alink !== undefined) ? "&aLink=" + alink : + " ";
+        var url="/web/abuse?abuseType=1" + link;
+        OpenWindow = window.open(url,windowname,'toolbar=no,scrollbars=yes,resizable=yes,width=600,height=650,left=50,top=50');
+        OpenWindow.focus();
+      }
+    }
+</script><script type="text/javascript" src="https://static.4shared.com/js/ld.4min.js?ver=262253989"></script>
+<link rel="alternate" hreflang="de" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=de">
+<link rel="alternate" hreflang="ru" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=ru">
+<link rel="alternate" hreflang="ko" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=ko">
+<link rel="alternate" hreflang="id" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=in">
+<link rel="alternate" hreflang="ms" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=ms">
+<link rel="alternate" hreflang="pt-BR" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=pt-BR">
+<link rel="alternate" hreflang="en" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=en">
+<link rel="alternate" hreflang="it" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=it">
+<link rel="alternate" hreflang="fr" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=fr">
+<link rel="alternate" hreflang="es" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=es">
+<link rel="alternate" hreflang="zh" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=zh">
+<link rel="alternate" hreflang="ar" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=ar">
+<link rel="alternate" hreflang="vi" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=vi">
+<link rel="alternate" hreflang="th" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=th">
+<link rel="alternate" hreflang="ja" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=ja">
+<link rel="alternate" hreflang="fa" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=fa">
+<link rel="alternate" hreflang="pl" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=pl">
+<link rel="alternate" hreflang="tr" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html?locale=tr">
+<link rel="alternate" hreflang="x-default" href="https://www.4shared.com/audio/3PbFQha0/Bokura_no_Machi_de_-_Kat-Tun.html"><meta property="og:title" content="4shared - free file sharing and storage">
+<meta property="og:description" content="download from 4shared">
+<meta property="fb:app_id" content="1923977944373330">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="4shared">
+
+<meta property="og:image" content="https://www.4shared.com/images/social/general.png">
+  <link rel="image_src" href="https://www.4shared.com/images/social/general.png">
+<meta property="og:title" content="4shared - free file sharing and storage">
+<meta property="og:description" content="4shared is a perfect place to store your pictures, documents, videos and files, so you can share them with friends, family, and the world. Claim your free 15GB now!">
+<meta property="fb:app_id" content="1923977944373330">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="4shared">
+<meta property="og:image" content="https://static.4shared.com/images/social/folder.png?ver=275530153">
+<link rel="image_src" href="https://static.4shared.com/images/social/folder.png?ver=275530153">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"><script type="text/javascript" src="https://static.4shared.com/js/d1/linkerror.4min.js?ver=-1395865657"></script>
+</head>
+
+<body class="site4shared linkErrorPage lang-en notTouch not-touch type-other some-priority-popup-visible" data-page-size="lg">
+  <link rel="stylesheet" type="text/css" href="https://static.4shared.com/js/plugins/bootstrap/css/bootstrap.min.css?ver=-1235434608">
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/bootstrap/js/bootstrap.min.js?ver=-2016413654"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/headerSearch.4min.js?ver=-881147605"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/plugins/jquery.timeago.4min.js?ver=1007035806"></script>
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/ui/media-queries.4min.css?ver=-331762908">
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/headerAndFooterResponsive.4min.css?ver=-1203355514">
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/headerNew.4min.css?ver=-215385312">
+<script type="text/javascript" src="https://static.4shared.com/js/headerNew.4min.js?ver=-596742264"></script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-L27DQL6RCD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L27DQL6RCD', {'transport_type': 'beacon'});
+</script>
+
+
+
+<!-- Start of google-analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://ssl.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-306602-1', '4shared.com', {'sampleRate': 80});
+</script>
+<!-- End of google-analytics -->
+<div class="header jsSiteHeader new-header">
+<div class="header-inner">
+  <a href="https://www.4shared.com/" class="logo" aria-label="Home page link"></a>
+
+<form name="searchform" action="" id="search">
+    <div class="search-wrapper">
+      <div class="search-holder">
+        <div class="jsHideModalSearch modal-search-back" style="display: none"></div>
+        <input type="search" name="q" class="input-search jsInputWithClearButton" id="searchQuery" maxlength="200" placeholder="Search files, music, videos, pictures" autocomplete="off">
+        <div class="jsClearModalSearch modal-search-clear" style="display: none"></div>
+        <button id="doSearch" type="button" class="search-button" data-ga="search.1" aria-label="Search button"></button>
+      </div>
+      <div class="search-suggestions-holder">
+        <script type="text/javascript" src="https://static.4shared.com/js/AjaxSuggestion.4min.js?ver=2038117239"></script>
+<div class="empty-suggestions-placeholder jsSearchPlaceholder">
+  <div class="search-ph-title">Try searching to get started</div>
+  <div class="search-ph-subtitle">Search for files, music, videos, images...</div>
+  <div class="search-ph-image"></div>
+</div>
+
+<div class="search-history-holder jsSearchHistory"></div>
+
+<div class="suggest f13 round4 jsSuggestionsHolder" style="display: none;">
+  <div class="ii round4">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<input type="hidden" class="jsSearchSuggestedTerm" value="false">
+
+<script type="text/javascript">
+  var searchInputElement = $('#searchQuery');
+  AjaxSuggestion.init(searchInputElement);
+</script></div>
+    </div>
+  </form>
+<div class="menu jsShowHeaderMenu">
+    <div class="avatar"></div>
+
+    <div class="header-menu-wrapper jsHeaderMenu">
+      <div class="header-menu-item upload jsUploadMenuItem">
+        <style>
+  .upbox {
+    width: 450px;
+  }
+
+  .upbox .upfiles {
+    color: #1f415f;
+  }
+
+  .upbox .upfiles .ft {
+    background-position: 0 -387px;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+  }
+
+  .upbox .upprogr {
+    position: relative;
+    height: 80px;
+    margin-top: 50px;
+  }
+
+  .upbox .upprogr .percent {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-position: -6px -420px;
+    margin-left: -18px;
+    left: 0;
+    top: -45px;
+    padding-top: 10px;
+  }
+
+  .upbox .upprogr .percent .num {
+    color: #54626f;
+    width: 44px;
+    text-align: center;
+  }
+
+  .upbox .upprogr .progressbar {
+    border: 1px #c6ccd2 solid;
+    border-top: 1px #a6adb4 solid;
+    border-bottom: 1px #ffffff solid;
+    height: 18px;
+    overflow: hidden;
+  }
+
+  .progressbar .in_shadow {
+    border-bottom: 1px #d6dbe1 solid;
+    -moz-box-shadow: inset 0 0 8px 2px #d6dbe1;
+    -webkit-box-shadow: inset 0 0 8px 2px #d6dbe1;
+    box-shadow: inset 0 0 8px 2px #d6dbe1;
+    height: 17px;
+    position: relative;
+  }
+
+  .upbox .upprogr .progress {
+    position: absolute;
+    -webkit-animation-duration: 24s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-name: progressBarAnim;
+    background: url(https://static.4shared.com/images/indexPage/upprogressBg.png?ver=1920502252) left repeat-x;
+    border-right: 1px #cccccc solid;
+    height: 18px;
+    width: 0;
+  }
+
+  @-webkit-keyframes progressBarAnim {
+    0% { background-position-x:  350px; }
+    100% { background-position-x: 0px; }
+  }
+</style>
+
+<div id="upbox" style="display:none;">
+  <div class="upbox alignLeft uploadPopupInner">
+    <div class="upfiles f18 ffshadow filesNumberUploading">
+      <span class="ft absmid marginR5 sprite1"></span><span class="absmid"><span class="numFiles"></span></span>
+    </div>
+    <div class="upprogr">
+      <div class="percent sprite1">
+        <div class="num  ffshadow f11"><span class="percentvalue">0</span>%</div>
+      </div>
+      <div class="progressbar round4">
+        <div class="in_shadow round4">
+          <div class="progress roundBL4 roundTL4"></div>
+        </div>
+      </div>
+      <div class="marginT30">
+        <div class="floatLeft marginT5 timeLeft">
+          <img src="https://static.4shared.com/images/blank.gif?ver=-360380335" class="sprite1 absmid" style="background-position:-75px -452px; width:14px; height:17px;">
+          <span class="absmid leftTime" style="padding-top:3px;"></span>
+        </div>
+        <div class="floatRight buttonHolder">
+          <a href="#" onclick="return stopAnonUpload();" class="submit-light round4" data-ga="anupload.2">Stop</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://static.4shared.com/js/plupload/plupload.4min.js?ver=553630544"></script>
+
+<script type="text/javascript" src="https://static.4shared.com/js/plupload/plupload.flash.4min.js?ver=-59961410"></script>
+
+
+<script type="text/javascript" src="https://static.4shared.com/js/UploadModule.4min.js?ver=1513728177"></script>
+
+<script type="text/javascript" src="https://static.4shared.com/js/Jsonp.4min.js?ver=-608301817"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+  UploadModule.build = function(options) {
+    var defaultSettings = {
+      
+      url: '/main/upload.jsp?sId=iZrSc54Y954rl8FC&fau=1&ausk=iZrSc54Y954rl8FC',
+      
+      uploadHandler: UploadModule.getAnonUploadHandler(),
+      
+      max_file_size: 209715200,
+      
+      dc_path : 'https://dc576.4shared.com',
+      retryCount: 5,
+      i18n: {
+        file_size_exceeded: "File is too large. You can\'t upload files larger than [maxFileSize] .",
+        some_files_size_exceeded: 'Some files limit exceeded. Continue without them?',
+        no_files_selected: "You haven\'t selected any file to upload yet.",
+        file_already_in_proccess: 'This file already in process.',
+        your_browser_not_supported: 'File is too large. Try uploading via 4shared Desktop.',
+        you_can_resume_upload: 'Your transfer have been canceled. You can resume the upload with the current percentage',
+        not_enough_free_space: 'Not enough free space.',
+        can_not_upload_empty_file : "File is empty or can\'t be found.",
+        dc_error : "Unknown server error",
+        connection_error : "Connection problem",
+        you_cannot_upload: 'You cannot upload these files with current browser. Please try desktop version.',
+        you_cannot_upload_flash: 'You cannot upload these files with Multiupload. Please try 4shared desktop.',
+        some_files_cannot_upload_flash: 'Multiupload failed. Try uploading via 4shared Desktop.',
+        file_uploading_from_another_place : "File upload has already been resumed from another browser.",
+        file_was_removed : "File is empty or can\'t be found.",
+        incompleted_was_deleted : "File was removed from server.",
+        continue_without_flash: 'Continue without them?',
+        errors_files_flash: '($[p1] files total)',
+        wrong_file_type : 'Wrong file type.',
+        pending_upload_page_close: 'Your upload may be incomplete if you leave this page.'
+      },
+      resumable: {
+        section_size: 10240000,
+        user_agents: 'chrome,firefox'
+      }
+    }
+    options = $.extend(true, defaultSettings, options)
+    return new UploadModule(options)
+  }
+</script><form action="https://dc623.4shared.com/main/upload.jsp?sId=iZrSc54Y954rl8FC&amp;fau=1&amp;ausk=iZrSc54Y954rl8FC" name="uploadForm" enctype="multipart/form-data" target="uploadframe1" method="POST">
+  <input type="hidden" name="mainDC" value="294">
+
+  <div class="form-group col-xs-12 col-md-4 col-md-push-4 upload-holder">
+    <div class="or-label">or</div>
+    <label class="big-button w-b index-upload-button" for="fid0" data-ga="anupload.1">Upload files</label>
+    <input type="file" placeholder="Upload file" class="hidden jsFakeFile jsHeaderAnonUploadButton" id="fid0" name="fff0" multiple="multiple">
+  </div>
+</form>
+
+
+<script type="text/javascript" src="https://static.4shared.com/js/ui/AnonUploadWidget.4min.js?ver=257166454"></script>
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/popup_n.4min.css?ver=-1039979544">
+<script type="text/javascript" src="https://static.4shared.com/js/PopupModule.4min.js?ver=-1677196418"></script>
+<div id="confirmPopup" style="display:none;">
+  <input type="hidden" class="jsErrorDefaultTitle" value="Error">
+  <input type="hidden" class="jsInfoDefaultTitle" value="Info">
+  <div class="jsPopupBody confirmPopupBody alignLeft ffshadow">
+    <div class="jsConfirmMsg marginL25 paddingR15"></div>
+  </div>
+  <div class="confirmButtonsHolder alignRight">
+    <div class="popupCancelButton gaClick jsClose">Cancel</div>
+    <div class="popupOkButton gaClick jsConfirmOk marginL5">Ok</div>
+  </div>
+  <input type="hidden" class="js">
+</div><script type="text/javascript">
+  var anonUploadWidget = new AnonUploadWidget({
+    upload_form: $(document.uploadForm),
+    i18n: {
+      hours: 'hr',
+      minutes: 'min',
+      seconds: 'sec',
+      upload_canceled: 'Your transfer has been cancelled.',
+      file_upload: 'file upload',
+      files_upload: 'files upload',
+      upload: 'Upload',
+      do_you_want_to_cancel_upload: 'Do you want to cancel upload?'
+    }
+  });
+
+
+  $(document).ready(function () {
+    $('#fid0').change(function () {
+      anonUploadWidget.start();
+    });
+  });
+
+  currentDirId = '';
+
+  function anonUploadDone(files) {
+    
+    if (!Config.isUserLoggedIn) {
+      // au - anon upload
+      $.cookie('ausk', 'iZrSc54Y954rl8FC', { expires: 1, path: '/', domain: Config.cookieDomain });
+    }
+    
+    top.location.href = 'https://www.4shared.com/web/login?sId=iZrSc54Y954rl8FC&fau=1&ausk=iZrSc54Y954rl8FC&au=1';
+  }
+
+  function stopAnonUpload() {
+    PopupModule.popupWithButtons({
+      content: "Do you want to cancel upload?",
+      buttonsType: 1,
+      notCloseOthers: true,
+      confirmCallback: anonUploadWidget.stop
+    });
+  }
+</script>
+
+</div>
+
+      <div class="header-menu-item account jsShowSignIn">My Account</div>
+        <div class="header-menu-item settings jsShowSignIn">Settings</div>
+      </div>
+  </div>
+
+  <input type="hidden" name="logged-in-flag" class="jsUserIsLoggedInFlag" value="false">
+  <input type="hidden" name="pageName-flag" class="jsAnalyticsPageName" value="linkerror">
+</div>
+  </div>
+
+<div id="toast-notification" class="toast-notification" style="display: none">
+  <div class="toast-block">
+    <div class="toast-text"></div>
+    <div class="toast-buttons">
+      <div class="toast-close">Close</div>
+      <div class="toast-action"></div>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-sheet signInBS jsSignInBottomSheet">
+  <div class="bottom-sheet-bg"> </div>
+  <div class="bottom-sheet-fg">
+    <div class="bottom-sheet-back jsBottomSheetBack"></div>
+    <div class="bottom-sheet-close jsCloseBottomSheet"></div>
+
+    <div class="bottom-sheet-title w-logo">
+      <div class="bs-logo"></div>
+    </div>
+
+    <div class="bottom-sheet-content">
+      <div class="signin-text for-index">
+        <div class="signin-bs-title jsSignInTitle">Sign up for free</div>
+        <div class="signin-bs-caption jsSignInCaption">Get 15 GB free space and ability to download files</div>
+      </div>
+
+      <div class="signin-text for-d1">
+        <div class="signin-bs-title jsSignInTitle">Unlock link sharing</div>
+        <div class="signin-bs-caption jsSignInCaption">Log in or sign up with your social network</div>
+      </div>
+
+      <div class="main-signin-screen jsMainScreen">
+        <form class="loginform jsLoginForm" action="https://www.4shared.com/web/login&quot;" method="post" autocomplete="on" name="loginForm">
+          <div class="signin-buttons-holder">
+            <div data-href="https://www.4shared.com/servlet/signin/google?fp=https%3A%2F%2Fwww.4shared.com%2Faccount%2Fhome.jsp" data-def="https://www.4shared.com/servlet/signin/google?fp=https%3A%2F%2Fwww.4shared.com%2Faccount%2Fhome.jsp" class="signin-var-button btn-google jsGPLoginButton">Continue with<b>Google</b></div>
+            <div data-href="https://www.4shared.com/servlet/signin/facebook?fp=https%3A%2F%2Fwww.4shared.com%2Faccount%2Fhome.jsp" data-def="https://www.4shared.com/servlet/signin/facebook?fp=https%3A%2F%2Fwww.4shared.com%2Faccount%2Fhome.jsp" class="signin-var-button btn-facebook jsFBLoginButton">Continue with<b>Facebook</b></div>
+            <div class="signin-var-button btn-email jsGoEmailLogic">Continue with<b>Email</b></div>
+          </div>
+        </form>
+      </div>
+
+      <div class="secondary-signin-screen jsSecondaryScreen">
+        <form name="signInForm" class="jsSignInForm">
+          <input type="hidden" name="returnTo" class="jsReturnTo" value="https%3A%2F%2Fwww.4shared.com%2Faccount%2Fhome.jsp" data-def="https%3A%2F%2Fwww.4shared.com%2Faccount%2Fhome.jsp">
+
+          <div class="email-screen jsEmailPasswordBlock">
+            <input type="email" required="required" name="email" id="email" maxlength="200" class="jsInputLogin" placeholder=" ">
+            <label for="email">Enter e-mail</label>
+            <div class="show-hide-password jsShowPassword"></div>
+            <input type="password" required="required" name="password" id="password" class="jsInputPassword" placeholder=" ">
+            <label for="password">Enter password</label>
+            <input type="text" required="required" name="firstName" id="username" maxlength="200" class="jsInputUsername" placeholder=" ">
+            <label for="username">Enter full name</label>
+          </div>
+
+          <div class="privacy-screen jsPrivacyBlock">
+            <div class="policy-agree-checkbox">
+              <label>
+                <input type="checkbox" required="required" class="jsGdprAgreeCheckboxPop" name="policy" value="true">
+                <span>I agree to 4shared <a href="/privacy.jsp" target="_blank">Data Collection Policy</a></span>
+              </label>
+            </div>
+
+            <div class="policy-agree-checkbox">
+                <label>
+                  <input type="checkbox" required="required" class="jsDisclosureAgreeCheckboxPop" name="disclosure" value="true">
+                  <span>I agree to 4shared <a href="/privacy.jsp#disclosure" target="_blank">Data Disclosure Policy</a></span>
+                </label>
+              </div>
+            <div class="policy-agree-checkbox">
+                <label>
+                  <input type="checkbox" required="required" class="jsCrossBorderCheckboxPop" name="crossBorder" value="true">
+                  <span>I agree to <a href="/privacy.jsp#crossborder" target="_blank">cross-border transfer of my data</a></span>
+                </label>
+              </div>
+            <div class="policy-agree-checkbox">
+              <label>
+                <input type="checkbox" required="required" class="jsIsAdultCheckbox" name="isAdult" value="true">
+                <span>I am above 18 years old</span>
+              </label>
+            </div>
+
+            <div class="popup-text terms-link">
+              By creating an account you are agreeing to our <a href="/terms.jsp" target="_blank">Terms of Service</a>.</div>
+          </div>
+
+          <div class="errors-holder">
+            <div class="jsError jsFirstNameRequired">Your full name is required</div>
+            <div class="jsError jsEmailNotValid">Your email is not a valid</div>
+            <div class="jsError jsEmailRequired">Your email is required</div>
+            <div class="jsError jsPasswordRequired">Your password is required</div>
+            <div class="jsError jsGDPRAgreeRequired">You have to select all checkboxes</div>
+            <div class="jsError jsInvalidPassword">Invalid password</div>
+            <div class="jsError jsErrorFromServer"></div>
+          </div>
+
+          <div class="hint jsRemindPasswordHint">
+            <span>A letter with instructions has been sent to</span><br>
+            <span class="jsEmailForInstructions">your.name@email.com</span>
+          </div>
+
+          <button type="button" class="signin-continue-button jsContinueSignInButton">
+            Continue<div class="login-loading-spinner"></div>
+          </button>
+
+          <div class="jsRemindPassword">Forgot your password?</div>
+        </form>
+      </div>
+
+      <div class="verify-email-screen jsVerifyEmailInBS">
+        <div class="verify-title">
+          <b>Verify your email address</b>
+          <span>to access all 4shared features. Confirmation letter was sent to <i>$[p1]</i></span>
+        </div>
+
+        <div class="social-button button-block iconMail jsResendVerification">Resend confirmation letter</div>
+        <div class="big-button n-a jsConfirmationResent" style="display: none;">Confirmation resent</div>
+
+        <div class="error jsSendingError"></div>
+
+        <div class="change-email-hint">
+          <span>Not sure about current e-mail address?</span>
+          <a href="https://www.4shared.com/web/account/settings">Update e-mail</a>
+        </div>
+      </div>
+
+      <div class="captcha-screen jsCaptchaScreen">
+        <div class="jsContentCaptchaBlock captchaContainer">
+          <script type="text/javascript" src="//www.google.com/recaptcha/api.js?render=explicit" async="async" defer="defer"></script>
+<div class="clearFix">
+            <h1 class="jsCaptchaMsg1"></h1>
+            <h3 class="jsCaptchaMsg2"></h3>
+            <div class="captchaImage">Prove you are not a robot</div>
+            <div id="reCaptchaBlock"></div>
+          </div>
+
+          <div class="jsCaptchaMessages">
+            <input type="hidden" class="jsMsgToDownload" value="Sign up to download">
+            <input type="hidden" class="jsMsgForFree" value="Sign up for free">
+            <input type="hidden" class="jsMsgFreeSpace" value="Get 15 GB free space and ability to download files">
+            <input type="hidden" class="jsMsgComment" value="Submit the comment">
+            <input type="hidden" class="jsMsgQuestion" value="Send your question">
+            <input type="hidden" class="jsMsgReportAbuse" value="Report abuse">
+          </div>
+        </div>
+      </div>
+
+      <input type="hidden" class="jsReturnToOriginal" value="https%3A%2F%2Fwww.4shared.com%2Faccount%2Fhome.jsp">
+    </div>
+  </div>
+</div><input type="hidden" class="jsCopyMessage" value="The link was copied to clipboard">
+<input id="linkErrorBanUseGA" type="hidden" value="null">
+
+  <div class="mob_body">
+    <div class="link-error-image"></div>
+        <div class="link-error-title">File link is invalid</div>
+        <div class="link-error-message">The file link that you requested is not valid.</div>
+      </div>
+
+  <link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/recommendations.4min.css?ver=2039463935">
+<link rel="stylesheet" type="text/css" href="https://static.4shared.com/css/pageDownload1/thumbIconsAndColors.4min.css?ver=456889786">
+<script type="text/javascript" src="https://static.4shared.com/js/recommendations.4min.js?ver=275246253"></script>
+<div class="recommendations-wrapper">
+  <div class="rec-title">Popular files</div>
+  <div class="rec-holder jsRecHolder">
+    <div class="rec-item cat-1" style="display: block;">
+  <a href="https://www.4s.io/mp3/OP79bxdWge/someone-you-loved.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="OP79bxdWge"></div>
+
+  <div class="rec-image-holder mp3FileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image"></div>
+    <div class="rec-item-timing jsItemTiming">03:18</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4s.io/mp3/OP79bxdWge/someone-you-loved.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">someone you loved</div>
+      <div class="rec-item-artist cut-long-string">Lewis Capaldi</div>
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">03:18</div>
+
+      <div class="rec-item-ext tag-ext">mp3</div>
+      <div class="rec-item-size tag-size">3.0 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"><div class="rec-tag">Lewis Capaldi</div><div class="rec-tag">someone you loved</div></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/Zk34VM-v/tawan03nubdoaw03.html" class="link-profile">สุดารัตน์ ภิรมย์ภักดี<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/XJrBam1n/Downloads.html" class="link-dir">Downloads<i></i></a>
+      </div>
+
+      <div class="rec-item-size">3.0 MB</div>
+      <div class="rec-item-date">3 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">สุดารัตน์ ภิรมย์ภักดี</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/rFCDCRgLjq/____.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="rFCDCRgLjq"></div>
+
+  <div class="rec-image-holder txtFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc762.4shared.com/img/rFCDCRgLjq/s21/1909187fd98/____&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/rFCDCRgLjq/____.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">انا و شوشو بنت خالتي.txt</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">txt</div>
+      <div class="rec-item-size tag-size">443 KB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/EzLmZ4Q2/saeedali.html" class="link-profile">سعيد ا.<i style="background-image: url(//dc695.4shared.com/img/xiRaduIbea/s20/183705890e0/1501854696)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/zQbSi_I_/_online.html" class="link-dir">قصص<i></i></a>
+      </div>
+
+      <div class="rec-item-size">443 KB</div>
+      <div class="rec-item-date">about a year ago</div>
+      <div class="rec-item-author mob-author cut-long-string">سعيد ا.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/BkHvt9k5jq/2022-11-23____.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="BkHvt9k5jq"></div>
+
+  <div class="rec-image-holder pdfFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc707.4shared.com/img/BkHvt9k5jq/s21/1942bee2170/2022-11-23____&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/BkHvt9k5jq/2022-11-23____.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">2022-11-23_الكناش الكبير المكتوم .pdf</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">pdf</div>
+      <div class="rec-item-size tag-size">285.7 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/Zbz8BbPw/zendo2001.html" class="link-profile">zendo2001<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/xY9W-Ghp/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">285.7 MB</div>
+      <div class="rec-item-date">7 months ago</div>
+      <div class="rec-item-author mob-author cut-long-string">zendo2001</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-0" style="display: block;">
+  <a href="https://www.4shared.com/file/m7UUDAp_da/FIFA_cso.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="m7UUDAp_da"></div>
+
+  <div class="rec-image-holder FileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/file/m7UUDAp_da/FIFA_cso.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">FIFA cso</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">noext</div>
+      <div class="rec-item-size tag-size">113 KB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/Q_Ets4oX/phipereis.html" class="link-profile">Phellype E.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/Dsl4pSFy/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">113 KB</div>
+      <div class="rec-item-date">6 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Phellype E.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/FvCOaxOJge/___online.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="FvCOaxOJge"></div>
+
+  <div class="rec-image-holder pdfFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc733.4shared.com/img/FvCOaxOJge/s21/18da7ea7528/___online&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/FvCOaxOJge/___online.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">كتاب الاسرار كامل.pdf</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">pdf</div>
+      <div class="rec-item-size tag-size">21.7 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/MMUPFsyr/tarekhasnaa80.html" class="link-profile">Tarek M.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/zW-8mCnq/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">21.7 MB</div>
+      <div class="rec-item-date">about a year ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Tarek M.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-0" style="display: block;">
+  <a href="https://www.4shared.com/file/4hdZTQboce/patch8comrockstargamesgtasa.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="4hdZTQboce"></div>
+
+  <div class="rec-image-holder obbFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/file/4hdZTQboce/patch8comrockstargamesgtasa.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">patch.8.com.rockstargames.gtasa.obb</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">obb</div>
+      <div class="rec-item-size tag-size">596.3 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/PGO8MM_D/gatomiau060601.html" class="link-profile">MegaFur<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/p5AaZo1q/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">596.3 MB</div>
+      <div class="rec-item-date">9 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">MegaFur</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/-DUKjNPFjq/12_Million_-_JAPAN_Email_Leads.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="-DUKjNPFjq"></div>
+
+  <div class="rec-image-holder txtFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc555.4shared.com/img/-DUKjNPFjq/s21/190ee913c70/12_Million_-_JAPAN_Email_Leads&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/-DUKjNPFjq/12_Million_-_JAPAN_Email_Leads.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">1.2 Million - JAPAN Email Leads.txt</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">txt</div>
+      <div class="rec-item-size tag-size">256 KB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/GeUpFZEH/fbkpaydept.html" class="link-profile">mike bullock<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/XUFYTScx/Telegram_Desktop.html" class="link-dir">Telegram Desktop<i></i></a>
+      </div>
+
+      <div class="rec-item-size">256 KB</div>
+      <div class="rec-item-date">about a year ago</div>
+      <div class="rec-item-author mob-author cut-long-string">mike bullock</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-1" style="display: block;">
+  <a href="https://www.4s.io/mp3/uyXYUOmRjq/If_I_Ever_Fall_In_Love_Again__.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="uyXYUOmRjq"></div>
+
+  <div class="rec-image-holder mp3FileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc551.4shared.com/img/uyXYUOmRjq/s21/1966e68cc60/If_I_Ever_Fall_In_Love_Again__&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">03:35</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4s.io/mp3/uyXYUOmRjq/If_I_Ever_Fall_In_Love_Again__.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">If I Ever Fall In Love Again   Kenny Rogers &amp; Anne Murray - Sweetnotes Live @ Koronadal City.mp3</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">03:35</div>
+
+      <div class="rec-item-ext tag-ext">mp3</div>
+      <div class="rec-item-size tag-size">3.3 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/V1A9wfL-/vangiecastillo292.html" class="link-profile">Jie Ann S.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/rndaFfUI/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">3.3 MB</div>
+      <div class="rec-item-date">4 months ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Jie Ann S.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/l1nE7EnDku/Targat.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="l1nE7EnDku"></div>
+
+  <div class="rec-image-holder xlsxFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc576.4shared.com/img/l1nE7EnDku/s21/190826db028/Targat&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/l1nE7EnDku/Targat.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">Targat.xlsx</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">xlsx</div>
+      <div class="rec-item-size tag-size">29.6 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/H6epEf5a/3essjo.html" class="link-profile">Esjo L.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/LZgcdFY8/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">29.6 MB</div>
+      <div class="rec-item-date">about a year ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Esjo L.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/3H5nLSNRku/company_emails.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="3H5nLSNRku"></div>
+
+  <div class="rec-image-holder txtFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc523.4shared.com/img/3H5nLSNRku/s21/19515a235b8/company_emails&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/3H5nLSNRku/company_emails.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">company emails.txt</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">txt</div>
+      <div class="rec-item-size tag-size">239 KB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/ILgrBBKN/ngn_pm.html" class="link-profile">Marin C.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/OD_hXyvQ/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">239 KB</div>
+      <div class="rec-item-date">6 months ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Marin C.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/ocWW9xEjea/__online.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="ocWW9xEjea"></div>
+
+  <div class="rec-image-holder pdfFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc610.4shared.com/img/ocWW9xEjea/s21/17ecd9c4288/__online&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/ocWW9xEjea/__online.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">كشف الحجاب.pdf</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">pdf</div>
+      <div class="rec-item-size tag-size">50.0 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/cDvM6sTz/kehinde_nureni.html" class="link-profile">Kehinde N.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/UveF86K_/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">50.0 MB</div>
+      <div class="rec-item-date">4 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Kehinde N.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-1" style="display: block;">
+  <a href="https://www.4s.io/mp3/U6Azvjdbda/05_Minungum_Minnaminunge__Fema.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="U6Azvjdbda"></div>
+
+  <div class="rec-image-holder mp3FileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc611.4shared.com/img/U6Azvjdbda/s21/165d74e94c0/05_Minungum_Minnaminunge__Fema&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">05:09</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4s.io/mp3/U6Azvjdbda/05_Minungum_Minnaminunge__Fema.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">Malayalam Songs Collection</div>
+      <div class="rec-item-artist cut-long-string">Shreya Jayadeep</div>
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">05:09</div>
+
+      <div class="rec-item-ext tag-ext">mp3</div>
+      <div class="rec-item-size tag-size">4.8 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"><div class="rec-tag">Malayalam</div><div class="rec-tag">Malayalm Songs</div><div class="rec-tag">2016</div><div class="rec-tag">Shreya Jayadeep</div><div class="rec-tag">Malayalam</div><div class="rec-tag">Malayalam Songs Collection</div></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/0W4M7j4l/sayedpv73.html" class="link-profile">said A.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/69qHnYA5/Downloads.html" class="link-dir">Downloads<i></i></a>
+      </div>
+
+      <div class="rec-item-size">4.8 MB</div>
+      <div class="rec-item-date">7 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">said A.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/IMLew4m4fa/___-___.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="IMLew4m4fa"></div>
+
+  <div class="rec-image-holder docxFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc582.4shared.com/img/IMLew4m4fa/s21/18e568c96b0/___-___&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/IMLew4m4fa/___-___.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">أمى الملتزمة داليا - ثلاثة عشر جزءا.docx</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">docx</div>
+      <div class="rec-item-size tag-size">129 KB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/jh4W1TLg/nxvgmkwh.html" class="link-profile">Samy N.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/l2Ksv9NH/_online.html" class="link-dir">قصصى<i></i></a>
+      </div>
+
+      <div class="rec-item-size">129 KB</div>
+      <div class="rec-item-date">about a year ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Samy N.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/CSrbMVqniq/_____.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="CSrbMVqniq"></div>
+
+  <div class="rec-image-holder pdfFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc375.4shared.com/img/CSrbMVqniq/s21/17a0bbd72f8/_____&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/CSrbMVqniq/_____.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">عمليات ومجربات الامام الغزالى الكبير مطبوع.pdf</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">pdf</div>
+      <div class="rec-item-size tag-size">13.8 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/Yk4XQtXL/mardanshingle.html" class="link-profile">MArdamshingle S.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        
+        
+      </div>
+
+      <div class="rec-item-size">13.8 MB</div>
+      <div class="rec-item-date">4 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">MArdamshingle S.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-1" style="display: block;">
+  <a href="https://www.4s.io/music/P9xZ5bbfge/Always_Remember_Us_This_Way.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="P9xZ5bbfge"></div>
+
+  <div class="rec-image-holder m4aFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image"></div>
+    <div class="rec-item-timing jsItemTiming">03:54</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4s.io/music/P9xZ5bbfge/Always_Remember_Us_This_Way.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">Always Remember Us This Way</div>
+      <div class="rec-item-artist cut-long-string">DJ Tons</div>
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">03:54</div>
+
+      <div class="rec-item-ext tag-ext">m4a</div>
+      <div class="rec-item-size tag-size">8.0 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"><div class="rec-tag">Pop</div><div class="rec-tag">Always Remember Us This Way - Single</div><div class="rec-tag">2021</div><div class="rec-tag">Pop</div><div class="rec-tag">DJ Tons</div><div class="rec-tag">Always Remember Us This Way</div></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/pHZv38a4/kapong.html" class="link-profile">Noisy S.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/eAc2h5eD/Music.html" class="link-dir">Music<i></i></a>
+      </div>
+
+      <div class="rec-item-size">8.0 MB</div>
+      <div class="rec-item-date">9 months ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Noisy S.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-1" style="display: block;">
+  <a href="https://www.4s.io/mp3/DdJawdK6iq/Adelle_-_Easy_On_Me.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="DdJawdK6iq"></div>
+
+  <div class="rec-image-holder mp3FileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc624.4shared.com/img/DdJawdK6iq/s21/1815a61f0a8/Adelle_-_Easy_On_Me&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">03:44</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4s.io/mp3/DdJawdK6iq/Adelle_-_Easy_On_Me.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">Easy On Me</div>
+      <div class="rec-item-artist cut-long-string">Adelle</div>
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">03:44</div>
+
+      <div class="rec-item-ext tag-ext">mp3</div>
+      <div class="rec-item-size tag-size">3.5 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"><div class="rec-tag">Pop</div><div class="rec-tag">30</div><div class="rec-tag">2021</div><div class="rec-tag">Pop</div><div class="rec-tag">Easy On Me</div><div class="rec-tag">Adelle</div></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/aSz2zbaf/belacarolcal.html" class="link-profile">Carolina C.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/gde3zHhK/Shared_from_M2101K7AI.html" class="link-dir">Shared from M2101K7AI<i></i></a>
+      </div>
+
+      <div class="rec-item-size">3.5 MB</div>
+      <div class="rec-item-date">3 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Carolina C.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/RFVU0ANFfa/_____.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="RFVU0ANFfa"></div>
+
+  <div class="rec-image-holder docxFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc582.4shared.com/img/RFVU0ANFfa/s21/18e568c7388/_____&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/RFVU0ANFfa/_____.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">أم محمود وأم منة وأم دعاء.docx</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">docx</div>
+      <div class="rec-item-size tag-size">109 KB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/jh4W1TLg/nxvgmkwh.html" class="link-profile">Samy N.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/l2Ksv9NH/_online.html" class="link-dir">قصصى<i></i></a>
+      </div>
+
+      <div class="rec-item-size">109 KB</div>
+      <div class="rec-item-date">about a year ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Samy N.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/4sU9OdaVjq/satoshi_wallet.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="4sU9OdaVjq"></div>
+
+  <div class="rec-image-holder txtFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc622.4shared.com/img/4sU9OdaVjq/s21/18cfd1c6228/satoshi_wallet&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/4sU9OdaVjq/satoshi_wallet.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">satoshi wallet.txt</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">txt</div>
+      <div class="rec-item-size tag-size">5.4 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/k2eyxldF/alexgood.html" class="link-profile">Ruhi Ç.<i style="background-image: url(//dc694.4shared.com/img/7DCPNuANfa/s20/19773aca600/1529794704)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/M7IQElme/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">5.4 MB</div>
+      <div class="rec-item-date">2 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Ruhi Ç.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-1" style="display: block;">
+  <a href="https://www.4s.io/mp3/GuswQl5xfa/j-hope_-_Killin_It_Girl__feat_.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="GuswQl5xfa"></div>
+
+  <div class="rec-image-holder mp3FileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc606.4shared.com/img/GuswQl5xfa/s21/197ad60f8d8/j-hope_-_Killin_It_Girl__feat_&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">02:28</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4s.io/mp3/GuswQl5xfa/j-hope_-_Killin_It_Girl__feat_.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">Killin' It Girl (feat. GloRilla)</div>
+      <div class="rec-item-artist cut-long-string">j-hope</div>
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">02:28</div>
+
+      <div class="rec-item-ext tag-ext">mp3</div>
+      <div class="rec-item-size tag-size">2.8 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"><div class="rec-tag">Killin' It Girl (feat. GloRilla)</div><div class="rec-tag">2025</div><div class="rec-tag">j-hope</div><div class="rec-tag">Killin' It Girl (feat. GloRilla)</div></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/03PrpITn/figueiredomelissa499.html" class="link-profile">Melissa F.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/iPIyWRHj/Downloads.html" class="link-dir">Downloads<i></i></a>
+      </div>
+
+      <div class="rec-item-size">2.8 MB</div>
+      <div class="rec-item-date">about a month ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Melissa F.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/wNfjZEqGjq/___online.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="wNfjZEqGjq"></div>
+
+  <div class="rec-image-holder pdfFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc589.4shared.com/img/wNfjZEqGjq/s21/18da8502850/___online&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/wNfjZEqGjq/___online.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">كتاب غاية الانتفاع.pdf</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">pdf</div>
+      <div class="rec-item-size tag-size">12.5 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/TfM_nxRC/tmoaz073.html" class="link-profile">Moaz Tarek<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/ecY_UB9h/_online.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">12.5 MB</div>
+      <div class="rec-item-date">about a year ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Moaz Tarek</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-1" style="display: block;">
+  <a href="https://www.4s.io/mp3/KMRhi73Jea/Adelle-Rolling_in_the_deep.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="KMRhi73Jea"></div>
+
+  <div class="rec-image-holder mp3FileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image"></div>
+    <div class="rec-item-timing jsItemTiming">03:47</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4s.io/mp3/KMRhi73Jea/Adelle-Rolling_in_the_deep.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">Rolling in the deep</div>
+      <div class="rec-item-artist cut-long-string">Adelle</div>
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">03:47</div>
+
+      <div class="rec-item-ext tag-ext">mp3</div>
+      <div class="rec-item-size tag-size">3.5 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"><div class="rec-tag">Blues</div><div class="rec-tag">Rolling in the deep</div><div class="rec-tag">Adelle</div><div class="rec-tag">Blues</div><div class="rec-tag">Rolling in the deep</div></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/5stYLp6P/pcoelho1975.html" class="link-profile">Patricia C.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/wIf71q_E/My_4shared.html" class="link-dir">My 4shared<i></i></a>
+      </div>
+
+      <div class="rec-item-size">3.5 MB</div>
+      <div class="rec-item-date">5 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Patricia C.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-0" style="display: block;">
+  <a href="https://www.4shared.com/file/_tJvlUZuce/wallet.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="_tJvlUZuce"></div>
+
+  <div class="rec-image-holder datFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/file/_tJvlUZuce/wallet.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">wallet.dat</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">dat</div>
+      <div class="rec-item-size tag-size">64 KB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/_QnLx-tJ/niroth99.html" class="link-profile">niroth Y.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        
+        
+      </div>
+
+      <div class="rec-item-size">64 KB</div>
+      <div class="rec-item-date">11 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">niroth Y.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-5" style="display: block;">
+  <a href="https://www.4shared.com/office/xQ1v_n46ba/______.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="xQ1v_n46ba"></div>
+
+  <div class="rec-image-holder pdfFileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc771.4shared.com/img/xQ1v_n46ba/s21/1556414e960/______&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">00:00</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4shared.com/office/xQ1v_n46ba/______.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">قمر الاقمار فى كشف الاسرار مخطوط كامل.pdf</div>
+      
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">00:00</div>
+
+      <div class="rec-item-ext tag-ext">pdf</div>
+      <div class="rec-item-size tag-size">38.1 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/Hfr0SnWm/amramr11163.html" class="link-profile">amr A.<i style="background-image: url(https://static.4shared.com/images/noavatar.svg)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/NR4l5yxT/6-New_5Folder.html" class="link-dir">6-New 5Folder<i></i></a>
+      </div>
+
+      <div class="rec-item-size">38.1 MB</div>
+      <div class="rec-item-date">9 years ago</div>
+      <div class="rec-item-author mob-author cut-long-string">amr A.</div>
+    </div>
+
+  </div>
+</div><div class="rec-item cat-1" style="display: block;">
+  <a href="https://www.4s.io/mp3/l7mEzLqZge/KPop_Demon_Hunters_How_Its_Don.html" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file" itemid="l7mEzLqZge"></div>
+
+  <div class="rec-image-holder mp3FileExt42" aria-label="File thumbnail image">
+    <div class="rec-item-image" style="background-image: url(&quot;https://dc730.4shared.com/img/l7mEzLqZge/s21/197d1258ec8/KPop_Demon_Hunters_How_Its_Don&quot;);"></div>
+    <div class="rec-item-timing jsItemTiming">02:56</div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="https://www.4s.io/mp3/l7mEzLqZge/KPop_Demon_Hunters_How_Its_Don.html" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string">How It’s Done</div>
+      <div class="rec-item-artist cut-long-string">EJAE</div>
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming">02:56</div>
+
+      <div class="rec-item-ext tag-ext">mp3</div>
+      <div class="rec-item-size tag-size">6.8 MB</div>
+
+      <div class="rec-tags-holder hidden-xs"><div class="rec-tag">K-Pop</div><div class="rec-tag">KPop Demon Hunters (Soundtrack from the Netflix Film)</div><div class="rec-tag">2025</div><div class="rec-tag">How It’s Done</div><div class="rec-tag">EJAE</div><div class="rec-tag">K-Pop</div></div>
+
+      <div class="rec-author-dir-holder">
+        <a href="https://www.4shared.com/u/VI9_Z1vg/micafp.html" class="link-profile">Micaela P.<i style="background-image: url(//dc734.4shared.com/img/trNvTtJzku/s20/196f4c1e148/1520615050)"></i></a>
+        <span class="in">in</span>
+        <a href="/folder/hIb3uw_V/KPop_Demon_Hunters__Soundtrack.html" class="link-dir">KPop Demon Hunters (Soundtrack from the Netflix Film)<i></i></a>
+      </div>
+
+      <div class="rec-item-size">6.8 MB</div>
+      <div class="rec-item-date">about a month ago</div>
+      <div class="rec-item-author mob-author cut-long-string">Micaela P.</div>
+    </div>
+
+  </div>
+</div></div>
+</div>
+
+<div id="recTagTmp" class="rec-tag" style="display: none !important;"><span></span></div>
+
+<div id="recTmp" class="rec-item" style="display: none !important;">
+  <a href="#" class="rec-item-link" aria-label="Recommended item"></a>
+
+  <div class="jsAddToMyAccountButton add-to-acc" itemtype="file"></div>
+
+  <div class="rec-image-holder" aria-label="File thumbnail image">
+    <div class="rec-item-image"></div>
+    <div class="rec-item-timing jsItemTiming"></div>
+  </div>
+
+  <div class="rec-item-info">
+    <a href="#" class="rec-item-link" aria-label="Recommended item">
+      <div class="rec-item-name cut-long-string"></div>
+      <div class="rec-item-artist cut-long-string"></div>
+    </a>
+
+    <div class="rec-info-wrapper-styler">
+      <div class="rec-item-duration jsItemTiming"></div>
+
+      <div class="rec-item-ext tag-ext"></div>
+      <div class="rec-item-size tag-size"></div>
+
+      <div class="rec-tags-holder hidden-xs">
+        </div>
+
+      <div class="rec-author-dir-holder">
+        <a href="#" class="link-profile"></a>
+        <span class="in">in</span>
+        <a href="#" class="link-dir"></a>
+      </div>
+
+      <div class="rec-item-size"></div>
+      <div class="rec-item-date"></div>
+      <div class="rec-item-author mob-author cut-long-string"></div>
+    </div>
+
+  </div>
+</div>
+
+<input type="hidden" id="defaultMusicArtwork" value="https://static.4shared.com/images/music-cover-big.svg?ver=-1068539551">
+
+<input type="hidden" id="jsOneFileOk" name="jsOneFileOk" value="File $[p1] has been successfully added to your account. &lt;a href='https://www.4shared.com/account/home.jsp'&gt;Go to account&lt;/a&gt;">
+<input type="hidden" id="jsFilesOk" name="jsFilesOk" value="$[p1] files has been successfully added to your account. &lt;a href='https://www.4shared.com/account/home.jsp'&gt;Go to account&lt;/a&gt;">
+<input type="hidden" id="jsOneFileErr" name="jsOneFileErr" value="Error on adding file to account: $[p1]">
+<input type="hidden" id="jsFilesErr" name="jsFilesErr" value="$[p1] errors on adding file to account">
+<input type="hidden" id="jsFilesWarn" name="jsFilesWarn" value="File $[p1] has been successfully added to your account. $[p2] errors!. &lt;a href='https://www.4shared.com/account/home.jsp'&gt;Go to account&lt;/a&gt;">
+<input type="hidden" id="jsOneFolderOk" name="jsOneFolderOk" value="Folder $[p1] has been successfully added to your account. &lt;a href='https://www.4shared.com/account/home.jsp'&gt;Go to account&lt;/a&gt;">
+<input type="hidden" id="jsOneFolderErr" name="jsOneFolderErr" value="Error on adding folder to account: $[p1]">
+
+<input type="hidden" id="jsRootFolderIdForCurrentUser" name="jsRootFolderIdForCurrentUser" value="-1">
+<input type="hidden" id="jsAbuseConfirmPopupBody" name="jsAbuseConfirmPopupBody" value="This file may be inappropriate for some users. Please confirm that you are 18 or older">
+<input type="hidden" id="jsconfirmButtonText18age" name="jsconfirmButtonText18age" value="Confirm">
+<input type="hidden" id="jsCurUserId" name="jsCurUserId" value="-1">
+
+<input type="hidden" class="jsMyAccountLink" name="curUserId" value="https://www.4shared.com/account/home.jsp">
+<input type="hidden" class="jsAddActionButtonText" name="addActionText" value="Go to account">
+<input type="hidden" class="jsAddOneFileOkText" name="addOneFileOk" value="$[p1] has been successfully added to your account">
+<input type="hidden" class="jsAddMultiplyFilesOkText" name="addFilesOk" value="$[p1] files have been successfully added to your account">
+
+<script type="text/javascript" src="https://static.4shared.com/js/batch/restBatch.4min.js?ver=-293660606"></script>
+<script type="text/javascript" src="https://static.4shared.com/js/batch/addToMyAccount.4min.js?ver=1066473732"></script>
+<div class="black-bg fullpage-wrapper responsiveFooter">
+  <div class="container">
+    <div class="row rich-footer hidden-xs hidden-sm">
+      <div class="col-md-2">
+        <span>Site Links</span>
+        <div class="footer-link"><a href="https://www.4shared.com/" data-ga="foot.0">Home</a></div><div class="footer-link"><a href="https://www.4shared.com//web/q/top" data-ga="foot.1">Search</a></div><div class="footer-link"><a href="#" class="jsVideoSyncSignupButton curPointer" data-toggle="modal" data-target="#signupPopup" data-ga="foot.2">Sign Up</a></div><div class="footer-link"><a href="https://www.4shared.com/premium.jsp?ref=footer" data-ga="foot.3">Premium</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/links.jsp" data-ga="foot.4">Link to Us</a></div>
+      </div>
+      <div class="col-md-2">
+        <span>Help</span>
+        <div class="footer-link"><a href="https://www.4shared.com/web/helpCenter" data-ga="foot.5">Support</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/faq.jsp" data-ga="foot.6">FAQ</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/tutorial/" data-ga="foot.7">Quick Tour</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/features.jsp" data-ga="foot.8">Features</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/contact.jsp" data-ga="foot.9">Contact Us</a></div>
+      </div>
+      <div class="col-md-2">
+        <span>About</span>
+        <div class="footer-link"><a href="https://www.4shared.com/aboutus.jsp" data-ga="foot.10">Company</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/advertise/" data-ga="foot.11">Advertising</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/resellers.jsp" data-ga="foot.12">Resellers</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/paymentContacts.jsp" data-ga="foot.13">Payment Contacts</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/copyright-center.jsp" data-ga="foot.14">Copyright</a></div>
+      </div>
+      <div class="col-md-2">
+        <span>Media</span>
+        <div class="footer-link"><a href="https://www.4shared.com/press_room/" data-ga="foot.15">Press Room</a></div>
+        <div class="footer-link"><a href="https://blog.4shared.com/" target="_blank" data-ga="foot.16">Blog</a></div>
+      </div>
+      <div class="col-md-2">
+        <span>Tools</span>
+        <div class="footer-link"><a href="https://www.4shared.com/mobile.jsp" data-ga="foot.17">4shared Mobile</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/developer/" data-ga="foot.18">Developer</a></div>
+        </div>
+      <div class="col-md-2">
+        <span>Legal</span>
+        <div class="footer-link"><a href="https://www.4shared.com/terms.jsp" data-ga="foot.20">Terms of Use</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/privacy.jsp" data-ga="foot.21">Privacy</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/dmca.jsp" data-ga="foot.22">Copyright Infringement</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/security.jsp" data-ga="foot.23">Security</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/musicIdentification.jsp" data-ga="foot.24">Music Identification</a></div>
+        <div class="footer-link"><a href="https://www.4shared.com/sla.jsp" title="Service Level Agreement" data-ga="foot.25">SLA</a></div>
+        <div class="footer-link jsDoNotSell"><span>Do not sell my personal information</span></div>
+          <div class="footer-link jsDoNotSell"><span>Do not share my personal information</span></div>
+        </div>
+    </div>
+
+    <div class="row pure-footer visible-sm-block visible-xs-block">
+      <div class="col-sm-4"><a href="https://www.4shared.com/terms.jsp" data-ga="foot.26">Terms of Use</a></div>
+      <div class="col-sm-4"><a href="https://www.4shared.com/privacy.jsp" data-ga="foot.27">Privacy</a></div>
+      <div class="col-sm-4"><a href="https://www.4shared.com/web/helpCenter" data-ga="foot.28">Support</a></div>
+      <div class="jsDoNotSell footer-link">Do not sell my personal information</div>
+        <div class="jsDoNotSell footer-link">Do not share my personal information</div>
+      <div class="mobileVersionLink"><span onclick="mobileView()" data-ga="foot.19">Mobile Version</span></div>
+      </div>
+
+    <div class="row footer-buttons-wrapper">
+      <div class="col-md-2 hidden-xs hidden-sm logo-block">
+
+      </div>
+      <div class="col-xs-8 col-xs-push-2 col-md-7 col-md-push-3 col-sm-8 col-sm-push-2 lang-switcher-holder">
+        <div class="footer-button btn-lang jsLangSelectButton pull-right jsShowDropdown jsHideForSpecialDomain" data-ga="lang.1">
+          <div class="langboxabs" data-ga="lang.1"><span>•</span>
+    <b class="light-blue f11" data-ga="lang.1">English</b>
+
+    <div id="langPanel" class="alignLeft jsDropdown">
+        <div class="languages">
+          <div class="langItem" onclick="selectLang('de')" data-ga="lang.2-de">
+                <span data-ga="lang.2-de">Deutsch</span>
+              </div>
+            <div class="langItem" onclick="selectLang('ru')" data-ga="lang.2-ru">
+                <span data-ga="lang.2-ru">Русский</span>
+              </div>
+            <div class="langItem" onclick="selectLang('ko')" data-ga="lang.2-ko">
+                <span data-ga="lang.2-ko">한국어</span>
+              </div>
+            <div class="langItem" onclick="selectLang('in')" data-ga="lang.2-in">
+                <span data-ga="lang.2-in">Bahasa Indonesia</span>
+              </div>
+            <div class="langItem" onclick="selectLang('ms')" data-ga="lang.2-ms">
+                <span data-ga="lang.2-ms">Bahasa Melayu</span>
+              </div>
+            <div class="langItem" onclick="selectLang('pt-BR')" data-ga="lang.2-pt-BR">
+                <span data-ga="lang.2-pt-BR">Português (Brasil)</span>
+              </div>
+            <div class="langItem" onclick="selectLang('it')" data-ga="lang.2-it">
+                <span data-ga="lang.2-it">Italiano</span>
+              </div>
+            <div class="langItem" onclick="selectLang('fr')" data-ga="lang.2-fr">
+                <span data-ga="lang.2-fr">Français</span>
+              </div>
+            <div class="langItem" onclick="selectLang('es')" data-ga="lang.2-es">
+                <span data-ga="lang.2-es">Español</span>
+              </div>
+            <div class="langItem" onclick="selectLang('zh')" data-ga="lang.2-zh">
+                <span data-ga="lang.2-zh">中文</span>
+              </div>
+            <div class="langItem" onclick="selectLang('ar')" data-ga="lang.2-ar">
+                <span data-ga="lang.2-ar">العربية</span>
+              </div>
+            <div class="langItem" onclick="selectLang('vi')" data-ga="lang.2-vi">
+                <span data-ga="lang.2-vi">Tiếng Việt</span>
+              </div>
+            <div class="langItem" onclick="selectLang('th')" data-ga="lang.2-th">
+                <span data-ga="lang.2-th">ไทย</span>
+              </div>
+            <div class="langItem" onclick="selectLang('ja')" data-ga="lang.2-ja">
+                <span data-ga="lang.2-ja">日本語</span>
+              </div>
+            <div class="langItem" onclick="selectLang('fa')" data-ga="lang.2-fa">
+                <span data-ga="lang.2-fa">پارسی</span>
+              </div>
+            <div class="langItem" onclick="selectLang('pl')" data-ga="lang.2-pl">
+                <span data-ga="lang.2-pl">Polski</span>
+              </div>
+            <div class="langItem" onclick="selectLang('tr')" data-ga="lang.2-tr">
+                <span data-ga="lang.2-tr">Türkçe</span>
+              </div>
+            <div class="langCorner"></div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+        <a href="https://www.youtube.com/channel/UCwGSH1iBEzNE0SeYJJs0QQw" target="_blank" class="footer-button btn-yt hidden-xs pull-right" data-ga="foot.30" aria-label="Our Youtube channel"></a>
+        <a href="https://www.facebook.com/official.4shared" target="_blank" class="footer-button btn-fb hidden-xs pull-right" data-ga="foot.31" aria-label="Our Facebook page"></a>
+        <a href="https://twitter.com/4shared" target="_blank" class="footer-button btn-tw hidden-xs pull-right" data-ga="foot.32" aria-label="Our Twitter"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-spacer showCCPA"></div>
+
+<script type="application/javascript">
+// --------------------- mobile/desktop version switch ---------------------
+function classicView() {
+  document.cookie = 'classicView=true; path=/; domain=' + encodeURIComponent(Config.cookieDomain);
+  window.location.reload();
+}
+
+function mobileView() {
+  document.cookie = 'classicView=false; expires=-1; path=/; domain=' + encodeURIComponent(Config.cookieDomain);
+  window.location.reload();
+}
+</script>
+
+<!--jscount-->
+<script type="text/javascript">
+  (new Image()).src="//www.jscount.com/a/4/28b1a41b/z?ref=" +
+      escape(document.referrer)+"&url="+escape(document.URL)+"&rand="+Math.random()
+</script>
+
+<script type="text/javascript">
+  Events.addListener("countEvent", function (data) {
+    $("<img/>").attr('src', "//www.jscount.com/a/" + data + "/z?ref=" +
+        escape(document.referrer) + "&url=" + escape(document.URL) + "&rand=" + Math.random());
+  });
+</script>
+<!--jscount-->
+
+
+<script type="text/javascript">Events.fireLazyEvent("ld.counter");</script>
+<!-- Start of google-analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://ssl.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-306602-1', '4shared.com', {'sampleRate': 80});
+  ga('send', 'pageview');
+</script>
+<!-- End of google-analytics -->
+<script type="text/javascript">
+  function trackAdBlockDetected() {
+    $('body').append("<" + "img" + " src='http://www.jscount.com/a/2339/84ab90d2/z?ref=" + escape(document.referrer) + "&url=" + escape(document.URL) + "&rand=" + Math.random() + "' width=1 height=1 alt='' style='display:none'>");
+  }
+
+  /**
+   * tracks an event when AdBlock was detected and then user turned it off
+   */
+  function trackAdBlockTurnedOff() {
+    $('body').append("<" + "img" + " src='http://www.jscount.com/a/2340/5185ae9b/z?ref=" + escape(document.referrer) + "&url=" + escape(document.URL) + "&rand=" + Math.random() + "' width=1 height=1 alt='' style='display:none'>");
+  }
+</script>
+
+<style>
+  .cookies-notice {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    color: #E2E5E7;
+    font-size: 12px;
+    line-height: 20px;
+    z-index: 110;
+    display: none;
+  }
+
+  .forMobApp .cookies-notice {
+    display: none !important;
+  }
+
+  .site4sync .cookies-notice {
+    background: rgba(67, 78, 95, 0.9);
+    color: #fff;
+  }
+
+  .cookies-notice .cookies-holder {
+    padding: 28px 250px 28px 30px;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .cookies-notice a {
+    color: #E2E5E7;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+
+  .site4sync .cookies-notice a {
+    color: #fff;
+  }
+
+  .cookies-agree {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    right: 30px;
+    top: 50%;
+    margin-top: -20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #3E464E;
+    box-sizing: border-box;
+    border-radius: 18px;
+  }
+
+  .site4sync .cookies-agree {
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+  .cookies-notice a:hover {color: #008BF6}
+  .cookies-agree:hover {
+    border-color: #008BF6;
+    background: #008BF6;
+  }
+
+  .site4sync .cookies-notice a:hover {color: #1CBDEC}
+  .site4sync .cookies-agree:hover {
+    border-color: #1CBDEC;
+    background: #1CBDEC;
+  }
+  .site4sync .cookies-agree:active {
+    border-color: #4FC7F4;
+    background: #4FC7F4;
+  }
+
+  /*XS screen styles*/
+
+  @media (max-width: 767px) {
+    .cookies-notice .cookies-holder {
+      padding: 24px 30px 78px;
+    }
+
+    .cookies-agree {
+      left: 30px;
+      right: 30px;
+      bottom: 24px;
+      top: auto;
+      margin: 0;
+      width: auto;
+    }
+  }
+
+</style>
+
+<div class="cookies-notice jsCookiesMessage" style="display: block;">
+  <div class="cookies-holder">
+    <strong>We Use Cookies.</strong> 4shared uses cookies and other tracking technologies to understand where our visitors are coming from and improve your browsing experience on our Website. By using our Website, you consent to our use of cookies and other tracking technologies. <a href="/privacy.jsp#cookies" target="_blank">Change my preferences</a><div class="cookies-agree jsCookiesAgree">I Agree</div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    var cookiesMessage = $('.jsCookiesMessage');
+    var body = $('body');
+
+    if (!localStorage.getItem('cookies-message-closed')) {
+      body.addClass('some-priority-popup-visible');
+      cookiesMessage.slideDown();
+    }
+
+    $('.jsCookiesAgree').click(function () {
+      cookiesMessage.slideUp();
+      localStorage.setItem('cookies-message-closed', 'true');
+    });
+
+    if (window.location.hash && body.hasClass('pagePrivacy') && body.hasClass('is-ios')) {
+      setTimeout(function () {
+        var hash = window.location.hash;
+        window.location.hash = "";
+        window.location.hash = hash;
+      }, 1000);
+    }
+  })
+</script><input type="hidden" class="jsDisclosureCookieName" value="disclosure">
+<input type="hidden" class="jsIsUserLogedIn" value="false">
+<input type="hidden" class="jsWeWillNotSellYou" value="We will not sell your personal information.">
+<input type="hidden" class="jsAreYouSureYouWantToProceed" value="Are you sure you want to proceed?">
+<input type="hidden" class="jsAreYouSure" value="Are you sure?">
+
+
+<script type="application/javascript">
+  $('.jsDoNotSell').live('click', function() {
+    if ($('body').hasClass('mobile')) {
+      if(confirm($('.jsAreYouSureYouWantToProceed').val())){
+        callback();
+      }
+    } else {
+      showPopup();
+    }
+
+    function showPopup() {
+      var popup = PopupModule.popupWithButtons({
+        title: $('.jsAreYouSure').val(),
+        content: $('.jsAreYouSureYouWantToProceed').val(),
+        buttonsType : 1,
+        type: "wait",
+        confirmCallback : function () {
+          callback();
+          popup.closePopup();
+          notifyBlock.displayNotification($('.jsWeWillNotSellYou').val());
+        }
+      });
+    }
+
+    function callback() {
+      if ($('.jsIsUserLogedIn').val() === "true") {
+        $.ajax({
+          type: 'put',
+          dataType: 'json',
+          url: "/web/rest/v1_2/user",
+          data: {'disclosure' : false},
+          success: function () {}
+        });
+      } else {
+        document.cookie = $('.jsDisclosureCookieName').val() + '=true; expires=-1; path=/; domain=' + Config.mainSiteDomain;
+      }
+
+      $('.jsDoNotSell').remove();
+    }
+  })
+</script>
+
+<div id="serviceSectionHolder">
+    <script type="text/javascript" src="https://static.4shared.com/js/relativeScript.4min.js?ver=-476976299"></script>
+<ins class="a3dcb213" data-key="ee6276fc681a360f6b50fe2909edff0e" data-cp-loggedin="false" data-cp-filetype="ERROR" data-cp-pagetype="ERROR" data-cp-category="ERROR" data-cp-filename="" data-cp-extension="" data-cp-lang="en" data-cp-preview="" id="a3dcb213-ee6276fc681a360f6b50fe2909edff0e-0-1256" style="text-decoration: none; margin: 0px; padding: 0px; display: block; background: transparent;"><ins id="a3dcb213-ee6276fc681a360f6b50fe2909edff0e-0-1256-1" style="text-decoration: none; margin: 0px auto; padding: 0px; display: block; background: transparent; position: relative;"><script async="" src="https://serving.stat-rock.com/player.js"></script>
+<script>(function(){var s=document.querySelector('script[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"jQBbtZ3GjI5Z",after:s});})();</script></ins></ins>
+</div>
+<input id="errorInfo" type="hidden" data-error-text="The file link that you requested is not valid." data-error-type="default link error" data-error-cause="12116 checkIfFileBanned banCode=105 sf == null || SharedFileImpl.wasDeleted(sf.getFileEntity())">
+
+
+
+<div id="tiptip_holder" style="max-width:250px;"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content" class="lucida"></div></div></body></html>

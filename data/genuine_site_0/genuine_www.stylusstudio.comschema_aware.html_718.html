@@ -1,0 +1,884 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="/style/rebrand.css" rel="stylesheet" type="text/css" /> 
+    <link href="/style/default.css" rel="stylesheet" type="text/css" /> 
+    <link href="/style/hidefromprint.css" rel="stylesheet" type="text/css" media="print" /> 
+    <link rel="SHORTCUT ICON" href="/2024favicon.ico" />
+    <meta name="COPYRIGHT" content="Copyright (c) 2004-2025 IVI Technologies Corporation" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title id="ctl00_PageTitle">XML Schema-Aware Queries and Stylesheets</title>
+    <meta id="ctl00_PageDescription" name="DESCRIPTION" content="Learn how to simplify XSLT and XQuery applications using Schema Aware XSLT and XQuery processing technologies."></meta>
+    <meta id="ctl00_KeyWords" name="KEYWORDS" content="xml aware editor, xml-aware editor, schema aware xquery, schema aware xml editor, schema aware xslt, dtd aware xml editor, schema aware, why schema aware,
+xml aware editors, schema-aware saxon"></meta>
+	<meta name="robots" content="index, follow" />
+    <meta name="language" content="english">
+	<meta name="googlebot" content="index, follow" />
+    <meta name="viewport" content="initial-scale=0">
+    <meta name="trustpilot-one-time-domain-verification-id" content="fgtvfkz51JJHUQA7wu22yt6oZ7IdSPxVtTokGd7z"/>
+    
+
+</head>
+<body>
+     
+    <div id="wholeBody">
+        <div id="pageHeader">
+            
+<script language="javascript" type="text/javascript">
+// <!CDATA[
+
+function masthead_onclick() {
+
+}
+
+// ]]>
+</script>
+
+
+
+
+<!-- COOKIE BOT -->
+<!-- <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="31aafd4f-5b0a-46e2-b62c-a4799dcb0758" type="text/javascript" async></script> -->
+<!-- END COOKIE BOT -->
+
+<style type="text/css">
+.key-guide-shade {
+background: #000;
+position: fixed;
+top: 0px;
+left: 0px;
+width:100%;
+height:100%;
+z-index:2002;
+opacity:.7;
+}
+
+.witch-image {
+margin-left:-300px;
+margin-top:-268px;
+left:50%;
+top:50%;
+position:absolute;
+z-index:2003;
+}
+
+.close-image {
+margin-left:0px;
+margin-top:225px;
+left:50%;
+top:50%;
+position:absolute;
+z-index:2003;
+}
+
+</style>
+
+<div>
+
+	<div class="header-wrap"> <!-- wrap that header yo -->
+
+		<div class="logo-hold">
+			<a href="/index.html" class="main-logo"><img border="0" alt="Stylus Studio&reg; XML Editor" src="/images/stylus-new-logo.png" height="70" border="0" /></a>
+		</div>
+       <!-- <div class="logo-hold">
+            <a href="/buy/" class="main-logo"><img border="0" alt="Save 25% Now" src="/images/emails/june16/x16-sale-header.jpg" height="60" border="0" /></a>    
+        </div>
+        -->
+		<div class="head-links"> 
+			<div class="head-tm">XML PRODUCTIVITY THROUGH INNOVATION &trade;</div>
+			<div class="head-links-text">
+                <a href="https://www.xmlconverters.com" title="Stylus XML Converters" target="_blank">Stylus XML Converters</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="https://www.xquery.com" title="Stylus XQuery" target="_blank">Stylus XQuery</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="/SSDN">XML Developer Network</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="https://www.stylusstudio.com/XML-Editor-Blog/">XML Editor Blog</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="https://www.xmlpipelineserver.com" title="XML Pipeline Server" target="_blank">XML Pipeline Server</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="https://www.stylusstudio.com/xml-contact.html">Contact Us</a>
+			</div>
+		</div>
+
+	</div> <!-- wrap that header yo -->
+
+	<div style="margin:0px 0px 5px 0px;">
+		<table id="menustrip" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="center">
+					<a href="/xml-product-index.html" id="ctl00_HeadMenu1_ProductMenu" class="menuItem" title=" XML Integrated Development Environment (XML IDE) ">PRODUCTS</a></td>
+				<td align="center">
+					<a href="/xml-download.html" id="ctl00_HeadMenu1_TryMenu" class="menuItem" title=" Download XML Tool ">DOWNLOAD</a></td>
+				<td align="center">
+					<a href="/buy/" id="ctl00_HeadMenu1_BuyMenu" class="menuItem" title=" Stylus Studio Online Shop ">BUY</a></td>
+				<td align="center">
+					<a href="/learn-xml.html" id="ctl00_HeadMenu1_LearnMenu" class="menuItemActive" title="Developer Resource Center: Learn XML and Stylus Studio">LEARN</a></td>
+				<td align="center">
+					<a href="/xml-support.html" id="ctl00_HeadMenu1_SupportMenu" class="menuItem" title="Stylus Studio Support Center">SUPPORT</a></td>
+				<td align="center">
+					<a href="/xml-company-index.html" id="ctl00_HeadMenu1_CompanyMenu" class="menuItem" title="About Stylus Studio">COMPANY</a></td>
+				<td style="border: 0;" align="right" nowrap="nowrap">
+					<a href="/buy/cart.html" class="menuAlt" title="Order Stylus Studio">
+						<img alt="Shopping cart" hspace="3" align="middle" vspace="0" src="/images/cart.png" style="margin: -7px 0px 0px 0px;" height="17px" /> Cart</a> 
+				</td>
+
+				<td style="border: 0;" align="right" nowrap="nowrap">
+					<form style="margin: 2px; padding: 0" method="get" action="/search/">
+						<input onclick="this.select();" style="border: #666 1px solid; font-size: x-small;
+							vertical-align: middle;" name="q" size="30" value="" /><input type="image"
+								alt="Search Stylus Studio" src="/images/search-icon.png" style="margin: 0px 7px -3px 5px; height:17px;"
+								style="vertical-align: middle;" />
+
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+        </div>
+        <div id="mainContent">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td id="ctl00_LeftCol" valign="top">
+                        <div id="ctl00_NavMenu1_NavMenuArea" class="LeftColFixed">
+    <ul id="ctl00_NavMenu1_NavMenuList" class="NavMenuList">
+    <li class="NavMenuListItem"><div><a href="/newsletter-archive.html" Title="Stylus Studio Newsletter Archive">Newsletter Archive</a></div></li><li class="NavMenuListItem"><div><a href="/xml-book.html" Title="XML Book">XML Books</a></div></li><li class="NavMenuListItem"><div><a href="/xml-newsletter.html" Title="Newsletter for XML Developers">XML Newsletter</a></div></li><li class="NavMenuListItem"><div><a href="/xml-tech-talk.html" Title="XML Tech Talks">XML Tech Talks</a></div></li><li class="NavMenuListItem"><div><a href="/xml-technology-index.html" Title="Supported XML Technologies">XML Technologies</a></div></li><li class="NavMenuListItemActive"><div><a href="/xml-tutorial.html" Title="XML Tutorials">XML Tutorials</a></div><ul><li><a href="/xml-tutorial.html" Title="XML Tutorials">XML Tutorials - Overview</a></li><li><a href="/tutorials/stylus-tutorials.html" Title="XML Editor - Stylus Studio Tutorials">XML Editor Tutorials</a></li><li><a href="/tutorials/data-integration-tutorials.html" Title="Integration Tutorials">Data Integration Tutorials</a></li><li><a href="/tutorials/xml-schema-tutorials.html" Title=" XML Schema Editor">XML Schema Tutorials</a></li><li class="NavMenuLinkActive"><a href="/tutorials/xquery-tutorials.html" Title="XQuery Tutorials">XQuery Tutorials</a></li><li><a href="/tutorials/intro-xslt-3.html" Title="Introduction to XSLT 3.0">Introduction to XSLT 3.0</a></li><li><a href="/tutorials/mapping-google-earth-in-xslt.html" Title="Mapping Farmers' Markets in Google Earth using XSLT">Mapping Farmers' Markets</a></li><li><a href="/tutorials/Life-Cycle-of-a-Purchase-Order-EDI-XML-PDF.html" Title="Life Cycle of a Purchase Order: EDI X12, XML and PDF">Life Cycle of a Purchase Order</a></li><li><a href="/tutorials/extending-XSLT-with-java-c-sharp.html" Title="Extending XSLT with Java and C#">Extending XSLT with Java and C#</a></li><li><a href="/tutorials/Presidential-Elections-Processing-Historical-Data.html" Title="Presidential Elections ">Presidential Elections | Processing Historical Dat</a></li><li><a href="/tutorials/xquery-generate-json-relational-data.html" Title="Using XQuery To Generate JSON from Relational Data">Using XQuery To Generate JSON from Relational Data</a></li><li><a href="/tutorials/update-libraries-with-google-books-api.html" Title="Keep Your Library Up-to-Date with Google Books API">Keep Your Library Up-to-Date with Google Books API</a></li><li><a href="/tutorials/dana-pearson-gutenberg-project.html" Title="My Gutenberg Project by Dana Pearson">My Gutenberg Project by Dana Pearson</a></li><li><a href="/tutorials/adding-support-for-xml-converter-generic-dialect.html" Title="Adding Support for XML Converter Generic Dialect in Stylus Studio">Adding Support for XML Converter Generic Dialect</a></li><li><a href="/tutorials/transforming-xml-to-fixed-width.html" Title=" Transforming XML to Fixed-Width"> Transforming XML to Fixed-Width</a></li></ul></li><li class="NavMenuListItem"><div><a href="/xml-whitepaper.html" Title="XML Whitepapers">XML Whitepapers</a></div></li><li class="NavMenuListItem"><div><a href="/w3c/" Title="W3C Standards">W3C Specs</a></div></li><li class="NavMenuListItem"><div><a href="/api/" Title="javadoc">XML API's</a></div></li><li class="NavMenuListItem"><div><a href="/feeds/" Title="RSS Feeds">RSS &amp; Atom Feeds</a></div></li><li class="NavMenuListItem"><div><a href="/blogs/" Title=" Stylus Studio Blogs">XML Blogs</a></div></li><li class="NavMenuListItem"><div><a href="/quickstart/" Title="Stylus Studio QuickStart Training WebCast">QuickStart Training</a></div></li><li class="NavMenuListItem"><div><a href="/xml-video-list.html" Title="XML Video Demonstrations - The complete list">XML Video Demos</a></div></li></ul>
+</div>
+ 
+                    </td>
+
+                    <td valign="top">
+                        <div id="ContentCol">
+                            <p id="ctl00_BreadCrumb1_BreadCrumbs" class="BreadCrumbs">
+    <span><a href="/" title="XML Editor ">Home</a> > </span><span><a href="/learn-xml.html" title="Developer Resource Center: Learn XML and Stylus Studio">Learn XML</a> &gt; </span><span><a href="/xml-tutorial.html" title="XML Tutorials">XML Tutorials</a> &gt; </span><span><a href="/tutorials/xquery-tutorials.html" title="XQuery Tutorials">XQuery Tutorials</a> &gt; </span><span id="ctl00_BreadCrumb1_BreadCrumbsThisPage" class="BreadCrumbsThisPage">Schema-Aware Queries and Stylesheets</span>
+<br>
+    <!--
+<div class="quickjump-wrap top" style="background-color: #991320; border: 1px solid #5E0021;">
+    <div class="quickjump">
+        <a href="/buy/"><img src="/images/new-xml-editor.png" alt="XML Editor New Features" border="0" class="quickjump-image top" style="margin-top: 1px; margin-right: 5px;" /></a><a href="/buy/" style="color: #ffffff; font-size: 17px;"><strong>Save 25%</strong> on Licenses & AUP Right Now ></a></div>
+</div>
+    -->
+ 
+    <div class="quickjump-wrap top">
+<a href="/xml-download.html"><img src="/images/xml-editor-download.png" alt="XML Editor Download" border="0" class="quickjump-image" /></a><div class="quickjump"><a href="/xml-download.html">Download a Free Trial ></a></div>
+<a href="/xml-product-new-features.html"><img src="/images/new-xml-editor.png" alt="XML Editor New Features" border="0" class="quickjump-image top" /></a><div class="quickjump"><a href="/xml-product-new-features.html">See What's New ></a></div>
+<a href="/buy/"><img src="/images/xml-editor-cart.png" alt="XML Editing" border="0" class="quickjump-image top" /></a><div class="quickjump"><a href="/buy/">Buy Now ></a></div>
+</div>
+    
+
+</p> 
+                            <div id="ctl00_ContextMenu1_ContextMenuArea" class="ContextMenuArea">
+    <div id="ctl00_ContextMenu1_ContextMenuHeader" class="ContextMenuHeader">XQuery Tutorials</div>
+    <ul id="ctl00_ContextMenu1_ContextMenu" class="ContextMenu"><li><a href="/tutorials/xquery-tutorials.html" title="XQuery Tutorials">XQuery Tutorials - Overview</a></li><li><a href="/xquery-primer.html" title="Learn XQuery in 10 Minutes, by Dr. Michael Kay - An XQuery Tutorial">Learn XQuery in 10 Minutes - By Dr. Michael Kay</a></li><li><a href="/xquery-flwor.html" title="FLWOR">XQuery FLWOR Tutorial</a></li><li class="ContextMenuItemActive"><a href="/schema-aware.html" title="Schema-Aware XQuery">Schema-Aware Queries and Stylesheets</a></li><li><a href="/xquery/xquery-functions.html" title="User Defined Functions in XQuery">XQuery Functions</a></li><li><a href="/tutorials/relational-xml.html" title="Working with Relational and XML Data">Using Relational Data in XML Applications</a></li><li><a href="/xquery-primer-new.html" title="Learn XQuery in 10 Minutes">Learn XQuery in 10 Minutes</a></li></ul>
+</div>
+
+                            
+<div class="pdfLink"><a href="/whitepapers/schema-aware.pdf">Printer Friendly PDF (0.17 MB)</a></div>
+<style><!--
+.jdiv { border: black dotted 1px; padding: 2px; }
+.jcode { font-size: 9pt; }
+.jkeyword { color: #000090; }
+.jstring { color: #800080; }
+.jelement { color: #EA8F0F; }
+.jattr { color: #D00020; }
+--></style>
+
+<h1>Schema-Aware Queries and Stylesheets</h1>
+<p>By: <a href="/michael-kay.html" class="list" title=" Conversation on XML Technologies">Dr. Michael Kay</a></p>
+
+<p>In the previous articles in this series I gave a basic <a href="/xquery-primer.html" title="Learn XQuery in 10 Minutes, by Dr. Michael Kay - An XQuery Tutorial">introduction to XQuery</a> and a more detailed overview of 
+what you can achieve using <a href="/xquery-flwor.html" title="FLWOR">XQuery FLWOR</a> expressions.</p>
+
+<p>One of the most significant <a href="/xml-product-new-features.html" title="What's New in Stylus Studio ">new features</a> in the Stylus Studio 2006 edition is the introduction of support for handling schema-aware XSLT and XQuery. So in this article, that's going to be my focus. The examples in this article requires <a href="/xml-download.html" title=" Download XML Tool ">downloading</a> and installing Stylus Studio 2006 edition, build 501f or later: this build includes Saxon 8.6.1, an XML schema-aware XSLT and XQuery processor.</p>
+
+<p><a href="/xml-schema.html" title=" XML Schema Editor">XML Schema-awareness</a> is an optional feature. Not every product will support it, and not every query or stylesheet will use it. You might consider it to be an advanced feature, which will only be needed by the most demanding applications. However, I'd like to persuade you that schema-awareness in XSLT and XQuery is something that you should consider using all the time. It's similar to the situation with XML itself: you can create and manipulate XML documents without ever <a href="/open-xsd-validation.html" title=" Validate XML using XML Schema">validating</a> them against a DTD or schema, 
+but many experts will tell you that that's not good practice in anything other than a throwaway use-once application. Similarly, you can write queries and stylesheets that don't use schema-aware features, but I think that you're losing something by doing that.</p>
+
+<p>"Queries and stylesheets" is a bit of a mouthful, and it's just one example of where <a href="/xquery.html" title="XQuery Tools">XQuery</a> and <a href="/xslt.html" title="XSLT Tools">XSLT</a> have different names for what's essentially the same concept. But I think it's worth covering both languages in the same article, because the way they handle schema-awareness is so similar. Also, I think all serious XML practitioners should have both tools in their <a href="/buy/compare.html" title="XML Features - Stylus Studio Matrix">kitbag</a>. There are plenty of occasions when one tool is better than the other for a particular job, so sticking to one language alone is like going on the golf course with a single club.</p>
+
+<h2>What's the connection?</h2>
+<p>Where do queries/stylesheets and schemas fit together? Why should a transformation need to be schema-aware? I'll try and answer that question first on a theoretical level (but don't worry, there's no math). Later in the article, we'll see what this means in practice.</p>
+
+<p>The role of type systems in programming language theory has a long and distinguished history. Ever since Fortran decided that variables beginning with I-N were integers while everything else was floating point, it's been recognized that different variables hold different kinds of value, and that it's a good thing if the programmer and the compiler both know clearly what kind of value is held in each variable. This gives several benefits. It means you can use the same symbol "+" to refer to integer addition or floating-point addition, while still allowing the compiler to know in advance which is intended (a property called <i>polymorphism</i>). It means you can get better error messages if you try to perform operations that don't make sense, like multiplying a date by an integer. And it means, in general, that a compiler can generate more efficient code, simply because it has more information to go on.</p>
+<p>The key benefit, however, is error checking. If you've written stylesheets in <a href="/w3c/xslt/_index.htm">XSLT 1.0</a>, then you're probably painfully familiar with the fact that when you get your code wrong, the effects can be very baffling. Usually you get no error message telling you what you've done wrong, just "wrong" output, or no output at all. You then have to go through lengthy debugging procedures (greatly assisted by the <a href="/xslt-debugger.html" title="XSL Debugger">XSLT debugger</a> and <a href="/xquery-debugger.html">XQuery debugger</a> in Stylus Studio, of course, but still laborious) to trace the incorrect output to the actual source of the problem.</p>
+
+<h2>An Experiment: Spot the Error</h2>
+<p>In case you're not convinced, let's try a little experiment.</p>
+<p>We'll use the same source data file as in my previous articles: the <code><a href="/examples/videos.xml">videos.xml</a></code> file included in the Stylus Studio <code>examples/VideoCenter</code> folder. You'll see it listed if you open the Examples project. </p>
+<p>Now here's one of the queries from my previous article, but with a deliberate error:</p>
+
+
+<p><div class="jdiv"><code class="jcode">
+<span class="jkeyword">declare variable</span> $input := doc(<span class="jstring">'videos.xml'</span>)/*;<br/>
+<br/>
+<span class="jkeyword">for</span> $v <span class="jkeyword">in</span> $input/videos/video<br/>
+<span class="jkeyword">where</span> $v/@year = 1999<br/>
+<span class="jkeyword">return</span> $v/title<br/>
+</code></div></p>
+
+<p>Try running this under Stylus Studio. Open the Examples project. Select File/New/XQuery File, and paste in the above code. 
+Configure Stylus Studio to use Saxon (version 8.6.1 or later) (select Tools/Options/XQuery/Processor Settings, 
+then select Saxon 8.6.1 from the drop-down, and tick the box marked "Use as default processor"). 
+Repeat for XSLT if you want to try the XSLT examples. Click on "Create Scenario", and in the box labelled 
+"Main input (optional)" navigate your way to the <code>videos.xml</code> file in <code>examples/VideoCenter</code>, 
+and select it. Then click the triangle icon to execute the query. It will prompt you to save the query as a file, 
+and I suggest you call it "query1.xquery" and place it in the same directory as the <code>videos.xml</code> file.</p>
+
+<p>Result? A blank screen.</p>
+
+<p>If you prefer XSLT, it's just the same. Try this stylesheet. Select File/New/XSLT Text Editor, point 
+the Source XML URL to the <code>videos.xml</code> file and paste in the following XSLT stylesheet code:</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:stylesheet </span><span class="jattr">version=</span><span class="jstring">"2.0"</span><span class="jattr"> xmlns:xsl=</span><span class="jstring">"http://www.w3.org/1999/XSL/Transform"</span><span class="jattr"><br />
+xpath-default-namespace=</span><span class="jstring">"http://www.stylusstudio.com/videos/ns"</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:template </span><span class="jattr">match=</span><span class="jstring">"/*"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:for-each </span><span class="jattr">select=</span><span class="jstring">"videos/video[@year = 1999]"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">title</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">xsl:value-of </span><span class="jattr">select=</span><span class="jstring">"title"</span><span class="jattr">/</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">/title</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/xsl:for-each</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:template</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:stylesheet</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+ 
+<p>Result? Another blank screen.</p>
+
+<p>Now let's see what happens if we add a schema. 
+ I've written one for the purpose of this tutorial, and you'll find it in the Stylus Studio default project if you downloaded
+ Stylus Studio after December 6, 2005, otherwise you can also download the <a href="/examples/videos.xsd">example schema</a> here.
+ 
+  Actually, I didn't write it: Stylus Studio did. I simply used the "XML to XML Schema" wizard to <a href="/autogen-xsd.html" title="XSD Generator
+">generate the XML Schema</a>. 
+  I made one or two small tweaks to add information that the wizard couldn't have guessed, for example that the year element is of type xs:gYear.  I suggest you save the schema as <a href="/examples/videos.xsd">videos.xsd</a> into the same folder as the videos.xml file. Just for confidence, associate the data file with the schema file (XML/Associate XML With Schema) and validate it (XML/Validate Document) using your favorite schema validator just to make sure.</p> 
+
+<p>Now let's edit the query and stylesheet to make them schema aware. The query now looks like this:</p>
+
+<p><div class="jdiv"><code class="jcode">
+<span class="jkeyword">import schema default element namespace</span> <span class="jstring">""</span> <span class="jkeyword">at</span> <span class="jstring">"videos.xsd"</span>;<br/>
+<span class="jkeyword">declare variable</span> $input <span class="jkeyword">as</span> schema-element(result)<br/>
+&nbsp;&nbsp; := doc(<span class="jstring">'videos.xml'</span>)/*;<br/>
+<br/>
+<span class="jkeyword">for</span> $v <span class="jkeyword">in</span> $input/videos/video<br/>
+<span class="jkeyword">where</span> $v/@year = 1999<br/>
+<span class="jkeyword">return</span> $v/title<br/>
+</code></div></p>
+
+<p>Open the scenario, select Processor, click the Settings button, and under "Schema Aware Settings / Source document validation" click the radio button labelled "Strict (-val)" as shown here:</p>
+
+<p><img src="/images/screenshots/saxon_xquery_settings.gif" alt="Configuring the Schema-Aware XQuery Processing Settings" width="416" height="277"/></p>
+
+
+<p>When you run this, you should get a pop-up with the message:</p>
+<p><img src="/images/screenshots/schema_aware_output.gif" alt="Schema Aware XQuery Processing Error Message" width="308" height="208"/></p>
+
+<p>It's pinpointed the deliberate error in the query: <code>year</code> is an element, not an attribute.</p>
+
+<p>In XSLT we can do the same thing. The schema-aware version of the stylesheet looks like this:</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:stylesheet </span><span class="jattr">version=</span><span class="jstring">"2.0"</span><span class="jattr"> xmlns:xsl=</span><span class="jstring">"http://www.w3.org/1999/XSL/Transform"</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:import-schema </span><span class="jattr">schema-location=</span><span class="jstring">"videos.xsd"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:template </span><span class="jattr">match=</span><span class="jstring">"schema-element(result)"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:for-each </span><span class="jattr">select=</span><span class="jstring">"videos/video[@year = 1999]"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">title</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">xsl:value-of </span><span class="jattr">select=</span><span class="jstring">"title"</span><span class="jattr">/</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">/title</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/xsl:for-each</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:template</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:stylesheet</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+<p>and we get essentially the same error message:</p>
+<p><img src="/images/screenshots/schema_aware_xslt.gif" alt="Validation Errors reported by the Schema Aware XSLT Processor" width="308" height="208"/></p>
+
+<p>You might be wondering why this is a warning rather than an error. The answer is that it's not actually an error to ask for an attribute that isn't there. The query is well defined, it just doesn't produce the output that we wanted. There might be good reasons for attempting to read an attribute that the schema doesn't allow, for example you might be anticipating a change in the next version of the schema. In XQuery there's an option (strict static typing) that does more draconian checks of your query and makes almost everything that might possibly be wrong a fatal error, but Saxon-SA doesn't currently implement this option.</p>
+
+<p>The experiment doesn't end here. Let's see what happens when we correct the error, changing "<code>@year</code>" to "<code>year</code>". You can do this with either the XQuery or the XSLT version.</p>
+
+<p>Whether we use the XQuery version or the XSLT version, we now get the error: Cannot compare <code>xs:gYear</code> to <code>xs:integer</code></p>
+
+<p><img src="/images/screenshots/schema_aware_error.gif" alt="An Error message produced by a Schema Aware Processor" width="450" height="173"/></p>
+
+<p>To correct this we have to change the <code>where</code> condition to <code>($v/year = xs:gYear('1999'))</code>.</p>
+
+<p>You have to get used to this kind of error message when doing schema-aware processing. Sometimes the message identifies a real error, for example comparing an integer to a date or adding two <code>xs:gYear</code> values. Sometimes it's more frustrating, because you feel the system should be capable of comparing a year to an integer. This is the price you pay for a system that tries its hardest to catch all your errors: occasionally it tries just a little bit too hard. But since the comparison can only be done by converting the integer to a year (or the year to an integer) it's no hardship to do it explicitly.</p>
+
+<h1>The Three Aspects of Schema-Awareness</h1>
+
+<p>We've seen an example of schema-awareness in action: now let's stand back and see what's going on. There are three ways in which you can exploit schema-awareness:</p>
+
+<ul>
+<li>You can refer to elements, attributes, and types defined in a schema, provided that you import the schema into your stylesheet or query</li>
+<li>You can validate input documents, and take advantage of the fact that this attaches type information to the nodes in an input document</li>
+<li>You can validate output documents, getting explicit error messages if you try to produce a document that isn't valid according to the target schema.</li>
+</ul>
+
+<p>In the rest of the article we'll look at each of these in turn.</p>
+
+<h2>Importing Schemas and declaring Types</h2>
+
+<p>Importing a schema simply makes the XQuery or XSLT processor aware at compile-time of the definitions contained in your schema: specifically, the top-level element and attribute declarations, and the named simple and complex type definitions. We've already seen an example of the syntax for importing a schema in both XSLT and XQuery. There are a couple of differences to be aware of:</p>
+<ul>
+<li>In XQuery you need to import a schema separately into each module where it is used. In XSLT, importing a schema in one module makes the definitions available throughout all modules of the stylesheet.</li>
+<li>XSLT also allows you to define a schema inline, within the stylesheet. This is useful if you want to declare types for local use within the stylesheet, for example a schema that describes the structure of intermediate results. This is possible because XSLT and XML Schema both use an XML-based syntax.</li>
+</ul>
+
+<p>There are various places where you can refer to these definitions, for example you can use them to define the types of variables or of function parameters, and you can test whether a particular value conforms to a given type using an <code>instance</code> of test. Most of these constructs make use of a piece of syntax called a <b>SequenceType</b>. The table below shows the more common forms of <b>SequenceType</b> you are likely to use, and explains their meaning:</p>
+
+<table border="1" bordercolor="#ccc" cellpadding="4" style="border-collapse:collapse;vertical-align:top">
+<tr>
+<td><b>Syntax</b></td>
+<td><b>Matches</b></td>
+</tr>
+
+<tr>
+<td><code>element(xyz)</code></td>
+<td>Any element named <code>xyz</code>. This form doesn't require <code>xyz</code> to be defined in an imported schema: in fact it doesn't require schema-awareness at all, but I've included it for completeness</td>
+</tr>
+
+<tr>
+<td><code>schema-element(xyz)</code></td>
+<td>Any element whose name is <code>xyz</code>, or whose name is the same as an element in the schema-defined substitution group of <code>xyz</code>. In this case <code>xyz</code> must be the name of a global element definition in an imported schema, and the element being tested must have been validated against the type defined for <code>xyz</code> in the schema.</td>
+</tr>
+
+<tr>
+<td><code>element(*, mytype)</code></td>
+<td>Any element that has been validated against the schema-defined type <code>mytype</code>. This may be a simple type or a global type, and unless it is one of the built-in types such as <code>xs:integer</code>, it must be defined in an imported schema.</td>
+</tr>
+
+<tr>
+<td><code>element(xyz, mytype)</code></td>
+<td>This SequenceType matches any element that satisfies both <code>element(xyz)</code> and <code>element(*, mytype)</code></td>
+</tr>
+
+<tr>
+<td nowrap><code>attribute(abc)<br/>
+schema-attribute(abc)<br/>
+attribute(*, mytype)<br/>
+attribute(abc, mytype)<br/></code></td>
+<td>These SequenceTypes match attributes in much the same way as the corresponding <code>element()</code> variants. However, it's unusual for schemas to define many top-level attribute definitions so some of these forms are rarely used. Also, of course, there's no equivalent of substitution groups in the case of attributes.</td>
+</tr>
+
+<tr>
+<td>Atomic type name, for example:<br/><br/><code>xs:integer<br/>my:part-number</code></td>
+<td>An atomic type name can be used as a SequenceType on its own, and matches any atomic value of that type: for example <code>xs:integer</code> matches an integer. The type name can either be a built-in name such as <code>xs:integer</code> or <code>xs:date</code>, or a user-defined atomic type in an imported schema</td>
+</tr>
+</table>
+<br/>
+<p>Any of these constructs can be followed by an occurrence indicator, which indicates how many instances of the relevant item may occur within a value. The occurrence indicators are shown in the next table:</p>
+
+<table border="1" bordercolor="#ccc" cellpadding="4" style="border-collapse:collapse;vertical-align:top">
+<tr>
+<td><b>Occurrence indicator</b></td>
+<td><b>Meaning</b></td>
+</tr>
+<tr>
+<td>?</td>
+<td>zero or one</td>
+</tr>
+<tr>
+<td>+</td>
+<td>one or more</td>
+</tr>
+<tr>
+<td>*</td>
+<td>zero or more</td>
+</tr>
+<tr>
+<td>(absent)</td>
+<td>exactly one</td>
+</tr>
+</table>
+<br/>
+
+<p>So, for example, <code>element(foo)*</code> matches a sequence of zero or more foo elements, while <code>xs:date?</code> matches an optional date.</p>
+
+<p>We've seen a couple of examples of SequenceType constructs in the experiment we did at the start. In the XQuery example, we declared the type of a variable:</p>
+
+<p><div class="jdiv"><code class="jcode>
+<span class="jkeyword">declare variable</span> $input <span class="jkeyword">as</span> schema-element(result)<br/>
+&nbsp;&nbsp; := doc(<span class="jstring">'videos.xml'</span>)/*;<br/>
+</code></div></p>
+
+<p>while in XSLT, we used a SequenceType in a match pattern to indicate which nodes a template rule should match:</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:template </span><span class="jattr">match=</span><span class="jstring">"schema-element(result)"</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+
+<p>Both these constructs had the effect of telling the compiler what kind of value to expect. In the XQuery case the type declaration also causes an error message if the input doesn't conform to the required type. In the XSLT case, input that doesn't match this type will simply cause this template rule not to be selected.</p>
+
+<p>Both languages allow you to use SequenceTypes to declare the types of function parameters and results. This is one of the most important uses of type declarations, so we'll examine it in some detail in the next section.</p>
+
+<h2>Writing Schema-Aware Functions</h2>
+
+<p>Both XQuery and XSLT 2.0 allow you to write libraries of functions, which you can invoke from within <a href="/xpath-evaluator.html" title="Xpath Tester">XPath expressions</a>. Such functions can be extremely useful to hide some of the complexity of real-life schemas — the kind of schemas like XBRL and FpML which try to cater for all possible varieties of transaction across a whole industry, and which therefore have an immense amount of generality built in. The difficulty with such schemas is that it's very hard to remember the names of all the elements, let alone their detailed nesting.</p>
+
+<p>(Don't panic if you don't know what XBRL and <a href="/fixml.html" title=" Working with Complex Message Sets">FpML</a> are: I won't even expand the acronyms. They are two examples of <a href="/oasis-catalog.html" title="OASIS Catalog Support">standardized XML vocabularies</a> designed to move data within and between organizations, and like many such vocabularies, they contain many hundreds of different element definitions.) </p>
+
+<p>A well-designed library of functions can hide this complexity: for example, it allows the person who wants to select all trades worth more than $1m to write <code>[f:dollar-value($trade) gt 1000000]</code> rather than something like <code>[$trade/trade/tradeHeader/ partyTradeInformation/revenue/event/payment/paymentAmount[currency='USD' and amount gt 1000000]]</code>. The people who write the function library need to understand the underlying complexity; those who write the queries don't.</p>
+
+<p>(If you know FpML, you will probably be bristling to tell me that this is all wrong. OK, I admit it, I'm simplifying grossly. Real life is even worse.)</p>
+
+<p>Both XSLT and XQuery allow you to write functions without declaring the types of the parameters and result, but when you're handling such complex data this really isn't a good idea, because people are very likely to pass the wrong input when calling the function (for example, the wrong start node for the selection) and the result will be garbage output and general incomprehension. Here's how you might write this function in a schema-aware query:</p>
+
+<p><div class="jdiv"><code class="jcode">
+<span class="jkeyword">declare function</span> f:dollar-value(<br/>
+&nbsp;&nbsp;&nbsp;$in <span class="jkeyword">as</span> element(*, fpml:tradeRequest))<br/>
+<span class="jkeyword">as</span> xs:decimal {<br/>
+&nbsp;&nbsp;&nbsp;$in/trade/tradeHeader/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partyTradeInformation/revenue/event/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;payment/paymentAmount[currency=<span class="jstring">'USD'</span>]/amount<br/>
+}<br/>
+</code></div></p>
+
+<p>In XSLT 2.0 the function is exactly the same, except for the surface syntax:</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:function </span><span class="jattr">name=</span><span class="jstring">"f:dollar-value"</span><span class="jattr"> as=</span><span class="jstring">"xs:decimal"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:param </span><span class="jattr">name=</span><span class="jstring">"in"</span><span class="jattr"> as=</span><span class="jstring">"element(*, fpml:tradeRequest)"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:sequence </span><span class="jattr">select=</span><span class="jstring">"<br />
+&nbsp;&nbsp;&nbsp;$in/trade/tradeHeader/<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partyTradeInformation/revenue/event/<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;payment/paymentAmount[currency='USD']/amount"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:function</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+
+<p>Let's go back to a simpler schema, the one for the videos. There are still many useful functions we can write to make it easier to get the data. Here's one that gets the first name of an actor, which I'll write in XQuery:</p>
+
+<p><div class="jdiv"><code class="jcode">
+<span class="jkeyword">declare function</span> f:first-name(<br/>
+&nbsp;&nbsp;&nbsp;$in <span class="jkeyword">as</span> schema-element(actor)) <br/>
+<span class="jkeyword">as</span> xs:string {<br/>
+&nbsp;&nbsp;&nbsp;normalize-space(substring-after($in, <span class="jstring">','</span>))<br/>
+}<br/>
+</code></div></p>
+
+<p>And here's one that finds all the videos featuring a particular actor. To keep you on your toes, this one uses XSLT syntax:</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:function </span><span class="jattr">name=</span><span class="jstring">"f:videos-for-actor"</span><span class="jattr"> as=</span><span class="jstring">"schema-element(video)*"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:param </span><span class="jattr">name=</span><span class="jstring">"actor"</span><span class="jattr"> as=</span><span class="jstring">"schema-element(actor)"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:sequence </span><span class="jattr">select=</span><span class="jstring">"$actor/(//video[actorRef=$actor/@id])"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:function</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+
+<p>Notice here that the result is a sequence whose items must all be video elements: the "as" attribute defining the return type uses the occurrence indicator "*".</p>
+
+<p>Because the types of the arguments are known, you'll get an error if you call the function incorrectly. Here's a complete query that declares the first function above and then tries to call it to get the first name of a director:</p>
+
+<p><div class="jdiv"><code class="jcode">
+<span class="jkeyword">import schema default element namespace</span> <span class="jstring">""</span> <span class="jkeyword">at</span> <span class="jstring">"videos.xsd"</span>;<br/>
+<span class="jkeyword">declare variable</span> $input <span class="jkeyword">as</span> schema-element(result) := doc(<span class="jstring">'videos.xml'</span>)/*;<br/>
+<br/>
+<span class="jkeyword">declare function</span> local:first-name(<br/>
+&nbsp;&nbsp;&nbsp;$in <span class="jkeyword">as</span> schema-element(actor))<br/>
+<span class="jkeyword">as</span> xs:string {<br/>
+&nbsp;&nbsp;&nbsp;normalize-space(substring-after($in, <span class="jstring">','</span>))<br/>
+};<br/>
+<br/>
+<span class="jkeyword">for</span> $v <span class="jkeyword">in</span> $input/videos/video<br/>
+<span class="jkeyword">where</span> $v/title=<span class="jstring">"The Fugitive"</span><br/>
+<span class="jkeyword">return</span> local:first-name($v/director)<br/>
+</code></div></p>
+
+<p>Saxon throws this out at compile time, with the rather convoluted message:</p>
+
+<p><img src="/images/screenshots/xquery_function_error.gif" alt="XQuery function error message" width="500" height="139"/></p>
+
+<p><div class="jdiv">
+Error on line 13 of file:/c:/temp/videos/query3.xq: <br/>
+XPTY0004: Required item type of first argument of local:first-name() is element(actor, {http://ns.saxonica.com/anonymous-type}<br/> 
+actor_anonymous_type_1_at_line_44_of_videos.xsd);  supplied value has item type element(director)<br/>
+</div></p>
+
+<p>Believe it or not, it's worth trying to understand this error message:</p>
+
+<ul>
+<li>The first line tells you where the error occurred: always useful</li>
+<li>The second line gives you an error code XPTY0004 which could possibly be useful if you want to test for different error codes in your calling application, or to find how the error is described in the XQuery language specification</li>
+<li>The message that starts on the second line has a general form which you will see quite often: Required type of XXX is RRR; supplied value has type TTT</li>
+<li>XXX gives you the context: in this case, it's the first argument of the call to the user-written function local:first-name() that's at fault</li>
+<li>RRR tells you what type was required, in a rather unwieldy internal form. Saxon has expanded the SequenceType schema-element(actor) into an element() test using an internally-generated name for the anonymous type of the actor element. The namespaces are spelt out in full because getting the namespace wrong is a common cause of type errors</li>
+<li>TTT tells you the type of the value that was supplied, in this case an element named "director". The error occurs because this type doesn't match the required type RRR.</li>
+</ul>
+
+<p>What would happen if you didn't declare the required type of the function argument? Try it and see (just remove the "as" clause). Blank output again! Declaring the required types is optional, but I really wouldn't recommend it: it's a short-cut that you will later regret.</p>
+<p>Let's do the same exercise with our XSLT function. Here's a complete stylesheet that calls the function incorrectly:</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:stylesheet </span><span class="jattr">version=</span><span class="jstring">"2.0"</span> <span class="jattr">xmlns:xsl=</span><span class="jstring">"http://www.w3.org/1999/XSL/Transform"</span><span class="jattr"> xmlns:f=</span><span class="jstring">"http://localhost/functions/"</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:import-schema </span><span class="jattr">schema-location=</span><span class="jstring">"videos.xsd"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:function </span><span class="jattr">name=</span><span class="jstring">"f:videos-for-actor"</span><span class="jattr"> as=</span><span class="jstring">"schema-element(video)*"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:param </span><span class="jattr">name=</span><span class="jstring">"actor"</span><span class="jattr"> as=</span><span class="jstring">"schema-element(actor)"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:sequence </span><span class="jattr">select=</span><span class="jstring">"$actor/(//video[actorRef=$actor/@id])"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:function</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:template </span><span class="jattr">match=</span><span class="jstring">"/"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">videos </span><span class="jattr">for=</span><span class="jstring">"David Schwimmer"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:for-each </span><span class="jattr">select=</span><span class="jstring">"f:videos-for-actor('Schwimmer, David')"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">title</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">xsl:value-of </span><span class="jattr">select=</span><span class="jstring">"title"</span><span class="jattr">/</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">/title</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/xsl:for-each</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/videos</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:template</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:stylesheet</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+
+<p>Can you spot the error? Perhaps the error message will help:</p>
+
+<p><img src="/images/screenshots/xslt_funtion_error.gif" alt="Troubleshooting XSLT stylesheets using Schema-Aware XSLT processing" width="500" height="202"/></p>
+
+<p>In other words, the function was written to expect an actor <i>element</i>, but we called it supplying an actor's <i>name</i> as a string. In this case, as it happens, we would have got an error even with the non-schema-aware product, because you can't use a string on the left-hand-side of the "/" operator. But the error with an explicit declaration of the parameter type is much more precise.</p>
+
+<p>We said we'd look at three aspects of schema-awareness, and we've finished the first: importing schemas and declaring types. We'll now look at input validation and output validation.</p>
+
+<h1>Validating Input</h1>
+<p>In all the examples in the previous section, the input to the stylesheet or query was an XML document (<code>videos.xml</code>) that had been validated against a schema. If you forgot to tick the checkbox asking for strict input validation, you'll have seen what happened: the input doesn't match the types declared in the query/stylesheet.</p>
+<p>It's important here to distinguish input that is valid from input that has been validated. If you write a function that expects an argument declared as <code>schema-element(actor)</code>, then it's not enough that the element you pass in should be valid according to the schema definition: it must be certified as valid, and to achieve that, it must have already gone through the validation process.</p>
+<p>The same is true for atomic values. It might come as a surprise that when you declare a function <code>f:sqrt()</code> as expecting an argument of type <code>xs:positiveInteger</code>, the call <code>f:sqrt(5)</code> should fail on the grounds that 5 is not a positive integer! The point is that using a value in the function call doesn't cause it to be validated against the type definition; the value must already be labelled with the right type, and that means the caller has to ensure that the validation has been done in advance. In the case of atomic values you can do this simply with a constructor function: <code>f:sqrt(xs:positiveInteger(5))</code>.</p>
+<p>Validating the input to the query or stylesheet is normally controlled using options set in the calling environment. This applies whether the input is supplied as the context document, or the value of a parameter, or whether it's read using the <code>doc()</code> or <code>document()</code> function. In Stylus Studio, as you've already discovered, you have to set the right options in the <i>Scenario</i>. If you call Saxon directly from the command line, there's a switch (-val) that has the same effect. There are equivalent options you can set if you invoke a transformation or query from a Java application using the Saxon API.</p>
+<p>Because validation of the input happens outside the control of the language itself, the specs are a little vague as to how the system goes about finding a schema to do the validation. In Saxon, and probably in most other products, there's an internal cache of schema definitions that are used, and you can load schemas into this cache in various ways: by using import schema, by using <code>xsi:schemaLocation</code> in an instance document, or by using the Java API directly. An important point to note, however, is that the cache can only hold one schema for each namespace. This means that if you want to write code to transform data from version N to version N+1 of the same schema, you can't have both the input and output validated.</p>
+<p>If you don't validate the input, then the document is said to be <i>untyped</i>. All the elements are marked as having the type <code>xdt:untyped</code>, while the attributes are marked as <code>xdt:untypedAtomic</code>. (The namespace prefix xdt here refers to a namespace defined in the XSLT/XQuery specifications.) In many ways these are just types like any other, for example you could write a function that actually requires the input to be <code>untyped</code>. There's one important difference, however: unlike any other type, <code>untypedAtomic</code> data is automatically converted to the required type when passed to a function or operator that expects some specific type. For example, if the function f:sqrt() declares that it expects an xs:positiveInteger and you supply the unvalidated element &lt;a&gt;1920&lt;/a&gt;, then the system will happily calculate the square root of 1920. Contrast this with what happens when &lt;a&gt; is validated against a schema that declares its type as <code>xs:gYear</code>: in this case you will be told that an <code>xs:gYear</code> cannot be used where an <code>xs:positiveInteger</code> is expected. (Perhaps you're starting to see the point of that irritating error we hit earlier.) However, although untyped atomic values will automatically be validated and converted to the required type, the same isn't true of untyped elements: you have to validate these explicitly.</p>
+<p>Remember: if you want the system to spot errors in path expressions, as we saw at the beginning of this article, then you need to declare the types of your variables and functions. And if you declare the types, then the input has to satisfy those types, and it will only do so if it has been validated on the way in.</p>
+
+
+<h1>Validating Output</h1>
+<p>Let's now look at how you can write stylesheets and queries that validate their output. This is one of the most effective ways of exploiting schema-awareness, and it can make a dramatic difference to the way in which you tackle development. Let's see it in action.</p>
+<p>It's quite common for stylesheets and queries to produce XHTML as their output, so we'll use that as our example. Let's try to produce an alphabetical list of actors and the videos they appear in. Here's our first attempt in XSLT:</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:stylesheet </span><span class="jattr">version=</span><span class="jstring">"2.0"</span> <span class="jattr">xmlns:xsl=</span><span class="jstring">"http://www.w3.org/1999/XSL/Transform"</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:template </span><span class="jattr">match=</span><span class="jstring">"/"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">html </span><span class="jattr">xmlns=</span><span class="jstring">"http://www.w3.org/1999/xhtml"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:call-template </span><span class="jattr">name=</span><span class="jstring">"header"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">body</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">h1</span><span class="jkeyword">&gt;</span>Index of Actors<span class="jkeyword">&lt;</span><span class="jelement">/h1</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">table</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:for-each </span><span class="jattr">select=</span><span class="jstring">"//actor"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:sort </span><span class="jattr">select=</span><span class="jstring">"."</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">tr</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">td</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">xsl:value-of </span><span class="jattr">select=</span><span class="jstring">"."</span><span class="jattr">/</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">/td</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">td</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:for-each </span><span class="jattr">select=</span><span class="jstring">"//video[actorRef=current()/@id]"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:value-of </span><span class="jattr">select=</span><span class="jstring">"title"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">xsl:if </span><span class="jattr">test=</span><span class="jstring">"position() != last()"</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">br/</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">/xsl:if</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/xsl:for-each</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/td</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/tr</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/xsl:for-each</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/table</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/body</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">/html</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:template</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:template </span><span class="jattr">name=</span><span class="jstring">"header"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">head</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">title</span><span class="jkeyword">&gt;</span>Index of Actors<span class="jkeyword">&lt;</span><span class="jelement">/title</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">/head</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:template</span><span class="jkeyword">&gt;</span><br />
+<br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:stylesheet</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+
+<p>Run this, and it works. You can view the output in Firefox or Internet Explorer. (It's not pretty, but a bit of CSS code would quickly fix that.) But is it XHTML? Try submitting the XSLT output to the official <a href="http://validator.w3.org/" target="_blank" rel="nofollow" class="extLink" title="Link opens in new window">W3C XHTML validation service</a>, and you'll find that it isn't.</p>
+<p>Now stop and think about the way you develop stylesheets. How do you check that the output is correct? Do you simply view it in a browser or two, or do you actually validate it? And if you do validate it, what happens when you see a message like this:</p>
+
+<p><div class="jdiv">Validation error on line 2 column 19 of file:/c:/temp/videos/out.html:<br/>
+  In content of element &lt;html&gt;: The content model does not allow element &lt;head&gt; to appear here. Expected: {http://www.w3.org/1999/xhtml}head</div></p>
+
+<p>You have to open up the (alleged) XHTML in a text editor, find the relevant line and column, work out why it's invalid (in this case, the &lt;head&gt; element is in the wrong namespace), and then find the code in the stylesheet that generated the &lt;head&gt; element and correct it. If your HTML contains thousands of lines of unindented code, and your stylesheet is equally complex, that's not an enviable task.</p>
+<p>The good news is that there is an easier way. Change the &lt;html&gt; element in the stylesheet to say</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">html </span><span class="jattr">xmlns=</span><span class="jstring">"http://www.w3.org/1999/xhtml"</span><span class="jattr"> xsl:validation=</span><span class="jstring">"strict"</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+
+<p>and add after the <code>xsl:stylesheet</code> element:</p>
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:import-schema </span><span class="jattr">namespace=</span><span class="jstring">"http://www.w3.org/1999/xhtml"</span><span class="jattr"><br />
+&nbsp;&nbsp;&nbsp;schema-location=</span><span class="jstring">"http://www.w3.org/2002/08/xhtml/xhtml1-transitional.xsd"</span><span class="jattr">/</span><span class="jkeyword">&gt;</span> <br />
+</div></p>
+
+<p>Now try running it again (you'll need to be online, because Saxon is going to fetch that schema from the web). You'll need
+to associate the <code>videos.xml</code> file with the <code>videos.xsd</code> file if you haven't done so already. 
+This is the output:</p>
+
+<p><img src="/images/screenshots/xslt_output_validation.gif" alt="Validating Output using Schema Aware XSLT" width="500" height="192"/></p>
+
+<p>OK, you already knew it was invalid &mdash; but only because I persuaded you to check the XHTML. Would you have done it if I hadn't asked you to? And note the subtle difference from the earlier error message: this time, it's not telling you that line 2 in the XHTML is wrong, it's telling you that there's an error at line 33 in the stylesheet. So you can go straight there, and replace the incorrect code by:</p>
+
+
+<p><div class="jdiv">
+<span class="jkeyword">&lt;</span><span class="jelement">xsl:template </span><span class="jattr">name=</span><span class="jstring">"header"</span><span class="jkeyword">&gt;</span><br />
+&nbsp;&nbsp;&nbsp;<span class="jkeyword">&lt;</span><span class="jelement">head </span><span class="jattr">xmlns=</span><span class="jstring">"http://www.w3.org/1999/xhtml"</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">title</span><span class="jkeyword">&gt;</span>Index of Actors<span class="jkeyword">&lt;</span><span class="jelement">/title</span><span class="jkeyword">&gt;&lt;</span><span class="jelement">/head</span><span class="jkeyword">&gt;</span><br />
+<span class="jkeyword">&lt;</span><span class="jelement">/xsl:template</span><span class="jkeyword">&gt;</span><br />
+</div></p>
+
+<p>(There's a checkbox in the processor options for Saxon labelled "Treat validation errors on result document as warnings". The output shown above is what happens when you leave this unchecked. If you check the option, Saxon will produce the output as requested, interspersed with comments telling you where it is invalid. This can be useful if you want to get the broad outline of your code right first, and sort out the detail later.)</p>
+
+<p>This was all done in XSLT, but it works just as well for XQuery. In case you need convincing, here's a query that (incorrectly) attempts to copy the record for a selected video, while adding one to the value of <code>vhs_stock</code>:</p>
+
+<p><div class="jdiv"><code class="jcode">
+<span class="jkeyword">let</span> $v := //video[@id=<span class="jstring">"id1256990"</span>]<br/>
+<span class="jkeyword">return</span><br/>
+&nbsp;&nbsp;&nbsp;&lt;<span class="jelement">video</span>&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$v/@*,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">for</span> $e <span class="jkeyword">in</span> $v/*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="jkeyword">return</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">if</span> ($e <span class="jkeyword">instance of</span> element(vhs_stock))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">then</span> $e + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jkeyword">else</span> $e<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&lt;/<span class="jelement">video</span>&gt;<br/>
+</code></div></p>
+
+<p>As with the XSLT example, it runs without errors, so you might be misled into thinking that all is well. Now change it to validate the output:</p>
+
+<p><div class="jdiv"><code class="jcode">
+<span class="jkeyword">import schema default element namespace</span> <span class="jstring">""</span> <span class="jkeyword">at</span> <span class="jstring">"videos.xsd"</span>;<br/>
+<span class="jkeyword">let</span> $v := //video[@id=<span class="jstring">"id1256990"</span>]<br/>
+<span class="jkeyword">return</span><br/>
+<span class="jkeyword">validate</span> {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="jelement">video</span>&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$v/@*,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="jkeyword">for</span> $e <span class="jkeyword">in</span> $v/*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="jkeyword">return</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="jkeyword">if</span> ($e <span class="jkeyword">instance of</span> element(vhs_stock))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="jkeyword">then</span> $e + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="jkeyword">else</span> $e<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&lt;/<span class="jelement">video</span>&gt;<br/>
+}<br/>
+</code></div></p>
+
+<p>and the error becomes apparent (again, note how the message pinpoints its location):</p>
+
+<p><div class="jdiv">
+Validation error on line 10 of file:/c:/temp/videos/query6.xq:<br/>
+  The content model for element &lt;video&gt; does not allow character content
+</div></p>
+
+<p>What has happened here is that the "else" branch $e copies the element $e to the output, while the "then" branch atomizes the element, adds one, and then writes a number to the output, with no containing element tags. To correct the query you need to write <code>then &lt;vhs_stock&gt;{$e + 1}&lt;/vhs_stock&gt;</code>.</p>
+
+<p>In my own work I have found that validating the output of a query or stylesheet gives a dramatic improvement in the ability to quickly detect and diagnose a great number of coding errors. The more complex the XML you are working with, the more useful it becomes.</p>
+
+<p>I've talked here about validating the input and output of a stylesheet or query. But of course you can also validate intermediate results. When you write a multi-phase transformation, the output of one phase is the input to the next, so validating the intermediate data kills both birds with one stone. You might feel it's rather an effort to write a schema that describes such transient data: but if the query or stylesheet is forms part of an operational system that someone else will have to maintain, then the effort will probably pay off.</p>
+
+<h1>Schema Aware XSLT and XQuery Processing Summary</h1>
+<p>I hope you've got this far, and I hope you've tried running the examples in Stylus Studio. If so, I hope I will have convinced you of the advantages you get from making your queries and stylesheets schema-aware.</p>
+<p>I outlined the three aspects of schema-awareness in XQuery and XSLT: the ability to import a schema and thus to declare the types of your variables, parameters, and results; the ability to validate input documents; and the ability to validate the output on the fly. This all adds up to a considerable improvement in your ability to diagnose and correct errors, and in the long run to an increase in the robustness of your finished code. It might feel tedious at first having to define all your data types, but you'll quickly find that it becomes second-nature, and when you come to write the coding standards for your organization you'll probably want to make it mandatory good practice.</p>
+<p>If you want to know more about schema awareness, Chapter 4 of my book <a href="/books/xslt-reference.html" title="XSLT Function Reference">XSLT Programmer's Reference</a> goes into more detail, and it's probably worth reading even if you intend to use XQuery most of the time. Watch out for <a href="/priscilla-walmsley.html" title="Interview with Priscilla Walmsley">Priscilla Walmsley</a>'s forthcoming book on XQuery, too: I haven't seen it yet, but I'm sure she'll do the topic justice.</p>
+
+                            
+                            <p id="siblingLinks" align="right">
+    <span id="prevSibling"><a href="/xquery-flwor.html" id="prevSiblingLink" class="list" title="FLWOR"><img alt="previous page" align="middle" src="/images/nav_1l.gif" width="13" height="13" />Prev: <b>"XQuery FLWOR Tutorial"</b></a></span>
+    
+    <span id="nextSibling" style="margin-left:20px;"><a href="/xquery/xquery-functions.html" id="nextSiblingLink" class="list" title="User Defined Functions in XQuery"><img alt="next page" align="middle" src="/images/nav_1r.gif" width="13" height="13" />Next: <b>"XQuery Functions"</b></a></span>
+</p>
+<div id="ctl00_MostWantedArea" class="mostWantedCenter">
+                                
+
+<div class="quickjump-wrap">
+<div class="quickjump-row"><a href="/xml-download.html"><img src="/images/xml-editor-download.png" alt="Download XML Editor" border="0" class="quickjump-image" /></a><div class="quickjump"><a href="/xml-download.html">Download a 15 Day Free Trial Now ></a></div></div>
+<div class="quickjump-row"><a href="/xml-product-new-features.html"><img src="/images/new-xml-editor.png" alt="XML Tools" border="0" class="quickjump-image" /></a><div class="quickjump"><a href="/xml-product-new-features.html">See What's New in Stylus Studio&reg; X16 XML ></a></div></div>
+<div class="quickjump-row last"><a href="/buy/"><img src="/images/xml-editor-cart.png" alt="XML Editing Software" border="0" class="quickjump-image" /></a><div class="quickjump"><a href="/buy/">Buy Stylus Studio Now ></a></div></div>
+</div> <!-- quickJump Wrap -->
+
+<div class="RandomLinks">
+
+</div>
+<div id="ctl00_RandomLinks1_MostWanted" class="mostWantedBox"></div>
+
+                                <h4><a href="/advertise.html" style="color:#ffe" title="Advertise with Stylus Studio">Stylus Most Wanted</a></h4>
+							</div>
+							
+                        </div>
+                    </td>
+                    <td valign="top">
+					
+                        <div id="ctl00_RightCol" class="RightColFixed">
+                           
+                           
+                            <div class="calloutbuy">
+                            
+                              
+                                  <h3 class="icon2">PURCHASE STYLUS STUDIO ONLINE TODAY!!</h3>
+                                    <p style="margin-bottom:0;">
+                                        <i>Purchasing Stylus Studio from our online shop is Easy, Secure and Value Priced!</i>
+                                    </p>
+                               
+                              
+                          
+                                <div style="text-align:center">
+                                    <a href="http://www.stylusstudio.com/buy/"><img src="/images/buynow1.gif" alt="Buy Stylus Studio Now" /></a>
+                                </div>
+                            </div>
+							
+<!--
+
+AMAZON
+
+-->
+							
+                            
+                            
+
+    <div class="calloutfeatured"> 
+        <h3 class="icon0">Try Stylus Powerful XQuery IDE</h3>
+        <p>
+        <a href="/xml-download.html">Download</a> a free trial of our award-winning IDE for XQuery today!
+        </p>
+    </div>
+
+                            
+                                <div id="ctl00_Promos1_GenPromos_Promos">
+
+    <!-- Path Promos: very important, no white space between divs -->
+    <!--      
+	    <div id="ctl00_Promos1_GenPromos_TargetedPromos"></div>
+-->
+    <!-- Tech Promos: very important, no white space between divs -->
+    <div id="ctl00_Promos1_GenPromos_TechPromos"><div class="callout0">
+            <h3 class="icon2">
+                Attend a Live Webinar This Week!</h3>
+            <p>
+                Learn about Stylus Studio's unique features and benefits in just under an hour. <a href="/quickstart/" title="Stylus Studio QuickStart Training WebCast">Register</a> for the Stylus Studio
+				QuickStart Training WebCast!</p>
+        </div></div>
+    <!-- Biz Promos: very important, no white space between divs -->
+    <div id="ctl00_Promos1_GenPromos_BizPromos"><div class="callout1">
+            <h3 class="icon1">
+                Why Pay More for XML Tools?</h3>
+            <p>
+                With Stylus Studio&reg; X16 XML Enterprise Suite, you get the most <a href="/buy/compare.html" title="XML Features - Stylus Studio Matrix">comprehensive</a> XML tool suite at one incredibly <a href="/buy/" title=" Stylus Studio Online Shop ">low price</a>. Value: it's just one of many reasons why smart XML developers are choosing Stylus Studio!</p>
+        </div></div>
+</div>
+ 
+                            
+                            
+
+    <div class="calloutfeatured1">
+        <h3 class="icon1">Top Ten XQuery Trends</h3>
+		<p>Read about the top  <a href="/xquery-trends-2005.html">10 XQuery Trends</a> and how they will impact change the way enterprise software applications are built.  
+  </div>
+
+
+                        </div>
+					
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="footing">
+    <table id="footing1" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="left" valign="middle" nowrap="nowrap">&nbsp; </td>
+            <td align="right" valign="middle" nowrap="nowrap">
+                <form style="margin: 0; padding: 0" method="post" action="https://www.stylusstudio.com/formsubmit/scoopBrief.aspx">
+                    <span style="vertical-align: middle;">Free Stylus Studio XML Training:</span>
+                    <input onclick="this.select();" style="border: #666 1px solid; font-size: x-small;
+                        vertical-align: middle;" name="klqoufhxme" size="45" value="your email" /><input type="image"
+                            alt="Sign Up for the Stylus Scoop" src="/images/signup.gif"
+                            style="vertical-align: middle;" width="54" height="17" />
+                </form>
+            </td>
+        </tr>
+    </table>
+    <!--
+    <div id="footing3">
+       <a rel="nofollow" title="Visit www.w3c.org" href="https://www.w3c.org" target="_blank">
+            <img border="0" alt="W3C Member" src="/images/w3c.gif"/>
+       </a>
+    </div>   
+    -->
+    <br />
+    <!-- add multimedia here--->
+    <div class="footer">
+        <map name="Map" id="Map">
+            <area shape="rect" coords="5,4,49,23" href="/feeds/" alt="RSS" title="RSS"/>
+            <area shape="rect" coords="60,4,109,23" href="/blogs/" alt="Blogs" title="Blogs" />
+            <area shape="rect" coords="121,4,194,21" href="/newsletter-archive.html" alt="Newsletter" title="Newsletter" />
+        </map> 
+    </div>
+    <br />
+    <div class="footer">
+        <a href="/site-map.html" id="ctl00_A4" class="footer" title="Stylus Studio Site Map">Site Map</a> <span>|</span> 
+		<a href="https://www.xmlconverters.com" target="blank">XML Converters</a> <span>|</span>
+		<a href="http://www.xquery.com" target="blank">XQuery</a> <span>|</span> 
+        <a href="/" title="XML Editor ">XML Editor</a> <span>|</span> 
+        <a href="http://www.xmlpipelineserver.com" target="blank">XML Pipeline Server</a>
+    </div>
+    <br />
+    <div class="footer">
+       <a href="/privacy-policy.html" id="ctl00_A2" title="Privacy Policy">Privacy Policy</a> <span>|</span>
+       <a href="/terms-of-use.html" id="ctl00_A3" title="Terms of Use">Terms of Use</a> <span>|</span>
+       <!-- <a href="/cookie-policy.html" id="ctl00_A1" title="Cookie Policy">Cookies Policy</a> <span>|</span> -->
+       <a href="/data-privacy-provisions.html" target="_blank">Data Privacy Provisions</a> <span>|</span>
+       <a href="/gdpr-compliance-statement.html" id="ctl00_A5" title="GDPR Compliance Statement">GDPR Compliance Statement</a>
+    </div>  
+    <br />
+    <div class="print_footer" style="text-align: center">
+        Copyright © 2005-2025 IVI Technologies Corporation. All Rights Reserved.<br />
+    </div>    
+</div>
+
+<!--
+<script type="text/javascript" language="javascript">
+        var sf14gv = 16907;
+        (function () {
+            var sf14g = document.createElement('script'); sf14g.type = 'text/javascript'; sf14g.async = true;
+            sf14g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 't.sf14g.com/sf14g.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sf14g, s);
+        })();
+</script> 
+-->
+
+
+
+
+<script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-1441351-1', 'auto');
+        ga('send', 'pageview');
+
+</script>
+
+<!-- Google Code for Remarketing tag -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1056769547;
+var google_conversion_label = "kI4dCKmmwQQQi4z09wM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1056769547/?value=0&amp;label=kI4dCKmmwQQQi4z09wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+    <!-- Start of ivitechnologies Zendesk Widget script -->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=b4b126f0-9aea-4412-9eb8-7b27666098ee"> </script>
+    <!-- End of ivitechnologies Zendesk Widget script -->
+
+
+
+</body>
+</html>

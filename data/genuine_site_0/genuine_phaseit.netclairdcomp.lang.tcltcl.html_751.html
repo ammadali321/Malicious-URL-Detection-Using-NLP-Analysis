@@ -1,0 +1,2087 @@
+<HTML>
+<HEAD>
+<TITLE>Tcl/Tk references of interest to Cameron Laird</TITLE>
+
+<LINK REV = "made" HREF = "mailto:claird@phaseit.net">
+</HEAD>
+
+<BODY>
+
+
+<!-- convert this into an index to other pages. -->
+<H1>Tcl/Tk references of interest to Cameron Laird</H1>
+
+Paul Duffin writes,
+"<A HREF = "">Tcl
+is to my mind the ultimate 'Jack of all Trades' language.</A>"
+
+<P>Until I rewrite this page, feel free to browse
+<A HREF = "../misc.writing/publications.html#computer_article">recent
+publications</A> or a
+<A HREF = ".">listing of the principal Tcl-related
+documents</A> at this site.
+
+<P>[This page will be completely overhauled sometime before 2001.]
+<!-- Biggest current need:  re-segment.  It's too big.-->
+<H2>New topical index</H2>
+<UL>
+<LI><A HREF = "tcl-binaries.html">Tcl binaries</A>
+<LI><A HREF = "commercial-tcl.html">Is Tcl safe for commercial use?</A>
+<LI><A HREF = "tcl_compilers.html">Compiled Tcl</A>
+<LI><A HREF = "tcl_distributed.html">Distributed processing</A>
+<LI><A HREF = "embeddings.html">Embeddings</A>
+<LI><A HREF = "tcl-examples.html">Examples</A>
+<LI><A HREF = "server_side_tcl.html">HTTP</A>
+<LI><A HREF = "??">Java</A>
+<LI><A HREF = "ootcl.html" NAME = "ootcl">Object-oriented Tcl</A>
+<LI><A HREF = "??">SMTP</A>
+<LI><A HREF = "scotty.html">SNMP</A>
+<LI><A HREF = "tcl_tutorials.html">Tutorials</A>
+<LI><A HREF = "tcl_vms.html">OpenVMS</A>
+<LI><A HREF = "server_side_tcl.html">Web service</A>
+<LI><A HREF = "tcl-why.html">Why should I care about Tcl, anyway?</A>
+<LI><A HREF = "http://www.hwaci.com/tclconsultants/">Tcl Job Board</A>
+</UL>
+
+<P>Incidentally, Larry Virden reminds everyone to
+     <BLOCKQUOTE>remember to let the Tcl
+     bibliographer know about your papers, the Tcl commercial apps
+     FAQ maintainer know about your commercial applications using
+     Tcl and the other Tcl FAQ maintainers know about your tcl / tk
+     tips and your internet resources - software, WWW pages, etc.</BLOCKQUOTE>
+<!-- index to articles:  http://mini.net/cgi-bin/wikit/1016.html -->
+
+<H2>Index</H2>
+<UL>
+<LI><A HREF = "#current">Current projects</A>
+<LI><A HREF = "tcl-references.html">General Tcl references</A>:  what's
+     the difference between a "general reference" and something
+     "current"?  <A HREF = "#getargs">getargs</A> I need over and over, but
+     is marginal enough that I don't remember where I put it;
+     therefore it's always "current".  My usual thought about
+     the usage FAQ is that others need to read it; it's
+     a "general" reference.
+<LI><A HREF = "#old">Old stuff that I need to organize better</A>
+<LI><A HREF = "commercial-tcl.html">Is Tcl serious enough
+     for production work?</A>
+</UL>
+
+
+<H2><A NAME = "current">Current projects</A></H2>
+
+<H3>Services I aim to <A HREF = "embeddings.html">embed</A> portably by
+     way of Tcl</H3>
+<UL>
+
+<LI>security:
+     <UL>
+     <LI>encryption: 
+          <A HREF = "http://web.cs.ualberta.ca/~wade/Auto/HyperTcl/Tcl_special.html#securedp">securedp</A>
+          handles Kerberos.
+     <LI><A HREF = "ftp://ftp.fv.com/pub/code/other/safe-tcl.tar">Safe-Tcl</A>:
+	  with 7.5, as mentioned above, interp is part of the core, so
+	  we all have what Borenstein pioneered.  Still, it's valuable
+	  to read the Safe-Tcl-specific descriptions of of intent and
+	  implementation.
+     </UL>
+     [Explain ActiveX vs. sandbox vs. Safe-Tcl OS-like services.
+     Maturity.  KL and JO.]
+<LI>SMTP:  the latest
+     <A HREF = "http://www.cs.cornell.edu/Info/Projects/zeno/Projects/Tcl-DP">Tcl-DP</A>
+     advertises, among other capabilities, SMTP.  I haven't exercised
+     it.
+<LI><A NAME = "SNMP" HREF = "../comp.protocols.snmp/snmp.html">SNMP</A>:
+     <A HREF = "scotty.html">scotty</A> is the way to go.
+     Also, <CITE>How To Manage Your Network
+     Using SNMP--the networking management practicum</CITE> by
+     Rose and McCloghrie comes highly recommended.
+
+<P>Finally,
+     <A HREF = "ftp://lancaster.andrew.cmu.edu/pub/snmp-dist/cmu-snmp2.1.2.tar">CMU-SNMP
+     2.1.2</A> is an SNMP agent built from a modified wish interpreter. 
+
+
+
+
+
+
+
+<LI>sockets:
+     <UL>
+     <LI>Version 7.5 has afforded good TCP support for client-server projects
+	  since September 1995.
+	  There are anticipations to extend this in various directions
+	  in future releases.
+     <LI><A HREF = "http://www.neosoft.com/tcl/TclX.html">TclX</A>
+	  gives an easy client-side connection;
+     <LI>I've found
+     <A HREF = "http://web.cs.ualberta.ca/~wade/Auto/HyperTcl/Tcl_extensions.html#dp">tcl-dp3.2</A>
+          straightforward and portable;
+     <LI>Mike Shorter has released an
+	  <A HREF = "ftp://ftp.globalware.com/pub/tcl/tcl-RPC-1.2.0.tar.gz">RPC
+	  layer</A> atop 7.5 which he advertises as "a replacement for
+	  tcl-dp3.3b1";
+     <LI>Gerald Lester et al. have released dp.tcl, which codes tcl-dp
+	  functionality in Tcl7.5 (neat!).  This is the current best
+	  approach to RPC programming through Tcl.
+     </UL>
+<!--
+As an alternate to "send", I suggest my "comm" package.  This is a pure-Tcl
+code that implements an interface to "send", but that uses sockets (from
+Tcl7.5) instead of the X server.  This means that it works with plain
+tclsh and on Windows and Mac, too.  See
+        http://www.osf.org/~loverso/tcl-tk/#comm    -->
+<LI>Testing:  DejaGnu tests textual stuff.  By early 1996, Ioi had
+     "written a small package to test user interface components",
+     which he uses "mainly to test the Tix widgets."  It is written
+     entirely in Tcl.  There is also a
+     <A HREF = "http://www.cs.unm.edu/~crowley">TkReplay</A>.  At
+     this point, I've used none of these three myself.
+<LI>WWW routines [URL and HTML]:
+     <UL>
+     <LI><A HREF = "http://web.cs.ualberta.ca/~wade/Auto/HyperTcl/Tcl_code.html#surfit">SurfIt</A> (often unreachable) <!-- http://surfit.anu.edu.au/ -->
+     <LI><A HREF = "http://web.cs.ualberta.ca/~wade/Auto/HyperTcl/Tcl_extensions.html#tkWWW">tkWWW-0.12</A> (not maintained for a long time now)
+     <LI>[incr Tcl] includes a Scrolledhtml widget
+     <!-- html_library#version# at ftp://ftp.sunlabs.com/pub/tcl/  -->
+     <LI>Plume
+     <LI><A HREF = "http://sunscript.sun.com/webtk">WebTk</A>
+     </UL>
+</UL>
+<H3>Tcl facilities I often need, but whose addresses I keep losing</H3>
+<H4><A HREF = "../comp.programming/agents.html">Agents</A> in Tcl</H4>
+How current is <A HREF = "ftp://bald.cs.dartmouth.edu/pub/agents/agent.1.1.tar.gz">Agent Tcl</A>?
+   <!-- URL:http://www.cs.dartmouth.edu/%7Ergray/transportable.html -->
+   <!--URL:mailto:robert.s.gray@dartmouth.edu -->
+
+I'm not sure; so far, I've been writing my own agents.
+
+<H4>Binary data</H4>
+Can Tcl handle binary data?  No; that is, out of the box, there was
+     no straightforward representation of binary data before the 8.0
+     release.  Among the
+     expedients the
+     <A HREF = "http://papaya.nosc.mil/docs/tcl/tclFAQ/usage/faq.html#BinaryData">FAQ</A>
+     mentions, I most admire Laurent Demailly's
+	  <A HREF = "http://www.lyot.obspm.fr/~dl/tclbin.html">TclBin</A>.
+<!--
+Or use tcl-trf, the transformers package.
+Its located at
+
+        ftp://ftp.kisters.de/pub/lang/tcl/ext/trf1.0b2.tar.gz (~470K)
+		ftp://ftp.kisters.de/pub/lang/tcl/ext/trf1.0b2.readme
+
+		The command to copy files is
+
+				binio copy #in_channel# #out_channel# ?chunk_size?    -->
+	  <!-- Expect also does binary data.  Explain.  -->
+
+<H4>Data bases</H4>
+<A HREF = "http://www.neosoft.com/tcl/ftparchive/sorted/databases/">NeoSoft
+     archive of database extensions</A>
+<P>Also of personal interest:
+     <A HREF = "ftp://ftp.idiom.com/pub/free-databases">an old list
+     of free DBMSs</A>, <A HREF = "../comp.databases/minisql.html">Msql</A>,
+     and <A HREF = "http://www.postgresql.org">Postgres95</A>
+
+<H4>Drawing</H4>
+<A HREF = "ftp://ftp.ceram.fr/pub/tcl">Picasso</A>,
+<A HREF = "http://www.boutell.com/gd">gd</A>
+
+<H4>Editor</H4>
+Elsbeth,
+     <A HREF = "http://www.aq.org/~js/js-jstools.html">jedit</A>,
+     <A HREF = "ftp://ftp.ifh.de/pub/unix/edit/">tkedit</A>, xtexsh
+
+
+
+<!-- hofmann@vipmzw.physik.uni-mainz.de -->
+
+
+
+
+<H4><A NAME = "getargs">getargs</A></H4>
+<A HREF = "ftp://ftp.neosoft.com/languages/tcl/alcatel/code/tclGetOpts.tar.gz">Getopts</A>
+     is a bit buggy, as I remember, but easy to correct.
+     <A HREF = "ftp://ftp.Lehigh.EDU/pub/evap/evap-2.x/evap-2.2.tar.gz">Evaluate
+     Parameters</A> is advertised to be a "super getops", with type
+     checking, help on three levels, embeddability, ... [lots of other
+     stuff, including dev notes] [cmdline in tcllib; optcl; clig; opt; ...]
+     <!-- Get tcllib 0.3 and use either cmdline or typedcmdline functions. -->
+     <!-- optcl; C. Nelson did a bunch in clt in April-May 1998 -->
+     <!--
+	   - a package called clig (Cmd line interpretor generator)
+		   - the "opt" package that comes *hidden* with tcltk, with no documentatio
+		   n
+			     really :-)         
+
+
+
+     It's not getopts, but the "jstools" package includes a library that
+     lets you do this sort of thing.  It's aimed at the sort of long,
+     descriptive options that take arguments that builtin Tk and Tcl commands
+     use, so it doesn't support (for instance) clumping single-letter arguments
+     together.  I haven't yet put in support for boolean arguments, although
+     I've thought about it.  There's a version for use with "args" for
+     parsing procedure arguments, and one for use with "argv" for parsing
+     script arguments.
+
+     See http://www.aq.org/~js/js-jstools.html -->
+
+<!-- Also, there's one in tcllib    http://wsd.iitb.fhg.de/~kir/clighome/ -->
+<!--
+Well, I stumbled over the same problem when I started with Tcl (years ago).
+My approach was was a bit heavy weight: clone the X11
+XtGetApplicationResources() with extras.
+Take a look at yaap-0.9.shar.gz or documentation on my web page at
+http://www.io.org/~pzi. -->
+<!--
+#!/usr/local/bin/wish -f
+## General cmd line processor
+## Takes 3 types of arguements
+## 1) {optname optvariable}
+#               if optname found this variable is set to 1
+## 2) {optname optvariable arg}
+##      if optname is found the variable is set to the option value
+## 3) {NoOptionArgsVariableName}
+#               This has to be last argument
+#               this list gets appended all optionless argruements
+## Returns - 0 success
+##                                      1 Failure
+## Bugs -
+## 1) make sure the options don't conflict with
+## Tk's startup options /see man page
+## 2) also vt binaries exec visbin argv[0]
+## Need to report bad useage:
+
+proc GenParseCmdLine { args } {
+
+                        global argv argc
+# This is a catchall list,all unmatched optionnames
+        set tmp [lindex $args end]
+        upvar #0 $tmp NoOptionArgsVariableName
+        set args [lreplace $args end end]
+
+# Build 3 lists
+# Options to match
+        set opts {}
+        foreach arg $args { lappend     opts [lindex $arg 0]}
+# option variables to set
+        set optvars {}
+        set optargs {}
+        foreach arg $args {
+                lappend         optvars [lindex $arg 1]
+# if nonzero expect an arguement to assign to the optvar
+                if { [llength $arg] &gt; 2 } {
+                        lappend         optargs 1
+                } else {
+                        lappend         optargs 0
+                }
+        }
+        set cnt 0
+        set skip 0
+Debugmsg "$opts:"
+Debugmsg "$optvars:"
+Debugmsg        "$optargs:"
+Debugmsg        "\n\n"
+# Process argv
+        foreach arg $argv {
+                if { $skip } { set skip 0;continue}
+# see if param is a defined option if not append to catchall variable
+                set ind [lsearch $opts $arg]
+                if {$ind &gt;= 0 } {
+# Found an option
+                        set opt [lindex $opts $ind]
+                        set optvar [lindex $optvars $ind]
+                        set optarg [lindex $optargs $ind]
+Debugmsg "$ind $arg:$opt:$optvar:$optarg"
+Debugmsg "$ind $arg:$opt:$optvar:$optarg"
+                        if { $optarg == "0" } {
+# Has no option parameter to assign to optvariable
+
+#                               global $optvar
+                                uplevel #0 "set $optvar 1"
+                        } else {
+# Should be followed with an option paramter
+# disable next loop
+                                set skip 1
+                                incr cnt
+                                if { $cnt &gt;= $argc } {
+# Ran out of parameters just ignore this option then
+                                        continue
+                                }
+# Get next parameter
+
+                                set next_param [lindex $argv $cnt ]
+                                set ind [lsearch $opts $next_param]
+Debugmsg "Next Param $next_param in opts? $ind"
+                                if { $ind &gt;= 0 } {
+# Problem two opts in a row & previous expects optval
+# ignore previous option
+                                        set skip 0
+Debugmsg "Skiping $arg"
+                                        continue
+
+                                }
+#                               global $optvar
+                                uplevel #0 "set $optvar $next_param"
+Debugmsg "Pair $optvar $next_param"
+                        }
+                } else {
+# Assign param to catchall list
+Debugmsg "Noparam adding :$arg"
+                        lappend NoOptionArgsVariableName $arg
+                }
+        incr cnt
+        }
+}
+
+
+
+
+
+### 
+I would then define an array like this
+
+# Used to parse the arguements
+set qbr(cmd_args) {
+        {-qhelp qbr(help) } \
+        {-mode qbr(mode) dumm} \
+        {-size qbr(geom) dumm} \
+        {-dblbuf qbr(dblbuf)} \
+        {-idim qbr(idim) dumm} \
+        {-fs qbr(fs) dumm} \
+        {-fi qbr(fi) dumm} \
+        {-fe qbr(fe) dumm} \
+        {-fext qbr(ext) dumm}\
+        {-cut qbr(cut) dumm} \
+        {qbr(noption)}
+}
+###
+Then call the parse cmd with the array 
+
+eval GenParseCmdLine $qbr(cmd_args)
+unset qbr(cmd_args)
+
+
+### 
+	Good luck,
+
+
+                    Art Morel
+                    Visual Technologies
+                    art@rain.org
+                    805-967-0661 Work
+                    805-967-0661 Fax
+
+-->
+
+
+
+
+
+
+
+
+
+<H4>GUI builders</H4>
+<A HREF = "ftp://grizzly.banffcentre.ab.ca/TclGUI/">tclgui</A>;
+<A HREF = "ftp://ftp.aud.alcatel.com/tcl/">Xf</A>
+
+<H4>Help systems</H4>
+A <A HREF = "??:html_library-0.3.tar.gz">tcl-only package
+     designed for HTML-based help</A> systems.  [mumble, mumble]
+     SpecTcl [mumble, mumble]
+<P><A HREF = "http://public.logica.com/~kempsonc/mh_index.htm">MiniHelp</A>
+     supports hyperlinks and text formatting
+
+<H4><A NAME = "java">Java, in relation to Tcl</A></H4>
+These are the people I know putting
+     <A HREF = "../comp.lang.java/java.html">Java</A> together with
+     Tcl in a public way:
+<UL>
+<!-- ftp://ftp.fridu.com/pub/fridu/jTcl.tgz -->
+<LI><A HREF = "http://www.fridu.com/Html/jTcl.html">jTcl</A>
+<LI><A HREF = "../comp.lang.java/jacl.html">Jacl</A>
+<LI><A HREF = "http://www.kencorey.com/tcl/tcljava/">tcljava</A>
+<LI><A HREF = "http://sunscript.sun.com">Sunscript</A> is approximately
+     Sun's marketing-speak
+     for having Java and Tcl play together nicely.  Sun's
+     <A HREF = "http://sunscript.sun.com/techcorner/java.html">technical
+     analysis</A> of Tcl and Java (and Tcl vs. Java) is certainly worth
+     reading, though.
+</UL>
+It is a
+<A HREF = "http://www.infospheres.caltech.edu/mailing_lists/dist-obj/2.18-9.24/0203.html">good idea</A>,
+by the way, to combine Java and Tcl; Java enthusiasts shouldn't
+worry that this diminishes their favorite.
+<!--
+We also working on integrating Java with the "C" based intepreter.
+Scott Stantannt is currently the person working on it. Here is an
+outline of our plans:
+
+    (1) JNI  - Loading "C" Tcl interpreter into the JVM using native
+               methods.
+    (2) JRE  - Loading the JVM into a running "C" Tcl interpreter.
+
+    (3) Jacl - Tcl interpreter written in 100% Pure Java (TM).
+
+There will be a standard API for writting Tcl extensions in Java. These
+extensions will work for all the three cases above.
+-->
+
+<H4>Listbox decorations</H4>
+<A HREF = "http://estas1.inrets.fr:8001/Public/Mariano.Georges/scrolls2/scrolls2.html">synchronized
+     listboxes</A>; other
+     <A HREF = "http://oprs.mchh.siemens.de/tcl/faqs/tk/#listbox/multiple">synchronized
+     listboxes</A>; more-than-one selection for
+     <A HREF = "http://oprs.mchh.siemens.de/tcl/faqs/tk/#listbox/export">multiple
+     listboxes</A>
+
+
+<H4>Signals</H4>
+<A HREF = "http://www.nyx.net/~mschwart/signal_ext.html">Signal
+	Extension</A>
+<P>[Explain TclX.]
+
+<H4><A HREF = "ftp://ftp.cs.berkeley.edu/ucb/people/phelps/tcltk/">TkMan</A></H4>
+
+
+
+
+<H2><A NAME = "old">stuff I need to re-organize</A></H2>
+<UL>
+<!-- For more info see SCO and IXI Visual Tcl Home page:
+
+        http://www.sco.com/Products/vtcl/vtcl.html
+
+	FAQ:
+
+		http://www.sco.com/Products/vtcl/vtcl/faq/faq.html
+
+
+		or a Vtcl/Tk comparison:
+
+			http://www.sco.com/Products/vtcl/vtcl/faq/items/tk.html
+			-->
+<LI><A HREF="http://www.sco.com/IXI/of_interest/tcl/Tcl.html">TCL home page</A>
+<LI><A HREF="http://web.cs.ualberta.ca/~wade/Auto/Tcl.html">Hyper-TCL</A>
+<LI><A HREF = "http://www.neosoft.com/tcl/default.html">NeoSoft's Tcl/Tk
+     page</A>
+<LI><A HREF = "http://www.smli.com:80/research/tcl/tk4.0.ps">Tk4.0
+     Overview and Porting Guide</A>
+<LI><A HREF = "http://www.cis.ohio-state.edu/~fine/tom_fine_faq/httk.html">Hypertext
+     Tk</A>
+<LI>Entropic makes available a demo copy of
+     <A HREF = "http://www.entropic.com">Personal TrueTalk</A>.
+<LI><A HREF = "http://lenti.med.umn.edu/~thanson/sqlform.html">SqlForm</A>
+<LI><A HREF = "http://ce-toolkit.crd.ge.com/tkxauth/">advice about
+     secure X servers and Tk</A>
+</UL>
+
+
+
+<HR>
+<A HREF = "../comp.lang.tcl/tcl.html"><IMG
+     SRC = "http://phaseit.net/claird/gif-s/pwrdLogo75.gif"
+     WIDTH = 47 HEIGHT = 75></A>
+<A HREF = "../comp.infosystems.www.servers.unix/apache.html"><IMG
+     SRC = "http://phaseit.net/claird/gif-s/apache_pb.gif"></A>
+
+<ADDRESS>
+<A HREF = "http://phaseit.net/claird/home.html">Cameron
+Laird</A>'s index to Tcl/Tk/claird@phaseit.net
+</ADDRESS>
+</BODY>
+</HTML>
+
+
+<!-- 
+
+rudolph@PROBLEM_WITH_INEWS_DOMAIN_FILE (Rudolph Pienaar) wrote:
+:Hello, world -
+:
+:I have a question regarding calling and interpreting tk scripts from a
+:main c program... but first one or two background paragraphs.
+:
+:/*****************************/
+:/* Background *********************************************************/
+:/*****************************/
+
+[removed decsription of how to create new Tcl-commands]
+
+:
+:/*****************************/
+:/* End Background ******************************************************/
+:/*****************************/
+:
+
+:Now - my trouble is in executing tk scripts with the same ease... 
+:
+:Interpreting a script that has tk commands, seems a lot more tricky
+:and less elegant. In the first place, I found that one needs to define
+:a Tk_Window type, and use Tk_CreateMainWindow( ... ) if one wants to
+:see any widgets at all. This seems somewhat confusing to me. As I
+:understood the underlying philosophy, one creates new Tk_Windows only
+:when defining custom widgets (as one created a new interpreter when
+:defining new tcl commands). The newly created Tk_Windows will be then
+:able to understand these new widgets.
+:
+
+A quick look in the source-code of Tk (the best reference, BTW)
+reveals that Tk_CreateMainWindow() is called once from Tk_Main() -- thus
+creating the normal main window (the one you see when running wish).
+
+:From this point of view, I can't see why one has to create a new
+:Tk_Window when *not* defining new widgets.
+
+You will need at least one top-level window for displaying your widgets.
+As a starting point, to get Tk initialized properly, you would
+probably want to use a modified version of Tk_Main(), say myTk_Main().
+In myTk_Main() you would want to leave most things unchanged, such as
+sourcing Tcl/Tk-libarary files etc.  You may want to add sourcing
+of your own files, and other specific initialization, as well (see
+Tcl_AppInit() in tkAppInit.c).
+
+Finally, if you are not content with looping forever in Tk_MainLoop(),
+you will have to modify the end of myTk_Main() to loop in you own
+event-loop.
+This event-loop, as you have discovered, must call Tk_DoOneEvent() at regular
+intervals.  Between those occasions you may call other C-functions to do your
+own stuff.  Remember that if these functions don't return control to the
+event-loop, the GUI will be 
+non-responsive (no redraws, etc).
+
+Before doing any of the above, however, you should ask yourself if your
+application cannot be entirely driven from the normal Tk-event-loop,
+using newly defined Tcl-commands!  Normally it can.
+
+[You can, for example, in your initialization-files install a scheduled event
+(using 'after', or in C: Tk_DoWhenIdle()), which will then give control to your
+other C-code at regular intervalls.  See manual]
+
+Comment on event-loops:
+  Unfortunately this is the state of GUI-programming in standard C today
+  (and many other laguages as well).  In order to not have a centralized
+  event-loop you would need a language which supports multi-treading.
+
+:
+:But, that aspect aside, I found that the tk script would only work
+:properly when explicitly told to service X events, as in
+:
+:while(1==1)
+:  Tk_DoOneEvent(TK_DONT_WAIT);
+:
+:Now, that solution - although it worked - was limited and
+:inelegant. The only way to stop the interpretation of the tk script
+:was to Ctrl-C the calling c-program. Another option was to have a
+:global variable that defines the state of the tk script. Something
+:like
+:
+:while(!finished)
+:  Tk_DoOneEvent(TK_DONT_WAIT)
+:
+:where 'finished' is set by a tcl command, finish. In other words, the
+:terminating command of the script, usually (destroy .) is replaced by
+:"finish".
+:
+:But this meant that all tk scripts had to be slightly modified to run
+:under the c-wrapper. Also, the above approach would imply having two
+:wrappers, one for tcl scripts and one for tk scripts.
+:
+
+Well, pure Tcl-scripts terminate when they fall off the end (or exit/return).
+wish-scripts are expected to fall off the end (return) before even anything
+shows up on the screen!  After this moment all execution is done via the
+event-loop.
+
+:Ultimately, of course, one would want a unified wrapper that can run
+:and interpret both tcl and tk scripts. Also, the wrapper would need to
+:know when the tk script has finished without requiring it to use new
+:customized commands.
+
+Unfortunately this requires the interperter to know whether to exit when
+the main Tcl program is finished, or to enter an event-loop.
+
+One solution would be to require all Tk-programs to have a last function-call,
+"tk_mainLoop" for example, whereas Tcl-programs wouldn't have this statement.
+Another solution is to have no default top-window, but requiring all
+Tk-programs
+to create the toplevel window explicitly (if no windows exists, Tk_MainLoop()
+terminates).
+
+Today one would avoid using wish to interpret non-Tk scripts anyway (due to the
+overhead), but with a more modular approach this _may_ become an issue.
+
+:
+:If anyone is working on a similar problem, or has a working solution,
+:*please* let me know. All comments and suggestions will be
+:appreciated.
+:
+
+Others may be more up-to-date on this issue than I am.
+Hope this helped anyway.  e-mail if anything is unclear!
+
+/Patrik Floding
+patrik@sysef.demon.co.uk
+
+
+ -->
+    <!-- http://hplyot.obspm.fr/~dl/wwwtools.html -->
+<!-- In Tk 4.0, "bell -displayof .x.y.z" -->
+<!-- exec xterm -display $somedisplay -iconic -e echo "\007" -->
+
+
+ <!-- http://hplyot.obspm.fr/~dl/wwwtools.html -->
+<!-- Fresco; Pesto is Python-Fresco. -->
+
+<!-- the colormap problem:  use tk4.0, which fixes 3.6; and
+   run netscape with -install option. -->
+
+
+
+
+<!--
+##Can someone show me an easy way to go into a loop waiting for a prompt
+##like "netcom(.*)#".  As long as I am waiting, I want, every 3 minutes,
+##to send "\001" to the remote site.
+##
+##Once I receive the expected prompt, I want to break out of that loop and
+##continue.  I know this is somewhere in the examples, or the book, but
+##can't seem to find it.  Isn't this pretty simple in expect?  I'm still
+##new at it.
+#
+#If you don't have any other reason for the timeout, set the timeout to
+#3 minutes.  Then match the timeout in your expect statement, and as
+#the action, send the \001 and then do exp_continue.
+#
+#I usually don't offer code since I'm so likely to get it wrong on the
+#first try, but I'll give it a shot...
+#
+#set timeout 180
+#expect {
+#    timeout { send \001; exp_continue }
+#    ... other patterns here
+#}
+-->
+
+
+
+
+<!--
+#
+#   HI...
+#
+#   I am trying to pretty up my user interface during a very long operation 
+#   which is invoked following the user hitting a pushbutton.
+#
+#   What I want to do (is force the cursor to a different value over the entire TK
+#   window) that is:
+#
+#   1- user hits button...
+#   2- set cursor to a watch/coffee cup or whatever
+#   3- kick off script which runs for a long time
+#   4- following return reset it to an arrow.
+#
+#   I have 2 ?'s.  First I realize the syntax to set the cursor is 
+#       '.f config -cursor watch' per pg 179 in JO's book.  
+#   But I am unsure how to make this cursor work properly for the entire window &
+#   not just when its over the button wiget (that had just been selected).  
+#
+#   Secondly,  I am also noticing that the base window is not being refreshed while
+#   my long operatino is takng place.  Do I need to setup some sort of callback to
+#   receive X-refresh events in my Tk app; so that my window will redraw properly
+#   while my long operation is taking place?
+#
+#   Thanks in advance.
+#
+#   //Greg Huddleston.lax1b@xerox.com
+#
+#
+#I picked this form the net long time ago:
+#Usage is:
+#	busy Commands
+#	
+###########
+## busy:
+##   Show a busy (watch) cursor while running the command!
+#
+#proc busy {cmds} {
+#  global errorInfo
+#
+#  foreach w [winfo children .] {
+#    lappend busy [list $w [lindex [$w config -cursor] 4]]
+#  }
+#
+#  foreach w $busy { catch {[lindex $w 0] config -cursor watch} }
+#  update idletasks
+#  set error [catch {uplevel eval [list $cmds]} result]
+#  set ei $errorInfo
+#
+#  foreach w $busy { catch {[lindex $w 0] config -cursor [lindex $w 1]} }
+#  if {$error} { ErrorMesg [concat $result $ei] } { return $result }
+#}
+#
+#--
+#---------
+#Pradeep Chetal		Internet: chetal@ml.com
+-->
+
+
+
+<!--
+#Greg, you should use a procedure to disabled your cursor fore each child 
+#of that window.
+#
+#	proc config {window prop value} {
+#		foreach widget [winfo children $window] {
+#			$widget config $prop $value	
+#		}
+#	}
+#
+#And you can refresh you window while you do other things with 
+#another recursive procedure:
+#
+#	proc refresh {interval} {
+#		update idletasks
+#		after $interval refresh $interval
+#	}	
+-->
+<!--
+The best would be to wait for Tcl7.5b1, because then everything can be
+done using Tcl alone without any extension. However I adapted the program
+http_get.c for use with Tcl7.5a2. It doesn't work with Tcl7.4
+because of the missing Tcl_EnterFile() function.
+
+If you compile this program as is, the result is an UNIX executable.
+For example  (Solaris 2.4):
+
+	gcc -O -o http_get http_get.c -lsocket -lnsl
+
+But if you define the flag TCL you can also make it a loadable extension
+for Tcl7.5a2 or higher (it doesn't work for Tcl7.4+):
+
+	gcc -O -c -DTCL -fpic http_get.c
+	/usr/ccs/bin/ld -G -z text -o http_get.so http_get.o -lsocket -lnsl
+
+"load [pwd]/http_get.so http" creates 2 new tcl commands:
+	http_open [url]		returns a file handle to a socket open for reading.
+				The content of the [url] can be read using this
+				file handle.
+	http_get [url]		returns the content of an url
+
+It only works for the "http" protocol, not  for "file" "ftp" or anything else.
+
+	Jan Nijtmans
+	NICI (Nijmegen Institute of Cognition and Information)
+	email: nijtmans@nici.kun.nl
+	url:   http://www.worldaccess.nl/~nijtmans/plus.html
+	-->
+
+<!--
+parts of Hippo have been used by Surfit!, a tcl web browser by Steve Ball, 
+Webedit,  a WYSIWYG HTML editor by Brent Welch, and for prototyping some
+of the socket facilities that are now in tcl7.5b1.
+-->
+<!--
+qqn:---------------------------Cut Here-------------------------------------
+qqn:#! /usr/local/bin/tclsh
+qqn:###########################################################################
+qqn:# This is a simple echo server that listens for TCP connectiosn 
+qqn:# on port. Anything sent to it will get echoed back to the
+qqn:# client.
+qqn:###########################################################################
+qqn:
+qqn:proc listen {port} {
+qqn:    set servsock [socket -server connect_socket -tcp $port]
+qqn:}
+qqn:
+qqn:proc connect_socket {channel ip} {
+qqn:    puts stdout "Connecting channel $channel with $ip"; flush stdout
+qqn:
+qqn:    fconfigure $channel -translation lf
+qqn:    fconfigure $channel -linemode on
+qqn:    fconfigure $channel -blocking off
+qqn:    fileevent $channel readable [list read_socket $channel $ip]
+qqn:}
+qqn:
+qqn:proc read_socket {channel ip} {
+qqn:    puts -nonewline stdout "$ip: "; flush stdout
+qqn:
+qqn:    set data [read $channel]
+qqn:    if {$data != ""} {
+qqn:	puts stdout $data; flush stdout
+qqn:	puts -nonewline $channel $data; flush $channel
+qqn:    }
+qqn:
+qqn:    if [eof $channel] {
+qqn:	puts stdout "\ndisconnecting $ip"; flush stdout
+qqn:	close $channel
+qqn:    }
+qqn:}
+qqn:
+qqn:listen [lindex $argv 0]
+qqn:vwait x
+qqn:
+qqn:
+qqn:---------------------------Cut Here-------------------------------------
+qqn:#! /usr/local/bin/tclsh
+qqn:###########################################################################
+qqn:# This is a simple echo client that will open a TCP connection to
+qqn:# a specified server and port.
+qqn:###########################################################################
+qqn:
+qqn:proc connect {ip port} {
+qqn:    global ECHO
+qqn:
+qqn:    set ECHO(CHANNEL) [socket -tcp $ip $port]
+qqn:
+qqn:    fileevent $ECHO(CHANNEL) readable [list read_socket $ECHO(CHANNEL)]
+qqn:
+qqn:    fconfigure $ECHO(CHANNEL) -translation lf
+qqn:    fconfigure $ECHO(CHANNEL) -linemode on
+qqn:    fconfigure $ECHO(CHANNEL) -blocking off
+qqn:}
+qqn:
+qqn:proc read_socket {channel} {
+qqn:    global ECHO
+qqn:    set ECHO(REPLY) "Reply: [read $channel]"
+qqn:}
+qqn:
+qqn:proc echo {string} {
+qqn:    global ECHO
+qqn:
+qqn:    #
+qqn:    # Send the string to the server.
+qqn:    #
+qqn:
+qqn:    puts -nonewline $ECHO(CHANNEL) $string; flush $ECHO(CHANNEL)
+qqn:
+qqn:    #
+qqn:    # Wait 5 seconds for a reply and then give up.
+qqn:    #
+qqn:
+qqn:    set after_id [after 5000 {set ECHO(REPLY) "No Reply"}]
+qqn:    vwait ECHO(REPLY)
+qqn:    after cancel $after_id
+qqn:
+qqn:    puts stdout $ECHO(REPLY)
+qqn:}
+
+
+-->
+<!--
+Well, there's Richard Hipp's ET (Embedded Tk), available from
+ftp://ftp.vnet.net/pub/users/drh. Then there's David Beazley's SWIG
+package (http://www.cs.utah.edu/~beazley/SWIG), and finally, there's
+Jan Nijtmans' plus-patches for Tcl/Tk, which also include a version
+of tcl_compiler (http://www.worldaccess.nl/~nijtmans/plus.html).-->
+<!--
+From karl@pluto.ops.NeoSoft.com Tue Mar 19 10:47:08 CST 1996
+
+Neoscript 0.8 Beta 1 is now available.  http://www.neosoft.com/neoscript
+
+Neoscript is a server-side scripting environment based on the Apache
+webserver and Safe Tcl.  
+
+This means that your users can write Neoscript programs that perform
+sophisticated data processing and on-the-fly HTML generation without 
+risking comprimising the system by opening arbitrary files or running 
+arbitrary programs on the server.
+
+A module (well, mostly) for the popular Apache webserver, 
+http://www.apache.org, Neoscript adds server-side in-html-file programming 
+to the most popular webserver on the Internet.
+
+Neoscript compiles and runs on most Unix systems without modification.
+It's still beta code, though, and not for the faint-of-heart, particularly
+because compiling and installing dbopen (required) isn't very turnkey, 
+configuring and installing in general isn't very turnkey, and there
+are still a few hard-coded path dependencies.
+
+No warranties of merchantibility or fitness for use are expressed or
+implied.  At this point we are under no obligation to provide any sort
+of support, or to insure that any capabilities in the current release 
+will be kept in future versions.  Other than that, it's still pretty
+interesting...
+
+tcl-project@neosoft.com
+
+P.S.  Oh the logs have been modified, too, to better support virtual URLs,
+without the hideousness of having a couple hundred access_log and error_log
+files held open by every child process.  A full explanation and/or better
+solution will be forthcoming.
+-->
+<!--
+#The Tcl model is one of applications written in a combination of languages:
+#a full-scale system programming languages for central application-specific
+#functionality, with an embedded scripting language for customization,
+#extension, configuration, and much of the user interface.  The model is
+#still a good one.  That Java is (currently) interpreted and architecture-
+#independent does not make it a scripting language; it is still complex, has
+#a lot of structure which is helpful for writing large applications, and must
+#be compiled before it can be run.
+#
+#To see why Tcl still has a role alongside Java, take a look at the following
+#Java applets:
+#
+#  - LED Sign (http://www.cs.hope.edu/~dbrown/java/LEDSign/WWW/LED.html)
+#
+#    This applet implements its own special-purpose scripting language for
+#    programming the applet.  You can program what is displayed, for how
+#    long, along with delays and transition effects, scrolling, colors, and
+#    so on.  
+#
+#    Just as you might expect, the scripting language is incredibly weak and
+#    quirky.  It's good enough for doing the things the author had in mind,
+#    but it's still limited, and it still represents another language that
+#    you have to learn.  And since you probably won't be using that language
+#    very often, you'll have to learn it anew each time.
+#
+#  - Clickboard (http://users.aimnet.com/~foureyes/clickboard/ClickBoard.html)
+#
+#    This generalized applet for building interactive animations also comes
+#    with its own built-in scripting language.  It advertises configuration
+#    "without any programming", but that's really only partly true: the 
+#    configuration file essentially lets you assign simple actions to some
+#    predefined events.  The comments above about the LED Sign scripting
+#    language apply here as well.  Anyone who's done interactive graphics
+#    with the Tk canvas should enjoy comparing the two models.
+#
+#  - Movie (http://www.cybercomm.net/~drz/java/movie/)
+#
+#    More of the same: an animation applet configurable via its own scripting
+#    language, rather than the conventional slew of parameters.
+#
+#  - Yassl (http://www.blackdown.org/~kbs/yassl/yassl.html)
+#
+#    "Yet another simple scripting language" is a general-purpose scripting
+#    language, written in Java, which can be used by other Java applets which
+#    need a language.  It's better than the three special languages used by
+#    the applets above, but (in my opinion) not as good as Tcl.  I'm not aware
+#    of anyone other than the author of Yassl who has used it in an applet.
+#
+#So, in the short period of time (less than a year) since Java was first
+#made available outside Sun, four different scripting languages have been
+#implemented to work with it.  And that's not even counting JavaScript,
+#which currently doesn't actually interface to Java (although supposedly
+#it will soon).
+#
+#This is precisely the kind of thing Tcl was designed for.  It would be
+#an improvement over any of the scripting languages mentioned above, by
+#virtue of being a better, more mature, more consistent language.  It would
+#be a *huge* improvement as a replacement for all of those languages at once,
+#by virtue of being just one language instead of a group of different ones.
+#
+#And, predictably, Tcl would be a fine addition to Java *applications*, not
+#just applets.  Tcl would serve well as the interface to configuring various
+#aspects of Java applications, including security rules.  People are casting
+#about looking for a good cross-platform "resource file" format for Java, to
+#permit configuration of user-interface characteristics in Java applications.
+#I have an answer for them.  :-)
+-->
+<!--  Winda--Tcl Linda
+Tcl Software Catalog -->
+<!--
+## 
+## Is there an easier way to provide library functions than this? As far as
+## i can see, you need to have a set of commands:
+## auto_load libfunc_1
+## auto_load libfunc_2
+## ...
+## (i.e. one for each library function).
+## You have to create a tclIndex file anyway - so tcl knows what library
+## functions exist, and what file to source to get them. So why do you have
+## to explicitly 'auto_load' them? Why can't auto_load be run automatically
+## when the interpreter comes across an unknown command which is in a
+## tclIndex?
+## 
+## Am i missing something basic here? 
+#
+#You don't need the auto_load command, just build the tclIndex using 
+#auto_mkindex.  
+#
+#Then do one of the following:
+#
+#	1) In each program that wants to use a library, make sure that the
+#	   directory containing the library is in the auto_path global
+#	   variable (I do a "lappend auto_path my_lib_path")
+#
+#	2) Modify your environment variable, TCLPATH, to include the
+#	   directory containing the library.
+#
+#Then just use the functions in your program.
+-->
+<!--
+bind .text %Double-Button-1% {puts [.text index @%x,%y]}
+or
+bind .text %Double-Button-1% {puts [.text index current]} -->
+<!--
+#hi, the following code provides a very stripped down version of 
+#the dp_MakeRPCServer, dp_MakeRPCClient, and dp_RDO calls from
+#tcl-dp, but using the sun socket layer.  essentially this allows
+#you to send (asynchronously) tcl commands over a socket which are
+#evaluated on the other side.  sockets are bi-directional so clients
+#can send to servers and servers back to sockets.  you'll need an
+#event loop going on each side (via tk or vwait) to receive correctly.
+#
+#this is just intended as an example.  comments in the code indicate
+#places where you may want to add some kind of security thing so tht
+#people don't send you "exec rm -rf *", and there is also a couple
+#of places that trap closed socket connections.
+#
+#hope this is useful..
+#
+#mark
+#
+#
+#
+#### myrpc_server port - set up a server
+#### myrpc_client host port - connect to a client, returns a socket
+#### myrpc_RDO sock cmd arg.. - send a message on a socket
+####    (on the receiving end, the global myrpc_channel is set to the
+####     socket the message came from)
+#
+#proc myrpc_client {host port} {
+#    global socks
+#    set sock [socket $host $port]
+#    set socks($sock::state) idle
+#    fconfigure $sock -blocking no -buffering none
+#    fileevent $sock readable "_myrpc_readable $sock"
+#    return $sock
+#}
+#
+#proc myrpc_server {port} {
+#    return [socket -server _myrpc_accept $port]
+#}
+#
+#proc myrpc_RDO {sock args} {
+#    puts -nonewline $sock [format "RDO%05d" [string length $args]]
+#    puts -nonewline $sock $args
+#}
+#
+#proc _myrpc_accept {sock addr port} {
+#    global socks
+#    set socks($sock::state) idle
+#    fconfigure $sock -blocking no -buffering none
+#    fileevent $sock readable "_myrpc_readable $sock"
+#}
+#
+#proc _myrpc_readable {sock} {
+#    global socks
+#    switch $socks($sock::state) {
+#	"idle" {
+#	    set socks($sock::state) readhdr
+#	    set socks($sock::buffer) ""
+#	    set socks($sock::toread) 8
+#	    _myrpc_readhdr $sock
+#	}
+#	"readhdr" {
+#	    _myrpc_readhdr $sock
+#	}
+#	"readmsg" {
+#	    _myrpc_readmsg $sock
+#	}
+#    }
+#}
+#
+#proc _myrpc_readhdr {sock} {
+#    global socks
+#    set result [read $sock $socks($sock::toread)]
+#    if {$result==""} {   ### SOCKET CLOSED
+#	fileevent $sock readable ""
+#	return
+#    }
+#    append socks($sock::buffer) $result
+#    incr socks($sock::toread) [expr -[string length $result]]
+#    if {$socks($sock::toread)==0} {
+#	if {[string range $socks($sock::buffer) 0 2]=="RDO"} {
+#	    set socks($sock::state) readmsg
+#	    scan [string range $socks($sock::buffer) 3 end] "%d" len 
+#	    set socks($sock::toread) $len
+#	    set socks($sock::buffer) ""
+#	} else {
+#	    set socks($sock::state) idle
+#	}
+#    }
+#}
+#
+#proc _myrpc_readmsg {sock} {
+#    global socks myrpc_channel
+#    set result [read $sock $socks($sock::toread)]
+#    if {$result==""} {   ### SOCKET CLOSED
+#	fileevent $sock readable ""
+#	return
+#    }
+#    append socks($sock::buffer) $result
+#    incr socks($sock::toread) [expr -[string length $result]]
+#    if {$socks($sock::toread)==0} {
+#	set myrpc_channel $sock
+#	### SECURITY CHECK HERE WOULD BE GOOD!
+#	catch {uplevel #0 $socks($sock::buffer)}
+#	unset myrpc_channel
+#	set socks($sock::state) idle
+#    }
+#}
+-->
+
+
+<!--
+#Rainer Aschwanden wrote:
+## Is it possible two create two interpreters,
+## one for each module, and control the events by
+## the loops that are linked this interpreters?
+## Does tcl/tk allow to have several interpreters
+## in the same Application and if so, is this
+## safe enough or could result ugly interference?
+#
+#Yes, but Tcl7.5b3 currently doesn't support an event-loop.
+#You could use the trick to execute "vwait x" (where x
+#is any unused variable) in the master interpeter. From
+#then on all slave interpreters start to handle events
+#whenever they come in, exactly what you want.
+#
+#There are two solutions (but in fact they are the same):
+#
+#- Use the "plus"-patches for Tcl7.5b3/Tk4.1b3. Then after
+#  your script is finished the event-loop will be started
+#  automatically. And when there are no events left (e.g.
+#  no open sockets any more), the application will end
+#  automatically.
+#	ftp://ftp.nici.kun.nl/pub/tkpvm/tcl7.5b3+.patch.gz
+#	ftp://ftp.nici.kun.nl/pub/tkpvm/tk4.1b3+.patch.gz
+#
+#- Apply the following patches to Tcl7.5b3/Tk4.1b3 (maybe this
+#  makes it in the final release, but I don't know). This is
+#  the minimal patch required to get what you want (extracted
+#  from the current "plus"-patch). It should work for Windows
+#  and Mac too.
+#
+#	Jan Nijtmans
+#	NICI (Nijmegen Institute of Cognition and Information)
+#	email: nijtmans@nici.kun.nl
+#	url:   http://www.cogsci.kun.nl/~nijtmans/
+#
+#----------------------------------------------------------
+#*** mac/tclMacMain.c.orig	Wed Mar  6 01:19:15 1996
+#--- mac/tclMacMain.c	Mon Mar 11 11:47:40 1996
+#***************
+#*** 240,245 ****
+#--- 240,246 ----
+#      }
+#  
+#      /*
+#+      * Handle events that are still unprocessed. After that, finish.
+#       * Rather than calling exit, invoke the "exit" command so that
+#       * users can replace "exit" with some other command to do additional
+#       * cleanup on exit.  The Tcl_Eval call should never return.
+#***************
+#*** 246,251 ****
+#--- 247,257 ----
+#       */
+#  
+#      done:
+#+     if (!exitCode) {
+#+ 	while (Tcl_DoOneEvent(0)) {
+#+ 	    /* empty body loop */
+#+ 	}
+#+     }
+#      sprintf(buffer, "exit %d", exitCode);
+#      Tcl_Eval(interp, buffer);
+#  }
+#*** generic/tclMain.c.orig	Sat Mar  9 00:07:53 1996
+#--- generic/tclMain.c	Mon Mar 11 17:15:33 1996
+#***************
+#*** 299,304 ****
+#--- 299,305 ----
+#      }
+#  
+#      /*
+#+      * Handle events that are still unprocessed. After that, finish.
+#       * Rather than calling exit, invoke the "exit" command so that
+#       * users can replace "exit" with some other command to do additional
+#       * cleanup on exit.  The Tcl_Eval call should never return.
+#***************
+#*** 305,310 ****
+#--- 306,317 ----
+#       */
+#  
+#  done:
+#+     if(!exitCode) {
+#+ 	while (Tcl_DoOneEvent(0)) {
+#+ 	    /* empty loop body */ ;
+#+ 	}
+#+     }
+#+ 
+#      sprintf(buffer, "exit %d", exitCode);
+#      Tcl_Eval(interp, buffer);
+#  }
+#*** generic/tkWindow.c.orig	Fri Mar  1 20:36:19 1996
+#--- generic/tkWindow.c	Mon Mar 11 12:18:58 1996
+#***************
+#*** 1144,1149 ****
+#--- 1144,1153 ----
+#  	}
+#      }
+#      ckfree((char *) winPtr);
+#+ 
+#+     if (numMainWindows==0) {
+#+ 	Tcl_DoWhenIdle((Tcl_IdleProc *)Tcl_Exit, (ClientData) NULL);
+#+     }
+#  }
+#  
+#  /*
+-->
+<!--
+
+
+This is indeed possible using netscape. I use the OpenUrl() command of
+netscape to do this (I can't remember where I heard of this, but it's not easy
+to find it documented anywhere).
+
+So in my help code I have the following function:
+
+proc show_netscape {url} {
+    set cmd [format {[ "`netscape -remote 'OpenUrl(%s)' 2&gt;&1`" != "" ] && netscape '%s'} $url $url]
+
+    exec sh -c "$cmd" &
+}
+
+It's a bit hacky, but works fine provided you don't hammer on the help button
+lots (netscape can take a while to start up so won't respond to -remote calls
+for a little while). All of our help is written in texinfo and then converted
+from  there to a printed manual or html. We then use a generated index to
+translate from help topic to url for the online help system.
+
+Does anyone know if such things are possible with other browsers?
+
+Where netscape isn't available (our help system is configurable) we make use
+of Stephen Uhler's html_library. This is written entirely in tcl/tk and so can
+be managed either as a separate application using send or as a separate window
+of the current application.
+
+
+
+-->
+<!--
+From kcorey@eng.sun.com Thu Apr 18 14:12:22 CDT 1996
+
+Brian O'Brien (brian@parkmed.com) wrote:
+# I am execing a unix command in my script.  Untill the command is
+# compleated, my application gets no updates.  I would exec the command
+# in the background if I could get the status back of the command, but
+# I don't seem to be able to do this.
+
+Here's a fairly grody little hack.  You can do this, but it only
+works under unix, I believe.
+
+--
+Ken Corey    kcorey@eng.sun.com    415/336-4028
+
+#!/proj/tcl/install/5.x-sparc/bin/wish4.1
+
+set f [open "bg.c" w]
+puts $f {#include &lt;stdio.h&gt;
+main(){printf("Hello\n");}}
+close $f
+set f [open "/tmp/junk.out" w+]
+pack [frame .bb] -side top -fill x
+
+#Note that the '-#' flag is how I turn on verbose compilation.
+# adjust accordingly for your compiler.
+
+button .bb.b -text "Compile it." -command {\
+  after 1000 tail $f;\
+  exec cc -# bg.c &gt;&gt;& /tmp/junk.out &\
+}
+pack .bb.b -side left
+pack [label .bb.l -text "\\"] -side right
+pack [scrollbar .sb -command ".t yview"] -side right -fill y
+pack [text .t -yscrollc ".sb set"] -fill both -expand 1
+set size 0
+set state 0
+proc tail {f} {
+    global size
+    file stat /tmp/junk.out stats
+    if {$stats(size) != $size} {
+	.t insert end [read $f [expr $stats(size)-$size]]
+	.t yview 100
+	set size $stats(size)
+    }
+    after 500 tail $f
+}
+    
+proc rotate {} {
+    global state
+    .bb.l config -text [string index "\|/-" $state]
+    set state [expr ($state&gt;3?0:$state+1)]
+    after 100 rotate
+}
+
+rotate
+-->
+<!-- comparison with Java:  Linkname: Forest Preliminary Implementation
+        URL:
+		  http://www.sunlabs.com/research/forest/COM.Sun.Labs.Forest.doc.
+			    external_www.JVB.jvblite.html -->
+<!-- Your script can check which environment it is executing in by
+checking the value of the global variable tcl_platform (an array, print its
+contents with parray). -->
+<!-- for multi-select on canvas, use "tags" -->
+<!--
+## 'after %# microsecs%' will pause.
+#
+#  global setmewhenimdone
+#  after #millisecs {set setmewhenimdone 1}
+#  vwait setmewhenimdone
+#
+#will keep your app. responsive during the pause...
+-->
+<!--
+        To speed up access to the NeoSoft TCL archives, we are putting togther
+	a new machine to handle all of NeoSoft's Mirrors and FTP archives.
+
+	Please Start FTPing to:
+
+	ftp://mirror.neosoft.com/pub/tcl
+
+	For the TCL archives. -->
+	<!-- enhanced Tk console available at
+	http://www.cs.uoregon.edu/research/tcl/script/tkcon/ -->
+	<!-- http://www.cs.uoregon.edu/~jhobbs/work/tktetris -->
+<!-- send for Windows:  http://www.osf.org/~loverso/tcl-tk/ -->
+<!--
+    $ tclsh
+	% set s [socket your.proxy.at.unisql.com 8000]
+	    sock4
+		% puts $s "HEAD http://www.unisql.com/ HTTP/1.0\n"
+		    % flush $s
+			% puts [read $s]
+			    HTTP/1.0 200 OK
+				Date: Tuesday, 18-Jun-96 20:20:30 GMT
+				    Server: NCSA/1.3
+					Mime-version: 1.0
+					    Content-type: text/html
+						Last-modified: Friday, 07-Jun-96 17:38:53 GMT
+						    Content-length: 1853 -->
+<!--
+#glob ./*   is not returning anything, though [file isdirectory ./subdir]
+#           works fine,
+
+Try "glob [file join . *]".  That's portable. -->
+<!--
+The answer is yes. You just have to ensure that you don't block on any one
+of the sockets. You can set a socket into nonblocking mode (or any channel,
+for that matter) with fconfigure $sock -blocking off. Please read the man
+pages (doc/socket.n, doc/fileevent.n, doc/fconfigure.n) and look for
+examples in tests/socket.test. -->
+<!-- fileevent doesn't work for Windows files--only for sockets.
+    Hacks:  look at file size, connect file to socket, ... -->
+<!--
+Of course not, 'send' is a tk command.  John LoVerso has written a
+tcl-only send replacement that uses sockets called comm.tcl. (see
+http://www.osf.org/~loverso/).  You have to make sure that it's loaded
+into any program that needs it.  For just "debugging" (as in not for
+normal operation), you can use TkCon to wrap around the server. -->
+<!-- tkinspect traces -->
+<!-- Another tracer:
+
+if {[info comm proc_real] != {}} {
+    rename proc {}
+    rename proc_real proc
+}
+rename proc proc_real
+proc_real proc {command args} {
+    puts "Creating $command."
+    proc_real $command {args} {
+       set command [lindex [info level [info level]] 0]
+       puts [list $command - $args]
+        uplevel 1 [list ${command}_real] $args
+    }
+    eval [list proc_real ${command}_real] $args
+-->
+<!--
+ftp://ftp.smli.com/pub/tcl
+
+example.tar.Z           This file contains a sample loadable Tcl extension
+                        for Macintosh, Windows, and Unix platforms.
+#Unfortunately we haven't figured out a good way to handle this yet.
+#The issues are different on each platform, and the current scheme
+#doesn't really handle any of them particularly well.
+#
+#For now, you can install your extension in a directory like
+#c:/tcl/lib/example, and then modify ../tcl7.5/init.tcl or
+#../tk4.1/tk.tcl to add your directory to the auto_path.  Either that,
+#or just dump your extension into ../tcl7.5 or ../tk4.1 and regenerate
+#the pkgIndex.tcl files in those directories.
+
+
+
+                        -->
+<!--
+After doing the gets, check for eof (use the eof command).  If eof is true,
+do:
+       fileevent $canRead readable {}
+       close $canRead
+
+Question:
+
+       Instead of setting canRead, why not just call a procedure and have
+your main program just be:
+
+        socket -server acceptConnection $serverPort
+       vwait exit
+
+Of course nowhere would the variable exit be set, unless you want to exit. -->
+<!-- "watch" is a -cursor on all platforms.  Is "xterm", also? -->
+<!-- `man photo` gif -->
+<!--
+I'm enthusiastic about the Tcl bridge.  I've said that from time to
+time before during the past six months, but the story is crystalliz-
+ing more coherently now.  Here it is:
+
+What's "the Tcl bridge"?  It's a GSI bridge, that provides a Tcl
+playground to which a G2 knowledge base can connect.  I've constructed
+'em for Solaris, SunOS, Digital Unix, Windows NT, HP-UX, and AIX, and,
+with a bit of warning, I can do the same for OpenVMS, Irix, ...
+
+Why is "the Tcl bridge" desirable?  For a bunch of reasons:
+1.  dollars in hand:
+    a.  Steve Fraleigh's pharmaceutical consulting practice
+        has convinced Pfizer and potentially others to pay
+        for an application we've implemented with the Tcl
+	bridge (among other MANY other pieces);
+    b.  AT&T and Fidelity will pay Hank to provide agent-
+	style filtering which we'll implement by exposing
+	parts of the Tcl bridge;
+    c.  the generic SNMP bridge which Inmarsat, the CIA
+	(?), ... are burning to buy, will (re-)use the same 
+	technology (perhaps delivered as a distinct execu-
+	table, though, for commercial and performance
+	reasons);
+2.  It's a good sales story.  What do I mean by that?  At first,
+    the Tcl bridge might sound like a difficult, even troublesome,
+    product to sell; if G2 has everything in it, as it does, what
+    possible point can there be to connecting it to a processor
+    for another language?  There's a lot of point:
+    a.  First, the Tcl bridge has what I call CLARITY.
+        This bridge is easy to explain to technoids,
+        and they know immediately whether they want it
+        or don't; products like that are fun to sell.
+        How easy is it to explain (and document, and
+        maintain, and ...)?  Here's the explanation:
+        it's G2, plus Tcl, plus one new G2 procedure
+        for invoking the Tcl interpreter, plus one new
+        Tcl procedure for invoking the G2 processor.
+        That's it.  Contrast that with the Oracle bridge,
+        or even with GSI itself, with its hundreds of
+        pages of documentation.  We could make a Tcl
+        bridge like that, if so motivated, but, for now,
+        one with only TWO new procedures does everything
+        we need.
+    b.  It gives the right answer to organizations that
+	have a body of legacy Tcl applications.  There are
+	a LOT of these out there, more than often realized.
+	No, the installed line count for FORTRAN and COBOL
+	and C and maybe even DIBOL dwarfs that for Tcl, but
+	the Tcl volume is quite significant, and much of it
+	is in problem domains (system administration;
+	visualization; process automation; ...) that is
+	positively *ripe* for the intelligence that G2 pro-
+	vides.  With the Tcl bridge, we can say to these
+	people, "Keep your application; don't change it.
+	Just run it inside our bridge, and let G2 control
+	it with real intelligence."
+    c.  Tcl is the natural scripting language for Java,
+	which is the current sexy development choice.  Who
+	says so?  People at Sun.  References available on
+	request.
+    d.  We can do Safe-Tcl.
+    e.  People write agents with Tcl.  We can have G2 write
+	agents.
+    f.  Scalability is one of the cliches of the year.  The
+	Tcl bridge helps with this; it encourages partition
+	of a problem into parts (G2 intelligent services on
+	big, fast machine, and parsing and formatting and
+	UI and ... on inexpensive, interactive distributed
+	user-class commodity client boxes) that make more
+	effective use of processor cycles.
+3.  It truly can be a happy marriage.  G2 is "intelligent    
+    glue"; Tcl is application glue.  One costs BIG amounts,
+    and one is free (or whatever we decide to charge for it),
+    but the attitudes of application development in the two
+    have a lot in common.
+
+'Nough for now.  More, later.
+
+Cameron Laird                     claird@phaseit.net
+Senior Consulting Engineer        +1 713 623 8000 #227
+Gensym Corporation                +1 713 623 4004 FAX
+-->
+<!--
+Oops, the patch I sent you is botched.  Sorry about that.  Here's
+the correct patch:
+
+------- tclEnv.c -------
+*** /tmp/da004RR	Wed Dec 31 16:00:00 1969
+--- tclEnv.c	Fri Nov  1 08:51:40 1996
+***************
+*** 138,144 ****
+  	    break;
+  	}
+  	for (p2 = p; *p2 != '='; p2++) {
+! 	    /* Empty loop body. */
+  	}
+          sz = p2 - p;
+          Tcl_DStringSetLength(&ds, 0);
+--- 138,152 ----
+  	    break;
+  	}
+  	for (p2 = p; *p2 != '='; p2++) {
+! 	    if (*p2 == 0) {
+! 		/*
+! 		 * This condition doesn't seem like it should ever happen,
+! 		 * but it does seem to happen occasionally under some
+! 		 * versions of Solaris; ignore the entry.
+! 		 */
+! 
+! 		goto nextEntry;
+! 	    }
+  	}
+          sz = p2 - p;
+          Tcl_DStringSetLength(&ds, 0);
+***************
+*** 145,150 ****
+--- 153,160 ----
+          Tcl_DStringAppend(&ds, p, sz);
+  	(void) Tcl_SetVar2(interp, "env", Tcl_DStringValue(&ds),
+                  p2+1, TCL_GLOBAL_ONLY);
++ 	nextEntry:
++ 	continue;
+      }
+      Tcl_TraceVar2(interp, "env", (char *) NULL,
+  	    TCL_GLOBAL_ONLY | TCL_TRACE_WRITES | TCL_TRACE_UNSETS,
+
+
+
+[With windows, errors within source can't get back out (!?).]
+
+You should first run wish to obtain a console window.
+
+        wish42.exe
+
+
+	Within the wish console window, use the Tcl/TK "source" command to run
+	your script.
+
+		source myscript.tcl
+
+
+		Error messages from your script will be printed to the wish console
+		window. Thus, allowing you to debug your script.           -->
+<!--
+If you don't
+ need all of Tcl's whitles and bells (i.e., you merely
+ need it as a glue language for your C app), you could easily compile
+ Tcl with -DTCL_GENERIC_ONLY. However, I didn't try this for a very
+ long time, and -- looking at the code of 7.6 -- I guess it needs
+ some minor tweaking (e.g., "fileevent" doesn't depend on GENERIC_ONLY).       -->
+ <!-- how do i view an gif in tclt/k?
+
+ Use the 'image' command, then assign the image to a 'label'.   -->
+ <!--
+compile the objects together in one shared library.
+  You need to add XXX_Init() function to initialize
+  your extensions i.e. register your new commands.
+  ( see http://www.cs.uoregon.edu/research/tcl/faqs/tk/#dll on how to
+build
+    your own shared extension )
+
+- try to use tcl-package-system.     
+-->
+<!--
+porting notes?  http://www.sunlabs.com/cgi-bin/tcl/info.4.2     -->
+<!--
+MacOS:
+
+
+
+
+
+There are two things here.  One is using scripts in TEXT resources.  The
+other is double-clickable apps.
+
+1) TEXT resources...  Make a named resource of type TEXT in the app or any
+of its shared libraries, and source it in with the command:
+
+source -rsrc resourceName
+
+2) Double-Clickable Apps...  define a proc called tkOpenDocument.  To get
+this to source at startup, you will have to do something like put it in the
+'tk' TEXT resource of the tk shared library, or some other script that gets
+sourced before or during the Tk startup.  In it you can either do this to
+make a droplet:
+
+proc tkOpenDocument {args} {
+   foreach file $args {
+      after idle [list source $file]
+   }
+}
+
+The after idle is necessary if you load any other extensions or scripts in
+the startup, since the tkOpenDocument gets run for the Original Open
+Document event event gets run in the Tk_Init procedure...
+
+Or just source in the code for your application, for instance using the
+source -rsrc from #1.
+
+Hope this helps,
+
+Jim.
+
+-->
+	<!--
+	It should automagically make the proper association for .tcl files when
+	you load Tcl/Tk onto your machine.  HOwever, you can always make the
+	association yourself via Explorer->View->Options->File Types...         -->
+<!--
+
+         exec print myfile
+
+
+  An alternative to "print" is "notepad /p".
+  The advantage of this is it pops up a print dialog so the
+  user can select the printer, number of copies, etc.                   
+
+
+
+
+
+Since I reply to this question frequently, I hope a post is OK.
+The tkmswin extension provides facilities for both listing
+printers and for sending raw output (data or files) to printers.
+Precompiled extensions, source code, readme are all found via
+  http://www.nyx.net/~mschwart
+  Temporarily, while nyx is moving, the primary is stored at
+    http://www.du.edu/~mschwart/atk.htm
+
+    Features and limitations of the extension are described in the readme.
+
+    Note that this extension _does not_ provide facilities for converting
+    canvases to PCL or anything of the sort. For that work, one should start
+    with the visitor patch (I think this may now be part of the dash patch),
+    and work from there to produce appropriate raw output.
+
+    Like Charlie, I hope that more printing facilities will eventually be
+    added to the core (or integrated into a Sun-supported core extension).
+
+    Michael                
+  -->
+  <!-- "It isn't a real language"--many conferees have heard this. -->
+  <!-- Official Style Guide  ?  -->
+  <!-- 
+
+  you can use
+  the sequence Tcl_NewStringObj followed by Tcl_ListObjAppendElement (or
+  Tcl_ListObjIndex or any other list operation) to convert a string to
+  a Tcl builtin list object if that's what you need. -->
+  <!-- Colin Stevens is the Sun guy working on Unicode -->
+  <!-- Mark Diekhans e-mail #199710272243.OAA22108@osprey.grizzly.com#
+
+  Part of the reason behind Tcl success is the fact that it doesn't try to be
+  everything to everyone.  It has a particular problem space kthat its very good
+  at, and some that it does ok at and the rest get left to other languages. -->
+  <!--
+  From jyl@tcl-tk.com  Thu Nov 27 15:50:43 1997
+  To: claird@Starbase.NeoSoft.COM
+  Date: Thu, 27 Nov 1997 12:44:27 -0800
+  Newsgroups: comp.lang.tcl
+  Subject: Re: TCL and threads
+  From: jyl@tcl-tk.com (Jacob Levy)
+  Organization: Tcl-tk.com
+  X-Newsreader: WinVN 0.99.9 (Beta 3) (x86 32bit)
+  References: <880408937.30487@dejanews.com> <65hc63$jf9$1@Starbase.NeoSoft.COM>
+  MIME-Version: 1.0
+  Content-Type: Text/Plain; charset=US-ASCII
+
+  Tcl 8.1 will be thread-safe. We will support using interpreters in separate
+  threads, that is, at any time only one thread can be within one interpreter.
+  We still do not know how or if inter-thread communication will be supported.
+
+  --JYL     -->
+ <!-- What is an extension? --> 
+ <!-- http://sunscript.sun.com/techcorner/whatistcl.html -->
+ <!-- Zach Frey does oddball OSs. -->
+ <!--
+   BJ sent me the archive of the tclteam correspondence and
+   I set it up at
+	   http://www.binevolve.com/~tdarugar/tclteam-arch/
+
+	     BJ's mail folder format doesn't want to get along with mine,
+	     so the archive lives in a different location from the new.
+	     The new is at http://www.binevolve.com/~tdarugar/tclteam/)
+
+	       I'm just starting to go through the list. Seems like I missed
+	       a lot of fun discussions huh? Hard to believe that a group of
+	       people all trying to accomplish the same thing could generate
+	       so much ... constructive discussion?
+		 I just want you all to know I love everyone and I agree with
+		 everything. Peace on earth and such. Be gentle.             -->
+<!--
+There is a memory leak problem in Tk, at least as of Tk7.6 which
+is the last version I checked.  The problem was with a data
+structure called a Tk_Uid (if I recall) which is a "Unique Id".
+Once allocated, these are never freed.  Tk_Uids are used to
+stored the names of widgets, and the text in a "message" widget,
+among other things.  So if you have a message widget with a large
+message that keeps changing, you will eventually run out of memory
+in Tk...  -->
+<!--
+*       About Face, The essentials of user interface design
+        ISBN 1-56884-322-4, IDG Books
+		by Alan Cooper (http://www.cooper.com/)
+
+			Inspiring, provocative.
+
+			*       http://www.iarchitect.com/mshame.htm
+
+				The interface hall of fame and shame. There are some truly
+					horrible interfaces around. Do you want to enter a SSN using a
+						row of drop down listboxes, one per digit ?
+							(section: Inappropriate use of controls).  
+
+							from Andreas Kupries -->
+<!--
+giant namespace of all commands of all
+extensions using http:/pitch.nist.gov/nics -->
+<!--
+
+
+#! /bin/sh
+        #\
+		exec tclsh $0 "$@" 2> /tmp/foo.$$
+			# tcl code here...      
+			-->
+<!-- "O'NEEL Bruce" <beoneel@acm.org> knows Macintosh -->
+<!--
+From fellowsd@cs.man.ac.uk Mon Jul 20 15:34:43 CDT 1998
+
+In article #changl.900287494@silver.cs.umanitoba.ca#,
+Chang Li #changl@silver.cs.umanitoba.ca# wrote:
+# I am looking for a solution to call a proc with the default value.
+# suppose
+# 
+# proc foo {{v1 a1} {v2 a2}} {
+# ...
+# }
+# 
+# we can call foo in several forms,
+# 
+# 1. foo
+# 2. foo b1
+# 3. foo b1 b2
+# 4. foo a1 b2
+# 
+# The trouble is in the form 4. Suppose the foo is defined in a
+# library with another file, when I want to set the default value
+# to v1 I have to check the library and find its default value
+# is a1. I think there is a better solution for this. The solution
+# requires a default keyword. so we can simply call the form 4 by
+# 
+# foo default b2
+# 
+# This requires modify proc command in the Tcl. 
+
+Don't do that.  You'll be surprised at just how much breaks...
+
+If you are getting into this business, you really need to use keyed
+argument lists:
+
+   proc foo args {
+       # Load the defaults...
+       array set arg {-v1 a1 -v2 a2}
+
+       # No, I'm not checking stuff.  You can do that if you want...
+       catch {array set arg $args}
+
+       set v1 $arg(-v1); # For convenience
+       set v2 $arg(-v2); # For convenience
+
+       # the rest of your script...
+   }
+
+Note that this form is considerably more literate, and thus is much
+easier to maintain.  HTH!
+
+Donal.
+-- 
+Donal K. Fellows    http://www.cs.man.ac.uk/~fellowsd/    fellowsd@cs.man.ac.uk
+Department of Computer Science, University of Manchester, U.K. +44-161-275-6137
+--
+Never underestimate the power of the penguin...
+
+
+-->
+<!--
+On Thu, Jul 30, 1998 at 10:54:19PM -0500, Cameron Laird wrote:
+# I *really* hope Tom knows the answer to this
+# quicker than I do, 'cause I fear it would take
+
+I answered Richard earlier today, I don't think I cc: you.  I didn't really
+have enough info to be sure, but I think he's trying to read/write Oracle
+LONG and LONG RAW column types.
+
+If so, he needs to use orawritelong/orareadlong commands; you can use a
+simple orasql $c "insert ..." into LONG columns, but Oracle sees the literal
+character text in the insert statement, coerces it into VARCHAR2 type, of
+which Oracle allows a max of 2000 bytes.  Thus data will be truncated.  I think
+bad things can happen if you try to use orasql $c "select ..." to get out
+LONG columns as well.  The current interface with orareadlong/orawritelong
+kind of sucks wrt Tcl 8.0; the commands only read/write the LONG columns to
+files.  I'll add a -variable varname option when I finally drop Tcl 7.x support.
+
+Looks like that won't happen until fall, I picked up another small (but tight
+schedule) writing assignment.  I'll probably ask you to review for me if you
+have time.
+
+Also, thanks for your kind words in c.l.t regarding mpexpr.
+
+-- 
+Tom Poindexter                       Does any spammer really think that I'd
+tpoindex@nyx.net                     buy something from them?
+http://www.nyx.net/~tpoindex/        
+-->
+<!--
+http://www.scriptics.com/scripting/tclHistory.html -->
+<!--
+
+
+kumarsri@gte.net
+        The latest version is isqltcl 4.0 - I use it with SCO
+		OpenServer 5.0.4.
+			You can find a slightly older release on
+				http://www.neosoft.com/tcl at
+					http://www.neosoft.com/tcl/ftparchive/sorted/packages-7.6/databases/isql
+					tcl3.2/
+
+						The latest version also has all the extensions of 7.x
+							and you can access databases from Win 95, NT or Unix
+								machines without the need for ODBC or any Informix
+									drivers at all!.                       -->
+
+
+
+
+<!-- http://clubs.yahoo.com/clubs/tclandrelatedextensions -->
+<!-- http://www.etsimo.uniovi.es/tcl/tutorial/ -->
+<!-- drag'n'drop:  no synthesis http://x9.dejanews.com/getdoc.xp?AN=389328053 -->
+<!-- http://www.tclfaq.wservice.com/tcl-faq/tcl-projects.html -->
+<!--
+to clarify a point. vtcl and visual tcl are two different things. vtcl
+can do all three types of geo managers - place, pack and grid. while i
+think visual tcl does only place and spectcl does only grid.
+
+personally i found vtcl to be the best - most convenient and easy to
+use, quite user friendly, and quite powerful. the author has done a very
+very good job on it. i strongly recommend using it.
+-->
+<!--
+At scriptics, they keep versions of Tcl going back to tcl 6.7 and tk 3.3. Go
+to ftp://ftp.scriptics.com/pub/tcl/tcl_old/
+-->
+<!-- POP and SMTP
+http://www.oche.de/~akupries/soft/pool/index.htm -->
+<!--
+     Very early versions, probably not ones that were released, did not
+     have the $ syntax.  I remember John asking me if it should be "added",
+     and of course I said it would be pretty clunky to write [set x]
+     every time you needed a variable's value.  So, literally it was true,
+     but practically it wasn't much of an issue.
+     --      Brent Welch
+
+
+     One other thing - I like to tell this antecdote, too!
+          -->
+	  <!-- variants:  TinyTcl; SCO? AOL?;
+	  Jacl; 
+	  ftp://ftp.prosa.it/pub/etlinux/ettcl-10.tar.gz -->
+<!-- http://purl.org/thecliff/tcl/wiki//Richard*Suchenwirth -->
+<!-- http://purl.org/thecliff/tcl/wiki/CD-ROM -->
+<!-- 
+This must be Matt Newman's doing - he said he works across the street
+from George and Michael McLennan.  -->
+<!--
+Timeline of Tcl/Tk
+        URL:
+		  http://www.cs.earlham.edu/~palmech/projects/seniorsem/reports/T
+			    clTimeline.html -->
+<!--
+c:\foo\bar\wish.exe "%1" %*
+
+An unexpected twist is that the 'all arguments' (%*) entry doesn't contain
+the file name, so you get an accurate count of your arguments. It also
+maintains proper quoting, so
+
+    foo.tcl "a b" c
+
+    returns 2 arguments in your code snippet, as you'd hope.        -->
+<!-- IMPORTANT:  fix up all sunscript antiquities.  -->
+<!--
+This should be in the FAQ, but here goes:
+
+::catch {};#\
+@c:\progra~1\tcl\bin\wish80.exe %0 %1 %2 %3 %4 %5 %6 %7 %8 %9
+::catch {};#\
+@exit
+
+
+
+Two caveats:
+  1) %0 does not always resolve to a fully qualified path name--you
+       may have to replace it by hand with the full name of the
+	    tcl script (this is a limitation of DOS)
+	      2) some does don't understand the exit command. Use @goto eof instead
+		   and at the end of the file append:
+			  return
+				 :eof     -->
+<!--
+http://www.devcritic.com/sites/Tcl-Tk/ -->
+<!
+Larry Smith
+          Tcl is a subject close to my heart however, since it has
+		  one of the most powerful foundations of any popular
+			  programming language, and is best placed to evolve into
+				  something better than most programming languages we have
+					  now.  Python, Perl, and Java are powerful tools for the
+						  type of programming that has always been done - but only
+							  tcl points to ways to program that we've not done before.
+								  Unlike most others (and like only Smalltalk, Lisp, Trac,
+									  and a number of not-well-known others) extensibility is
+										  very fundamental in tcl.               
+										  -->
+<!--
+http://dev.scriptics.com/bboard/
+
+http://www.tcltk.com/opentcl/voting/candidates.htcl
+-->
+<!--
+Link to tcltk.com
+-->
+<!--
+> BTW, with Ajuba being sucked up into Interwoven, how does one report a
+> bug in Tcl these days?
+
+http://sourceforge.net/bugs/?group_id=10894   -->
+<!--
+  Tcl Project Homepage:
+      http://tcl.sourceforge.net/
+
+	Tcl Project Summary:
+	    http://sourceforge.net/projects/tcl/
+
+	      Tcl Project Bug Database:
+		  http://sourceforge.net/bugs/?group_id=10894      -->
+<!--
+Marshall Rose did the first safe interpreter
+stuff for his tcl embedded mime mail software 
+
+
+http://citeseer.nj.nec.com/context/25382/0
+-->
+<!--
+   iclguy: \w is for wordchars 
+   Cameron: I can't even tell you, Jeff; he might ... 
+   Cameron: \w is in the new regexp, which became available with 8.2--is that
+   right? 
+   tclguy: Yes,8.1 actually 
+   tclguy: or [:alpha:] 
+   tclguy: [:alpha:] is just letters, where \w is wordchars. 
+   miguel: [:alpha:] is what you're after, I think 
+   tclguy: Tell him to look at re_syntax 
+   -->
+<!--
+dgp: namespace eval Softball { 
+[->trb] These are messages only you see, not anyone else. 
+proc foo {a args} {...} 
+dgp: proc this {args} { 
+dgp: uplevel 1 foo this $args 
+dgp: } 
+dgp: is less efficient than 
+dgp: interp alias {} this {} foo this 
+dgp: s/this/$this/g 
+dgp: namespace import Sport::team_description 
+dgp: } 
+
+
+kennykb: Don: That's why the OO systems use aliases for the commands
+that represent instances. But Cameron hardly needs to teach THAT hack to
+newbies. 
+dgp: Then have the body of Sport::description just call [team_description]. 
+
+
+
+
+
+-->
+<!--
+lvirden: Re: TclPro ...
+1. procheck - static syntax checker - this is the tclpro piece I use most.  I use frink along with this - the two of them together cover a lot of potential gotchas.  I wish every developer would check their code with frink and procheck...
+2. prodebug - tcl script debugger that permits single step, graphically visualization of code and a few other features.  Does NOT permit dynamic editing of code within the tool itself.
+3. procomp - Tcl 'compiler', creating a .tbc bytecode file for each script given as an argument.
+4. prowrap - Utility to bundle together a collection of tcl scripts and other files, alogn with a tcl interpreter, into one executable file.  The resulting file is self-contained and can be run like any other executable.  It is my understanding that these apps are platform specific .
+-->
+<!--
+aku: You have the group and artifact id hardwired into the script ?
+tclguy: http://sf.net/tracker/?group_id=$group_id<and>atid=${bug=1OrPatch=3}$group_id<and>aid=$number
+tclguy: The group_id is hardwired to the select box that I mentioned.
+dgp: I had the form send the ID's.
+dgp: In order to change to a select box, I need to have the form send project na
+-->
+<!--  Wind River   vxWorks    talk with Will Deere
+
+
+  We are using TCL7.3 (No tk) with VxWorks 5.3 compiled under GNU.
+  Do you need tk?
+  We basically stripped down the TCL code and
+  took what we needed.
+  In the ShellLib we call Tcl_Eval with
+  the TCL script file in the buffer.
+
+  Where did you get "Vxworks Tcl 8.0"?
+  I haven't heard of such a source from WRS.        
+
+
+-->
+<!--
+interesting source:
+http://margaretmorgan.com/wesley/python/
+-->
+<!--
+l: in emergency cases, when mini.net is really down, there is a mirror at http://www.lucidway.org/cgi-bin/wiki/wiki/0.html
+suchenwi: But it shouldn't be edited, as it is copied over from mini.net every night.
+-->
+<!--
+The ATM designer's use EDA tools built on Tcl.
+The testers use Tcl scripts to validate the designs.
+The networks use Spirent, Smartbits or Ixia to generate and analyze traffic.
+We ought to put Tcl at the user level, too.
+Talk about a vertical market :-)
+-->
+<!--
+Local Wiki:
+ http://mini.net/tcl/wikit.gz* will get you there - page 51, fro example
+ pascal: Thanks.
+ lvirden: after you get it, take a look at http://wiki.tcl.tk/wikitool for a script to get at the pages
+ lvirden: via command line. Or just rename the above file to wikit.tkd and start up a local copy of the starkit.
+ -->
+ <!--
+ http://ibd.ar.com/ger/comp/lang/tcl/content.html
+ -->
+ <!--
+ Le Portail de Tcl Tk Francophone
+	 URL: http://www.larochelle-innovation.com/tcltk/
+
+	 -->
+<!--
+This is how kroc thinks I look:
+
+http://www.kroc.tk/tcl/card_laird.gif -->

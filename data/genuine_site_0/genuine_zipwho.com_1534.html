@@ -1,0 +1,1759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name	   : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version	: 1.0
+Released   : 20080102
+
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ZipWho.com - Free ZIP Code Demographics</title>
+<meta name="keywords" content="zip code demographics, zip code, zipcode, demographics, median income, household income, census, statistics, gis" />
+<meta name="description" content="Free ZIP Code Demographics" />
+<link rel="shortcut icon" type="image/ico" href="favicon.ico">
+
+<script>
+
+function getData()
+{
+	return "zip,city,state,MedianIncome,MedianIncomeRank,CostOfLivingIndex,CostOfLivingRank,MedianMortgageToIncomeRatio,MedianMortgageToIncomeRank,OwnerOccupiedHomesPercent,OwnerOccupiedHomesRank,MedianRoomsInHome,MedianRoomsInHomeRank,CollegeDegreePercent,CollegeDegreeRank,ProfessionalPercent,ProfessionalRank,Population,PopulationRank,AverageHouseholdSize,AverageHouseholdSizeRank,MedianAge,MedianAgeRank,MaleToFemaleRatio,MaleToFemaleRank,MarriedPercent,MarriedRank,DivorcedPercent,DivorcedRank,WhitePercent,WhiteRank,BlackPercent,BlackRank,AsianPercent,AsianRank,HispanicEthnicityPercent,HispanicEthnicityRank";
+}
+
+function getResultsCount()
+{
+	return "0";
+}
+
+</script>
+
+<script>
+
+/*
+  SortTable
+  version 2
+  7th April 2007
+  Stuart Langridge, http://www.kryogenix.org/code/browser/sorttable/
+  
+  Instructions:
+  Download this file
+  Add class="sortable" to any table you'd like to make sortable
+  Click on the headers to sort
+  
+  Thanks to many, many people for contributions and suggestions.
+  Licenced as X11: http://www.kryogenix.org/code/browser/licence.html
+  This basically means: do what you want with it.
+*/
+
+var stIsIE = /*@cc_on!@*/false;
+
+sorttable = {
+  init: function() {
+	// quit if this function has already been called
+	if (arguments.callee.done) return;
+	// flag this function so we don't do the same thing twice
+	arguments.callee.done = true;
+	// kill the timer
+	if (_timer) clearInterval(_timer);
+	
+	if (!document.createElement || !document.getElementsByTagName) return;
+	
+	sorttable.DATE_RE = /^(\d\d?)[\/\.-](\d\d?)[\/\.-]((\d\d)?\d\d)$/;
+	
+	forEach(document.getElementsByTagName('table'), function(table) {
+	  if (table.className.search(/\bsortable\b/) != -1) {
+		sorttable.makeSortable(table);
+	  }
+	});
+
+	var sortFirst = document.getElementById("sort_first");
+
+	if(sortFirst != null)
+	{
+	  sorttable.doSort(document.getElementById("sort_first"));
+	}
+  },
+  
+  makeSortable: function(table) {
+	if (table.getElementsByTagName('thead').length == 0) {
+	  // table doesn't have a tHead. Since it should have, create one and
+	  // put the first table row in it.
+	  the = document.createElement('thead');
+	  the.appendChild(table.rows[0]);
+	  table.insertBefore(the,table.firstChild);
+	}
+	// Safari doesn't support table.tHead, sigh
+	if (table.tHead == null) table.tHead = table.getElementsByTagName('thead')[0];
+	
+	if (table.tHead.rows.length != 1) return; // can't cope with two header rows
+	
+	// Sorttable v1 put rows with a class of "sortbottom" at the bottom (as
+	// "total" rows, for example). This is B&R, since what you're supposed
+	// to do is put them in a tfoot. So, if there are sortbottom rows,
+	// for backwards compatibility, move them to tfoot (creating it if needed).
+	sortbottomrows = [];
+	for (var i=0; i<table.rows.length; i++) {
+	  if (table.rows[i].className.search(/\bsortbottom\b/) != -1) {
+		sortbottomrows[sortbottomrows.length] = table.rows[i];
+	  }
+	}
+	if (sortbottomrows) {
+	  if (table.tFoot == null) {
+		// table doesn't have a tfoot. Create one.
+		tfo = document.createElement('tfoot');
+		table.appendChild(tfo);
+	  }
+	  for (var i=0; i<sortbottomrows.length; i++) {
+		tfo.appendChild(sortbottomrows[i]);
+	  }
+	  delete sortbottomrows;
+	}
+	
+	// work through each column and calculate its type
+	headrow = table.tHead.rows[0].cells;
+	for (var i=0; i<headrow.length; i++) {
+	  // manually override the type with a sorttable_type attribute
+	  if (!headrow[i].className.match(/\bsorttable_nosort\b/)) { // skip this col
+		mtch = headrow[i].className.match(/\bsorttable_([a-z0-9]+)\b/);
+		if (mtch) { override = mtch[1]; }
+		  if (mtch && typeof sorttable["sort_"+override] == 'function') {
+			headrow[i].sorttable_sortfunction = sorttable["sort_"+override];
+		  } else {
+			headrow[i].sorttable_sortfunction = sorttable.guessType(table,i);
+		  }
+		  // make it clickable to sort
+		  headrow[i].sorttable_columnindex = i;
+		  headrow[i].sorttable_tbody = table.tBodies[0];
+		  dean_addEvent(headrow[i],"click",function(e) { sorttable.doSort(this); });
+		}
+	}
+  },
+  
+  guessType: function(table, column) {
+	// guess the type of a column based on its first non-blank row
+	sortfn = sorttable.sort_alpha;
+	for (var i=0; i<table.tBodies[0].rows.length; i++) {
+	  text = sorttable.getInnerText(table.tBodies[0].rows[i].cells[column]);
+	  if (text != '') {
+		if (text.match(/^-?[?$?]?[\d,.]+%?$/)) {
+		  return sorttable.sort_numeric;
+		}
+		// check for a date: dd/mm/yyyy or dd/mm/yy 
+		// can have / or . or - as separator
+		// can be mm/dd as well
+		possdate = text.match(sorttable.DATE_RE)
+		if (possdate) {
+		  // looks like a date
+		  first = parseInt(possdate[1]);
+		  second = parseInt(possdate[2]);
+		  if (first > 12) {
+			// definitely dd/mm
+			return sorttable.sort_ddmm;
+		  } else if (second > 12) {
+			return sorttable.sort_mmdd;
+		  } else {
+			// looks like a date, but we can't tell which, so assume
+			// that it's dd/mm (English imperialism!) and keep looking
+			sortfn = sorttable.sort_ddmm;
+		  }
+		}
+	  }
+	}
+	return sortfn;
+  },
+  
+  getInnerText: function(node) {
+	// gets the text we want to use for sorting for a cell.
+	// strips leading and trailing whitespace.
+	// this is *not* a generic getInnerText function; it's special to sorttable.
+	// for example, you can override the cell text with a customkey attribute.
+	// it also gets .value for <input> fields.
+	
+	hasInputs = (typeof node.getElementsByTagName == 'function') &&
+				 node.getElementsByTagName('input').length;
+	
+	if (node.getAttribute("sorttable_customkey") != null) {
+	  return node.getAttribute("sorttable_customkey");
+	}
+	else if (typeof node.textContent != 'undefined' && !hasInputs) {
+	  return node.textContent.replace(/^\s+|\s+$/g, '');
+	}
+	else if (typeof node.innerText != 'undefined' && !hasInputs) {
+	  return node.innerText.replace(/^\s+|\s+$/g, '');
+	}
+	else if (typeof node.text != 'undefined' && !hasInputs) {
+	  return node.text.replace(/^\s+|\s+$/g, '');
+	}
+	else {
+	  switch (node.nodeType) {
+		case 3:
+		  if (node.nodeName.toLowerCase() == 'input') {
+			return node.value.replace(/^\s+|\s+$/g, '');
+		  }
+		case 4:
+		  return node.nodeValue.replace(/^\s+|\s+$/g, '');
+		  break;
+		case 1:
+		case 11:
+		  var innerText = '';
+		  for (var i = 0; i < node.childNodes.length; i++) {
+			innerText += sorttable.getInnerText(node.childNodes[i]);
+		  }
+		  return innerText.replace(/^\s+|\s+$/g, '');
+		  break;
+		default:
+		  return '';
+	  }
+	}
+  },
+  
+  reverse: function(tbody) {
+	// reverse the rows in a tbody
+	newrows = [];
+	for (var i=0; i<tbody.rows.length; i++) {
+	  newrows[newrows.length] = tbody.rows[i];
+	}
+	for (var i=newrows.length-1; i>=0; i--) {
+	   tbody.appendChild(newrows[i]);
+	}
+	delete newrows;
+	sorttable.enumRows(tbody.rows);
+  },
+  
+  /* sort functions
+	 each sort function takes two parameters, a and b
+	 you are comparing a[0] and b[0] */
+  sort_numeric: function(a,b) {
+	aa = parseFloat(a[0].replace(/[^0-9.-]/g,''));
+	if (isNaN(aa)) aa = 0;
+	bb = parseFloat(b[0].replace(/[^0-9.-]/g,'')); 
+	if (isNaN(bb)) bb = 0;
+	return aa-bb;
+  },
+  sort_alpha: function(a,b) {
+	if (a[0]==b[0]) return 0;
+	if (a[0]<b[0]) return -1;
+	return 1;
+  },
+  sort_ddmm: function(a,b) {
+	mtch = a[0].match(sorttable.DATE_RE);
+	y = mtch[3]; m = mtch[2]; d = mtch[1];
+	if (m.length == 1) m = '0'+m;
+	if (d.length == 1) d = '0'+d;
+	dt1 = y+m+d;
+	mtch = b[0].match(sorttable.DATE_RE);
+	y = mtch[3]; m = mtch[2]; d = mtch[1];
+	if (m.length == 1) m = '0'+m;
+	if (d.length == 1) d = '0'+d;
+	dt2 = y+m+d;
+	if (dt1==dt2) return 0;
+	if (dt1<dt2) return -1;
+	return 1;
+  },
+  sort_mmdd: function(a,b) {
+	mtch = a[0].match(sorttable.DATE_RE);
+	y = mtch[3]; d = mtch[2]; m = mtch[1];
+	if (m.length == 1) m = '0'+m;
+	if (d.length == 1) d = '0'+d;
+	dt1 = y+m+d;
+	mtch = b[0].match(sorttable.DATE_RE);
+	y = mtch[3]; d = mtch[2]; m = mtch[1];
+	if (m.length == 1) m = '0'+m;
+	if (d.length == 1) d = '0'+d;
+	dt2 = y+m+d;
+	if (dt1==dt2) return 0;
+	if (dt1<dt2) return -1;
+	return 1;
+  },
+  
+  shaker_sort: function(list, comp_func) {
+	// A stable sort function to allow multi-level sorting of data
+	// see: http://en.wikipedia.org/wiki/Cocktail_sort
+	// thanks to Joseph Nahmias
+	var b = 0;
+	var t = list.length - 1;
+	var swap = true;
+
+	while(swap) {
+		swap = false;
+		for(var i = b; i < t; ++i) {
+			if ( comp_func(list[i], list[i+1]) > 0 ) {
+				var q = list[i]; list[i] = list[i+1]; list[i+1] = q;
+				swap = true;
+			}
+		} // for
+		t--;
+
+		if (!swap) break;
+
+		for(var i = t; i > b; --i) {
+			if ( comp_func(list[i], list[i-1]) < 0 ) {
+				var q = list[i]; list[i] = list[i-1]; list[i-1] = q;
+				swap = true;
+			}
+		} // for
+		b++;
+
+	} // while(swap)
+  },
+
+	enumRows: function(rows)
+	{
+		if(rows[0] != null && rows[0].cells[0].className == "enum")
+		{
+			for(var i = 0; i < rows.length; i++)
+			{
+				rows[i].cells[0].innerHTML = (i+1) + ".";
+			}
+		}
+	},
+
+	doSort: function(tis)
+	{
+		  if (tis.className.search(/\bsorttable_sorted\b/) != -1) {
+			// if we're already sorted by this column, just 
+			// reverse the table, which is quicker
+			sorttable.reverse(tis.sorttable_tbody);
+			tis.className = tis.className.replace('sorttable_sorted','sorttable_sorted_reverse');
+			tis.removeChild(document.getElementById('sorttable_sortfwdind'));
+			sortrevind = document.createElement('span');
+			sortrevind.id = "sorttable_sortrevind";
+			sortrevind.innerHTML = '<font size=4>&nbsp;&#x25B4;</font>'
+			tis.appendChild(sortrevind);
+			return;
+		  }
+		  if (tis.className.search(/\bsorttable_sorted_reverse\b/) != -1) {
+			// if we're already sorted by this column in reverse, just 
+			// re-reverse the table, which is quicker
+			sorttable.reverse(tis.sorttable_tbody);
+			tis.className = tis.className.replace('sorttable_sorted_reverse','sorttable_sorted');
+			tis.removeChild(document.getElementById('sorttable_sortrevind'));
+			sortfwdind = document.createElement('span');
+			sortfwdind.id = "sorttable_sortfwdind";
+			sortfwdind.innerHTML = '<font size=4>&nbsp;&#x25BE;</font>'
+			tis.appendChild(sortfwdind);
+			return;
+		  }
+		  
+		  // remove sorttable_sorted classes
+		  theadrow = tis.parentNode;
+		  forEach(theadrow.childNodes, function(cell) {
+			if (cell.nodeType == 1) { // an element
+			  cell.className = cell.className.replace('sorttable_sorted_reverse','');
+			  cell.className = cell.className.replace('sorttable_sorted','');
+			}
+		  });
+		  sortfwdind = document.getElementById('sorttable_sortfwdind');
+		  if (sortfwdind) { sortfwdind.parentNode.removeChild(sortfwdind); }
+		  sortrevind = document.getElementById('sorttable_sortrevind');
+		  if (sortrevind) { sortrevind.parentNode.removeChild(sortrevind); }
+		  
+		  tis.className += ' sorttable_sorted';
+		  sortfwdind = document.createElement('span');
+		  sortfwdind.id = "sorttable_sortfwdind";
+		  sortfwdind.innerHTML = '<font size=4>&nbsp;&#x25BE;</font>';
+		  tis.appendChild(sortfwdind);
+
+			// build an array to sort. This is a Schwartzian transform thing,
+			// i.e., we "decorate" each row with the actual sort key,
+			// sort based on the sort keys, and then put the rows back in order
+			// which is a lot faster because you only do getInnerText once per row
+			row_array = [];
+			col = tis.sorttable_columnindex;
+			rows = tis.sorttable_tbody.rows;
+			for (var j=0; j<rows.length; j++) {
+			  row_array[row_array.length] = [sorttable.getInnerText(rows[j].cells[col]), rows[j]];
+			}
+			/* If you want a stable sort, uncomment the following line */
+			sorttable.shaker_sort(row_array, tis.sorttable_sortfunction);
+			/* and comment out this one */
+			//row_array.sort(tis.sorttable_sortfunction);
+			row_array.reverse();
+			tb = tis.sorttable_tbody;
+			for (var j=0; j<row_array.length; j++) {
+			  tb.appendChild(row_array[j][1]);
+			}
+			
+			delete row_array;
+			sorttable.enumRows(rows);
+	}
+}
+
+/* ******************************************************************
+   Supporting functions: bundled here to avoid depending on a library
+   ****************************************************************** */
+
+// Dean Edwards/Matthias Miller/John Resig
+
+/* for Mozilla/Opera9 */
+if (document.addEventListener) {
+	document.addEventListener("DOMContentLoaded", sorttable.init, false);
+}
+
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+	document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+	var script = document.getElementById("__ie_onload");
+	script.onreadystatechange = function() {
+		if (this.readyState == "complete") {
+			sorttable.init(); // call the onload handler
+		}
+	};
+/*@end @*/
+
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { // sniff
+	var _timer = setInterval(function() {
+		if (/loaded|complete/.test(document.readyState)) {
+			sorttable.init(); // call the onload handler
+		}
+	}, 10);
+}
+
+/* for other browsers */
+window.onload = sorttable.init;
+
+// written by Dean Edwards, 2005
+// with input from Tino Zijdel, Matthias Miller, Diego Perini
+
+// http://dean.edwards.name/weblog/2005/10/add-event/
+
+function dean_addEvent(element, type, handler) {
+	if (element.addEventListener) {
+		element.addEventListener(type, handler, false);
+	} else {
+		// assign each event handler a unique ID
+		if (!handler.$$guid) handler.$$guid = dean_addEvent.guid++;
+		// create a hash table of event types for the element
+		if (!element.events) element.events = {};
+		// create a hash table of event handlers for each element/event pair
+		var handlers = element.events[type];
+		if (!handlers) {
+			handlers = element.events[type] = {};
+			// store the existing event handler (if there is one)
+			if (element["on" + type]) {
+				handlers[0] = element["on" + type];
+			}
+		}
+		// store the event handler in the hash table
+		handlers[handler.$$guid] = handler;
+		// assign a global event handler to do all the work
+		element["on" + type] = handleEvent;
+	}
+};
+// a counter used to create unique IDs
+dean_addEvent.guid = 1;
+
+function removeEvent(element, type, handler) {
+	if (element.removeEventListener) {
+		element.removeEventListener(type, handler, false);
+	} else {
+		// delete the event handler from the hash table
+		if (element.events && element.events[type]) {
+			delete element.events[type][handler.$$guid];
+		}
+	}
+};
+
+function handleEvent(event) {
+	var returnValue = true;
+	// grab the event object (IE uses a global event object)
+	event = event || fixEvent(((this.ownerDocument || this.document || this).parentWindow || window).event);
+	// get a reference to the hash table of event handlers
+	var handlers = this.events[event.type];
+	// execute each event handler
+	for (var i in handlers) {
+		this.$$handleEvent = handlers[i];
+		if (this.$$handleEvent(event) === false) {
+			returnValue = false;
+		}
+	}
+	return returnValue;
+};
+
+function fixEvent(event) {
+	// add W3C standard event methods
+	event.preventDefault = fixEvent.preventDefault;
+	event.stopPropagation = fixEvent.stopPropagation;
+	return event;
+};
+fixEvent.preventDefault = function() {
+	this.returnValue = false;
+};
+fixEvent.stopPropagation = function() {
+  this.cancelBubble = true;
+}
+
+// Dean's forEach: http://dean.edwards.name/base/forEach.js
+/*
+	forEach, version 1.0
+	Copyright 2006, Dean Edwards
+	License: http://www.opensource.org/licenses/mit-license.php
+*/
+
+// array-like enumeration
+if (!Array.forEach) { // mozilla already supports this
+	Array.forEach = function(array, block, context) {
+		for (var i = 0; i < array.length; i++) {
+			block.call(context, array[i], i, array);
+		}
+	};
+}
+
+// generic enumeration
+Function.prototype.forEach = function(object, block, context) {
+	for (var key in object) {
+		if (typeof this.prototype[key] == "undefined") {
+			block.call(context, object[key], key, object);
+		}
+	}
+};
+
+// character enumeration
+String.forEach = function(string, block, context) {
+	Array.forEach(string.split(""), function(chr, index) {
+		block.call(context, chr, index, string);
+	});
+};
+
+// globally resolve forEach enumeration
+var forEach = function(object, block, context) {
+	if (object) {
+		var resolve = Object; // default
+		if (object instanceof Function) {
+			// functions have a "length" property
+			resolve = Function;
+		} else if (object.forEach instanceof Function) {
+			// the object implements a custom forEach method so use that
+			object.forEach(block, context);
+			return;
+		} else if (typeof object == "string") {
+			// the object is a string
+			resolve = String;
+		} else if (typeof object.length == "number") {
+			// the object is array-like
+			resolve = Array;
+		}
+		resolve.forEach(object, block, context);
+	}
+};
+
+</script>
+
+<style>
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+input, textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #000000;
+}
+
+h1, h2, h3 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+p, ul, ol {
+	margin-bottom: 1.8em;
+	line-height: 140%;
+}
+
+ul, ol {
+}
+
+blockquote {
+}
+
+a {
+	color: blue;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+hr {
+	display: none;
+}
+
+/* Splash */
+
+#splash {
+	width: 550px;
+	height: 132px;
+	margin: 0 auto;
+	text-align: center;
+	font-style: italic;
+}
+
+
+/* Logo */
+
+#logo {
+	width: 920px;
+	height: 8px;
+	margin: 0 auto;
+	border-bottom: 6px solid #3F3F3F;
+	color: #414141;
+}
+
+#logo h1, #logo h2 {
+	margin: 0;
+	padding: 0 20px;
+}
+
+#logo h1 {
+	float: left;
+	padding-top: 30px;
+	letter-spacing: -3px;
+	font-size: 3em;
+}
+
+#logo h2 {
+	float: right;
+	padding-top: 49px;
+	letter-spacing: -1px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #414141;
+}
+
+/* Page */
+
+#page {
+	width: 920px;
+	margin: 0 auto;
+	padding: 30px;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 480px;
+}
+
+#advert {
+	float: right;
+	width: 170px;
+	text-align: right;
+}
+
+.post {
+	padding-bottom: 20px;
+}
+
+.post .title {
+	  text-align: right;
+	margin: 0;
+	padding: 1px 1px;
+	letter-spacing: 0px;
+	border-bottom: 1px dashed #B9B9B9;
+	font-size: 24px;
+}
+
+.post .title a {
+	text-decoration: none;
+}
+
+.post .header {
+	height: 20px;
+	margin: 0;
+	padding: 1px 0 0 1px;
+	border-bottom: 1px dashed #B9B9B9;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
+}
+
+.post .entry {
+	padding: 10px 20px;
+}
+
+.post .meta {
+	height: 26px;
+	background: #F5F5F5;
+	border-top: 1px solid #E9E9E9;
+	text-decoration: none;
+	font-size: smaller;
+}
+
+.post .posted {
+	float: left;
+	height: 16px;
+	padding: 5px 20px;
+}
+
+.post .permalink, .post .comments {
+	float: right;
+	height: 16px;
+	padding: 5px 20px;
+}
+
+.post .permalink {
+}
+
+/* Sidebar */
+
+#sidebar {
+	width: 256px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0px;
+	list-style: none;
+}
+
+#sidebar li {
+	margin-bottom: 0px;
+}
+
+#sidebar li ul {
+	padding: 0px;
+}
+
+#sidebar li li {
+	margin: 0;
+	padding-left: 0px;
+	padding-bottom: 0px;
+}
+
+#sidebar p {
+	padding: 0px;
+}
+
+#sidebar h2 {
+	height: 20px;
+	margin: 0;
+	padding: 1px 0 0 1px;
+	border-bottom: 1px dashed #B9B9B9;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+
+/* Search */
+
+#search form {
+	padding: 20px;
+}
+
+#search br {
+	display: none;
+}
+
+#search #s {
+	width: 135px;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	width: 920px;
+	height: 5px;
+	margin: 0 auto;
+	padding: 10px 0;
+	border-top: 6px solid #3F3F3F;
+	font-size: smaller;
+	color: #BBBBBB;
+	text-decoration: none;
+}
+
+#footer p {
+	margin: 0;
+	text-align: center;
+	line-height: normal;
+	color: #BBBBBB;
+	text-decoration: none;
+}
+
+#footer p a {
+	margin: 0;
+	text-align: center;
+	line-height: normal;
+	color: #BBBBBB;
+	text-decoration: none;
+}
+
+/* Tables */
+
+table
+{
+	border: 1px solid #B9B9B9;
+}
+
+th
+{
+	text-align: center;
+	padding: 3px 3px;
+	background-color: #EEE;
+}
+
+td
+{
+	text-align: center;
+	padding: 4px 6px;
+}
+
+td.split
+{
+	text-align: center;
+	padding: 4px 6px;
+	border-top: 1px dashed #B9B9B9;
+}
+
+td.rank
+{
+	text-align: left;
+	padding: 4px 6px;
+}
+
+td.ranksplit
+{
+	text-align: left;
+	padding: 4px 6px;
+	border-top: 1px dashed #B9B9B9;
+}
+
+td.key
+{
+	text-align: right;
+	font-weight: bold;
+}
+
+td.keysplit
+{
+	text-align: right;
+	font-weight: bold;
+	border-top: 1px dashed #B9B9B9;
+}
+
+/* Form Inputs */
+
+input.text
+{
+	font-size: 12px;
+}
+
+input.button
+{
+	font-size: 12px;
+	padding: 0px 3px;
+	overflow: visible;
+}
+
+select
+{
+	font-size: 10px;
+}
+
+</style>
+
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="splash">
+	<a href="/"><img src="zipwho.jpg" alt="logo" border="0" /></a>
+</div>
+<div id="logo">
+</div>
+<hr />
+<div id="page">
+	<div id="advert">
+
+<!--[BEGIN_COMMENT]-->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4361752200585262";
+/* 160x600 Right */
+google_ad_slot = "7851729483";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<!--[END_COMMENT]-->
+<!--[BEGIN_COMMENT]-->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!--[END_COMMENT]-->
+
+	</div>
+	<div id="content">
+		<div id="about" class="post" style="display:none">
+			<h2 class="header"><div>About ZipWho.com</div></h2>
+			<p></p>
+			<table width="100%"><tr><td style="text-align:left">
+<b><div style="text-align:center">Welcome to ZipWho.com!</div></b><p>
+This ZIP code demographics site was built because existing census statistics tools failed to satisfy the needs of power users.
+Many Web sites allow users to query the median household income of a ZIP code,
+but that dollar figure alone does not indicate how one neighborhood's population compares to others around the country.
+ZipWho.com fills this information gap by displaying a national percentile rank (0 - 99) next to every data element.
+<p>
+In addition to basic ZIP code lookup functionality, this site allows users to <i><b>search by demographics</b></i>.
+Marketing professionals can appreciate this powerful segmentation feature that is not offered by any other Web site.
+So go ahead and play with the search fields on the left.
+All of the searches are self-contained in the URL at the top of your browser.
+That means you can easily bookmark your searches and email them to your friends.
+To get you started, below are some searches you might find interesting.
+<p>
+Comments about the site?  Send <a href="/cdn-cgi/l/email-protection#d3b5b6b6b7b1b2b0b8e093a9baa3a4bbbcfdb0bcbeeca0a6b1b9b6b0a7ee89baa384bbbcfdb0bcbef395b6b6b7b1b2b0b8">feedback</a>!<p>
+<a href="?filters=MedianIncome_MedianIncomeRank-99-99&mode=demo" target="favorites">Wealthiest 1%</a>
+&nbsp;
+<a href="?filters=Population-10000-_MedianIncome-0-20000_CollegeDegreePercent-0.0-20.0_ProfessionalPercent-0.0-20.0&state=TX&mode=demo" target="favorites">Poverty in Texas</a>
+&nbsp;
+<a href="?filters=MedianRoomsInHome_MedianRoomsInHomeRank-97-99_MedianMortgageToIncomeRatio-0-18_MedianIncome&mode=demo" target="favorites">Big House Little Mortgage</a>
+			</td></tr></table>
+		</div>
+
+		<div id="details" class="post" style="display:none">
+			<h2 class="header"><div id="details_location"></div></h2>
+			<p></p>
+			<div id="details_table"></div>
+		</div>
+
+		<div id="results" class="post" style="display:none">
+			<h2 class="header"><div id="showing_only"></div></h2>
+			<p></p>
+			<div id="search_results_table" style="height:500px;overflow-y:auto;overflow-x:auto;border:1px solid #B9B9B9;">
+			</div>
+		</div>
+
+	</div>
+	<!-- end #content -->
+	<div id="sidebar">
+		<form id="search_form" method="get" action="">
+			<input type="hidden" name="zip" id="zip" value="" />
+			<input type="hidden" name="city" id="city" value="" />
+			<input type="hidden" name="filters" id="filters" value="" />
+			<ul>
+				<li id="search">
+					<h2>Basic ZIP Code Search</h2><p><p>
+					ZIP Code: <input type="text" class="text" id="ui_zip" size="12" maxlength="1200" />
+					&nbsp;
+					<input type="button" class="button" onclick="javascript:zipSearch()" value="Basic Search" />
+				</li>
+				<li>&nbsp;</li>
+				<li id="search">
+					<h2>Advanced Demographics Search</h2>
+					<div>
+						<p></p>
+						<li>State:
+						<select name="state" id="state">
+						<option value="" default>[Entire USA]</option>
+						<option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+						<option value="DC">D.C.</option>
+						<option value="DE">Delaware</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="HI">Hawaii</option>
+						<option value="ID">Idaho</option>
+						<option value="IL">Illinois</option>
+						<option value="IN">Indiana</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NM">New Mexico</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="ND">North Dakota</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="OR">Oregon</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="SD">South Dakota</option>
+						<option value="TN">Tennessee</option>
+						<option value="TX">Texas</option>
+						<option value="UT">Utah</option>
+						<option value="VT">Vermont</option>
+						<option value="VA">Virginia</option>
+						<option value="WA">Washington</option>
+						<option value="WV">West Virginia</option>
+						<option value="WI">Wisconsin</option>
+						<option value="WY">Wyoming</option>
+						</select>
+						&nbsp;
+						<input type="button" class="button" onclick=javascript:demoSearch() value="Advanced Search" />
+
+						<p></p>
+						City: <input type="text" class="text" id="ui_city" size="12" maxlength="30" value="" /> <i>(optional)</i>
+
+						<p></p>
+						<li>
+						<div id="filter_div_1"></div>
+
+						<p></p>
+						<li>
+						<div id="filter_div_2"></div>
+
+						<p></p>
+						<li>
+						<div id="filter_div_3"></div>
+
+						<p></p>
+						<li>
+						<div id="filter_div_4"></div>
+					</div>
+				</li>
+			</ul>
+			<input type="hidden" name="mode" id="mode" value="" />
+		</form>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2025 ZipWho.com</p>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
+
+<script>
+
+var searchResultsDataTable;
+
+initHidden();
+
+initFilterKeys();
+
+initFilterRanges();
+
+initLocation();
+
+initDetails();
+
+initSearchResults();
+
+function initDetails()
+{
+	var detailsTable = getElementById("details_table");
+	var detailsLocation = getElementById("details_location");
+	var headers = getDataHeaders();
+	var rows = getDataRows();
+
+	if(rows.length == 1)
+	{
+		var row = rows[0];
+		detailsLocation.innerHTML = row["zip"] + ": &nbsp; " + row["city"] + ", " + row["state"];
+		document.title = document.title + " - " + row["city"] + ", " + row["state"] + ", " + row["zip"];
+	}
+	else
+	{
+		detailsLocation.innerHTML = "ZIP code not found!";
+		detailsLocation.style.color = "#FF7878";
+	}
+
+	var html = "<table>\n" +
+		"<tr><th width='50%'></th><th width='25%'></th><th>National Percentile Rank (0-99)</th></r>\n";
+
+	for(var i = 0; i < headers.length; i++)
+	{
+		var header = headers[i];
+
+		if(i < headers.length - 1 && extractHeaderTail(headers[i+1]) == "Rank")
+		{
+			var value = (rows.length > 0) ? rows[0][header] : "";
+			var rank = (rows.length > 0) ? rows[0][headers[i+1]] : "";
+			var splitHeaders = new Array("MedianIncome","OwnerOccupiedHomesPercent",
+				"CollegeDegreePercent","Population","WhitePercent");
+			var tdClass = contains(splitHeaders,header) ? "split" : "";
+			html += "<tr><td class='key" + tdClass + "'>" + formatHeader(header) +
+				"</td><td class='" + tdClass + "'>" + formatValue(value) +
+				"</td><td class='rank" + tdClass + "'>" + rank + " &nbsp; &nbsp; " +
+				(rank >= 90 ? "<img src='top10.gif'>" : rank <= 9 && rank != "" ? "<img src='bottom10.gif'>" : "") +
+				"</td></tr>\n";
+		}
+	}
+
+	html += "</table>\n";
+	detailsTable.innerHTML = html;
+}
+
+function initSearchResults()
+{
+	var searchResultsTable = getElementById("search_results_table");
+	var showingOnlyDiv = getElementById("showing_only");
+
+	if(getResultsCount() > 200)
+	{
+		showingOnlyDiv.innerHTML = "Too many matches! " +
+			"Need stricter criteria. " +
+			"Showing 200 of " +
+			formatValue(getResultsCount()) + ".";
+		showingOnlyDiv.style.color = "#FF7878";
+		searchResultsTable.style.color = "#FF7878";
+	}
+	else
+	{
+		showingOnlyDiv.innerHTML = "Search Results: " + getResultsCount();
+
+		if(getResultsCount() > 0)
+		{
+			showingOnlyDiv.innerHTML +=
+				" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " +
+				"<a href=\"javascript:bookmark(window.location,'ZipWho.com')\">" +
+				"Click here to bookmark this search!</a>";
+		}
+	}
+
+	var headers = getDataHeaders();
+	var rows = getDataRows();
+	var html = "";
+	var sortFirst = true;
+
+	for(var i = 1; i <= 4; i++)
+	{
+		var header = getParam("filter_" + i);
+
+		if(contains(headers,header))
+		{
+			html += "<th title='click to sort' " + (sortFirst ? "id='sort_first'" : "") +
+				"><a href=#>" + formatHeader(header) + "</a></th>\n";
+			sortFirst = false;
+		}
+	}
+
+	html = "<table class='sortable' style='border:0px'>\n" +
+		"<thead><tr><th></th><th title='click to sort' " + (sortFirst ? "id='sort_first'" : "") +
+		"><a href=#>Location</a></th>\n" + html;
+	html += "</tr></thead>\n<tbody>\n";
+
+	for(var i = 0; i < rows.length; i++)
+	{
+		var row = rows[i];
+		html += "<tr><td class='enum'></td><td><a href='?zip=" + row["zip"] +
+			"&mode=zip'>" + row["zip"] + "<br>" + row["city"] + ", " + row["state"] + "</a></td>";
+
+		for(var j = 1; j <= 4; j++)
+		{
+			var header = getParam("filter_" + j);
+
+			if(!blank(header) && !blank(row[header]))
+			{
+				html += "<td>";
+				html += formatValue(row[header]);
+				html += "</td>";
+			}
+		}
+
+		html += "</tr>\n";
+	}
+
+	html += "</tbody>\n</table>\n";
+	searchResultsTable.innerHTML = html;
+}
+
+function zipSearch(zip)
+{
+	getElementById("mode").value = "zip";
+	packFilters(zip);
+	getElementById("search_form").submit();
+}
+
+function demoSearch()
+{
+	getElementById("mode").value = "demo";
+	packFilters(null);
+	getElementById("search_form").submit();
+}
+
+function initHidden()
+{
+	var aboutElement = getElementById("about");
+	var detailsElement = getElementById("details");
+	var resultsElement = getElementById("results");
+	var mode = getParam("mode");
+	var zip = getParam("zip");
+
+	if(mode == "demo" || (mode == "zip" && zip.length > 5))
+	{
+		aboutElement.style.display = "none";
+		detailsElement.style.display = "none";
+		resultsElement.style.display = "";
+	}
+	else if(getParam("mode") == "zip")
+	{
+		aboutElement.style.display = "none";
+		detailsElement.style.display = "";
+		resultsElement.style.display = "none";
+	}
+	else
+	{
+		aboutElement.style.display = "";
+		detailsElement.style.display = "none";
+		resultsElement.style.display = "none";
+	}
+}
+
+function initFilterKeys()
+{
+	for(var i = 1; i <= 4; i++)
+	{
+		initFilterKey(i);
+	}
+}
+
+function initFilterKey(filterIndex)
+{
+	var filterParam = getParam("filter_" + filterIndex);
+	var headers = getDataHeaders();
+	var filterDiv = getElementById("filter_div_" + filterIndex);
+	var html = "<select id='filter_" + filterIndex + "' onChange=setFilterRange(" + filterIndex + ")>\n" +
+		"<option value='' default>[Choose Demographic Attribute]</option>\n" +
+		"<optgroup label='Finances'>\n";
+
+	for(var i = 0; i < headers.length; i++)
+	{
+		var header = headers[i];
+
+		if(header != null && isUpperCase(header.charAt(0)))
+		{
+			html += "<option value='" + header + "' " + (filterParam == header ? "selected" : "") +
+				">" + formatHeader(header) + "</option>\n";
+		}
+
+		if(header == "MedianMortgageToIncomeRank")
+		{
+			html += "</optgroup>\n<optgroup label='Housing'>\n";
+		}
+
+		if(header == "MedianRoomsInHomeRank")
+		{
+			html += "</optgroup>\n<optgroup label='Education and Jobs'>\n";
+		}
+
+		if(header == "ProfessionalRank")
+		{
+			html += "</optgroup>\n<optgroup label='General'>\n";
+		}
+
+		if(header == "DivorcedRank")
+		{
+			html += "</optgroup>\n<optgroup label='Race'>\n";
+		}
+	}
+
+	html += "</optgroup>\n</select>\n<p>\n";
+	html += "&nbsp; &nbsp; &nbsp; between <input type='text' class='text' id='filter_from_" + filterIndex + "' size='5' maxlength='8' />\n";
+	html += "and <input type='text' class='text' id='filter_to_" + filterIndex + "' size='5' maxlength='8' />\n";
+	filterDiv.innerHTML = html;
+}
+
+function initFilterRanges()
+{
+	var form = getElementById("search_form");
+
+	for(var i = 0; i < form.elements.length; i++)
+	{
+		var ele = form.elements[i];
+		var paramValue = getParam(ele.id);
+
+		if(ele.type == "text")
+		{
+			ele.value = paramValue;
+		}
+	}
+
+	var zipParam = getParam("zip");
+
+	if(zipParam != null)
+	{
+		getElementById("ui_zip").value = zipParam.replace(/_/g,",");
+	}
+}
+
+function packFilters(zip)
+{
+	if(zip == null)
+	{
+		zip = purify(getElementById("ui_zip").value,true,false);
+	}
+
+	var form = getElementById("search_form");
+
+	for(var i = 0; i < form.elements.length; i++)
+	{
+		var ele = form.elements[i];
+
+		if(ele.type == "text")
+		{
+			ele.value = purify(ele.value,(ele.id == "ui_zip"),(ele.id == "ui_city"));
+		}
+	}
+
+	getElementById("zip").value = zip.replace(/,/g,"_");
+
+	getElementById("city").value = getElementById("ui_city").value.replace(/ /g,"_");
+
+	var filters = "";
+
+	for(var i = 1; i <= 4; i++)
+	{
+		var filter = getElementById("filter_" + i).value;
+		var filterFrom = getElementById("filter_from_" + i).value;
+		var filterTo = getElementById("filter_to_" + i).value;
+		filters += filter + "-" + filterFrom + "-" + filterTo;
+
+		if(i < 4)
+		{
+			filters += "_";
+		}
+	}
+
+	getElementById("filters").value = filters;
+}
+
+function purify(val,isZip,isCity)
+{
+	if(val == null)
+	{
+		return val;
+	}
+
+	var purifiedVal = "";
+
+	for(var i = 0; i < val.length; i++)
+	{
+		var c = val.charAt(i);
+
+		if((c <= '9' && c >= '0') || (c == '.') || (isZip && c == ',') ||
+			(isCity && (c == ' ' || (c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))))
+		{
+			purifiedVal += c;
+		}
+	}
+
+	return purifiedVal;
+}
+
+function setFilterRange(filterIndex)
+{
+	var filterKey = getElementById("filter_" + filterIndex);
+	var selectedIndex = filterKey.selectedIndex;
+
+	if(selectedIndex != -1)
+	{
+		var filterKeyOption = filterKey.options[selectedIndex];
+		var filterFrom = getElementById("filter_from_" + filterIndex);
+		var filterTo = getElementById("filter_to_" + filterIndex);
+
+		if(endsWith(filterKeyOption.value,"Rank"))
+		{
+			filterFrom.value = "0";
+			filterTo.value = "99";
+		}
+		else if(endsWith(filterKeyOption.value,"Percent"))
+		{
+			filterFrom.value = "0.0";
+			filterTo.value = "100.0";
+		}
+		else if(filterKeyOption.value == "CostOfLivingIndex")
+		{
+			filterFrom.value = "14.3";
+			filterTo.value = "1103.7";
+		}
+		else if(filterKeyOption.value == "Population")
+		{
+			filterFrom.value = "750";
+			filterTo.value = "114301";
+		}
+		else if(filterKeyOption.value == "AverageHouseholdSize")
+		{
+			filterFrom.value = "1.3";
+			filterTo.value = "15.2";
+		}
+		else if(filterKeyOption.value == "MedianAge")
+		{
+			filterFrom.value = "19.9";
+			filterTo.value = "75.0";
+		}
+		else if(filterKeyOption.value == "MedianMortgageToIncomeRatio")
+		{
+			filterFrom.value = "9.9";
+			filterTo.value = "50.1";
+		}
+		else if(filterKeyOption.value == "MedianIncome")
+		{
+			filterFrom.value = "7236";
+			filterTo.value = "200001";
+		}
+		else if(filterKeyOption.value == "MedianRoomsInHome")
+		{
+			filterFrom.value = "1.1";
+			filterTo.value = "9.1";
+		}
+		else if(filterKeyOption.value == "MaleToFemaleRatio")
+		{
+			filterFrom.value = "35.3";
+			filterTo.value = "1448.4";
+		}
+		else
+		{
+			filterFrom.value = "";
+			filterTo.value = "";
+		}
+	}
+}
+
+function initLocation()
+{
+	var stateParam = getParam("state");
+
+	if(stateParam != null)
+	{
+		var stateSelectElement = getElementById("state");
+
+		for(var i = 0; i < stateSelectElement.length; i++)
+		{
+			var stateOptionElement = stateSelectElement[i];
+
+			if(stateOptionElement.value == stateParam)
+			{
+				stateOptionElement.selected = true;
+			}
+		}
+	}
+
+	var cityParam = getParam("city");
+
+	if(cityParam != null)
+	{
+		getElementById("ui_city").value = cityParam.replace(/_/g," ");
+	}
+}
+
+function clearSearch()
+{
+	var form = getElementById("search_form");
+
+	for(var i = 0; i < form.elements.length; i++)
+	{
+		var ele = form.elements[i];
+
+		if(ele.type == "text" && ele.id != "ui_zip")
+		{
+			ele.value = "";
+		}
+		else if(ele.type == "select-one")
+		{
+			ele.value = "";
+		}
+	}
+}
+
+function getParam(name)
+{
+	var value = getParams()[name];
+
+	return (value == null) || (value == "undefined") ? "" : value;
+}
+
+function getParams()
+{
+	var params = new Array();
+	params["mode"] = getUrlParam("mode");
+	params["zip"] = getUrlParam("zip");
+	params["state"] = getUrlParam("state");
+	params["city"] = getUrlParam("city");
+
+	var filtersParam = getUrlParam("filters");
+
+	if(filtersParam)
+	{
+		var filtersCsvArray = filtersParam.split("_");
+
+		for(var i = 0; i < filtersCsvArray.length; i++)
+		{
+			var filter = filtersCsvArray[i];
+			var filterElements = filter.split("-");
+
+			if(filterElements.length > 0)
+			{
+				params["filter_" + (i+1)] = filterElements[0];
+			}
+
+			if(filterElements.length > 1)
+			{
+				params["filter_from_" + (i+1)] = filterElements[1];
+			}
+
+			if(filterElements.length > 2)
+			{
+				params["filter_to_" + (i+1)] = filterElements[2];
+			}
+		}
+	}
+
+	return params;
+}
+
+function getUrlParam(name)
+{
+	name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	var regexS = "[\\?&]"+name+"=([^&#]*)";
+	var regex = new RegExp(regexS);
+	var results = regex.exec(window.location.href);
+
+	if(results == null)
+	{
+		return "";
+	}
+	else
+	{
+		return unescape(results[1]);
+	}
+}
+
+function getElementById(id)
+{
+	return document.getElementById(id);
+}
+
+function getElementByName(name)
+{
+	return document.getElementsByName(name)[0];
+}
+
+function formatHeader(header)
+{
+	var formattedHeader = "";
+	var head = extractHeaderHead(header);
+	var tail = extractHeaderTail(header);
+
+	if(tail == "Income")
+	{
+		formattedHeader = head + " Income ($)";
+	}
+	else if(tail == "Percent")
+	{
+		formattedHeader = head + " (%)";
+	}
+	else if(tail == "Ratio")
+	{
+		formattedHeader = head + " Ratio (%)";
+	}
+	else if(tail == "Rank")
+	{
+		formattedHeader = head + " Rank (0-99)";
+	}
+	else
+	{
+		formattedHeader = head + " " + tail;
+	}
+
+	return formattedHeader;
+}
+
+function formatValue(value)
+{
+	return addCommas(value);
+}
+
+function extractHeaderHead(header)
+{
+	var formattedHeader = camelCase(header);
+
+	return formattedHeader.substring(0,formattedHeader.lastIndexOf(" "));
+}
+
+function extractHeaderTail(header)
+{
+	var formattedHeader = camelCase(header);
+
+	return formattedHeader.substring(formattedHeader.lastIndexOf(" ")+1);
+}
+
+function camelCase(s)
+{
+	var str = "";
+
+	for(var i = 0; i < s.length; i++)
+	{
+		var c = s.charAt(i);
+		str += c;
+
+		if(!isUpperCase(c) && i < s.length - 1 && isUpperCase(s.charAt(i+1)))
+		{
+			str += " ";
+		}
+	}
+
+	return str;
+}
+
+function addCommas(s)
+{
+	s += '';
+	x = s.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+
+	while(rgx.test(x1))
+	{
+		x1 = x1.replace(rgx,'$1' + ',' + '$2');
+	}
+
+	return x1 + x2;
+}
+
+function getDataHeaders()
+{
+	return getDataTable()[0];
+}
+
+function getDataRows()
+{
+	var table = getDataTable();
+	var headers = table[0];
+	var rows = new Array();
+
+	for(var i = 1; i < table.length; i++)
+	{
+		var row = new Array();
+
+		for(var j = 0; j < headers.length; j++)
+		{
+			row[headers[j]] = table[i][j];
+		}
+
+		rows[rows.length] = row;
+	}
+
+	return rows;
+}
+
+function getDataTable()
+{
+	if(searchResultsDataTable == null)
+	{
+		var rows = getData().split("\n");
+		var table = new Array();
+
+		for(var i = 0; i < rows.length; i++)
+		{
+			var row = rows[i].split(",");
+			table[table.length] = row;
+		}
+
+		searchResultsDataTable = table;
+	}
+
+	return searchResultsDataTable;
+}
+
+function blank(s)
+{
+	return s == null || s == "";
+}
+
+function endsWith(s, suffix)
+{
+	var reg = new RegExp(suffix + "$");
+
+	return reg.test(s);
+}
+
+function isUpperCase(c)
+{
+	return c >= 'A' && c <= 'Z';
+}
+
+function contains(array,element)
+{
+	var result = false;
+
+	for(var i = 0; i < array.length; i++)
+	{
+		if(array[i] == element)
+		{
+			result = true;
+			break;
+		}
+	}
+
+	return result;
+}
+
+function bookmark(url,title)
+{
+	if((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4))
+	{
+		window.external.AddFavorite(url,title);
+	}
+	else if(navigator.appName == "Netscape")
+	{
+		window.sidebar.addPanel(title,url,"");
+	}
+}
+
+</script>
+
+

@@ -1,0 +1,806 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
+<head>
+  <title>Concerts Near You, Upcoming Concerts With Live Video Footage | Concert Flow</title>
+    <!-- META -->
+  <meta name="google-site-verification" content="1vAw6mcPQwkJf9UG5DSFFGoAjTUEVkrmMfUbUnSdTII" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="Find live music and upcoming concerts near you.  Preview live video footage of bands, to help you find live concerts.">
+  <meta name="Keywords" content="Live, Tickets, Near, Me, Music, Concerts, Shows, Gigs, Concert, Gig, London, Video, Videos">
+  <!-- CSS -->
+  <!-- Color Scheme -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/build/app.a9612804.css" media="print" onload="this.media='all'">
+</head>
+  <body id="body">
+  <!-- keep these separate to master --->
+  <div class="log"></div>
+  <!-- HEADER -->
+  <div class="top-wrapper big-wrapper skin-background-color2 header-background-1">
+    <div class="top-wrapper-mask">
+      <div class="center-wrapper">
+        <div class="top-content-position">
+          <div class="top-content skin-font-color3">
+            <div class="top-content-up skin-border-color3">
+
+              <!--- Menu --->
+              <!-- Main menu  -->
+<header>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <!-- Logo  -->
+  <a href="https://concertflow.com"><img src="/build/images/logo.png" alt="Concerts Near Me, ConcertFlow" class="headlogo" border="0"></a>
+  <!-- /Logo  -->
+  <nav>
+    <ul>
+      <li>
+        <a href=# class="collapse"><span class="bold">Close X</span></a>
+        <a href=# class="expand"><span class="bold">Search &#8595;</span></a>
+
+        <ul class="hidden" id="city">
+          <li>
+            <a href="/live-music/united-kingdom">United Kingdom</a>
+            <a href="/live-music/united-states">United States</a>
+            <a href="/live-music/australia">Australia</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href=# class="collapse"><span class="bold">Close X</span></a>
+        <a href=# class="expand"><span class="bold">Music Venues &#8595;</span></a>
+        <ul class="hidden">
+    <li><a href="/music-venues-in-Birmingham" class="skin-font-color3">Birmingham Music Venues</a></li>
+    <li><a href="/music-venues-in-Brighton" class="skin-font-color3">Brighton Music Venues</a></li>
+    <li><a href="/music-venues-in-Bristol" class="skin-font-color3">Bristol Music Venues</a></li>
+    <li><a href="/music-venues-in-Leeds" class="skin-font-color3">Leeds Music Venues</a></li>
+    <li><a href="/music-venues-in-Manchester" class="skin-font-color3">Manchester Music Venues</a></li>
+    <li><a href="/music-venues-in-Norwich" class="skin-font-color3">Norwich Music Venues</a></li>
+    <li><a href="/music-venues-in-Nottingham" class="skin-font-color3">Nottingham Music Venues</a></li>
+    <li><a href="/music-venues-in-York" class="skin-font-color3">York Music Venues</a></li>
+
+</ul>
+      </li>
+      <li><a href="/about-us"><span class="bold">About</span></a></li>
+      
+                            </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+
+  </label>
+</header>
+
+
+
+              <!-- /Menu --->
+            </div>
+            <div class="top-content-down skin-border-color3">
+              <!-- Place info  -->
+              <!-- have reference to controller end point so ajax jquery can pick it up -->
+              <input type="hidden" id="playscontroller" value="">
+              <input type="hidden" id="eventcontroller" value="">
+              <input type="hidden" id="camefrom" value="frontpage">
+              <input type="hidden" id="pagevalue" value="0">
+
+              <h1 class="skin-font-color3">Concerts <span class="bold">Near You</span></h1>
+
+              <div align="middle">
+                <br>
+                <a href="#" id="getCoordPosition" class="button-normal skin-background-color3">Search My Location
+                  <div class="button-detail skin-background-color1">
+                    <span class="ui-btn ui-icon-location ui-btn-icon-left" border="0"></span>
+                  </div>
+                </a>
+
+                <form id="myForm" class="comment-form" method="post">
+                  <input type="text" placeholder='Select Start Date' name="stdate" id="datepickerstart"
+                         autocomplete="off" class="skin-font-color5" readonly>
+                  <input type="text" placeholder='Select End Date' name="edate" id="datepickerend" autocomplete="off"
+                         class="skin-font-color5" readonly>
+                  <input type='submit' value="Search"
+                         class="button-normal  skin-background-color5 skin-font-color3 skin-background-hover3">
+                </form>
+              </div>
+              <!-- /Place info  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- /bottom background - absolute -->
+    <div class="bottom-background-position">
+      <div class="bottom-background skin-background-color3"></div>
+    </div>
+    <!-- /bottom background - absolute -->
+
+  </div>
+  <!-- /HEADER -->
+
+  <div class="center-wrapper main-content-wrapper">
+    <!-- MAIN CONTENT -->
+    <!-- over lay -->
+
+    <div class="five-sixth main-content-responsive">
+
+      <div id="mydiv">
+
+        <div class=socialdiv>
+
+          <h2 class="skin-font-color5">
+                          
+            
+            <span class="skin-font-color5 font-size-14px bold-extra">
+                       09th Aug - 08th Sep
+                       </span>
+            
+          </h2>
+          <!-- include this for initial search outside div ajax -->
+        </div>
+
+        
+        <div class="main-content">
+
+          
+          <span itemscope itemtype="https://schema.org/MusicEvent">
+                    <span itemprop="name" content="Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket)">
+                    <span itemprop="startDate" content="2025-08-09">
+                    <span itemprop="performer" content="Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket)">
+                    <span itemprop="description" content="Buy Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket) concert tickets">
+                    <span itemprop="image" content="https://s1.ticketm.net/dam/a/872/1ac54877-bc89-47ad-8a7a-7e7004f4e872_SOURCE">
+                    <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+                    <span itemprop="name" content="Crystal Palace Bowl"></span>
+                    <span itemprop="description"
+                          content="Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket) is playing at Crystal Palace Bowl view more details"><span>
+                    <span itemprop="url"
+                          content="https://concertflow.com/tickets/Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket)?event_id=1AdfZbPGkRON1fD"></span>
+                    <span itemprop="address" content="SE19 2GA"></span>
+
+                                                    <div class="one-third event">
+                            
+                                                          <div class="playcontainer">
+
+                                <img src="https://s1.ticketm.net/dam/a/872/1ac54877-bc89-47ad-8a7a-7e7004f4e872_SOURCE" width="100%" alt="Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket)"></img>
+                                
+                                  <h4>Saturday 09th Aug</h4>
+
+                                        
+                                  
+                                    <div class="ticket-button">
+                                        <a
+                                          href='/tickets/Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket)?event_id=1AdfZbPGkRON1fD&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000'
+                                          class="skin-font-color3 font-size-22px skin-color-hover2">Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket) </a>
+                                        Crystal Palace Bowl,London
+                                        <br/>
+                                        <p class="view-tickets-button">
+                                        <a
+                                          href="/tickets/Skepta Presents Big Smoke Festival + Mas Tiempo (Weekend Ticket)?event_id=1AdfZbPGkRON1fD&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000"
+                                          class="button-small skin-background-color8 skin-font-color3 skin-background-hover3"
+                                          id="tickets">Full Details And Tickets</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+          <span itemscope itemtype="https://schema.org/MusicEvent">
+                    <span itemprop="name" content="Brunch | Motown Memoirs">
+                    <span itemprop="startDate" content="2025-08-09">
+                    <span itemprop="performer" content="Brunch | Motown Memoirs">
+                    <span itemprop="description" content="Buy Brunch | Motown Memoirs concert tickets">
+                    <span itemprop="image" content="https://images.universe.com/7bbf93f3-e66d-4621-8e0d-f0dfee8d695b/-/resize/1200x/-/crop/536x536/396,21/-/format/jpeg/-/scale_crop/1024x576/center/-/progressive/yes/-/inline/yes/">
+                    <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+                    <span itemprop="name" content="Soul Mama"></span>
+                    <span itemprop="description"
+                          content="Brunch | Motown Memoirs is playing at Soul Mama view more details"><span>
+                    <span itemprop="url"
+                          content="https://concertflow.com/tickets/Brunch | Motown Memoirs?event_id=LvZ18_BEDAXoMPYZORZAT"></span>
+                    <span itemprop="address" content="E201DB"></span>
+
+                                                    <div class="one-third event">
+                            
+                                                          <div class="playcontainer">
+
+                                <img src="https://images.universe.com/7bbf93f3-e66d-4621-8e0d-f0dfee8d695b/-/resize/1200x/-/crop/536x536/396,21/-/format/jpeg/-/scale_crop/1024x576/center/-/progressive/yes/-/inline/yes/" width="100%" alt="Brunch | Motown Memoirs"></img>
+                                
+                                  <h4>Saturday 09th Aug</h4>
+
+                                        
+                                  
+                                    <div class="ticket-button">
+                                        <a
+                                          href='/tickets/Brunch | Motown Memoirs?event_id=LvZ18_BEDAXoMPYZORZAT&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000'
+                                          class="skin-font-color3 font-size-22px skin-color-hover2">Brunch | Motown Memoirs </a>
+                                        Soul Mama,London
+                                        <br/>
+                                        <p class="view-tickets-button">
+                                        <a
+                                          href="/tickets/Brunch | Motown Memoirs?event_id=LvZ18_BEDAXoMPYZORZAT&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000"
+                                          class="button-small skin-background-color8 skin-font-color3 skin-background-hover3"
+                                          id="tickets">Full Details And Tickets</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+          <span itemscope itemtype="https://schema.org/MusicEvent">
+                    <span itemprop="name" content="The Saturday Brunch Club">
+                    <span itemprop="startDate" content="2025-08-09">
+                    <span itemprop="performer" content="The Saturday Brunch Club">
+                    <span itemprop="description" content="Buy The Saturday Brunch Club concert tickets">
+                    <span itemprop="image" content="https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RECOMENDATION_16_9.jpg">
+                    <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+                    <span itemprop="name" content="Boisdale, Canary Wharf"></span>
+                    <span itemprop="description"
+                          content="The Saturday Brunch Club is playing at Boisdale, Canary Wharf view more details"><span>
+                    <span itemprop="url"
+                          content="https://concertflow.com/tickets/The Saturday Brunch Club?event_id=LvZ18QkfMTd2RS8ZlpVF9"></span>
+                    <span itemprop="address" content="E14 4QT"></span>
+
+                            
+                       <div class="one-third event last">
+                        
+                                                          <div class="playcontainer">
+
+                                <img src="https://s1.ticketm.net/dam/c/bea/03d47f66-d37b-4aca-aa17-0135be64dbea_105801_RECOMENDATION_16_9.jpg" width="100%" alt="The Saturday Brunch Club"></img>
+                                
+                                  <h4>Saturday 09th Aug</h4>
+
+                                        
+                                  
+                                    <div class="ticket-button">
+                                        <a
+                                          href='/tickets/The Saturday Brunch Club?event_id=LvZ18QkfMTd2RS8ZlpVF9&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000'
+                                          class="skin-font-color3 font-size-22px skin-color-hover2">The Saturday Brunch Club </a>
+                                        Boisdale, Canary Wharf,London
+                                        <br/>
+                                        <p class="view-tickets-button">
+                                        <a
+                                          href="/tickets/The Saturday Brunch Club?event_id=LvZ18QkfMTd2RS8ZlpVF9&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000"
+                                          class="button-small skin-background-color8 skin-font-color3 skin-background-hover3"
+                                          id="tickets">Full Details And Tickets</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+          <span itemscope itemtype="https://schema.org/MusicEvent">
+                    <span itemprop="name" content="Rock Steady Reggae Lunch">
+                    <span itemprop="startDate" content="2025-08-09">
+                    <span itemprop="performer" content="Rock Steady Reggae Lunch">
+                    <span itemprop="description" content="Buy Rock Steady Reggae Lunch concert tickets">
+                    <span itemprop="image" content="https://s1.ticketm.net/dam/c/df8/81eadad8-4449-412e-a2b1-3d8bbb78edf8_106181_RECOMENDATION_16_9.jpg">
+                    <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+                    <span itemprop="name" content="Boisdale, Canary Wharf"></span>
+                    <span itemprop="description"
+                          content="Rock Steady Reggae Lunch is playing at Boisdale, Canary Wharf view more details"><span>
+                    <span itemprop="url"
+                          content="https://concertflow.com/tickets/Rock Steady Reggae Lunch?event_id=LvZ18Qkgekh5EwYZlPnfK"></span>
+                    <span itemprop="address" content="E14 4QT"></span>
+
+                                                    <div class="one-third event">
+                            
+                                                          <div class="playcontainer">
+
+                                <img src="https://s1.ticketm.net/dam/c/df8/81eadad8-4449-412e-a2b1-3d8bbb78edf8_106181_RECOMENDATION_16_9.jpg" width="100%" alt="Rock Steady Reggae Lunch"></img>
+                                
+                                  <h4>Saturday 09th Aug</h4>
+
+                                        
+                                  
+                                    <div class="ticket-button">
+                                        <a
+                                          href='/tickets/Rock Steady Reggae Lunch?event_id=LvZ18Qkgekh5EwYZlPnfK&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000'
+                                          class="skin-font-color3 font-size-22px skin-color-hover2">Rock Steady Reggae Lunch </a>
+                                        Boisdale, Canary Wharf,London
+                                        <br/>
+                                        <p class="view-tickets-button">
+                                        <a
+                                          href="/tickets/Rock Steady Reggae Lunch?event_id=LvZ18Qkgekh5EwYZlPnfK&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000"
+                                          class="button-small skin-background-color8 skin-font-color3 skin-background-hover3"
+                                          id="tickets">Full Details And Tickets</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+          <span itemscope itemtype="https://schema.org/MusicEvent">
+                    <span itemprop="name" content="Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE">
+                    <span itemprop="startDate" content="2025-08-09">
+                    <span itemprop="performer" content="Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE">
+                    <span itemprop="description" content="Buy Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE concert tickets">
+                    <span itemprop="image" content="https://s1.ticketm.net/dam/a/872/1ac54877-bc89-47ad-8a7a-7e7004f4e872_SOURCE">
+                    <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+                    <span itemprop="name" content="Crystal Palace Bowl"></span>
+                    <span itemprop="description"
+                          content="Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE is playing at Crystal Palace Bowl view more details"><span>
+                    <span itemprop="url"
+                          content="https://concertflow.com/tickets/Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE?event_id=1AdfZbPGkmSraHD"></span>
+                    <span itemprop="address" content="SE19 2GA"></span>
+
+                                                    <div class="one-third event">
+                            
+                                                          <div class="playcontainer">
+
+                                <img src="https://s1.ticketm.net/dam/a/872/1ac54877-bc89-47ad-8a7a-7e7004f4e872_SOURCE" width="100%" alt="Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE"></img>
+                                
+                                  <h4>Saturday 09th Aug</h4>
+
+                                        
+                                  
+                                    <div class="ticket-button">
+                                        <a
+                                          href='/tickets/Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE?event_id=1AdfZbPGkmSraHD&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000'
+                                          class="skin-font-color3 font-size-22px skin-color-hover2">Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE </a>
+                                        Crystal Palace Bowl,London
+                                        <br/>
+                                        <p class="view-tickets-button">
+                                        <a
+                                          href="/tickets/Big Smoke: Skepta (Live), Central Cee, JME, Frisco + MORE?event_id=1AdfZbPGkmSraHD&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000"
+                                          class="button-small skin-background-color8 skin-font-color3 skin-background-hover3"
+                                          id="tickets">Full Details And Tickets</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+          <span itemscope itemtype="https://schema.org/MusicEvent">
+                    <span itemprop="name" content="The Libertines plus Supergrass, Soft Play, Hak Baker and more">
+                    <span itemprop="startDate" content="2025-08-09">
+                    <span itemprop="performer" content="The Libertines plus Supergrass, Soft Play, Hak Baker and more">
+                    <span itemprop="description" content="Buy The Libertines plus Supergrass, Soft Play, Hak Baker and more concert tickets">
+                    <span itemprop="image" content="https://s1.ticketm.net/dam/a/2dc/013bcb80-53c8-404a-8bfc-8a9e4da1c2dc_ARTIST_PAGE_3_2.jpg">
+                    <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+                    <span itemprop="name" content="Gunnersbury Park"></span>
+                    <span itemprop="description"
+                          content="The Libertines plus Supergrass, Soft Play, Hak Baker and more is playing at Gunnersbury Park view more details"><span>
+                    <span itemprop="url"
+                          content="https://concertflow.com/tickets/The Libertines plus Supergrass, Soft Play, Hak Baker and more?event_id=1AdjZb8GkT2Gg9X"></span>
+                    <span itemprop="address" content="W3 8LQ"></span>
+
+                            
+                       <div class="one-third event last">
+                        
+                                                          <div class="playcontainer">
+
+                                <img src="https://s1.ticketm.net/dam/a/2dc/013bcb80-53c8-404a-8bfc-8a9e4da1c2dc_ARTIST_PAGE_3_2.jpg" width="100%" alt="The Libertines plus Supergrass, Soft Play, Hak Baker and more"></img>
+                                
+                                  <h4>Saturday 09th Aug</h4>
+
+                                        
+                                  
+                                    <div class="ticket-button">
+                                        <a
+                                          href='/tickets/The Libertines plus Supergrass, Soft Play, Hak Baker and more?event_id=1AdjZb8GkT2Gg9X&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000'
+                                          class="skin-font-color3 font-size-22px skin-color-hover2">The Libertines plus Supergrass, Soft Play, Hak Baker and more </a>
+                                        Gunnersbury Park,London
+                                        <br/>
+                                        <p class="view-tickets-button">
+                                        <a
+                                          href="/tickets/The Libertines plus Supergrass, Soft Play, Hak Baker and more?event_id=1AdjZb8GkT2Gg9X&start_date_choice=2025-08-09T00:00:00&end_date_choice=2025-09-08T23:59:59&which_page=0&youtube_id=000"
+                                          class="button-small skin-background-color8 skin-font-color3 skin-background-hover3"
+                                          id="tickets">Full Details And Tickets</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                          
+                            <!-- start pagination --->
+                                                          <span class=promo>Page 1</span>
+                              <div class="main-content">
+
+                                   <ul class="pagination">
+
+                                      <li><a href=#
+                                             class="border skin-border-color4 skin-font-color13 skin-color-hover3 skin-background-hover1"><b><<</b></a></li>
+
+                                                                                                                       
+                                                                            
+                                       
+                                                                                    <li><a id=navpage1 pageno="0"
+                                                  class="border skin-border-color4 skin-font-color3 skin-background-color1 active">1</a></li>
+                                               
+                                       
+                                                                            
+                                       
+                                                                                    <li><a href=# id=navpage1 pageno="1"
+                                                  class="border skin-border-color4 skin-font-color13 skin-color-hover3 skin-background-hover1">2</a></li>
+                                         
+                                       
+                                                                            
+                                       
+                                                                                    <li><a href=# id=navpage1 pageno="2"
+                                                  class="border skin-border-color4 skin-font-color13 skin-color-hover3 skin-background-hover1">3</a></li>
+                                         
+                                       
+                                                                            
+                                       
+                                                                                    <li><a href=# id=navpage1 pageno="3"
+                                                  class="border skin-border-color4 skin-font-color13 skin-color-hover3 skin-background-hover1">4</a></li>
+                                         
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                                                            
+                                       
+                                     
+                                                                            <li><a href=# id=navpage1 pageno="1"
+                                              class="border skin-border-color4 skin-font-color13 skin-color-hover3 skin-background-hover1"><b>>></b></a></li>
+                                       
+                                  </ul>
+                                 </div>
+                                                        <!--end pagination-->
+
+                        </div>
+                    </div>
+
+                    <div class="main-content">
+                        <h2 class="skin-font-color5">
+                        About The Site
+                        </h2>
+                        <br/>
+                        <h4>
+                        Find live music near you. We source live video footage of bands which will help you discover and choose who to see play live.
+                        </h4>
+                        <br/>
+                        <p>
+                        We partner with established and trusted ticket sellers, so you can buy concert tickets via the ‘Buy Tickets’ link on this site.</p>
+                        <br/>
+                        <p>
+                        Concert Flow is passionate about helping people discover new live bands.  Many of these live music tickets are reasonably priced, from bands that are  undiscovered and not as well known, playing in smaller intimate venues.
+                        </p>
+                        <br/>
+                        <p>
+                        As live music lovers we would often think what concerts are on tonight or this weekend. ConcertFlow can find your location and suggest gigs and concerts to go and see, happening nearby. You will have to click the 'Search My Location' button at top and your browser will request permission to access your location, we can then display relevant gigs near you.
+                        </p>
+                        <br/>
+                        <p>
+                        The <b>Play and Go!</b> concept, like what you see on video, go and watch them play live.  <b>Share</b> enables you to share the details and videos easily with people you want to go with.
+                        </p>
+                        <br/>
+                        <p>
+                        <span class=promotext>Mobile Users</span> you can save an app shortcut to ConcertFlow.com on your mobile.  Just tap <span
+                            class=promotext>"Add to Home screen"</span> in your mobile.
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+        </div>
+        <!-- right handside-->
+        <!--
+                <div class="one-fourth last sidebar-responsive">
+
+                    <div class="sidebar-content widget-sidebar-media-player">
+
+                        <h3 class="skin-font-color5">Concert <span class="bold">Blog</span></h3>
+                        <br/>
+                        
+                    </div>
+                </div>
+                --->
+        <!-- /SIDEBAR -->
+      </div>
+
+      <div class="clearfix"></div>
+
+    </div>
+    <!-- BOTTOM -->
+
+    <!-- overlay box must stay here after all divs due to conflict --->
+    <div id="overlay-inAbox" class="overlay">
+      <div class="toolbar"><a class="close" href="#"><span>x</span> close</a></div>
+      <div class="player-wrapper" id="theplayer"></div>
+    </div>
+
+    <!-- FOOTER -->
+<div class="bottom skin-background-color2">
+  <div class="center-wrapper widget-bottom-contact-us skin-font-color10">
+    <div class="one-fourth regular">
+      <h3 class=skin-font-color3>Follow Us</h3>
+      <a href="https://www.facebook.com/concertflow" target="_blank" rel="nofollow" alt="facebookpage"><img
+          src="/build/images/facebook_dark.png" alt="facebook"></a>
+      <a href="https://www.twitter.com/concertflow" target="_blank" rel="nofollow" alt="twitterpage"><img
+          src="/build/images/twitter02_dark.png" alt="twitter"></a>
+    </div>
+    <div class="one-fourth regular">
+    </div>
+    <div class="one-fourth regular last">
+      <h3 class=skin-font-color3>Music Venue Reviews</h3>
+      <ul>
+    <li class="skin-background-hover1"><a href="/music-venues-in-Birmingham" class="skin-font-color3">Birmingham Music Venues</a></li>
+    <li class="skin-background-hover1"><a href="/music-venues-in-Brighton" class="skin-font-color3">Brighton Music Venues</a></li>
+    <li class="skin-background-hover1"><a href="/music-venues-in-Bristol" class="skin-font-color3">Bristol Music Venues</a></li>
+    <li class="skin-background-hover1"><a href="/music-venues-in-Leeds" class="skin-font-color3">Leeds Music Venues</a></li>
+    <li class="skin-background-hover1"><a href="/music-venues-in-Manchester" class="skin-font-color3">Manchester Music Venues</a></li>
+    <li class="skin-background-hover1"><a href="/music-venues-in-Norwich" class="skin-font-color3">Norwich Music Venues</a></li>
+    <li class="skin-background-hover1"><a href="/music-venues-in-Nottingham" class="skin-font-color3">Nottingham Music Venues</a></li>
+    <li class="skin-background-hover1"><a href="/music-venues-in-York" class="skin-font-color3">York Music Venues</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+<div class="footer skin-background-color11">
+  <div class="center-wrapper skin-font-color12 regular">
+    <span class="copyright">©2025 ConcertFlow </span>
+    <ul>
+      <li><a href="/contact-us" class="skin-font-color12 skin-color-hover1">Contact</a> /</li>
+      <li><a href="/about-us" class="skin-font-color12 skin-color-hover1">About</a> /</li>
+      <li><a href="/privacy" rel="nofollow" class="skin-font-color12 skin-color-hover1">Privacy Policy</a> /</li>
+      <li><a href="/terms" target="_blank" class="skin-font-color12 skin-color-hover1">Terms and Conditions</a></li>
+      <li><a href="#" id="open_preferences_center">Update cookies preferences</a></li>
+    </ul>
+  </div>
+</div>
+<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
+        charset="UTF-8" defer></script>
+<script type="text/javascript" charset="UTF-8">
+  document.addEventListener('DOMContentLoaded', function () {
+    cookieconsent.run({
+      "notice_banner_type": "simple",
+      "consent_type": "express",
+      "palette": "light",
+      "language": "en",
+      "page_load_consent_levels": ["strictly-necessary"],
+      "notice_banner_reject_button_hide": false,
+      "preferences_center_close_button_hide": false,
+      "page_refresh_confirmation_buttons": false,
+      "website_name": "www.concertflow.com",
+      "website_privacy_policy_url": "https://concertflow.com/privacy"
+    });
+  });
+</script>
+<!-- Unnamed script -->
+<!-- Google tag (gtag.js) -->
+<script type="text/plain" data-cookie-consent="tracking" async
+        src="https://www.googletagmanager.com/gtag/js?id=G-Q31SCB5JYD"></script>
+<script type="text/plain" data-cookie-consent="tracking">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q31SCB5JYD');
+
+</script>
+<!-- end of Unnamed script-->
+<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
+
+  <script src="/build/runtime.ec7d133a.js" defer></script><script src="/build/vendors-node_modules_core-js_modules_es_array_concat_js-node_modules_core-js_modules_es_array-a89106.f2d530cc.js" defer></script><script src="/build/app.69022f9f.js" defer></script>
+
+
+
+
+
+  </body>
+  </html>

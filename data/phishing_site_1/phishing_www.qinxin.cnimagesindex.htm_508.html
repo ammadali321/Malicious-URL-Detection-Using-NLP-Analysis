@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=0.3, minimum-scale=0.1, maximum-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="沁新集团,">
+  <title>沁新集团</title>
+  <link rel="stylesheet" href="/libs/bootstrap-4.3.1-dist/css/bootstrap.min.css" />
+  <link href="/libs/video/video-js.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/libs/swiper/swiper.min.css">
+  <link rel="stylesheet" href="/css/font/iconfont.css">
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/newindex.css">
+  <style>
+    #header {
+      height: auto !important;
+    }
+  </style>
+  <script src="/libs/vue.js"></script>
+  <script src="/libs/browser.min.js"></script>
+  <script src="/libs/polyfill.min.js"></script>
+  <script src="/libs/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <head-com :current="current" :menulist="menulist" @enter="enter" @leave="leave" />
+  </header>
+
+  <div id="banner" slot="banner">
+    <div class="swiper-container index-swiper" id="swiper_banner" style="height: 80vh">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item in bannerList">
+          <img class="bannerPic" :src="BaseUrl+item.imgUrl" />
+        </div>
+      </div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+
+  <div class="oneinfo">
+    <ul>
+      <li style="left:14.5%;top:10%;"><strong>国家高新技术企业<span class="count">2</span>个</strong><br>山西沁新能源集团股份有限公司<br>山西太岳磨料有限公司</li>
+      <li style="left:15%;top:73%;"><strong>专精特新小巨人企业<span class="count">1</span>个</strong><br>山西太岳磨料有限公司</li>
+      <li style="left:25%;top:24%;"><strong>全国绿色工厂<span class="count">2</span>个</strong><br>山西沁新能源集团股份有限公司特种焦制备分公司<br>山西沁新能源集团股份有限公司新创科技分公司</li>
+      <li style="left:31%;top:54%;"><strong>全国制造业单项冠军产品<span class="count">1</span>个</strong><br>“沁新牌”铸造焦</li>
+      <li style="left:42%;top:15%;"><strong>全国优质高效选煤企业<span class="count">2</span>座</strong><br>沁源县沁新选煤有限公司<br>山西沁新能源集团股份有限公司沁能选煤厂</li>
+      <li style="left:18%;top:53%;"><strong>全国十佳选煤厂<span class="count">2</span>座</strong><br>沁源县沁新选煤有限公司<br>山西沁新能源集团股份有限公司沁能选煤厂</li>
+      <li style="left:42%;top:67%;"><strong>中国岩棉用焦生产基地<span class="count">1</span>个</strong></li>
+      <li style="left:47%;top:49%;"><strong>中国铸造焦炭生产基地<span class="count">1</span>个</strong></li>
+      <li style="left:58%;top:71%;"><strong>全国铸造材料金鼎奖企业<span class="count">2</span>家</strong><br>山西沁新能源集团股份有限公司特种焦制备分公司<br>山西沁新集团昌源新材料有限公司</li>
+      <li style="left:61.5%;top:57%;"><strong>全国耐磨耐火材料生产基地<span class="count">1</span>个</strong><br>山西沁新煤业有限公司刚玉厂</li>
+      <li style="left:75%;top:79%;"><strong>山西省单项冠军培育产品<span class="count">1</span>个</strong><br>铸造用融熔陶瓷砂</li>
+      <li style="left:70%;top:20%;"><strong>山西省专精特新企业<span class="count">3</span>个</strong><br>山西沁新机械制造有限公司<br>山西沁新集团昌源新材料有限公司<br>山西太岳磨料有限公司</li>
+    </ul>
+  </div>
+
+  <div class="company">
+    <div class="main">
+      <div class="title">集团专栏</div>
+      <div class="flex">
+        <div id="newsBanner" class="imglist">
+          <div class="swiper-container" id="banner_news">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" v-for="item in bannerAdvList">
+                <!-- <div class="title">{{item.imgDesc}}</div> -->
+                <img class="bannerPic" :src="BaseUrl+item.imgUrl" />
+              </div>
+            </div>
+            <div class="swiper-scrollbarnew"></div>
+          </div>
+        </div>
+        <ul class="newblock">
+          <li class="newblock-item">
+            <a href="/news/enterpriseinfo.html?type=31660&onenav=媒体中心&subnav=企业动态">
+              <div class="icon">
+                <img src="/img/icon/zy_jtzl_1.png" alt="">
+              </div>
+              <div class="content">
+                <div class="title">集团要闻</div>
+                <div class="desc">建设平安企业、绿色企业、创新企业、诚信凡事有章可循 凡事有据可查企业、和谐企业、文明企业。</div>
+              </div>
+            </a>
+          </li>
+          <li class="newblock-item">
+            <a href="/notice.html?type=1005&subnav=公示公告">
+              <div class="icon">
+                <img src="/img/icon/zy_jtzl_2.png" alt="">
+              </div>
+              <div class="content">
+                <div class="title">公示公告</div>
+                <div class="desc">凡事有章可循 凡事有据可查</div>
+              </div>
+            </a>
+          </li>
+          <li class="newblock-item">
+            <a href="/party/party.html?type=11994&onenav=媒体中心&subnav=党建引领">
+              <div class="icon">
+                <img src="/img/icon/zy_jtzl_4.png" alt="">
+              </div>
+              <div class="content">
+                <div class="title">党建引领</div>
+                <div class="desc">发挥党员先锋模范作用，增强企业竞争力。</div>
+              </div>
+            </a>
+          </li>
+          <li class="newblock-item">
+            <a href="/news/policenews.html?type=30671&onenav=媒体中心&subnav=政策解读">
+              <div class="icon">
+                <img src="/img/icon/zy_jtzl_3.png" alt="">
+              </div>
+              <div class="content">
+                <div class="title">政策解读</div>
+                <div class="desc">履职上坚持务实高效，要注重把握工作的主动性、预见性和前瞻性，想在前面，干在前面。</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="news" id="news">
+    <div class="main">
+      <div class="title">新闻中心</div>
+      <!-- <div class="desc">行业新闻 / 媒体聚焦</div> -->
+      <div class="more"><a href="/news/enterpriseinfo.html?type=31660&onenav=媒体中心&subnav=企业动态">查看更多</a></div>
+      <ul>
+        <li class="news-item" v-for="(newitem,index) in newsList" :key="index" :class="{'active':current==index}"
+          @mouseenter="enter(index)">
+          <a
+            :href="`/detail.html?id=${newitem.newsId}&enname=${newitem.pdTpName}&flag=1&nameurl=媒体中心>${newitem.pdTpName}`">
+            <div class="title">{{newitem.newsTitle}}</div>
+            <div class="content">
+              <div class="desc">{{newitem.newsDesc}}</div>
+              <img :src="BaseUrl+newitem.newsOneImg" alt="">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="product" id="product">
+    <div class="main">
+      <div class="title">核心产品</div>
+      <ul class="content">
+        <li class="product-item" v-for="(pi,index) in productList" :key="index" :class="{'active':current==index}"
+          @mouseenter="enter(index)" @mouseleave="leave" :style="`background-image:url(${BaseUrl+pi.productImg})`"
+          @click="goProduct">
+          <div class="name">{{pi.productName}}</div>
+          <!-- <div class="img">
+            <img :src="BaseUrl+pi.productImg" alt="">
+          </div> -->
+          <div class="detail" v-if="current == index">
+            <div class="title">{{pi.productName}}</div>
+            <div class="desc">{{pi.productDesc}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- <div class="network" id="network">
+    <div class="main">
+      <div class="title">销售网络分布</div>
+      <div class="content">
+        <ul class="types">
+          <li class="network-item" v-for="(i,index) in types" :key="i" :class="{'active':index == typeIndex}">
+            <span>{{i}}</span>
+          </li>
+        </ul>
+      </div>
+      <div id="echartmap" style="width:100%;height:500px"></div>
+    </div>
+  </div> -->
+
+  <div class="partner" id="partner">
+    <div class="main">
+      <div class="title">合作伙伴</div>
+      <div class="partner-content">
+        <div class="partner-item" v-for="(it,i) in partnerList" @click="openDetail(it.productId)">
+          <div class="content">
+            <div class="img-box">
+              <img :src="BaseUrl + it.productImg" alt="">
+            </div>
+            <!-- <p>{{it.productName}}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <foot-com :menulist="menulist" :linklist="linklist" />
+  </footer>
+
+
+  <script src="/js/vticker/jquery.vticker.js"></script>
+  <script src="/libs/echarts-5.4.2.min.js"></script>
+  <script src="/js/scrollreveal.js"></script>
+  <script src="/libs/swiper/swiper.min.js"></script>
+  <script src="/libs/axios.min.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/newhome.js"></script>
+  <script src="/libs/jquery.waypoints.min.js"></script>
+  <script src="/libs/jquery.countup.min.js"></script>
+  <script src="/libs/world.js"></script>
+  <!-- <script src="/js/home.js"></script> -->
+  <!-- <script src="/js/video.min.js"></script> -->
+  <!-- <script src="/js/layer-v3.1.1/layer/layer.js"></script> -->
+  <script>
+    $(function () {
+      $('.count').countUp();
+      var swiperBanner = new Swiper('#swiper_banner', {
+        effect: "fade",
+        slideActiveClass: "active",
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          hide: true,
+        },
+        spaceBetween: 0,
+        observer: true,
+        observerParents: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 7000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false
+        },
+        speed: 1200
+      });
+      var swiperNews = new Swiper('#banner_news', {
+        effect: "fade",
+        slideActiveClass: "active",
+        scrollbar: {
+          el: ".swiper-scrollbarnew",
+          hide: true,
+        },
+        observer: true,
+        observerParents: true,
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 7000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false
+        },
+        speed: 1200
+      });
+
+      var data = [
+        { name: "山西", type: "精煤" },
+        { name: "河南", type: "精煤" },
+        { name: "河北", type: "精煤" },
+        { name: "江苏", type: "精煤" },
+        { name: "贵州", type: "精煤" },
+        { name: "辽宁", type: "精煤" },
+        { name: "山东", type: "精煤" },
+        { name: "山东", type: "铸造及岩棉焦" },
+        { name: "河南", type: "铸造及岩棉焦" },
+        { name: "河北", type: "铸造及岩棉焦" },
+        { name: "浙江", type: "铸造及岩棉焦" },
+        { name: "吉林", type: "铸造及岩棉焦" },
+        { name: "上海", type: "铸造及岩棉焦" },
+        { name: "江苏", type: "铸造及岩棉焦" },
+        { name: "日本", type: "铸造及岩棉焦" },
+        { name: "俄罗斯", type: "铸造及岩棉焦" },
+        { name: "沙特", type: "铸造及岩棉焦" },
+        { name: "德国", type: "铸造及岩棉焦" },
+        { name: "法国", type: "铸造及岩棉焦" },
+        { name: "马来西亚", type: "铸造及岩棉焦" },
+        { name: "泰国", type: "铸造及岩棉焦" },
+        { name: "印尼", type: "铸造及岩棉焦" },
+        { name: "韩国", type: "铸造及岩棉焦" },
+        { name: "山西", type: "磨料" },
+        { name: "河南", type: "磨料" },
+        { name: "山东", type: "磨料" },
+        { name: "江苏", type: "磨料" },
+        { name: "河北", type: "磨料" },
+        { name: "浙江", type: "磨料" },
+        { name: "辽宁", type: "磨料" },
+        { name: "安徽", type: "磨料" },
+        { name: "天津", type: "磨料" },
+        { name: "北京", type: "磨料" },
+        { name: "日本", type: "磨料" },
+        { name: "韩国", type: "磨料" },
+        { name: "俄罗斯", type: "磨料" },
+        { name: "印度", type: "磨料" },
+        { name: "山西", type: "陶瓷砂" },
+        { name: "河南", type: "陶瓷砂" },
+        { name: "山东", type: "陶瓷砂" },
+        { name: "江苏", type: "陶瓷砂" },
+        { name: "浙江", type: "陶瓷砂" },
+        { name: "安徽", type: "陶瓷砂" },
+        { name: "四川", type: "陶瓷砂" },
+        { name: "重庆", type: "陶瓷砂" },
+        { name: "上海", type: "陶瓷砂" },
+        { name: "吉林", type: "负极材料" },
+        { name: "山东", type: "负极材料" },
+        { name: "安徽", type: "负极材料" },
+        { name: "江苏", type: "负极材料" },
+        { name: "深圳", type: "负极材料" },
+        { name: "广西", type: "负极材料" },
+      ]
+      var doms = document.getElementById('echartmap');
+      var mapChart = echarts.init(doms); // 初始化
+      var planePath = 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
+      var gpsData = {
+        '山西': [112.595453, 37.858034],
+        '北京': [116.403, 39.949],
+        '河南': [113.644, 34.769],
+        '河北': [114.508, 38.083],
+        '江苏': [118.832137, 32.038322],
+        '贵州': [106.616332, 26.707352],
+        '辽宁': [123.486653, 41.682522],
+        '山东': [117.194778, 36.652148],
+        '浙江': [120.211934, 30.274265],
+        '吉林': [125.326383, 43.797768],
+        '上海': [121.518142, 31.211845],
+        '安徽': [117.194, 31.865],
+        '天津': [117.286764, 39.001295],
+        '四川': [104.132697, 30.561282],
+        '重庆': [116.403694, 39.949459],
+        '广西': [108.345678, 22.861984],
+        '深圳': [114.057846, 22.543414,],
+        '福建': [119.292069, 26.144144],
+        '甘肃': [103.856737, 36.094212],
+        '广东': [113.239359, 23.185545],
+        '海南': [110.350983, 19.968035],
+        '黑龙江': [126.522207, 45.801617],
+        '湖北': [114.361594, 30.601078],
+        '湖南': [112.926605, 28.217167],
+        '江西': [115.851775, 28.672488],
+        '内蒙古': [111.785972, 40.849642],
+        '宁夏': [106.257585, 38.482579],
+        '青海': [101.851432, 36.622494],
+        '陕西': [109.026378, 34.350591],
+        '西藏': [91.144205, 29.649484],
+        '新疆': [87.667116, 43.817754],
+        '云南': [102.881681, 24.866897],
+        '香港': [114.242011, 22.272474],
+        '澳门': [113.579709, 22.169692],
+        '台湾': [121.591732, 25.034634],
+
+        '日本': [135.6541349, 35.1864193],
+        '俄罗斯': [37.4752449, 55.7689193],
+        '沙特': [43.5461217, 22.0543497],
+        '德国': [9.6617226, 51.2800000],
+        '法国': [1.5669120, 47.5369445],
+        '马来西亚': [101.932267, 3.582993],
+        '泰国': [100.8019312, 16.4526742],
+        '印尼': [120.2294766, -4.624336],
+        '韩国': [127.5148062, 36.8821101],
+        '印度': [78.892259, 20.547602],
+      }
+      var nameMap = {
+        "St. Pierre and Miquelon": "圣皮埃尔岛和密克隆岛",
+        "S. Geo. and S. Sandw. Is.": "南乔治亚和南桑德威奇群岛",
+        Niue: "纽埃",
+        Tonga: "汤加",
+        Kiribati: "基里巴斯",
+        "Côte d'Ivoire": "科特迪瓦",
+        Afghanistan: "阿富汗",
+        Singapore: "新加坡",
+        Angola: "安哥拉",
+        Albania: "阿尔巴尼亚",
+        "United Arab Emirates": "阿联酋",
+        Argentina: "阿根廷",
+        Armenia: "亚美尼亚",
+        "French Southern and Antarctic Lands": "法属南半球和南极领地",
+        Australia: "澳大利亚",
+        Austria: "奥地利",
+        Azerbaijan: "阿塞拜疆",
+        Burundi: "布隆迪",
+        Belgium: "比利时",
+        Benin: "贝宁",
+        "Burkina Faso": "布基纳法索",
+        Bangladesh: "孟加拉国",
+        Bulgaria: "保加利亚",
+        "The Bahamas": "巴哈马",
+        "Bosnia and Herzegovina": "波斯尼亚和黑塞哥维那",
+        Belarus: "白俄罗斯",
+        Belize: "伯利兹",
+        Bermuda: "百慕大",
+        Bolivia: "玻利维亚",
+        Brazil: "巴西",
+        Brunei: "文莱",
+        Bhutan: "不丹",
+        Botswana: "博茨瓦纳",
+        "Central African Republic": "中非共和国",
+        Canada: "加拿大",
+        Switzerland: "瑞士",
+        Chile: "智利",
+        China: "中国",
+        "Ivory Coast": "象牙海岸",
+        Cameroon: "喀麦隆",
+        "Dem. Rep. Congo": "刚果民主共和国",
+        "Republic of the Congo": "刚果共和国",
+        Colombia: "哥伦比亚",
+        "Costa Rica": "哥斯达黎加",
+        Cuba: "古巴",
+        "Northern Cyprus": "北塞浦路斯",
+        Cyprus: "塞浦路斯",
+        "Czech Republic": "捷克共和国",
+        Germany: "德国",
+        Djibouti: "吉布提",
+        Denmark: "丹麦",
+        "Dominican Republic": "多明尼加共和国",
+        Algeria: "阿尔及利亚",
+        Ecuador: "厄瓜多尔",
+        Egypt: "埃及",
+        Eritrea: "厄立特里亚",
+        Spain: "西班牙",
+        Estonia: "爱沙尼亚",
+        Ethiopia: "埃塞俄比亚",
+        Finland: "芬兰",
+        Fiji: "斐",
+        "Falkland Islands": "福克兰群岛",
+        France: "法国",
+        Gabon: "加蓬",
+        "United Kingdom": "英国",
+        Georgia: "格鲁吉亚",
+        Ghana: "加纳",
+        Guinea: "几内亚",
+        Gambia: "冈比亚",
+        "Guinea Bissau": "几内亚比绍",
+        Greece: "希腊",
+        Greenland: "格陵兰",
+        Guatemala: "危地马拉",
+        "French Guiana": "法属圭亚那",
+        Guyana: "圭亚那",
+        Honduras: "洪都拉斯",
+        Croatia: "克罗地亚",
+        Haiti: "海地",
+        Hungary: "匈牙利",
+        Indonesia: "印度尼西亚",
+        India: "印度",
+        Ireland: "爱尔兰",
+        Iran: "伊朗",
+        Iraq: "伊拉克",
+        Iceland: "冰岛",
+        Israel: "以色列",
+        Italy: "意大利",
+        Jamaica: "牙买加",
+        Jordan: "约旦",
+        Japan: "日本",
+        Kazakhstan: "哈萨克斯坦",
+        Kenya: "肯尼亚",
+        Kyrgyzstan: "吉尔吉斯斯坦",
+        Cambodia: "柬埔寨",
+        Kosovo: "科索沃",
+        Kuwait: "科威特",
+        Laos: "老挝",
+        Lebanon: "黎巴嫩",
+        Liberia: "利比里亚",
+        Libya: "利比亚",
+        "Sri Lanka": "斯里兰卡",
+        Lesotho: "莱索托",
+        Lithuania: "立陶宛",
+        Luxembourg: "卢森堡",
+        Latvia: "拉脱维亚",
+        Morocco: "摩洛哥",
+        Moldova: "摩尔多瓦",
+        Madagascar: "马达加斯加",
+        Mexico: "墨西哥",
+        Macedonia: "马其顿",
+        Mali: "马里",
+        Myanmar: "缅甸",
+        Montenegro: "黑山",
+        Mongolia: "蒙古",
+        Mozambique: "莫桑比克",
+        Mauritania: "毛里塔尼亚",
+        Malawi: "马拉维",
+        Malaysia: "马来西亚",
+        Namibia: "纳米比亚",
+        "New Caledonia": "新喀里多尼亚",
+        Niger: "尼日尔",
+        Nigeria: "尼日利亚",
+        Nicaragua: "尼加拉瓜",
+        Netherlands: "荷兰",
+        Norway: "挪威",
+        Nepal: "尼泊尔",
+        "New Zealand": "新西兰",
+        Oman: "阿曼",
+        Pakistan: "巴基斯坦",
+        Panama: "巴拿马",
+        Peru: "秘鲁",
+        Philippines: "菲律宾",
+        "Papua New Guinea": "巴布亚新几内亚",
+        Poland: "波兰",
+        "Puerto Rico": "波多黎各",
+        "North Korea": "北朝鲜",
+        Portugal: "葡萄牙",
+        Paraguay: "巴拉圭",
+        Qatar: "卡塔尔",
+        Romania: "罗马尼亚",
+        Russia: "俄罗斯",
+        Rwanda: "卢旺达",
+        "Western Sahara": "西撒哈拉",
+        "Saudi Arabia": "沙特阿拉伯",
+        Sudan: "苏丹",
+        "S. Sudan": "南苏丹",
+        Senegal: "塞内加尔",
+        "Solomon Islands": "所罗门群岛",
+        "Sierra Leone": "塞拉利昂",
+        "El Salvador": "萨尔瓦多",
+        Somaliland: "索马里兰",
+        Somalia: "索马里",
+        "Republic of Serbia": "塞尔维亚",
+        Suriname: "苏里南",
+        Slovakia: "斯洛伐克",
+        Slovenia: "斯洛文尼亚",
+        Sweden: "瑞典",
+        Swaziland: "斯威士兰",
+        Syria: "叙利亚",
+        Chad: "乍得",
+        Togo: "多哥",
+        Thailand: "泰国",
+        Tajikistan: "塔吉克斯坦",
+        Turkmenistan: "土库曼斯坦",
+        "East Timor": "东帝汶",
+        "Trinidad and Tobago": "特里尼达和多巴哥",
+        Tunisia: "突尼斯",
+        Turkey: "土耳其",
+        "United Republic of Tanzania": "坦桑尼亚",
+        Uganda: "乌干达",
+        Ukraine: "乌克兰",
+        Uruguay: "乌拉圭",
+        "United States": "美国",
+        Uzbekistan: "乌兹别克斯坦",
+        Venezuela: "委内瑞拉",
+        Vietnam: "越南",
+        Vanuatu: "瓦努阿图",
+        "West Bank": "西岸",
+        Yemen: "也门",
+        "South Africa": "南非",
+        Zambia: "赞比亚",
+        Korea: "韩国",
+        Tanzania: "坦桑尼亚",
+        Zimbabwe: "津巴布韦",
+        Congo: "刚果",
+        "Central African Rep.": "中非",
+        Serbia: "塞尔维亚",
+        "Bosnia and Herz.": "波黑",
+        "Czech Rep.": "捷克",
+        "W. Sahara": "西撒哈拉",
+        "Lao PDR": "老挝",
+        "Dem. Rep. Korea": "朝鲜",
+        "Falkland Is.": "福克兰群岛",
+        "Timor-Leste": "东帝汶",
+        "Solomon Is.": "所罗门群岛",
+        Palestine: "巴勒斯坦",
+        "N. Cyprus": "北塞浦路斯",
+        Aland: "奥兰群岛",
+        "Fr. S. Antarctic Lands": "法属南半球和南极陆地",
+        Mauritius: "毛里求斯",
+        Comoros: "科摩罗",
+        "Eq. Guinea": "赤道几内亚",
+        "Guinea-Bissau": "几内亚比绍",
+        "Dominican Rep.": "多米尼加",
+        "Saint Lucia": "圣卢西亚",
+        Dominica: "多米尼克",
+        "Antigua and Barb.": "安提瓜和巴布达",
+        "U.S. Virgin Is.": "美国原始岛屿",
+        Montserrat: "蒙塞拉特",
+        Grenada: "格林纳达",
+        Barbados: "巴巴多斯",
+        Samoa: "萨摩亚",
+        "American Samoa": "东萨摩亚",
+        Bahamas: "巴哈马",
+        "Cayman Is.": "开曼群岛",
+        "Faeroe Is.": "法罗群岛",
+        "IsIe of Man": "马恩岛",
+        Malta: "马耳他共和国",
+        Jersey: "泽西",
+        "Cape Verde": "佛得角共和国",
+        "Turks and Caicos Is.": "特克斯和凯科斯群岛",
+        "St. Vin. and Gren.": "圣文森特和格林纳丁斯",
+        "United States of America": "美国",
+      };
+      var options = {
+        grid: 0,
+        geo: {
+          type: "map",
+          map: 'world',
+          zoom: 1.8, //当前视角的缩放比例
+          roam: true, //是否开启平游或缩放
+          // aspectScale: 1,
+          layoutCenter: ["50%", "50%"], //地图位置
+          layoutSize: '130%',
+          label: {
+            emphasis: {
+              show: true,
+              color: "#333",
+              areaColor: '#999',
+            }
+          },
+          regions: [{
+            name: '中国',//与china.js对应的省份名称
+            itemStyle: {
+              areaColor: '#B7CDDB',//省份背景色
+            }
+          }]
+        },
+        nameMap: nameMap,
+        itemStyle: {
+          normal: {
+            areaColor: 'rgb(10,60,83)',
+            borderColor: 'rgba(147, 235, 248, 1)',
+            borderWidth: 1,
+            areaColor: {
+              type: 'radial',
+              x: 0.5,
+              y: 0.5,
+              r: 0.8,
+              colorStops: [{
+                offset: 0,
+                color: 'rgba(143, 235, 231, 0)' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: 'rgba(143, 235, 231, .2)' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            },
+            shadowColor: 'rgba(128, 217, 248, 1)',
+          },
+          emphasis: {
+            areaColor: '#389bb7',
+            label: {
+              color: "#112a87"
+            },
+          }
+        },
+        series: [
+          {
+            type: 'lines',
+            zlevel: 2,
+            symbol: ['none', 'arrow'],
+            symbolSize: 10,
+            effect: {
+              show: true,
+              period: 6,
+              trailLength: 0.2,
+              color: '#112a87',   //arrow箭头的颜色
+              symbolSize: 5
+            },
+            lineStyle: {
+              normal: {
+                color: 'rgba(17,42,135,.8)',
+                width: 1,
+                opacity: .6,
+                curveness: 0.2
+              }
+            },
+            data: mapData(networkVM.types[networkVM.typeIndex])
+          },
+          {
+            type: 'effectScatter',
+            coordinateSystem: 'geo',
+            zlevel: 2,
+            rippleEffect: {
+              brushType: 'stroke'
+            },
+            label: {
+              normal: {
+                show: true,
+                position: 'bottom',
+                formatter: '{b}',
+                fontSize: 14,
+                color: '#112a87'
+              }
+            },
+            symbolSize: 8,
+            itemStyle: {
+              normal: {
+                color: '#112a87',
+              },
+              emphasis: {
+                areaColor: '#2B91B7'
+              }
+            },
+            data: data.filter(el => el.type == networkVM.types[networkVM.typeIndex]).map(el => {
+              el.value = gpsData[el.name]
+              return el
+            })
+          },
+          {
+            type: 'scatter', // series图表类型
+            zlevel: 10,
+            coordinateSystem: 'geo',
+            symbolSize: [120, 30],
+            symbol: 'image:///img/logo2.png',
+            data: [{
+              name: "沁新集团",
+              value: [112.195462, 36.585830]
+            }]
+          }
+        ]
+      }
+      mapChart.setOption(options)
+      function mapData(type) {
+        return datas = data.filter(el => el.type == type).map(el => {
+          el.coords = [[112.195462, 36.585830], gpsData[el.name]]
+          el.value = 999
+          return el;
+        })
+      }
+      $('.network-item').click(function () {
+        let index = $(this).index()
+        if(networkVM.typeIndex == index) return;
+        networkVM.typeIndex = index;
+        clearInterval(networkVM.TIME)
+        networkVM.TIME = null
+        setmapOption()
+      })
+      function setmapOption() {
+        options.series[0].data = mapData(networkVM.types[networkVM.typeIndex]);
+        options.series[1].data = data.filter(el => el.type == networkVM.types[networkVM.typeIndex]).map(el => {
+          el.value = gpsData[el.name]
+          return el
+        })
+        mapChart.setOption(options)
+      }
+      networkVM.TIME = setInterval(function () {
+        networkVM.typeIndex++;
+        if (networkVM.typeIndex >= networkVM.types.length) networkVM.typeIndex = 0;
+        setmapOption()
+      }, 7000)
+      window.onresize = mapChart.resize
+    })
+  </script>
+</body>
+
+</html>

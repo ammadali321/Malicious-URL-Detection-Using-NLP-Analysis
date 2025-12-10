@@ -1,0 +1,525 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><!-- InstanceBegin template="/Templates/Master_Public_Meta.dwt" codeOutsideHTMLIsLocked="false" -->
+<HEAD>
+<!-- InstanceBeginEditable name="doctitle" -->
+<TITLE>Ed Atkinson - Don Budge Sample</TITLE>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="EditRegionMeta" -->
+<meta name="FreeFind" content="stripQueries">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keyword" content="J.Donald Budge,
+Don Budge,
+backhand,
+Jack Kramer,
+Grand Slam,
+Bushrod Park,
+All Court Game,
+tennis lessons,
+tennis tips,
+tennis instruction,
+how to play tennis,
+tennis players,
+tennis strokes,
+tennis video,
+tennis stroke videos,
+tennis video clips,">
+<meta name="description" content="J.Donald Budge may have had the greatest backhand of all time.  There 
+is no doubt that he virtually invented the concept of the Grand Slam, 
+becoming the first player to win the world's top 4 tournaments in a single year.  
+In this nostalgic portrait, Ed Atkinson gives us an insider's look at both 
+Don Budge the player and Don Budge the person.">
+<!-- InstanceEndEditable -->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<!-- WOMPMOBILE SITE TAG - DO NOT ALTER - PASTE IMMEDIATELY AFTER OPENING HEAD TAG - For more information see WompMobile.com -->
+<script> 'use strict';(function(win,doc,loc,ua,cookTimeout){if((!/nomobile/i.test(doc.cookie)||/showmobile/i.test(loc.hash))&&!/frommobile/i.test(loc.hash)){if(/ipod|ipad|phone|mobile|mini|silk|android/i.test(ua)||/yesmobile/i.test(doc.cookie)||/showmobile/i.test(loc.hash)){doc.write('<plaintext style="display:none;">');doc.addEventListener("DOMContentLoaded",function(){if(win.stop)win.stop();var reload=function(){doc.cookie="NoMobile=True; expires="+cookTimeout+";";win.location=loc.href};var firstScriptTag=
+doc.getElementsByTagName("script")[0];var wompScript=doc.createElement("script");wompScript.src="//az690879.ampify.care/7630/MobileScript.js";wompScript.id="wompScript";wompScript.onerror=reload;firstScriptTag.parentNode.insertBefore(wompScript,firstScriptTag)})}}else if(/frommobile/i.test(loc.hash))doc.cookie="NoMobile=True; expires="+d.toUTCString()+";"})(window,document,window.location,navigator.userAgent,(new Date(Date.now()+6E5)).toUTCString());</script>
+<!-- END WOMPMOBILE TAG -->
+     
+
+<script src="https://www.tennisplayer.net/scripts/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    
+	if ($( ".video" ).length) {
+	
+		$( ".video" ).each(function( index ) {
+
+			var playPromise = this.play();
+
+			if (playPromise !== null){
+				playPromise.catch(() => { this.play(); })
+			}
+
+
+			console.log("this: ", this);
+		});
+	}
+	
+    $('ul.left-nav').height($('#body #middle').height())
+		
+  
+  	$("#signup-form").submit(function(e){
+  		e.preventDefault();
+      $('body, #signup-submit').css({'cursor' : 'wait'});
+
+  		var $form = $(this),
+  		email = $form.find('input[name="email"]').val(),
+  		url = $form.attr('action');
+
+  		$.post(url, {email:email},
+  		  function(data) {
+          $('body, #signup-submit').css({'cursor' : 'default'});
+  		      if(data)
+  		      {
+  		      	if(data=="Some fields are missing.")
+  		      	{
+  			      	$("#status").text("Please fill in your email.");
+  			      	$("#status").css("color", "red");
+  		      	}
+  		      	else if(data=="Invalid email address.")
+  		      	{
+  			      	$("#status").text("Your email address is invalid.");
+  			      	$("#status").css("color", "red");
+  		      	}
+  		      	else if(data=="Invalid list ID.")
+  		      	{
+  			      	$("#status").text("Your list ID is invalid.");
+  			      	$("#status").css("color", "red");
+  		      	}
+  		      	else if(data=="Already subscribed.")
+  		      	{
+  			      	$("#status").text("You're already subscribed!");
+  			      	$("#status").css("color", "red");
+  		      	}
+  		      	else
+  		      	{
+  			      	$("#status").text("You're subscribed!");
+  			      	$("#status").css("color", "green");
+  		      	}
+  		      }
+  		      else
+  		      {
+  		      	alert("Sorry, unable to subscribe. Please try again later!");
+  		      }
+  		  }
+  		);
+  	});
+  	$("#signup-form").keypress(function(e) {
+  		    if(e.keyCode == 13) {
+  		    	e.preventDefault();
+  				$(this).submit();
+  		    }
+  		});
+  	$("#signup-submit").click(function(e){
+  		e.preventDefault();
+  		$("#signup-form").submit();
+  	});
+})
+</script>
+
+<div id='error_message' style='display: none;'>bool(false)
+</div><script>console.log(document.getElementById('error_message'));</script>
+
+<script>
+	var hs = "false";
+</script>
+
+<!-- the following gets included on each file -->
+<script src="/scripts/video_player_no_key_events.js"></script> 
+
+   </HEAD>
+<BODY leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" rightmargin="0"> 
+<TABLE width="800" border="0" align="left" cellPadding=0 cellSpacing=0> 
+  <TR align="left"> 
+    <TD colSpan=3><IMG src="/images/TennisPlayer_top_logo.gif" width="805" height="2" border="0" usemap="#Map"></TD>
+  </TR> 
+  <TR> 
+    <TD colSpan=3><IMG src="/images/TennisPlayer_logo_complete.gif" width="805" height="110" border="0" usemap="#Map"></TD> 
+  </TR> 
+  <TR> 
+    <TD vAlign=top bgColor=#feff88  width="125">
+		<img src="/images/Tennisplayer_Nav_Gradient.gif" height="45" width="125"><link href=/nav.css rel="stylesheet" type="text/css">
+<table width="125" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>&nbsp;&nbsp;</td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/new_issue/2019/august/" target="_self" class="nav">New Issue</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/avancedtennis/avancedtennis_public.html" target="_self" class="nav">Advanced Tennis</a>
+    </td>  
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/strokearchive/strokearchive_public.html" target="_self" class="nav">Stroke Archive</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/patternsarchive/patternsarchive_public.html" target="_self" class="nav">Patterns Archive</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/high_speed_archive/high_speed_archive_public.html" target="_self" class="nav">HighSpeed Archives</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/famouscoach/famouscoach_public.html" target="_self" class="nav">Famous Coaches</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/classiclessons/classiclessons_public.html" target="_self" class="nav">Classic Lessons</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/biomechanics/scienceofbio_public.html" target="_self" class="nav">Biomechanics</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/technology_in_teaching/technology_in_teaching.html" target="_self" class="nav">Tech in Teaching</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/heavyball/heavyball_public.html" target="_self" class="nav">The Heavy Ball</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="1" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/tour_strokes/tour_strokes_public.html" target="_self" class="nav">Tour Strokes</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/your_strokes/your_strokes_public.html" target="_self" class="nav">Your Strokes</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/footwork/footwork_public.html" target="_self" class="nav">Footwork</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/physicaltraining/physicaltraining_public.html" target="_self" class="nav">Physical Training</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/mentalgame/mentalgame_public.html" target="_self" class="nav">Mental Game</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/strategy/strategy_and_statistics_public.html" target="_self" class="nav">Strategy</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/teaching_systems/teaching_systems_public.html" target="_self" class="nav">Teaching Systems</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/ultimate_fundamentals/ultimate_fundamentals_public.html" target="_self" class="nav">Ultimate<br>&nbsp&nbsp;Fundamentals</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/high_performance/high_performance_public.html" target="_self" class="nav">High Performance</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/future_stars/future_stars_public.html" target="_self" class="nav">Future Stars</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/physics_of_tennis/physics_of_tennis_public.html" target="_self" class="nav">Tennis Science</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/champions/champions_public.html" target="_self" class="nav">Tennis History</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/tourportraits/tourportraits_public.html" target="_self" class="nav">Tour Portraits</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <!--
+  <tr>
+  <td>&nbsp;&nbsp;<a href="/public/music_videos/music_videos_public.html" target="_self" class="nav">Music Videos</a></td>
+  </tr>
+  <TR><TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  -->
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/notes_on_tour/notes_on_tour_public.html" target="_self" class="nav">Features and Notes</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/ultimate_tennis_links/ultimate_tennis_links_public.html" target="_self" class="nav">Ultimate Links</a>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/blog/" target="_self" class="nav">TennisStream</a></td>
+  </tr>
+
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/staff/bio/staff_bio.html" target="_self" class="nav">Staff</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="mailto:admin@tennisplayer.net" target="_self" class="nav">Contact Support</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/privacy.html" target="_self" class="nav">Privacy Policy</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+
+  <tr>
+    <td>&nbsp;&nbsp;<a href="/public/pitch/pitch.html" target="_self" class="nav">Forum</a></td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>&nbsp;&nbsp;</td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <tr>
+    <td>
+      <center>
+        <FORM ACTION="/public/pitch/pitch.html" METHOD="POST" target="_self">
+          <font size=1 face="arial,helvetica">
+            <INPUT TYPE="TEXT" NAME="query" SIZE="13">
+            <small>
+              <INPUT TYPE="SUBMIT" VALUE="Search"><br>
+            </small>
+          </font>
+        </FORM>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td><br>
+      <div align="center">
+        <a href="https://www.tennisplayer.net/public/new_issue/past_issues/past_issues.html" target="_self" class="nav">Past Issues</a>
+      </div>
+    </td>
+  </tr>
+  <TR>
+    <TD><IMG SRC="/public/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+
+
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+
+
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+
+  <TR>
+    <TD align="center">
+      <a href="http://www.tennis-warehouse.com?from=player"><img src="/images/TWLogo.jpg" border="0" HSPACE="1" VSPACE="1" width="102" height="65" alt="" border="0"></a>
+    </TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+
+
+  <TR>
+    <TD align="center">
+      <a href="https://twitter.com/TennisPlayerNet"><img src="/images/twitter.jpg" width="102" height="29" HSPACE="1" VSPACE="1"/></a>
+    </TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="/images/spacer.gif" border="0" HEIGHT="3" WIDTH="1" HSPACE="1" VSPACE="1"></TD>
+  </TR>
+  <TR>
+    <TD align="center"><a href="https://www.facebook.com/Tennisplayer.net">
+      <img src="/images/facebook.jpg" width="102" height="33" HSPACE="1" VSPACE="1"/></a>
+    </TD>
+  </TR>
+
+</table>
+        <!--#include virtual="/public/navbar_public.html" --></TD> 
+    <TD colSpan="2" width="100%" valign="top"> <!-- InstanceBeginEditable name="mainContent" --><TABLE width="674" border="1" align="left" cellPadding="20" cellSpacing="0" borderColor="#000000">
+            <TR> <TD width="630" colSpan="0" align="center"><div align="center">
+			<br>
+			<h1>J. Donald Budge</h1>
+	  </div>
+
+						<H3 class="header" align="center">By Ed Atkinson </H3>
+			<br>
+			<HR>
+			 	  
+	 <!-- End Header Section -->
+	 <table width="200" border="0" align="left" cellpadding="5" cellspacing="5">
+       <tr>
+         <td width="216"><div align="center"><img src="Budge.Geek.jpg" width="190" height="249" alt="Don Budge"></div></td>
+       </tr>
+       <tr>
+         <td height="80" valign="top"><div align="center" class="bold14">An absolute natural, Don Budge created the concept of the Grand Slam.</div></td>
+       </tr>
+     </table>
+     <p align="left"> <br>
+		J. Donald Budge: the hero of every tennis player who ever saw him play, and a man whose backhand is considered the greatest 
+	 shot in the history of the game.</p>
+	 
+     <p align="left"><br>
+	Budge was an absolute natural, who never played tennis seriously until he was 14. As he himself told the story, his older 
+	 brother, Lloyd, challenged him: "Don, you'd have a good chance to win the California State Boy's 15 and Under if 
+	 you practice, but you're too darned lazy to practice, so forget it."</p>
+	 
+     <p align="left"><br>
+	Two weeks before the tournament, Budge started going up to Bushrod Park, a few blocks away from his house, and playing anyone who
+	  showed up with a racquet. That preparation bore fruit. In the first round, Budge beat the number one seed and went on to win the 
+	  tournament.</p>
+	  
+     <p align="left"> <br>
+		No one played off the ground better than Don Budge The most devastating aspect of his game was his return. No one could follow 
+	 his serve to the net against him. Jack Kramer is on record as saying Budge was the best tennis player he ever saw play the game.</p>
+     <p align="left"> Budge had an aura of greatness. He had a way of making other players feel like they should be his ball boy. He loved the glamour
+	  and he was glamorous himself. He drank champagne, he listened Tommy Dorsey, he played the drums.</p>
+	  
+	  
+     <table width="290" border="0" align="right" cellpadding="5" cellspacing="5">
+       <tr>
+         <td>
+         <video poster="Budge.TopspinBH.jpg" playsinline muted="muted" autoplay class="video" width="280" height="187" loop="true"><source src="Budge.TopspinBH.mp4"></video>         </td>
+       </tr>
+       <tr>
+         <td height="80" valign="top" class="bold14"><div align="center">Budge's backhand is still considered one of the greatest shots in the history of tennis.</div></td>
+       </tr>
+     </table>
+     <p>&nbsp; </p>
+     <p align="left">Budge made a premeditated and calculated effort to make tennis history and win the first Grand Slam of tennis: the championships 
+	 of England, France,.Australia and the United States. </p>
+     <p align="left">This was of course before air travel, when a sea journey to Australia lasted 22 days. Budge put an exclamation point on his 
+	 amazing feat by only losing five sets in 28 matches.</p>
+     <p align="left"> By late 1935, Don Budge had begun to hit his full stride as a totally dominating tennis player. It was not uncommon him to win 
+	 seven or eight games in a row, regardless of how well his opponent was playing.</p>
+     <p align="left"> He was the absolute master of the all court game who never seemed to have a bad day. No one will ever know how good Budge really
+	  was because World War II came along to disturb his reign.</p>
+	  
+	  
+	  <br>
+				
+						
+					<P align="center" class="header">READ THE REST OF THIS ARTICLE !</P>
+					<br>
+					<br>
+					<br>
+
+					<P align="center" class="header"><a href="../pitch/pitch.html"><U>Become a Subscriber </U></a></P>
+				    <br>
+      </td>
+  </tr>
+</table><!-- InstanceEndEditable --> 
+	</td> 
+  </tr> 
+</table> 
+<map name="Map">
+  <area shape="rect" coords="21,48,368,101" href="/indexpublic.html">
+</map>
+</BODY>
+<!-- InstanceEnd --></HTML>

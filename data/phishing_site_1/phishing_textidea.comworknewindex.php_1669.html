@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>FlexiFunnels</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+
+<style>
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          box-shadow: 0px 0px 10px #ddd;
+          border-radius: 4px;
+}
+
+.notfound {
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding: 15px ;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 220px;
+}
+
+.notfound .notfound-404 h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 186px;
+  font-weight: 200;
+  margin: 0px;
+  background: linear-gradient(130deg, #ffa34f, #ff6f68);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.notfound h2 {
+
+  font-size: 33px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+}
+
+.notfound p {
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.goback_btn{
+    border-radius: 4px;
+    background-color: #31cb4b;
+    color: #fff !important;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 {
+    position: relative;
+    height: 168px;
+  }
+
+  .notfound .notfound-404 h1 {
+    font-size: 142px;
+  }
+
+  .notfound h2 {
+    font-size: 22px;
+  }
+}
+</style>
+
+</head>
+<body>
+<div id="notfound">
+<div class="notfound">
+<div class="notfound-404">
+<h1>404</h1>
+</div>
+<h2>Oops! Nothing was found</h2>
+<p>The page you are looking for is temporarily unavailable. This may be due to <br/> one among the following reasons. Please check if you have published the page.<br/> This page is under creation (or) This page might have been removed (or) You might have landed on the wrong page.
+</p>
+<!-- <p>Please check if you have published the page.<br/> This page might have been removed (or)<br/> You might have landed on the wrong page</p> -->
+<!-- <a href="javascript:void(0);" class="goback_btn">Return to homepage</a> -->
+</div>
+</div>
+
+</body>
+</html>

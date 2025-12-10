@@ -1,0 +1,321 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<!--  ---------------------------------------------- SEARCH ENGINE KEYWORD LISTINGS ----------------------------------------------  -->
+
+<meta name="keywords" content="Mindcraft, Mindcraft Inc.">
+<meta name="keywords" content="web server performance, performance testing">
+<meta name="keywords"
+content="test suites, test tools, custome testing, test lab">
+<meta name="keywords" content="capacity planning, application evaluation">
+<meta name="keywords" content="directorymark, ldap">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<!--  ---------------------------------------------- STYLESHEET ----------------------------------------------  -->
+<link rel="stylesheet" type="text/css" href="../mcstyles.css">
+<!--  ---------------------------------------------- SCRIPTING CALLS ----------------------------------------------  -->
+<script LANGUAGE="JavaScript">
+<!--
+//Sense the browser and set compatability parameters
+var br;
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+if      (bName == "Netscape" && bVer >= 4) br = "n3";                    
+	else if (bName == "Netscape" && bVer == 3) br = "n2";                    
+	else if (bName == "Netscape" && bVer == 2) br = "n2";                    
+	else if (bName == "Microsoft Internet Explorer" && bVer >= 4) br = "n3"; 
+else br = "n2";
+
+//Preload the navigation graphics
+     var homecold = new Image(135,40);
+     homecold.src = "../images/buttons/cold/homecold.gif";
+     var homehot = new Image(135,40);
+     homehot.src = "../images/buttons/hot/homehot.gif";
+     
+     var servicescold = new Image(135,40);
+     servicescold.src = "../images/buttons/cold/servicescold.gif";
+     var serviceshot = new Image(135,40);
+     serviceshot.src = "../images/buttons/hot/serviceshot.gif";
+
+     var reportscold = new Image(135,40);
+     reportscold.src = "../images/buttons/cold/reportscold.gif";
+     var reportshot = new Image(135,40);
+     reportshot.src = "../images/buttons/hot/reportshot.gif";
+
+     var priceperfcold = new Image(135,40);
+     priceperfcold.src = "../images/buttons/cold/priceperfcold.gif";
+     var priceperfhot = new Image(135,40);
+     priceperfhot.src = "../images/buttons/hot/priceperfhot.gif";
+
+     var grbenchcold = new Image(135,40);
+     grbenchcold.src = "../images/buttons/cold/grbenchcold.gif";
+     var grbenchhot = new Image(135,40);
+     grbenchhot.src = "../images/buttons/hot/grbenchhot.gif";
+
+     var webstone = new Image(135,40);
+     webstone.src = "../images/buttons/base/webstone.gif";
+     var ldap = new Image(135,40);
+     ldap.src = "../images/buttons/base/grldap.gif";
+
+     var companycold = new Image(135,40);
+     companycold.src = "../images/buttons/cold/companycold.gif";
+     var companyhot = new Image(135,40);
+     companyhot.src = "../images/buttons/hot/companyhot.gif";
+
+     var contactcold = new Image(135,40);
+     contactcold.src = "../images/buttons/cold/contactcold.gif";
+     var contacthot = new Image(135,40);
+     contacthot.src = "../images/buttons/hot/contacthot.gif";
+
+     var headerBillboard = new Image(225,125);
+     headerBillboard.src = "../images/billboards/billb-wslogo.gif";
+
+function hotButton(button) {
+	buttonFile = "../images/buttons/hot/" + button + "hot.gif";
+	document [button].src= buttonFile;
+}
+
+function coldButton(button) {
+	buttonFile = "../images/buttons/cold/" + button + "cold.gif";
+	document [button].src= buttonFile;
+}
+//-->
+</script>
+
+<title>DirectoryMark Benchmark Information</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" cellspacing="0" cellpadding="5" width="600">
+   <tr>
+      <td valign="top" colspan="2" width="580"><!--  ----------------------------------------------TOP BANNER ----------------------------------------------  --> <map
+         name="FPMap0">
+         <area href="/index.html" shape="rect" coords="9, 15, 88, 79">
+         <area href="/search.html" shape="rect" coords="10, 94, 122, 116"></map>
+      <img
+         src="../images/banners/benchmarks/bn_bench_top.jpg" border="0"
+         alt="Benchmarks" usemap="#FPMap0" width="580" height="122"><br>
+      </td>
+   </tr>
+   <tr>
+      <!--  ---------------------------------------------- BEGIN MENUBUTTON TABLE  ---------------------------------------------- -->
+      <td valign="top" rowspan="2" width="140">
+         <table border="0" cellspacing="0" cellpadding="0" width="135">
+            <!--  ----------------------------------------------  MENUBUTTON RULES                      1.  BLUE MenuButtons are COLD                      2.  WHITE MenuButtons are HOT                     3.  LIGHTBLUE MenuButtons are part of CURRENT SECTION GROUP  ------------------------------------------------>
+            <tr>
+               <td><a href="/index.html"
+                  onmouseover="if(br =='n3') hotButton('home')"
+                  onmouseout="if(br =='n3') coldButton('home')">
+               <img
+                  src="../images/buttons/cold/homecold.gif" name="home" border="0"
+                  alt="Home Page" width="135" height="40"></a><br>
+               </td>
+            </tr>
+            <tr>
+               <td><a href="/company/services.html"
+                  onmouseover="if(br =='n3') hotButton('services')"
+                  onmouseout="if(br =='n3') coldButton('services')">
+               <img
+                  src="../images/buttons/cold/servicescold.gif" name="services"
+                  border="0" alt="Services" width="135" height="40"></a><br>
+               </td>
+            </tr>
+            <tr>
+               <td><a href="/benchmarks/">
+               <img
+                  src="../images/buttons/cold/grbenchcold.gif" name="grbench"
+                  border="0" alt="Benchmarks" width="135" height="40"></a><br>
+               </td>
+            </tr>
+            <tr>
+               <td><a href="/webstone/">
+               <img
+                  src="../images/buttons/base/webstone.gif" name="webstone"
+                  border="0" alt="WebStone" width="135" height="40"></a><br>
+               </td>
+            </tr>
+            <tr>
+               <td><a href="/directorymark/">
+               <img
+                  src="../images/buttons/base/grldap.gif" name="ldap" border="0"
+                  alt="LDAP" width="135" height="40"></a><br>
+               </td>
+            </tr>
+            <tr>
+               <td><a href="/perfreports/"
+                  onmouseover="if(br =='n3') hotButton('reports')"
+                  onmouseout="if(br =='n3') coldButton('reports')">
+               <img
+                  src="../images/buttons/cold/reportscold.gif" name="reports"
+                  border="0" alt="Reports" width="135" height="40"></a><br>
+               </td>
+            </tr>
+            <tr>
+               <td><a href="/priceperf/"
+                  onmouseover="if(br =='n3') hotButton('priceperf')"
+                  onmouseout="if(br =='n3') coldButton('priceperf')">
+               <img
+                  src="../images/buttons/cold/priceperfcold.gif" name="priceperf"
+                  border="0" alt="Price/Performance" width="135" height="40"></a><br>
+               </td>
+            </tr>
+            <tr>
+               <td><a href="/company/"
+                  onmouseover="if(br =='n3') hotButton('company')"
+                  onmouseout="if(br =='n3') coldButton('company')">
+               <img
+                  src="../images/buttons/cold/companycold.gif" name="company"
+                  border="0" alt="Company" width="135" height="40"></a><br>
+               </td>
+            </tr>
+            <tr>
+               <td><a href="/company/contactmc.html"
+                  onmouseover="if(br =='n3') hotButton('contact')"
+                  onmouseout="if(br =='n3') coldButton('contact')">
+               <img
+                  src="../images/buttons/cold/contactcold.gif" name="contact"
+                  border="0" alt="Contact Us" width="135" height="40"></a><br>
+               </td>
+            </tr>
+         </table>
+      </td>
+      <!--  ---------------------------------------------- END MENUBUTTON TABLE  ---------------------------------------------- -->
+      <!--  ---------------------------------------------- BEGIN MAIN CONTENT AREA ----------------------------------------------  -->
+      <td valign="top" rowspan="2" width="460"><!-- The width of this cell can be adjusted from 450 to 600 pixels to accomodate different kinds of content. --> <!--  ---------------------------------------------- BEGIN ACTIVE GRAPHICS AREA, IF USED ----------------------------------------------  --> 
+      <img
+         src="../images/billboards/billb-dirmark.gif" alt="DirectoryMark Logo" width="400" height="100"><br
+         clear="all">
+         <!--  ---------------------------------------------- END ACTIVE GRAPHICS AREA ----------------------------------------------  -->    
+         <h2 align="left"><strong>The LDAP Server Benchmarking Tool</strong></h2>
+         
+    <h2>
+    <img src="../webstone/new.gif" width="38" height="39">DirectoryMark 1.3</h2>
+         
+      <p>DirectoryMark 1.3 has support for  Active Directory on Windows 2000 and 
+      Windows Server 2003. It also has support for Active Directory in 
+      Application Mode as well as 
+        a new set of <a href="dm13runrules.html">run rules</a> that eliminates 
+      the need for directory size classes. The <a href="history.txt">change 
+      history</a> for DirectoryMark 1.3 is available for your review. We have released versions for Windows and Solaris. Download 
+        the one you want now! The <a
+         href="dirmark-exec-license.html">executables are free</a>. If you are 
+        interested in the source code, please <a
+         href="mailto:sales@mindcraft.com">contact us</a>.</p>
+         
+      <p>The DirectoryMark 1.3 benchmark is designed to measure the performance 
+        of server products that use Lightweight Directory Access Protocol (LDAP), 
+        version 3.</p>
+         <p>You can customize the DirectoryMark testing scenarios to meet your
+         needs. You can use your own data in LDIF format to generate test
+         scripts.</p>
+         <p>Mindcraft is maintaining DirectoryMark and is providing this Web
+         site as a service for our clients and for the industry. We would
+         appreciate any <a href="mailto:directorymark@mindcraft.com">feedback</a>
+         you have.</p>
+         
+    <h2>
+    DirectoryMark Forum</h2>
+    <p>We have created a <a href="http://pub86.ezboard.com/bperformancetestingandmarketing">Web-based
+    forum</a> to replace the DirectoryMark mailing list. We did this to reduce the
+    spamming that the list attracted and to provide a more useful way for the
+    DirectoryMark community to interact. Let us know what you think. This
+    <a href="http://pub86.ezboard.com/bperformancetestingandmarketing">
+    DirectoryMark
+    forum</a> is available now!<h2>Resources</h2>
+         <ul>
+            <li><b>Pre-compiled DirectoryMark executables:</b>
+               <blockquote>
+                  
+            <p><a href="dirmark-exec-license.html">DirectoryMark 1.3 running 
+              on Windows 2000 and Windows Server 2003&nbsp; on Intel processors</a><br>
+            (1,104 KB zip file)</p>
+                  
+          <p><a href="dirmark-exec-license.html">DirectoryMark 1.3 running on 
+            Solaris 8 and 9 on SPARC processors</a><br>
+          (729 KB compressed tar file)</p>
+               </blockquote>
+          </li>
+          <li>
+          <p><b>Older pre-compiled DirectoryMark executables:</b> </p>
+               <blockquote>
+            <p><a href="dirmark-exec-license.html">DirectoryMark 1.2.1 running 
+              on Windows NT on Intel processors</a><br>
+            (1,125 KB zip file)</p>
+                  
+            <p><a href="dirmark-exec-license.html">DirectoryMark 1.2 running on 
+              Windows NT on Intel processors</a><br>
+            (1,125 KB zip file)</p>
+               </blockquote>
+            </li>
+         </ul>
+         <blockquote>
+            <blockquote>
+               
+          <p><a href="dirmark-exec-license.html">DirectoryMark 1.2.1 running on 
+            Solaris 8 on SPARC processors</a><br>
+          (1,056 KB compressed tar file)</p>
+          <p><a href="dirmark-exec-license.html">DirectoryMark 1.1 running on 
+            Solaris 2.5.1 on SPARC processors</a><br>
+          (1,056 KB compressed tar file)</p>
+            </blockquote>
+         </blockquote>
+         <ul>
+            
+        <li><a href="dm13runrules.html">DirectoryMark 1.3 Run Rules</a> 
+                    
+        <li><a href="overview.html">Description of the DirectoryMark 1.2 benchmark</a> 
+        <li>DirectoryMark 1.3 <a href="dirmark-source-license.html">source code 
+          license</a>. Please <a href="/company/contactmc.html">contact Mindcraft</a> 
+          if you would like to license the source code. 
+        <li><a href="dirmarkfaq.html">DirectoryMark FAQ</a>
+            
+        <li><a href="dm12runrules.html">DirectoryMark 1.2.1 Run Rules</a> 
+         </ul>
+            <p>If you want to send private email to Mindcraft about
+            DirectoryMark, send it to <a
+            href="mailto:directorymark@mindcraft.com">directorymark@mindcraft.com</a>.</p>
+      </td>
+   </tr>
+   <!-- SEPARATOR - Import to keep this in place, as it spaces document relative to MenuButton table on the left side. -->
+</table>
+<!-- --- START FOOTER --- -->
+
+<table>
+   <!--  ---------------------------------------------- NAVIGATION BAR ----------------------------------------------  -->
+   <tr>
+      <td valign="top" width="600"><!--  ---------------------------------------------- NAVBAR IMAGEMAP ----------------------------------------------  --> <map
+         name="FPMap1">
+         <area href="/index.html" shape="rect" coords="2, 25, 88, 91">
+         <area href="/company/services.html" shape="rect"
+         coords="101, 24, 167, 50">
+         <area href="/benchmarks/index.html" shape="rect"
+         coords="168, 24, 256, 50">
+         <area href="/perfreports/index.html" shape="rect"
+         coords="257, 24, 315, 50">
+         <area href="/priceperf/index.html" shape="rect"
+         coords="316, 24, 445, 50">
+         <area href="/company/index.html" shape="rect" coords="446, 24, 529, 50">
+         <area href="/search.html" shape="rect" coords="101, 61, 167, 87">
+         <area href="/company/contactmc.html" shape="rect"
+         coords="168, 61, 262, 87"></map>
+      <img
+         rectangle="(168,24) (256, 50)  /benchmarks/index.html"
+         src="../images/navbars/navbar-bottom.gif" border="0" usemap="#FPMap1" width="544" height="120"><br>
+      </td>
+   </tr>
+   <!--  ---------------------------------------------- COPYRIGHT INFO ----------------------------------------------  -->
+   <tr>
+      <td><font size="1"><em>Copyright © 1997-2003. Mindcraft, Inc. All rights
+         reserved.<br>
+         Mindcraft is a registered trademark of Mindcraft, Inc.<br>
+         For more information, <a
+         href="http://www.mindcraft.com/company/contactmc.html">contact us</a>
+         at: <a href="mailto:info@mindcraft.com">info@mindcraft.com</a><br>
+         Phone: +1 (408) 395-2404<br>
+         Fax: +1 (408) 395-6324</em></font></td>
+   </tr>
+</table>
+
+&nbsp;</body></html>

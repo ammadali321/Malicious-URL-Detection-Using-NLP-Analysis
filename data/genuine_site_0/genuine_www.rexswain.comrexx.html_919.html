@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<HEAD>
+<TITLE>Rex Swain's REXX Summary</TITLE>
+<META NAME="description"
+CONTENT="Summary of REXX Functions, Operators, Instructions">
+<META NAME="keywords" CONTENT="Rex Swain, Rexford H. Swain,
+REXX, summary, VM, CMS, function, operator, instruction">
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
+<LINK HREF="normal.css" REL="stylesheet" TYPE="text/css">
+</HEAD>
+<BODY>
+<BR>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7510521706485409"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7510521706485409"
+     data-ad-slot="3613028139"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<CENTER>
+<H1>Rex Swain's REXX Summary</H1>
+<H4>VM/ESA Release 2.1, REXX370 Version 4.00</H4>
+<P>Last updated 20 October 1998<BR><FONT SIZE=-1>[Links updated 26 July 2015]</FONT></P>
+</CENTER>
+
+<H3>Contents</H3>
+
+<IMG SRC="rexx.gif" WIDTH=173 HEIGHT=85 ALIGN=right ALT="License Plate: REXX">
+
+<UL>
+<LI><A HREF="#functions"   >Functions</A>
+<LI><A HREF="#syntax"      >Syntax</A>
+<LI><A HREF="#symbols"     >Symbols</A>
+<LI><A HREF="#operators"   >Operators</A>
+<LI><A HREF="#instructions">Instructions</A>
+</UL>
+
+<H3>See Also</H3>
+<UL>
+<LI>My <A HREF="rexxutils.html">REXX Utilities</A>: Various utility programs
+<LI>The <A HREF="http://www.rexxla.org/">REXX Language Association</A>
+<LI>IBM <A HREF="http://publibz.boulder.ibm.com/cgi-bin/bookmgr_OS390/FINDBOOK?filter=rexx">REXX Manuals</A> on-line
+<LI>IBM's <A HREF="http://www-306.ibm.com/software/awdtools/rexx/">REXX Language page</A>
+<P>
+<LI>Mansfield Software's KEDIT:
+<A HREF="http://www.kedit.com">http://www.kedit.com</A><BR>
+A very nice XEDIT-like editor for Windows that uses REXX as a macro language
+<P>
+<LI>This summary is also available as a Microsoft Word for Windows 95 (version 7.0)
+document <A HREF="rexx.doc">rexx.doc</A>,
+which will look better when printed. It's formatted for a LaserJet printer,
+seven 8&#189;&#215;11" pages.
+</UL>
+
+<H3>Other Summaries and Demos</H3>
+<UL>
+<LI>See my <A HREF="index.html">home page</A> for other summaries and demos:
+APL, REXX, KEDIT, XEDIT, Perl, HTML, RGB Colors, HTTP Cookies, Email Forms,
+CGI Environment Variables, Server Side Includes, etc...
+</UL>
+
+<P><HR NOSHADE SIZE=4></P>
+
+<A NAME=functions><H2>Functions</H2></A>
+<PRE>
+bit = <B>ABBREV</B>(information,info[,minlength])     Abbreviation match
+num = <B>ABS</B>(number)                              Absolute value
+str = <B>ADDRESS</B>()                                Query current environment
+num = <B>ARG</B>()                                    Number of arguments
+val = <B>ARG</B>(n)                                   Nth argument
+bit = <B>ARG</B>(n,'Exists')                          Does nth argument exist?
+bit = <B>ARG</B>(n,'Omitted')                         Was nth argument omitted?
+str = <B>BITAND</B>(str1[,[str2][,pad]])              Logically and strings
+str = <B>BITOR</B>(str1[,[str2][,pad]])               Logically or strings
+str = <B>BITXOR</B>(str1[,[str2][,pad]])              Logically xor strings
+str = <B>B2X</B>(str)                                 Binary to hex (0F=00001111)
+str = <B>CENTER</B>(str,length[,pad])                 Center string
+str = <B>CENTRE</B>(str,length[,pad])                 CENTER for Brits
+str = <B>CHARIN</B>([name][,[start][,length]])        Read chars from input stream
+num = <B>CHAROUT</B>([name][,[start][,length]])       Write chars to output stream
+bit = <B>CHARS</B>([name])                            Any chars in input stream?
+bit = <B>CMSFLAG</B>(flag)                            Query SET ... (see <A HREF="#cmsflag">CMSFLAG</A>)
+cix = <B>COMPARE</B>(str1,str2[,pad])                 0 or first mismatch
+str = <B>CONDITION</B>('Condition')                   Name of trapped condition
+str = <B>CONDITION</B>(['Instruction'])               CALL or SIGNAL
+str = <B>CONDITION</B>('Description')                 Description or null
+str = <B>CONDITION</B>('Status')                      ON, OFF, or DELAY
+str = <B>COPIES</B>(str,n)                            n copies of entire string
+rc  = <B>CSL</B>('rtnname retcode parms')             Callable services library
+num = <B>C2D</B>(str[,n])                             Character to decimal
+str = <B>C2X</B>(str)                                 Character to hexadecimal
+str = <B>DATATYPE</B>(str)                            NUM or CHAR
+bit = <B>DATATYPE</B>(str,type)                       Matches type? (see <A HREF="#datatype">DATATYPE</A>)
+str = <B>DATE</B>()                                   Current date (dd Mmm yyyy)
+str = <B>DATE</B>(dopt)                               Date info (see <A HREF="#date">DATE</A>)
+... = <B>DB...</B>(str,...)                           13 DBCS support functions
+str = <B>DELSTR</B>(str,n)                            Delete cix from n to end
+str = <B>DELSTR</B>(str,n,length)                     Delete cix n for length
+str = <B>DELWORD</B>(str,n)                           Delete wix from n to end
+str = <B>DELWORD</B>(str,n,length)                    Delete wix n for length
+str = <B>DIAG</B>(hex[?][,data][,data]...)            ? displays diagnostics
+str = <B>DIAGRC</B>(hex[?][,data][,data]...)          Also returns CP codes
+str = <B>D2C</B>(wholenumber[,n])                     Decimal to character
+str = <B>D2X</B>(wholenumber[,n])                     Decimal to hexadecimal
+str = <B>ERRORTEXT</B>(n)                             Error message text (0-99)
+num = <B>EXTERNALS</B>()                              See PARSE EXTERNAL
+wix = <B>FIND</B>(haystack,needle)                    0=not found; prefer WORDPOS
+str = <B>FORM</B>()                                   Query NUMERIC FORM
+str = <B>FORMAT</B>(num[,[before][,[after]]])         Around decimal place
+str = <B>FUZZ</B>()                                   Query NUMERIC FUZZ
+cix = <B>INDEX</B>(haystack,needle[,start])           Default start=1; prefer POS
+str = <B>INSERT</B>(new,str[,[n][,[length][,pad]]])   Insert after cix n
+str = <B>JUSTIFY</B>(str,length[,pad])                Right-left justify
+cix = <B>LASTPOS</B>(needle,haystack[,start])         POS from right to left
+str = <B>LEFT</B>(str,length[,pad])                   Take chars from left
+num = <B>LENGTH</B>(str)                              Shape (in chars)
+str = <B>LINEIN</B>([name][,[line][,count]])          Read line from input stream
+bit = <B>LINEOUT</B>([name][,[string][,line]])        Write line to output stream
+num = <B>LINES</B>([name])                            Input stream lines remaining
+num = <B>LINESIZE</B>()                               From CP TERM LINESIZE
+num = <B>MAX</B>(num[,num...])                        Maximum (up to 10 numbers)
+num = <B>MIN</B>(num[,num...])                        Minimum (up to 10 numbers)
+str = <B>OVERLAY</B>(new,str[,[n][,[length][,pad]]])  Overlay after cix n
+cix = <B>POS</B>(needle,haystack[,startcix])          0=not found
+num = <B>QUEUED</B>()                                 Lines in stack
+num = <B>RANDOM</B>()                                 Random whole number 0-999
+num = <B>RANDOM</B>([min][,[max][,seed]])             Random whole number in range
+str = <B>REVERSE</B>(str)                             Rotate string
+str = <B>RIGHT</B>(str,length[,pad])                  Take chars from right
+num = <B>SIGN</B>(num)                                Signum: -1, 0, or 1
+num = <B>SOURCELINE</B>()                             Lines in source file
+str = <B>SOURCELINE</B>(n)                            Nth line from file
+str = <B>SPACE</B>(str[,[n][,pad]])                   Normalize spaces; def n=1
+hex = <B>STORAGE</B>()                                Virtual storage size in hex
+hex = <B>STORAGE</B>(address,length)                  Read storage
+hex = <B>STORAGE</B>(address,length,data)             Write storage
+str = <B>STREAM</B>(name[,'State'])                   State of stream
+str = <B>STREAM</B>(name,'Description')               State of stream, more detail
+str = <B>STREAM</B>(name,'Command',cmd)               Apply command to stream
+str = <B>STRIP</B>(str[,[option][,char]])             L, T, or default=Both
+str = <B>SUBSTR</B>(str,firstcix[,[length][,pad]])    Substring
+str = <B>SUBWORD</B>(str,firstwix[,length])           Def length=rest of string
+str = <B>SYMBOL</B>(name)                             State: BAD, VAR, or LIT
+str = <B>TIME</B>()                                   Current time (hh:mm:ss)
+str = <B>TIME</B>(topt)                               Time info (see <A HREF="#time">TIME</A>)
+str = <B>TRACE</B>()                                  Query trace actions
+str = <B>TRACE</B>(option)                            Alter trace, return prev
+str = <B>TRANSLATE</B>(str[,[new][,[old][,pad]]])     Map old to new
+num = <B>TRUNC</B>(num[,n])                           Truncate to n decimals
+str = <B>USERID</B>()                                 Query logon userid
+val = <B>VALUE</B>(name)                              Query value of name
+val = <B>VALUE</B>(name,val)                          Change value of name
+val = <B>VALUE</B>(name[,val],selector [groupname])   GLOBAL/LASTING/SESSION var
+cix = <B>VERIFY</B>(str,okchars[,['Nomatch'],start])  First bad cix; 0=all ok
+cix = <B>VERIFY</B>(str,okchars,'Match'[,start])      First good cix; 0=none
+str = <B>WORD</B>(str,wix)                            Extract nth word
+cix = <B>WORDINDEX</B>(str,wix)                       Char pos of nth word
+num = <B>WORDLENGTH</B>(str,wix)                      Chars in nth word
+wix = <B>WORDPOS</B>(needle,haystack[,start])         Find word(s)
+<HR SIZE=1>num : Number
+str : String
+bit : 0 or 1
+cix : Character index
+wix : Word index
+val : Value (num or str)
+<HR SIZE=1></PRE>
+
+<UL>
+
+<A NAME=cmsflag><H3>CMSFLAG(flag)</H3></A>
+
+<PRE>
+flag: ABBREV     1=SET ABBREV ON, 0=SET ABBREV OFF
+      AUTOREAD   1=SET AUTOREAD ON, 0=SET AUTOREAD OFF
+      CMSTYPE    1=RT or SET CMSTYPE RT, 0=HT or SET CMSTYPE HT
+      DOS        1=SET DOS ON, 0=SET DOS OFF
+      EXECTRAC   1=TS or SET EXECTRAC ON, 0=TE or SET EXECTRAC OFF
+      IMPCP      1=SET IMPCP ON, 0=SET IMPCP OFF
+      IMPEX      1=SET IMPEX ON, 0=SET IMPEX OFF
+      PROTECT    1=SET PROTECT ON, 0=SET PROTECT OFF
+      RELPAGE    1=SET RELPAGE ON, 0=SET RELPAGE OFF
+      SUBSET     1=SUBSET, 0=RETURNed
+      XA         1=Running in XA or XC virtual machine, 0=370
+      XC         1=Running in XC virtual machine, 0=XA or 370
+      370        1=Running in 370 virtual machine, 0=XA or XC
+</PRE>
+
+<A NAME=datatype><H3>DATATYPE(str,type)</H3></A>
+
+<PRE>
+type: Alphanumeric   Alphanumeric (a-z, A-Z, 0-9)
+      Binary         Binary (0-1)
+      C              Mixed SBCS/DBCS string
+      Dbcs           DBCS-only string enclosed by SO and SI bytes
+      Lowercase      Lowercase (a-z)
+      Mixed case     Mixed case (a-z, A-Z)
+      Number         Number
+      Symbol         Symbol (valid REXX name)
+      Uppercase      Uppercase (A-Z)
+      Whole number   Whole number
+      heXadecimal    Hexadecimal (a-f, A-F, 0-9)
+</PRE>
+
+<A NAME=date><H3>DATE(dopt)</H3></A>
+
+<PRE>
+dopt: Base       Whole days since 1 Jan 0001 (//7 for 0=Monday, 6=Sunday)
+      Century    Days so far in this century
+      Days       Days so far in this year
+      European   dd/mm/yy
+      Julian     yyddd
+      Month      Month
+      Normal     dd Mon yyyy
+      Ordered    yy/mm/dd
+      Standard   yyyymmdd
+      Usa        mm/dd/yy
+      Weekday    Tuesday
+</PRE>
+
+<A NAME=time><H3>TIME(topt)</H3></A>
+
+<PRE>
+topt: Civil      hh:mmxx (1-12, 00-59, am/pm)
+      Elapsed    sssssssss.uuuuuu (seconds, microseconds)
+      Hours      Hours since midnight
+      Long       hh:mm:ss.uuuuuu
+      Minutes    Minutes since midnight
+      Normal     hh:mm:ss
+      Reset      Returns elapsed time, restarts timer
+      Seconds    Seconds since midnight
+</PRE>
+
+</UL>
+
+<A NAME=syntax><H2>Syntax</H2></A>
+
+<PRE>
+/* ... */   Comment (may span lines, may be nested)
+,           Line continuation
+;           Statement separator
+v.i         Compound variable
+'0f'x       Hexadecimal notation
+'0010'b     Binary notation
+</PRE>
+
+<A NAME=symbols><H2>Symbols</H2></A>
+
+<PRE>
+May use characters: A-Z, a-z, 0-9, and @ # $ \ . ! ? _
+Special variables: <B>RC</B>, <B>RESULT</B>, <B>SIGL</B>
+</PRE>
+
+<A NAME=operators><H2>Operators</H2></A>
+
+Operators are grouped by precedence (highest to lowest) below.<BR>
+Operators of equal precedence are evaluated from left to right.
+
+<PRE>
+<HR SIZE=1>\  &#172;                Logical NOT (prefix)
++                   Numeric (prefix); same as 0+num
+-                   Negate (prefix); same as 0-num
+<HR SIZE=1>**                  Raise to (whole) power
+<HR SIZE=1>*                   Multiply
+/                   Divide
+%                   Integer divide: divide and return integer part
+//                  Remainder: divide and return remainder
+                      (not modulo; result may be negative)
+<HR SIZE=1>+                   Add
+-                   Subtract
+<HR SIZE=1>(abuttal)  ||       Concatenate without blank
+(blank)             Concatenate with blank
+<HR SIZE=1>==                  Strictly equal (identical)
+&#172;==  /==  \==       Not strictly equal
+&gt;&gt;                  Strictly greater than
+&lt;&lt;                  Strictly less than
+&gt;&gt;=  &#172;&lt;&lt;  \&lt;&lt;       Strictly greater than or equal to; not less than
+&lt;&lt;=  &#172;&gt;&gt;  \&gt;&gt;       Strictly less than or equal to; not greater than
+=                   Equal (numerically or when padded, etc.)
+&#172;=  /=  \=  &gt;&lt;  &lt;&gt;  Not equal; greater than or less than
+&gt;                   Greater than
+&lt;                   Less than
+&gt;=  &#172;&lt;  \&lt;          Greater than or equal to; not less than
+&lt;=  &#172;&gt;  \&gt;          Less than or equal to; not greater than
+<HR SIZE=1>&amp;                   AND
+<HR SIZE=1>|                   Inclusive OR (either, or both)
+&amp;&amp;                  Exclusive OR (either, but not both)
+<HR SIZE=1></PRE>
+
+<A NAME=instructions><H2>Instructions</H2></A>
+
+<PRE>
+<B>ADDRESS</B>
+        Permanently toggle destination of commands to last environment
+<B>ADDRESS</B> environment
+        CMS       Full command resolution; default for EXECs
+        CMSMIXED  Same as CMS but no uppercase translation
+        COMMAND   Must use EXEC and CP prefixes; most efficient
+        ''        Same as COMMAND
+        XEDIT     Route commands to system editor
+        Permanently change destination of commands
+<B>ADDRESS VALUE</B> envexpression
+        Permanently change destination of commands
+<B>ADDRESS</B> environment cmdexpression
+        Specify destination for just this one command
+<B>ARG</B> [template]
+        Same as PARSE UPPER ARG [template]
+<B>CALL</B> name [expression [,expression]]...  (up to 20 expressions)
+        If name in quotes, only built-in or external function called
+        Optional result returned in special variable RESULT
+<B>CALL ON</B> condition [NAME trapname]
+        ERROR     Host command returns non-zero rc
+                    (or just positive rc if ON FAILURE too)
+        FAILURE   Host command returns negative return code
+        HALT      Attempt to interrupt (such as HI)
+        NOTREADY  Error during input or output operation
+        Call on specified condition; variable SIGL contains line number
+<B>CALL OFF</B> condition
+        Cancel CALL ON trap
+<B>DO</B> [ name = expr [TO expr] [BY expr] [FOR expr] ]  [ WHILE expr ]
+   [ FOREVER                                    ]  [ UNTIL expr ]
+   [ expr                                       ]
+  ...instructions...
+  END [symbol]
+        Repeated execution of a group of instructions
+<B>DROP</B> name|(namelist) [name|(namelist) ...]
+        Unassign named variables and/or list of vars contained in variable
+<B>EXIT</B> [expression]
+        Unconditionally leave; optionally return data
+<B>IF</B> expression THEN instruction [ELSE instruction]
+        Conditional execution
+<B>INTERPRET</B> expression
+        Execute expression as though it were a line in input file
+<B>ITERATE</B> [name]
+        Steps current or named do loop
+<B>LEAVE</B> [name]
+        Ends current or named do loop
+<B>NOP</B>
+        Dummy instruction
+<B>NUMERIC DIGITS</B> [expression]
+        Number of significant digits (default=9; can be arbitrarily high!)
+<B>NUMERIC FORM</B> SCIENTIFIC|ENGINEERING|VALUE expression
+        Exponential notation format; default=SCIENTIFIC
+<B>NUMERIC FUZZ</B> expression
+        Digits, at full precision, to ignore during comparisons (default=0)
+<B>OPTIONS</B> 'ETMODE'    Check for valid DBCS strings
+        'NOETMODE'  Don't check for valid DBCS strings (default)
+        'EXMODE'    Handle DBCS data on a logical character basis
+        'NOEXMODE'  All string data handled on a byte basis (default)
+<B>PARSE</B> [UPPER] ARG [template]      Program/subroutine/function parameters
+              EXTERNAL            Next string from terminal input buffer
+              LINEIN              Next line from default input stream
+              NUMERIC             Current DIGITS FUZZ FORM settings
+              PULL                Next string from program stack
+              SOURCE              Source of program being executed
+              VALUE [expr] WITH   Parse result of expression
+              VAR name            Parse named variable
+              VERSION             Query REXX version
+        Assign data to one or more variables
+<B>PROCEDURE</B> [EXPOSE name|(namelist) [name|(namelist) ...]]
+        Protect (localize) variables in internal function or subroutine
+        By default, all variables are global
+<B>PULL</B> [template]
+        Same as PARSE UPPER PULL
+<B>PUSH</B> [expression]
+        Stack resulting string LIFO in program stack
+<B>QUEUE</B> [expression]
+        Stack resulting string FIFO in program stack
+<B>RETURN</B> [expression]
+        Return control; like EXIT if no internal routine active
+        Returns result from function; sets RESULT variable from subroutine
+<B>SAY</B> [expression]
+        Displays (TYPEs) a line to default output stream (the terminal)
+<B>SELECT</B>
+  WHEN expression THEN instruction
+  WHEN expression THEN instruction
+  ...etc...
+  OTHERWISE instruction
+  END
+        Case-conditional execution
+        Only the first matching case is executed
+<B>SIGNAL</B> label
+        Pass control to label
+<B>SIGNAL</B> [VALUE] expression
+        Pass control to label evaluated from expression
+<B>SIGNAL ON</B> condition [NAME trapname]
+          ERROR     Host command returns non-zero rc
+                      (or just positive rc if ON FAILURE too)
+          FAILURE   Host command returns negative return code
+          HALT      Attempt to interrupt (such as HI)
+          NOTREADY  Error during input or output operation
+          NOVALUE   Uninitialized variable used
+          SYNTAX    Interpretation syntax error
+        Signal on specified condition; variable SIGL contains line number
+<B>SIGNAL OFF</B> condition
+        Cancel SIGNAL ON trap
+<B>TRACE</B> [prefix] [letter]
+   prefix:
+      ?=Toggle pause for interactive debug input after trace occurs
+      !=Toggle inhibit host command execution (try TRACE !C)
+   letter:
+      A=All: all clauses traced (displayed) before execution
+      C=Commands: all host commands traced, non-zero rc's displayed
+      E=Error: host commands with non-zero rc traced after execution
+      F=Failure: host commands with negative rc traced after execution
+      I=Intermediates: All + intermediate results
+      L=Labels: display labels as passed during execution
+      N=Normal=Negative: host cmds with negative rc traced after execution
+      O=Off, or no argument: nothing traced; prefix actions off
+      R=Results: final (not intermediate) results, plus PULL, ARG, PARSE
+      S=Scan: trace remaining clauses without executing
+<B>TRACE</B> [number]
+   n=skip next n interactive debug pauses
+  -n=skip next n tracing displays
+<B>UPPER</B> variable [variable ...]
+   Translate contents of named variables to uppercase
+<B>PARSE SOURCE</B> s.1 s.2 s.3 s.4 s.5 s.6 s.7
+   s.1 = 'CMS'
+   s.2 = 'COMMAND'|'FUNCTION'|'SUBROUTINE'
+   s.3 = Filename
+   s.4 = Filetype
+   s.5 = Filemode
+   s.6 = Name as invoked (possibly different than s.3 if synonym used)
+   s.7 = Default ADDRESS for commands
+<B>TRACE</B> Messages
+   *-*  Source data in program
+   +++  Trace message
+   &gt;&gt;&gt;  Result of expression, parsed value, or returned from subroutine
+   &gt;.&gt;  Value assigned to placeholder during parsing
+   during TRACE I:
+   &gt;C&gt;  Name of compound variable
+   &gt;F&gt;  Result of function call
+   &gt;L&gt;  Literal (string or uninitialize variable)
+   &gt;O&gt;  Result of operation on two terms
+   &gt;P&gt;  Result of prefix operation
+   &gt;V&gt;  Contents of a variable
+</PRE>
+
+<P><HR NOSHADE SIZE=4></P>
+
+<CENTER>
+
+<P>You are visitor
+<IMG SRC="/cgi-bin/countrex.cgi?rexx" ALIGN=absmiddle WIDTH=90 HEIGHT=20 ALT="[Odometer]">
+since 8 April 1996</P>
+
+<P><FONT SIZE=-1>Copyright &copy; 1994-1998 Rex Swain<BR>
+E-mail <A HREF="mailto:rex@rexswain.com">rex@rexswain.com</A>,
+Web <A HREF="https://www.rexswain.com/index.html">www.rexswain.com</A><BR>
+Permission granted to distribute unmodified copies</FONT></P>
+
+</CENTER>
+
+</BODY>
+</HTML>

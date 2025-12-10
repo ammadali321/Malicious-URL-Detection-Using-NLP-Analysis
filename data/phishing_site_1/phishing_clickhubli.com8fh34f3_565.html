@@ -1,0 +1,588 @@
+<html lang="en" xml:lang="en"><head><meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+
+
+<meta charset="utf-8">
+
+<title>Clickhubli</title>
+
+
+
+<!-- Favicons Icon -->
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+<!-- Mobile Specific -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!--<link rel="stylesheet" href="css/owl.theme.css" type="text/css">-->
+<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+
+
+
+
+
+<!-- Google Fonts -->
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body>
+<div class="page">
+  <header class="header-container">
+    <div class="header container">
+      <div class="row">
+        <div class="col-md-3 col-md-offset-7 col-sm-12" style="position:absolute;">
+          <!--<script>
+
+			(function() {
+
+				var cx = '012097845007568636484:fix-y66yux8';
+
+				var gcse = document.createElement('script');
+
+				gcse.type = 'text/javascript';
+
+				gcse.async = true;
+
+				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+
+				var s = document.getElementsByTagName('script')[0];
+
+				s.parentNode.insertBefore(gcse, s);
+
+			})();
+
+        </script>
+
+        <gcse:search></gcse:search>-->
+        </div>
+        <!--<div class="col-md-5 col-sm-5 col-xs-12 social-mid hidden-xs">
+
+
+
+             <div class="welcome-msg"><i class="glyphicon glyphicon-envelope"></i> Email : clickhubli@gmail.com </div>
+
+
+
+        </div>-->
+        <div class="col-md-12 col-sm-12  hidden-xs" style="margin-top:4px;">
+          <div class="social">
+            <ul>
+              <li class="fb"><a href="https://www.facebook.com/ClickHubliIndia"></a></li>
+              <li class="tw"><a href="https://twitter.com/clickhubli"></a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/+Clickhubli/posts"></a></li>
+              <li class="linkedin"><a href="#"></a></li>
+              <img src="comodo_secure_seal_76x26_transp.png">
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5 col-sm-4 col-md-5 col-md-offset-2 col-sm-offset-2 col-xs-offset-2"> <a class="logo " title="Clickhubli" href="index.html"><img alt="Clickhubli" src="images/logo1.png" class="img-responsive " style="background:none; border:none;"></a> </div>
+        <div class="col-lg-2 col-sm-2 col-md-2 col-xs-12 hidden-sm hidden-md hidden-lg">
+          <h4 class="h4-color"> Send Flowers, Cakes, Roses, Birthday Gifts, Anniversary Gifts All over India</h4>
+        </div>
+        <div class="col-lg-2 col-sm-2 col-md-2 col-xs-12 track social-mid"> <a data-toggle="modal" href="#myModal" class="btn btn-warning move"><strong>Track Order</strong></a> </div>
+        <div class="col-lg-3 col-sm-4 col-md-3 col-xs-12 call-padd social-mid">
+          <p><span class="call"><i class="glyphicon glyphicon-phone"></i> Call Us : <a href="tel:+91-84978-08999">+91-84978-08999</a><br>
+            <a href="tel:+91-92432-84333"> +91-92432-84333</a><br>
+            <a href="tel:+91-88677-73096"> +91-88677-73096</a></span><br>
+            <span style="color:#A9421A; font-weight:700;"> <i class="glyphicon glyphicon-envelope"></i> Email : <a href="mailto:clickhubli@gmail.com">clickhubli@gmail.com </a></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h4 class="modal-title">Track Your Order</h4>
+          </div>
+          <form class="form-horizontal" name="form1">
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="col-sm-4 control-label" id="ord">Order No</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="orderno" placeholder="Order No">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" id="em">Email ID</label>
+                <div class="col-sm-4">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label" id="ph">Phone No</label>
+                <div class="col-sm-4">
+                  <input type="number" class="form-control" id="phno" placeholder="Ph No">
+                </div>
+              </div>
+              <div id="loginErrorBox" style="padding-bottom: 38px; display: none;"> <strong><span id="lgnErorMsg"></span></strong> </div>
+            </div>
+            <div class="modal-footer"> <a href="#" data-dismiss="modal" class="btn">Close</a>
+              <input type="button" name="mail" value="Submit" onclick="return test();" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Top Header-->
+  </header>
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <div class="hidden-desktop" id="mobile-menu">
+          <ul class="navmenu">
+            <li>
+              <div class="menutop">
+                <div class="toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div>
+                <h2> Menu</h2>
+              </div>
+              <ul style="display:none;" class="submenu">
+                <li>
+                  <ul class="topnav">
+                    <li id="nav-home" class="level0 parent drop-menu"><a href="index.html"><span>Home</span></a></li>
+                    <li id="nav-home" class="level0 parent drop-menu"><a href="about_us.html"><span>About Us</span></a></li>
+                    <li class="level0 nav-6 level-top first parent"> <a class="level-top" href="#"><span>Products</span> </a><em>+</em>
+                      <ul class="level0">
+                        <li class="level2 nav-6-1-1"> <a href="flowersnew.htm"><span>Flowers</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="exotics.htm"><span>Exotic Flowers</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="glass-vase-arrangements.html"><span>Flowers in Vase</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="basket-arrangements.html"><span>Basket Arrangements</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="roses-bunches.htm"><span>Roses</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="cakecc.html"><span>Cakes</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="products.htm"><span>Kasuti Sarees</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="combo.htm"><span>Gift Hampers for All</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="buymangoesonline.html"><span>Alphonso Mangoes</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="sweets.htm"><span>Sweets</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="chocolates.htm"><span>Chocolates</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="furitpg.htm"><span>Fruits</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="dryfruit.htm"><span>Dry Fruits</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="archies_perfumes.html"><span>Perfumes</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="jewel.html"><span>Pearls-Jewellery</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="coinscc.htm"><span>Silver Coins</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="products.htm"><span>Embroidered sarees </span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="kasuti-embroidarydesigns.htm"><span>Kasuti Design</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="salwars_gifts.htm"><span>Cotton Salwars</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="salwars.htm"><span>Salwars</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="fancy-sarees.htm"><span>Fancy Sarees</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="valentine-gift-hampers.htm"><span>Gift Hampers</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="games.htm"><span>Games &amp; Toys</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="watches_men.htm"><span>Watches for Men</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="watches_women.htm"><span>Watches for Women</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="fastrack-watches-boys.html"><span>Fastrack watches for Men</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="fastrack-watches-girls.html"><span>Fastrack watches for Women</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="watchespair.html"><span>Watches for Pair</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="midnight_delivery.html"><span>Midnight Delivery</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="cosmatic_hampers.html"><span>Cosmatic Hampers</span></a> </li>
+                      </ul>
+                    </li>
+                    <li class="level0 nav-6 level-top first parent"> <a class="level-top" href="#"><span>Shop By Occasion</span> </a><em>+</em>
+                      <ul class="level0">
+                        <li><a href="birthday.htm">Birthday</a></li>
+                        <li><a href="valentine-gift-hampers1.htm">Anniversary</a></li>
+                        <li><a href="newborn.htm">New Born</a></li>
+                        <li><a href="wedding.htm">Wedding</a></li>
+                        <li><a href="rakhee1.htm">Rakhi</a></li>
+                        <li><a href="Condolence.htm">Condolence</a></li>
+                        <li><a href="father.html">Father's Day</a></li>
+                        <li><a href="mothers-day.htm">Mother's Day</a></li>
+                        <li class="level2 nav-2-1-1 first"><a href="christmas_flowers_gifts.htm"><span>Christmas</span></a></li>
+                        <li class="level2 nav-2-1-2"><a href="newyear_gifts_flowers.html"><span>New Year</span></a></li>
+                        <li class="level2 nav-2-1-3"><a href="sankranti_gifts_flowers.html"><span>Sankranti</span></a></li>
+                        <li class="level2 nav-2-1-4"><a href="valentines-day.html"><span>Valentine's Day</span></a></li>
+                        <li class="level2 first"><a href="parent.htm"><span>Parent's Day</span></a></li>
+                        <li class="level2 nav-1-1-2"><a href="diwali.htm"><span>Diwali</span></a></li>
+                        <li class="level2 nav-1-1-3"><a href="ramzan.htm"><span>Ramzan</span></a></li>
+                        <li class="level2 nav-1-1-4"><a href="friendship.htm"><span>Friendship Day</span></a></li>
+                      </ul>
+                    </li>
+                    <li class="level0 nav-6 level-top first parent"> <a class="level-top" href="#"><span>Valentines Day</span> </a><em>+</em>
+                      <ul class="level0">
+                        <li class="level1 first"><a href="valentines-day.html"><span>Valentine's Day Gifts</span></a></li>
+                        <li class="level1 first"><a href="valentine-gifts.html"><span>Valentine's Combo Gifts</span></a></li>
+                        <li class="level1 nav-10-2"> <a href="valentine-day-roses.html"> <span>Valentine Roses</span> </a> </li>
+                        <li class="level1"> <a href="valentine-gift-hampers.htm"> <span>Valentine Gift Hamper1</span> </a> </li>
+                        <li class="level1"> <a href="valentine-gift-hampers1.htm"> <span>Valentine Gift Hamper2</span> </a> </li>
+                        <li class="level1 nav-10-3"> <a href="valentine-cakes.html"> <span>Valentine Cakes</span> </a> </li>
+                        <li class="level1 nav-10-4"> <a href="valentine-chocolates.html"> <span>Valentine Chocolate</span> </a> </li>
+                        <li class="level1 nav-10-4"> <a href="valentine-dryfruits.html"> <span>Valentine Dry Fruits</span> </a> </li>
+                        <li class="level1"> <a href="valentine-sweets.html"> <span>Valentine Sweets</span> </a> </li>
+                      </ul>
+                    </li>
+                    <li class="level0 nav-6 level-top first parent"> <a class="level-top" href="#"><span>Shop By Relation</span> </a><em>+</em>
+                      <ul class="level0">
+                        <li class="level1 first"><a href="For_him_gifts.htm"><span>For Him</span></a></li>
+                        <li class="level1 nav-10-2"> <a href="For_her_gifts.htm"> <span>For Her</span> </a> </li>
+                        <li class="level1 nav-10-3"> <a href="forkids.htm"> <span>For Kids</span> </a> </li>
+                      </ul>
+                    </li>
+                    <li class="level0 nav-8 level-top"> <a href="http://www.clickhubli.com/kasuti" class="level-top"> <span>Design Sarees</span> </a> </li>
+                    <li class="level0 nav-8 level-top"> <a href="deliverycities.html" class="level-top"> <span>Delivery Cities</span> </a> </li>
+                    <li class="level0 nav-8 level-top"> <a href="contact_us.php" class="level-top"> <span>Contact</span> </a> </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--End mobile-menu -->
+        <ul id="nav" class="hidden-xs">
+          <li id="nav-home" class="level0 parent drop-menu"><a href="index.html"><span>Home</span></a></li>
+          <li><a href="about_us.html"><span>About Us</span></a></li>
+          <li class="level0 parent drop-menu"><a href="javascript:void(0);" style="cursor:default"><span>Valentines Day</span> </a>
+            <ul style="display: none;" class="level1">
+              <li class="level1 first"><a href="valentines-day.html"><span>Valentine's Day Gifts</span></a></li>
+              <li class="level1 first"><a href="valentine-gifts.html"><span>Valentine's Combo Gifts</span></a></li>
+              <li class="level1 nav-10-2"> <a href="valentine-day-roses.html"> <span>Valentine Roses</span> </a> </li>
+              <li class="level1"> <a href="valentine-gift-hampers.htm"> <span>Valentine Gift Hamper1</span> </a> </li>
+              <li class="level1"> <a href="valentine-gift-hampers1.htm"> <span>Valentine Gift Hamper2</span> </a> </li>
+              <li class="level1 nav-10-3"> <a href="valentine-cakes.html"> <span>Valentine Cakes</span> </a> </li>
+              <li class="level1 nav-10-4"> <a href="valentine-chocolates.html"> <span>Valentine Chocolate</span> </a> </li>
+              <li class="level1 nav-10-4"> <a href="valentine-dryfruits.html"> <span>Valentine Dry Fruits</span> </a> </li>
+              <li class="level1"> <a href="valentine-sweets.html"> <span>Valentine Sweets</span> </a> </li>
+            </ul>
+          </li>
+          <li class="level0 nav-6 level-top parent"> <a href="javascript:void(0);" class="level-top" style="cursor:default"> <span>Shop By Occasion</span> </a>
+            <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
+              <div class="level0-wrapper2">
+                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
+                  <ul class="level0">
+                    <li class="level1 nav-7-1 first parent item">
+                      <ul class="level1">
+                        <li><a href="birthday.htm">Birthday</a></li>
+                        <li><a href="anniversary.htm">Anniversary</a></li>
+                        <li><a href="newborn.htm">New Born</a></li>
+                        <li><a href="wedding.htm">Wedding</a></li>
+                      </ul>
+                    </li>
+                    <li class="level1 nav-7-3 parent item">
+                      <ul class="level1">
+                        <li><a href="rakhee1.htm">Rakhi</a></li>
+                        <li><a href="Condolence.htm">Condolence</a></li>
+                        <li><a href="father.html">Father's Day</a></li>
+                        <li><a href="mothers-day.htm">Mother's Day</a></li>
+                      </ul>
+                    </li>
+                    <li class="level1 nav-7-4 parent item">
+                      <ul class="level1">
+                        <li class="level2 nav-2-1-1 first"><a href="christmas_flowers_gifts.htm"><span>Christmas</span></a></li>
+                        <li class="level2 nav-2-1-2"><a href="newyear_gifts_flowers.html"><span>New Year</span></a></li>
+                        <li class="level2 nav-2-1-3"><a href="sankranti_gifts_flowers.html"><span>Sankranti</span></a></li>
+                        <li class="level2 nav-2-1-4"><a href="valentines-day.html"><span>Valentine's Day</span></a></li>
+                      </ul>
+                    </li>
+                    <li class="level1 nav-7-4 last parent item">
+                      <ul class="level1">
+                        <li class="level2 first"><a href="parent.htm"><span>Parent's Day</span></a></li>
+                        <li class="level2 nav-1-1-2"><a href="diwali.htm"><span>Diwali</span></a></li>
+                        <li class="level2 nav-1-1-3"><a href="ramzan.htm"><span>Ramzan</span></a></li>
+                        <li class="level2 nav-1-1-4"><a href="friendship.htm"><span>Friendship Day</span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="fur-des">
+                    <p>Gifting is an Art and particularly gifting to loved ones has an emotional touch. Celebrating happy times by delivering fresh flowers &amp; fabulous gifts to your loved ones with Clickhubli.com.</p>
+                  </div>
+                </div>
+                <div class="nav-block nav-block-right std grid12-4">
+                  <div class="static-img-block"><a href="#"><img src="images/navbar/flowers.webp" alt="Responsive"></a></div>
+                  <a title="Shop collection now" href="#" class="btn-button-st">Shop collection now</a> </div>
+              </div>
+            </div>
+          </li>
+          <li class="level0 nav-5 level-top first"> <a class="level-top" href="javascript:void(0);" style="cursor:default"> <span>Products</span> </a>
+            <div style="display: none; left: 0px;" class="level0-wrapper dropdown-6col">
+              <div class="level0-wrapper2">
+                <div class="nav-block nav-block-center">
+                  <ul class="level0">
+                    <li class="level1 nav-6-1 parent item">
+                      <!--sub sub category-->
+                      <ul class="level1">
+                        <li class="level2 nav-6-1-1"> <a href="flowersnew.htm"><span>Flowers</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="exotics.htm"><span>Exotic Flowers</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="glass-vase-arrangements.html"><span>Flowers in Vase</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="basket-arrangements.html"><span>Basket Arrangements</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="roses-bunches.htm"><span>Roses</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="cakecc.html"><span>Cakes</span></a> </li>
+                      </ul>
+                      <!--level1-->
+                      <!--sub sub category-->
+                    </li>
+                    <li class="level1 nav-6-1 parent item">
+                      <ul class="level1">
+                        <li class="level2 nav-6-1-1"> <a href="sweets.htm"><span>Sweets</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="chocolates.htm"><span>Chocolates</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="furitpg.htm"><span>Fruits</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="dryfruit.htm"><span>Dry Fruits</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="archies_perfumes.html"><span>Perfumes</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="jewel.html"><span>Pearls-Jewellery</span></a> </li>
+                      </ul>
+                      <!--level1-->
+                      <!--sub sub category-->
+                    </li>
+                    <!--level1 nav-6-1 parent item-->
+                    <li class="level1 nav-6-1 parent item">
+                      <ul class="level1">
+                        <li class="level2 nav-6-1-1"> <a href="coinscc.htm"><span>Silver Coins</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="products.htm"><span>Embroidered Sarees</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="kasuti-embroidarydesigns.htm"><span>Kasuti Design</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="salwars_gifts.htm"><span>Cotton Salwars</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="salwars.htm"><span>Salwars</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="fancy-sarees.htm"><span>Fancy Sarees</span></a> </li>
+                      </ul>
+                      <!--level1-->
+                      <!--sub sub category-->
+                    </li>
+                    <!--level1 nav-6-1 parent item-->
+                    <li class="level1 nav-6-1 parent item">
+                      <ul class="level1">
+                        <li class="level2 nav-6-1-1"> <a href="https://www.clickhubli.com/combo.htm"><span>Gift Hampers</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="games.htm"><span>Games &amp; Toys</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="watches_men.htm"><span>Watches for Men</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="watches_women.htm"><span>Watches for Women</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="fastrack-watches-boys.html"><span>Fastrack watches for Men</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="fastrack-watches-girls.html"><span>Fastrack watches for Women</span></a> </li>
+                        <li class="last"> <a href="dairy-products.html"> <span>Dairy Products</span> </a> </li>
+                      </ul>
+                      <!--level1-->
+                      <!--sub sub category-->
+                    </li>
+                    <!--level1 nav-6-1 parent item-->
+                    <li class="level1 nav-6-1 parent item">
+                      <ul class="level1">
+                        <li class="level2 nav-6-1-1"> <a href="watchespair.html"><span>Watches for Pair</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="midnight_delivery.html"><span>Midnight Delivery</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="cosmatic_hampers.html"><span>Cosmatic Hampers</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="buymangoesonline.html"><span>Alphonso mangoes</span></a> </li>
+                        <li class="level2 nav-6-1-1"> <a href="dairy-products.html"><span>Dairy Products</span></a> </li>
+                      </ul>
+                    </li>
+                    <!--level1 nav-6-1 parent item-->
+                  </ul>
+                  <!--level0-->
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="level0 parent drop-menu"><a href="javascript:void(0);" style="cursor:default"><span>Shop By Relation</span> </a>
+            <ul style="display: none;" class="level1">
+              <li class="level1 first"><a href="For_him_gifts.htm"><span>For Him</span></a></li>
+              <li class="level1 nav-10-2"> <a href="For_her_gifts.htm"> <span>For Her</span> </a> </li>
+              <li class="level1 nav-10-3"> <a href="forkids.htm"> <span>For Kids</span> </a> </li>
+            </ul>
+          </li>
+          <li class="level0 nav-8 level-top"> <a href="https://www.clickhubli.com/kasuti/" class="level-top"> <span>Design Sarees</span> </a> </li>
+          <li class="level0 nav-8 level-top"> <a href="deliverycities.html" class="level-top"> <span>Delivery Cities</span> </a> </li>
+          <li class="level0 nav-8 level-top"> <a href="contact_us.php" class="level-top"> <span>Contact</span> </a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  
+ 
+  <div class="main-container col1-layout home-content-container">
+    <div class="container">
+     <section class="std">
+        <div class="row">
+          <div class="bag-product-slider small-pr-slider">
+            <div class="col-md-3 wow bounceInLeft animated">
+             <div class="list list-group-item">
+                <p class="extra">For few cities we charge extra delivery charge</p>
+                <a href="extracharges.html">
+                <button type="button" class="btn btn-warning" style="width:100%"><strong>Click to Pay</strong></button>
+                </a> </div>
+              <br>
+              <div class="list list-group-item">
+                <h4>Send Valentine Gifts</h4>
+                <ul class="font-service">
+                  <li><i class="glyphicon glyphicon-share-alt"></i> <a href="http://giftwithluv.com/valentines-day" rel="nofollow"> <span>Valentine Gifts to Karnataka</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://giftwithluv.com/valentine-gift-hampers-1" rel="nofollow"> <span>Valentine Gifts to Bangalore</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.mysoregiftsflowers.com/valentine-gift-hampers.htm" rel="nofollow"> <span>Valentine Gifts to Mysore</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://gift2belgaum.com/valentine-gift-hampers.htm" rel="nofollow"> <span>Valentine Gifts to Belgaum</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.gift2solapur.com/valentine-gift-hampers.htm" rel="nofollow"> <span>Valentine Gifts to Solapur</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.clickhubli.com/valentines-day.html" rel="nofollow"> <span>Valentine Gifts to Hubli</span> </a> </li>
+                </ul>
+              </div>
+              <br>
+              <div class="list list-group-item">
+                <h4>Account Details</h4>
+                <p class="font-service">If you have any problem to do online payment you can do direct deposit to our following accounts</p>
+              </div>
+              <div class="list list-group-item">
+                 <h5><strong>ICICI Bank<br>
+                  Name : Clickhubli.com<br>
+                  A/c mode : Current account<br>
+                  Acct no : 015705004062<br>
+                  IFSC Code: ICIC0000157<br>
+                  Icici Hubli branch</strong></h5> 
+                  <h5 style="font-size:20px; color:#F90">OR</h5>
+                  <h4 style="float: left;padding-right: 10px;">Pay with </h4><img src="images/Paytm-Logo.png" style="width: 105px;">
+                 <h4 style="background: #052e70;padding: 10px;color: #FFF">Pay<span style="color:#88e3ff">tm</span> No :  9741197999</h4>
+                 <img src="images/paytm.jpg" class="img-responsive " alt="paytm QR Code" style="width:150px; margin:0 auto; border:none">
+              </div>
+              <br>
+              <div class="list list-group-item">
+                <h4>Web Design / Development <span class="text-color"> @ ClickHubli.com</span></h4>
+                <ul class="font-service">
+                  <li><i class="glyphicon glyphicon-share-alt"></i> <a href="http://www.clickhubli.com/web_development_services.htm"> <span>Services</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.clickhubli.com/web_development_clients.htm"> <span>Clients</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.clickhubli.com/web_development_projects.htm"> <span>Projects</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.clickhubli.com/web_development_quote.htm"> <span>Get Quote</span> </a> </li>
+                </ul>
+              </div>
+              <br>
+              <div class="list list-group-item"> <img src="images/webdreams.gif" class="img-responsive" alt="" style="width:100%"><br>
+                <ul class="font-service">
+                  <li><i class="glyphicon glyphicon-share-alt"></i> <a href="http://www.websitedomains.in/" rel="nofollow" target="_blank"> <span>Domain Name Registration</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.webdreams.in/" rel="nofollow" target="_blank"> <span>Website Designing</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.webdreams.in/website-design-hubli.html" rel="nofollow" target="_blank"> <span>Website Development</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.webdreams.in/website_hosting.html" rel="nofollow" target="_blank"> <span>Website Hosting</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.webdreams.in/seo.html" rel="nofollow" target="_blank"> <span>Search Engine Optimization</span> </a> </li>
+                  <li><i class="glyphicon glyphicon-share-alt"></i><a href="http://www.webdreams.in/support/" rel="nofollow" target="_blank"> <span>Customer Support</span> </a> </li>
+                </ul>
+              </div>
+              
+              <div class="list list-group-item">
+                <h4><strong>Holidays</strong></h4>
+                <p class="font-service">We deliver products throughout 365 days of year including Sundays &amp; other holidays.</p>
+              </div>
+              <br>
+              <div class="list list-group-item">
+                <h4><strong>Prices</strong></h4>
+                <p class="font-service">Products prices include all forwarding &amp; shipping charges.</p>
+              </div>
+              <br>
+              <div class="list list-group-item">
+                <h4><strong>Testimonials</strong></h4>
+                <p class="font-service"><i class="fa fa-quote-left"></i>Thank you very much for the service. It was really appreciated.</p>
+                <p class="rig"><i class="glyphicon glyphicon-user"></i> Raghavendra Manbol.Mysore</p>
+                <hr>
+                <p class="font-service"><i class="fa fa-quote-left"></i>Thanks a lot…. Wish you good luck for you and your work which helps in connecting people....</p>
+                <p class="rig"><i class="glyphicon glyphicon-user"></i> Navin R Chennai</p>
+                <hr>
+                <p class="font-service"><i class="fa fa-quote-left"></i>Thanks a lot for delivering and the update. Good to transact with you. </p>
+                <p class="rig"><i class="glyphicon glyphicon-user"></i> Madhura Bangalore</p>
+                <hr>
+                <p class="rig testi"><a href="customerfeedback.htm"><strong>Read More</strong></a></p>
+              </div>
+            </div>
+            
+            
+            <div class="col-md-9 wow bounceInLeft animated">
+             
+             <a href="index.html"><img src="images/button.png" class="img-responsive" alt="home button"></a>
+        
+              <img src="images/404.png" class="img-responsive" alt="coming soon" style="border:none">
+            </div>
+            
+            <div class="col-md-9 col-xs-12 wow bounceInLeft animated">
+              <div class=" bounceInLeft animated">
+                <div class="new_title center">
+                  <h2>Our Partner Portals</h2>
+                </div>
+                <br>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <a href="http://clickroses.com/" rel="nofollow" target="_blank"> <img src="images/portal/click_roses_logo.gif" class="img-responsive port" alt="Clickroses"> </a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <a href="http://www.davangeregiftsflowers.com/" rel="nofollow" target="_blank"> <img src="images/portal/davangere_logo.gif" class="img-responsive port" alt="Davangeregiftsflowers"> </a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <a href="http://gift2belgaum.com/" rel="nofollow" target="_blank"> <img src="images/portal/gift2belgaum_logo.gif" class="img-responsive port" alt="Gift2belgaum"> </a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <a href="http://www.mysoregiftsflowers.com/" rel="nofollow" target="_blank"> <img src="images/portal/mysore_logo.gif" class="img-responsive port" alt="mysoregiftsflowers"> </a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <a href="http://www.gifts2mangalore.com/" rel="nofollow" target="_blank"> <img src="images/portal/gift2mangalore_logo.gif" class="img-responsive port" alt="gift2mangalore"> </a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <a href="http://www.gift2solapur.com/" rel="nofollow" target="_blank"> <img src="images/portal/gift2solapur_logo.gif" class="img-responsive port" alt="Gift2solaphur"> </a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <a href="http://giftwithluv.com/" rel="nofollow" target="_blank"> <img src="images/portal/giftwithluv_logo.gif" class="img-responsive port" alt="Giftwithluv"> </a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <a href="http://www.pune-giftsflowers.com/" rel="nofollow" target="_blank"> <img src="images/portal/pune_gifts_logo.webp" class="img-responsive port" alt="punegiftsflowers"> </a> </div>
+                
+              </div>
+            </div>
+            
+            <div class="col-md-9 col-xs-12"><br>
+              <div class="wow bounceInRight animated">
+                <div class="new_title center">
+                  <h2>Contact Address</h2>
+                </div>
+                <br>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <img src="images/address/hubli.gif" class="img-responsive " alt="Send Flowers to Hubli, Hubli Address" title="Hubli Address"> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <img src="images/address/bangalore.gif" class="img-responsive " alt="Send Flowers to Bangalore, Bangalore Address" title="Bangalore Address"> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <img src="images/address/belgaum.gif" class="img-responsive " alt="Send Flowers to Belgaum, Belgaum Address" title="Belgaum Address"> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <img src="images/address/mangalore.gif" class="img-responsive " alt="Send Flowers to Mangalore"> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <img src="images/address/mysore.gif" class="img-responsive " alt="Send Flowers to Mysore, Mysore Address" title="Mysore Address"> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <img src="images/address/pune.gif" class="img-responsive " alt="Send Flowers to Pune, Pune Address" title="Pune Address"> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <img src="images/address/sangli.gif" class="img-responsive " alt="Sangli florist address" title="Sangli Address"> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 portal"> <img src="images/address/mumbai.gif" class="img-responsive " alt="Mumbai Florist Address" title="Mumbai Address"> </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer class="footer bounceInUp animated">
+    <div class="footer-middle ">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3"> <img src="images/logo22.png" alt="Clickhubli logo" class="img-responsive" style="background:none; border:none;">
+          <div class="list list-group-item" style="margin-left: 12px;">
+            <p class="extra" style="color:#494949">For few cities we charge extra delivery charge</p>
+            <a href="extracharges.html">
+            <button type="button" class="btn btn-warning" style="width:100%"><strong>Click to Pay</strong></button>
+            </a> </div>
+        </div>
+        <div class="col-md-2 col-sm-2">
+          <h4>Quick Links</h4>
+          <ul class="links">
+            <li class="first"><a href="index.html">Home</a></li>
+            <li><a href="kasuti.html">Kasuti Art of Hubli</a></li>
+            <li><a href="kasuti-embroidarydesigns.htm">Kasuti Design</a></li>
+            <li><a href="kannadalinks.htm">Kannada Links</a></li>
+            <li><a href="contact_us.php">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-2">
+          <h4>Useful Links</h4>
+          <ul class="links">
+            <li class="first"><a href="faq.html">FAQ's</a></li>
+            <li><a href="terms_and_conditions.htm">Terms &amp; Conditions</a></li>
+            <li><a href="howitworks.html">How It Works</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-2">
+          <h4>Need Help</h4>
+          <ul class="links">
+            <li class="first"><a href="hubli_map.htm">Hubli Map</a></li>
+            <li><a href="hubli_edu.htm">Education</a></li>
+            <li><a href="hubli_places.htm">Places Of Interest</a></li>
+            <li><a href="hubli_hotel.htm">Hotels</a></li>
+            <li><a href="hubli_hospital.htm">Hospitals</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <h4>We Accept</h4>
+          <ul class="links">
+            <li><img src="images/visa_card.gif" class="img-responsive" alt=""></li>
+          </ul>
+          <a href="http://www.beyondsecurity.com/vulnerability-scanner-verification/www.clickhubli.com" rel="nofollow"><img src="https://seal.beyondsecurity.com/verification-images/www.clickhubli.com/vulnerability-scanner-2.gif" alt="Website Security Test" rel="nofollow"></a> </div>
+      </div>
+      <br>
+    </div>
+    <div class="footer-bottom">
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 coppyright">© 2018 Clickhubli All Rights Reserved.</div>
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 coppyright foot"> Designed &amp; Developed By : <a href="http://www.webdreams.in/" rel="nofollow">Webdreams India</a> </div>
+    </div>
+  </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--<script type="text/javascript" src="js/parallax.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/revslider.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+
+<a href="#" id="toTop" style="display: none;"><span id="toTopHover"></span></a></body></html>

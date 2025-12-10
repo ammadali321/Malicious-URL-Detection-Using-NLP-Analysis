@@ -1,0 +1,1787 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html data-bs-theme="auto" lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            
+                RFC 2771 - An Abstract API for Multicast Address Allocation
+            
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://static.ietf.org/fonts/inter/import.css" rel="stylesheet">
+        <link href="https://static.ietf.org/fonts/noto-sans-mono/import.css" rel="stylesheet">
+        
+            <link rel="stylesheet" href="https://static.ietf.org/dt/12.45.0/ietf/css/document_html_referenced.css">
+            
+            <script type="module" crossorigin="" src="https://static.ietf.org/dt/12.45.0/assets/embedded-12b6e5e7.js"></script>
+<link href="https://static.ietf.org/dt/12.45.0/assets/create-pinia-singleton-6a0ec72c.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://static.ietf.org/dt/12.45.0/assets/Scrollbar-a7264c62.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+            <script src="https://static.ietf.org/dt/12.45.0/ietf/js/document_html.js"></script>
+            <script src="https://static.ietf.org/dt/12.45.0/ietf/js/theme.js"></script>
+        
+        <link rel="alternate" type="application/atom+xml" title="Document changes" href="/feed/document-changes/rfc2771/">
+        <meta name="description"
+            
+                content="An Abstract API for Multicast Address Allocation (RFC 2771, )"
+            >
+        
+
+<link rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-180.png">
+<link rel="icon"
+      sizes="32x32"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-32.png">
+<link rel="icon"
+      sizes="16x16"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-mask.svg"
+      color="#ffffff">
+<meta name="msapplication-TileColor"
+      content="#ffffff">
+<meta name="theme-color"
+      content="#ffffff">
+        
+
+
+
+
+<meta property="og:title" content="RFC 2771: An Abstract API for Multicast Address Allocation">
+<meta property="og:url" content="https://datatracker.ietf.org/doc/html/rfc2771">
+<link rel="canonical" href="https://datatracker.ietf.org/doc/html/rfc2771">
+<meta property="og:site_name" content="IETF Datatracker">
+<meta property="og:description" content="This document describes the &quot;abstract service interface&quot; for the dynamic multicast address allocation service, as seen by applications. This memo provides information for the Internet community.">
+<meta property="og:type" content="article">
+
+<meta property="og:image" content="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-card.png">
+<meta property="og:image:alt" content="Logo of the IETF">
+<meta property="article:section" content="IETF - Internet Engineering Task Force">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="article:author" content="Ross Finlayson">
+
+
+
+        
+        <style>
+            
+            .diff-form .select2-selection__rendered {
+                direction: rtl;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <noscript><iframe class="status" title="Site status" src="/status/latest"></iframe></noscript>
+<div class="vue-embed" data-component="Status"></div>
+        <div class="btn-toolbar sidebar-toolbar position-fixed top-0 end-0 m-2 m-lg-3 d-print-none">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm me-1 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                    aria-label="Toggle theme">
+                        <i class="theme-icon-active bi bi-circle-half"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="bd-theme">
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="light" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-sun-fill"></i>
+                            Light<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-moon-stars-fill"></i>
+                            Dark<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                            data-bs-theme-value="auto" aria-pressed="true">
+                            <i class="me-2 opacity-50 theme-icon bi bi-circle-half"></i>
+                            Auto<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm sidebar-toggle"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar"
+                    aria-expanded="true"
+                    aria-controls="sidebar"
+                    aria-label="Toggle metadata sidebar"
+                    title="Toggle metadata sidebar">
+            <i class="bi bi-arrow-bar-left sidebar-shown"></i>
+            <i class="bi bi-arrow-bar-right sidebar-collapsed"></i>
+            </button>
+        </div>
+        <nav class="navbar bg-light-subtle px-1 fixed-top d-print-none d-md-none">
+            <a class="nav-link ps-1"
+               href="/doc/rfc2771/">
+                
+                    RFC 2771
+                
+                <br class="d-sm-none">
+
+                <span class="ms-sm-3 badge rounded-pill badge-inf">
+                    
+                        Informational
+                    
+                </span>
+            </a>
+            <button class="navbar-toggler p-1"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#docinfo-collapse"
+                    aria-controls="docinfo-collapse"
+                    aria-expanded="false"
+                    aria-label="Show document information">
+                <span class="navbar-toggler-icon small"></span>
+            </button>
+            <div class="navbar-nav navbar-nav-scroll overscroll-none collapse pt-1" id="docinfo-collapse">
+                <div class="bg-light-subtle p-0">
+                    <table class="table table-sm table-borderless small">
+                        <tbody class="meta align-top">
+                            <tr>
+                                <th scope="row"></th>
+                                <th scope="row">Title</th>
+                                <td class="edit"></td>
+                                <td>An Abstract API for Multicast Address Allocation</td>
+                            </tr>
+                        </tbody>
+                        
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Informational
+    
+</span>
+
+            
+                
+                    <br>February 2000
+                
+                <br>
+                
+                
+                    <a class="btn btn-sm btn-warning"
+                       title="Click to report an error in the document."
+                       href="https://www.rfc-editor.org/errata.php#reportnew"
+                       target="_blank">
+                        Report errata
+                    </a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    <div>
+                        Was
+                        <a href="/doc/draft-ietf-malloc-api/07/">draft-ietf-malloc-api</a>
+                        (<a href="/wg/malloc/about/">malloc WG</a>)
+                    </div>
+                
+            
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+            
+                
+                    <li class="page-item">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-malloc-api-07"
+                        rel="nofollow">
+                            07
+                        </a>
+                    </li>
+                
+            
+            
+            <li class="page-item rfc active">
+                <a class="page-link"
+                href="/doc/html/rfc2771">
+                    RFC 2771
+                </a>
+            </li>
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+            <tr>
+                <td></td>
+                <th scope="row">Compare versions</th>
+                <td class="edit"></td>
+                <td>
+                    
+
+
+
+<form class="form-horizontal diff-form"
+      action="https://author-tools.ietf.org/iddiff"
+      method="get"
+      target="_blank">
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="From revision"
+                    name="url1">
+                
+                    <option value="rfc2771">
+                        RFC 2771
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-07" selected>
+                        draft-ietf-malloc-api-07
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-06">
+                        draft-ietf-malloc-api-06
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-05">
+                        draft-ietf-malloc-api-05
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-04">
+                        draft-ietf-malloc-api-04
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-03">
+                        draft-ietf-malloc-api-03
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-02">
+                        draft-ietf-malloc-api-02
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-01">
+                        draft-ietf-malloc-api-01
+                        
+                    </option>
+                
+                
+            </select>
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="To revision"
+                    name="url2">
+                
+                    <option value="rfc2771" selected>
+                        RFC 2771
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-07">
+                        draft-ietf-malloc-api-07
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-06">
+                        draft-ietf-malloc-api-06
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-05">
+                        draft-ietf-malloc-api-05
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-04">
+                        draft-ietf-malloc-api-04
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-03">
+                        draft-ietf-malloc-api-03
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-02">
+                        draft-ietf-malloc-api-02
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-01">
+                        draft-ietf-malloc-api-01
+                        
+                    </option>
+                
+                
+            </select>
+
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--html"
+                    name="difftype">
+                Side-by-side
+            </button>
+            
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--hwdiff"
+                    name="difftype">
+                Inline
+            </button>
+
+</form>
+                </td>
+            </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Author</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Ross Finlayson"
+            href="/person/finlayson@live555.com" >Ross Finlayson</a> <a 
+               href="mailto:finlayson%40live555.com"
+               aria-label="Compose email to finlayson@live555.com"
+               title="Compose email to finlayson@live555.com">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:rfc2771@ietf.org?subject=rfc2771" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        
+
+
+
+<img alt="IETF Logo"
+     class="d-lm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-white.svg"
+        
+     
+     >
+
+<img alt="IETF Logo"
+     class="d-dm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor.svg"
+        
+     
+     >
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc2771.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc2771.html">
+            
+                <i class="bi bi-file-code"></i> html
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+            download="rfc2771.pdf"
+          
+         
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/pdfrfc/rfc2771.txt.pdf">
+            
+                <i class="bi bi-file-pdf"></i> pdf
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/rfc2771/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+            <tr>
+                <td>
+                </td>
+                <th scope="row">
+                    Additional resources
+                </th>
+                <td class="edit">
+                    
+                </td>
+                <td>
+                    
+                        
+                        
+                            
+                                <a href="ftp://ftp.ietf.org/ietf-mail-archive/malloc/">
+                                    Mailing list discussion
+                                </a>
+                            
+                        
+                    
+                </td>
+            </tr>
+        
+    
+</tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <td class="edit"></td>
+                            <td>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </nav>
+        <div class="row g-0">
+            <div class="col-md-9 d-flex justify-content-center lh-sm"
+                 data-bs-spy="scroll"
+                 data-bs-target="#toc-nav"
+                 data-bs-smooth-scroll="true"
+                 tabindex="0"
+                 id="content">
+                
+                    <div class="rfcmarkup">
+                        <br class="noprint">
+                        <!-- [html-validate-disable-block attr-quotes, void-style, element-permitted-content, heading-level -- FIXME: rfcmarkup/rfc2html generates HTML with issues] -->
+                        <div class="rfcmarkup"><pre>Network Working Group                                     R. Finlayson
+Request for Comments: 2771                                    LIVE.COM
+Category: Informational                                  February 2000
+
+
+            <span class="h1">An Abstract API for Multicast Address Allocation</span>
+
+
+Status of this Memo
+
+   This memo provides information for the Internet community.  It does
+   not specify an Internet standard of any kind.  Distribution of this
+   memo is unlimited.
+
+Copyright Notice
+
+   Copyright (C) The Internet Society (2000).  All Rights Reserved.
+
+Abstract
+
+   This document describes the &quot;abstract service interface&quot; for the
+   dynamic multicast address allocation service, as seen by
+   applications.  While it does not describe a concrete API (i.e., for a
+   specific programming language), it describes - in abstract terms -
+   the semantics of this service, including the guarantees that it makes
+   to applications.
+
+   Additional documents (not necessarily products of the IETF) would
+   describe concrete APIs for this service.
+
+<span class="h2"><a class="selflink" id="section-1" href="#section-1">1</a>. Introduction</span>
+
+   Applications are the customers of a multicast address allocation
+   service, so a definition of this service should include not only the
+   inter-node network protocols that are used to implement it, but also
+   the &#x27;protocol&#x27; that applications use to access the service.  While
+   APIs (&quot;application programming interfaces&quot;) for specific programming
+   languages (or operating systems) are outside the domain of the IETF,
+   it is appropriate for us to define - in abstract terms - the semantic
+   interface that this service presents to applications.  Specific APIs
+   would then be based upon this abstract service interface.
+
+   Note that it is possible to implement the multicast address
+   allocation service in at least two different ways.  The first (and
+   perhaps most common) way is for end nodes to allocate addresses by
+   communicating with a separate &quot;Address Allocation Server&quot; node, using
+   the &quot;Host to Address Allocation Server&quot; network protocol (MADCAP)
+   [<a href="#ref-1" title="&quot;Multicast Address Dynamic Client Allocation Protocol (MADCAP)&quot;">1</a>][7].  Alternatively, an &quot;Address Allocation Server&quot; implementation
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 1]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-2" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+   might be co-located (along with one or more applications) on an end
+   node, in which case some other, internal, mechanism might be used to
+   access the server.  In either case, however, the abstract service
+   interface (and, presumably, any specific APIs) would remain the same.
+
+   The remainder of this document describes the abstract interface.
+
+   Note that this interface is intended only for the allocation of
+   dynamic multicast addresses, as used by the traditional multicast
+   service model [<a href="#ref-2" title="&quot;Host Extensions for IP Multicasting&quot;">2</a>].  Future multicast service models might allocate or
+   assign multicast addresses in other ways, but this is outside the
+   scope of this document.
+
+<span class="h2"><a class="selflink" id="section-2" href="#section-2">2</a>. Abstract Data Types</span>
+
+   The interface described below uses the following abstract data types:
+
+   -  AddressFamily: e.g., IPv4 or IPv6
+
+   -  MulticastAddress: An actual multicast address (i.e., that could
+      subsequently be used as the destination of a datagram)
+
+   -  MulticastAddressSet: A set of &quot;MulticastAddress&quot;es
+
+   -  LanguageTag: The code for a (human) language, as defined in [<a href="#ref-4" title="&quot;Tags for the Identification of Languages&quot;">4</a>]
+
+   -  Scope: An &quot;administrative scope&quot; [<a href="#ref-3" title="&quot;Administratively Scoped IP Multicast&quot;">3</a>] from which multicast
+             addresses are to be allocated.  Each scope is a
+             &quot;MulticastAddressSet&quot;, with an associated set of
+             (character-string) names - indexed by &quot;LanguageTag&quot;.  (Each
+             language tag has at most one corresponding name, per
+             scope.)  For each scope, a (language tag, name) pair may be
+             defined to be the &#x27;default&#x27; name for this scope. (See the
+             section &quot;Querying the name of a scope&quot; below.)
+
+             (An implementation of this abstract data type might also
+             include other information, such as a default TTL for the
+             scope.)
+
+   -  Time: An (absolute) event time.  This is used for specifying the
+            &quot;lifetime&quot; of multicast addresses: the period of time during
+            which allocated multicast addresses are guaranteed to be
+            available.  (It is also used to specify the desired start
+            time for an &quot;advance allocation&quot;.)
+
+
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 2]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-3" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+            Note that a concrete API might prefer to specify some of
+            these times as relative times (i.e., relative to the current
+            time-of-day), rather than absolute time.  (Relative times
+            have the advantage of not requiring clock synchronization.)
+
+   -  Lease: A compound data type that describes the result of a
+             (successful) multicast address allocation.  It consists of:
+
+             -  [MulticastAddressSet] The set of addresses that were
+                allocated;
+
+             -  [AddressFamily] The address family of these addresses
+
+             -  [Time] The lifetime of these addresses (the same for
+                each address)
+
+             -  [Time] The &quot;start time&quot; of the allocation.  (See the
+                discussion of &quot;advance allocation&quot; below.)  (A concrete
+                API would likely also include a MADCAP &quot;Lease
+                Identifier&quot; [<a href="#ref-1" title="&quot;Multicast Address Dynamic Client Allocation Protocol (MADCAP)&quot;">1</a>].)
+
+   -  NestingRelationship: A binary data type that describes whether or
+                           not two scopes nest. Two scopes nest if
+                           traffic sent sent to a multicast group within
+                           one scope could be seen by all hosts present
+                           within the other scope were they to join the
+                           multicast group within the first scope. This
+                           value would be &quot;False&quot; for overlapping scopes
+                           where only some (or none) of the hosts within
+                           the second scope could see traffic sent to an
+                           address due to the presence of an
+                           administratively scoped boundary. In cases
+                           where the first and second scopes are
+                           topologically identical this value would be
+                           &quot;True.&quot;
+
+   -  Status: A result code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 3]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-4" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+<span class="h2"><a class="selflink" id="section-3" href="#section-3">3</a>. The Abstract Interface</span>
+
+<span class="h3"><a class="selflink" id="section-3.1" href="#section-3.1">3.1</a> Allocating multicast addresses:</span>
+
+   alloc_multicast_addr(in AddressFamily family,
+                        in Scope scope,
+                        in Integer minDesiredAddresses,
+                        in Integer maxDesiredAddresses,
+                        in Time minDesiredStartTime,
+                        in Time maxDesiredStartTime,
+                        in Time minDesiredLifetime,
+                        in Time maxDesiredLifetime,
+                        out Lease multicastAddressSetLease,
+                        out Status status)
+
+   This operation attempts to allocate a set of multicast addresses (the
+   size of this set is in the range [minDesiredAddresses,
+   maxDesiredAddresses]) within the given address family and scope, and
+   within a given range of desired lifetimes.  (&quot;minDesiredStartTime&quot;
+   and &quot;maxDesiredStartTime&quot; are used to specify &quot;advance allocation&quot;;
+   this is described in more detail below.)
+
+   If the address allocation succeeds, the result is returned in
+   &quot;multicastAddressSetLease&quot; (with &quot;status&quot; = OK).
+
+   During the lifetime of this lease, the allocation service will make a
+   &quot;best-effort&quot; attempt to not allocate any of these addresses to
+   others.  (However, once the lease&#x27;s lifetime has expired, any of its
+   addresses can be allocated to others.)
+
+   Multicast addresses are allocated for a limited lifetime.  An
+   application may attempt to extend this lifetime, but this operation
+   may fail.  Therefore, an application must be prepared for the
+   possibility it will not be able to use the same addresses for as long
+   as it desires.  In particular, the application must be prepared to
+   either quit early (because its original multicast address assignments
+   have expired), or, alternatively, to occasionally &#x27;renumber&#x27; its
+   multicast addresses (in some application or higher-level-protocol
+   dependent way), by making a new allocation.  However, if an
+   application needs to consider &#x27;renumbering&#x27;, it will always know this
+   in advance, at the time it acquired its current address(es) - by
+   checking the lifetime in the returned lease.  An application will
+   never need to be notified asynchronously of the need to &#x27;renumber&#x27;.
+
+
+
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 4]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-5" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+   Possible errors:
+
+         - bad address family
+         - bad scope
+         - bad desired number of addresses (e.g., max &lt; min)
+         - bad desired lifetimes (e.g., max &lt; min)
+         - errors with the two &quot;start time&quot; parameters (see
+           &quot;Advance allocation&quot; below)
+         - no addresses can be allocated (for the requested parameters)
+
+   An allocation attempt can also fail with a result &quot;status&quot; code of
+   TRY_LATER, indicating that the requested allocation cannot be made at
+   this time, but that it might succeed if the caller retries the
+   attempt at some future time.  (This future time is returned in the
+   &quot;start time&quot; field of the
+
+   &quot;multicastAddressSetLease&quot;;
+           the other parts of this lease are undefined.)
+
+   Note that a concrete (i.e., programming language-specific) API for
+   multicast address allocation will probably include additional,
+   specialized variants of this general allocation operation.  For
+   instance, it may include separate operations for:
+
+           - allocating only a single address
+             (i.e., minDesiredAddresses = maxDesiredAddresses = 1);
+           - (attempting to) allocate an address with a single, fixed
+              lifetime (i.e., minDesiredLifetime = maxDesiredLifetime);
+           - (attempting to) allocate an address for immediate use
+             (i.e., minDesiredStartTime = maxDesiredStartTime = &#x27;now&#x27;)
+
+<span class="h3"><a class="selflink" id="section-3.2" href="#section-3.2">3.2</a> Changing multicast addresses&#x27; lifetime:</span>
+
+    change_multicast_addr_lifetime(in Lease multicastAddressSetLease,
+                                   in Time minDesiredLifetime,
+                                   in Time maxDesiredLifetime,
+                                   out Time lifetime)
+
+   This operation attempts to change the lifetime of previously
+   allocated multicast addresses.  Unless an error occurs, it returns
+   the new lifetime (which might remain unchanged).
+
+   Possible errors:
+
+           - bad address family
+           - bad durations (e.g., max &lt; min)
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 5]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-6" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+           - the addresses&#x27; lifetime could not be changed
+             (and the existing lifetime was not in the requested range
+             [minDesiredLifetime,maxDesiredLifetime])
+           - the addresses were not ones that we had allocated
+             (see <a href="#section-5.9">section 5.9</a>) - or they have already expired
+
+<span class="h3"><a class="selflink" id="section-3.3" href="#section-3.3">3.3</a> Deallocating multicast addresses:</span>
+
+   deallocate_multicast_addr(in Lease multicastAddressSetLease) This
+   operation attempts to deallocate previously allocated multicast
+   addresses.
+
+   Possible errors:
+
+           - bad address family
+           - the addresses were not ones that we had allocated
+                   (or they have already expired)
+
+<span class="h3"><a class="selflink" id="section-3.4" href="#section-3.4">3.4</a> Querying the set of usable multicast address scopes:</span>
+
+    get_multicast_addr_scopes(in AddressFamily family,
+                             out &quot;set of&quot; Scope)
+
+   This operation returns the set of administrative multicast address
+   scopes that are defined for this node.
+
+   Possible errors:
+
+           - bad address family
+
+<span class="h3"><a class="selflink" id="section-3.5" href="#section-3.5">3.5</a> Querying the name of a scope:</span>
+
+    get_scope_name(in Scope scope,
+                   in LanguageTag language,
+                   out String name,
+                   out LanguageTag languageForName)
+
+   This operation returns a character-string name for a given scope.  If
+   the scope has a name in the specified &quot;language&quot;, then this name (and
+   language) is returned.  Otherwise, the scope&#x27;s default (language,
+   name) pair is returned.
+
+   Possible errors:
+
+           - bad scope.
+
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 6]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-7" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+<span class="h3"><a class="selflink" id="section-3.6" href="#section-3.6">3.6</a> Querying the nesting state of known usable multicast address scopes:</span>
+
+    get_scope_nesting_state(in &quot;set of&quot; Scope,
+                            out &quot;matrix of&quot; NestingRelationship)
+
+   Possible errors:
+
+       - bad scope.
+       - nesting state undetermined at this time.
+
+   This operation would return a matrix that shows the
+   current nesting relationships between the supplied
+   set of scopes which would have previously been supplied
+   via the get_multicast_addr_scopes(...) function.
+
+<span class="h3"><a class="selflink" id="section-3.7" href="#section-3.7">3.7</a> Querying the set of scopes that a given scope is known to nest inside:</span>
+
+    get_larger_scopes(in Scope,
+                      out &quot;set of&quot; Scope)
+
+   This operation returns the set of administrative multicast
+   address scopes that are known to encompass the supplied
+   Scope.
+
+   Possible errors:
+
+       - bad scope.
+       - nesting state undetermined at this time.
+
+<span class="h3"><a class="selflink" id="section-3.8" href="#section-3.8">3.8</a> Querying the set of scopes that are known to nest inside a given scope:</span>
+
+    get_smaller_scopes(in Scope,
+                      out &quot;set of&quot; Scope)
+
+   This operation returns the set of administrative multicast address
+   scopes that are known to nest inside the supplied Scope (NB this
+   would include those scopes that are topologically identical to the
+   supplied scope).
+
+   Possible errors:
+
+       - bad scope.
+       - nesting state undetermined at this time.
+
+
+
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 7]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-8" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+<span class="h3"><a class="selflink" id="section-3.9" href="#section-3.9">3.9</a> Note: The decision as to who is allowed to deallocate (or change</span>
+<span class="h3">    the lifetime of) a previously allocated multicast address set lease</span>
+    is implementation-specific, and depends upon the security policy of
+    the host system.  Thus it is not specified in this abstract API.
+    One possible starting point, however, is the following:
+
+      A previously allocated multicast address can be deallocated (or
+      have its lifetime queried or changed) by the same &quot;principal&quot;, and
+      on the same node, as that which originally allocated it.
+      (&quot;principal&quot; might, for example, be a &quot;user&quot; in the host operating
+      system.)
+
+<span class="h3"><a class="selflink" id="section-3.10" href="#section-3.10">3.10</a> Advance allocation</span>
+
+      By specifying &quot;minDesiredStartTime = maxDesiredStartTime = &#x27;now&#x27;&quot;,
+      the address allocation operation - &quot;alloc_multicast_addr&quot; -
+      described above can be used to request a set of multicast
+      addresses that can be used *immediately* (and until their lifetime
+      expires).  During this whole time, the addresses are not available
+      for allocation to others.
+
+      It is also possible - using the &quot;minDesiredStartTime&quot; and
+      &quot;maxDesiredStartTime&quot; parameters - to allocate multicast addresses
+      *in advance* - i.e., so that they have a future &quot;start time&quot; as
+      well as an expiration time.  Before the start time, the multicast
+      addresses may be allocated to others.
+
+      Advance allocation is convenient for allocating addresses for
+      events that begin far in the future - e.g., several weeks or
+      months away.  Without advance allocation, it would be necessary to
+      allocate addresses for a long period of time - even when it will
+      not be used.  Such a request would not only be a wasteful use of
+      the multicast address space, but it may also be difficult to
+      implement (especially since address allocations are expected to
+      remain valid in spite of topology changes).
+
+      Advance allocation requests can produce the following errors (in
+      addition to those defined earlier):
+
+      - bad start time durations (e.g., max &lt; min)
+      - requested start times conflict with requested lifetimes
+        (i.e., min start time &gt; max lifetime)
+
+
+
+
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 8]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-9" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+   The following operation is also defined:
+
+      change_multicast_addr_start_time(in Lease multicastAddressSetLease,
+                                       in Time minDesiredStartTime,
+                                       in Time maxDesiredStartTime,
+                                       out Time startTime)
+
+
+      This operation attempts to change the start time of previously
+      allocated multicast addresses.  Unless an error occurs, it returns
+      the new start time (which might remain unchanged).
+
+      Possible errors: the same as &quot;change_multicast_addr_lifetime&quot;
+
+<span class="h2"><a class="selflink" id="section-4" href="#section-4">4</a>. Security Considerations</span>
+
+   As noted in <a href="#section-5.9">section 5.9</a> above, each implementation of this abstract
+   API should define a security policy that specifies when (and by whom)
+   previously allocated multicast addresses can be deallocated (or
+   queried, or have their lifetime changed).
+
+   Because multicast addresses are a finite resource, there is a
+   potential for a &quot;denial of service&quot; attack by allocating a large
+   number of multicast addresses without deallocating them.  Preventing
+   such an attack, however, is not the role of the API, but rather by
+   the underlying MAAS (&quot;Multicast Address Allocation Server(s)&quot; [<a href="#ref-6" title="&quot;The Internet Multicast Address Allocation Architecture&quot;">6</a>]).
+
+<span class="h2"><a class="selflink" id="section-5" href="#section-5">5</a>. Acknowledgements</span>
+
+   Many thanks to other participants in the &quot;MALLOC&quot; working group - in
+   particular Steve Hanna, Dave Thaler, Roger Kermode, and Pavlin
+   Radoslavov - for their valuable comments.
+
+<span class="h2"><a class="selflink" id="section-6" href="#section-6">6</a>. References</span>
+
+   [<a id="ref-1">1</a>] Hanna, S., Patel, B. and M. Shah, &quot;Multicast Address Dynamic
+       Client Allocation Protocol (MADCAP)&quot;, <a href="/doc/html/rfc2730">RFC 2730</a>, December 1999.
+
+   [<a id="ref-2">2</a>] Deering, S., &quot;Host Extensions for IP Multicasting&quot;, STD 5, <a href="/doc/html/rfc1112">RFC</a>
+       <a href="/doc/html/rfc1112">1112</a>, August 1989.
+
+   [<a id="ref-3">3</a>] Meyer, D., &quot;Administratively Scoped IP Multicast&quot;, <a href="/doc/html/bcp23">BCP 23</a>, <a href="/doc/html/rfc2365">RFC</a>
+       <a href="/doc/html/rfc2365">2365</a>, July, 1998.
+
+   [<a id="ref-4">4</a>] Alvestrand, H., &quot;Tags for the Identification of Languages&quot;, <a href="/doc/html/rfc1766">RFC</a>
+       <a href="/doc/html/rfc1766">1766</a>, March 1995.
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                      [Page 9]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-10" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+   [<a id="ref-5">5</a>] Handley, M. and V. Jacobson, &quot;SDP: Session Description Protocol&quot;,
+       <a href="/doc/html/rfc2327">RFC 2327</a>, April 1998.
+
+   [<a id="ref-6">6</a>] Estrin, D., Handley, M. and D. Thaler, &quot;The Internet Multicast
+       Address Allocation Architecture&quot;, Work in Progress.
+
+   [<a id="ref-7">7</a>] Kermode, R., &quot;MADCAP Multicast Scope Nesting State Option&quot;, Work
+       in Progress.
+
+<span class="h2"><a class="selflink" id="section-7" href="#section-7">7</a>. Author&#x27;s Address</span>
+
+   Ross Finlayson,
+   Live Networks, Inc. (LIVE.COM)
+
+   EMail: finlayson@live.com
+   WWW: <a href="http://www.live.com/">http://www.live.com/</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="grey">Finlayson                    Informational                     [Page 10]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-11" ></span>
+<span class="grey"><a href="/doc/html/rfc2771">RFC 2771</a>     Abstract API for Multicast Address Allocation February 2000</span>
+
+
+<span class="h2"><a class="selflink" id="section-8" href="#section-8">8</a>. Full Copyright Statement</span>
+
+   Copyright (C) The Internet Society (2000).  All Rights Reserved.
+
+   This document and translations of it may be copied and furnished to
+   others, and derivative works that comment on or otherwise explain it
+   or assist in its implementation may be prepared, copied, published
+   and distributed, in whole or in part, without restriction of any
+   kind, provided that the above copyright notice and this paragraph are
+   included on all such copies and derivative works.  However, this
+   document itself may not be modified in any way, such as by removing
+   the copyright notice or references to the Internet Society or other
+   Internet organizations, except as needed for the purpose of
+   developing Internet standards in which case the procedures for
+   copyrights defined in the Internet Standards process must be
+   followed, or as required to translate it into languages other than
+   English.
+
+   The limited permissions granted above are perpetual and will not be
+   revoked by the Internet Society or its successors or assigns.
+
+   This document and the information contained herein is provided on an
+   &quot;AS IS&quot; basis and THE INTERNET SOCIETY AND THE INTERNET ENGINEERING
+   TASK FORCE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+   BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION
+   HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+   MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Acknowledgement
+
+   Funding for the RFC Editor function is currently provided by the
+   Internet Society.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Finlayson                    Informational                     [Page 11]
+</pre></div>
+                    </div>
+                
+            </div>
+            <div class="d-print-none col-md-3 bg-light-subtle collapse show" id="sidebar">
+                <div class="position-fixed border-start sidebar overflow-scroll overscroll-none no-scrollbar">
+                    <div class="d-flex flex-column vh-100 pt-2 pt-lg-3 ps-3 pl-md-2 pl-lg-3">
+                        <div>
+                            <a class="btn btn-primary btn-sm" href="/doc/rfc2771/">Datatracker</a>
+                            <p class="fw-bold pt-2">
+                                
+                                    RFC 2771
+                                
+                                <br>
+                                
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Informational
+    
+</span>
+
+                            </p>
+                        </div>
+                        
+                        <ul class="nav nav-tabs nav-fill small me-2" role="tablist">
+                            <li class="nav-item" role="presentation" title="Document information">
+                                <button class="nav-link px-2"
+                                        id="docinfo-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#docinfo-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="docinfo-tab-pane"
+                                        aria-selected="true">
+                                    <i class="bi bi-info-circle"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Info</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Table of contents">
+                                <button class="nav-link px-2"
+                                        id="toc-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#toc-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="toc-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-list-ol"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Contents</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Preferences">
+                                <button class="nav-link px-2"
+                                        id="pref-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#pref-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="pref-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-gear"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Prefs</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="overflow-auto tab-content pt-2 me-2">
+                            <div class="tab-pane"
+                                 id="docinfo-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="docinfo-tab"
+                                 tabindex="0">
+                                <table class="table table-sm table-borderless">
+                                    
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Informational
+    
+</span>
+
+            
+                
+                    <br>February 2000
+                
+                <br>
+                
+                
+                    <a class="btn btn-sm btn-warning"
+                       title="Click to report an error in the document."
+                       href="https://www.rfc-editor.org/errata.php#reportnew"
+                       target="_blank">
+                        Report errata
+                    </a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    <div>
+                        Was
+                        <a href="/doc/draft-ietf-malloc-api/07/">draft-ietf-malloc-api</a>
+                        (<a href="/wg/malloc/about/">malloc WG</a>)
+                    </div>
+                
+            
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+            
+                
+                    <li class="page-item">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-malloc-api-07"
+                        rel="nofollow">
+                            07
+                        </a>
+                    </li>
+                
+            
+            
+            <li class="page-item rfc active">
+                <a class="page-link"
+                href="/doc/html/rfc2771">
+                    RFC 2771
+                </a>
+            </li>
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+            <tr>
+                <td></td>
+                <th scope="row">Compare versions</th>
+                <td class="edit"></td>
+                <td>
+                    
+
+
+
+<form class="form-horizontal diff-form"
+      action="https://author-tools.ietf.org/iddiff"
+      method="get"
+      target="_blank">
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="From revision"
+                    name="url1">
+                
+                    <option value="rfc2771">
+                        RFC 2771
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-07" selected>
+                        draft-ietf-malloc-api-07
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-06">
+                        draft-ietf-malloc-api-06
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-05">
+                        draft-ietf-malloc-api-05
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-04">
+                        draft-ietf-malloc-api-04
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-03">
+                        draft-ietf-malloc-api-03
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-02">
+                        draft-ietf-malloc-api-02
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-01">
+                        draft-ietf-malloc-api-01
+                        
+                    </option>
+                
+                
+            </select>
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="To revision"
+                    name="url2">
+                
+                    <option value="rfc2771" selected>
+                        RFC 2771
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-07">
+                        draft-ietf-malloc-api-07
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-06">
+                        draft-ietf-malloc-api-06
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-05">
+                        draft-ietf-malloc-api-05
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-04">
+                        draft-ietf-malloc-api-04
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-03">
+                        draft-ietf-malloc-api-03
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-02">
+                        draft-ietf-malloc-api-02
+                        
+                    </option>
+                
+                    <option value="draft-ietf-malloc-api-01">
+                        draft-ietf-malloc-api-01
+                        
+                    </option>
+                
+                
+            </select>
+
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--html"
+                    name="difftype">
+                Side-by-side
+            </button>
+            
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--hwdiff"
+                    name="difftype">
+                Inline
+            </button>
+
+</form>
+                </td>
+            </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Author</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Ross Finlayson"
+            href="/person/finlayson@live555.com" >Ross Finlayson</a> <a 
+               href="mailto:finlayson%40live555.com"
+               aria-label="Compose email to finlayson@live555.com"
+               title="Compose email to finlayson@live555.com">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:rfc2771@ietf.org?subject=rfc2771" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        
+
+
+
+<img alt="IETF Logo"
+     class="d-lm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-white.svg"
+        
+     
+     >
+
+<img alt="IETF Logo"
+     class="d-dm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor.svg"
+        
+     
+     >
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc2771.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc2771.html">
+            
+                <i class="bi bi-file-code"></i> html
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+            download="rfc2771.pdf"
+          
+         
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/pdfrfc/rfc2771.txt.pdf">
+            
+                <i class="bi bi-file-pdf"></i> pdf
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/rfc2771/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+            <tr>
+                <td>
+                </td>
+                <th scope="row">
+                    Additional resources
+                </th>
+                <td class="edit">
+                    
+                </td>
+                <td>
+                    
+                        
+                        
+                            
+                                <a href="ftp://ftp.ietf.org/ietf-mail-archive/malloc/">
+                                    Mailing list discussion
+                                </a>
+                            
+                        
+                    
+                </td>
+            </tr>
+        
+    
+</tbody>
+                                </table>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a datatracker bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </div>
+                            <div class="tab-pane mb-5"
+                                 id="toc-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="toc-tab"
+                                 tabindex="0">
+                                <nav class="nav nav-pills flex-column small" id="toc-nav">
+                                </nav>
+                            </div>
+                            <div class="tab-pane mb-5 small"
+                                 id="pref-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="pref-tab"
+                                 tabindex="0">
+                                <label class="form-label fw-bold mb-2">Show sidebar by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="sidebar" id="on-radio">
+                                    <label class="btn btn-outline-primary" for="on-radio">Yes</label>
+                                    <input type="radio" class="btn-check" name="sidebar" id="off-radio">
+                                    <label class="btn btn-outline-primary" for="off-radio">No</label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Tab to show by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="deftab" id="docinfo-radio">
+                                    <label class="btn btn-outline-primary" for="docinfo-radio">
+                                        <i class="bi bi-info-circle me-1"></i>Info
+                                    </label>
+                                    <input type="radio" class="btn-check" name="deftab" id="toc-radio">
+                                    <label class="btn btn-outline-primary" for="toc-radio">
+                                        <i class="bi bi-list-ol me-1"></i>Contents
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">HTMLization configuration</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="htmlconf" id="txt-radio">
+                                    <label class="btn btn-outline-primary" for="txt-radio" title="This is the traditional HTMLization method.">
+                                        <i class="bi bi-badge-sd me-1"></i>HTMLize the plaintext
+                                    </label>
+                                    <input type="radio" class="btn-check" name="htmlconf" id="html-radio">
+                                    <label class="btn btn-outline-primary" for="html-radio" title="This is the modern HTMLization method.">
+                                        <i class="bi bi-badge-hd me-1"></i>Plaintextify the HTML
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2" for="ptsize">Maximum font size</label>
+                                <input type="range" class="form-range" min="7" max="16" id="ptsize" oninput="ptdemo.value = ptsize.value">
+                                <label class="form-label fw-bold mt-4 mb-2">Page dependencies</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="pagedeps" id="inline-radio">
+                                    <label class="btn btn-outline-primary" for="inline-radio" title="Generate larger, standalone web pages that do not require network access to render.">
+                                        <i class="bi bi-box me-1"></i>Inline
+                                    </label>
+                                    <input type="radio" class="btn-check" name="pagedeps" id="reference-radio">
+                                    <label class="btn btn-outline-primary" for="reference-radio" title="Generate regular web pages that require network access to render.">
+                                        <i class="bi bi-link-45deg me-1"></i>Reference
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Citation links</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="reflinks" id="refsection-radio">
+                                    <label class="btn btn-outline-primary" for="refsection-radio" title="Citation links go to the reference section.">
+                                        <i class="bi bi-arrow-clockwise"></i> Go to reference section
+                                    </label>
+                                    <input type="radio" class="btn-check" name="reflinks" id="citation-radio">
+                                    <label class="btn btn-outline-primary" for="citation-radio" title="Citation links go directly to the cited document.">
+                                        <i class="bi bi-link-45deg me-1"></i>Go to linked document
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+  var _paq = window._paq || [];
+  
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ietf.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 7]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.ietf.org/matomo.php?idsite=7" style="border:0;" alt="" /></p></noscript>
+
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c598d9daa55303',t:'MTc1NDcyNTEzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

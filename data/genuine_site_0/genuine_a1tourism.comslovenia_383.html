@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:title" content="1,000's of Hotels, Guest Houses, Lodgings - UK Accommodation Directory for England, Scotland, Wales and Ireland" />
+<meta property="og:type" content="" />
+<meta property="og:url" content="https://www.smoothhound.co.uk" />
+<title>1,000's of Hotels, Guest Houses, Lodgings - UK Accommodation Directory for England, Scotland, Wales and Ireland</title><link href='//fonts.googleapis.com/css?family=Architects+Daughter%7COpen+Sans:400,600,700,800' rel='stylesheet' type='text/css'/>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/jquery/slider.css" type="text/css" />
+<link rel="stylesheet" href="/css/jquery/jquery-ui.min.css" type="text/css" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" />
+<script src="/hotels.js" type="text/javascript"></script>
+<script src="/js/jquery/jquery-2.1.1.min.js"></script><script type='text/javascript' src='/lib/jquery.autocomplete.js'></script>
+<link rel="stylesheet" type="text/css" href="/lib/jquery.autocomplete.css" />
+<script type="text/javascript">
+function SubmitSearchForm1(event, data, formatted) {
+var s = new String(data);
+var pieces = s.split(',');
+$('#structured1').val(pieces[pieces.length - 1] + "&structured_label=" + formatted);
+$('#structured').val(pieces[pieces.length - 1] + "&structured_label=" + formatted);
+$('#search_form').submit();
+}
+$().ready(function() {
+function log(event, data, formatted) {
+$("<li>").html( !data ? "No match!" : "Selected: " + formatted).appendTo("#result");
+}
+function formatItem(row) {
+var html = '<div class="clr"><div class="fl">'+row[0]+'</div> <div class="fr">'+row[1]+'</div> </div>';
+return html;
+}
+function formatResult(row) {
+return row[0].replace(/(<.+?>)/gi, '');
+}
+$("#searchfor").autocomplete('/cgi-bin/autocomplete.pl', {
+width: 350,
+scroll:false,
+autoFill:false,
+multiple: false,
+//matchContains: true,
+formatItem: formatItem,
+formatResult: formatResult
+}).result(SubmitSearchForm1);
+});
+</script>
+<meta name="keywords" content="hotel, lodging, motel, tourism, travel, guest house, accommodation, accomodation, acommodation, acomodation, apartment, b &amp; b, b and b, bed and breakfast, self catering, travel, vacation, london, united kingdom, great britain, england, scotland, wales, ireland" /></head><body><header>
+<div class="container header-container">
+<div id="logo-holder">
+<div class="row">
+ <div class="col-xs-8 col-sm-8 col-md-9">
+<div id="logo">
+<a href="/" title="Back to home">
+<img src="/images/logo2014.png" alt="Site Logo"/>
+</a>
+<h1>1,000's of Hotels and Guest Houses in the UK and Worldwide - <span>Smooth Hound Hotel Directory</span></h1>
+</div> 
+</div>
+<div class="col-xs-4 col-sm-4 col-md-3 social-holder">
+<div class="social">
+<p>Best Price Guaranteed</p>
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share_save"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js" async ></script>
+<!-- AddToAny END -->
+<span class='st_pinterest_large' displaytext='Pinterest'></span>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js" async ></script>
+</div></div></div></div>
+<ul id="breadcrumbs">
+<li><a href="/world.html">World hotels</a>&gt;</li>
+<li><a href="/europe.html">Europe</a>&gt;</li>
+<li>United Kingdom</li>
+</ul></div></header>
+<div id="tabs">
+<div class="container">
+<nav class="navbar">
+<div class="navbar-header">
+<div class="world-hotels">World Hotels</div>
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul>
+<li><a href="/world.html">World Hotels</a></li>
+<li><a href="/other/car-rental.html">Car Rental</a></li>
+<li><a href="/other/flights.html">Flights</a></li>
+<li><a href="/convert.html">Exchange Rates</a></li>
+<li><a href="/survey.html">Customer Survey</a></li>
+<li><a href="/tourism/advicehome.html">Tourism Links</a></li>
+<li><a href="/order.html">Advertise Your Hotel</a></li>
+</ul></div></nav></div></div><iframe width="132" height="142" name="gToday:contrast:agenda.js" id="gToday:contrast:agenda.js" src="/DateRange/ipopeng.htm" scrolling="no" frameborder="0" style="visibility:visible; z-index:999; position:absolute; top:-500px; left:-500px;"></iframe><div class="container">
+<script>
+function doFunction(value) {
+similar_values = $('input:checkbox:checked.group1').map(function () {
+return this.value;
+}).get();
+var url_id = $('#url_id').val();
+var url = url_id + "&star_filter=" + similar_values;
+console.log(url);
+window.location.href = url;
+}
+function doFunction2(value) {
+//  location.reload();
+// $('#ffff').submit();
+fc_values = $('input:checkbox:checked.group2').map(function () {
+return this.value;
+}).get();
+//console.log(fc_values);
+var url_id = $('#url_id').val();
+var url = url_id + "&fc_filter=" + fc_values;
+window.location.href = url;
+}
+function doFunction3(value) {
+r_values = $('input:radio:checked.group3').map(function () {
+return this.value;
+}).get();
+var url_id = $('#url_id').val();
+var url = url_id + "&r_filter=" + r_values;
+window.location.href = url;
+}
+function doFunction4(value) {
+p_values = $('input:checkbox:checked.group4').map(function () {
+return this.value;
+}).get();
+var url_id = $('#url_id').val();
+var url = url_id + "&p_filter=" + p_values;
+window.location.href = url;
+}
+function doFunctionSubmit(value) {
+star_values = $('input:checkbox:checked.group1').map(function () {
+return this.value;
+}).get();
+fc_filter = $('input:checkbox:checked.group2').map(function () {
+return this.value;
+}).get();
+r_filter = $('input:radio:checked.group3').map(function () {
+return this.value;
+}).get();
+p_filter = $('input:checkbox:checked.group4').map(function () {
+return this.value;
+}).get();
+document.getElementById('r_filter').value = r_filter;
+document.getElementById('star_filter').value = star_values;
+document.getElementById('fc_filter').value = fc_filter;
+document.getElementById('p_filter').value = p_filter;
+}
+</script>
+<div id="content">
+<div class="row">
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div id="searchform" class="left-col">
+<h3>Search</h3>
+<form action="/search/results.php" method="get" id="search_form" name="search_form" onsubmit="doFunctionSubmit();">
+<div class="form-group">
+<label for="postcode">
+Destination/hotel name/post code
+</label>
+<input type="text" name="searchfor" id="searchfor" class="form-control" value="" onclick="if(this.value == '') this.value='';" /><input type="hidden" name="structured1" id="structured1" value="" /><input type="hidden" id="structured" name="structured" value="" />
+<input type="hidden" id="star_filter" name="star_filter" value="" />
+<input type="hidden" id="fc_filter" name="fc_filter" value="" />
+<input type="hidden" id="r_filter" name="r_filter" value="" />
+<input type="hidden" id="p_filter" name="p_filter" value="" />
+</div>
+<div class="form-group form-group-sm">
+<label for="arrivaldate">
+Arrival date:
+</label>
+<input type="text" name="date_arrival" id="arrivaldate" class="form-control" />
+<input type="hidden" name="date_arrival_fmt" value="d/m/y" /></div>
+<div class="form-group form-group-sm pull-right">
+<label for="departuredate">
+Departure date:
+</label>
+<input type="text" name="date_departure" id="departuredate" class="form-control " />
+<input type="hidden" name="date_departure_fmt" value="d/m/y" /></div>
+<div id="show">
+<div class="form-group" >
+<label for="rooms">Rooms</label>
+<select class="form-control" name="rooms" id="rooms">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+</select>
+</div>
+<div class="form-group">
+<label for="group_adults">Adults</label>
+<select class="form-control" name="group_adults" id="group_adults">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+</select>
+</div>
+<div class="form-group">
+<label for="group_children">Children</label>
+<select name="group_children" class="form-control" id="group_children">
+<option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+</div>
+<div id="children_text">
+<label style="display:none;">Ages</label>
+</div>
+</div>
+<input type="submit" value="Search" class="btn btn-primary"/>
+</form>
+</div>
+<div id="filter" class="left-col">
+<div class="title">
+<span>Filter By</span>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#the_filters" aria-expanded="false" aria-controls="the_filters">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+ <div id="the_filters" class="filters collapse">
+<span>Price (per night):</span>
+<div class="boxdiv"><input type="checkbox" class="group4" value="0-45" /> &#163;0 - &#163;45</div><div class="boxdiv"><input type="checkbox" class="group4" value="46-55" /> &#163;46 - &#163;55</div><div class="boxdiv"><input type="checkbox" class="group4" value="56-66" /> &#163;56 - &#163;66</div><div class="boxdiv"><input type="checkbox" class="group4" value="67-84" /> &#163;67 - &#163;84</div><div class="boxdiv"><input type="checkbox" class="group4" value="85" /> &#163;85+</div><span>Star rating:</span>
+<div class="boxdiv"><input type="checkbox" class="group1" value="1" onclick="doFunction();" /> 1 star</div><div class="boxdiv"><input type="checkbox" class="group1" value="2" onclick="doFunction();" /> 2 stars</div><div class="boxdiv"><input type="checkbox" class="group1" value="3" onclick="doFunction();" /> 3 stars</div><div class="boxdiv"><input type="checkbox" class="group1" value="4" onclick="doFunction();" /> 4 stars</div><div class="boxdiv"><input type="checkbox" class="group1" value="5" onclick="doFunction();" /> 5 stars</div><div class="boxdiv"><input type="checkbox" class="group1" value="0" onclick="doFunction();" /> Unrated</div><input type="hidden" value="/strabane.html" id="url_id">
+<span>Review score:</span>
+<div class="boxdiv"><input type="radio" class="group3" name="rscore" value="9" /> Superb 9+</div><div class="boxdiv"><input type="radio" class="group3" name="rscore" value="8" /> Very good 8+</div><div class="boxdiv"><input type="radio" class="group3" name="rscore" value="7" /> Good 7+</div><div class="boxdiv"><input type="radio" class="group3" name="rscore" value="6" /> Pleasant 6+</div><div class="boxdiv"><input type="radio" class="group3" name="rscore" value="0" /> All</div><span>Facilities:</span>
+<div class="boxdiv"><input type="checkbox" class="group2" value="31" /> Wi-fi</div><div class="boxdiv"><input type="checkbox" class="group2" value="16" /> Parking</div><div class="boxdiv"><input type="checkbox" class="group2" value="34" /> Airport shuttle</div><div class="boxdiv"><input type="checkbox" class="group2" value="25" /> Fitness centre</div><div class="boxdiv"><input type="checkbox" class="group2" value="18" /> Non-smoking rooms</div><div class="boxdiv"><input type="checkbox" class="group2" value="26" /> Swimming pool</div><div class="boxdiv"><input type="checkbox" class="group2" value="33" /> Family rooms</div><div class="boxdiv"><input type="checkbox" class="group2" value="22" /> Pets allowed</div><div class="boxdiv"><input type="checkbox" class="group2" value="17" /> Disabled facilities</div><div class="boxdiv"><input type="checkbox" class="group2" value="14" /> Restaurant</div><span>Room facilities:</span>
+<div class="boxdiv"><input type="checkbox" class="group2" value="32" /> Air conditioning</div><div class="boxdiv"><input type="checkbox" class="group2" value="0" /> En-suite</div><div class="boxdiv"><input type="checkbox" class="group2" value="3" /> Television</div><div class="boxdiv"><input type="checkbox" class="group2" value="35" /> Patio</div><div class="boxdiv"><input type="checkbox" class="group2" value="36"  /> View</div></form>
+</div></div>
+<div id="filter" class="left-col">
+<div class="title">
+<span>Filter By</span>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#town_filters" aria-expanded="false" aria-controls="town_filters">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div id="town_filters" class="filters collapse">
+<select class="form-control" name="fastlink">
+<option>UK Towns and Counties</option><option value="http://www.smoothhound.co.uk/aberdeen.html">Aberdeen</option>
+<option value="http://www.smoothhound.co.uk/135.html">Aberdeenshire</option>
+<option value="http://www.smoothhound.co.uk/132.html">Angus</option>
+<option value="http://www.smoothhound.co.uk/125.html">Argyll and Bute</option>
+<option value="http://www.smoothhound.co.uk/ayr.html">Ayr</option>
+<option value="http://www.smoothhound.co.uk/bangor.html">Bangor</option>
+<option value="http://www.smoothhound.co.uk/basingst.html">Basingstoke</option>
+<option value="http://www.smoothhound.co.uk/bath.html">Bath</option>
+<option value="http://www.smoothhound.co.uk/66.html">Bedfordshire</option>
+<option value="http://www.smoothhound.co.uk/belfast.html">Belfast</option>
+<option value="http://www.smoothhound.co.uk/26.html">Berkshire</option>
+<option value="http://www.smoothhound.co.uk/birmingh.html">Birmingham</option>
+<option value="http://www.smoothhound.co.uk/blackpoo.html">Blackpool</option>
+<option value="http://www.smoothhound.co.uk/bournemo.html">Bournemouth</option>
+<option value="http://www.smoothhound.co.uk/bourtono.html">Bourton On The Water</option>
+<option value="http://www.smoothhound.co.uk/bracknel.html">Bracknell</option>
+<option value="http://www.smoothhound.co.uk/brighton.html">Brighton</option>
+<option value="http://www.smoothhound.co.uk/bristol.html">Bristol</option>
+<option value="http://www.smoothhound.co.uk/broadway.html">Broadway</option>
+<option value="http://www.smoothhound.co.uk/73.html">Buckinghamshire</option>
+<option value="http://www.smoothhound.co.uk/buxton.html">Buxton</option>
+<option value="http://www.smoothhound.co.uk/cambridg.html">Cambridge</option>
+<option value="http://www.smoothhound.co.uk/65.html">Cambridgeshire</option>
+<option value="http://www.smoothhound.co.uk/canterbu.html">Canterbury</option>
+<option value="http://www.smoothhound.co.uk/cardiff.html">Cardiff</option>
+<option value="http://www.smoothhound.co.uk/carlisle.html">Carlisle</option>
+<option value="http://www.smoothhound.co.uk/83.html">Carmarthenshire</option>
+<option value="http://www.smoothhound.co.uk/85.html">Ceredigion</option>
+<option value="http://www.smoothhound.co.uk/chelmsfo.html">Chelmsford</option>
+<option value="http://www.smoothhound.co.uk/cheltenh.html">Cheltenham</option>
+<option value="http://www.smoothhound.co.uk/96.html">Cheshire</option>
+<option value="http://www.smoothhound.co.uk/chester.html">Chester</option>
+<option value="http://www.smoothhound.co.uk/clackmannanshire.html">Clackmannanshire</option>
+<option value="http://www.smoothhound.co.uk/140.html">Co. Antrim</option>
+<option value="http://www.smoothhound.co.uk/co-armagh.html">Co. Armagh</option>
+<option value="http://www.smoothhound.co.uk/co-down.html">Co. Down</option>
+<option value="http://www.smoothhound.co.uk/co-fermanagh.html">Co. Fermanagh</option>
+<option value="http://www.smoothhound.co.uk/co-londonderry.html">Co. Londonderry</option>
+<option value="http://www.smoothhound.co.uk/co-tyrone.html">Co. Tyrone</option>
+<option value="http://www.smoothhound.co.uk/colchest.html">Colchester</option>
+<option value="http://www.smoothhound.co.uk/89.html">Conwy</option>
+<option value="http://www.smoothhound.co.uk/1.html">Cornwall</option>
+<option value="http://www.smoothhound.co.uk/coventry.html">Coventry</option>
+<option value="http://www.smoothhound.co.uk/croydon.html">Croydon</option>
+<option value="http://www.smoothhound.co.uk/108.html">Cumbria (Lake District)</option>
+<option value="http://www.smoothhound.co.uk/darlingt.html">Darlington</option>
+<option value="http://www.smoothhound.co.uk/90.html">Denbighshire</option>
+<option value="http://www.smoothhound.co.uk/derby.html">Derby</option>
+<option value="http://www.smoothhound.co.uk/97.html">Derbyshire</option>
+<option value="http://www.smoothhound.co.uk/11.html">Devon</option>
+<option value="http://www.smoothhound.co.uk/doncaste.html">Doncaster</option>
+<option value="http://www.smoothhound.co.uk/16.html">Dorset</option>
+<option value="http://www.smoothhound.co.uk/dover.html">Dover</option>
+<option value="http://www.smoothhound.co.uk/122.html">Dumfries and Galloway</option>
+<option value="http://www.smoothhound.co.uk/118.html">Durham</option>
+<option value="http://www.smoothhound.co.uk/e-ayrshire.html">East Ayrshire</option>
+<option value="http://www.smoothhound.co.uk/128.html">East Lothian</option>
+<option value="http://www.smoothhound.co.uk/103.html">East Riding of Yorkshire</option>
+<option value="http://www.smoothhound.co.uk/40.html">East Sussex</option>
+<option value="http://www.smoothhound.co.uk/edinburg.html">Edinburgh</option>
+<option value="http://www.smoothhound.co.uk/60.html">Essex</option>
+<option value="http://www.smoothhound.co.uk/exeter.html">Exeter</option>
+<option value="http://www.smoothhound.co.uk/129-falkirk.html">Falkirk</option>
+<option value="http://www.smoothhound.co.uk/130.html">Fife</option>
+<option value="http://www.smoothhound.co.uk/flintshire.html">Flintshire</option>
+<option value="http://www.smoothhound.co.uk/folkesto.html">Folkestone</option>
+<option value="http://www.smoothhound.co.uk/42.html">Gatwick Airport</option>
+<option value="http://www.smoothhound.co.uk/glasgow.html">Glasgow</option>
+<option value="http://www.smoothhound.co.uk/glastonb.html">Glastonbury</option>
+<option value="http://www.smoothhound.co.uk/gloucest.html">Gloucester</option>
+<option value="http://www.smoothhound.co.uk/78.html">Gloucestershire</option>
+<option value="http://www.smoothhound.co.uk/guernsey.html">Guernsey</option>
+<option value="http://www.smoothhound.co.uk/guildfor.html">Guildford</option>
+<option value="http://www.smoothhound.co.uk/91.html">Gwynedd</option>
+<option value="http://www.smoothhound.co.uk/halifax.html">Halifax</option>
+<option value="http://www.smoothhound.co.uk/31.html">Hampshire</option>
+<option value="http://www.smoothhound.co.uk/harrogat.html">Harrogate</option>
+<option value="http://www.smoothhound.co.uk/harrow.html">Harrow</option>
+<option value="http://www.smoothhound.co.uk/53.html">Heathrow Airport</option>
+<option value="http://www.smoothhound.co.uk/henleyon.html">Henley On Thames</option>
+<option value="http://www.smoothhound.co.uk/hereford.html">Hereford</option>
+<option value="http://www.smoothhound.co.uk/herefordshire.html">Herefordshire</option>
+<option value="http://www.smoothhound.co.uk/68.html">Hertfordshire</option>
+<option value="http://www.smoothhound.co.uk/134.html">Highland</option>
+<option value="http://www.smoothhound.co.uk/hull.html">Hull</option>
+<option value="http://www.smoothhound.co.uk/huntingd.html">Huntingdon</option>
+<option value="http://www.smoothhound.co.uk/inverclyde.html">Inverclyde</option>
+<option value="http://www.smoothhound.co.uk/invernes.html">Inverness</option>
+<option value="http://www.smoothhound.co.uk/ipswich.html">Ipswich</option>
+<option value="http://www.smoothhound.co.uk/88.html">Isle of Anglesey</option>
+<option value="http://www.smoothhound.co.uk/isleofar.html">Isle of Arran</option>
+<option value="http://www.smoothhound.co.uk/104.html">Isle of Man</option>
+<option value="http://www.smoothhound.co.uk/isleofsk.html">Isle Of Skye</option>
+<option value="http://www.smoothhound.co.uk/33.html">Isle of Wight</option>
+<option value="http://www.smoothhound.co.uk/jersey.html">Jersey</option>
+<option value="http://www.smoothhound.co.uk/39.html">Kent</option>
+<option value="http://www.smoothhound.co.uk/keswick.html">Keswick</option>
+<option value="http://www.smoothhound.co.uk/kingslyn.html">Kings Lynn</option>
+<option value="http://www.smoothhound.co.uk/92.html">Lancashire</option>
+<option value="http://www.smoothhound.co.uk/leeds.html">Leeds</option>
+<option value="http://www.smoothhound.co.uk/leiceste.html">Leicester</option>
+<option value="http://www.smoothhound.co.uk/69.html">Leicestershire</option>
+<option value="http://www.smoothhound.co.uk/lincoln.html">Lincoln</option>
+<option value="http://www.smoothhound.co.uk/99.html">Lincolnshire</option>
+<option value="http://www.smoothhound.co.uk/liverpoo.html">Liverpool</option>
+<option value="http://www.smoothhound.co.uk/map5.html">London</option>
+<option value="http://www.smoothhound.co.uk/london.html">London</option>
+<option value="http://www.smoothhound.co.uk/luton.html">Luton</option>
+<option value="http://www.smoothhound.co.uk/lymeregi.html">Lyme Regis</option>
+<option value="http://www.smoothhound.co.uk/maidenhe.html">Maidenhead</option>
+<option value="http://www.smoothhound.co.uk/maidston.html">Maidstone</option>
+<option value="http://www.smoothhound.co.uk/manchest.html">Manchester</option>
+<option value="http://www.smoothhound.co.uk/midlothian.html">Midlothian</option>
+<option value="http://www.smoothhound.co.uk/miltonke.html">Milton Keynes</option>
+<option value="http://www.smoothhound.co.uk/79.html">Monmouthshire</option>
+<option value="http://www.smoothhound.co.uk/136.html">Moray</option>
+<option value="http://www.smoothhound.co.uk/82.html">Neath Port Talbot</option>
+<option value="http://www.smoothhound.co.uk/newcastl.html">Newcastle</option>
+<option value="http://www.smoothhound.co.uk/newportg.html">Newport, Gwent</option>
+<option value="http://www.smoothhound.co.uk/57.html">Norfolk</option>
+<option value="http://www.smoothhound.co.uk/127.html">North Ayrshire</option>
+<option value="http://www.smoothhound.co.uk/n-lanarkshire.html">North Lanarkshire</option>
+<option value="http://www.smoothhound.co.uk/112.html">North Yorkshire</option>
+<option value="http://www.smoothhound.co.uk/northamp.html">Northampton</option>
+<option value="http://www.smoothhound.co.uk/70.html">Northamptonshire</option>
+<option value="http://www.smoothhound.co.uk/115.html">Northumberland</option>
+<option value="http://www.smoothhound.co.uk/norwich.html">Norwich</option>
+<option value="http://www.smoothhound.co.uk/nottingh.html">Nottingham</option>
+<option value="http://www.smoothhound.co.uk/102.html">Nottinghamshire</option>
+<option value="http://www.smoothhound.co.uk/139.html">Orkney Islands</option>
+<option value="http://www.smoothhound.co.uk/oxford.html">Oxford</option>
+<option value="http://www.smoothhound.co.uk/72.html">Oxfordshire</option>
+<option value="http://www.smoothhound.co.uk/84.html">Pembrokeshire</option>
+<option value="http://www.smoothhound.co.uk/penzance.html">Penzance</option>
+<option value="http://www.smoothhound.co.uk/131.html">Perth and Kinross</option>
+<option value="http://www.smoothhound.co.uk/plymouth.html">Plymouth</option>
+<option value="http://www.smoothhound.co.uk/87.html">Powys</option>
+<option value="http://www.smoothhound.co.uk/reading.html">Reading</option>
+<option value="http://www.smoothhound.co.uk/126.html">Renfrewshire</option>
+<option value="http://www.smoothhound.co.uk/81.html">Rhondda Cynon Taff</option>
+<option value="http://www.smoothhound.co.uk/richmond.html">Richmond</option>
+<option value="http://www.smoothhound.co.uk/69-rutland.html">Rutland</option>
+<option value="http://www.smoothhound.co.uk/salisbur.html">Salisbury</option>
+<option value="http://www.smoothhound.co.uk/scarboro.html">Scarborough</option>
+<option value="http://www.smoothhound.co.uk/123.html">Scottish Borders</option>
+<option value="http://www.smoothhound.co.uk/sheffiel.html">Sheffield</option>
+<option value="http://www.smoothhound.co.uk/139.html">Shetland Islands</option>
+<option value="http://www.smoothhound.co.uk/shrewsbu.html">Shrewsbury</option>
+<option value="http://www.smoothhound.co.uk/76.html">Shropshire</option>
+<option value="http://www.smoothhound.co.uk/solihull.html">Solihull</option>
+<option value="http://www.smoothhound.co.uk/21.html">Somerset</option>
+<option value="http://www.smoothhound.co.uk/s-ayrshire.html">South Ayrshire</option>
+<option value="http://www.smoothhound.co.uk/s-lanarkshire.html">South Lanarkshire</option>
+<option value="http://www.smoothhound.co.uk/98.html">South Yorkshire</option>
+<option value="http://www.smoothhound.co.uk/southamp.html">Southampton</option>
+<option value="http://www.smoothhound.co.uk/southend.html">Southend</option>
+<option value="http://www.smoothhound.co.uk/southpor.html">Southport</option>
+<option value="http://www.smoothhound.co.uk/stalbans.html">St Albans</option>
+<option value="http://www.smoothhound.co.uk/standrew.html">St Andrews</option>
+<option value="http://www.smoothhound.co.uk/stdavids.html">St Davids</option>
+<option value="http://www.smoothhound.co.uk/stives.html">St Ives</option>
+<option value="http://www.smoothhound.co.uk/74.html">Staffordshire</option>
+<option value="http://www.smoothhound.co.uk/stansted.html">Stansted Airport</option>
+<option value="http://www.smoothhound.co.uk/129.html">Stirling</option>
+<option value="http://www.smoothhound.co.uk/stokeont.html">Stoke On Trent</option>
+<option value="http://www.smoothhound.co.uk/stratfor.html">Stratford</option>
+<option value="http://www.smoothhound.co.uk/61.html">Suffolk</option>
+<option value="http://www.smoothhound.co.uk/34.html">Surrey</option>
+<option value="http://www.smoothhound.co.uk/swindon.html">Swindon</option>
+<option value="http://www.smoothhound.co.uk/taunton.html">Taunton</option>
+<option value="http://www.smoothhound.co.uk/torfaen.html">Torfaen</option>
+<option value="http://www.smoothhound.co.uk/torquay.html">Torquay</option>
+<option value="http://www.smoothhound.co.uk/119.html">Tyne and Wear</option>
+<option value="http://www.smoothhound.co.uk/80.html">Vale of Glamorgan</option>
+<option value="http://www.smoothhound.co.uk/warringt.html">Warrington</option>
+<option value="http://www.smoothhound.co.uk/warwick.html">Warwick</option>
+<option value="http://www.smoothhound.co.uk/71.html">Warwickshire</option>
+<option value="http://www.smoothhound.co.uk/wembley.html">Wembley</option>
+<option value="http://www.smoothhound.co.uk/w-dunbartonshire.html">West Dunbartonshire</option>
+<option value="http://www.smoothhound.co.uk/w-lothian.html">West Lothian</option>
+<option value="http://www.smoothhound.co.uk/75.html">West Midlands</option>
+<option value="http://www.smoothhound.co.uk/42.html">West Sussex</option>
+<option value="http://www.smoothhound.co.uk/93.html">West Yorkshire</option>
+<option value="http://www.smoothhound.co.uk/138.html">Western Isles</option>
+<option value="http://www.smoothhound.co.uk/29.html">Wiltshire</option>
+<option value="http://www.smoothhound.co.uk/winchest.html">Winchester</option>
+<option value="http://www.smoothhound.co.uk/winderme.html">Windermere</option>
+<option value="http://www.smoothhound.co.uk/windsor.html">Windsor</option>
+<option value="http://www.smoothhound.co.uk/wolverha.html">Wolverhampton</option>
+<option value="http://www.smoothhound.co.uk/worceste.html">Worcester</option>
+<option value="http://www.smoothhound.co.uk/77.html">Worcestershire</option>
+<option value="http://www.smoothhound.co.uk/york.html">York</option>
+</select>
+<label>Select a Country</label>
+<div id="country_select">
+<ul id="country_list">
+<li><a href="/afghanistan/index.html">Afghanistan</a></li><li><a href="/albania/index.html">Albania</a></li><li><a href="/algeria/index.html">Algeria</a></li><li><a href="/andorra/index.html">Andorra</a></li><li><a href="/angola/index.html">Angola</a></li><li><a href="/anguilla/index.html">Anguilla</a></li><li><a href="/antigua-and-barbuda/index.html">Antigua &amp; Barbuda</a></li><li><a href="/argentina/index.html">Argentina</a></li><li><a href="/armenia/index.html">Armenia</a></li><li><a href="/aruba/index.html">Aruba</a></li><li><a href="/australia/index.html">Australia</a></li><li><a href="/austria/index.html">Austria</a></li><li><a href="/azerbaijan/index.html">Azerbaijan</a></li><li><a href="/bahamas/index.html">Bahamas</a></li><li><a href="/bahrain/index.html">Bahrain</a></li><li><a href="/bangladesh/index.html">Bangladesh</a></li><li><a href="/barbados/index.html">Barbados</a></li><li><a href="/belarus/index.html">Belarus</a></li><li><a href="/belgium/index.html">Belgium</a></li><li><a href="/belize/index.html">Belize</a></li><li><a href="/benin/index.html">Benin</a></li><li><a href="/bermuda/index.html">Bermuda</a></li><li><a href="/bhutan/index.html">Bhutan</a></li><li><a href="/bolivia/index.html">Bolivia</a></li><li><a href="/bosnia-and-herzegovina/index.html">Bosnia &amp; Herzegovina</a></li><li><a href="/botswana/index.html">Botswana</a></li><li><a href="/brazil/index.html">Brazil</a></li><li><a href="/british-virgin-islands/index.html">British Virgin Islands</a></li><li><a href="/brunei/index.html">Brunei</a></li><li><a href="/bulgaria/index.html">Bulgaria</a></li><li><a href="/burkina-faso/index.html">Burkina Faso</a></li><li><a href="/burundi/index.html">Burundi</a></li><li><a href="/cambodia/index.html">Cambodia</a></li><li><a href="/cameroon/index.html">Cameroon</a></li><li><a href="/canada/index.html">Canada</a></li><li><a href="/cape-verde/index.html">Cape Verde</a></li><li><a href="/cayman-islands/index.html">Cayman Islands</a></li><li><a href="/central-african-republic/index.html">Central African Republic</a></li><li><a href="/chad/index.html">Chad</a></li><li><a href="/chile/index.html">Chile</a></li><li><a href="/china/index.html">China</a></li><li><a href="/colombia/index.html">Colombia</a></li><li><a href="/congo/index.html">Congo</a></li><li><a href="/cook-islands/index.html">Cook Islands</a></li><li><a href="/costa-rica/index.html">Costa Rica</a></li><li><a href="/croatia/index.html">Croatia</a></li><li><a href="/cyprus/index.html">Cyprus</a></li><li><a href="/czech-republic/index.html">Czech Republic</a></li><li><a href="/denmark/index.html">Denmark</a></li><li><a href="/djibouti/index.html">Djibouti</a></li><li><a href="/dominica/index.html">Dominica</a></li><li><a href="/dominican-republic/index.html">Dominican Republic</a></li><li><a href="/ecuador/index.html">Ecuador</a></li><li><a href="/egypt/index.html">Egypt</a></li><li><a href="/el-salvador/index.html">El Salvador</a></li><li><a href="/eritrea/index.html">Eritrea</a></li><li><a href="/estonia/index.html">Estonia</a></li><li><a href="/ethiopia/index.html">Ethiopia</a></li><li><a href="/falkland-islands/index.html">Falkland Islands</a></li><li><a href="/faroe-islands/index.html">Faroe Islands</a></li><li><a href="/fiji/index.html">Fiji</a></li><li><a href="/finland/index.html">Finland</a></li><li><a href="/france/index.html">France</a></li><li><a href="/french-guiana/index.html">French Guiana</a></li><li><a href="/french-polynesia/index.html">French Polynesia</a></li><li><a href="/gabon/index.html">Gabon</a></li><li><a href="/gambia/index.html">Gambia</a></li><li><a href="/georgia/index.html">Georgia</a></li><li><a href="/germany/index.html">Germany</a></li><li><a href="/ghana/index.html">Ghana</a></li><li><a href="/gibraltar/index.html">Gibraltar</a></li><li><a href="/greece/index.html">Greece</a></li><li><a href="/greenland/index.html">Greenland</a></li><li><a href="/grenada/index.html">Grenada</a></li><li><a href="/guadeloupe/index.html">Guadeloupe</a></li><li><a href="/guam/index.html">Guam</a></li><li><a href="/guatemala/index.html">Guatemala</a></li><li><a href="/guinea/index.html">Guinea</a></li><li><a href="/guineabissau/index.html">Guinea-bissau</a></li><li><a href="/guyana/index.html">Guyana</a></li><li><a href="/haiti/index.html">Haiti</a></li><li><a href="/honduras/index.html">Honduras</a></li><li><a href="/hong-kong/index.html">Hong Kong</a></li><li><a href="/hungary/index.html">Hungary</a></li><li><a href="/iceland/index.html">Iceland</a></li><li><a href="/india/index.html">India</a></li><li><a href="/indonesia/index.html">Indonesia</a></li><li><a href="/iraq/index.html">Iraq</a></li><li><a href="/ireland/index.html">Ireland</a></li><li><a href="/israel/index.html">Israel</a></li><li><a href="/italy/index.html">Italy</a></li><li><a href="/ivory-coast/index.html">Ivory Coast</a></li><li><a href="/jamaica/index.html">Jamaica</a></li><li><a href="/japan/index.html">Japan</a></li><li><a href="/jordan/index.html">Jordan</a></li><li><a href="/kazakhstan/index.html">Kazakhstan</a></li><li><a href="/kenya/index.html">Kenya</a></li><li><a href="/kiribati/index.html">Kiribati</a></li><li><a href="/kuwait/index.html">Kuwait</a></li><li><a href="/kyrgyzstan/index.html">Kyrgyzstan</a></li><li><a href="/laos/index.html">Laos</a></li><li><a href="/latvia/index.html">Latvia</a></li><li><a href="/lebanon/index.html">Lebanon</a></li><li><a href="/lesotho/index.html">Lesotho</a></li><li><a href="/libya/index.html">Libya</a></li><li><a href="/liechtenstein/index.html">Liechtenstein</a></li><li><a href="/lithuania/index.html">Lithuania</a></li><li><a href="/luxembourg/index.html">Luxembourg</a></li><li><a href="/macau/index.html">Macau</a></li><li><a href="/macedonia/index.html">Macedonia</a></li><li><a href="/madagascar/index.html">Madagascar</a></li><li><a href="/malawi/index.html">Malawi</a></li><li><a href="/malaysia/index.html">Malaysia</a></li><li><a href="/maldives/index.html">Maldives</a></li><li><a href="/mali/index.html">Mali</a></li><li><a href="/malta/index.html">Malta</a></li><li><a href="/marshall-islands/index.html">Marshall Islands</a></li><li><a href="/martinique/index.html">Martinique</a></li><li><a href="/mauritania/index.html">Mauritania</a></li><li><a href="/mauritius/index.html">Mauritius</a></li><li><a href="/mexico/index.html">Mexico</a></li><li><a href="/micronesia/index.html">Micronesia</a></li><li><a href="/moldova/index.html">Moldova</a></li><li><a href="/monaco/index.html">Monaco</a></li><li><a href="/mongolia/index.html">Mongolia</a></li><li><a href="/morocco/index.html">Morocco</a></li><li><a href="/mozambique/index.html">Mozambique</a></li><li><a href="/myanmar/index.html">Myanmar</a></li><li><a href="/namibia/index.html">Namibia</a></li><li><a href="/nauru/index.html">Nauru</a></li><li><a href="/nepal/index.html">Nepal</a></li><li><a href="/netherlands/index.html">Netherlands</a></li><li><a href="/netherlands-antilles/index.html">Netherlands Antilles</a></li><li><a href="/new-caledonia/index.html">New Caledonia</a></li><li><a href="/new-zealand/index.html">New Zealand</a></li><li><a href="/nicaragua/index.html">Nicaragua</a></li><li><a href="/niger/index.html">Niger</a></li><li><a href="/nigeria/index.html">Nigeria</a></li><li><a href="/niue/index.html">Niue</a></li><li><a href="/norfolk-island/index.html">Norfolk Island</a></li><li><a href="/norway/index.html">Norway</a></li><li><a href="/oman/index.html">Oman</a></li><li><a href="/pakistan/index.html">Pakistan</a></li><li><a href="/palau/index.html">Palau</a></li><li><a href="/panama/index.html">Panama</a></li><li><a href="/papua-new-guinea/index.html">Papua New Guinea</a></li><li><a href="/paraguay/index.html">Paraguay</a></li><li><a href="/peru/index.html">Peru</a></li><li><a href="/philippines/index.html">Philippines</a></li><li><a href="/poland/index.html">Poland</a></li><li><a href="/portugal/index.html">Portugal</a></li><li><a href="/puerto-rico/index.html">Puerto Rico</a></li><li><a href="/qatar/index.html">Qatar</a></li><li><a href="/reunion/index.html">Reunion</a></li><li><a href="/romania/index.html">Romania</a></li><li><a href="/russia/index.html">Russia</a></li><li><a href="/rwanda/index.html">Rwanda</a></li><li><a href="/samoa/index.html">Samoa</a></li><li><a href="/san-marino/index.html">San Marino</a></li><li><a href="/sao-tome-and-principe/index.html">Sao Tome &amp; Principe</a></li><li><a href="/saudi-arabia/index.html">Saudi Arabia</a></li><li><a href="/senegal/index.html">Senegal</a></li><li><a href="/seychelles/index.html">Seychelles</a></li><li><a href="/sierra-leone/index.html">Sierra Leone</a></li><li><a href="/singapore/index.html">Singapore</a></li><li><a href="/slovakia/index.html">Slovakia</a></li><li><a href="/slovenia/index.html">Slovenia</a></li><li><a href="/solomon-islands/index.html">Solomon Islands</a></li><li><a href="/south-africa/index.html">South Africa</a></li><li><a href="/south-korea/index.html">South Korea</a></li><li><a href="/spain/index.html">Spain</a></li><li><a href="/sri-lanka/index.html">Sri Lanka</a></li><li><a href="/st-vincent-and-the-grenadines/index.html">St. Vincent &amp; Grenadines</a></li><li><a href="/st-kitts-and-nevis/index.html">St. Kitts &amp; Nevis</a></li><li><a href="/st-lucia/index.html">St. Lucia</a></li><li><a href="/st-pierre-and-miquelon/index.html">St. Pierre &amp; Miquelon</a></li><li><a href="/suriname/index.html">Suriname</a></li><li><a href="/swaziland/index.html">Swaziland</a></li><li><a href="/sweden/index.html">Sweden</a></li><li><a href="/switzerland/index.html">Switzerland</a></li><li><a href="/taiwan/index.html">Taiwan</a></li><li><a href="/tajikistan/index.html">Tajikistan</a></li><li><a href="/tanzania/index.html">Tanzania</a></li><li><a href="/thailand/index.html">Thailand</a></li><li><a href="/togo/index.html">Togo</a></li><li><a href="/tonga/index.html">Tonga</a></li><li><a href="/trinidad-and-tobago/index.html">Trinidad &amp; Tobago</a></li><li><a href="/tunisia/index.html">Tunisia</a></li><li><a href="/turkey/index.html">Turkey</a></li><li><a href="/turkmenistan/index.html">Turkmenistan</a></li><li><a href="/turks-and-caicos-islands/index.html">Turks &amp; Caicos Islands</a></li><li><a href="/tuvalu/index.html">Tuvalu</a></li><li><a href="/uganda/index.html">Uganda</a></li><li><a href="/ukraine/index.html">Ukraine</a></li><li><a href="/united-arab-emirates/index.html">United Arab Emirates</a></li><li><a href="/index.html">United Kingdom</a></li><li><a href="/uruguay/index.html">Uruguay</a></li><li><a href="/us-virgin-islands/index.html">US Virgin Islands</a></li><li><a href="/usa/index.html">USA</a></li><li><a href="/uzbekistan/index.html">Uzbekistan</a></li><li><a href="/vanuatu/index.html">Vanuatu</a></li><li><a href="/venezuela/index.html">Venezuela</a></li><li><a href="/vietnam/index.html">Vietnam</a></li><li><a href="/yemen/index.html">Yemen</a></li><li><a href="/yugoslavia/index.html">Yugoslavia</a></li><li><a href="/zambia/index.html">Zambia</a></li><li><a href="/zimbabwe/index.html">Zimbabwe</a></li></ul></div></div></div></div>
+<div class="col-md-9 col-sm-8 col-xs-12">
+<div id="content_holder">
+<p class="banner_heading first_banner">Click on the map on the area of your choice or select from the list below</p>
+<div class="box-row">
+<div class="left-50 pull-left">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4">
+<a class="title_banner england" href="#England">England</a>
+<a href="#England">
+<img src="/images/england1.jpg" alt=""/>
+</a>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4">
+<a class="title_banner scotland" href="#Scotland">Scotland</a>
+<a href="#Scotland">
+<img src="/images/scotland3.jpg" alt=""/>
+</a>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4">
+<a class="title_banner wales" href="#Wales">Wales</a>
+<a href="#Wales">
+<img src="/images/wales2.jpg" alt=""/>
+</a>
+</div>   
+</div>
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4">
+<a class="title_banner ni" href="#Ireland">Northern Ireland</a>
+<a href="#Ireland">
+<img src="images/ireland1.jpg" alt=""/>
+</a>
+</div> 
+<div class="col-md-4 col-sm-4 col-xs-4">
+<a class="title_banner specialist" href="#Specialist">Specialist</a>
+<a href="#Specialist">
+<img src="/images/golf2.jpg" alt=""/>
+</a>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4" >
+<a class="title_banner top100" href="#Top">Top 100 Towns</a>
+<a href="#Top">
+<img src="/images/town1.jpg" alt="Top 100 Hotels"/>
+</a>
+</div>
+</div>
+<p class="continent">We have hotels all around the world - select a continent below</p>
+<img src="/images/worldmap.png" alt="World Map" usemap="#world" id="worldmap"/>
+</div>
+<div class="pull-right right-50">
+<div class="banner_heading select_heading">
+ Select from Map
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mapselect" aria-expanded="true" aria-controls="mapselect">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div id="mapselect" class="collapse in">
+<img src="/images/bigmap.png" usemap="#uk" alt="UK map" />
+</div></div></div>
+<div class="white_bg">
+<div class="white_box">
+<p class="banner_heading atoz scotland">
+<span>UK A to Z</span> <span>Browse UK hotels by Town's Initial Letter</span></p>
+<div class="text-centre">
+<a href="/towna.html">A</a>
+<a href="/townb.html">B</a>
+<a href="/townc.html">C</a>
+<a href="/townd.html">D</a>
+<a href="/towne.html">E</a>
+<a href="/townf.html">F</a>
+<a href="/towng.html">G</a>
+<a href="/townh.html">H</a>
+<a href="/towni.html">I</a>
+<a href="/townj.html">J</a>
+<a href="/townk.html">K</a>
+<a href="/townl.html">L</a>
+<a href="/townm.html">M</a>
+<a href="/townn.html">N</a>
+<a href="/towno.html">O</a>
+<a href="/townp.html">P</a>
+<a href="/townq.html">Q</a>
+<a href="/townr.html">R</a>
+<a href="/towns.html">S</a>
+<a href="/townt.html">T</a>
+<a href="/townu.html">U</a>
+<a href="/townv.html">V</a>
+<a href="/townw.html">W</a>
+<a href="/towny.html">Y</a>
+</div></div>
+<div class="white_box" id="England">
+<p class="banner_heading england">England
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#englandbox" aria-expanded="true" aria-controls="englandbox">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button></p>
+<div id="englandbox" class="collapse in">
+<div class="box_img">
+<img src="/images/england1.jpg" alt="" />
+<img src="/images/england2.jpg" alt="" />
+<img src="/images/england3.jpg" alt="" />
+<img src="/images/england4.jpg" alt="" />
+</div>
+<div class="place_list"><ul>
+<li><a href="/66.html">Bedfordshire</a></li>
+<li><a href="/26.html">Berkshire</a></li>
+<li><a href="/73.html">Buckinghamshire</a></li>
+<li><a href="/65.html">Cambridgeshire</a></li>
+<li><a href="/96.html">Cheshire</a></li>
+<li><a href="/bristol.html">City of Bristol</a></li>
+<li><a href="/1.html">Cornwall</a></li>
+<li><a href="/108.html">Cumbria (Lake District)</a></li>
+<li><a href="/97.html">Derbyshire</a></li>
+<li><a href="/11.html">Devon</a></li>
+<li><a href="/16.html">Dorset</a></li>
+<li><a href="/118.html">Durham</a></li>
+<li><a href="/103.html">East Riding of Yorkshire</a></li>
+<li><a href="/60.html">Essex</a></li>
+<li><a href="/78.html">Gloucestershire</a></li>
+<li><a href="/guernsey.html">Guernsey</a></li>
+<li><a href="/31.html">Hampshire</a></li>
+<li><a href="/herefordshire.html">Herefordshire</a></li>
+<li><a href="/68.html">Hertfordshire</a></li>
+<li><a href="/104.html">Isle of Man</a></li>
+<li><a href="/33.html">Isle of Wight</a></li>
+<li><a href="/jersey.html">Jersey</a></li>
+<li><a href="/39.html">Kent</a></li>
+<li><a href="/92.html">Lancashire</a></li>
+<li><a href="/69.html">Leicestershire</a></li>
+<li><a href="/99.html">Lincolnshire</a></li>
+<li><a href="/map5.html">London</a></li>
+<li><a href="/95.html">Manchester</a></li>
+<li><a href="/57.html">Norfolk</a></li>
+<li><a href="/70.html">Northamptonshire</a></li>
+<li><a href="/115.html">Northumberland</a></li>
+<li><a href="/102.html">Nottinghamshire</a></li>
+<li><a href="/72.html">Oxfordshire</a></li>
+<li><a href="/69-rutland.html">Rutland</a></li>
+<li><a href="/76.html">Shropshire</a></li>
+<li><a href="/21.html">Somerset</a></li>
+<li><a href="/74.html">Staffordshire</a></li>
+<li><a href="/61.html">Suffolk</a></li>
+<li><a href="/34.html">Surrey</a></li>
+<li><a href="/40.html">East Sussex</a></li>
+<li><a href="/42.html">West Sussex</a></li>
+<li><a href="/119.html">Tyne and Wear</a></li>
+<li><a href="/71.html">Warwickshire</a></li>
+<li><a href="/75.html">West Midlands</a></li>
+<li><a href="/29.html">Wiltshire</a></li>
+<li><a href="/112.html">North Yorkshire</a></li>
+<li><a href="/98.html">South Yorkshire</a></li>
+<li><a href="/93.html">West Yorkshire</a></li>
+<li><a href="/77.html">Worcestershire</a></li>
+</ul></div></div></div>
+<div class="white_box" id="Scotland">
+<p class="banner_heading scotland">Scotland
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#scotlandbox" aria-expanded="true" aria-controls="scotlandbox">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button></p>
+<div id="scotlandbox" class="collapse in">
+<div class="box_img">
+<img src="images/scotland1.jpg" alt="" />
+<img src="images/scotland2.jpg" alt="" />
+<img src="images/scotland3.jpg" alt="" />
+<img src="images/scotland4.jpg" alt="" />
+</div>
+<div class="place_list"><ul>
+<li><a href="/135.html">Aberdeenshire</a></li>
+<li><a href="/132.html">Angus</a></li>
+<li><a href="/125.html">Argyll and Bute</a></li>
+<li><a href="/clackmannanshire.html">Clackmannanshire</a></li>
+<li><a href="/122.html">Dumfries and Galloway</a></li>
+<li><a href="/e-ayrshire.html">East Ayrshire</a></li>
+<li><a href="/128.html">East Lothian</a></li>
+<li><a href="/edinburg.html">Edinburgh</a></li>
+<li><a href="/129-falkirk.html">Falkirk</a></li>
+<li><a href="/130.html">Fife</a></li>
+<li><a href="/glasgow.html">Glasgow</a></li>
+<li><a href="/134.html">Highland</a></li>
+<li><a href="/inverclyde.html">Inverclyde</a></li>
+<li><a href="/isleofar.html">Isle of Arran</a></li>
+<li><a href="/134.html">Isle of Skye</a></li>
+<li><a href="/midlothian.html">Midlothian</a></li>
+<li><a href="/136.html">Moray</a></li>
+<li><a href="/127.html">North Ayrshire</a></li>
+<li><a href="/n-lanarkshire.html">North Lanarkshire</a></li>
+<li><a href="/131.html">Perth and Kinross</a></li>
+<li><a href="/139.html">Orkney Islands</a></li>
+<li><a href="/126.html">Renfrewshire</a></li>
+<li><a href="/123.html">Scottish Borders</a></li>
+<li><a href="/139.html">Shetland Islands</a></li>
+<li><a href="/s-ayrshire.html">South Ayrshire</a></li>
+<li><a href="/s-lanarkshire.html">South Lanarkshire</a></li>
+<li><a href="/129.html">Stirling</a></li>
+<li><a href="/138.html">Western Isles</a></li>
+<li><a href="/w-dunbartonshire.html">West Dunbartonshire</a></li>
+<li><a href="/w-lothian.html">West Lothian</a></li>   
+</ul></div></div></div>
+<div class="white_box" id="Wales">
+<p class="banner_heading wales">Wales
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#walesbox" aria-expanded="true" aria-controls="walesbox">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button></p>
+<div id="walesbox" class="collapse in">
+<div class="box_img">
+<img src="/images/wales1.jpg" alt="" />
+<img src="/images/wales2.jpg" alt="" />
+<img src="/images/wales3.jpg" alt="" />
+<img src="/images/wales4.jpg" alt="" />
+</div>
+<div class="place_list">
+<ul>
+<li><a href="/cardiff.html">Cardiff</a></li>
+<li><a href="/83.html">Carmarthenshire</a></li>
+<li><a href="/85.html">Ceredigion</a></li>
+<li><a href="/89.html">Conwy</a></li>
+<li><a href="/90.html">Denbighshire</a></li>
+<li><a href="/flintshire.html">Flintshire</a></li>
+<li><a href="/91.html">Gwynedd</a></li>
+<li><a href="/88.html">Isle of Anglesey</a></li>
+<li><a href="/79.html">Monmouthshire</a></li>
+<li><a href="/82.html">Neath Port Talbot</a></li>
+<li><a href="/84.html">Pembrokeshire</a></li>
+<li><a href="/87.html">Powys</a></li>
+<li><a href="/81.html">Rhondda Cynon Taff</a></li>
+<li><a href="/torfaen.html">Torfaen</a></li>
+<li><a href="/80.html">Vale of Glamorgan</a></li>
+</ul></div></div></div>
+<div class="white_box" id="Ireland">
+<p class="banner_heading ni">Northern Ireland
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nibox" aria-expanded="true" aria-controls="nibox">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button></p>
+<div id="nibox" class="collapse in">
+<div class="box_img">
+<img src="/images/ireland1.jpg" alt="" />
+<img src="/images/ireland2.jpg" alt="" />
+<img src="/images/ireland3.jpg" alt="" />
+<img src="/images/ireland4.jpg" alt="" />
+</div>
+<div class="place_list"><ul>
+<li><a href="/belfast.html">Belfast</a></li>
+<li><a href="/140.html">Co. Antrim</a></li>
+<li><a href="/co-armagh.html">Co. Armagh</a></li>
+<li><a href="/co-down.html">Co. Down</a></li>
+<li><a href="/co-fermanagh.html">Co. Fermanagh</a></li>
+<li><a href="/co-londonderry.html">Co. Londonderry</a></li>
+<li><a href="/co-tyrone.html">Co. Tyrone</a></li>
+</ul></div></div></div>
+<div class="white_box" id="Specialist">
+<p class="banner_heading specialist">Specialist Holidays
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#specialistbox" aria-expanded="true" aria-controls="specialistbox">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button></p>
+<div id="specialistbox" class="collapse in">
+<div class="box_img">
+<img src="/images/golf1.jpg" alt="" />
+<img src="/images/self-catering1.jpg" alt="" />
+<img src="/images/golf2.jpg" alt="" />
+<img src="/images/self-catering2.jpg" alt="" />
+</div>
+<div class="place_list">
+<ul>
+<li><a href="/golf.html">Golfing Holidays</a></li>
+<li><a href="/self-catering.html">Self Catering</a></li>
+</ul></div></div></div>
+<div class="white_box" id="Top">
+<p class="banner_heading top">Top 100 Towns
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top100box" aria-expanded="true" aria-controls="top100box">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button></p>
+<div id="top100box" class="collapse in">
+<div class="box_img">
+<img src="/images/town1.jpg" alt="" />
+<img src="/images/town2.jpg" alt="" />
+<img src="/images/town3.jpg" alt="" />
+<img src="/images/town4.jpg" alt="" />
+</div>
+<div class="place_list"><ul>
+<li><a href="/aberdeen.html">Aberdeen</a></li><li><a href="/ayr.html">Ayr</a></li><li><a href="/bangor.html">Bangor</a></li><li><a href="/basingst.html">Basingstoke</a></li><li><a href="/bath.html">Bath</a></li><li><a href="/belfast.html">Belfast</a></li><li><a href="/birmingh.html">Birmingham</a></li><li><a href="/blackpoo.html">Blackpool</a></li><li><a href="/bournemo.html">Bournemouth</a></li><li><a href="/bourtono.html">Bourton On The Water</a></li><li><a href="/bracknel.html">Bracknell</a></li><li><a href="/brighton.html">Brighton</a></li><li><a href="/bristol.html">Bristol</a></li><li><a href="/broadway.html">Broadway</a></li><li><a href="/buxton.html">Buxton</a></li><li><a href="/cambridg.html">Cambridge</a></li><li><a href="/canterbu.html">Canterbury</a></li><li><a href="/cardiff.html">Cardiff</a></li><li><a href="/carlisle.html">Carlisle</a></li><li><a href="/chelmsfo.html">Chelmsford</a></li><li><a href="/cheltenh.html">Cheltenham</a></li><li><a href="/chester.html">Chester</a></li><li><a href="/colchest.html">Colchester</a></li><li><a href="/coventry.html">Coventry</a></li><li><a href="/croydon.html">Croydon</a></li><li><a href="/darlingt.html">Darlington</a></li><li><a href="/derby.html">Derby</a></li><li><a href="/doncaste.html">Doncaster</a></li><li><a href="/dover.html">Dover</a></li><li><a href="/edinburg.html">Edinburgh</a></li><li><a href="/exeter.html">Exeter</a></li><li><a href="/folkesto.html">Folkestone</a></li><li><a href="/42.html">Gatwick Airport</a></li><li><a href="/glasgow.html">Glasgow</a></li><li><a href="/glastonb.html">Glastonbury</a></li><li><a href="/gloucest.html">Gloucester</a></li><li><a href="/guernsey.html">Guernsey</a></li><li><a href="/guildfor.html">Guildford</a></li><li><a href="/halifax.html">Halifax</a></li><li><a href="/harrogat.html">Harrogate</a></li><li><a href="/harrow.html">Harrow</a></li><li><a href="/53.html">Heathrow Airport</a></li><li><a href="/henleyon.html">Henley On Thames</a></li><li><a href="/hereford.html">Hereford</a></li><li><a href="/hull.html">Hull</a></li><li><a href="/huntingd.html">Huntingdon</a></li><li><a href="/invernes.html">Inverness</a></li><li><a href="/ipswich.html">Ipswich</a></li><li><a href="/isleofsk.html">Isle Of Skye</a></li><li><a href="/jersey.html">Jersey</a></li><li><a href="/keswick.html">Keswick</a></li><li><a href="/kingslyn.html">Kings Lynn</a></li><li><a href="/leeds.html">Leeds</a></li><li><a href="/leiceste.html">Leicester</a></li><li><a href="/lincoln.html">Lincoln</a></li><li><a href="/liverpoo.html">Liverpool</a></li><li><a href="/london.html">London</a></li><li><a href="/luton.html">Luton</a></li><li><a href="/lymeregi.html">Lyme Regis</a></li><li><a href="/maidenhe.html">Maidenhead</a></li><li><a href="/maidston.html">Maidstone</a></li><li><a href="/manchest.html">Manchester</a></li><li><a href="/miltonke.html">Milton Keynes</a></li><li><a href="/newcastl.html">Newcastle</a></li><li><a href="/newportg.html">Newport, Gwent</a></li><li><a href="/northamp.html">Northampton</a></li><li><a href="/norwich.html">Norwich</a></li><li><a href="/nottingh.html">Nottingham</a></li><li><a href="/oxford.html">Oxford</a></li><li><a href="/penzance.html">Penzance</a></li><li><a href="/plymouth.html">Plymouth</a></li><li><a href="/reading.html">Reading</a></li><li><a href="/richmond.html">Richmond</a></li><li><a href="/salisbur.html">Salisbury</a></li><li><a href="/scarboro.html">Scarborough</a></li><li><a href="/sheffiel.html">Sheffield</a></li><li><a href="/shrewsbu.html">Shrewsbury</a></li><li><a href="/solihull.html">Solihull</a></li><li><a href="/southamp.html">Southampton</a></li><li><a href="/southend.html">Southend</a></li><li><a href="/southpor.html">Southport</a></li><li><a href="/stalbans.html">St Albans</a></li><li><a href="/standrew.html">St Andrews</a></li><li><a href="/stdavids.html">St Davids</a></li><li><a href="/stives.html">St Ives</a></li><li><a href="/stansted.html">Stansted Airport</a></li><li><a href="/stokeont.html">Stoke On Trent</a></li><li><a href="/stratfor.html">Stratford</a></li><li><a href="/swindon.html">Swindon</a></li><li><a href="/taunton.html">Taunton</a></li><li><a href="/torquay.html">Torquay</a></li><li><a href="/warringt.html">Warrington</a></li><li><a href="/warwick.html">Warwick</a></li><li><a href="/wembley.html">Wembley</a></li><li><a href="/winchest.html">Winchester</a></li><li><a href="/winderme.html">Windermere</a></li><li><a href="/windsor.html">Windsor</a></li><li><a href="/wolverha.html">Wolverhampton</a></li><li><a href="/worceste.html">Worcester</a></li><li><a href="/york.html">York</a></li></ul></div></div></div></div></div>
+<div class="textnote">
+<p class="white-box">Accommodation throughout England, Scotland, Wales, Northern Ireland and the rest of the World, many establishments offering exclusive Smooth 
+Hound discounts! We are Britain's leading guide, with a wide range of holiday and business accommodation. Bed & breakfast room rates to suit all 
+pockets. Use the clickable maps to travel instantly throughout England, Scotland, Wales and Northern Ireland. Our listings provide comprehensive 
+details of facilities offered, including AA and Tourist board ratings. Check us first for exclusive Smooth Hound discounts before booking anywhere in
+the United Kingdom.</p></div>
+<div id="footernote">
+<img src="/images/add-hotel.png" width="805" height="102" alt="" usemap="#add-hotel" style="border-style:none" /></div>
+</div>
+</div>
+</div>
+<div class="footerDiv">
+<div class="pull-left">
+Copyright &copy; 1995 to 2024 Smooth Hound Systems</div>
+<div class="pull-right">
+<a href="/order.html" class="bodyLinkNormal">Add Your Hotel</a> &middot; <a href="/auto2.html" class="bodyLinkNormal">Contact Us</a> &middot; <a href="/privacy.html" class="bodyLinkNormal">Privacy</a></div><div style="height:20px;"></div></div>
+</div>
+</div>
+</div>
+<map id="add-hotel" name="add-hotel"><area shape="rect" alt="" coords="390,21,484,36" href="/auto2.html" title="" /><area shape="rect" alt="" coords="446,81,524,99" href="/order.html" title="" /><area shape="default" nohref="nohref" alt="" /></map><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6666863-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<div id="responsivediv"><div><script src="/js/jquery/ui/jquery-ui.min.js"></script><script src="/js/bootstrap/bootstrap.min.js"></script><script src="/js/jquery/resizer/imageMapResizer.min.js"></script><script src="/js/script.js"></script><script src="/js/bootstrap/validator.min.js"></script><script src="/js/jquery/maps/markercluster.js"></script><script src="//maps.googleapis.com/maps/api/js?sensor=false"></script><script type="text/javascript">
+var matched, browser;
+jQuery.uaMatch = function (ua) {
+ua = ua.toLowerCase();
+var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
+/(webkit)[ \/]([\w.]+)/.exec(ua) ||
+/(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) ||
+/(msie) ([\w.]+)/.exec(ua) ||
+ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) ||
+[];
+return {
+browser: match[ 1 ] || "",
+version: match[ 2 ] || "0"
+};
+};
+matched = jQuery.uaMatch(navigator.userAgent);
+browser = {};
+if (matched.browser) {
+browser[ matched.browser ] = true;
+browser.version = matched.version;
+}
+// Chrome is Webkit, but Webkit is also Safari.
+if (browser.chrome) {
+browser.webkit = true;
+} else if (browser.webkit) {
+browser.safari = true;
+}
+jQuery.browser = browser;
+</script>
+<script type="text/javascript">
+var matched, browser;
+jQuery.uaMatch = function (b) {
+b = b.toLowerCase();
+var a = /(chrome)[ \/]([\w.]+)/.exec(b) || /(webkit)[ \/]([\w.]+)/.exec(b) || /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(b) || /(msie) ([\w.]+)/.exec(b) || b.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(b) || [];
+return{browser: a[1] || "", version: a[2] || "0"}
+};
+matched = jQuery.uaMatch(navigator.userAgent);
+browser = {};
+if (matched.browser) {
+browser[matched.browser] = true;
+browser.version = matched.version
+}
+if (browser.chrome) {
+browser.webkit = true
+} else {
+if (browser.webkit) {
+browser.safari = true
+}
+}
+jQuery.browser = browser;
+</script>
+<map id="uk" name="uk">
+<area shape="poly" alt="England: Cornwall, Devon, Channel Islands, Isles of Scilly" coords="197,359,223,385,228,426,110,426,108,393,147,369,178,356,193,356,197,359" href="map1.html" title="England: Cornwall, Devon, Channel Islands, Isles of Scilly" />
+<area shape="poly" alt="England: City of Bristol, Dorset and Somerset" coords="197,359,210,357,222,357,229,351,237,345,239,341,248,347,245,366,271,383,278,426,228,426,223,385" href="map2.html" title="England: City of Bristol, Dorset and Somerset" />
+<area shape="poly" alt="England: Berkshire, Hampshire, Wiltshire and the Isle of Wight" coords="245,366,248,347,264,342,264,345,295,347,289,380,288,426,278,426,271,383" href="map3.html" title="England: Berkshire, Hampshire, Wiltshire and the Isle of Wight" />
+<area shape="poly" alt="England: Kent, Surrey and Sussex" coords="295,347,304,361,323,361,326,354,344,354,356,354,359,351,372,351,372,425,288,426,289,380" href="map4.html" title="England: Kent, Surrey and Sussex" />
+<area shape="poly" alt="England: Greater London" coords="295,347,299,340,320,339,324,345,343,344,364,345,356,354,326,354,323,361,304,361" href="50.html" title="England: Greater London" />
+<area shape="poly" alt="England: Essex, Norfolk and Suffolk" coords="322,286,326,305,322,330,319,337,324,345,344,344,372,346,372,271,334,271,325,277" href="map6.html" title="England: Essex, Norfolk and Suffolk" />
+<area shape="poly" alt="England: Bedfordshire, Cambridgeshire and Hertfordshire" coords="322,330,326,305,322,286,323,283,304,291,301,312,293,333,299,340,320,339,319,337" href="map7.html" title="England: Bedfordshire, Cambridgeshire and Hertfordshire" />
+<area shape="poly" alt="England: Buckinghamshire, Leicestershire, Northamptonshire, Oxfordshire and Warwickshire" coords="301,312,303,296,291,281,283,288,264,283,265,294,264,307,268,311,260,318,264,325,264,338,264,345,295,347,299,340,293,333" href="map8.html" title="England: Buckinghamshire, Leicestershire, Northamptonshire, Oxfordshire and Warwickshire" />
+<area shape="poly" alt="England: Gloucestershire, Herefordshire, Shropshire, Staffordshire, West Midlands and Worcestershire" coords="265,294,261,268,252,271,243,280,235,280,226,283,224,302,220,305,228,312,223,319,226,332,232,330,239,341,248,347,264,342,264,325,260,318,268,311,264,307" href="map9.html" title="England: Gloucestershire, Herefordshire, Shropshire, Staffordshire, West Midlands and Worcestershire" />
+<area shape="poly" alt="Wales: Cardiff, Ceredigion, Monmouthshire, Neath Port Talbot, Pembrokeshire, Powys, Rhondda Cynon Taff, Torfaen, Vale of Glamorgan" coords="221,286,216,284,195,300,149,318,145,347,178,356,193,356,197,359,210,357,222,357,229,351,237,345,239,341,232,330,226,332,223,319,228,312,220,305,224,302,225,288" href="map10.html" title="Wales: Cardiff, Ceredigion, Monmouthshire, Neath Port Talbot, Pembrokeshire, Powys, Rhondda Cynon Taff, Torfaen, Vale of Glamorgan" />
+<area shape="poly" alt="Wales: Conwy, Denbighshire, Flintshire, Gwynedd and Isle of Anglesey" coords="225,288,226,283,235,280,242,280,231,277,226,267,221,259,205,241,148,242,155,300,195,300,216,284,221,286" href="map11.html" title="Wales: Conwy, Denbighshire, Flintshire, Gwynedd and Isle of Anglesey" />
+<area shape="poly" alt="England: East Riding of Yorkshire, Lincolnshire and Nottinghamshire" coords="287,230,288,241,287,242,279,268,276,287,283,288,291,281,303,296,304,291,323,283,325,277,334,271,372,271,373,222,307,220" href="map13.html" title="England: East Riding of Yorkshire, Lincolnshire and Nottinghamshire" />
+<area shape="poly" alt="England: Cheshire, Derbyshire, Lancashire, Greater Manchester, South Yorkshire and West Yorkshire" coords="221,259,231,277,243,280,252,271,261,268,264,283,276,287,279,268,287,242,278,248,276,232,260,231,256,237,238,221,231,225,198,234" href="map12.html" title="England: Cheshire, Derbyshire, Lancashire, Greater Manchester, South Yorkshire and West Yorkshire" />
+<area shape="poly" alt="England: North Yorkshire" coords="256,237,239,222,247,217,247,211,264,204,270,207,269,198,274,195,373,195,373,222,307,220,287,230,288,241,287,242,278,248,276,232,260,231" href="112.html" title="England: North Yorkshire" />
+<area shape="poly" alt="England: Durham, Northumberland and Tyne and Wear" coords="373,195,372,141,257,144,248,152,251,161,234,175,247,203,247,211,264,204,270,207,269,198,274,195" href="map16.html" title="England: Durham, Northumberland and Tyne and Wear" />
+<area shape="poly" alt="England: Cumbria, Lake District and the Isle of Man" coords="247,205,245,199,234,175,217,189,197,204,197,209,197,233,231,225,238,221,239,222,247,217" href="map14.html" title="England: Cumbria, Lake District and the Isle of Man" />
+<area shape="poly" alt="Scotland: Scottish Borders, Dumfries and Galloway" coords="257,144,257,142,227,142,211,149,207,162,201,160,173,181,165,186,168,209,197,204,217,189,251,161,248,152" href="map17.html" title="Scotland: Scottish Borders, Dumfries and Galloway" />
+<area shape="poly" alt="Scotland: Angus, Argyll and Bute, East Ayrshire, East Lothian, Falkirk, Fife, Inverclyde, Midlothian, North Ayrshire, Perth and Kinross, Renfrewshire, South Ayrshire, South Lanarkshire, Stirling, West Dumbartonshire" coords="173,181,201,160,207,162,211,149,227,142,257,142,258,144,296,143,295,125,245,100,234,87,212,89,185,101,187,108,167,103,161,112,155,122,143,122,128,136,146,161,161,189" href="map18.html" title="Scotland: Angus, Argyll and Bute, East Ayrshire, East Lothian, Falkirk, Fife, Inverclyde, Midlothian, North Ayrshire, Perth and Kinross, Renfrewshire, South Ayrshire, South Lanarkshire, Stirling, West Dumbartonshire" />
+<area shape="poly" alt="Scotland: Aberdeenshire, Highland, Western Isles, Orkney and Shetland Islands" coords="234,87,245,100,282,118,282,0,94,0,96,123,143,122,155,122,161,112,167,103,187,108,185,101,212,89" href="map19.html" title="Scotland: Aberdeenshire, Highland, Western Isles, Orkney and Shetland Islands" />
+<area shape="poly" alt="Orkney and Shetland Islands" coords="285,10,285,118,363,118,363,10" href="139.html" title="Orkney and Shetland Islands" />
+<area shape="poly" alt="Northern Ireland: Belfast, Co. Antrim, Co. Armagh, Co. Down, Co. Fermanagh, Co. Londonderry and Co. Tyrone" coords="83,202,83,200,87,197,91,197,91,198,93,198,97,195,96,192,96,192,92,192,92,190,94,188,103,188,103,184,106,180,106,179,107,179,107,175,108,174,112,174,112,172,117,171,128,160,146,161,167,200,167,226,141,224,138,221,133,220,132,224,126,224,125,222,126,220,126,218,120,215,115,209,114,205,112,207,110,212,105,218,100,218,95,214,95,213,93,213,92,214,91,211,91,208" href="map20.html" title="Northern Ireland: Belfast, Co. Antrim, Co. Armagh, Co. Down, Co. Fermanagh, Co. Londonderry and Co. Tyrone" />
+<area shape="poly" alt="Southern Ireland" coords="0,345,144,345,147,224,141,224,138,221,133,220,132,224,126,224,125,222,126,220,126,218,120,215,115,209,114,205,112,207,110,212,105,218,100,218,95,214,95,213,93,213,92,214,91,211,91,208,83,202,83,200,87,197,91,197,91,197,91,198,93,198,97,195,96,192,92,192,92,190,94,188,103,188,103,184,106,180,106,179,107,179,107,175,108,174,112,174,112,172,117,171,128,160,111,151,0,152" href="ireland/index.html" title="Southern Ireland" />
+<area shape="poly" alt="Isle of Man " coords="168,210,197,204,196,233,168,235" href="104.html" title="Isle of Man " />
+<area shape="poly" coords="36,421,81,385,34,385" href="guernsey.html" title="" />
+<area shape="poly" coords="80,387,80,420,37,421" href="jersey.html" title="" />
+<area shape="default" nohref="nohref" alt="" />
+</map>
+<map id="world" name="world"><area shape="poly" alt="" coords="2,3,3,123,91,125,105,116,133,115,162,46,182,31,185,2" href="north-and-central-america.html" title="" />
+<area shape="poly" alt="" coords="3,124,3,206,163,205,163,137,133,114,104,117,89,126" href="south-america.html" title="" />
+<area shape="poly" alt="" coords="144,88,184,90,193,89,204,87,219,92,225,82,233,81,236,77,234,73,225,64,222,60,222,56,226,51,224,41,226,36,182,31,162,46" href="europe.html" title="" />
+<area shape="poly" alt="" coords="144,88,150,119,194,184,256,184,257,122,244,119,241,120,235,113,231,105,224,96,220,92,202,86,188,91" href="africa.html" title="" />
+<area shape="poly" alt="" coords="290,155,331,143,346,124,407,125,408,205,291,205" href="oceania.html" title="" />
+<area shape="poly" alt="" coords="186,2,182,29,225,36,224,40,226,52,222,55,222,61,236,76,233,81,225,81,220,90,231,106,240,119,245,120,256,122,290,155,330,143,345,125,408,125,409,1" href="asia.html" title="" />
+<area shape="default" nohref="nohref" alt="" /></map></body></html>

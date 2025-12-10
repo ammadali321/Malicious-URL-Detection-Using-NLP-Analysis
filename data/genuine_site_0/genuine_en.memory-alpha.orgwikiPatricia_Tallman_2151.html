@@ -1,0 +1,214 @@
+<html lang="en"><head><script src="https://cdn.amplitude.com/script/6765a55f49a353467fec981090f1ab6a.js"></script><script src="https://cdn.amplitude.com/script/6765a55f49a353467fec981090f1ab6a.async.js" async="" type="text/javascript"></script>
+        <script>
+        const enrichSpecialCategoryPlugin = () => {
+            return {
+                name: 'special-event-category',
+                type: 'enrichment',
+                execute: async (event) => {
+                    event.event_properties = {
+                        ...event.event_properties,
+                        content_type: 'error_page',
+                    };
+                    return event;
+                },
+            }
+        }
+        window.amplitude.add(enrichSpecialCategoryPlugin());
+        window.amplitude.init('6765a55f49a353467fec981090f1ab6a', {
+            fetchRemoteConfig: true,
+            autocapture: {
+                attribution: true,
+                pageViews: true,
+                sessions: false,
+                formInteractions: false,
+                fileDownloads: false,
+                elementInteractions: {
+                    cssSelectorAllowlist: [
+                        '.event-tracking'
+                    ],
+                },
+            },
+        });
+        </script>
+
+        
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Fandom | 403 Forbidden</title>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&amp;display=swap" rel="stylesheet">
+            <link rel="icon" type="image/png" href="https://www.fandom.com/f2/assets/favicons/favicon-32x32.png" sizes="32x32">
+
+            <style>
+                :root {
+                    --color-background: #86d7dc;
+                    --color-headline: #520044;
+                    --color-text: #1e0c1b;
+                    --color-link: #9b004e;
+                }
+
+                body {
+                    margin: 0;
+                    padding: 0;
+                    height: 100dvh;
+                    width: 100dvw;
+                    background-color: var(--color-background);
+                    font-family: rubik, helvetica, arial, sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    overflow: hidden;
+                }
+
+                .content-wrapper {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    width: 100%;
+                }
+
+                .image-container {
+                    width: 100%;
+                    margin-bottom: -4dvh;
+                    max-height: 40dvh;
+                }
+
+                .image-container img {
+                    display: block;
+                    max-width: 100%;
+                    max-height: 100%;
+                    height: auto;
+                    margin: 0 auto;
+                    transform: scale(1.4);
+                    transform-origin: center center;
+                    z-index: 0;
+                }
+
+                .text-section {
+                    padding-left: 18px;
+                    padding-right: 18px;
+                    max-width: 600px;
+                    z-index: 1;
+                }
+
+                .headline {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: var(--color-headline);
+                    margin-bottom: 12px;
+                    line-height: 1.25;
+                }
+
+                .subtext {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: var(--color-text);
+                    margin-bottom: 24px;
+                    line-height: 1.5;
+                }
+
+                .copy {
+                    font-size: 14px;
+                    color: var(--color-text);
+                    line-height: 1.5;
+                }
+
+                a {
+                    font-weight: 500;
+                    color: var(--color-link);
+                    text-decoration: none;
+                }
+
+                footer {
+                    margin-top: auto;
+                    padding: 18px;
+                    font-size: 14px;
+                    color: var(--color-text);
+                    opacity: 0.8;
+                }
+
+                @media (min-width: 768px) {
+                    .content-wrapper {
+                        justify-content: flex-start;
+                    }
+
+                    .image-container {
+                        max-height: 60dvh;
+                        margin-bottom: -8dvh;
+                    }
+
+                    .image-container img {
+                        transform: scale(1.08);
+                    }
+
+                    .text-section {
+                        padding-left: 0;
+                        padding-right: 0;
+                        max-width: 800px;
+                    }
+
+                    .headline {
+                        font-size: 52px;
+                        text-transform: uppercase;
+                    }
+
+                    .subtext {
+                        font-size: 18px;
+                    }
+
+                    .copy {
+                        font-size: 16px;
+                    }
+
+                    footer {
+                        font-size: 16px;
+                        padding: 24px;
+                    }
+                }
+            </style>
+        <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.12.1-min.js.gz"></script><script src="https://cdn.amplitude.com/libs/analytics-browser-2.16.1-min.js.gz"></script></head>
+
+        <body>
+            <div class="content-wrapper">
+                <div class="image-container">
+                    <img src="https://script.wikia.nocookie.net/fandom-ae-assets/error-pages/403_1920x1080.webp" alt="Error 403 Illustration">
+                </div>
+
+                <div class="text-section">
+                    <div class="headline">Forbidden</div>
+                    <div class="subtext">
+                        
+            Vault-Tec regulations prohibit entry. Only authorized personnel may unseal the door. We advise stepping
+            away—unless you're ready for a mutiny.
+        
+                    </div>
+                    <div class="copy">
+                        
+            You can go back to the previous page or return safely to the
+            <a href="https://www.fandom.com" target="_blank" class="event-tracking" id="backToFandom">homepage</a>.
+        
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                Request ID: <code>1370049185</code><br>
+                Please include this in any bug reports.
+            </footer>
+        
+
+        <script>
+            fetch('https://beacon.wikia-services.com/__track/special/errorpages?action=view&category=&status_code=403&url='+encodeURIComponent(window.location.href));
+            var items = document.getElementsByClassName("event-tracking");
+            for (var i=0; i < items.length; i++) {
+                const category = items[i].id;
+                items[i].onclick = function() {
+                    fetch('https://beacon.wikia-services.com/__track/special/errorpages?action=click&category='+category+'&status_code=403&url='+encodeURIComponent(window.location.href));
+                };
+            }
+        </script>
+
+        
+    </body></html>

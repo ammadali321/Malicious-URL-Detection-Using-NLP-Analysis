@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Suspended</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+            animation: background-animate 20s ease-in-out infinite alternate;
+            background: linear-gradient(-45deg, #1a202c, #2d3748, #1e3a5f, #3b82f6);
+            background-size: 400% 400%;
+        }
+        @keyframes background-animate {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .card-container {
+            background-color: rgba(26, 32, 44, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.3s;
+        }
+        .card-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+        .lang-select {
+            background-color: #2d3748;
+            border-color: #4a5568;
+            color: #e2e8f0;
+            transition: 0.2s;
+        }
+        .lang-select:focus {
+            outline: 0;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        }
+        .upgrade-button {
+            background-color: #4299e1;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .upgrade-button:hover {
+            background-color: #63b3ed;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(66, 153, 225, 0.4);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Modal styles */
+        .modal-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-scroll::-webkit-scrollbar-track {
+            background: #2d3748;
+            border-radius: 10px;
+        }
+        .modal-scroll::-webkit-scrollbar-thumb {
+            background-color: #4a5568;
+            border-radius: 10px;
+            border: 2px solid #2d3748;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Main Content Card -->
+    <div class="mx-auto w-full card-container max-w-xl md:p-12 p-8 space-y-6 text-center">
+        <h1 class="font-bold md:text-4xl text-3xl" id="main-title"></h1>
+        <p class="md:text-xl text-lg text-gray-400" id="subtitle"></p>
+        <p class="text-gray-300 md:text-lg text-md" id="description"></p>
+        
+        <div class="pt-4 space-y-4" id="upgrade-section">
+            <h3 class="font-semibold md:text-xl text-gray-200 text-lg" id="upgrade-text"></h3>
+            <p class="text-gray-400 text-sm" id="pricing-text"></p>
+            <ul class="mx-auto list-disc list-inside max-w-sm space-y-1 text-gray-300 text-left" id="benefits-list"></ul>
+            
+            <div class="mt-6">
+                <button id="view-more-btn" class="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors py-2 px-4 rounded-lg">
+                </button>
+            </div>
+
+            <a class="font-semibold inline-block px-8 py-3 rounded-full shadow-lg upgrade-button" href="#" id="upgrade-link"></a>
+        </div>
+        
+        <div class="pt-6">
+            <label class="block mb-2 text-gray-400 text-sm" for="language-selector">
+                <span class="inline-block mr-2">ð</span> <span id="language-label-text"></span>
+            </label> 
+            <select class="mx-auto w-full appearance-none block focus:ring-2 lang-select md:w-auto px-4 py-2 rounded-lg" id="language-selector"></select>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-gray-500 text-xs mt-8" id="copyright-text"></div>
+
+    <!-- Benefits Modal -->
+    <div id="benefits-modal" class="fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-gray-800 rounded-2xl shadow-xl w-full max-w-3xl max-h-[90vh] flex flex-col">
+            <div class="p-6 border-b border-gray-700 flex justify-between items-center">
+                <h2 class="text-2xl font-bold" id="modal-title-text"></h2>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div id="modal-content" class="p-6 md:p-8 overflow-y-auto modal-scroll space-y-8 text-left text-gray-300">
+                <!-- Content will be injected by JS -->
+            </div>
+        </div>
+    </div>
+
+<script>
+const translations = {
+    en: {
+        langName: "English",
+        labelText: "Select a language:",
+        title: "Domain Suspended",
+        subtitle: "This domain has been suspended for reaching server limits or similar.",
+        description: "Please contact support in your hosting control panel if you have a query.",
+        upgradeText: "Get this domain online today! Upgrade to Premium Hosting and enjoy:",
+        pricingText: "Plans starting as low as $29.99/year",
+        benefits: ["Super Fast NVMe SSD Storage", "Free SSL Certificates", "Unlimited Space", "Unlimited CPU"],
+        viewMoreBtn: "View More Benefits",
+        linkText: "Upgrade to Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Technical Information",
+        cpanelTitle: "Control Panel Features",
+        cpanelFeatures: ["Latest cPanel control panel", "Softaculous with 240+ scripts", "Manage your Sites, Files, and Databases", "Free SSL Certificates (Let's Encrypt)", "Free SiteBuilder", "Free RailGun"],
+        emailTitle: "Emails",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Unlimited Forwarders", "Spam Filters", "Catch-All Emails", "Mailing Lists", "Mail Encryption"],
+        codeTitle: "Coding / MySQL",
+        codeFeatures: ["Support for PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "Remote MySQL", "Cronjob Scripting", "Mime Types"],
+        metricsTitle: "Metrics",
+        metricsFeatures: ["Last Visitors", "Bandwidth", "AWStats, Analog Stats, Webalizer", "Resource Monitor", "Script Activity"]
+    },
+    es: {
+        langName: "EspaÃ±ol",
+        labelText: "Seleccionar idioma:",
+        title: "Dominio Suspendido",
+        subtitle: "Este dominio estÃ¡ suspendido por alcanzar los lÃ­mites del servidor o similar.",
+        description: "Por favor, contacte con soporte en su panel de control de hosting si tiene alguna consulta.",
+        upgradeText: "Â¡Ponga este dominio en lÃ­nea hoy! Actualice a Hosting Premium y disfrute de:",
+        pricingText: "Planes desde tan solo $29.99/aÃ±o",
+        benefits: ["Almacenamiento SSD NVMe sÃºper rÃ¡pido", "Certificados SSL gratuitos", "Espacio Ilimitado", "CPU Ilimitada"],
+        viewMoreBtn: "Ver mÃ¡s beneficios",
+        linkText: "Actualizar a Hosting Premium",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "InformaciÃ³n TÃ©cnica",
+        cpanelTitle: "CaracterÃ­sticas del Panel de Control",
+        cpanelFeatures: ["Ãltimo panel de control cPanel", "Softaculous con mÃ¡s de 240 scripts", "Administre sus Sitios, Archivos y Bases de Datos", "Certificados SSL Gratuitos (Let's Encrypt)", "Constructor de Sitios Gratuito", "RailGun Gratuito"],
+        emailTitle: "Correos ElectrÃ³nicos",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Redireccionadores Ilimitados", "Filtros de Spam", "Correos Catch-All", "Listas de Correo", "Cifrado de Correo"],
+        codeTitle: "ProgramaciÃ³n / MySQL",
+        codeFeatures: ["Soporte para PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "MySQL Remoto", "Scripts Cronjob", "Tipos Mime"],
+        metricsTitle: "MÃ©tricas",
+        metricsFeatures: ["Ãltimos Visitantes", "Ancho de Banda", "AWStats, Analog Stats, Webalizer", "Monitor de Recursos", "Actividad de Scripts"]
+    },
+    fi: {
+        langName: "Suomi",
+        labelText: "Valitse kieli:",
+        title: "Verkkotunnus keskeytetty",
+        subtitle: "TÃ¤mÃ¤ verkkotunnus on keskeytetty, koska palvelinrajoitukset on saavutettu tai vastaavasta syystÃ¤.",
+        description: "Ota yhteyttÃ¤ tukeen hosting-ohjauspaneelissasi, jos sinulla on kysyttÃ¤vÃ¤Ã¤.",
+        upgradeText: "Hanki tÃ¤mÃ¤ verkkotunnus online tÃ¤nÃ¤Ã¤n! PÃ¤ivitÃ¤ Premium Hostingiin ja nauti:",
+        pricingText: "Hinnat alkaen vain $29.99/vuosi",
+        benefits: ["Supernopea NVMe SSD -tallennustila", "Ilmaiset SSL-sertifikaatit", "Rajoittamaton tila", "Rajoittamaton CPU"],
+        viewMoreBtn: "NÃ¤ytÃ¤ lisÃ¤Ã¤ etuja",
+        linkText: "PÃ¤ivitÃ¤ Premium Hostingiin",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Tekniset Tiedot",
+        cpanelTitle: "Ohjauspaneelin Ominaisuudet",
+        cpanelFeatures: ["Uusin cPanel-ohjauspaneeli", "Softaculous, jossa yli 240 skriptiÃ¤", "Hallitse sivustojasi, tiedostojasi ja tietokantojasi", "Ilmaiset SSL-sertifikaatit (Let's Encrypt)", "Ilmainen kotisivukone", "Ilmainen RailGun"],
+        emailTitle: "SÃ¤hkÃ¶postit",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Rajoittamattomat edelleenlÃ¤hetykset", "Roskapostisuodattimet", "Catch-All-sÃ¤hkÃ¶postit", "Postituslistat", "SÃ¤hkÃ¶postin salaus"],
+        codeTitle: "Koodaus / MySQL",
+        codeFeatures: ["Tuki PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "EtÃ¤-MySQL", "Cronjob-skriptaus", "Mime-tyypit"],
+        metricsTitle: "Mittaustiedot",
+        metricsFeatures: ["ViimeisimmÃ¤t vierailijat", "Kaistanleveys", "AWStats, Analog Stats, Webalizer", "Resurssien valvonta", "Skriptin toiminta"]
+    },
+    de: {
+        langName: "Deutsch",
+        labelText: "Sprache auswÃ¤hlen:",
+        title: "Domain gesperrt",
+        subtitle: "Diese Domain ist gesperrt, weil Serverlimits erreicht wurden oder Ã¤hnliches.",
+        description: "Bitte kontaktieren Sie den Support in Ihrem Hosting-Kontrollpanel, wenn Sie eine Anfrage haben.",
+        upgradeText: "Bringen Sie diese Domain noch heute online! Upgraden Sie auf Premium-Hosting und genieÃen Sie:",
+        pricingText: "PlÃ¤ne schon ab $29.99/Jahr",
+        benefits: ["Superschneller NVMe SSD-Speicher", "Kostenlose SSL-Zertifikate", "Unbegrenzter Speicherplatz", "Unbegrenzte CPU"],
+        viewMoreBtn: "Weitere Vorteile anzeigen",
+        linkText: "Auf Premium-Hosting upgraden",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Technische Informationen",
+        cpanelTitle: "Control Panel Funktionen",
+        cpanelFeatures: ["Neuestes cPanel Control Panel", "Softaculous mit 240+ Skripten", "Verwalten Sie Ihre Seiten, Dateien und Datenbanken", "Kostenlose SSL-Zertifikate (Let's Encrypt)", "Kostenloser SiteBuilder", "Kostenloses RailGun"],
+        emailTitle: "E-Mails",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Unbegrenzte Weiterleitungen", "Spam-Filter", "Catch-All-E-Mails", "Mailinglisten", "E-Mail-VerschlÃ¼sselung"],
+        codeTitle: "Programmierung / MySQL",
+        codeFeatures: ["UnterstÃ¼tzung fÃ¼r PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "Remote-MySQL", "Cronjob-Scripting", "Mime-Typen"],
+        metricsTitle: "Metriken",
+        metricsFeatures: ["Letzte Besucher", "Bandbreite", "AWStats, Analog Stats, Webalizer", "Ressourcenmonitor", "Skript-AktivitÃ¤t"]
+    },
+    fr: {
+        langName: "FranÃ§ais",
+        labelText: "SÃ©lectionner une langue:",
+        title: "Domaine suspendu",
+        subtitle: "Ce domaine est suspendu pour avoir atteint les limites du serveur ou similaire.",
+        description: "Veuillez contacter le support dans votre panneau de contrÃ´le d'hÃ©bergement si vous avez une question.",
+        upgradeText: "Mettez ce domaine en ligne aujourd'hui ! Passez Ã  l'hÃ©bergement Premium et profitez de :",
+        pricingText: "Forfaits Ã  partir de $29.99/an",
+        benefits: ["Stockage SSD NVMe ultra-rapide", "Certificats SSL gratuits", "Espace illimitÃ©", "CPU illimitÃ©"],
+        viewMoreBtn: "Voir plus d'avantages",
+        linkText: "Passer Ã  l'hÃ©bergement Premium",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Informations Techniques",
+        cpanelTitle: "FonctionnalitÃ©s du Panneau de ContrÃ´le",
+        cpanelFeatures: ["Dernier panneau de contrÃ´le cPanel", "Softaculous avec plus de 240 scripts", "GÃ©rez vos sites, fichiers et bases de donnÃ©es", "Certificats SSL gratuits (Let's Encrypt)", "Constructeur de site gratuit", "RailGun gratuit"],
+        emailTitle: "E-mails",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Redirecteurs illimitÃ©s", "Filtres anti-spam", "E-mails attrape-tout", "Listes de diffusion", "Chiffrement des e-mails"],
+        codeTitle: "Codage / MySQL",
+        codeFeatures: ["Support pour PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "MySQL Ã  distance", "Scripting Cronjob", "Types Mime"],
+        metricsTitle: "MÃ©trique",
+        metricsFeatures: ["Derniers visiteurs", "Bande passante", "AWStats, Analog Stats, Webalizer", "Moniteur de ressources", "ActivitÃ© des scripts"]
+    },
+    ko: {
+        langName: "íêµ­ì´",
+        labelText: "ì¸ì´ ì í:",
+        title: "ëë©ì¸ ì ì§ë¨",
+        subtitle: "ì´ ëë©ì¸ì ìë² ì íì ëë¬íê±°ë ì ì¬í ì´ì ë¡ ì ì§ëììµëë¤.",
+        description: "ë¬¸ìì¬í­ì´ ìì¼ìë©´ í¸ì¤í ì ì´íìì ì§ìíì ë¬¸ìí´ ì£¼ì¸ì.",
+        upgradeText: "ì¤ë ì´ ëë©ì¸ì ì¨ë¼ì¸ì¼ë¡ ë§ëì¸ì! íë¦¬ë¯¸ì í¸ì¤íì¼ë¡ ìê·¸ë ì´ëíê³  ì¦ê¸°ì¸ì:",
+        pricingText: "ì $29.99/ë",
+        benefits: ["ì´ê³ ì NVMe SSD ì¤í ë¦¬ì§", "ë¬´ë£ SSL ì¸ì¦ì", "ë¬´ì í ê³µê°", "ë¬´ì í CPU"],
+        viewMoreBtn: "ë ë§ì íí ë³´ê¸°",
+        linkText: "íë¦¬ë¯¸ì í¸ì¤íì¼ë¡ ìê·¸ë ì´ë",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "ê¸°ì  ì ë³´",
+        cpanelTitle: "ì ì´í ê¸°ë¥",
+        cpanelFeatures: ["ìµì  cPanel ì ì´í", "240ê° ì´ìì ì¤í¬ë¦½í¸ê° í¬í¨ë Softaculous", "ì¬ì´í¸, íì¼ ë° ë°ì´í°ë² ì´ì¤ ê´ë¦¬", "ë¬´ë£ SSL ì¸ì¦ì(Let's Encrypt)", "ë¬´ë£ ì¬ì´í¸ ë¹ë", "ë¬´ë£ RailGun"],
+        emailTitle: "ì´ë©ì¼",
+        emailFeatures: ["ì¹ë©ì¼(Roundcube, Squirelmail, Horde)", "ë¬´ì í ì ë¬ì", "ì¤í¸ íí°", "ëª¨ë  ì´ë©ì¼ ìì ", "ë©ì¼ë§ ë¦¬ì¤í¸", "ë©ì¼ ìí¸í"],
+        codeTitle: "ì½ë© / MySQL",
+        codeFeatures: ["PHP 5.2 - 8.4 ì§ì", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "ìê²© MySQL", "Cronjob ì¤í¬ë¦½í", "Mime ì í"],
+        metricsTitle: "ì¸¡ì  í­ëª©",
+        metricsFeatures: ["ìµê·¼ ë°©ë¬¸ì", "ëì­í­", "AWStats, Analog Stats, Webalizer", "ë¦¬ìì¤ ëª¨ëí°", "ì¤í¬ë¦½í¸ íë"]
+    },
+    ja: {
+        langName: "æ¥æ¬èª",
+        labelText: "è¨èªãé¸æ:",
+        title: "ãã¡ã¤ã³åæ­¢ä¸­",
+        subtitle: "ãã®ãã¡ã¤ã³ã¯ãµã¼ãã¼å¶éã«éããããåæ§ã®çç±ã§åæ­¢ããã¦ãã¾ãã",
+        description: "ãè³ªåãããå ´åã¯ããã¹ãã£ã³ã°ã³ã³ãã­ã¼ã«ããã«ã§ãµãã¼ãã«ãåãåãããã ããã",
+        upgradeText: "ä»ãããã®ãã¡ã¤ã³ããªã³ã©ã¤ã³ã«ãã¾ãããï¼ãã¬ãã¢ã ãã¹ãã£ã³ã°ã«ã¢ããã°ã¬ã¼ããã¦ãä»¥ä¸ããæ¥½ãã¿ãã ããï¼",
+        pricingText: "æé¡$29.99/å¹´",
+        benefits: ["è¶é«éNVMe SSDã¹ãã¬ã¼ã¸", "ç¡æSSLè¨¼ææ¸", "ç¡å¶éã®ã¹ãã¼ã¹", "ç¡å¶éã®CPU"],
+        viewMoreBtn: "ãã®ä»ã®ç¹å¸ãè¡¨ç¤º",
+        linkText: "ãã¬ãã¢ã ãã¹ãã£ã³ã°ã«ã¢ããã°ã¬ã¼ã",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "æè¡æå ±",
+        cpanelTitle: "ã³ã³ãã­ã¼ã«ããã«ã®æ©è½",
+        cpanelFeatures: ["ææ°ã®cPanelã³ã³ãã­ã¼ã«ããã«", "240ä»¥ä¸ã®ã¹ã¯ãªãããåããSoftaculous", "ãµã¤ãããã¡ã¤ã«ããã¼ã¿ãã¼ã¹ã®ç®¡ç", "ç¡æSSLè¨¼ææ¸ï¼Let's Encryptï¼", "ç¡æãµã¤ããã«ãã¼", "ç¡æRailGun"],
+        emailTitle: "ã¡ã¼ã«",
+        emailFeatures: ["ã¦ã§ãã¡ã¼ã«ï¼RoundcubeãSquirelmailãHordeï¼", "ç¡å¶éã®ãã©ã¯ã¼ãã¼", "ã¹ãã ãã£ã«ã¿ã¼", "ã­ã£ãããªã¼ã«ã¡ã¼ã«", "ã¡ã¼ãªã³ã°ãªã¹ã", "ã¡ã¼ã«æå·å"],
+        codeTitle: "ã³ã¼ãã£ã³ã° / MySQL",
+        codeFeatures: ["PHP 5.2 - 8.4ã®ãµãã¼ã", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "ãªã¢ã¼ãMySQL", "Cronjobã¹ã¯ãªããã£ã³ã°", "Mimeã¿ã¤ã"],
+        metricsTitle: "ã¡ããªã¯ã¹",
+        metricsFeatures: ["æçµè¨ªåè", "å¸¯åå¹", "AWStats, Analog Stats, Webalizer", "ãªã½ã¼ã¹ã¢ãã¿ã¼", "ã¹ã¯ãªããã¢ã¯ãã£ããã£"]
+    },
+    zh: {
+        langName: "ä¸­æ",
+        labelText: "éæ©è¯­è¨:",
+        title: "ååå·²æå",
+        subtitle: "æ­¤ååå è¾¾å°æå¡å¨éå¶æç±»ä¼¼åå èè¢«æåã",
+        description: "å¦æçé®ï¼è¯·å¨æ¨çä¸»æºæ§å¶é¢æ¿ä¸­èç³»æ¯æã",
+        upgradeText: "ç«å³è®©æ­¤ååä¸çº¿ï¼åçº§å°é«çº§ä¸»æºå¹¶äº«åï¼",
+        pricingText: "è®¡åä½è³æ¯å¹´29.99ç¾å",
+        benefits: ["è¶é«éNVMe SSDå­å¨", "åè´¹SSLè¯ä¹¦", "æ éç©ºé´", "æ éCPU"],
+        viewMoreBtn: "æ¥çæ´å¤å¥½å¤",
+        linkText: "åçº§å°é«çº§ä¸»æº",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "ææ¯ä¿¡æ¯",
+        cpanelTitle: "æ§å¶é¢æ¿åè½",
+        cpanelFeatures: ["ææ°çcPanelæ§å¶é¢æ¿", "Softaculousæ¥æ240å¤ä¸ªèæ¬", "ç®¡çæ¨çç«ç¹ãæä»¶åæ°æ®åº", "åè´¹SSLè¯ä¹¦ï¼Let's Encryptï¼", "åè´¹ç½ç«æå»ºå¨", "åè´¹RailGun"],
+        emailTitle: "çµå­é®ä»¶",
+        emailFeatures: ["ç½ç»é®ä»¶ï¼RoundcubeãSquirelmailãHordeï¼", "æ éè½¬åå¨", "åå¾é®ä»¶è¿æ»¤å¨", "å¨æ¶é®ä»¶", "é®ä»¶åè¡¨", "é®ä»¶å å¯"],
+        codeTitle: "ç¼ç  / MySQL",
+        codeFeatures: ["æ¯æPHP 5.2 - 8.4", "PerlãPythonãRuby on Rails", "PHPMyAdmin", "è¿ç¨MySQL", "Cronjobèæ¬", "Mimeç±»å"],
+        metricsTitle: "ææ ",
+        metricsFeatures: ["æè¿è®¿å®¢", "å¸¦å®½", "AWStatsãAnalog StatsãWebalizer", "èµæºçè§å¨", "èæ¬æ´»å¨"]
+    },
+    hi: {
+        langName: "à¤¹à¤¿à¤¨à¥à¤¦à¥",
+        labelText: "à¤­à¤¾à¤·à¤¾ à¤à¥à¤¨à¥à¤:",
+        title: "à¤¡à¥à¤®à¥à¤¨ à¤¨à¤¿à¤²à¤à¤¬à¤¿à¤¤",
+        subtitle: "à¤¯à¤¹ à¤¡à¥à¤®à¥à¤¨ à¤¸à¤°à¥à¤µà¤° à¤¸à¥à¤®à¤¾ à¤¤à¤ à¤ªà¤¹à¥à¤à¤à¤¨à¥ à¤¯à¤¾ à¤à¤¸à¥ à¤¤à¤°à¤¹ à¤à¥ à¤à¤¾à¤°à¤£ à¤¸à¥ à¤¨à¤¿à¤²à¤à¤¬à¤¿à¤¤ à¤¹à¥à¥¤",
+        description: "à¤¯à¤¦à¤¿ à¤à¤ªà¤à¥ à¤à¥à¤ à¤ªà¥à¤°à¤¶à¥à¤¨ à¤¹à¥à¤ à¤¤à¥ à¤à¥à¤ªà¤¯à¤¾ à¤à¤ªà¤¨à¥ à¤¹à¥à¤¸à¥à¤à¤¿à¤à¤ à¤à¤à¤à¥à¤°à¥à¤² à¤ªà¥à¤¨à¤² à¤®à¥à¤ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤¸à¥ à¤¸à¤à¤ªà¤°à¥à¤ à¤à¤°à¥à¤à¥¤",
+        pricingText: "à¤¯à¥à¤à¤¨à¤¾à¤à¤ à¤®à¤¾à¤¤à¥à¤° $29.99/à¤µà¤°à¥à¤· à¤¸à¥ à¤¶à¥à¤°à¥",
+        benefits: ["à¤¸à¥à¤ªà¤° à¤«à¤¾à¤¸à¥à¤ à¤à¤¨à¤µà¥à¤à¤®à¤ à¤à¤¸à¤à¤¸à¤¡à¥ à¤¸à¥à¤à¥à¤°à¥à¤", "à¤®à¥à¤«à¥à¤¤ à¤à¤¸à¤à¤¸à¤à¤² à¤ªà¥à¤°à¤®à¤¾à¤£à¤ªà¤¤à¥à¤°", "à¤à¤¸à¥à¤®à¤¿à¤¤ à¤¸à¥à¤¥à¤¾à¤¨", "à¤à¤¸à¥à¤®à¤¿à¤¤ à¤¸à¥à¤ªà¥à¤¯à¥"],
+        viewMoreBtn: "à¤à¤° à¤à¤§à¤¿à¤ à¤²à¤¾à¤­ à¤¦à¥à¤à¥à¤",
+        linkText: "à¤ªà¥à¤°à¥à¤®à¤¿à¤¯à¤® à¤¹à¥à¤¸à¥à¤à¤¿à¤à¤ à¤®à¥à¤ à¤à¤ªà¤à¥à¤°à¥à¤¡ à¤à¤°à¥à¤",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "à¤¤à¤à¤¨à¥à¤à¥ à¤à¤¾à¤¨à¤à¤¾à¤°à¥",
+        cpanelTitle: "à¤à¤à¤à¥à¤°à¥à¤² à¤ªà¥à¤¨à¤² à¤à¥ à¤µà¤¿à¤¶à¥à¤·à¤¤à¤¾à¤à¤",
+        cpanelFeatures: ["à¤¨à¤µà¥à¤¨à¤¤à¤® cPanel à¤à¤à¤à¥à¤°à¥à¤² à¤ªà¥à¤¨à¤²", "240+ à¤¸à¥à¤à¥à¤°à¤¿à¤ªà¥à¤ à¤à¥ à¤¸à¤¾à¤¥ Softaculous", "à¤à¤ªà¤¨à¥ à¤¸à¤¾à¤à¤à¥à¤¸, à¤«à¤¼à¤¾à¤à¤²à¥à¤ à¤à¤° à¤¡à¥à¤à¤¾à¤¬à¥à¤¸ à¤ªà¥à¤°à¤¬à¤à¤§à¤¿à¤¤ à¤à¤°à¥à¤", "à¤®à¥à¤«à¥à¤¤ SSL à¤ªà¥à¤°à¤®à¤¾à¤£à¤ªà¤¤à¥à¤° (Let's Encrypt)", "à¤®à¥à¤«à¥à¤¤ à¤¸à¤¾à¤à¤à¤¬à¤¿à¤²à¥à¤¡à¤°", "à¤®à¥à¤«à¥à¤¤ RailGun"],
+        emailTitle: "à¤à¤®à¥à¤²",
+        emailFeatures: ["à¤µà¥à¤¬à¤®à¥à¤² (Roundcube, Squirelmail, Horde)", "à¤à¤¸à¥à¤®à¤¿à¤¤ à¤«à¥à¤°à¤µà¤°à¥à¤¡à¤°", "à¤¸à¥à¤ªà¥à¤® à¤«à¤¿à¤²à¥à¤à¤°", "à¤à¥à¤-à¤à¤² à¤à¤®à¥à¤²", "à¤®à¥à¤²à¤¿à¤à¤ à¤¸à¥à¤à¥", "à¤®à¥à¤² à¤à¤¨à¥à¤à¥à¤°à¤¿à¤ªà¥à¤¶à¤¨"],
+        codeTitle: "à¤à¥à¤¡à¤¿à¤à¤ / MySQL",
+        codeFeatures: ["PHP 5.2 - 8.4 à¤à¥ à¤²à¤¿à¤ à¤¸à¤®à¤°à¥à¤¥à¤¨", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "à¤°à¤¿à¤®à¥à¤ MySQL", "à¤à¥à¤°à¥à¤¨à¤à¥à¤¬ à¤¸à¥à¤à¥à¤°à¤¿à¤ªà¥à¤à¤¿à¤à¤", "Mime à¤ªà¥à¤°à¤à¤¾à¤°"],
+        metricsTitle: "à¤®à¥à¤à¥à¤°à¤¿à¤à¥à¤¸",
+        metricsFeatures: ["à¤à¤à¤¤à¤¿à¤® à¤à¤à¤à¤¤à¥à¤", "à¤¬à¥à¤à¤¡à¤µà¤¿à¤¡à¥à¤¥", "AWStats, Analog Stats, Webalizer", "à¤¸à¤à¤¸à¤¾à¤§à¤¨ à¤®à¥à¤¨à¤¿à¤à¤°", "à¤¸à¥à¤à¥à¤°à¤¿à¤ªà¥à¤ à¤à¤¤à¤¿à¤µà¤¿à¤§à¤¿"]
+    },
+    ar: {
+        langName: "Ø§ÙØ¹Ø±Ø¨ÙØ©",
+        labelText: "Ø­Ø¯Ø¯ ÙØºØ©:",
+        title: "Ø§ÙÙØ·Ø§Ù ÙØ¹ÙÙ",
+        subtitle: "ØªÙ ØªØ¹ÙÙÙ ÙØ°Ø§ Ø§ÙÙØ·Ø§Ù ÙØ¨ÙÙØºÙ Ø­Ø¯ÙØ¯ Ø§ÙØ®Ø§Ø¯Ù Ø£Ù ÙØ§ Ø´Ø§Ø¨Ù.",
+        description: "ÙØ±Ø¬Ù Ø§ÙØ§ØªØµØ§Ù Ø¨Ø§ÙØ¯Ø¹Ù ÙÙ ÙÙØ­Ø© ØªØ­ÙÙ Ø§ÙØ§Ø³ØªØ¶Ø§ÙØ© Ø§ÙØ®Ø§ØµØ© Ø¨Ù Ø¥Ø°Ø§ ÙØ§Ù ÙØ¯ÙÙ Ø§Ø³ØªÙØ³Ø§Ø±.",
+        upgradeText: "Ø§Ø­ØµÙ Ø¹ÙÙ ÙØ°Ø§ Ø§ÙÙØ·Ø§Ù Ø¹Ø¨Ø± Ø§ÙØ¥ÙØªØ±ÙØª Ø§ÙÙÙÙ! ÙÙ Ø¨Ø§ÙØªØ±ÙÙØ© Ø¥ÙÙ Ø§ÙØ§Ø³ØªØ¶Ø§ÙØ© Ø§ÙÙÙÙØ²Ø© ÙØ§Ø³ØªÙØªØ¹ Ø¨Ù:",
+        pricingText: "ØªØ¨Ø¯Ø£ Ø§ÙØ®Ø·Ø· Ø¨Ø³Ø¹Ø± ÙÙØ®ÙØ¶ ÙØµÙ Ø¥ÙÙ 29.99 Ø¯ÙÙØ§Ø±ÙØ§ ÙÙ Ø§ÙØ³ÙØ©",
+        benefits: ["ØªØ®Ø²ÙÙ NVMe SSD ÙØ§Ø¦Ù Ø§ÙØ³Ø±Ø¹Ø©", "Ø´ÙØ§Ø¯Ø§Øª SSL ÙØ¬Ø§ÙÙØ©", "ÙØ³Ø§Ø­Ø© ØºÙØ± ÙØ­Ø¯ÙØ¯Ø©", "ÙØ­Ø¯Ø© ÙØ¹Ø§ÙØ¬Ø© ÙØ±ÙØ²ÙØ© ØºÙØ± ÙØ­Ø¯ÙØ¯Ø©"],
+        viewMoreBtn: "Ø¹Ø±Ø¶ Ø§ÙÙØ²ÙØ¯ ÙÙ Ø§ÙÙÙØ§Ø¦Ø¯",
+        linkText: "Ø§ÙØªØ±ÙÙØ© Ø¥ÙÙ Ø§ÙØ§Ø³ØªØ¶Ø§ÙØ© Ø§ÙÙÙÙØ²Ø©",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "ÙØ¹ÙÙÙØ§Øª ØªÙÙÙØ©",
+        cpanelTitle: "ÙÙØ²Ø§Øª ÙÙØ­Ø© Ø§ÙØªØ­ÙÙ",
+        cpanelFeatures: ["Ø£Ø­Ø¯Ø« ÙÙØ­Ø© ØªØ­ÙÙ cPanel", "Softaculous ÙØ¹ Ø£ÙØ«Ø± ÙÙ 240 Ø¨Ø±ÙØ§ÙØ¬ÙØ§ ÙØµÙÙØ§", "Ø¥Ø¯Ø§Ø±Ø© ÙÙØ§ÙØ¹Ù ÙÙÙÙØ§ØªÙ ÙÙÙØ§Ø¹Ø¯ Ø¨ÙØ§ÙØ§ØªÙ", "Ø´ÙØ§Ø¯Ø§Øª SSL ÙØ¬Ø§ÙÙØ© (Let's Encrypt)", "ÙÙØ´Ø¦ ÙÙØ§ÙØ¹ ÙØ¬Ø§ÙÙ", "RailGun ÙØ¬Ø§ÙÙ"],
+        emailTitle: "Ø±Ø³Ø§Ø¦Ù Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¥ÙÙØªØ±ÙÙÙ",
+        emailFeatures: ["Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¥ÙÙØªØ±ÙÙÙ Ø¹ÙÙ Ø§ÙÙÙØ¨ (Roundcube, Squirelmail, Horde)", "ÙØ¹ÙØ¯ ØªÙØ¬ÙÙ ØºÙØ± ÙØ­Ø¯ÙØ¯", "ÙØ±Ø´Ø­Ø§Øª Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¹Ø´ÙØ§Ø¦Ù", "Ø±Ø³Ø§Ø¦Ù Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¥ÙÙØªØ±ÙÙÙ Ø§ÙØ´Ø§ÙÙØ©", "ÙÙØ§Ø¦Ù Ø¨Ø±ÙØ¯ÙØ©", "ØªØ´ÙÙØ± Ø§ÙØ¨Ø±ÙØ¯"],
+        codeTitle: "Ø§ÙØªØ±ÙÙØ² / MySQL",
+        codeFeatures: ["Ø¯Ø¹Ù PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "MySQL Ø¹Ù Ø¨Ø¹Ø¯", "Ø¨Ø±ÙØ¬Ø© Cronjob", "Ø£ÙÙØ§Ø¹ Mime"],
+        metricsTitle: "ÙÙØ§ÙÙØ³",
+        metricsFeatures: ["Ø¢Ø®Ø± Ø§ÙØ²ÙØ§Ø±", "Ø¹Ø±Ø¶ Ø§ÙÙØ·Ø§Ù Ø§ÙØªØ±Ø¯Ø¯Ù", "AWStats, Analog Stats, Webalizer", "ÙØ±Ø§ÙØ¨ Ø§ÙÙÙØ§Ø±Ø¯", "ÙØ´Ø§Ø· Ø§ÙØ¨Ø±ÙØ§ÙØ¬ Ø§ÙÙØµÙ"]
+    },
+    pt: {
+        langName: "PortuguÃªs",
+        labelText: "Selecione um idioma:",
+        title: "DomÃ­nio Suspenso",
+        subtitle: "Este domÃ­nio estÃ¡ suspenso por atingir os limites do servidor ou similar.",
+        description: "Por favor, contate o suporte no seu painel de controle de hospedagem se tiver alguma dÃºvida.",
+        upgradeText: "Coloque este domÃ­nio online hoje! Atualize para Hospedagem Premium e aproveite:",
+        pricingText: "Planos a partir de apenas US$ 29.99/ano",
+        benefits: ["Armazenamento SSD NVMe super rÃ¡pido", "Certificados SSL gratuitos", "EspaÃ§o Ilimitado", "CPU Ilimitada"],
+        viewMoreBtn: "Ver mais benefÃ­cios",
+        linkText: "Atualizar para Hospedagem Premium",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "InformaÃ§Ã£o tÃ©cnica",
+        cpanelTitle: "Recursos do painel de controle",
+        cpanelFeatures: ["Painel de controle cPanel mais recente", "Softaculous com mais de 240 scripts", "Gerencie seus sites, arquivos e bancos de dados", "Certificados SSL gratuitos (Let's Encrypt)", "Construtor de sites gratuito", "RailGun gratuito"],
+        emailTitle: "E-mails",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Encaminhadores ilimitados", "Filtros de spam", "E-mails catch-all", "Listas de discussÃ£o", "Criptografia de e-mail"],
+        codeTitle: "CodificaÃ§Ã£o / MySQL",
+        codeFeatures: ["Suporte para PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "MySQL remoto", "Script Cronjob", "Tipos Mime"],
+        metricsTitle: "MÃ©tricas",
+        metricsFeatures: ["Ãltimos visitantes", "Largura de banda", "AWStats, Analog Stats, Webalizer", "Monitor de recursos", "Atividade de script"]
+    },
+    ru: {
+        langName: "Ð ÑÑÑÐºÐ¸Ð¹",
+        labelText: "ÐÑÐ±ÐµÑÐ¸ÑÐµ ÑÐ·ÑÐº:",
+        title: "ÐÐ¾Ð¼ÐµÐ½ Ð¿ÑÐ¸Ð¾ÑÑÐ°Ð½Ð¾Ð²Ð»ÐµÐ½",
+        subtitle: "Ð­ÑÐ¾Ñ Ð´Ð¾Ð¼ÐµÐ½ Ð¿ÑÐ¸Ð¾ÑÑÐ°Ð½Ð¾Ð²Ð»ÐµÐ½ Ð¸Ð·-Ð·Ð° Ð´Ð¾ÑÑÐ¸Ð¶ÐµÐ½Ð¸Ñ Ð»Ð¸Ð¼Ð¸ÑÐ¾Ð² ÑÐµÑÐ²ÐµÑÐ° Ð¸Ð»Ð¸ Ð¿Ð¾Ð´Ð¾Ð±Ð½Ð¾Ð³Ð¾.",
+        description: "ÐÐ¾Ð¶Ð°Ð»ÑÐ¹ÑÑÐ°, Ð¾Ð±ÑÐ°ÑÐ¸ÑÐµÑÑ Ð² ÑÐ»ÑÐ¶Ð±Ñ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ¸ Ð² Ð²Ð°ÑÐµÐ¹ Ð¿Ð°Ð½ÐµÐ»Ð¸ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ ÑÐ¾ÑÑÐ¸Ð½Ð³Ð¾Ð¼, ÐµÑÐ»Ð¸ Ñ Ð²Ð°Ñ ÐµÑÑÑ Ð²Ð¾Ð¿ÑÐ¾ÑÑ.",
+        upgradeText: "ÐÐ°Ð¿ÑÑÑÐ¸ÑÐµ ÑÑÐ¾Ñ Ð´Ð¾Ð¼ÐµÐ½ ÑÐµÐ³Ð¾Ð´Ð½Ñ! ÐÐ±Ð½Ð¾Ð²Ð¸ÑÐµÑÑ Ð´Ð¾ ÐÑÐµÐ¼Ð¸ÑÐ¼-ÑÐ¾ÑÑÐ¸Ð½Ð³Ð° Ð¸ Ð½Ð°ÑÐ»Ð°Ð¶Ð´Ð°Ð¹ÑÐµÑÑ:",
+        pricingText: "ÐÐ»Ð°Ð½Ñ Ð¾Ñ $29.99/Ð³Ð¾Ð´",
+        benefits: ["Ð¡Ð²ÐµÑÑÐ±ÑÑÑÑÐ¾Ðµ ÑÑÐ°Ð½Ð¸Ð»Ð¸ÑÐµ NVMe SSD", "ÐÐµÑÐ¿Ð»Ð°ÑÐ½ÑÐµ SSL-ÑÐµÑÑÐ¸ÑÐ¸ÐºÐ°ÑÑ", "ÐÐµÐ¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð½Ð¾Ðµ Ð¿ÑÐ¾ÑÑÑÐ°Ð½ÑÑÐ²Ð¾", "ÐÐµÐ¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð½ÑÐ¹ CPU"],
+        viewMoreBtn: "ÐÐ¾ÑÐ¼Ð¾ÑÑÐµÑÑ Ð±Ð¾Ð»ÑÑÐµ Ð¿ÑÐµÐ¸Ð¼ÑÑÐµÑÑÐ²",
+        linkText: "ÐÐ±Ð½Ð¾Ð²Ð¸ÑÑ Ð´Ð¾ ÐÑÐµÐ¼Ð¸ÑÐ¼-ÑÐ¾ÑÑÐ¸Ð½Ð³Ð°",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ°Ñ Ð¸Ð½ÑÐ¾ÑÐ¼Ð°ÑÐ¸Ñ",
+        cpanelTitle: "ÐÐ¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÐ¸ Ð¿Ð°Ð½ÐµÐ»Ð¸ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ",
+        cpanelFeatures: ["ÐÐ¾ÑÐ»ÐµÐ´Ð½ÑÑ Ð¿Ð°Ð½ÐµÐ»Ñ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ cPanel", "Softaculous Ñ 240+ ÑÐºÑÐ¸Ð¿ÑÐ°Ð¼Ð¸", "Ð£Ð¿ÑÐ°Ð²Ð»ÑÐ¹ÑÐµ ÑÐ²Ð¾Ð¸Ð¼Ð¸ ÑÐ°Ð¹ÑÐ°Ð¼Ð¸, ÑÐ°Ð¹Ð»Ð°Ð¼Ð¸ Ð¸ Ð±Ð°Ð·Ð°Ð¼Ð¸ Ð´Ð°Ð½Ð½ÑÑ", "ÐÐµÑÐ¿Ð»Ð°ÑÐ½ÑÐµ SSL-ÑÐµÑÑÐ¸ÑÐ¸ÐºÐ°ÑÑ (Let's Encrypt)", "ÐÐµÑÐ¿Ð»Ð°ÑÐ½ÑÐ¹ ÐºÐ¾Ð½ÑÑÑÑÐºÑÐ¾Ñ ÑÐ°Ð¹ÑÐ¾Ð²", "ÐÐµÑÐ¿Ð»Ð°ÑÐ½ÑÐ¹ RailGun"],
+        emailTitle: "Ð­Ð»ÐµÐºÑÑÐ¾Ð½Ð½Ð°Ñ Ð¿Ð¾ÑÑÐ°",
+        emailFeatures: ["ÐÐµÐ±-Ð¿Ð¾ÑÑÐ° (Roundcube, Squirelmail, Horde)", "ÐÐµÐ¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð½ÑÐµ Ð¿ÐµÑÐµÑÑÐ»ÐºÐ¸", "Ð¡Ð¿Ð°Ð¼-ÑÐ¸Ð»ÑÑÑÑ", "Catch-All ÑÐ»ÐµÐºÑÑÐ¾Ð½Ð½ÑÐµ Ð¿Ð¸ÑÑÐ¼Ð°", "Ð¡Ð¿Ð¸ÑÐºÐ¸ ÑÐ°ÑÑÑÐ»ÐºÐ¸", "Ð¨Ð¸ÑÑÐ¾Ð²Ð°Ð½Ð¸Ðµ Ð¿Ð¾ÑÑÑ"],
+        codeTitle: "ÐÐ¾Ð´Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ðµ / MySQL",
+        codeFeatures: ["ÐÐ¾Ð´Ð´ÐµÑÐ¶ÐºÐ° PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "Ð£Ð´Ð°Ð»ÐµÐ½Ð½ÑÐ¹ MySQL", "Ð¡ÐºÑÐ¸Ð¿ÑÑ Cronjob", "Ð¢Ð¸Ð¿Ñ Mime"],
+        metricsTitle: "ÐÐµÑÑÐ¸ÐºÐ¸",
+        metricsFeatures: ["ÐÐ¾ÑÐ»ÐµÐ´Ð½Ð¸Ðµ Ð¿Ð¾ÑÐµÑÐ¸ÑÐµÐ»Ð¸", "ÐÑÐ¾Ð¿ÑÑÐºÐ½Ð°Ñ ÑÐ¿Ð¾ÑÐ¾Ð±Ð½Ð¾ÑÑÑ", "AWStats, Analog Stats, Webalizer", "ÐÐ¾Ð½Ð¸ÑÐ¾Ñ ÑÐµÑÑÑÑÐ¾Ð²", "ÐÐºÑÐ¸Ð²Ð½Ð¾ÑÑÑ ÑÐºÑÐ¸Ð¿ÑÐ¾Ð²"]
+    },
+    it: {
+        langName: "Italiano",
+        labelText: "Seleziona una lingua:",
+        title: "Dominio sospeso",
+        subtitle: "Questo dominio Ã¨ sospeso per aver raggiunto i limiti del server o simili.",
+        description: "Si prega di contattare il supporto nel pannello di controllo dell'hosting per eventuali domande.",
+        upgradeText: "Porta online questo dominio oggi! Passa all'Hosting Premium e goditi:",
+        pricingText: "Piani a partire da soli $29.99/anno",
+        benefits: ["Archiviazione SSD NVMe super veloce", "Certificati SSL gratuiti", "Spazio illimitato", "CPU illimitata"],
+        viewMoreBtn: "Visualizza altri vantaggi",
+        linkText: "Passa all'Hosting Premium",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Informazioni tecniche",
+        cpanelTitle: "FunzionalitÃ  del pannello di controllo",
+        cpanelFeatures: ["Ultimo pannello di controllo cPanel", "Softaculous con oltre 240 script", "Gestisci i tuoi siti, file e database", "Certificati SSL gratuiti (Let's Encrypt)", "Costruttore di siti gratuito", "RailGun gratuito"],
+        emailTitle: "Email",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Inoltri illimitati", "Filtri antispam", "Email catch-all", "Mailing list", "Crittografia della posta"],
+        codeTitle: "Codifica / MySQL",
+        codeFeatures: ["Supporto per PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "MySQL remoto", "Script Cronjob", "Tipi Mime"],
+        metricsTitle: "Metriche",
+        metricsFeatures: ["Ultimi visitatori", "Larghezza di banda", "AWStats, Analog Stats, Webalizer", "Monitoraggio risorse", "AttivitÃ  script"]
+    },
+    tr: {
+        langName: "TÃ¼rkÃ§e",
+        labelText: "Bir dil seÃ§in:",
+        title: "Alan AdÄ± AskÄ±ya AlÄ±ndÄ±",
+        subtitle: "Bu alan adÄ± sunucu sÄ±nÄ±rlarÄ±na ulaÅtÄ±ÄÄ± veya benzer bir nedenle askÄ±ya alÄ±ndÄ±.",
+        description: "Bir sorunuz varsa lÃ¼tfen hosting kontrol panelinizden destek ile iletiÅime geÃ§in.",
+        upgradeText: "Bu alan adÄ±nÄ± bugÃ¼n Ã§evrimiÃ§i yapÄ±n! Premium Hosting'e yÃ¼kseltin ve keyfini Ã§Ä±karÄ±n:",
+        pricingText: "AylÄ±k $29.99/yÄ±l",
+        benefits: ["SÃ¼per HÄ±zlÄ± NVMe SSD Depolama", "Ãcretsiz SSL SertifikalarÄ±", "SÄ±nÄ±rsÄ±z Alan", "SÄ±nÄ±rsÄ±z CPU"],
+        viewMoreBtn: "Daha Fazla Avantaj GÃ¶rÃ¼ntÃ¼le",
+        linkText: "Premium Hosting'e YÃ¼kselt",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Teknik Bilgiler",
+        cpanelTitle: "Kontrol Paneli Ãzellikleri",
+        cpanelFeatures: ["En son cPanel kontrol paneli", "240'tan fazla komut dosyasÄ± iÃ§eren Softaculous", "Sitelerinizi, DosyalarÄ±nÄ±zÄ± ve VeritabanlarÄ±nÄ±zÄ± YÃ¶netin", "Ãcretsiz SSL SertifikalarÄ± (Let's Encrypt)", "Ãcretsiz SiteBuilder", "Ãcretsiz RailGun"],
+        emailTitle: "E-postalar",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "SÄ±nÄ±rsÄ±z YÃ¶nlendirici", "Spam Filtreleri", "TÃ¼mÃ¼nÃ¼ Yakala E-postalarÄ±", "Posta Listeleri", "Posta Åifreleme"],
+        codeTitle: "Kodlama / MySQL",
+        codeFeatures: ["PHP 5.2 - 8.4 desteÄi", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "Uzak MySQL", "Cronjob Komut DosyasÄ±", "Mime TÃ¼rleri"],
+        metricsTitle: "Metrikler",
+        metricsFeatures: ["Son ZiyaretÃ§iler", "Bant GeniÅliÄi", "AWStats, Analog Stats, Webalizer", "Kaynak MonitÃ¶rÃ¼", "Komut DosyasÄ± EtkinliÄi"]
+    },
+    pl: {
+        langName: "Polski",
+        labelText: "Wybierz jÄzyk:",
+        title: "Domena zawieszona",
+        subtitle: "Ta domena zostaÅa zawieszona z powodu osiÄgniÄcia limitÃ³w serwera lub podobnych.",
+        description: "Skontaktuj siÄ z pomocÄ technicznÄ w panelu kontrolnym hostingu, jeÅli masz pytania.",
+        upgradeText: "Uruchom tÄ domenÄ juÅ¼ dziÅ! PrzejdÅº na Premium Hosting i ciesz siÄ:",
+        pricingText: "Pakiety juÅ¼ od 29.99 USD/rok",
+        benefits: ["Superszybka pamiÄÄ masowa NVMe SSD", "BezpÅatne certyfikaty SSL", "Nieograniczona przestrzeÅ", "Nieograniczony procesor"],
+        viewMoreBtn: "Zobacz wiÄcej korzyÅci",
+        linkText: "PrzejdÅº na Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Informacje techniczne",
+        cpanelTitle: "Funkcje panelu sterowania",
+        cpanelFeatures: ["Najnowszy panel sterowania cPanel", "Softaculous z ponad 240 skryptami", "ZarzÄdzaj swoimi witrynami, plikami i bazami danych", "BezpÅatne certyfikaty SSL (Let's Encrypt)", "BezpÅatny kreator stron", "BezpÅatny RailGun"],
+        emailTitle: "E-maile",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Nieograniczone przekierowania", "Filtry antyspamowe", "E-maile Catch-All", "Listy mailingowe", "Szyfrowanie poczty"],
+        codeTitle: "Kodowanie / MySQL",
+        codeFeatures: ["ObsÅuga PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "Zdalny MySQL", "Skrypty Cronjob", "Typy Mime"],
+        metricsTitle: "Metryki",
+        metricsFeatures: ["Ostatni goÅcie", "PrzepustowoÅÄ", "AWStats, Analog Stats, Webalizer", "Monitor zasobÃ³w", "AktywnoÅÄ skryptu"]
+    },
+    nl: {
+        langName: "Nederlands",
+        labelText: "Selecteer een taal:",
+        title: "Domein opgeschort",
+        subtitle: "Dit domein is opgeschort wegens het bereiken van serverlimieten of iets dergelijks.",
+        description: "Neem contact op met support in uw hosting controlepaneel als u een vraag heeft.",
+        upgradeText: "Zet dit domein vandaag nog online! Upgrade naar Premium Hosting en geniet van:",
+        pricingText: "Pakketten vanaf slechts â¬ 29.99/jaar",
+        benefits: ["Supersnelle NVMe SSD-opslag", "Gratis SSL-certificaten", "Onbeperkte ruimte", "Onbeperkte CPU"],
+        viewMoreBtn: "Bekijk meer voordelen",
+        linkText: "Upgrade naar Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Technische informatie",
+        cpanelTitle: "Functies van het configuratiescherm",
+        cpanelFeatures: ["Nieuwste cPanel-configuratiescherm", "Softaculous met meer dan 240 scripts", "Beheer uw sites, bestanden en databases", "Gratis SSL-certificaten (Let's Encrypt)", "Gratis SiteBuilder", "Gratis RailGun"],
+        emailTitle: "E-mails",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "Onbeperkt aantal doorstuurservers", "Spamfilters", "Catch-all e-mails", "Mailinglijsten", "E-mailversleuteling"],
+        codeTitle: "Codering / MySQL",
+        codeFeatures: ["Ondersteuning voor PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "Externe MySQL", "Cronjob-scripting", "Mime-typen"],
+        metricsTitle: "Statistieken",
+        metricsFeatures: ["Laatste bezoekers", "Bandbreedte", "AWStats, Analog Stats, Webalizer", "Resource Monitor", "Scriptactiviteit"]
+    },
+    sv: {
+        langName: "Svenska",
+        labelText: "VÃ¤lj sprÃ¥k:",
+        title: "DomÃ¤n avstÃ¤ngd",
+        subtitle: "Denna domÃ¤n Ã¤r avstÃ¤ngd fÃ¶r att ha nÃ¥tt servergrÃ¤nser eller liknande.",
+        description: "Kontakta support i din vÃ¤rdkontrollpanel om du har en frÃ¥ga.",
+        upgradeText: "FÃ¥ denna domÃ¤n online idag! Uppgradera till Premium Hosting och njut av:",
+        pricingText: "Planer frÃ¥n sÃ¥ lÃ¥gt som 29.99 USD/Ã¥r",
+        benefits: ["Supersnabb NVMe SSD-lagring", "Gratis SSL-certifikat", "ObegrÃ¤nsat utrymme", "ObegrÃ¤nsad CPU"],
+        viewMoreBtn: "Visa fler fÃ¶rdelar",
+        linkText: "Uppgradera till Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Teknisk information",
+        cpanelTitle: "Kontrollpanelens funktioner",
+        cpanelFeatures: ["Senaste cPanel-kontrollpanelen", "Softaculous med 240+ skript", "Hantera dina webbplatser, filer och databaser", "Gratis SSL-certifikat (Let's Encrypt)", "Gratis webbplatsbyggare", "Gratis RailGun"],
+        emailTitle: "E-post",
+        emailFeatures: ["Webbmail (Roundcube, Squirelmail, Horde)", "ObegrÃ¤nsade vidarebefordrare", "SkrÃ¤ppostfilter", "Catch-All-e-post", "SÃ¤ndlistor", "E-postkryptering"],
+        codeTitle: "Kodning / MySQL",
+        codeFeatures: ["StÃ¶d fÃ¶r PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "FjÃ¤rr-MySQL", "Cronjob-skript", "Mime-typer"],
+        metricsTitle: "MÃ¤tvÃ¤rden",
+        metricsFeatures: ["Senaste besÃ¶kare", "Bandbredd", "AWStats, Analog Stats, Webalizer", "ResursÃ¶vervakare", "Skriptaktivitet"]
+    },
+    no: {
+        langName: "Norsk",
+        labelText: "Velg sprÃ¥k:",
+        title: "Domene suspendert",
+        subtitle: "Dette domenet er suspendert pÃ¥ grunn av at servergrenser er nÃ¥dd eller lignende.",
+        description: "Vennligst kontakt support i ditt hosting-kontrollpanel hvis du har en forespÃ¸rsel.",
+        upgradeText: "FÃ¥ dette domenet online i dag! Oppgrader til Premium Hosting og nyt:",
+        pricingText: "Planer fra sÃ¥ lite som $29.99/Ã¥r",
+        benefits: ["Superrask NVMe SSD-lagring", "Gratis SSL-sertifikater", "Ubegrenset plass", "Ubegrenset CPU"],
+        viewMoreBtn: "Se flere fordeler",
+        linkText: "Oppgrader til Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Teknisk informasjon",
+        cpanelTitle: "Kontrollpanelfunksjoner",
+        cpanelFeatures: ["Siste cPanel-kontrollpanel", "Softaculous med 240+ skript", "Administrer dine nettsteder, filer og databaser", "Gratis SSL-sertifikater (Let's Encrypt)", "Gratis nettstedbygger", "Gratis RailGun"],
+        emailTitle: "E-poster",
+        emailFeatures: ["Nettpost (Roundcube, Squirelmail, Horde)", "Ubegrensede videresendinger", "Spamfiltre", "Catch-All-e-poster", "E-postlister", "E-postkryptering"],
+        codeTitle: "Koding / MySQL",
+        codeFeatures: ["StÃ¸tte for PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "Ekstern MySQL", "Cronjob-skripting", "Mime-typer"],
+        metricsTitle: "Metrikk",
+        metricsFeatures: ["Siste besÃ¸kende", "BÃ¥ndbredde", "AWStats, Analog Stats, Webalizer", "RessursovervÃ¥ker", "Skriptaktivitet"]
+    },
+    da: {
+        langName: "Dansk",
+        labelText: "VÃ¦lg et sprog:",
+        title: "DomÃ¦ne suspenderet",
+        subtitle: "Dette domÃ¦ne er suspenderet, fordi servergrÃ¦nser er nÃ¥et eller lignende.",
+        description: "Kontakt venligst support i dit hosting-kontrolpanel, hvis du har en forespÃ¸rgsel.",
+        upgradeText: "FÃ¥ dette domÃ¦ne online i dag! Opgrader til Premium Hosting og nyd:",
+        pricingText: "Planer fra sÃ¥ lavt som $29.99/Ã¥r",
+        benefits: ["Superhurtig NVMe SSD-lagerplads", "Gratis SSL-certifikater", "UbegrÃ¦nset plads", "UbegrÃ¦nset CPU"],
+        viewMoreBtn: "Se flere fordele",
+        linkText: "Opgrader til Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Teknisk information",
+        cpanelTitle: "Kontrolpanelfunktioner",
+        cpanelFeatures: ["Seneste cPanel-kontrolpanel", "Softaculous med 240+ scripts", "Administrer dine websteder, filer og databaser", "Gratis SSL-certifikater (Let's Encrypt)", "Gratis webstedsbygger", "Gratis RailGun"],
+        emailTitle: "E-mails",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "UbegrÃ¦nsede videresendere", "Spamfiltre", "Catch-all-e-mails", "Postlister", "E-mail-kryptering"],
+        codeTitle: "Kodning / MySQL",
+        codeFeatures: ["UnderstÃ¸ttelse af PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "Fjern-MySQL", "Cronjob-scripting", "Mime-typer"],
+        metricsTitle: "MÃ¥linger",
+        metricsFeatures: ["Seneste besÃ¸gende", "BÃ¥ndbredde", "AWStats, Analog Stats, Webalizer", "Ressourcemonitor", "Scriptaktivitet"]
+    },
+    el: {
+        langName: "ÎÎ»Î»Î·Î½Î¹ÎºÎ¬",
+        labelText: "ÎÏÎ¹Î»Î­Î¾ÏÎµ Î³Î»ÏÏÏÎ±:",
+        title: "Î¤Î¿Î¼Î­Î±Ï ÏÎµ Î±Î½Î±ÏÏÎ¿Î»Î®",
+        subtitle: "ÎÏÏÏÏ Î¿ ÏÎ¿Î¼Î­Î±Ï Î­ÏÎµÎ¹ ÏÎµÎ¸ÎµÎ¯ ÏÎµ Î±Î½Î±ÏÏÎ¿Î»Î® ÎµÏÎµÎ¹Î´Î® Î­ÏÎµÎ¹ ÏÏÎ¬ÏÎµÎ¹ ÏÎ± ÏÏÎ¹Î± ÏÎ¿Ï Î´Î¹Î±ÎºÎ¿Î¼Î¹ÏÏÎ® Î® Î³Î¹Î± ÏÎ±ÏÏÎ¼Î¿Î¹Î¿ Î»ÏÎ³Î¿.",
+        description: "Î Î±ÏÎ±ÎºÎ±Î»Î¿ÏÎ¼Îµ ÎµÏÎ¹ÎºÎ¿Î¹Î½ÏÎ½Î®ÏÏÎµ Î¼Îµ ÏÎ·Î½ ÏÏÎ¿ÏÏÎ®ÏÎ¹Î¾Î· ÏÏÎ¿Î½ ÏÎ¯Î½Î±ÎºÎ± ÎµÎ»Î­Î³ÏÎ¿Ï ÏÎ¹Î»Î¿Î¾ÎµÎ½Î¯Î±Ï ÏÎ±Ï ÎµÎ¬Î½ Î­ÏÎµÏÎµ ÎºÎ¬ÏÎ¿Î¹Î± Î±ÏÎ¿ÏÎ¯Î±.",
+        upgradeText: "ÎÏÎ¿ÎºÏÎ®ÏÏÎµ Î±ÏÏÏÎ½ ÏÎ¿Î½ ÏÎ¿Î¼Î­Î± online ÏÎ®Î¼ÎµÏÎ±! ÎÎ½Î±Î²Î±Î¸Î¼Î¯ÏÏÎµ ÏÎµ Premium Hosting ÎºÎ±Î¹ Î±ÏÎ¿Î»Î±ÏÏÏÎµ:",
+        pricingText: "Î ÏÎ¿Î³ÏÎ¬Î¼Î¼Î±ÏÎ± Î±ÏÏ Î¼ÏÎ»Î¹Ï $29.99/Î­ÏÎ¿Ï",
+        benefits: ["ÎÎ¾Î±Î¹ÏÎµÏÎ¹ÎºÎ¬ Î³ÏÎ®Î³Î¿ÏÎ¿Ï ÏÏÏÎ¿Ï Î±ÏÎ¿Î¸Î®ÎºÎµÏÏÎ·Ï NVMe SSD", "ÎÏÏÎµÎ¬Î½ ÏÎ¹ÏÏÎ¿ÏÎ¿Î¹Î·ÏÎ¹ÎºÎ¬ SSL", "ÎÏÎµÏÎ¹ÏÏÎ¹ÏÏÎ¿Ï ÏÏÏÎ¿Ï", "ÎÏÎµÏÎ¹ÏÏÎ¹ÏÏÎ· CPU"],
+        viewMoreBtn: "ÎÎµÎ¯ÏÎµ ÏÎµÏÎ¹ÏÏÏÏÎµÏÎ± Î¿ÏÎ­Î»Î·",
+        linkText: "ÎÎ½Î±Î²Î±Î¸Î¼Î¯ÏÎ· ÏÎµ Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Î¤ÎµÏÎ½Î¹ÎºÎ­Ï ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯ÎµÏ",
+        cpanelTitle: "ÎÏÎ½Î±ÏÏÏÎ·ÏÎµÏ ÏÎ¿Ï Î Î¯Î½Î±ÎºÎ± ÎÎ»Î­Î³ÏÎ¿Ï",
+        cpanelFeatures: ["Î¤ÎµÎ»ÎµÏÏÎ±Î¯Î¿Ï ÏÎ¯Î½Î±ÎºÎ±Ï ÎµÎ»Î­Î³ÏÎ¿Ï cPanel", "Softaculous Î¼Îµ 240+ ÏÎµÎ½Î¬ÏÎ¹Î±", "ÎÎ¹Î±ÏÎµÎ¹ÏÎ¹ÏÏÎµÎ¯ÏÎµ ÏÎ¿ÏÏ Î¹ÏÏÏÏÎ¿ÏÎ¿ÏÏ, ÏÎ± Î±ÏÏÎµÎ¯Î± ÎºÎ±Î¹ ÏÎ¹Ï Î²Î¬ÏÎµÎ¹Ï Î´ÎµÎ´Î¿Î¼Î­Î½ÏÎ½ ÏÎ±Ï", "ÎÏÏÎµÎ¬Î½ ÏÎ¹ÏÏÎ¿ÏÎ¿Î¹Î·ÏÎ¹ÎºÎ¬ SSL (Let's Encrypt)", "ÎÏÏÎµÎ¬Î½ SiteBuilder", "ÎÏÏÎµÎ¬Î½ RailGun"],
+        emailTitle: "Email",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "ÎÏÎµÏÎ¹ÏÏÎ¹ÏÏÎ¿Î¹ ÏÏÎ¿ÏÎ¸Î·ÏÎ­Ï", "Î¦Î¯Î»ÏÏÎ± Î±Î½ÎµÏÎ¹Î¸ÏÎ¼Î·ÏÎ·Ï Î±Î»Î»Î·Î»Î¿Î³ÏÎ±ÏÎ¯Î±Ï", "Catch-All Emails", "ÎÎ¯ÏÏÎµÏ Î±Î»Î»Î·Î»Î¿Î³ÏÎ±ÏÎ¯Î±Ï", "ÎÏÏÏÏÎ¿Î³ÏÎ¬ÏÎ·ÏÎ· Î±Î»Î»Î·Î»Î¿Î³ÏÎ±ÏÎ¯Î±Ï"],
+        codeTitle: "ÎÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· / MySQL",
+        codeFeatures: ["Î¥ÏÎ¿ÏÏÎ®ÏÎ¹Î¾Î· Î³Î¹Î± PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "ÎÏÎ¿Î¼Î±ÎºÏÏÏÎ¼Î­Î½Î· MySQL", "Cronjob Scripting", "Î¤ÏÏÎ¿Î¹ Mime"],
+        metricsTitle: "ÎÎµÏÏÎ®ÏÎµÎ¹Ï",
+        metricsFeatures: ["Î¤ÎµÎ»ÎµÏÏÎ±Î¯Î¿Î¹ ÎµÏÎ¹ÏÎºÎ­ÏÏÎµÏ", "ÎÏÏÎ¿Ï Î¶ÏÎ½Î·Ï", "AWStats, Analog Stats, Webalizer", "Î Î±ÏÎ±ÎºÎ¿Î»Î¿ÏÎ¸Î·ÏÎ· ÏÏÏÏÎ½", "ÎÏÎ±ÏÏÎ·ÏÎ¹ÏÏÎ·ÏÎ± ÏÎµÎ½Î±ÏÎ¯Î¿Ï"]
+    },
+    hu: {
+        langName: "Magyar",
+        labelText: "VÃ¡lasszon nyelvet:",
+        title: "Domain felfÃ¼ggesztve",
+        subtitle: "Ez a domain felfÃ¼ggesztÃ©sre kerÃ¼lt a szerverkorlÃ¡tok elÃ©rÃ©se vagy hasonlÃ³ okok miatt.",
+        description: "KÃ©rjÃ¼k, vegye fel a kapcsolatot a tÃ¡mogatÃ¡ssal a tÃ¡rhelykezelÅjÃ©ben, ha kÃ©rdÃ©se van.",
+        upgradeText: "Tegye online ezt a domaint mÃ©g ma! VÃ¡ltson PrÃ©mium TÃ¡rhelyre Ã©s Ã©lvezze:",
+        pricingText: "Csomagok mÃ¡r 29.99 USD/Ã©v Ã¡rtÃ³l",
+        benefits: ["Szupergyors NVMe SSD tÃ¡rhely", "Ingyenes SSL tanÃºsÃ­tvÃ¡nyok", "KorlÃ¡tlan tÃ¡rhely", "KorlÃ¡tlan CPU"],
+        viewMoreBtn: "TovÃ¡bbi elÅnyÃ¶k megtekintÃ©se",
+        linkText: "VÃ¡ltÃ¡s PrÃ©mium TÃ¡rhelyre",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Technikai informÃ¡ciÃ³k",
+        cpanelTitle: "VezÃ©rlÅpult funkciÃ³k",
+        cpanelFeatures: ["LegÃºjabb cPanel vezÃ©rlÅpult", "Softaculous 240+ szkripttel", "Webhelyek, fÃ¡jlok Ã©s adatbÃ¡zisok kezelÃ©se", "Ingyenes SSL tanÃºsÃ­tvÃ¡nyok (Let's Encrypt)", "Ingyenes webhelykÃ©szÃ­tÅ", "Ingyenes RailGun"],
+        emailTitle: "E-mailek",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "KorlÃ¡tlan tovÃ¡bbÃ­tÃ³k", "Spam szÅ±rÅk", "Mindenre kiterjedÅ e-mailek", "LevelezÅlistÃ¡k", "E-mail titkosÃ­tÃ¡s"],
+        codeTitle: "KÃ³dolÃ¡s / MySQL",
+        codeFeatures: ["PHP 5.2 - 8.4 tÃ¡mogatÃ¡s", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "TÃ¡voli MySQL", "Cronjob szkriptelÃ©s", "Mime tÃ­pusok"],
+        metricsTitle: "MÃ©rÅszÃ¡mok",
+        metricsFeatures: ["UtolsÃ³ lÃ¡togatÃ³k", "SÃ¡vszÃ©lessÃ©g", "AWStats, Analog Stats, Webalizer", "ErÅforrÃ¡s-figyelÅ", "SzkripttevÃ©kenysÃ©g"]
+    },
+    cs: {
+        langName: "ÄeÅ¡tina",
+        labelText: "Zvolte jazyk:",
+        title: "DomÃ©na pozastavena",
+        subtitle: "Tato domÃ©na byla pozastavena z dÅ¯vodu dosaÅ¾enÃ­ limitÅ¯ serveru nebo podobnÃ©ho dÅ¯vodu.",
+        description: "Pokud mÃ¡te dotaz, obraÅ¥te se na podporu v ovlÃ¡dacÃ­m panelu vaÅ¡eho hostingu.",
+        upgradeText: "ZÃ­skejte tuto domÃ©nu online jeÅ¡tÄ dnes! Upgradujte na Premium Hosting a uÅ¾Ã­vejte si:",
+        pricingText: "PlÃ¡ny jiÅ¾ od 29.99 $/rok",
+        benefits: ["Super rychlÃ© ÃºloÅ¾iÅ¡tÄ NVMe SSD", "BezplatnÃ© certifikÃ¡ty SSL", "NeomezenÃ½ prostor", "NeomezenÃ½ CPU"],
+        viewMoreBtn: "Zobrazit dalÅ¡Ã­ vÃ½hody",
+        linkText: "Upgrade na Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "TechnickÃ© informace",
+        cpanelTitle: "Funkce ovlÃ¡dacÃ­ho panelu",
+        cpanelFeatures: ["NejnovÄjÅ¡Ã­ ovlÃ¡dacÃ­ panel cPanel", "Softaculous s vÃ­ce neÅ¾ 240 skripty", "Spravujte svÃ© weby, soubory a databÃ¡ze", "BezplatnÃ© certifikÃ¡ty SSL (Let's Encrypt)", "BezplatnÃ½ tvÅ¯rce strÃ¡nek", "BezplatnÃ½ RailGun"],
+        emailTitle: "E-maily",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "NeomezenÃ© pÅesmÄrovÃ¡nÃ­", "SpamovÃ© filtry", "Catch-All e-maily", "PoÅ¡tovnÃ­ seznamy", "Å ifrovÃ¡nÃ­ poÅ¡ty"],
+        codeTitle: "KÃ³dovÃ¡nÃ­ / MySQL",
+        codeFeatures: ["Podpora pro PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "VzdÃ¡lenÃ½ MySQL", "SkriptovÃ¡nÃ­ Cronjob", "Typy Mime"],
+        metricsTitle: "Metriky",
+        metricsFeatures: ["PoslednÃ­ nÃ¡vÅ¡tÄvnÃ­ci", "Å Ã­Åka pÃ¡sma", "AWStats, Analog Stats, Webalizer", "Monitor zdrojÅ¯", "Aktivita skriptu"]
+    },
+    bg: {
+        langName: "ÐÑÐ»Ð³Ð°ÑÑÐºÐ¸",
+        labelText: "ÐÐ·Ð±ÐµÑÐµÑÐµ ÐµÐ·Ð¸Ðº:",
+        title: "ÐÐ¾Ð¼ÐµÐ¹Ð½ÑÑ Ðµ ÑÐ¿ÑÑÐ½",
+        subtitle: "Ð¢Ð¾Ð·Ð¸ Ð´Ð¾Ð¼ÐµÐ¹Ð½ Ðµ ÑÐ¿ÑÑÐ½ Ð¿Ð¾ÑÐ°Ð´Ð¸ Ð´Ð¾ÑÑÐ¸Ð³Ð°Ð½Ðµ Ð½Ð° Ð»Ð¸Ð¼Ð¸ÑÐ¸ Ð½Ð° ÑÑÑÐ²ÑÑÐ° Ð¸Ð»Ð¸ Ð¿Ð¾Ð´Ð¾Ð±Ð½Ð¸ Ð¿ÑÐ¸ÑÐ¸Ð½Ð¸.",
+        description: "ÐÐ¾Ð»Ñ, ÑÐ²ÑÑÐ¶ÐµÑÐµ ÑÐµ Ñ Ð¿Ð¾Ð´Ð´ÑÑÐ¶ÐºÐ°ÑÐ° Ð² ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð½Ð¸Ñ Ð¿Ð°Ð½ÐµÐ» Ð½Ð° ÑÐ¾ÑÑÐ¸Ð½Ð³Ð° ÑÐ¸, Ð°ÐºÐ¾ Ð¸Ð¼Ð°ÑÐµ Ð²ÑÐ¿ÑÐ¾Ñ.",
+        upgradeText: "ÐÐºÐ»ÑÑÐµÑÐµ ÑÐ¾Ð·Ð¸ Ð´Ð¾Ð¼ÐµÐ¹Ð½ Ð¾Ð½Ð»Ð°Ð¹Ð½ Ð´Ð½ÐµÑ! ÐÐ°Ð´ÑÑÑÐ¾Ð¹ÑÐµ Ð´Ð¾ Premium Hosting Ð¸ ÑÐµ Ð½Ð°ÑÐ»Ð°Ð´ÐµÑÐµ Ð½Ð°:",
+        pricingText: "ÐÐ»Ð°Ð½Ð¾Ð²Ðµ, Ð·Ð°Ð¿Ð¾ÑÐ²Ð°ÑÐ¸ Ð¾Ñ $29.99/Ð³Ð¾Ð´Ð¸Ð½Ð°",
+        benefits: ["Ð¡ÑÐ¿ÐµÑ Ð±ÑÑÐ·Ð¾ NVMe SSD ÑÑÑÑÐ°Ð½ÐµÐ½Ð¸Ðµ", "ÐÐµÐ·Ð¿Ð»Ð°ÑÐ½Ð¸ SSL ÑÐµÑÑÐ¸ÑÐ¸ÐºÐ°ÑÐ¸", "ÐÐµÐ¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð¾ Ð¿ÑÐ¾ÑÑÑÐ°Ð½ÑÑÐ²Ð¾", "ÐÐµÐ¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½ Ð¿ÑÐ¾ÑÐµÑÐ¾Ñ"],
+        viewMoreBtn: "ÐÐ¸Ð¶ÑÐµ Ð¿Ð¾Ð²ÐµÑÐµ Ð¿ÑÐµÐ´Ð¸Ð¼ÑÑÐ²Ð°",
+        linkText: "ÐÐ°Ð´ÑÑÑÐ¾Ð¹ÑÐµ Ð´Ð¾ Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ° Ð¸Ð½ÑÐ¾ÑÐ¼Ð°ÑÐ¸Ñ",
+        cpanelTitle: "Ð¤ÑÐ½ÐºÑÐ¸Ð¸ Ð½Ð° ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð½Ð¸Ñ Ð¿Ð°Ð½ÐµÐ»",
+        cpanelFeatures: ["ÐÐ°Ð¹-Ð½Ð¾Ð² ÐºÐ¾Ð½ÑÑÐ¾Ð»ÐµÐ½ Ð¿Ð°Ð½ÐµÐ» cPanel", "Softaculous Ñ 240+ ÑÐºÑÐ¸Ð¿ÑÐ°", "Ð£Ð¿ÑÐ°Ð²Ð»ÑÐ²Ð°Ð¹ÑÐµ Ð²Ð°ÑÐ¸ÑÐµ ÑÐ°Ð¹ÑÐ¾Ð²Ðµ, ÑÐ°Ð¹Ð»Ð¾Ð²Ðµ Ð¸ Ð±Ð°Ð·Ð¸ Ð´Ð°Ð½Ð½Ð¸", "ÐÐµÐ·Ð¿Ð»Ð°ÑÐ½Ð¸ SSL ÑÐµÑÑÐ¸ÑÐ¸ÐºÐ°ÑÐ¸ (Let's Encrypt)", "ÐÐµÐ·Ð¿Ð»Ð°ÑÐµÐ½ ÐºÐ¾Ð½ÑÑÑÑÐºÑÐ¾Ñ Ð½Ð° ÑÐ°Ð¹ÑÐ¾Ð²Ðµ", "ÐÐµÐ·Ð¿Ð»Ð°ÑÐµÐ½ RailGun"],
+        emailTitle: "ÐÐ¼ÐµÐ¹Ð»Ð¸",
+        emailFeatures: ["Ð£ÐµÐ± Ð¿Ð¾ÑÐ° (Roundcube, Squirelmail, Horde)", "ÐÐµÐ¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð¸ Ð¿ÑÐµÐ¿ÑÐ°ÑÐ°ÑÐ¸", "Ð¡Ð¿Ð°Ð¼ ÑÐ¸Ð»ÑÑÐ¸", "ÐÐ¼ÐµÐ¹Ð»Ð¸ Ð·Ð° Ð²ÑÐ¸ÑÐºÐ¸", "ÐÐ¾ÑÐµÐ½ÑÐºÐ¸ ÑÐ¿Ð¸ÑÑÑÐ¸", "Ð¨Ð¸ÑÑÐ¾Ð²Ð°Ð½Ðµ Ð½Ð° Ð¿Ð¾ÑÐ°"],
+        codeTitle: "ÐÐ¾Ð´Ð¸ÑÐ°Ð½Ðµ / MySQL",
+        codeFeatures: ["ÐÐ¾Ð´Ð´ÑÑÐ¶ÐºÐ° Ð½Ð° PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "ÐÑÐ´Ð°Ð»ÐµÑÐµÐ½ MySQL", "Cronjob ÑÐºÑÐ¸Ð¿ÑÐ¾Ð²Ðµ", "Mime ÑÐ¸Ð¿Ð¾Ð²Ðµ"],
+        metricsTitle: "ÐÐ¾ÐºÐ°Ð·Ð°ÑÐµÐ»Ð¸",
+        metricsFeatures: ["ÐÐ¾ÑÐ»ÐµÐ´Ð½Ð¸ Ð¿Ð¾ÑÐµÑÐ¸ÑÐµÐ»Ð¸", "Ð¢ÑÐ°ÑÐ¸Ðº", "AWStats, Analog Stats, Webalizer", "ÐÐ¾Ð½Ð¸ÑÐ¾Ñ Ð½Ð° ÑÐµÑÑÑÑÐ¸ÑÐµ", "ÐÐºÑÐ¸Ð²Ð½Ð¾ÑÑ Ð½Ð° ÑÐºÑÐ¸Ð¿ÑÐ¾Ð²Ðµ"]
+    },
+    ro: {
+        langName: "RomÃ¢nÄ",
+        labelText: "SelectaÈi o limbÄ:",
+        title: "Domeniu suspendat",
+        subtitle: "Acest domeniu a fost suspendat pentru cÄ a atins limitele serverului sau din motive similare.",
+        description: "VÄ rugÄm sÄ contactaÈi suportul Ã®n panoul de control al gÄzduirii dumneavoastrÄ dacÄ aveÈi o Ã®ntrebare.",
+        upgradeText: "PuneÈi acest domeniu online astÄzi! FaceÈi upgrade la GÄzduire Premium Èi bucuraÈi-vÄ de:",
+        pricingText: "Planuri Ã®ncepÃ¢nd de la 29.99 USD/an",
+        benefits: ["Stocare SSD NVMe super rapidÄ", "Certificate SSL gratuite", "SpaÈiu nelimitat", "CPU nelimitat"],
+        viewMoreBtn: "VedeÈi mai multe beneficii",
+        linkText: "Upgrade la GÄzduire Premium",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "InformaÈii tehnice",
+        cpanelTitle: "Caracteristici panou de control",
+        cpanelFeatures: ["Cel mai recent panou de control cPanel", "Softaculous cu peste 240 de scripturi", "GestionaÈi-vÄ site-urile, fiÈierele Èi bazele de date", "Certificate SSL gratuite (Let's Encrypt)", "Constructor de site-uri gratuit", "RailGun gratuit"],
+        emailTitle: "E-mailuri",
+        emailFeatures: ["Webmail (Roundcube, Squirelmail, Horde)", "RedirectÄri nelimitate", "Filtre de spam", "E-mailuri catch-all", "Liste de corespondenÈÄ", "Criptare e-mail"],
+        codeTitle: "Codare / MySQL",
+        codeFeatures: ["Suport pentru PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "MySQL la distanÈÄ", "Scripturi Cronjob", "Tipuri Mime"],
+        metricsTitle: "Metrici",
+        metricsFeatures: ["Ultimii vizitatori", "LÄÈime de bandÄ", "AWStats, Analog Stats, Webalizer", "Monitor de resurse", "Activitate script"]
+    },
+    uk: {
+        langName: "Ð£ÐºÑÐ°ÑÐ½ÑÑÐºÐ°",
+        labelText: "ÐÐ¸Ð±ÐµÑÑÑÑ Ð¼Ð¾Ð²Ñ:",
+        title: "ÐÐ¾Ð¼ÐµÐ½ Ð¿ÑÐ¸Ð·ÑÐ¿Ð¸Ð½ÐµÐ½Ð¾",
+        subtitle: "Ð¦ÐµÐ¹ Ð´Ð¾Ð¼ÐµÐ½ Ð¿ÑÐ¸Ð·ÑÐ¿Ð¸Ð½ÐµÐ½Ð¾ ÑÐµÑÐµÐ· Ð´Ð¾ÑÑÐ³Ð½ÐµÐ½Ð½Ñ Ð»ÑÐ¼ÑÑÑÐ² ÑÐµÑÐ²ÐµÑÐ° Ð°Ð±Ð¾ Ð· Ð¿Ð¾Ð´ÑÐ±Ð½Ð¸Ñ Ð¿ÑÐ¸ÑÐ¸Ð½.",
+        description: "ÐÑÐ´Ñ Ð»Ð°ÑÐºÐ°, Ð·Ð²'ÑÐ¶ÑÑÑÑÑ Ð·Ñ ÑÐ»ÑÐ¶Ð±Ð¾Ñ Ð¿ÑÐ´ÑÑÐ¸Ð¼ÐºÐ¸ Ñ Ð²Ð°ÑÑÐ¹ Ð¿Ð°Ð½ÐµÐ»Ñ ÐºÐµÑÑÐ²Ð°Ð½Ð½Ñ ÑÐ¾ÑÑÐ¸Ð½Ð³Ð¾Ð¼, ÑÐºÑÐ¾ Ñ Ð²Ð°Ñ Ñ Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð½Ñ.",
+        upgradeText: "ÐÑÑÐ¸Ð¼Ð°Ð¹ÑÐµ ÑÐµÐ¹ Ð´Ð¾Ð¼ÐµÐ½ Ð¾Ð½Ð»Ð°Ð¹Ð½ ÑÑÐ¾Ð³Ð¾Ð´Ð½Ñ! ÐÐ½Ð¾Ð²ÑÑÑ Ð´Ð¾ Premium Hosting ÑÐ° Ð½Ð°ÑÐ¾Ð»Ð¾Ð´Ð¶ÑÐ¹ÑÐµÑÑ:",
+        pricingText: "ÐÐ»Ð°Ð½Ð¸ Ð²ÑÐ´ $29.99/ÑÑÐº",
+        benefits: ["ÐÐ°Ð´ÑÐ²Ð¸Ð´ÐºÐµ ÑÑÐ¾Ð²Ð¸ÑÐµ NVMe SSD", "ÐÐµÐ·ÐºÐ¾ÑÑÐ¾Ð²Ð½Ñ SSL-ÑÐµÑÑÐ¸ÑÑÐºÐ°ÑÐ¸", "ÐÐµÐ¾Ð±Ð¼ÐµÐ¶ÐµÐ½Ð¸Ð¹ Ð¿ÑÐ¾ÑÑÑÑ", "ÐÐµÐ¾Ð±Ð¼ÐµÐ¶ÐµÐ½Ð¸Ð¹ Ð¿ÑÐ¾ÑÐµÑÐ¾Ñ"],
+        viewMoreBtn: "ÐÐµÑÐµÐ³Ð»ÑÐ½ÑÑÐ¸ Ð±ÑÐ»ÑÑÐµ Ð¿ÐµÑÐµÐ²Ð°Ð³",
+        linkText: "ÐÐ½Ð¾Ð²Ð¸ÑÐ¸ Ð´Ð¾ Premium Hosting",
+        copyrightText: "Â© iFastNet",
+        modalTitle: "Ð¢ÐµÑÐ½ÑÑÐ½Ð° ÑÐ½ÑÐ¾ÑÐ¼Ð°ÑÑÑ",
+        cpanelTitle: "Ð¤ÑÐ½ÐºÑÑÑ Ð¿Ð°Ð½ÐµÐ»Ñ ÐºÐµÑÑÐ²Ð°Ð½Ð½Ñ",
+        cpanelFeatures: ["ÐÑÑÐ°Ð½Ð½Ñ Ð¿Ð°Ð½ÐµÐ»Ñ ÐºÐµÑÑÐ²Ð°Ð½Ð½Ñ cPanel", "Softaculous Ð· 240+ ÑÐºÑÐ¸Ð¿ÑÐ°Ð¼Ð¸", "ÐÐµÑÑÐ¹ÑÐµ ÑÐ²Ð¾ÑÐ¼Ð¸ ÑÐ°Ð¹ÑÐ°Ð¼Ð¸, ÑÐ°Ð¹Ð»Ð°Ð¼Ð¸ ÑÐ° Ð±Ð°Ð·Ð°Ð¼Ð¸ Ð´Ð°Ð½Ð¸Ñ", "ÐÐµÐ·ÐºÐ¾ÑÑÐ¾Ð²Ð½Ñ SSL-ÑÐµÑÑÐ¸ÑÑÐºÐ°ÑÐ¸ (Let's Encrypt)", "ÐÐµÐ·ÐºÐ¾ÑÑÐ¾Ð²Ð½Ð¸Ð¹ ÐºÐ¾Ð½ÑÑÑÑÐºÑÐ¾Ñ ÑÐ°Ð¹ÑÑÐ²", "ÐÐµÐ·ÐºÐ¾ÑÑÐ¾Ð²Ð½Ð¸Ð¹ RailGun"],
+        emailTitle: "ÐÐ»ÐµÐºÑÑÐ¾Ð½Ð½Ñ Ð»Ð¸ÑÑÐ¸",
+        emailFeatures: ["ÐÐµÐ±-Ð¿Ð¾ÑÑÐ° (Roundcube, Squirelmail, Horde)", "ÐÐµÐ¾Ð±Ð¼ÐµÐ¶ÐµÐ½Ñ Ð¿ÐµÑÐµÑÐ¸Ð»Ð°ÑÑ", "Ð¡Ð¿Ð°Ð¼-ÑÑÐ»ÑÑÑÐ¸", "Catch-All ÐµÐ»ÐµÐºÑÑÐ¾Ð½Ð½Ñ Ð»Ð¸ÑÑÐ¸", "Ð¡Ð¿Ð¸ÑÐºÐ¸ ÑÐ¾Ð·ÑÐ¸Ð»ÐºÐ¸", "Ð¨Ð¸ÑÑÑÐ²Ð°Ð½Ð½Ñ Ð¿Ð¾ÑÑÐ¸"],
+        codeTitle: "ÐÐ¾Ð´ÑÐ²Ð°Ð½Ð½Ñ / MySQL",
+        codeFeatures: ["ÐÑÐ´ÑÑÐ¸Ð¼ÐºÐ° PHP 5.2 - 8.4", "Perl, Python, Ruby on Rails", "PHPMyAdmin", "ÐÑÐ´Ð´Ð°Ð»ÐµÐ½Ð¸Ð¹ MySQL", "Ð¡ÐºÑÐ¸Ð¿ÑÐ¸ Cronjob", "Ð¢Ð¸Ð¿Ð¸ Mime"],
+        metricsTitle: "ÐÐµÑÑÐ¸ÐºÐ¸",
+        metricsFeatures: ["ÐÑÑÐ°Ð½Ð½Ñ Ð²ÑÐ´Ð²ÑÐ´ÑÐ²Ð°ÑÑ", "ÐÑÐ¾Ð¿ÑÑÐºÐ½Ð° Ð·Ð´Ð°ÑÐ½ÑÑÑÑ", "AWStats, Analog Stats, Webalizer", "ÐÐ¾Ð½ÑÑÐ¾Ñ ÑÐµÑÑÑÑÑÐ²", "ÐÐºÑÐ¸Ð²Ð½ÑÑÑÑ ÑÐºÑÐ¸Ð¿ÑÑÐ²"]
+    }
+    // ... other languages can be added here following the same structure
+};
+
+function buildModalContent(lang) {
+    const t = translations[lang] || translations.en;
+    const createSection = (title, features) => {
+        if (!title || !features || features.length === 0) return '';
+        const listItems = features.map(item => `<li class="flex items-start"><span class="text-blue-400 mr-3 mt-1">â</span><span>${item}</span></li>`).join('');
+        return `
+            <div>
+                <h3 class="text-xl font-semibold mb-3 text-white">${title}</h3>
+                <ul class="space-y-2 list-none pl-0">${listItems}</ul>
+            </div>
+        `;
+    };
+
+    return `
+        ${createSection(t.cpanelTitle, t.cpanelFeatures)}
+        ${createSection(t.emailTitle, t.emailFeatures)}
+        ${createSection(t.codeTitle, t.codeFeatures)}
+        ${createSection(t.metricsTitle, t.metricsFeatures)}
+    `;
+}
+
+
+function updateContent(lang) {
+    const t = translations[lang] || translations.en;
+    document.getElementById("language-label-text").textContent = t.labelText;
+    document.getElementById("main-title").textContent = t.title;
+    document.getElementById("subtitle").textContent = t.subtitle;
+    document.getElementById("description").textContent = t.description;
+    document.getElementById("upgrade-text").textContent = t.upgradeText;
+    document.getElementById("pricing-text").textContent = t.pricingText;
+    document.getElementById("upgrade-link").textContent = t.linkText;
+    document.getElementById("view-more-btn").textContent = t.viewMoreBtn;
+    document.getElementById("copyright-text").textContent = t.copyrightText;
+    
+    const benefitsList = document.getElementById("benefits-list");
+    if (benefitsList) {
+        benefitsList.innerHTML = t.benefits.map(benefit => `<li>${benefit}</li>`).join('');
+    }
+
+    // Modal Content
+    document.getElementById("modal-title-text").textContent = t.modalTitle;
+    document.getElementById("modal-content").innerHTML = buildModalContent(lang);
+
+    document.documentElement.lang = lang;
+    document.title = t.title;
+    const langSelector = document.getElementById("language-selector");
+    langSelector.value = lang;
+}
+
+function populateLanguageSelector() {
+    const selector = document.getElementById("language-selector");
+    selector.innerHTML = '';
+    
+    const autoOption = document.createElement('option');
+    autoOption.value = "auto";
+    autoOption.textContent = "Auto-detect";
+    selector.appendChild(autoOption);
+
+    Object.keys(translations).sort((a, b) => translations[a].langName.localeCompare(translations[b].langName)).forEach(key => {
+        const data = translations[key];
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = data.langName;
+        selector.appendChild(option);
+    });
+}
+
+function getCurrentDomain() {
+    const hostParam = new URLSearchParams(window.location.search).get('host');
+    if (hostParam && hostParam.trim() !== '') {
+        return hostParam;
+    }
+    return window.location.hostname;
+}
+
+function parseDomain(domain) {
+    let cleanDomain = domain.replace(/^https?:\/\//, '');
+    const parts = cleanDomain.split('.');
+    if (parts.length >= 2) {
+        const sld = parts[0];
+        const tld = parts.slice(1).join('.');
+        return { sld, tld };
+    }
+    return { sld: cleanDomain, tld: '' };
+}
+
+function getBrowserLanguage() {
+    const lang = navigator.language || navigator.userLanguage;
+    return lang ? lang.split('-')[0] : 'en';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Setup Link
+    const domain = getCurrentDomain();
+    const { sld, tld } = parseDomain(domain);
+    const upgradeLink = document.getElementById('upgrade-link');
+    upgradeLink.href = `https://ifastnet.com/portal/aff.php?aff=31168&a=add&pid=3&sld=${encodeURIComponent(sld)}&tld=.${encodeURIComponent(tld)}&billingcycle=annually&domainoption=owndomain`;
+
+    // Language Handling
+    populateLanguageSelector();
+    const savedLang = Cookies.get('preferred_language');
+    const browserLang = getBrowserLanguage();
+    
+    let initialLang = 'en';
+    if (savedLang && savedLang !== 'auto' && translations[savedLang]) {
+        initialLang = savedLang;
+    } else if (translations[browserLang]) {
+        initialLang = browserLang;
+    }
+    
+    updateContent(initialLang);
+    if(savedLang) {
+        document.getElementById('language-selector').value = savedLang;
+    } else {
+         document.getElementById('language-selector').value = "auto";
+    }
+
+
+    document.getElementById('language-selector').addEventListener('change', (event) => {
+        let selectedLang = event.target.value;
+        Cookies.set('preferred_language', selectedLang, { expires: 365, secure: true, sameSite: 'Lax' });
+        if (selectedLang === 'auto') {
+            updateContent(browserLang);
+        } else {
+            updateContent(selectedLang);
+        }
+    });
+
+    // Modal Handling
+    const modal = document.getElementById('benefits-modal');
+    const openBtn = document.getElementById('view-more-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    openBtn.addEventListener('click', () => modal.classList.remove('hidden'));
+    closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+});
+</script>
+</body>
+</html>

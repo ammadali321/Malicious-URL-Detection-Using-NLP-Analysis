@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; charset=UTF-8">
+<TITLE>The JACAL Symbolic Math System</TITLE>
+<META NAME="keywords"
+CONTENT="JACAL, symbolic mathematics, symbolic math, computer algebra,
+jacal, scheme, algebra">
+<META NAME="description"
+CONTENT="JACAL is an interactive symbolic mathematics program. JACAL can manipulate and simplify equations, scalars, vectors, and
+matrices of single and multiple valued algebraic expressions containing numbers, variables, radicals, and algebraic differential, and
+holonomic functions.">
+<LINK REL="icon" HREF="Logo/equal.ico">
+<LINK REL="shortcut icon" HREF="Logo/equal.ico">
+</HEAD>
+<BODY>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-3791005-1"; urchinTracker(); </script>
+
+<TABLE CELLPADDING=4 WIDTH="100%">
+<TR>
+ <TD WIDTH=102 VALIGN=TOP ROWSPAN=3>
+<!--   <A HREF="ratint.pdf"> </A> -->
+  <A HREF="Logo/equal_256.png">
+  <IMG SRC="Logo/equal96.png" ALT="equal sign etched in (virtual) diabase" WIDTH=96 HEIGHT=64>
+  </A></TD>
+
+ <TD><A HREF="http://people.csail.mit.edu/jaffer/JACAL">
+ http://people.csail.mit.edu/jaffer/JACAL</A></TD></TR>
+
+<TR>
+ <TD ALIGN=LEFT><H1>The JACAL Symbolic Math System</H1></TD></TR>
+
+<TR><TD>
+    <TABLE BORDER=1>
+    <TR><TH>Current Version</TH>
+	<TH>Released</TH>
+	<TH>Terms</TH></TR>
+
+    <TR><TD ALIGN=CENTER><B>1c8</B></TD>
+	<TD ALIGN=CENTER><A HREF="JACAL_ANNOUNCE.txt">2020-03-02</A></TD>
+	<TD ALIGN=CENTER><A HREF="gpl-3.0.txt">GPL 3.0</A></TD></TR>
+
+    </TABLE>
+
+</TABLE>
+<HR>
+<P>
+JACAL is an interactive symbolic mathematics program.  JACAL can
+manipulate and simplify equations, scalars, vectors, and matrices of
+single and multiple valued algebraic expressions containing numbers,
+variables, radicals, and algebraic differential, and holonomic
+functions.
+</P>
+<P>
+JACAL is a
+<A HREF="http://www.gnu.org/help/evaluation.html#whatmeans">GNU package</A>.
+</P>
+<HR>
+
+<H2>New:</H2>
+
+<p>
+Jacal now does integration of rational functions whose integrals are
+rational functions optionally containing a radical involving the
+integration variable.  The integration algorithm is documented in
+<a href="ratint.pdf">http://people.csail.mit.edu/jaffer/ratint.pdf</a>
+</p>
+<!-- <p> -->
+<!--   Development log at -->
+<!-- <A HREF="http://cvs.savannah.gnu.org/viewvc/*checkout*/jacal/jacal/ChangeLog">http://cvs.savannah.gnu.org/viewvc/*checkout*/jacal/jacal/ChangeLog</A> -->
+<!-- </p> -->
+
+<H2>Quick Start</H2>
+
+<H3>x86 MS-Windows Installation</H3>
+
+Obtain <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/slib-3c1-1.exe"
+	  onClick="javascript:urchinTracker('/downloads/JACAL/slib-3c1-1.exe');">slib-3c1-1.exe</A> (1.1.MB) and run.
+<BR>
+Obtain <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/scm-5f4-1.exe"
+	  onClick="javascript:urchinTracker('/downloads/JACAL/scm-5f4-1.exe');">scm-5f4-1.exe</A> (475.kB) and run.
+<BR>
+Obtain <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/jacal-1c8-1.exe"
+	  onClick="javascript:urchinTracker('/downloads/JACAL/jacal-1c8-1.exe');">jacal-1c8-1.exe</A> (343.kB) and run.
+
+<H3>x86_64 GNU/Linux with RPM Installation</H3>
+<PRE>
+#! /bin/sh
+wget <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/slib-3c1-1.noarch.rpm"
+	onClick="javascript:urchinTracker('/downloads/JACAL/slib-3c1-1.noarch.rpm');">http://groups.csail.mit.edu/mac/ftpdir/scm/slib-3c1-1.noarch.rpm</A>
+wget <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/scm-5f4-1.x86_64.rpm"
+	onClick="javascript:urchinTracker('/downloads/JACAL/scm-5f4-1.x86_64.rpm');">http://groups.csail.mit.edu/mac/ftpdir/scm/scm-5f4-1.x86_64.rpm</A>
+wget <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/jacal-1c8-1.noarch.rpm"
+	onClick="javascript:urchinTracker('/downloads/JACAL/jacal-1c8-1.noarch.rpm');">http://groups.csail.mit.edu/mac/ftpdir/scm/jacal-1c8-1.noarch.rpm</A>
+rpm -U slib-3c1-1.noarch.rpm scm-5f4-1.x86_64.rpm jacal-1c8-1.noarch.rpm
+</PRE>
+
+<H3>Unix (Including GNU/Linux) Installation</H3>
+<PRE>
+#! /bin/sh
+wget <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/slib-3c1.zip"
+	onClick="javascript:urchinTracker('/downloads/JACAL/slib-3c1.zip');">http://groups.csail.mit.edu/mac/ftpdir/scm/slib-3c1.zip</A>
+wget <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/scm-5f4.zip"
+	onClick="javascript:urchinTracker('/downloads/JACAL/scm-5f4.zip');">http://groups.csail.mit.edu/mac/ftpdir/scm/scm-5f4.zip</A>
+wget <A HREF="http://groups.csail.mit.edu/mac/ftpdir/scm/jacal-1c8.zip"
+	onClick="javascript:urchinTracker('/downloads/JACAL/jacal-1c8.zip');">http://groups.csail.mit.edu/mac/ftpdir/scm/jacal-1c8.zip</A>
+unzip slib-3c1.zip
+unzip scm-5f4.zip
+unzip jacal-1c8.zip
+(cd slib; ./configure --prefix=/usr/local/; make install)
+(cd scm; ./configure --prefix=/usr/local/; make scmlit;
+ make scm5; make mydlls; make install)
+(cd jacal; ./configure --prefix=/usr/local/; make install)
+</PRE>
+
+<H2>Documentation and Theory</H2>
+
+<UL>
+ <LI>
+ Online <A HREF="jacal">JACAL</A> Manual; or
+        <A HREF="jacal.pdf">jacal.pdf</A></LI>
+ <LI>
+ <CITE><A HREF="lambda.txt">Algebra and the Lambda Calculus</A></CITE></LI>
+ <LI>
+   <CITE><A HREF="ratint.pdf">Rational function integration</A></CITE>
+   (.pdf)</LI>
+ <!-- <LI><A HREF="algdenom">Algorithm to Remove Radicals From Denominators</A></LI> -->
+</UL>
+
+<H2>JACAL Development</H2>
+<UL>
+ <LI><A HREF="JACAL2-plan">Plans for JACAL2</A></LI>
+
+ <LI><A HREF="https://savannah.gnu.org/cvs/?group=jacal">Savannah:</A>
+ CVS Repository <A HREF="http://savannah.gnu.org/cgi-bin/viewcvs/jacal/jacal/">jacal/jacal</A></LI>
+
+ <LI>Development Snapshot <A HREF="http://groups.csail.mit.edu/mac/ftpdir/users/jaffer/jacal.zip"
+			     onClick="javascript:urchinTracker('/downloads/JACAL/jacal.zip');">jacal.zip</A> (245.kB)</LI>
+
+ <LI><A HREF="http://lists.gnu.org/mailman/listinfo/jacal-discuss"
+	onClick="javascript:urchinTracker('/downloads/JACAL/jacal-discuss');">JACAL discussion mailing list</A></LI>
+
+ </UL>
+
+<BLOCKQUOTE>
+<H3>Volunteer opportunities</H3>
+
+ <UL>
+
+ <!-- <LI>Document -->
+ <!-- <A HREF="http://www.google.com/search?q=%22decomposition+of+algebraic+functions%22">Decomposition of Algebraic Functions</A></LI> -->
+
+ <LI>Add support for
+ <A HREF="http://www.w3.org/Math/">Mathematical Markup Language</A></LI>
+
+ </UL>
+</BLOCKQUOTE>
+
+<H2>Related Software</H2>
+<UL>
+<LI><A HREF="SLIB">SLIB</A> Scheme Library</LI>
+<LI><A HREF="http://directory.fsf.org/Category/Mathematics/symbolic/">FSF/UNESCO Free Software Directory: Symbolic</A></LI>
+<!-- <LI><A HREF="http://dmoz.org/Science/Math/Algebra/Software/">d.m.o.z. Open Directory Project Top: Science: Math: Algebra: Software</A></LI> -->
+<!-- <LI><A HREF="http://dir.yahoo.com/Business_and_Economy/Business_to_Business/Scientific/Software/Mathematics/Titles/?o=a">Yahoo: Mathematics Software</A></LI> -->
+</UL>
+
+<H2>Miscellany</H2>
+<UL>
+<LI><A HREF="CNS/DIMPA">The Distribution of Integer Magnitudes in Polynomial Arithmetic</A></LI>
+<LI><A NAME="ftp" HREF="README">FTP Links</A> to JACAL and related
+	software from this site and mirrors.</LI>
+<LI><A HREF="htmls.zip">htmls.zip</A>, a collection of these html
+	documentation files (600.kB)</LI>
+</UL>
+
+<CENTER><ADDRESS>Copyright &#169; 1999, 2000, 2001, 2002, 2003, 2005, 2007,
+2008, 2009, 2010, 2013, 2015, 2020 Aubrey&nbsp;Jaffer</ADDRESS></CENTER>
+
+<HR>
+<TABLE WIDTH="100%" ALIGN=CENTER><TR>
+<TD COLSPAN=3>
+I am a guest and <EM>not</EM> a member of the MIT Computer Science and Artificial Intelligence Laboratory.&nbsp;
+My actions and comments do not reflect in any way on MIT<A
+HREF="http://validator.w3.org/check?uri=http://people.csail.mit.edu/jaffer/JACAL">.</A><BR></TD></TR>
+
+<TR><TD WIDTH=5><TD><ADDRESS>agj @ alum.mit.edu</ADDRESS></TD>
+<TD ALIGN=RIGHT><A HREF=".">Go Figure!</A></TD></TR>
+</TABLE>
+</BODY>

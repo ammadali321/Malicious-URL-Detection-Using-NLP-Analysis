@@ -1,0 +1,59 @@
+<html>
+<head>
+<META CONTENT="LDAP, ldap, slapd.conf, schema, converter" NAME="keywords">
+<LINK REL="stylesheet" HREF="site.css" TYPE="text/css">
+<title>LDAP Schema Converter</title>
+</head>
+<BODY style="still" title="LDAP Schema Converter">
+<H1>LDAP Schema Converter</H1>
+<a href="ldap.de.html">German Version</a>
+<H2>Short Description</H2>
+<p>The LDAP Schema Converter currently converts objectclass
+and attribute type descriptions from the LDAPv3 to the
+slapd.conf format.
+</p>
+<P>The LDAPv3 schema format is specified in rfc2252.
+rfc2256 defines objektclasses und attributtypes for
+Users/Persons. Might be interesting for you.</P>
+<H2>Used Software</H2>
+<P>LDAP Schema Converter is implemented in Java (JDK  1.3.0).<BR>
+antlr version 2.7.1 is used as parser generator.
+You can read more about antlr at
+<A href="http://www.antlr.org" target="new">www.antlr.org</A>.  <BR>
+The runtime classes for antlr are provided with LDAP Schema Converter.
+</P>
+<H2>License</H2>
+<P>GNU General Public License</P>
+<H2>Known Bugs</H2>
+<UL>
+  <LI>No documentation</LI>
+  <LI>converts only LDAPv3 to slapd.conf (not the other way round)</LI>
+  <LI>Grammar of schema most likely not complete.</LI>
+  <LI>slapd.conf is available in various flavours.
+        ( e.g. Netscape Directory Server and the less powerfull
+           OpenLDAP 1.2). The rules for mapping LDAPv3
+           descriptions to slapd.conf assume that
+           superclasses are available in the target format.
+  </LI>
+</UL>
+<H2>Download</H2>
+<P>LDAP Schema Converter can be downloaded
+<A href="/download/LdapSchemaConverter2001117.zip">here</A> .</P>
+<H2>Usage</H2>
+<p>The files test.sh and test.bat can be used as example for
+how to call Schemaconverter.
+</p>
+<H2>Future Extensions</H2>
+<p>
+In case I should ever find some time, I could extend the grammar
+descriptions, improve the rules for mapping of superclasses and syntax
+definitions. (Maybe even a GUI could make sense for manipulating
+such rules.)</p>
+<p>
+However I hardly ever have time left for coding.</p>
+<h2>Author</h2>
+<p><a href="http://www.arturschneider.de">Artur Schneider</a><br>
+<img src="ad.png"/><br>
+Last changed on <!--DATE-->14.07.2003<!--/DATE-->
+</p>
+</body>

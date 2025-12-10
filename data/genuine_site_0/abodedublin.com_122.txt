@@ -1,0 +1,93 @@
+<html class="yui3-js-enabled js flexbox canvas canvastext webgl no-touch hashchange history draganddrop rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions video audio svg inlinesvg svgclippaths"><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important"></div><head>
+
+  <title>Private Site</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex">
+
+  <script src="//assets.squarespace.com/@sqs/polyfiller/1.6/legacy.js" nomodule="" type="text/javascript" crossorigin="anonymous"></script>
+  <script src="//assets.squarespace.com/@sqs/polyfiller/1.6/modern.js" type="text/javascript" crossorigin="anonymous"></script>
+  <script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-f606a2dc116d695c-min.en-US.js"></script><script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/extract-css-moment-js-vendor-088ec0120fdbcfed-min.en-US.js"></script><script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-9902ec3244984e7d-min.en-US.js"></script><script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-54bab8bb8a15366b-min.en-US.js"></script><script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-ed70ccc9ee03f359-min.en-US.js"></script><script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-80ce41a7d0bc105b-min.en-US.js"></script><link rel="stylesheet" type="text/css" href="//assets.squarespace.com/universal/styles-compressed/common-a6b76fd99259fcaa-min.en-US.css">
+  <script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/dialog-3a7d2b5e1531f2a0-min.en-US.js"></script><style type="text/css">.CSSTG-group {position:relative;display:block;}
+.CSSTG-child {backface-visibility:hidden;filter:blur(1);}
+.CSSTG-wrappedChild {padding:0.1px;margin:-0.1px;}
+</style><style type="text/css">.CSSTG-ExpandCollapse-expand {overflow:hidden;transition:max-height .2s ease-in-out, opacity .24s ease .08s;}
+.CSSTG-ExpandCollapse-collapse {overflow:hidden;transition:max-height .2s ease-in-out, opacity .16s ease;}
+</style><style type="text/css">.CSSTG-Dissolve-dissolve {overflow:hidden;transition:opacity .33s ease, min-height .33s ease, max-height .33s ease;}
+.CSSTG-Dissolve-leave {overflow:hidden;position:absolute;top:0;left:0;right:0;bottom:0;}
+.CSSTG-Dissolve-dissolve.CSSTG-Dissolve-async {transition:opacity .33s ease .66s, min-height .33s ease .33s, max-height .33s ease .33s;}
+.CSSTG-Dissolve-leave.CSSTG-Dissolve-async {transition:opacity .33s ease;}
+</style><style type="text/css">.CSSTG-Slide-group {overflow:hidden;}
+.CSSTG-Slide-slide {overflow:hidden;transition:transform .26s ease, min-height .26s ease, max-height .26s ease;}
+.CSSTG-Slide-leave {overflow:hidden;position:absolute;top:0;left:0;right:0;bottom:0;}
+</style><style type="text/css">.CSSTG-Reorderable-enter {transition:opacity .3s ease .2s;}
+.CSSTG-Reorderable-leave {position:absolute !important;top:0;left:0;transition:opacity .3s ease;}
+.CSSTG-Reorderable-move {transition:transform .36s ease;z-index:1;}
+.CSSTG-Reorderable-leave ~ .CSSTG-Reorderable-move {transition-delay:.2s;}
+</style><link rel="stylesheet" type="text/css" href="//assets.squarespace.com/universal/styles-compressed/dialog-f9093f2d526b94df-min.en-US.css">
+  <script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/system-page-1aed801a61785be1-min.en-US.js"></script><link rel="stylesheet" type="text/css" href="//assets.squarespace.com/universal/styles-compressed/system-page-1a1535235e2646c0-min.en-US.css">
+
+  
+  
+
+  <style>
+  .description {
+    max-width: 600px !important;
+  }
+  .description a {
+    color: inherit;
+  }
+
+  @media only screen and (min-width: 700px) {
+    .description {
+      width: 600px;
+    }
+  }
+  </style>
+
+
+</head>
+<body class="squarespace-config squarespace-system-page">
+
+  <div class="minimal-logo">&nbsp;</div>
+
+  <script type="text/template" id="messageTemplate">
+
+  	<div class="bigtext">
+  	  <div class="title">Private Site</div>
+  	  <div class="description">This site is currently private. If you’re the owner or contributor, <a href="/config">log in</a>.</div>
+  	</div>
+
+  </script>
+
+  <script>
+
+    Static =  { };
+    Static.CONTEXT = {};
+
+    Y = YUI(YUI_CONFIG).use('squarespace-common', 'squarespace-system-page', function(Y) {
+
+      var message = document.getElementById('messageTemplate').innerHTML;
+
+      LB = new Y.Squarespace.Lightbox({
+        disableNormalClose: true,
+        clickAnywhereToExit: false,
+        content: message,
+        margin: 100,
+        height: 90
+      });
+
+      LB.show();
+
+    });
+
+  </script><div id="modernizrx" style="display: none;">­<style id="smodernizrx">@media (touch-enabled),(-webkit-touch-enabled),(-moz-touch-enabled),(-o-touch-enabled),(-ms-touch-enabled),(modernizr){#modernizr{top:9px;position:absolute}}</style></div><div id="modernizrxx" style="display: none;">­<style id="smodernizrxx">@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}</style></div><div class="sqs-lightbox" id="yui_3_17_2_1_1754712684400_73" style="position: fixed; opacity: 1; z-index: 30010; left: 373px; top: 295.5px; width: 620px; height: 90px;"><div class="bigtext">
+  	  <div class="title">Private Site</div>
+  	  <div class="description">This site is currently private. If you’re the owner or contributor, <a href="/config">log in</a>.</div>
+  	</div></div><div class="sqs-lightbox-overlay black sqs-lightbox-overlay-style-orb" style="z-index: 30009; opacity: 1;"></div>
+
+
+
+</body></html>

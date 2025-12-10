@@ -1,0 +1,151 @@
+<html lang="en"><head>
+    <title>Bitly | bit.ly/1rCYKow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://securepubads.g.doubleclick.net/" crossorigin="">
+    <link rel="dns-prefetch" href="https://securepubads.g.doubleclick.net/">
+    <link rel="dns-prefetch" href="https://ep1.adtrafficquality.google">
+    <link rel="dns-prefetch" href="https://ep2.adtrafficquality.google">
+    <link rel="dns-prefetch" href="https://tpc.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    
+    
+    
+    
+    <link rel="icon" type="image/png" href="https://d1ayxb9ooonjts.cloudfront.net/d/911DC5232AD960E5CD922312AAAA1768D921C30F.png">
+    <link rel="stylesheet" href="https://d1ayxb9ooonjts.cloudfront.net/d/BCCAA1B1CFC08E65098D4D1EF178CE740B17E267.css">
+
+    <script>(function(){"use strict";const Y=e=>e&&!window.ketch?(window.semaphore=window.semaphore||[],window.ketch=function(){window.semaphore.push(arguments)},window.ketch):(window.gtag||(window.dataLayer=window.dataLayer||[],window.gtag=function(){window.dataLayer.push(arguments)}),window.gtag("consent","default",{ad_storage:"denied",functionality_storage:"denied",personalization_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",security_storage:"granted"}),window.gtag("set","ads_data_redaction",!0),window.gtag("set","url_passthrough",!1),window.gtag),a={AdBlockerDetected:"ad_blocker_detected",AdEmpty:"ad_empty",AdFilled:"ad_filled",AutoRedirect:"auto_redirect",BitlyHelpCenterNavigate:"bitly_helpcenter_navigate",BitlyHomepageNavigate:"bitly_homepage_navigate",ConsentAccepted:"consent_accepted",ConsentPreferences:"consent_preferences",ConsentPreviouslyAccepted:"consent_previously_accepted",ConsentPreviouslyRejected:"consent_previously_rejected",ConsentRejected:"consent_rejected",ConsentShown:"consent_shown",LongURLClickthrough:"long_url_clickthrough",LongURLContinue:"long_url_continue",PreviewPageView:"preview_page_view",SocialNavigate:"social_navigate",TrustAndSafetyNavigate:"trust_and_safety_navigate"},X=["ketch","ethyca","onetrust","none"];let B=null;const w=()=>B,Z=e=>{B=e},m=(e,t)=>new Promise((o,n)=>{const i=document.createElement("script");i.src=e,i.onload=r=>{t!=null&&t.onload&&t.onload(r),o(i)},i.onerror=r=>{t!=null&&t.onerror&&t.onerror(r),n(new Error(`Failed to load script: ${e}`))},t&&Object.entries(t).forEach(([r,c])=>{c===void 0||r==="onload"||r==="onerror"||(r in i?i[r]=c:i.setAttribute(r,c))}),document.head.appendChild(i)}),O={seenActions:new Set,pageOpen:new Date},P=()=>O,ee=e=>{O.seenActions.add(e)},l=e=>{const t=w(),{seenActions:o,pageOpen:n}=P();if(!navigator.sendBeacon||o.has(e))return;ee(e);const i=new URLSearchParams;i.set("action",e),i.set("page_view_id",(t==null?void 0:t.PageViewUUID)||""),i.set("bitlink_id",(t==null?void 0:t.BitlinkID)||""),i.set("experiments",t!=null&&t.Experiments?t.Experiments.join(","):"");const c=(new Date().getTime()-n.getTime()).toString();i.set("page_open_duration_ms",c),window.openDuration=window.openDuration||{},window.openDuration[e]=c,navigator.sendBeacon("/preview_page/beacon",i)};let $=null;const T=()=>$,te=()=>{const e=new URLSearchParams(window.location.search),t={};return e.forEach((o,n)=>o==="1"||o==="true"?t[n]=!0:o==="0"||o==="false"?t[n]=!1:t[n]=o),$=t,t},ne="mode",S="cmp",z="disable_redirect",b=e=>{l(a.AutoRedirect),e&&(window.location.href=e)},oe=({element:e,timeLeft:t,suffix:o})=>{e&&(e.innerHTML=t,e.nextSibling&&(e.nextSibling.textContent=` ${o}`))},E=(e,t)=>{const o=w(),n=T();if(!t&&(n!=null&&n[z]))return;if(!t)return window.setTimeout(()=>{b(o==null?void 0:o.Location)},e*1e3);let i=e;const r=window.setInterval(()=>{if(i<=0){clearInterval(r);const c=document.querySelectorAll(t);if(c&&c.length)for(const s of c)s.innerHTML="";n!=null&&n[z]||b(o==null?void 0:o.Location)}else{const c=document.querySelectorAll(t);if(c&&c.length){const s=(o==null?void 0:o.SecondLeftText)||"second...",d=(o==null?void 0:o.SecondsLeftText)||"seconds...";for(const u of c){const f=u.querySelector("#countdown");oe({element:f,timeLeft:i.toString(),suffix:i>1?d:s})}}}i-=1},1e3);return r},ie=()=>{const e=w();e!=null&&e.RedirectDelay&&E(e.RedirectDelay,".countdown-timer")},se=e=>{if(e.includes("top_leaderboard")){const t=document.getElementById("main");t&&t.classList.add("leaderboard")}},re=["m","m_ot","m_k","m_e","g","g_ot","g_k","g_e"],ce=e=>re.includes(e),ae={gam:"g",header:"m"},de={ketch:"k",ethyca:"e",onetrust:"ot",none:""},V=(e,t)=>{const o=e?ae[e]:"g",n=t?de[t]:"",i=`${o}${n?`_${n}`:""}`;return{key:"t",value:ce(i)?i:"g"}},I=e=>typeof e=="string"&&X.includes(e),le={"Verified Core":"core","Verified Premium":"premium"},ue=e=>e&&le[e]||"",q=({data:e,consentTargeting:t})=>{const o=[["AccountCreationDate","ac"],["AccountCreationGeo","g"],["Cohort","cohort"],["ConnectionType","connection_type"],["Experiments","exp"]],n={};for(const[r,c]of o){const s=e==null?void 0:e[r];s&&(n[c]=s)}const i=ue(e==null?void 0:e.TrafficTier);return i&&(n.tt=i),e!=null&&e.PremiumDomain&&(n.dd=e.PremiumDomain),n[t.key]=t.value,n},H=768,g={leaderboardSm:[728,90],leaderboardLg:[970,90],bannerSm:[300,250],bannerMd:[336,280],bannerLg:[300,600]},fe=e=>{const t=window.innerWidth>=H;if(e.includes("top_leaderboard")){const n=[g.leaderboardSm];return t&&n.unshift(g.leaderboardLg),n}const o=[g.bannerMd,g.bannerSm];return t&&o.unshift(g.bannerLg),o},ge=e=>{const t=w(),o=T(),n=t!=null&&t.PageType&&(t==null?void 0:t.PageType)==="mtc"?"header":"gam",i=(o==null?void 0:o[ne])||n,r=I(o==null?void 0:o[S])?o[S]:t==null?void 0:t.CMPVariant,c=q({data:t,consentTargeting:V(i,r)}),d=`/23199830770/${e}`;window.targeting=c,window.googletag=window.googletag||{cmd:[]},window.googletag.cmd=window.googletag.cmd||[],window.googletag.cmd.push(()=>{const{seenActions:u}=P(),f=fe(e),h=window.googletag.defineSlot(d,f,"div-gpt-ad-1724340542602-0").addService(window.googletag.pubads());for(const[v,A]of Object.entries(c))h.setTargeting(v,A);window.googletag.pubads().enableSingleRequest(),window.googletag.pubads().collapseEmptyDivs(),window.googletag.pubads().addEventListener("slotRenderEnded",v=>{if(v.isEmpty){if(u.has(a.AdBlockerDetected))return;l(a.AdEmpty)}else l(a.AdFilled)}),window.googletag.enableServices(),window.googletag.display("div-gpt-ad-1724340542602-0")})},we=(e,t)=>new Promise((o,n)=>{const i=document.createElement("link");i.rel="stylesheet",i.href=e,i.onload=r=>{t!=null&&t.onload&&t.onload(r),o(i)},i.onerror=r=>{t!=null&&t.onerror&&t.onerror(r),n(new Error(`Failed to load link: ${e}`))},t!=null&&t.media&&(i.media=t.media),document.head.appendChild(i)}),pe=e=>{const t=w();we(`https://01.cdn.cmdmtc.com/bitly/${t==null?void 0:t.MtcEnvironment}/main.css`,{media:"print",onload:o=>{if(!(o instanceof Event))return;const n=o.target;n.media="all"}}),m(`https://01.cdn.cmdmtc.com/bitly/${t==null?void 0:t.MtcEnvironment}/main.js`,{async:!0,onerror:()=>l(a.AdBlockerDetected),onload:e})},he=()=>{const e=w(),t=q({data:e,consentTargeting:V("header",e==null?void 0:e.CMPVariant)});window.targeting=t,window.googletag=window.googletag||{cmd:[]},window.googletag.cmd.push(()=>{const{seenActions:o}=P(),n=window.googletag.pubads().addEventListener("slotRenderEnded",i=>{if(i.isEmpty){if(o.has(a.AdBlockerDetected))return;l(a.AdEmpty)}else l(a.AdFilled);window.googletag.sizeMapping().addSize([H,0],[g.bannerLg,g.bannerMd,g.bannerSm]).addSize([0,0],[g.bannerMd,g.bannerSm]).build()});for(const[i,r]of Object.entries(t))n.setTargeting(i,r)})};let G=!1;const p=()=>{const e=w();e!=null&&e.AdUnitID&&!G&&(se(e.AdUnitID),m("https://securepubads.g.doubleclick.net/tag/js/gpt.js",{async:!0,onerror:()=>l(a.AdBlockerDetected),onload:()=>{(e==null?void 0:e.PageType)!=="mtc"?ge(e.AdUnitID):pe(he),G=!0}})),ie()},x=e=>Object.values(e).some(t=>!t),C=e=>Object.values(e).every(Boolean),D=()=>{const e=document.querySelector(".footer__preferences");return e?(e.style.visibility="visible",e.querySelector("button")):null},me=()=>{if(!window.ketch)return;const e=D();e&&(e.addEventListener("click",()=>{var t;return(t=window.ketch)==null?void 0:t.call(window,"showExperience")}),window.ketch("once","regionInfo",t=>{t.includes("US-CA")&&(e.textContent="Do Not Sell My Personal Information")}))};let F=!1;const _e=e=>{var t,o,n;me(),(t=window.ketch)==null||t.call(window,"once","consent",i=>{var r;if(C(i.purposes))return l(a.ConsentPreviouslyAccepted),p();if(x(i.purposes))return l(a.ConsentPreviouslyRejected),(r=window.ketch)==null?void 0:r.call(window,"showExperience")}),(o=window.ketch)==null||o.call(window,"on","consent",i=>{if(F&&C(i.purposes)&&(l(a.ConsentAccepted),p()),F&&x(i.purposes))return l(a.ConsentRejected),b(e);F=!0}),(n=window.ketch)==null||n.call(window,"once","willShowExperience",()=>l(a.ConsentShown))},N=(e,t=",")=>e.split(t).filter(Boolean),K=e=>{const t=window.location.hostname,o=window.location.pathname.split("/").filter(Boolean),n=[t,"."+t.replace(/^www\./,"")],i=(r,c="/",s)=>{const d=`${r}=; Path=${c}; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT;`;document.cookie=s?`${d} Domain=${s};`:d};if(n.forEach(r=>{i(e,"/",r),i(e,"/")}),o.forEach((r,c)=>{const s="/"+o.slice(0,c+1).join("/");n.forEach(d=>{i(e,s,d),i(e,s+"/",d)}),i(e,s),i(e,s+"/")}),localStorage.removeItem(e),e.includes("*")||e.includes("xxxx")){let r=e.replace("*","");e.includes("xxxx")&&(r=r.replace(/x/g,""));const c=document.cookie.split(/; */);for(const s of c){const[d]=s.split("=");d.includes(r)&&(n.forEach(u=>{i(d,"/",u)}),i(d,"/"))}}},ye=(e,t)=>{const o=new Set(t);return e.filter(n=>!o.has(n))},be=(e,t)=>{if(!window.Optanon)return;const o=window.Optanon.GetDomainData(),n=ye(e,t),i=(o==null?void 0:o.Groups)??[];if(!(!n.length||!i.length))for(const r of i){const c=r.CustomGroupId,s=r.Cookies??[],d=r.Hosts??[];c&&n.includes(c)&&s.forEach(({Name:u})=>K(u));for(const u of d)n.includes(u.HostId)&&(u.Cookies??[]).forEach(({Name:f})=>K(f))}},Ce=e=>Array.isArray(e)&&e.length>=2&&e[0]==="consent"&&e[1]==="update",ve=e=>e.some(t=>!!Ce(t)),Se=e=>{if(!(!e||!window.gtag)&&!ve(e))return window.gtag("consent","update",{ad_storage:"granted",analytics_storage:"granted",functionality_storage:"granted",personalization_storage:"granted",security_storage:"granted",ad_user_data:"granted",ad_personalization:"granted"})},W="C0004";let R=!1,k=[];const ke=e=>{window.OptanonWrapper=function(){var n,i,r;if((n=window.OneTrust)==null||n.OnConsentChanged(({detail:c})=>(R=!0,c.includes(W)?(l(a.ConsentAccepted),p()):(l(a.ConsentRejected),b(e)))),!R){if(R=!0,k=N(window.OnetrustActiveGroups??""),D(),k.includes(W))return l(a.ConsentPreviouslyAccepted),Se(window.dataLayer),p();if(l(a.ConsentShown),(i=window.OneTrust)!=null&&i.IsAlertBoxClosed())return(r=window.OneTrust)==null?void 0:r.ToggleInfoDisplay()}const o=N(window.OnetrustActiveGroups??"");be(k,o),k=o}},J={"action:bitly_logo_footer":a.BitlyHomepageNavigate,"action:bitly_logo_nav":a.BitlyHomepageNavigate,"action:continue_sm":a.LongURLContinue,"action:continue":a.LongURLContinue,"action:cta_helpcenter":a.BitlyHelpCenterNavigate,"action:facebook":a.SocialNavigate,"action:instagram":a.SocialNavigate,"action:linkedin":a.SocialNavigate,"action:long_url":a.LongURLClickthrough,"action:security":a.TrustAndSafetyNavigate,"action:x":a.SocialNavigate,"ot-sdk-btn":a.ConsentPreferences},Le=Object.keys(J),Ae=()=>{Le.forEach(e=>{const t=document.getElementById(e);t&&t.addEventListener("click",()=>{t.classList.add("disabled"),l(J[e])})})},L=(e,t)=>{const o=T(),n=w(),i=o==null?void 0:o[S],r=I(i)?i:n==null?void 0:n.CMPVariant;if(Ae(),!e)return p();if(Y(r==="ketch"),m(`https://www.googletagmanager.com/gtm.js?id=${n==null?void 0:n.GtmID}`,{onerror:()=>l(a.AdBlockerDetected),onload:t}),r==="ketch")return _e(n==null?void 0:n.Location);if(r==="onetrust")return ke(n==null?void 0:n.Location)},Pe=()=>{"MutationObserver"in window&&new MutationObserver(t=>{t.forEach(o=>{o.addedNodes.forEach(n=>{n instanceof HTMLScriptElement&&!n.onerror&&(n.onerror=()=>{l(a.AdBlockerDetected)})})})}).observe(document.head,{childList:!0,subtree:!0})},M=e=>{Z({...e.initialData,SecondLeftText:e.secondLeftText,SecondsLeftText:e.secondsLeftText,RedirectDelay:e.redirectDelay,BackgroundRedirectDelay:e.backgroundRedirectDelay}),l(a.PreviewPageView),Pe()};var _=(e=>(e.FidesInitializing="FidesInitializing",e.FidesInitialized="FidesInitialized",e.FidesConsentLoaded="FidesConsentLoaded",e.FidesReady="FidesReady",e.FidesUpdating="FidesUpdating",e.FidesUpdated="FidesUpdated",e.FidesUIShown="FidesUIShown",e.FidesUIChanged="FidesUIChanged",e.FidesModalClosed="FidesModalClosed",e))(_||{});const Te=()=>{if(!window.Fides)return;const e=D();e&&e.addEventListener("click",()=>{var t;return(t=window.Fides)==null?void 0:t.showModal()})};let y=!1;const Ee=()=>{const e=w();window.addEventListener(_.FidesInitializing,()=>{var t;return(t=window.Fides)==null?void 0:t.gtm({non_applicable_flag_mode:"include",flag_type:"boolean"})}),window.addEventListener(_.FidesInitialized,t=>{var i,r,c;Te();const o=t.detail,n=(c=(r=(i=window.Fides)==null?void 0:i.experience)==null?void 0:r.experience_config)==null?void 0:c.id;if(n&&window.document.body.classList.add(n),!y&&C(o.consent))return l(a.ConsentPreviouslyAccepted),p(),y=!0}),window.addEventListener(_.FidesUIShown,()=>{l(a.ConsentShown)}),window.addEventListener(_.FidesConsentLoaded,t=>{var n;const o=t.detail;if((n=o.extraDetails)!=null&&n.consentMethod&&!y&&C(o.consent))return l(a.ConsentPreviouslyAccepted),p(),y=!0}),window.addEventListener(_.FidesUpdated,t=>{var n;const o=t.detail;if(!y&&C(o.consent)&&(l(a.ConsentAccepted),p(),y=!0),((n=o.extraDetails)==null?void 0:n.consentMethod)==="reject"||x(o.consent))return l(a.ConsentRejected),b(e==null?void 0:e.Location)})},U="fides_",Ie=new URLSearchParams(location.search),Q=new URLSearchParams,xe=()=>{window.fides_overrides={fides_consent_non_applicable_flag_mode:"include",fides_consent_flag_type:"boolean"},Ee();for(const[e,t]of Ie.entries())e.startsWith(U)&&Q.set(e.replace(U,""),e===U+"cache_bust"?Date.now().toString():t);return Q},De="FDS-5FDK5W",Fe=e=>{L(!0);const t=xe();return m(`https://bitly-janus-poc.fides-cdn.ethyca.com/fides.js?${t.toString()}&property_id=${De}`,{id:"fides-js",async:!1,defer:!1,type:"text/javascript",charset:"UTF-8",onload:e})},j=e=>{if("requestIdleCallback"in window)requestIdleCallback(e);else if("requestAnimationFrame"in window)requestAnimationFrame(e);else{const t=()=>{setTimeout(()=>{document.readyState==="complete"?e():t()},50)};t()}},Re=()=>{const e=(s,d)=>{const u=d.document,f=!!d.frames[s];if(!f)if(u.body){const h=u.createElement("iframe");h.style.cssText="display:none",h.name=s,u.body.appendChild(h)}else setTimeout(()=>e(s,d),5);return!f},t="__tcfapiLocator",o=[],n=window;let i,r,c=n;for(;c;){try{if(c.frames[t]){i=c;break}}catch{}if(c===n.top)break;c=c.parent}i||(e(t,n),n.__tcfapi=function(...s){if(!s.length)return o;if(s[0]==="setGdprApplies")s.length>3&&parseInt(s[1],10)===2&&typeof s[3]=="boolean"&&(r=s[3],typeof s[2]=="function"&&s[2]("set",!0));else if(s[0]==="ping"){const d=localStorage.getItem("_ketch_tcf_ping_v1_");d?typeof s[2]=="function"&&s[2](JSON.parse(window.atob(d))):typeof s[2]=="function"&&s[2]({gdprApplies:r,cmpLoaded:!1,cmpStatus:"stub"})}else if(s[0]==="addEventListener"){const d=localStorage.getItem("_ketch_tcf_tcdata_v1_");d?typeof s[2]=="function"&&s[2](JSON.parse(window.atob(d)),!0):o.push(s)}else o.push(s)},n.addEventListener("message",function(s){const d=typeof s.data=="string";let u={};if(d)try{u=JSON.parse(s.data)}catch{}else u=s.data;const f=typeof u=="object"&&u!==null?u.__tcfapiCall:null;f&&window.__tcfapi(f.command,f.version,function(h,v){let A={__tcfapiReturn:{returnValue:h,success:v,callId:f.callId}};s&&s.source&&s.source.postMessage&&s.source.postMessage(d?JSON.stringify(A):A,"*")},f.parameter)},!1))},Me=e=>(Re(),m("https://global.ketchcdn.com/web/v3/config/bitly/website_smart_tag/boot.js",{type:"text/javascript",charset:"UTF-8",onload:()=>{e(),j(()=>L(!0))}})),Ue=({onLoad:e,clientId:t})=>m("https://cdn.cookielaw.org/consent/tcf.stub.js",{type:"text/javascript",charset:"UTF-8",onload:()=>{e(),j(()=>{L(!0),m("https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",{type:"text/javascript",charset:"UTF-8","data-domain-script":t})})}}),je=(e,t)=>{var n;const o=()=>{M(e),E(e.backgroundRedirectDelay)};return t==="ketch"?Me(o):t==="ethyca"?(M(e),Fe(()=>E(e.backgroundRedirectDelay))):Ue({onLoad:o,clientId:(n=e==null?void 0:e.initialData)==null?void 0:n.OneTrustClientID})},Be=e=>{M(e),j(()=>L(!1))},Oe=e=>{var c,s;const t=te(),o=t==null?void 0:t[S],n=I(o)?o:void 0,i=(c=e==null?void 0:e.initialData)==null?void 0:c.CMPVariant;return(n!==void 0?n!=="none":i!==void 0&&i!=="none")?je(e,n||((s=e==null?void 0:e.initialData)==null?void 0:s.CMPVariant)):Be(e)};window.previewPage=Oe})();
+//# sourceMappingURL=preview_page.js.map
+</script>
+    <script type="text/javascript">
+      previewPage({
+        initialData: {"PageType":"gam","Title":"","Description":"","PreviewImage":"","Keywords":null,"Categories":["Image and Video Search"],"OverrideCategories":null,"BitlinkID":"bit.ly/1rCYKow","LongURL":"i.imgur.com/K0Gg51d.png","Location":"http://i.imgur.com/K0Gg51d.png","PageViewUUID":"GAMROW-5b7e3e3a-54f6-6a99-f79e-cf37790a05b9","AdUnitID":"bitly_previewpage_default_responsive_side_box","MtcEnvironment":"main","Cohort":"cohort_annonls","Experiments":[],"AccountCreationDate":"Prior_to_2023","ConnectionType":"link","AccountCreationGeo":"","OneTrustClientID":"01948fa9-9f26-7c06-b4b0-ad49ea07a790","GtmID":"GTM-PWRJL959","TrafficTier":"Verified Core","PremiumDomain":"","CMPVariant":"none","Language":"en","Year":2025},
+        secondLeftText: "second...",
+        secondsLeftText: "seconds...",
+        redirectDelay:  8 ,
+        backgroundRedirectDelay:  15 
+      });
+    </script>
+  <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async=""></script><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202508060101/pubads_impl.js?cb=31093916" async=""></script></head>
+  <body class="cohort_annonls">
+    
+    <nav>
+      <a href="http://bitly.com/?utm_source=Bitly&amp;utm_medium=referral&amp;utm_campaign=preview_page" id="action:bitly_logo_nav">
+        <img src="https://d1ayxb9ooonjts.cloudfront.net/d/C1479C1BB4EBAEE77A9F4B616943FFEE9DAAEA0E.svg" class="logo" alt="Bitly Logo">
+      </a>
+    </nav>
+    
+    <main id="main">
+      
+      <div class="grid-item ad">
+        <div id="div-gpt-ad-1724340542602-0" class="ad__container"></div>
+      </div>
+      
+      <div class="grid-item">
+        <section class="preview">
+          <h1 class="preview__card-header">
+            Here's a preview of your destination
+          </h1>
+          <aside class="preview__card">
+            <section class="preview__card-content"><p class="preview__card-destination-title">Destination:</p><a class="preview__card-url large" href="http://i.imgur.com/K0Gg51d.png" id="action:long_url">
+                i.imgur.com/K0Gg51d.png
+              </a><div class="preview__card-empty-state">
+                  <p>We weren't able to retrieve information about your destination.</p><p>But rest assured—we're reviewing the link to help keep you safe.</p>
+                  <div class="preview__card-security-container">
+                    <p class="title">Security check</p>
+                    <ul>
+                      <li>
+                        <img src="https://d1ayxb9ooonjts.cloudfront.net/d/7998B890712079265CF48279A49C2BE33A5EA5C5.svg" alt="Bitly Icon">Scanned by Bitly
+                      </li>
+                      <li>
+                        <img src="https://d1ayxb9ooonjts.cloudfront.net/d/1D999C15ABD60F9C7614234E59748D6E88DA48CB.svg" alt="Policy Icon">Links monitored for suspicious behavior
+                      </li>
+                      <li>
+                        <img src="https://d1ayxb9ooonjts.cloudfront.net/d/6C891B94781612666EDE9475CC59454B79851F4F.svg" alt="Verified Icon">No threats detected at this time
+                      </li>
+                    </ul>
+                    <p><a href="https://bitly.com/blog/trust-safety-at-bitly/" id="action:security">Learn how</a> we check links, detect threats, and keep our users safe.</p>
+                  </div>
+                </div></section>
+          </aside>
+
+          <a href="http://i.imgur.com/K0Gg51d.png" class="preview__continue" id="action:continue">
+            <span>Continue to destination</span>
+            <img src="https://d1ayxb9ooonjts.cloudfront.net/d/8955792E2AE2972C05969B26C881AD988C9BB5BD.svg" class="preview__continue-icon" alt="Continue Icon">
+          </a>
+          <p class="preview__countdown countdown-timer">
+            You'll be redirected in <span id="countdown">8</span>
+            seconds...
+          </p>
+        </section>
+      </div>
+    </main>
+    <section class="continue">
+      <a href="http://i.imgur.com/K0Gg51d.png" id="action:continue_sm">
+        <span>Continue to destination</span>
+        <img src="https://d1ayxb9ooonjts.cloudfront.net/d/8955792E2AE2972C05969B26C881AD988C9BB5BD.svg" class="preview__continue-icon" alt="Continue Icon">
+      </a>
+      <p class="preview__countdown countdown-timer">
+        You'll be redirected in <span id="countdown">8</span>
+        seconds...
+      </p>
+    </section><section class="cta__helpcenter">
+        <p>
+          For more information about this page, visit the 
+          <a id="action:cta_helpcenter" href="https://support.bitly.com/hc/en-us/articles/32500359495565-Free-Short-Link-Generator-Anonymous-Link-FAQ">
+            Bitly Help Center
+          </a>
+        </p>
+      </section>
+    <footer>
+      
+      <aside class="footer__cta">
+        <h2 class="footer__cta-title">This preview is powered by Bitly</h2>
+        <p class="footer__cta-subtitle">
+          Bitly is dedicated to making the internet a safer place for everyone.
+          <br class="show-lg">
+          Use the site preview above to make sure the link takes you where you expect.
+        </p>
+      </aside>
+
+      <picture>
+        <source type="image/webp" media="(max-width: 360px)" srcset="https://d1ayxb9ooonjts.cloudfront.net/d/F270ADFF51C38A080A6D205B4DFD198E51E0CB8F.webp">
+        <source type="image/webp" media="(min-width: 361px)" srcset="https://d1ayxb9ooonjts.cloudfront.net/d/7C75D35E20E45DF9C90AF96EB32B81BAAA55B50D.webp">
+        <img srcset="https://d1ayxb9ooonjts.cloudfront.net/d/07F5C0A46E5B7CC1AF9227463EC5E0CE30272E5D.png 360w, https://d1ayxb9ooonjts.cloudfront.net/d/FCAC622050AD2314071BD8946865A3D382EBB618.png 361w" sizes="(max-width: 360px) 360px, (min-width: 361px) 361px" src="https://d1ayxb9ooonjts.cloudfront.net/d/FCAC622050AD2314071BD8946865A3D382EBB618.png" class="footer__image" alt="Bitly Logo">
+      </picture>
+
+      <section class="footer__contact">
+        
+        <a href="http://bitly.com/?utm_source=Bitly&amp;utm_medium=referral&amp;utm_campaign=preview_page" id="action:bitly_logo_footer">
+          <img src="https://d1ayxb9ooonjts.cloudfront.net/d/C1479C1BB4EBAEE77A9F4B616943FFEE9DAAEA0E.svg" class="logo" alt="Bitly Logo">
+        </a>
+        
+        <section class="footer__contact-socials">
+          <a href="https://x.com/bitly" id="action:x">
+            <img src="https://d1ayxb9ooonjts.cloudfront.net/d/E8AA887989AD48F5366B7DCFAEAB4A3FF8150A1D.svg" alt="X (formerly Twitter) Logo">
+          </a>
+          <a href="https://www.instagram.com/bitly/" id="action:instagram">
+            <img src="https://d1ayxb9ooonjts.cloudfront.net/d/12032AF2C457BB634C4039A306C2C39420BF51EB.svg" alt="Instagram Logo">
+          </a>
+          <a href="https://www.facebook.com/bitly" id="action:facebook">
+            <img src="https://d1ayxb9ooonjts.cloudfront.net/d/704DBB97AC75F2A7D9571254B944F17277707059.svg" alt="Facebook Logo">
+          </a>
+          <a href="https://www.linkedin.com/company/bitly/mycompany/" id="action:linkedin">
+            <img src="https://d1ayxb9ooonjts.cloudfront.net/d/8F9B499DDC670821F87C474721CA954C0C1AD3F5.svg" alt="LinkedIn Logo">
+          </a>
+        </section>
+        
+        <p class="footer__contact-disclaimer">
+          © 2025 Bitly - Handmade in New York City, Denver, Berlin, Bielefeld, and all over the world.
+        </p>
+      </section>
+      <section class="footer__preferences">
+        <button id="ot-sdk-btn" class="ot-sdk-show-settings">Consent management</button>
+      </section>
+    </footer>
+
+  
+
+</body></html>

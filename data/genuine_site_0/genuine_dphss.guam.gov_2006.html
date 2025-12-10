@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://dphss.guam.gov/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<title>DPHSS | Department of Public Health and Social Services</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-divi-open-sans-inline-css">/* Original: https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4uaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4uaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1x4uaVc.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4uaVQ.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVQ.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4uaVQ.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVQ.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1x4uaVQ.woff) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4uaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4uaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v43/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1x4uaVI.woff2) format('woff2');}</style><meta name='robots' content='noindex, nofollow' />
+<link rel="alternate" href="https://dphss.guam.gov/" hreflang="en" />
+<link rel="alternate" href="https://dphss.guam.gov/ch/" hreflang="ch" />
+<script type="text/javascript">
+			let jqueryParams=[],jQuery=function(r){return jqueryParams=[...jqueryParams,r],jQuery},$=function(r){return jqueryParams=[...jqueryParams,r],$};window.jQuery=jQuery,window.$=jQuery;let customHeadScripts=!1;jQuery.fn=jQuery.prototype={},$.fn=jQuery.prototype={},jQuery.noConflict=function(r){if(window.jQuery)return jQuery=window.jQuery,$=window.jQuery,customHeadScripts=!0,jQuery.noConflict},jQuery.ready=function(r){jqueryParams=[...jqueryParams,r]},$.ready=function(r){jqueryParams=[...jqueryParams,r]},jQuery.load=function(r){jqueryParams=[...jqueryParams,r]},$.load=function(r){jqueryParams=[...jqueryParams,r]},jQuery.fn.ready=function(r){jqueryParams=[...jqueryParams,r]},$.fn.ready=function(r){jqueryParams=[...jqueryParams,r]};</script><link rel='dns-prefetch' href='//translate.google.com' />
+<link rel="alternate" type="application/rss+xml" title="DPHSS &raquo; Feed" href="https://dphss.guam.gov/feed/" />
+<link rel="alternate" type="application/rss+xml" title="DPHSS &raquo; Comments Feed" href="https://dphss.guam.gov/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="DPHSS &raquo; iCal Feed" href="https://dphss.guam.gov/events/?ical=1" />
+<meta content="Divi Child v.1.0.0" name="generator"/><style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='bootstrap-css1-css' href='https://dphss.guam.gov/wp-content/plugins/Display-contact/css/bootstrap.min.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css1-css' href='https://dphss.guam.gov/wp-content/plugins/Display-contact/css/font-awesome.min.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css1-css' href='https://dphss.guam.gov/wp-content/plugins/Display-contact/css/style.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='datatables-css1-css' href='https://dphss.guam.gov/wp-content/plugins/Display-contact/css/datatables.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='datatables-resp1-css' href='https://dphss.guam.gov/wp-content/plugins/Display-contact/css/dataTables.responsive.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='datatables-resp-min1-css' href='https://dphss.guam.gov/wp-content/plugins/Display-contact/css/dataTables.responsive.scss?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='datatables-ycwf-css-css' href='https://dphss.guam.gov/wp-content/plugins/Display-contact/css/jquery-dataTables-yadcf.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='https://dphss.guam.gov/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='google-language-translator-css' href='https://dphss.guam.gov/wp-content/plugins/google-language-translator/css/style.css?ver=6.0.19' type='text/css' media='' />
+<link rel='stylesheet' id='glt-toolbar-styles-css' href='https://dphss.guam.gov/wp-content/plugins/google-language-translator/css/toolbar.css?ver=6.0.19' type='text/css' media='' />
+<link rel='stylesheet' id='ui-month-picker-css-css' href='https://dphss.guam.gov/wp-content/plugins/settings_plugin/css/jquery-ui_all.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='month-picker-css-css' href='https://dphss.guam.gov/wp-content/plugins/settings_plugin/css/MonthPicker.min.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-css-css' href='https://dphss.guam.gov/wp-content/plugins/settings_plugin/css/custom-page.css?ver=6.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='revslider-divi-styles-css' href='https://dphss.guam.gov/wp-content/plugins/revslider/admin/includes/shortcode_generator/divi/styles/style.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='pojo-a11y-css' href='https://dphss.guam.gov/wp-content/plugins/pojo-accessibility/assets/css/style.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-parent-css' href='https://dphss.guam.gov/wp-content/themes/Divi/style-static.min.css?ver=4.22.1' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-pum-css' href='https://dphss.guam.gov/wp-content/themes/Divi-child/style.css?ver=4.22.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/Display-contact/js/bootstrap.min.js?ver=6.3.6' id='contact-bootstrap-js-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/Display-contact/js/datatables.js?ver=6.3.6' id='datatables1-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/Display-contact/js/dataTables.responsive.js?ver=6.3.6' id='datatables-responsive1-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/Display-contact/js/dataTables.responsive.min.js?ver=6.3.6' id='datatables-responsive-min1-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/Display-contact/js/jquery-dataTables-yadcf.js?ver=6.3.6' id='datatables-ycwf-js-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/settings_plugin/js/custom_js.js?ver=6.3.6' id='custom-js-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/settings_plugin/js/jquery.maskedinput.min.js?ver=6.3.6' id='masked-input-js'></script>
+<script type='text/javascript' id='wp-statistics-tracker-js-extra'>
+/* <![CDATA[ */
+var WP_Statistics_Tracker_Object = {"hitRequestUrl":"https:\/\/dphss.guam.gov\/wp-json\/wp-statistics\/v2\/hit?wp_statistics_hit_rest=yes&track_all=1&current_page_type=home&current_page_id=12869&search_query&page_uri=Lw=","keepOnlineRequestUrl":"https:\/\/dphss.guam.gov\/wp-json\/wp-statistics\/v2\/online?wp_statistics_hit_rest=yes&track_all=1&current_page_type=home&current_page_id=12869&search_query&page_uri=Lw=","option":{"dntEnabled":false,"cacheCompatibility":false}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/wp-statistics/assets/js/tracker.js?ver=6.3.6' id='wp-statistics-tracker-js'></script>
+<link rel="https://api.w.org/" href="https://dphss.guam.gov/wp-json/" /><link rel="alternate" type="application/json" href="https://dphss.guam.gov/wp-json/wp/v2/pages/12869" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dphss.guam.gov/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3.6" />
+<link rel="canonical" href="https://dphss.guam.gov/" />
+<link rel='shortlink' href='https://dphss.guam.gov/' />
+<link rel="alternate" type="application/json+oembed" href="https://dphss.guam.gov/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdphss.guam.gov%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://dphss.guam.gov/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdphss.guam.gov%2F&#038;format=xml" />
+<style>#google_language_translator{width:auto!important;}div.skiptranslate.goog-te-gadget{display:inline!important;}.goog-tooltip{display: none!important;}.goog-tooltip:hover{display: none!important;}.goog-text-highlight{background-color:transparent!important;border:none!important;box-shadow:none!important;}#google_language_translator select.goog-te-combo{color:#32373c;}#flags{display:none;}#google_language_translator{color:transparent;}body{top:0px!important;}#goog-gt-{display:none!important;}#glt-translate-trigger{left:20px;right:auto;}#glt-translate-trigger > span{color:#ffffff;}#glt-translate-trigger{background:#f89406;}.goog-te-gadget .goog-te-combo{width:100%;}</style><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://dphss.guam.gov"><link rel="alternate" href="https://dphss.guam.gov/wp-json/tribe/events/v1/" /><!-- Analytics by WP Statistics v14.1.6 - https://wp-statistics.com/ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type="text/css">
+#pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a{ background-color: #23aee0;	color: #ffffff;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay, #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items.pojo-a11y-links{ border-color: #23aee0;}
+body.pojo-a11y-focusable a:focus{ outline-style: solid !important;	outline-width: 1px !important;	outline-color: #000000 !important;}
+#pojo-a11y-toolbar{ top: 400px !important;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay{ background-color: #ffffff;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items li.pojo-a11y-toolbar-item a, #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay p.pojo-a11y-toolbar-title{ color: #333333;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items li.pojo-a11y-toolbar-item a.active{ background-color: #23aee0;	color: #ffffff;}
+@media (max-width: 767px) { #pojo-a11y-toolbar { top: 150px !important; } }</style><meta name="generator" content="Powered by Slider Revolution 6.6.16 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="icon" href="https://dphss.guam.gov/wp-content/uploads/2019/01/main_logo.png" sizes="32x32" />
+<link rel="icon" href="https://dphss.guam.gov/wp-content/uploads/2019/01/main_logo.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://dphss.guam.gov/wp-content/uploads/2019/01/main_logo.png" />
+<meta name="msapplication-TileImage" content="https://dphss.guam.gov/wp-content/uploads/2019/01/main_logo.png" />
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+<link rel="stylesheet" id="et-core-unified-12869-cached-inline-styles" href="https://dphss.guam.gov/wp-content/et-cache/12869/et-core-unified-12869.min.css?ver=1753009281" /><link rel="stylesheet" id="et-core-unified-deferred-12869-cached-inline-styles" href="https://dphss.guam.gov/wp-content/et-cache/12869/et-core-unified-deferred-12869.min.css?ver=1753009281" /></head>
+<body class="home page-template page-template-template_search page-template-template_search-php page page-id-12869 tribe-no-js et_pb_button_helper_class et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_slide et_secondary_nav_dropdown_animation_fade et_header_style_split et_pb_footer_columns4 et_cover_background et_pb_gutter linux et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+	<div id="page-container">
+
+	
+	
+			<header id="main-header" data-height-onload="66">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://dphss.guam.gov/">
+						<img src="http://dphss.guam.gov//wp-content/uploads/2019/01/main_logo.png" width="78" height="96" alt="DPHSS" id="logo" data-height-percentage="54" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="66" data-fixed-height="40">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-13495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12869 current_page_item menu-item-has-children menu-item-13495"><a href="https://dphss.guam.gov/" aria-current="page">HOME</a>
+<ul class="sub-menu">
+	<li id="menu-item-14185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14185"><a href="https://dphss.guam.gov/welcome-message-from-the-director/">WELCOME MESSAGE FROM THE DIRECTOR</a></li>
+</ul>
+</li>
+<li id="menu-item-13299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13299"><a href="#">DIVISIONS</a>
+<ul class="sub-menu">
+	<li id="menu-item-13295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13295"><a href="https://dphss.guam.gov/division-of-general-administration/">General Administration (DGA)</a></li>
+	<li id="menu-item-13296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13296"><a href="https://dphss.guam.gov/dph/">Public Health (DPH)</a></li>
+	<li id="menu-item-13294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13294"><a href="https://dphss.guam.gov/division-of-environmental-health/">Environmental Health (DEH)</a></li>
+	<li id="menu-item-13297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13297"><a href="https://dphss.guam.gov/division-of-public-welfare/">Public Welfare (DPW)</a></li>
+	<li id="menu-item-13298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13298"><a href="https://dphss.guam.gov/division-of-senior-citizens-2/">Senior Citizens (DSC)</a></li>
+	<li id="menu-item-30114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30114"><a href="https://dphss.guam.gov/divisions/division-of-childrens-wellness/">Children&#8217;s Wellness (DCW)</a></li>
+</ul>
+</li>
+<li id="menu-item-12873" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12873"><a href="#">about us</a>
+<ul class="sub-menu">
+	<li id="menu-item-14009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14009"><a href="https://dphss.guam.gov/business-hours/">Business Hours</a></li>
+	<li id="menu-item-14010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14010"><a href="https://dphss.guam.gov/location-2/">Directions</a></li>
+	<li id="menu-item-14022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14022"><a href="http://budget.guam.gov:9995/gateway/retrievegovguambudget.do?deptcode=172">Budget</a></li>
+	<li id="menu-item-14020" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14020"><a href="https://dphss.guam.gov/staffing/">Staffing</a></li>
+	<li id="menu-item-14021" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14021"><a href="https://dphss.guam.gov/contracts/">Contracts</a></li>
+	<li id="menu-item-14014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14014"><a href="https://dphss.guam.gov/terms-of-use/">Terms of Use</a></li>
+	<li id="menu-item-14015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14015"><a href="https://dphss.guam.gov/audit-reports-2/">Citizen Centric Reports</a></li>
+	<li id="menu-item-14016" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14016"><a href="http://dphss.guam.gov//internet-code-of-ethics/">Internet Code of Ethics</a></li>
+	<li id="menu-item-14017" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14017"><a href="http://dphss.guam.gov//wp-content/uploads/2019/03/DPHSS-Organizational-Chart-FY2019.png">Organizational Chart</a></li>
+</ul>
+</li>
+<li id="menu-item-12875" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12875"><a href="#">resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-14125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14125"><a href="https://dphss.guam.gov/rfps/">Request for Proposals (RFP)</a></li>
+	<li id="menu-item-13931" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13931"><a href="https://dphss.guam.gov/ifbs-2/">Invitation for Bids (IFBs)</a></li>
+	<li id="menu-item-14290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14290"><a href="https://dphss.guam.gov/standard-operating-procedures-sops/">Standard Operating Procedures (SOPs)</a></li>
+	<li id="menu-item-13932" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13932"><a href="https://dphss.guam.gov/budgets-and-contracts/">Budgets and Contracts</a></li>
+	<li id="menu-item-13934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13934"><a href="https://dphss.guam.gov/audio-recordings/">Audio Recordings</a></li>
+	<li id="menu-item-13935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13935"><a href="https://dphss.guam.gov/health-inspection-database/">Health Inspection Database</a></li>
+	<li id="menu-item-13936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13936"><a href="https://dphss.guam.gov/healthy-vending-machine-calculator-2/">Healthy Vending Machine Calculator</a></li>
+	<li id="menu-item-13937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13937"><a href="https://dphss.guam.gov/photo-galleries/">Photo Galleries</a></li>
+	<li id="menu-item-13938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13938"><a href="https://dphss.guam.gov/videos/">Videos</a></li>
+</ul>
+</li>
+<li id="menu-item-12876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12876"><a href="https://dphss.guam.gov/suggestion-box/">USERS</a>
+<ul class="sub-menu">
+	<li id="menu-item-13939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13939"><a href="https://connect.guam.gov/">WEBMAIL</a></li>
+	<li id="menu-item-13940" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13940"><a href="https://webiz.guam.gov/webiznet_guam">WEBIZ</a></li>
+	<li id="menu-item-13941" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13941"><a href="https://webiz.guam.gov/webizlite_guam">WEBIZ LITE</a></li>
+	<li id="menu-item-13942" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13942"><a href="http://helpdesk/MRcgi/MRentrancePage.pl">FOOTPRINTS</a></li>
+</ul>
+</li>
+<li id="menu-item-13944" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13944"><a href="https://dphss.guam.gov/contact-us-2/">CONTACT US</a></li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+					</header> <!-- #main-header -->
+			<div id="et-main-area">
+	<script type="text/javascript" src="https://dphss.guam.gov/wp-content/themes/Divi-child/js/easyResponsiveTabs.js"></script>
+<link rel="stylesheet" type="text/css" href="https://dphss.guam.gov/wp-content/themes/Divi-child/css/easy-responsive-tabs.css" />
+<div class='search_wrapper'></div>
+<!-- for covid Popup -->
+	<script type='text/javascript'>
+        jQuery(function () {
+            var overlay = jQuery('<div id="overlay"></div>');
+            overlay.show();
+            overlay.appendTo(document.body);
+            jQuery('.popup_covid').fadeIn(3000);
+            jQuery('.close').click(function () {
+                jQuery('.popup_covid').hide();
+                overlay.appendTo(document.body).remove();
+                return false;
+            });
+
+            jQuery('.x').click(function () {
+                jQuery('.popup_covid').hide();
+                overlay.appendTo(document.body).remove();
+                return false;
+            });
+        });
+    </script>
+    <style type="text/css">
+        #overlay
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;            
+            filter: alpha(opacity=70);
+            -moz-opacity: 0.7;
+            -khtml-opacity: 0.7;
+            opacity: 0.5;
+            z-index: 100;
+            display: none;
+            background: #000;
+        }
+        .img_covid a
+        {
+            text-decoration: none;
+        }
+        .popup_covid
+        {
+            width: 100%;
+            margin: 0 auto;
+            display: none;
+            position: fixed;
+            z-index: 101;
+			top:0;
+        }
+        .img_covid
+        {
+            min-width: 564px;
+            width: 564px;
+            min-height: 150px;
+            height:auto;
+            margin: 80px auto;
+            background: #f3f3f3;
+            position: relative;
+            z-index: 103;
+            padding: 1px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #000;
+           
+        }
+        .img_covid p
+        {
+            clear: both;
+            color: #555555;
+            text-align: justify;
+        }
+        .img_covid p a
+        {
+            color: #d91900;
+            font-weight: bold;
+        }
+        .img_covid .x
+        {
+            float: right;
+            height: 35px;
+            right: 0;
+            position: absolute;
+            top: 0px;
+            width: 34px;
+        }
+        .img_covid .x:hover
+        {
+            cursor: pointer;
+        }
+        img.covid19 { max-width: 100%;  }
+    </style>
+	<div class='popup_covid'>
+        <div class="img_covid">
+            <img src="https://images.vexels.com/media/users/3/154399/isolated/preview/a6cbb3c6caaf36bb7fd72b6a71e4aaf7-cross-check-mark-stroke-icon-by-vexels.png" alt='quit' class='x' id='x' />   
+            <a href="https://survey123.arcgis.com/share/a1ba39c050b5466994fb990e7fca2396"><img class='covid19' src="https://dphss.guam.gov/wp-content/uploads/2021/08/imgpsh_fullsize_anim.png" /></a>          
+        </div>
+    </div>
+<div id="main-content">
+
+
+			
+				<article id="post-12869" class="post-12869 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0">
+				
+				
+				
+				
+				<a href="http://guamchildcare.com/" target="_blank"><span class="et_pb_image_wrap "><img decoding="async" fetchpriority="high" width="3016" height="834" src="https://dphss.guam.gov/wp-content/uploads/2022/04/Childcare-copy.png" alt="" title="" srcset="https://dphss.guam.gov/wp-content/uploads/2022/04/Childcare-copy.png 3016w, https://dphss.guam.gov/wp-content/uploads/2022/04/Childcare-copy-300x83.png 300w, https://dphss.guam.gov/wp-content/uploads/2022/04/Childcare-copy-768x212.png 768w, https://dphss.guam.gov/wp-content/uploads/2022/04/Childcare-copy-1024x283.png 1024w, https://dphss.guam.gov/wp-content/uploads/2022/04/Childcare-copy-1080x299.png 1080w" sizes="(max-width: 3016px) 100vw, 3016px" class="wp-image-30366" /></span></a>
+			</div><div class="et_pb_module et_pb_image et_pb_image_1">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1920" height="1080" src="https://dphss.guam.gov/wp-content/uploads/2024/03/1.png" alt="" title="1" srcset="https://dphss.guam.gov/wp-content/uploads/2024/03/1.png 1920w, https://dphss.guam.gov/wp-content/uploads/2024/03/1-1280x720.png 1280w, https://dphss.guam.gov/wp-content/uploads/2024/03/1-980x551.png 980w, https://dphss.guam.gov/wp-content/uploads/2024/03/1-480x270.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" class="wp-image-36644" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_2">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_3">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1920" height="1080" src="https://dphss.guam.gov/wp-content/uploads/2024/03/2.png" alt="" title="2" srcset="https://dphss.guam.gov/wp-content/uploads/2024/03/2.png 1920w, https://dphss.guam.gov/wp-content/uploads/2024/03/2-1280x720.png 1280w, https://dphss.guam.gov/wp-content/uploads/2024/03/2-980x551.png 980w, https://dphss.guam.gov/wp-content/uploads/2024/03/2-480x270.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" class="wp-image-36645" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_4">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_5">
+				
+				
+				
+				
+				<a href="https://dphss.guam.gov/wp-content/uploads/2022/04/Guam-Child-Care-Fact-Sheet-1.pdf" target="_blank"><span class="et_pb_image_wrap "><img decoding="async" loading="lazy" width="1131" height="1600" src="https://dphss.guam.gov/wp-content/uploads/2023/11/After-Hours-Support-phone-numbers.jpeg" alt="" title="After Hours Support phone numbers" srcset="https://dphss.guam.gov/wp-content/uploads/2023/11/After-Hours-Support-phone-numbers.jpeg 1131w, https://dphss.guam.gov/wp-content/uploads/2023/11/After-Hours-Support-phone-numbers-980x1386.jpeg 980w, https://dphss.guam.gov/wp-content/uploads/2023/11/After-Hours-Support-phone-numbers-480x679.jpeg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1131px, 100vw" class="wp-image-36310" /></span></a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_gallery et_pb_gallery_0  et_pb_bg_layout_light et_pb_gallery_grid">
+				<div class="et_pb_gallery_items et_post_gallery clearfix" data-per_page="4"><div class="et_pb_gallery_item et_pb_grid_item et_pb_bg_layout_light et_pb_gallery_item_0_0">
+				<div class='et_pb_gallery_image landscape'>
+					<a href="https://dphss.guam.gov/wp-content/uploads/2018/10/food-safety-FB-1.jpg" title="food-safety-FB-1">
+					<img decoding="async" loading="lazy" width="400" height="284" src="https://dphss.guam.gov/wp-content/uploads/2018/10/food-safety-FB-1-400x284.jpg" srcset="https://dphss.guam.gov/wp-content/uploads/2018/10/food-safety-FB-1.jpg 479w, https://dphss.guam.gov/wp-content/uploads/2018/10/food-safety-FB-1-400x284.jpg 480w" sizes="(max-width:479px) 479px, 100vw" class="wp-image-303" />
+					<span class="et_overlay"></span>
+				</a>
+				</div><h3 class="et_pb_gallery_title">food-safety-FB-1</h3></div><div class="et_pb_gallery_item et_pb_grid_item et_pb_bg_layout_light et_pb_gallery_item_0_1">
+				<div class='et_pb_gallery_image landscape'>
+					<a href="https://dphss.guam.gov/wp-content/uploads/2018/10/flu-1.png" title="flu-1">
+					<img decoding="async" loading="lazy" width="190" height="138" src="https://dphss.guam.gov/wp-content/uploads/2018/10/flu-1.png" srcset="https://dphss.guam.gov/wp-content/uploads/2018/10/flu-1.png 479w, https://dphss.guam.gov/wp-content/uploads/2018/10/flu-1.png 480w" sizes="(max-width:479px) 479px, 100vw" class="wp-image-304" />
+					<span class="et_overlay"></span>
+				</a>
+				</div><h3 class="et_pb_gallery_title">flu-1</h3></div><div class="et_pb_gallery_item et_pb_grid_item et_pb_bg_layout_light et_pb_gallery_item_0_2">
+				<div class='et_pb_gallery_image landscape'>
+					<a href="https://dphss.guam.gov/wp-content/uploads/2018/10/Food-safety-IG-1.png" title="Food-safety-IG-1">
+					<img decoding="async" loading="lazy" width="256" height="256" src="https://dphss.guam.gov/wp-content/uploads/2018/10/Food-safety-IG-1.png" srcset="https://dphss.guam.gov/wp-content/uploads/2018/10/Food-safety-IG-1.png 479w, https://dphss.guam.gov/wp-content/uploads/2018/10/Food-safety-IG-1.png 480w" sizes="(max-width:479px) 479px, 100vw" class="wp-image-305" />
+					<span class="et_overlay"></span>
+				</a>
+				</div><h3 class="et_pb_gallery_title">Food-safety-IG-1</h3></div><div class="et_pb_gallery_item et_pb_grid_item et_pb_bg_layout_light et_pb_gallery_item_0_3">
+				<div class='et_pb_gallery_image landscape'>
+					<a href="https://dphss.guam.gov/wp-content/uploads/2018/10/prutehihao_artwork-1.jpg" title="prutehihao_artwork-1">
+					<img decoding="async" loading="lazy" width="200" height="202" src="https://dphss.guam.gov/wp-content/uploads/2018/10/prutehihao_artwork-1.jpg" srcset="https://dphss.guam.gov/wp-content/uploads/2018/10/prutehihao_artwork-1.jpg 479w, https://dphss.guam.gov/wp-content/uploads/2018/10/prutehihao_artwork-1.jpg 480w" sizes="(max-width:479px) 479px, 100vw" class="wp-image-306" />
+					<span class="et_overlay"></span>
+				</a>
+				</div><h3 class="et_pb_gallery_title">prutehihao_artwork-1</h3></div><div class="et_pb_gallery_item et_pb_grid_item et_pb_bg_layout_light et_pb_gallery_item_0_4">
+				<div class='et_pb_gallery_image landscape'>
+					<a href="https://dphss.guam.gov/wp-content/uploads/2018/10/NDEP-1.png" title="NDEP-1">
+					<img decoding="async" loading="lazy" width="132" height="78" src="https://dphss.guam.gov/wp-content/uploads/2018/10/NDEP-1.png" srcset="https://dphss.guam.gov/wp-content/uploads/2018/10/NDEP-1.png 479w, https://dphss.guam.gov/wp-content/uploads/2018/10/NDEP-1.png 480w" sizes="(max-width:479px) 479px, 100vw" class="wp-image-307" />
+					<span class="et_overlay"></span>
+				</a>
+				</div><h3 class="et_pb_gallery_title">NDEP-1</h3></div></div><div class="et_pb_gallery_pagination"></div></div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div><div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_3 et_pb_row_fullwidth">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_dark" href="http://dphss.guam.gov/covid-19/">COVID-19 TESTING</a>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_1 et_pb_bg_layout_dark" href="https://dphss.guam.gov/covid-19-vaccinations/">COVID-19 VACCINATIONS</a>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_2 et_pb_bg_layout_dark" href="https://dphss.guam.gov/quarantine/">TRAVELERS QUARANTINE</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div><div class="et_pb_section et_pb_section_4 homepage-first-main-section et_pb_fullwidth_section et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_0">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div class="up_image_text">
+
+
+
+<table style="width: 100%;">
+
+<tbody>
+<tr>
+
+<th bgcolor="#02183d"> 
+<h1><span style="color: white; font-family: Raleway;">DEPARTMENT OF PUBLIC HEALTH AND SOCIAL SERVICES (DPHSS)</span></h1>
+ </th>
+
+</tr>
+
+
+<tr>
+
+<th bgcolor="#02183d"> 
+<h2><i><span style="color: white; font-family: Raleway;">Dipattamenton Salut Pupbleko Yan Setbision Susiat</span></i></h2>
+ </th>
+
+</tr>
+
+</tbody>
+</table>
+
+
+
+
+<table style="width: 100%;">
+
+<tbody>
+<tr>
+
+<th bgcolor="#02183d"><span style="color: white; font-family: Raleway;">OUR MISSION</span></th>
+
+
+<th bgcolor="#02183d"><span style="color: white; font-family: Raleway;">OUR VISION</span></th>
+
+
+<th bgcolor="#02183d"><span style="color: white; font-family: Raleway;">OUR VALUES</span></th>
+
+</tr>
+
+
+<tr>
+
+<td bgcolor="#02183d"><span style="color: white; font-family: Raleway;">To assist the people of Guam in achieving and maintaining their highest levels of independence and self-sufficiency in health and social welfare.</span></td>
+
+
+<td bgcolor="#02183d"><span style="color: white; font-family: Raleway;">Empowered people of healthy mind and body living in a safe environment throughout their lifetime.</span></td>
+
+
+<td bgcolor="#02183d"><span style="color: white; font-family: Raleway;">Dedicated to eliminating health disparities for all, customer-service oriented, professional and efficient government agency, and responsive to health and social needs in the community.</span></td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table style="width: 100%;">
+
+<tbody>
+<tr>
+
+<th bgcolor="red"> 
+<h1><a href="http://dphss.guam.gov/dengue-fever/" target="_blank" rel="noopener noreferrer"><span style="color: white; font-family: Raleway;"><u>INFORMATION ON DENGUE FEVER</u></span></a></h1>
+ </th>
+
+</tr>
+
+</tbody>
+</table>
+
+
+
+
+
+</div>
+</div>
+			</div><div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_1">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_2">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_3 search-parant-div">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div class="form-group mainContainer elastic input_search_btn">
+
+
+
+<div>
+ <label style="display: none;" for="keysearch">search</label>
+ <input id="keysearch" class="form-control" title="search for:" name="keysearch" type="text" value="" placeholder="Enter search..." />
+ <input id="search_data" style="font-size: 0px;" name="search" type="button" value="search" />
+</div>
+
+
+<div class="search_loader">
+ <img decoding="async" loading="lazy" class="alignnone size-full wp-image-2893" src="http://dphss.guam.gov//wp-content/uploads/2019/02/loading.gif" alt="loader" width="60" height="80" />
+</div>
+
+
+
+
+ <span id="loading">Loading...</span>
+
+
+
+
+<div class="ex_search">
+
+
+
+
+<input id="fetch_main_site" name="fetch_main_site" type="checkbox" /> 
+ <span class="advanced_search">Advanced Search</span>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+<div class="search_result"></div>
+</div>
+			</div><div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_4">
+				
+				
+				
+				
+				<div class="et_pb_code_inner">
+			<!-- START Slider for Banner REVOLUTION SLIDER 6.6.16 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_3_1_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_3_1" style="" data-version="6.6.16">
+					<rs-slides style="overflow: hidden; position: absolute;">
+						<rs-slide style="position: absolute;" data-key="rs-6" data-title="Slide" data-anim="adpr:false;">
+							<img decoding="async" src="//dphss.guam.gov/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//dphss.guam.gov/wp-content/uploads/2019/03/beach-coast-coconut-trees-319893.jpg" data-bg="p:left bottom;" data-panzoom="d:10000;ss:100;se:150;" data-no-retina>
+<!---->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-8" data-title="Slide" data-anim="adpr:false;">
+							<img decoding="async" src="//dphss.guam.gov/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//dphss.guam.gov/wp-content/uploads/2019/03/agriculture-bell-peppers-chilli-128402.jpg" data-bg="p:center bottom;" data-panzoom="d:10000;ss:100;se:150;" data-no-retina>
+<!---->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-9" data-title="Slide" data-anim="adpr:false;">
+							<img decoding="async" src="//dphss.guam.gov/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//dphss.guam.gov/wp-content/uploads/2019/01/Screen-Shot-2019-01-31-at-7.19.28-PM.png" data-panzoom="d:10000;ss:100;se:150;" data-no-retina>
+<!---->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-7" data-title="Slide" data-anim="adpr:false;" data-mediafilter="clarendon">
+							<img decoding="async" src="//dphss.guam.gov/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//dphss.guam.gov/wp-content/uploads/2019/03/DPHSS-Central-Facility-to-Flame-Tree-2.jpg" data-bg="p:left center;" data-panzoom="d:10000;ss:100;se:150;" data-no-retina>
+<!---->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				<script>
+					setREVStartSize({c: 'rev_slider_3_1',rl:[1240,1024,778,480],el:[],gw:[1240],gh:[868],type:'standard',justify:'',layout:'fullwidth',mh:"0"});if (window.RS_MODULES!==undefined && window.RS_MODULES.modules!==undefined && window.RS_MODULES.modules["revslider31"]!==undefined) {window.RS_MODULES.modules["revslider31"].once = false;window.revapi3 = undefined;if (window.RS_MODULES.checkMinimal!==undefined) window.RS_MODULES.checkMinimal()}
+				</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+</div>
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 homepage-first-main-section et_pb_fullwidth_section et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_5">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_module et_pb_fullwidth_image et_pb_fullwidth_image_0 et_animated et-waypoint">
+				
+				
+				
+				
+				<img decoding="async" src="http://dphss.guam.gov/wp-content/uploads/2019/01/Screen-Shot-2019-01-31-at-7.19.28-PM.png" alt="" title="" />
+			
+			</div><div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_6 search-parant-div">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div class="form-group mainContainer elastic input_search_btn">
+
+
+
+<div>
+ <label style="display: none;" for="keysearch">saerch</label>
+ <input id="keysearch" class="form-control" title="search for:" name="keysearch" type="text" value="" placeholder="Enter search..." />
+ <input id="search_data" style="font-size: 0px;" name="search" type="button" value="search" />
+</div>
+
+
+<div class="search_loader">
+ <img decoding="async" loading="lazy" class="alignnone size-full wp-image-2893" src="http://dphss.guam.gov//wp-content/uploads/2019/02/loading.gif" alt="loader" width="60" height="80" />
+</div>
+
+ 
+ <span id="loading">Loading...</span>
+ 
+
+<div class="ex_search">
+ <input id="fetch_main_site" name="fetch_main_site" type="checkbox" /> 
+ <span class="advanced_search">Advanced Search</span>
+ 
+</div>
+
+
+
+</div>
+
+
+<div class="search_result"></div>
+
+</div>
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_6 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_4">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h1 style="text-align: center;">DEPARTMENT OF PUBLIC HEALTH AND SOCIAL SERVICES (DPHSS)</h1>
+<h3 style="text-align: center;"><strong><em>Dipattamenton Salut Pupbleko Yan Setbision Susiat</em></strong></h3>
+<p><strong>OUR MISSION</strong></p>
+<p>To assist the people of Guam in achieving and maintaining their highest levels of independence and self-sufficiency in health and social welfare.</p>
+<p>&nbsp;</p>
+<p><strong>OUR VISION</strong></p>
+<p>Empowered people of healthy mind and body living in a safe environment throughout their lifetime.</p>
+<p>&nbsp;</p>
+<p><strong>OUR VALUES</strong></p>
+<p>Dedicated to eliminating health disparities for all, customer-service oriented, professional and efficient government agency, and responsive to health and social needs in the community.</p>
+<p>&nbsp;</p>
+<h1><a href="http://dphss.guam.gov/dengue-fever/" target="_blank" rel="noopener noreferrer"><span style="font-family: Raleway;"><u>INFORMATION ON DENGUE FEVER</u></span></a></h1>
+<h1><span style="font-family: Raleway;"><u><a href="http://dphss.guam.gov/covid-19/">INFORMATION ON COVID-19</a></u></span></h1>
+<p>&nbsp;</p>
+<h1></h1></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="division_home" class="et_pb_section et_pb_section_7 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5 divi_name">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5 divi_name_col  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1 division-text  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">DIVISION</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_6 division_wrap et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_5 et_pb_column_6 divison_wrap_tablet  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2 division_1  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><a class="division_anc" title="DGA" href="/division-of-general-administration/"><img decoding="async" loading="lazy" class="aligncenter size-full wp-image-12894" src="http://dphss.guam.gov//wp-content/uploads/2019/01/33.png" alt="" width="93" height="93" /><br />
+DIVISION OF GENERAL<br />
+ADMINISTRATION<br />
+(DGA)</a></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_7 divison_wrap_tablet  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3 division_3  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><div><a class="division_anc" title="DPH" href="/dph/"><img decoding="async" loading="lazy" class="aligncenter wp-image-12903 size-full" src="http://dphss.guam.gov//wp-content/uploads/2019/01/55.png" alt="" width="93" height="93" /><br />
+DIVISION OF<br />
+PUBLIC HEALTH<br />
+(DPH)</a></div></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_8 divison_wrap_tablet  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4 division_2  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><a class="division_anc" title="DEH" href="/division-of-environmental-health/"><img decoding="async" loading="lazy" class="aligncenter wp-image-12902 size-full" src="http://dphss.guam.gov//wp-content/uploads/2019/01/44.png" alt="" width="93" height="93" /><br />
+DIVISION OF<br />
+ENVIRONMENTAL HEALTH<br />
+(DEH)</a></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_9 divison_wrap_tablet  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5 division_4 division_3  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><div><a class="division_anc" title="DPW" href="/division-of-public-welfare/"><img decoding="async" loading="lazy" class="aligncenter wp-image-12904 size-full" src="http://dphss.guam.gov//wp-content/uploads/2019/01/66.png" alt="" width="93" height="93" /><br />
+DIVISION OF<br />
+PUBLIC WELFARE<br />
+(DPW)</a></div></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_10 divison_wrap_tablet  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_6 division_5 division_3  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><div><a class="division_anc" title="DSC" href="/division-of-senior-citizens-2/"><img decoding="async" loading="lazy" class="aligncenter wp-image-12905 size-full" src="http://dphss.guam.gov//wp-content/uploads/2019/01/77.png" alt="" width="93" height="93" /><br />
+DIVISION OF<br />
+SENIOR CITIZENS<br />
+(DSC)</a></div></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="press-releases" class="et_pb_section et_pb_section_8 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_7">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 id=":5xz" class="hP" tabindex="-1" data-thread-perm-id="thread-f:1746005540178538293" data-legacy-thread-id="183b0ec9be34af35"><a href="https://dphss.guam.gov/wp-content/uploads/2022/10/Notice-of-Proposed-Amendment-re-Human-Services-Program-Administrator.pdf" target="_blank" rel="noopener noreferrer">Proposed Classification Specification Amendment – October 10, 2022</a></h2>
+<p><a href="https://dphss.guam.gov/wp-content/uploads/2022/10/Notice-of-Proposed-Amendment-re-Human-Services-Program-Administrator.pdf" target="_blank" rel="noopener noreferrer">Human Services Program Administrator — Class Code No.: 3.080</a></p>
+<h2 id=":5xz" class="hP" tabindex="-1" data-thread-perm-id="thread-f:1746005540178538293" data-legacy-thread-id="183b0ec9be34af35"><a href="https://dphss.guam.gov/wp-content/uploads/2022/10/Notice-of-Proposed-Creation-Chief-Childrens-Services-Administrator.pdf" target="_blank" rel="noopener noreferrer">Notice of Proposed Creation – October 10, 2022:</a></h2>
+<p><strong><a href="https://dphss.guam.gov/wp-content/uploads/2022/10/Notice-of-Proposed-Creation-Chief-Childrens-Services-Administrator.pdf" target="_blank" rel="noopener noreferrer">Chief Children’s Services Administrator</a></strong></p>
+<div id=":5y3" class="pG" role="img" data-tooltip-contained="true" data-tooltip-align="b,l" data-tooltip-delay="1500" aria-label="Not important">
+<div class="pH-A7 a9q" tabindex="0"></div>
+<div class="bnj "></div>
+</div>
+<p>&nbsp;</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_8 Looking-ahead et_pb_row_fullwidth">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_sidebar_0 dphss_home_event et_pb_widget_area clearfix et_pb_widget_area_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><iframe loading="lazy" style="border: none; overflow: hidden;" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fguamdphss%2F&amp;tabs=timeline&amp;width=300&amp;height=275&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=false&amp;appId" width="275" height="275" frameborder="0" scrolling="no"></iframe></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_0 announcements-main  et_pb_text_align_center">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div><span style="font-family: Helvetica;">Announcements</span></div>
+
+
+<div style="text-align: right;">
+<div class='annc_list'><ul class='annc_list_ul'><li class='annc_list_li'><a class='annc_list_li_a' href='https://dphss.guam.gov/announcements/fy-2025-preventive-health-and-health-services-block-grant-2nd-advisory-committee-meeting/' target='_blank'>FY 2025 Preventive Health and Health Services Block Grant 2nd Advisory Committee Meeting</a></li><li class='annc_list_li'><a class='annc_list_li_a' href='https://dphss.guam.gov/announcements/fy2024-phhsbg-second-advisory-committee-meeting-and-public-hearing/' target='_blank'>FY2024 PHHSBG Second Advisory Committee Meeting and Public Hearing</a></li><li class='annc_list_li'><a class='annc_list_li_a' href='https://dphss.guam.gov/announcements/fy24-wic-program-vendor-open-enrollment/' target='_blank'>FY24 WIC Program Vendor Open Enrollment</a></li><li class='annc_list_li'><a class='annc_list_li_a' href='https://dphss.guam.gov/announcements/phhsbg-fy2024-first-advisory-committee-meeting/' target='_blank'>FY2024 PHHSBG First Advisory Committee Meeting</a></li><li class='annc_list_li'><a class='annc_list_li_a' href='https://dphss.guam.gov/announcements/proposed-amendment-and-creation-of-positions-amend-environmental-technician-i-and-ii-create-environmental-technician-aide/' target='_blank'>Proposed Amendment and Creation of Positions: Amend Environmental Technician I and II; Create Environmental Technician Aide</a></li></ul></div>
+<a class="more-button" href="/announcements/">More...</a>
+</div>
+
+</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_1 announcements-main  et_pb_text_align_center">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div><span style="font-family: Helvetica;">Popular Forms</span></div>
+
+
+<div style="text-align: right;">
+<div class='ppform_list'><ul class='ppform_list_ul'><li class='ppform_list_li'><a class='ppform_list_li_a' href='https://dphss.guam.gov/popular-forms/dphss-morbidity-report/' target='_blank'>DPHSS Morbidity Report</a></li><li class='ppform_list_li'><a class='ppform_list_li_a' href='https://dphss.guam.gov/popular-forms/snap-interim-change-report-icr/' target='_blank'>Snap Interim Change Report (ICR)</a></li><li class='ppform_list_li'><a class='ppform_list_li_a' href='https://dphss.guam.gov/popular-forms/application-for-sanitary-permit/' target='_blank'>Application for Sanitary Permit</a></li><li class='ppform_list_li'><a class='ppform_list_li_a' href='https://dphss.guam.gov/popular-forms/simplified-change-report-form-for-snap-only/' target='_blank'>Simplified Change Report Form (For SNAP only)</a></li><li class='ppform_list_li'><a class='ppform_list_li_a' href='https://dphss.guam.gov/popular-forms/health-certificate-application-food-facility/' target='_blank'>Health Certificate Application - Food Facility</a></li></ul></div>
+<a class="more-button" href="http://dphss.guam.gov//popular-forms/">More...</a>
+</div>
+
+</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_9">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_9 division-text  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">PRESS RELEASES</div>
+			</div><div class="et_pb_module et_pb_code et_pb_code_2">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div class='press_releases'><div class='press_left'><img src='https://dphss.guam.gov/wp-content/themes/Divi-child/images/Public-Health-Seal.png' ></div><div class='press_right'><h1 class='post_title'><a href='https://dphss.guam.gov/pr25-109/' target='_blank' >PR25-109 Public Notice: Delay in SNAP and Cash Benefits Issuance</a></h1><div class='press_release_no'><span>PRESS RELEASE DATE.: Aug 06, 2025 01:33:16</span></div><div class='press_content'>
+			
+		Hagåtña, Guam – The Department of Public Health and Social Services (DPHSS) would like to inform the public that due to connectivity issues, SNAP and Cash Assistance benefits were not successfully loaded onto client EBT cards on Monday, August 4, 2025.
+For more information, see attached press release: PR25-109 PUBLIC NOTICE DELAY IN SNAP AND CASH BENEFITS ISSUANCE
+
+		
+	
+	</div><a href='https://dphss.guam.gov/pr25-109/' target='_blank' class='more-button'>Read More...</a><a  href='https://dphss.guam.gov/category/press-releases-en/' target='_blank' class='more-button viewall'>View All</a></div></div></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_9 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_10">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: center;"><strong><a href="https://dphss.guam.gov/wp-content/uploads/2021/11/PHSS-PH-Nutrition-Administrator.pdf" target="_blank" rel="noopener noreferrer">DPHSS Intent To Abolish Position: Public Health Nutrition Administrator</a></strong></h2></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_11">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_11  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h1><a href="https://dphss.guam.gov/?page_id=28576&amp;preview=true" target="_blank" rel="noopener noreferrer">NOTICE OF INTENT: Above Step Recruitment – February 15, 2022</a></h1></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="how_do" class="et_pb_section et_pb_section_10 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_12">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Need help finding information?</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_13">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_13  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><div class="how-do-i-main">
+<p><a href="http://dphss.guam.gov//wp-content/uploads/2019/01/99.png"><img decoding="async" loading="lazy" class="size-full wp-image-12895 aligncenter" src="http://dphss.guam.gov//wp-content/uploads/2019/01/main_logo.png" alt="" width="78" height="96" /></a></p>
+<ul class="how-do-list">
+<li><a href="https://dphss.guam.gov/division-of-environmental-health-frequently-asked-questions-deh/" target="_blank" rel="noopener noreferrer"><span class="pdf-list">how do I get a health certificate</span></a></li>
+<li><a href="https://dphss.guam.gov/division-of-environmental-health-frequently-asked-questions-deh/" target="_blank" rel="noopener noreferrer"><span class="pdf-list">how do I get a sanitary permit</span></a></li>
+<li><a href="http://dphss.guam.gov//bhcfa-faqs/"><span class="pdf-list">how do I apply for public benefits</span></a></li>
+<li><a href="http://www.dphss.guam.gov/guamchildcare" target="_blank" rel="noopener noreferrer"><span class="pdf-list">how do I get child care assistance</span></a></li>
+<li><a href="http://www.dphss.guam.gov/guamchildcare" target="_blank" rel="noopener noreferrer"><span class="pdf-list">how can I become a child care provider</span></a></li>
+</ul>
+</div></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_20  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_14  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><div class="how-do-i-main">
+<p><a href="http://dphss.guam.gov//wp-content/uploads/2019/01/99.png"><img decoding="async" loading="lazy" class="size-full wp-image-12895 aligncenter" src="http://dphss.guam.gov//wp-content/uploads/2019/01/main_logo.png" alt="" width="78" height="96" /></a></p>
+<ul class="how-do-list">
+<li><a href="http://dphss.guam.gov//bhcfa-faqs/"><span class="pdf-list">how do I become a provider for medicaid or MIP</span></a></li>
+<li><a href="http://dphss.guam.gov//frequently-asked-questions-faqs/"><span class="pdf-list">how do I get supplemental nutrition assistance</span></a></li>
+<li><a href="http://dphss.guam.gov//bhcfa-faqs/"><span class="pdf-list">how are my medicaid bills paid</span></a></li>
+</ul>
+</div></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_15  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><div class="how-do-i-main">
+<p><a href="http://dphss.guam.gov//wp-content/uploads/2019/01/99.png"><img decoding="async" loading="lazy" class="size-full wp-image-12895 aligncenter" src="http://dphss.guam.gov//wp-content/uploads/2019/01/main_logo.png" alt="" width="78" height="96" /></a></p>
+<ul class="how-do-list">
+<li><a href="http://dphss.guam.gov//medical-cannabis-information-2/"><span class="pdf-list">where can I get medical cannabis information</span></a></li>
+<li><a href="http://dphss.guam.gov//health-inspection-database/"><span class="pdf-list">where can I find health inspection results</span></a></li>
+<li><a href="http://dphss.guam.gov//bureau-of-nutrition-services/"><span class="pdf-list">where can I find more information on WIC</span></a></li>
+</ul>
+</div></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_11 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_14">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_12 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_15">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+						</div> <!-- .entry-content -->
+
+				
+				</article> <!-- .et_pb_post -->
+
+			
+
+</div> <!-- #main-content -->
+<script>
+jQuery("#keysearch").keydown( function() {	
+	if( this.value.length >=  3 )
+	{
+		jQuery( '.search_loader' ).show();
+		jQuery.ajax({
+			type: "POST",                 // use $_POST request to submit data
+			url: 'https://dphss.guam.gov/wp-content/themes/Divi-child/search-things/fetch_record.php',
+			data: {
+				//action     : 'search_result_dphss', // wp_ajax_*, wp_ajax_nopriv_*
+				searchinput : jQuery("#keysearch").val()
+			},
+			success:function( data ) {			
+				jQuery( '.search_loader' ).hide();
+				jQuery( '.search_wrapper' ).show();
+				jQuery( '.search_result' ).html('');		
+				var searchinput_pos = jQuery('.input_search_btn').position().top;
+				var headersize =  parseInt(jQuery('#main-header').attr('data-fixed-height-onload'));
+				jQuery('html, body').animate({scrollTop:(searchinput_pos-headersize)}, 'slow');
+				jQuery( '.search_result' ).show();
+				jQuery( '.search_result' ).html( data );
+			},
+			error: function(){
+				console.log(errorThrown); // error
+			}
+		}).done(function(){
+			jQuery(document).click(function() {
+                jQuery('.search_result').hide();
+                jQuery(".search_wrapper").fadeOut( "slow" );
+                //jQuery('html, body').animate({scrollTop:jQuery('.logo_center').position().top}, 'slow');  
+            });
+            jQuery(".search_result").click(function(e) {
+                e.stopPropagation(); // This is the preferred method.               
+            });  
+            jQuery("#keysearch").click(function(e) {
+                e.stopPropagation(); // This is the preferred method.               
+            });  
+            if (event.keyCode == 27){
+				jQuery('.search_result').hide();
+                jQuery(".search_wrapper").fadeOut( "slow" );
+			}
+			jQuery(".tab_documents .load_more").on("click",function(){ // When btn is pressed.
+				jQuery(".tab_documents .load_more_gif").fadeIn();
+				var pag_num = jQuery('.tab_documents .doc_pageNum').val();
+			    jQuery.ajax({
+					type: "POST",                 // use $_POST request to submit data
+					url: 'https://dphss.guam.gov/wp-admin/admin-ajax.php',
+					data: {
+						page       : pag_num * 10 + 1,
+						action     : 'search_tab_documents',
+						searchinput : jQuery("#keysearch").val()
+					},
+					success:function( data ) {	
+						jQuery(".tab_documents .load_more_gif").fadeOut();									
+						jQuery('.doc_wrapper').append(data);						
+						var ttl_doc = jQuery('.tab_documents .doc_pageNum').attr('data-total');						
+						pag_num++;
+						if(ttl_doc <= pag_num){							
+							jQuery('.tab_documents .no_more_data').show();	
+							jQuery('.tab_documents .load_more').hide();
+						}else{
+							jQuery('.tab_documents .no_more_data').hide()
+							jQuery('.tab_documents .load_more').show();						
+						}						
+						jQuery('.tab_documents .doc_pageNum').val(pag_num);							
+					},
+					error: function(){
+						console.log(errorThrown); // error
+					}
+				});
+			});
+			jQuery(".tab_press_releases .load_more").on("click",function(){ // When btn is pressed.
+				jQuery(".tab_press_releases .load_more_gif").fadeIn();
+			    var pag_num = jQuery('.tab_press_releases .press_pageNum').val();
+			    jQuery.ajax({
+					type: "POST",                 // use $_POST request to submit data
+					url: 'https://dphss.guam.gov/wp-admin/admin-ajax.php',
+					data: {
+						page       : pag_num * 10 + 1,
+						action     : 'search_tab_press_releases',
+						searchinput : jQuery("#keysearch").val()
+					},
+					success:function( data ) {			
+						jQuery(".tab_press_releases .load_more_gif").fadeOut();							
+						jQuery('.press_wrapper').append(data);						
+						var ttl_doc = jQuery('.tab_press_releases .press_pageNum').attr('data-total');						
+						pag_num++;
+						if(ttl_doc <= pag_num){							
+							jQuery('.tab_press_releases .no_more_data').show();	
+							jQuery('.tab_press_releases .load_more').hide();
+						}else{
+							jQuery('.tab_press_releases .no_more_data').hide()
+							jQuery('.tab_press_releases .load_more').show();						
+						}						
+						jQuery('.tab_press_releases .press_pageNum').val(pag_num);							
+					},
+					error: function(){
+						console.log(errorThrown); // error
+					}
+				});
+			});
+			jQuery(".tab_annocement .load_more").on("click",function(){ // When btn is pressed.
+				jQuery(".tab_annocement .load_more_gif").fadeIn();
+			    var pag_num = jQuery('.tab_annocement .annoce_pageNum').val();
+			    jQuery.ajax({
+					type: "POST",                 // use $_POST request to submit data
+					url: 'https://dphss.guam.gov/wp-admin/admin-ajax.php',
+					data: {
+						page       : pag_num * 10 + 1,
+						action     : 'search_tab_annocement',
+						searchinput : jQuery("#keysearch").val()
+					},
+					success:function( data ) {								
+						jQuery(".tab_annocement .load_more_gif").fadeOut();		
+						jQuery('.announcements_wrapper').append(data);						
+						var ttl_doc = jQuery('.tab_annocement .annoce_pageNum').attr('data-total');						
+						pag_num++;
+						if(ttl_doc <= pag_num){							
+							jQuery('.tab_annocement .no_more_data').show();	
+							jQuery('.tab_annocement .load_more').hide();
+						}else{
+							jQuery('.tab_annocement .no_more_data').hide()
+							jQuery('.tab_annocement .load_more').show();						
+						}						
+						jQuery('.tab_annocement .annoce_pageNum').val(pag_num);							
+					},
+					error: function(){
+						console.log(errorThrown); // error
+					}
+				});
+			});
+			jQuery(".tab_form .load_more").on("click",function(){ // When btn is pressed.
+				jQuery(".tab_form .load_more_gif").fadeIn();
+			    var pag_num = jQuery('.tab_form .forms_pageNum').val();
+			    jQuery.ajax({
+					type: "POST",                 // use $_POST request to submit data
+					url: 'https://dphss.guam.gov/wp-admin/admin-ajax.php',
+					data: {
+						page       : pag_num * 10 + 1,
+						action     : 'search_tab_form',
+						searchinput : jQuery("#keysearch").val()
+					},
+					success:function( data ) {						
+						jQuery(".tab_form .load_more_gif").fadeOut();				
+						jQuery('.forms_wrapper').append(data);						
+						var ttl_doc = jQuery('.tab_form .forms_pageNum').attr('data-total');						
+						pag_num++;
+						if(ttl_doc <= pag_num){							
+							jQuery('.tab_form .no_more_data').show();	
+							jQuery('.tab_form .load_more').hide();
+						}else{
+							jQuery('.tab_form .no_more_data').hide()
+							jQuery('.tab_form .load_more').show();						
+						}						
+						jQuery('.tab_form .forms_pageNum').val(pag_num);							
+					},
+					error: function(){
+						console.log(errorThrown); // error
+					}
+				});
+			});
+			jQuery(".tab_insepection .load_more").on("click",function(){ // When btn is pressed.
+				jQuery(".tab_insepection .load_more_gif").fadeIn();
+			    var pag_num = jQuery('.tab_insepection .inspection_pageNum').val();
+			    jQuery.ajax({
+					type: "POST",                 // use $_POST request to submit data
+					url: 'https://dphss.guam.gov/wp-admin/admin-ajax.php',
+					data: {
+						page       : pag_num * 10 + 1,
+						action     : 'search_tab_insepection',
+						searchinput : jQuery("#keysearch").val()
+					},
+					success:function( data ) {							
+						jQuery(".tab_insepection .load_more_gif").fadeOut();			
+						jQuery('.inspection_wrapper').append(data);						
+						var ttl_doc = jQuery('.tab_insepection .inspection_pageNum').attr('data-total');						
+						pag_num++;
+						if(ttl_doc <= pag_num){							
+							jQuery('.tab_insepection .no_more_data').show();	
+							jQuery('.tab_insepection .load_more').hide();
+						}else{
+							jQuery('.tab_insepection .no_more_data').hide()
+							jQuery('.tab_insepection .load_more').show();						
+						}						
+						jQuery('.tab_insepection .inspection_pageNum').val(pag_num);							
+					},
+					error: function(){
+						console.log(errorThrown); // error
+					}
+				});
+			});
+		})
+
+	}else{
+		jQuery(".search_wrapper").fadeOut( "slow" );		
+		jQuery( '.search_result' ).html('');
+		jQuery('.search_result').fadeOut();
+		jQuery('html, body').animate({scrollTop:0}, 'slow');
+	}
+});
+
+</script>
+
+			<footer id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+		<div class="footer-widget"><div id="text-2" class="fwidget et_pb_widget widget_text">			<div class="textwidget"><div class="footer_img"><a href="https://www.facebook.com/guamdphss"><br />
+<img decoding="async" loading="lazy" width="148" height="158" class="aligncenter size-full wp-image-12933" src="http://dphss.guam.gov//wp-content/uploads/2019/01/11.png" alt="" /><br />
+</a></div>
+</div>
+		</div></div><div class="footer-widget"><div id="text-4" class="fwidget et_pb_widget widget_text">			<div class="textwidget"><p>© 2024 THE DEPARTMENT OF PUBLIC HEALTH AND SOCIAL SERVICES</p>
+<p>&nbsp;</p>
+<p>This website is the official website for the Department of Public Health and Social Services. This website was developed by individuals with disabilities and has been tested for accessibility by manually auditing for screenreader testing, keyboard testing, high contrast, color contrast, browser zoom, and text zoom.</p>
+<p>&nbsp;</p>
+<p>Disclaimer: GovGuam is not responsible for accessibility in third party applications.</p>
+<p>&nbsp;</p>
+<p>© Copyright Government of Guam 2024. All Rights Reserved.</p>
+</div>
+		</div></div><div class="footer-widget"><div id="text-7" class="fwidget et_pb_widget widget_text">			<div class="textwidget"><div class="related_sites">
+<h2>Related Sites</h2>
+</div>
+<ul class="footer-ul">
+<li><a href="http://www.medicare.gov/">Medicare.gov</a></li>
+<li><a href="http://flu.gov/">Flu.gov</a></li>
+<li><a href="http://cdc.gov/" target="_blank" rel="noopener">CDC.gov</a></li>
+<li><a href="https://www.who.int/" target="_blank" rel="noopener">World Health Organization</a></li>
+<li><a href="http://myplate.gov/">Choose My Plate</a></li>
+<li><a href="http://dphss.guam.gov//prutehi-hao-protect-yourself/" target="_blank" rel="noopener">STD/HIV Program &#8211; Prutehi Hao</a></li>
+<li><a href="http://ndep.nih.gov/">National Diabetes Education Program</a></li>
+<li><a href="http://www.smpresource.org/" target="_blank" rel="noopener">SMP Resource</a></li>
+<li><a href="http://www.cdc.gov/vaccines/parents/infographics/protect-babies-from-whooping-cough.html?s_cid=bb-pertussis-nurse-graphic-002">Protect Your Baby from Whooping Cough</a></li>
+</ul>
+</div>
+		</div></div><div class="footer-widget"><div id="text-8" class="fwidget et_pb_widget widget_text">			<div class="textwidget"><div class="footer_img"><a target="_blank" href="https://otech.guam.gov" rel="noopener"><br />
+<img decoding="async" class="aligncenter size-full wp-image-12933" src="http://dphss.guam.gov//wp-content/uploads/2019/03/otech_guam_badge_1.png" alt="otech logo" /><br />
+</a><br />
+<a target="_blank" href="https://www.liberationguam.com/" rel="noopener"><img decoding="async" loading="lazy" class="aligncenter size-thumbnail wp-image-16258" src="http://dphss.guam.gov/wp-content/uploads/2019/06/75th_Liberation_Logo_small-removebg-4-150x150.png" alt="75th liberation" width="150" height="150" /></a></div>
+</div>
+		</div></div>	</div>
+</div>
+
+
+		
+				<!--<div id="footer-bottom">
+					<div class="container clearfix">
+				<ul class="et-social-icons">
+
+
+</ul><p id="footer-info">Designed by <a href="https://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a> | Powered by <a href="https://www.wordpress.org">WordPress</a></p>					</div>	
+				</div><!-- .container -->
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+	<script type="text/javascript">
+		jQuery('#main-footer .container').removeClass('container');
+		//jQuery('.container').removeClass('container').addClass('newContainer');
+	</script>
+	
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<div id="glt-translate-trigger"><span class="notranslate">Translate »</span></div><div id="glt-toolbar"></div><div id="flags" style="display:none" class="size18"><ul id="sortable" class="ui-sortable"><li id="Afrikaans"><a href="#" title="Afrikaans" class="nturl notranslate af flag Afrikaans"></a></li><li id="Albanian"><a href="#" title="Albanian" class="nturl notranslate sq flag Albanian"></a></li><li id="Amharic"><a href="#" title="Amharic" class="nturl notranslate am flag Amharic"></a></li><li id="Arabic"><a href="#" title="Arabic" class="nturl notranslate ar flag Arabic"></a></li><li id="Armenian"><a href="#" title="Armenian" class="nturl notranslate hy flag Armenian"></a></li><li id="Azerbaijani"><a href="#" title="Azerbaijani" class="nturl notranslate az flag Azerbaijani"></a></li><li id="Basque"><a href="#" title="Basque" class="nturl notranslate eu flag Basque"></a></li><li id="Belarusian"><a href="#" title="Belarusian" class="nturl notranslate be flag Belarusian"></a></li><li id="Bengali"><a href="#" title="Bengali" class="nturl notranslate bn flag Bengali"></a></li><li id="Bosnian"><a href="#" title="Bosnian" class="nturl notranslate bs flag Bosnian"></a></li><li id="Bulgarian"><a href="#" title="Bulgarian" class="nturl notranslate bg flag Bulgarian"></a></li><li id="Catalan"><a href="#" title="Catalan" class="nturl notranslate ca flag Catalan"></a></li><li id="Cebuano"><a href="#" title="Cebuano" class="nturl notranslate ceb flag Cebuano"></a></li><li id="Chichewa"><a href="#" title="Chichewa" class="nturl notranslate ny flag Chichewa"></a></li><li id="Chinese (Simplified)"><a href="#" title="Chinese (Simplified)" class="nturl notranslate zh-CN flag Chinese (Simplified)"></a></li><li id="Chinese (Traditional)"><a href="#" title="Chinese (Traditional)" class="nturl notranslate zh-TW flag Chinese (Traditional)"></a></li><li id="Corsican"><a href="#" title="Corsican" class="nturl notranslate co flag Corsican"></a></li><li id="Croatian"><a href="#" title="Croatian" class="nturl notranslate hr flag Croatian"></a></li><li id="Czech"><a href="#" title="Czech" class="nturl notranslate cs flag Czech"></a></li><li id="Danish"><a href="#" title="Danish" class="nturl notranslate da flag Danish"></a></li><li id="Dutch"><a href="#" title="Dutch" class="nturl notranslate nl flag Dutch"></a></li><li id="English"><a href="#" title="English" class="nturl notranslate en flag united-states"></a></li><li id="Esperanto"><a href="#" title="Esperanto" class="nturl notranslate eo flag Esperanto"></a></li><li id="Estonian"><a href="#" title="Estonian" class="nturl notranslate et flag Estonian"></a></li><li id="Filipino"><a href="#" title="Filipino" class="nturl notranslate tl flag Filipino"></a></li><li id="Finnish"><a href="#" title="Finnish" class="nturl notranslate fi flag Finnish"></a></li><li id="French"><a href="#" title="French" class="nturl notranslate fr flag French"></a></li><li id="Frisian"><a href="#" title="Frisian" class="nturl notranslate fy flag Frisian"></a></li><li id="Galician"><a href="#" title="Galician" class="nturl notranslate gl flag Galician"></a></li><li id="Georgian"><a href="#" title="Georgian" class="nturl notranslate ka flag Georgian"></a></li><li id="German"><a href="#" title="German" class="nturl notranslate de flag German"></a></li><li id="Greek"><a href="#" title="Greek" class="nturl notranslate el flag Greek"></a></li><li id="Gujarati"><a href="#" title="Gujarati" class="nturl notranslate gu flag Gujarati"></a></li><li id="Haitian"><a href="#" title="Haitian" class="nturl notranslate ht flag Haitian"></a></li><li id="Hausa"><a href="#" title="Hausa" class="nturl notranslate ha flag Hausa"></a></li><li id="Hawaiian"><a href="#" title="Hawaiian" class="nturl notranslate haw flag Hawaiian"></a></li><li id="Hebrew"><a href="#" title="Hebrew" class="nturl notranslate iw flag Hebrew"></a></li><li id="Hindi"><a href="#" title="Hindi" class="nturl notranslate hi flag Hindi"></a></li><li id="Hmong"><a href="#" title="Hmong" class="nturl notranslate hmn flag Hmong"></a></li><li id="Hungarian"><a href="#" title="Hungarian" class="nturl notranslate hu flag Hungarian"></a></li><li id="Icelandic"><a href="#" title="Icelandic" class="nturl notranslate is flag Icelandic"></a></li><li id="Igbo"><a href="#" title="Igbo" class="nturl notranslate ig flag Igbo"></a></li><li id="Indonesian"><a href="#" title="Indonesian" class="nturl notranslate id flag Indonesian"></a></li><li id="Irish"><a href="#" title="Irish" class="nturl notranslate ga flag Irish"></a></li><li id="Italian"><a href="#" title="Italian" class="nturl notranslate it flag Italian"></a></li><li id="Japanese"><a href="#" title="Japanese" class="nturl notranslate ja flag Japanese"></a></li><li id="Javanese"><a href="#" title="Javanese" class="nturl notranslate jw flag Javanese"></a></li><li id="Kannada"><a href="#" title="Kannada" class="nturl notranslate kn flag Kannada"></a></li><li id="Kazakh"><a href="#" title="Kazakh" class="nturl notranslate kk flag Kazakh"></a></li><li id="Khmer"><a href="#" title="Khmer" class="nturl notranslate km flag Khmer"></a></li><li id="Korean"><a href="#" title="Korean" class="nturl notranslate ko flag Korean"></a></li><li id="Kurdish"><a href="#" title="Kurdish" class="nturl notranslate ku flag Kurdish"></a></li><li id="Kyrgyz"><a href="#" title="Kyrgyz" class="nturl notranslate ky flag Kyrgyz"></a></li><li id="Lao"><a href="#" title="Lao" class="nturl notranslate lo flag Lao"></a></li><li id="Latin"><a href="#" title="Latin" class="nturl notranslate la flag Latin"></a></li><li id="Latvian"><a href="#" title="Latvian" class="nturl notranslate lv flag Latvian"></a></li><li id="Lithuanian"><a href="#" title="Lithuanian" class="nturl notranslate lt flag Lithuanian"></a></li><li id="Luxembourgish"><a href="#" title="Luxembourgish" class="nturl notranslate lb flag Luxembourgish"></a></li><li id="Macedonian"><a href="#" title="Macedonian" class="nturl notranslate mk flag Macedonian"></a></li><li id="Malagasy"><a href="#" title="Malagasy" class="nturl notranslate mg flag Malagasy"></a></li><li id="Malayalam"><a href="#" title="Malayalam" class="nturl notranslate ml flag Malayalam"></a></li><li id="Malay"><a href="#" title="Malay" class="nturl notranslate ms flag Malay"></a></li><li id="Maltese"><a href="#" title="Maltese" class="nturl notranslate mt flag Maltese"></a></li><li id="Maori"><a href="#" title="Maori" class="nturl notranslate mi flag Maori"></a></li><li id="Marathi"><a href="#" title="Marathi" class="nturl notranslate mr flag Marathi"></a></li><li id="Mongolian"><a href="#" title="Mongolian" class="nturl notranslate mn flag Mongolian"></a></li><li id="Myanmar (Burmese)"><a href="#" title="Myanmar (Burmese)" class="nturl notranslate my flag Myanmar (Burmese)"></a></li><li id="Nepali"><a href="#" title="Nepali" class="nturl notranslate ne flag Nepali"></a></li><li id="Norwegian"><a href="#" title="Norwegian" class="nturl notranslate no flag Norwegian"></a></li><li id="Pashto"><a href="#" title="Pashto" class="nturl notranslate ps flag Pashto"></a></li><li id="Persian"><a href="#" title="Persian" class="nturl notranslate fa flag Persian"></a></li><li id="Polish"><a href="#" title="Polish" class="nturl notranslate pl flag Polish"></a></li><li id="Portuguese"><a href="#" title="Portuguese" class="nturl notranslate pt flag Portuguese"></a></li><li id="Punjabi"><a href="#" title="Punjabi" class="nturl notranslate pa flag Punjabi"></a></li><li id="Romanian"><a href="#" title="Romanian" class="nturl notranslate ro flag Romanian"></a></li><li id="Russian"><a href="#" title="Russian" class="nturl notranslate ru flag Russian"></a></li><li id="Serbian"><a href="#" title="Serbian" class="nturl notranslate sr flag Serbian"></a></li><li id="Shona"><a href="#" title="Shona" class="nturl notranslate sn flag Shona"></a></li><li id="Sesotho"><a href="#" title="Sesotho" class="nturl notranslate st flag Sesotho"></a></li><li id="Sindhi"><a href="#" title="Sindhi" class="nturl notranslate sd flag Sindhi"></a></li><li id="Sinhala"><a href="#" title="Sinhala" class="nturl notranslate si flag Sinhala"></a></li><li id="Slovak"><a href="#" title="Slovak" class="nturl notranslate sk flag Slovak"></a></li><li id="Slovenian"><a href="#" title="Slovenian" class="nturl notranslate sl flag Slovenian"></a></li><li id="Samoan"><a href="#" title="Samoan" class="nturl notranslate sm flag Samoan"></a></li><li id="Scots Gaelic"><a href="#" title="Scots Gaelic" class="nturl notranslate gd flag Scots Gaelic"></a></li><li id="Somali"><a href="#" title="Somali" class="nturl notranslate so flag Somali"></a></li><li id="Spanish"><a href="#" title="Spanish" class="nturl notranslate es flag Spanish"></a></li><li id="Sundanese"><a href="#" title="Sundanese" class="nturl notranslate su flag Sundanese"></a></li><li id="Swahili"><a href="#" title="Swahili" class="nturl notranslate sw flag Swahili"></a></li><li id="Swedish"><a href="#" title="Swedish" class="nturl notranslate sv flag Swedish"></a></li><li id="Tajik"><a href="#" title="Tajik" class="nturl notranslate tg flag Tajik"></a></li><li id="Tamil"><a href="#" title="Tamil" class="nturl notranslate ta flag Tamil"></a></li><li id="Telugu"><a href="#" title="Telugu" class="nturl notranslate te flag Telugu"></a></li><li id="Thai"><a href="#" title="Thai" class="nturl notranslate th flag Thai"></a></li><li id="Turkish"><a href="#" title="Turkish" class="nturl notranslate tr flag Turkish"></a></li><li id="Ukrainian"><a href="#" title="Ukrainian" class="nturl notranslate uk flag Ukrainian"></a></li><li id="Urdu"><a href="#" title="Urdu" class="nturl notranslate ur flag Urdu"></a></li><li id="Uzbek"><a href="#" title="Uzbek" class="nturl notranslate uz flag Uzbek"></a></li><li id="Vietnamese"><a href="#" title="Vietnamese" class="nturl notranslate vi flag Vietnamese"></a></li><li id="Welsh"><a href="#" title="Welsh" class="nturl notranslate cy flag Welsh"></a></li><li id="Xhosa"><a href="#" title="Xhosa" class="nturl notranslate xh flag Xhosa"></a></li><li id="Yiddish"><a href="#" title="Yiddish" class="nturl notranslate yi flag Yiddish"></a></li><li id="Yoruba"><a href="#" title="Yoruba" class="nturl notranslate yo flag Yoruba"></a></li><li id="Zulu"><a href="#" title="Zulu" class="nturl notranslate zu flag Zulu"></a></li></ul></div><div id='glt-footer'><div id="google_language_translator" class="default-language-en"></div></div><script>function GoogleLanguageTranslatorInit() { new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages:'af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,tl,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,iw,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ml,ms,mt,mi,mr,mn,my,ne,no,ps,fa,pl,pt,pa,ro,ru,sr,sn,st,sd,si,sk,sl,sm,gd,so,es,su,sw,sv,tg,ta,te,th,tr,uk,ur,uz,vi,cy,xh,yi,yo,zu', autoDisplay: false}, 'google_language_translator');}</script>		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+			<script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_fullwidth_image_0","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in"}];
+				</script>
+	<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script>
+		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
+</script>
+<link rel='stylesheet' id='wp-block-library-css' href='https://dphss.guam.gov/wp-includes/css/dist/block-library/style.min.css?ver=6.3.6' type='text/css' media='none' onload="media='all'" />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='https://dphss.guam.gov/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.16' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.8' id='swv-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/dphss.guam.gov\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.8' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-includes/js/jquery/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>
+<script id="jquery-js-after" type="text/javascript">
+jqueryParams.length&&$.each(jqueryParams,function(e,r){if("function"==typeof r){var n=String(r);n.replace("$","jQuery");var a=new Function("return "+n)();$(document).ready(a)}});
+</script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/google-language-translator/js/scripts.js?ver=6.0.19' id='scripts-js'></script>
+<script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=GoogleLanguageTranslatorInit' id='scripts-google-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.16' defer async id='tp-tools-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.16' defer async id='revmin-js'></script>
+<script type='text/javascript' id='divi-custom-script-js-extra'>
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/dphss.guam.gov\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/dphss.guam.gov\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/dphss.guam.gov\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"69c0b87ae1","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"02925f6f4e","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"12869","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"https:\/\/dphss.guam.gov\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#7EBEC5","waypoints_options":{"context":[".pum-overlay"]}};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/themes/Divi/js/scripts.min.js?ver=4.22.1' id='divi-custom-script-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/revslider/admin/includes/shortcode_generator/divi/scripts/frontend-bundle.min.js?ver=1.0.0' id='revslider-divi-frontend-bundle-js'></script>
+<script type='text/javascript' id='pojo-a11y-js-extra'>
+/* <![CDATA[ */
+var PojoA11yOptions = {"focusable":"","remove_link_target":"","add_role_links":"","enable_save":"","save_expiration":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/pojo-accessibility/assets/js/app.min.js?ver=1.0.0' id='pojo-a11y-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/themes/Divi/core/admin/js/common.js?ver=4.22.1' id='et-core-common-js'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Le1TxcoAAAAAMr49_jNdNB8FkYUgvngGNHuYJYv&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6Le1TxcoAAAAAMr49_jNdNB8FkYUgvngGNHuYJYv","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.8' id='wpcf7-recaptcha-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=4.22.1' id='fitvids-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/magnific-popup.js?ver=4.22.1' id='magnific-popup-js'></script>
+<script type='text/javascript' src='https://dphss.guam.gov/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/salvattore.js?ver=4.22.1' id='salvattore-js'></script>
+<script id="rs-initialisation-scripts">
+		var	tpj = jQuery;
+
+		var	revapi3;
+
+		if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+		if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+		RS_MODULES.modules["revslider31"] = {once: RS_MODULES.modules["revslider31"]!==undefined ? RS_MODULES.modules["revslider31"].once : undefined, init:function() {
+			window.revapi3 = window.revapi3===undefined || window.revapi3===null || window.revapi3.length===0  ? document.getElementById("rev_slider_3_1") : window.revapi3;
+			if(window.revapi3 === null || window.revapi3 === undefined || window.revapi3.length==0) { window.revapi3initTry = window.revapi3initTry ===undefined ? 0 : window.revapi3initTry+1; if (window.revapi3initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["revslider31"].init()}); return;}
+			window.revapi3 = jQuery(window.revapi3);
+			if(window.revapi3.revolution==undefined){ revslider_showDoubleJqueryError("rev_slider_3_1"); return;}
+			revapi3.revolutionInit({
+					revapi:"revapi3",
+					sliderLayout:"fullwidth",
+					visibilityLevels:"1240,1024,778,480",
+					gridwidth:1240,
+					gridheight:868,
+					lazyType:"smart",
+					spinner:"spinner0",
+					perspectiveType:"local",
+					responsiveLevels:"1240,1024,778,480",
+					progressBar:{disableProgressBar:true},
+					navigation: {
+						onHoverStop:false
+					},
+					viewPort: {
+						global:true,
+						globalDist:"-200px",
+						enable:false,
+						visible_area:"20%"
+					},
+					fallbacks: {
+						allowHTML5AutoPlayOnAndroid:true
+					},
+			});
+			
+		}} // End of RevInitScript
+
+		if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+	</script>
+		<a id="pojo-a11y-skip-content" class="pojo-skip-link pojo-skip-content" tabindex="1" accesskey="s" href="#content">Skip to content</a>
+				<nav id="pojo-a11y-toolbar" class="pojo-a11y-toolbar-right pojo-a11y-" role="navigation">
+			<div class="pojo-a11y-toolbar-toggle">
+				<a class="pojo-a11y-toolbar-link pojo-a11y-toolbar-toggle-link" href="javascript:void(0);" title="Accessibility Tools" role="button">
+					<span class="pojo-sr-only sr-only">Open toolbar</span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" width="1em">
+						<title>Accessibility Tools</title>
+						<path d="M50 8.1c23.2 0 41.9 18.8 41.9 41.9 0 23.2-18.8 41.9-41.9 41.9C26.8 91.9 8.1 73.2 8.1 50S26.8 8.1 50 8.1M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 11.3c-21.4 0-38.7 17.3-38.7 38.7S28.6 88.7 50 88.7 88.7 71.4 88.7 50 71.4 11.3 50 11.3zm0 8.9c4 0 7.3 3.2 7.3 7.3S54 34.7 50 34.7s-7.3-3.2-7.3-7.3 3.3-7.2 7.3-7.2zm23.7 19.7c-5.8 1.4-11.2 2.6-16.6 3.2.2 20.4 2.5 24.8 5 31.4.7 1.9-.2 4-2.1 4.7-1.9.7-4-.2-4.7-2.1-1.8-4.5-3.4-8.2-4.5-15.8h-2c-1 7.6-2.7 11.3-4.5 15.8-.7 1.9-2.8 2.8-4.7 2.1-1.9-.7-2.8-2.8-2.1-4.7 2.6-6.6 4.9-11 5-31.4-5.4-.6-10.8-1.8-16.6-3.2-1.7-.4-2.8-2.1-2.4-3.9.4-1.7 2.1-2.8 3.9-2.4 19.5 4.6 25.1 4.6 44.5 0 1.7-.4 3.5.7 3.9 2.4.7 1.8-.3 3.5-2.1 3.9z"/>					</svg>
+				</a>
+			</div>
+			<div class="pojo-a11y-toolbar-overlay">
+				<div class="pojo-a11y-toolbar-inner">
+					<p class="pojo-a11y-toolbar-title">Accessibility Tools</p>
+					
+					<ul class="pojo-a11y-toolbar-items pojo-a11y-tools">
+																			<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-plus" data-action="resize-plus" data-action-group="resize" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Increase Text</title><path fill="currentColor" d="M256 200v16c0 4.25-3.75 8-8 8h-56v56c0 4.25-3.75 8-8 8h-16c-4.25 0-8-3.75-8-8v-56h-56c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h56v-56c0-4.25 3.75-8 8-8h16c4.25 0 8 3.75 8 8v56h56c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Increase Text</span>								</a>
+							</li>
+							
+							<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-minus" data-action="resize-minus" data-action-group="resize" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Decrease Text</title><path fill="currentColor" d="M256 200v16c0 4.25-3.75 8-8 8h-144c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h144c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Decrease Text</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-grayscale" data-action="grayscale" data-action-group="schema" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Grayscale</title><path fill="currentColor" d="M15.75 384h-15.75v-352h15.75v352zM31.5 383.75h-8v-351.75h8v351.75zM55 383.75h-7.75v-351.75h7.75v351.75zM94.25 383.75h-7.75v-351.75h7.75v351.75zM133.5 383.75h-15.5v-351.75h15.5v351.75zM165 383.75h-7.75v-351.75h7.75v351.75zM180.75 383.75h-7.75v-351.75h7.75v351.75zM196.5 383.75h-7.75v-351.75h7.75v351.75zM235.75 383.75h-15.75v-351.75h15.75v351.75zM275 383.75h-15.75v-351.75h15.75v351.75zM306.5 383.75h-15.75v-351.75h15.75v351.75zM338 383.75h-15.75v-351.75h15.75v351.75zM361.5 383.75h-15.75v-351.75h15.75v351.75zM408.75 383.75h-23.5v-351.75h23.5v351.75zM424.5 383.75h-8v-351.75h8v351.75zM448 384h-15.75v-352h15.75v352z"></path></svg></span><span class="pojo-a11y-toolbar-text">Grayscale</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-high-contrast" data-action="high-contrast" data-action-group="schema" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>High Contrast</title><path fill="currentColor" d="M192 360v-272c-75 0-136 61-136 136s61 136 136 136zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path></svg></span><span class="pojo-a11y-toolbar-text">High Contrast</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-negative-contrast" data-action="negative-contrast" data-action-group="schema" tabindex="-1" role="button">
+
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Negative Contrast</title><path fill="currentColor" d="M416 240c-23.75-36.75-56.25-68.25-95.25-88.25 10 17 15.25 36.5 15.25 56.25 0 61.75-50.25 112-112 112s-112-50.25-112-112c0-19.75 5.25-39.25 15.25-56.25-39 20-71.5 51.5-95.25 88.25 42.75 66 111.75 112 192 112s149.25-46 192-112zM236 144c0-6.5-5.5-12-12-12-41.75 0-76 34.25-76 76 0 6.5 5.5 12 12 12s12-5.5 12-12c0-28.5 23.5-52 52-52 6.5 0 12-5.5 12-12zM448 240c0 6.25-2 12-5 17.25-46 75.75-130.25 126.75-219 126.75s-173-51.25-219-126.75c-3-5.25-5-11-5-17.25s2-12 5-17.25c46-75.5 130.25-126.75 219-126.75s173 51.25 219 126.75c3 5.25 5 11 5 17.25z"></path></svg></span><span class="pojo-a11y-toolbar-text">Negative Contrast</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-light-background" data-action="light-background" data-action-group="schema" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Light Background</title><path fill="currentColor" d="M184 144c0 4.25-3.75 8-8 8s-8-3.75-8-8c0-17.25-26.75-24-40-24-4.25 0-8-3.75-8-8s3.75-8 8-8c23.25 0 56 12.25 56 40zM224 144c0-50-50.75-80-96-80s-96 30-96 80c0 16 6.5 32.75 17 45 4.75 5.5 10.25 10.75 15.25 16.5 17.75 21.25 32.75 46.25 35.25 74.5h57c2.5-28.25 17.5-53.25 35.25-74.5 5-5.75 10.5-11 15.25-16.5 10.5-12.25 17-29 17-45zM256 144c0 25.75-8.5 48-25.75 67s-40 45.75-42 72.5c7.25 4.25 11.75 12.25 11.75 20.5 0 6-2.25 11.75-6.25 16 4 4.25 6.25 10 6.25 16 0 8.25-4.25 15.75-11.25 20.25 2 3.5 3.25 7.75 3.25 11.75 0 16.25-12.75 24-27.25 24-6.5 14.5-21 24-36.75 24s-30.25-9.5-36.75-24c-14.5 0-27.25-7.75-27.25-24 0-4 1.25-8.25 3.25-11.75-7-4.5-11.25-12-11.25-20.25 0-6 2.25-11.75 6.25-16-4-4.25-6.25-10-6.25-16 0-8.25 4.5-16.25 11.75-20.5-2-26.75-24.75-53.5-42-72.5s-25.75-41.25-25.75-67c0-68 64.75-112 128-112s128 44 128 112z"></path></svg></span><span class="pojo-a11y-toolbar-text">Light Background</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-links-underline" data-action="links-underline" data-action-group="toggle" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Links Underline</title><path fill="currentColor" d="M364 304c0-6.5-2.5-12.5-7-17l-52-52c-4.5-4.5-10.75-7-17-7-7.25 0-13 2.75-18 8 8.25 8.25 18 15.25 18 28 0 13.25-10.75 24-24 24-12.75 0-19.75-9.75-28-18-5.25 5-8.25 10.75-8.25 18.25 0 6.25 2.5 12.5 7 17l51.5 51.75c4.5 4.5 10.75 6.75 17 6.75s12.5-2.25 17-6.5l36.75-36.5c4.5-4.5 7-10.5 7-16.75zM188.25 127.75c0-6.25-2.5-12.5-7-17l-51.5-51.75c-4.5-4.5-10.75-7-17-7s-12.5 2.5-17 6.75l-36.75 36.5c-4.5 4.5-7 10.5-7 16.75 0 6.5 2.5 12.5 7 17l52 52c4.5 4.5 10.75 6.75 17 6.75 7.25 0 13-2.5 18-7.75-8.25-8.25-18-15.25-18-28 0-13.25 10.75-24 24-24 12.75 0 19.75 9.75 28 18 5.25-5 8.25-10.75 8.25-18.25zM412 304c0 19-7.75 37.5-21.25 50.75l-36.75 36.5c-13.5 13.5-31.75 20.75-50.75 20.75-19.25 0-37.5-7.5-51-21.25l-51.5-51.75c-13.5-13.5-20.75-31.75-20.75-50.75 0-19.75 8-38.5 22-52.25l-22-22c-13.75 14-32.25 22-52 22-19 0-37.5-7.5-51-21l-52-52c-13.75-13.75-21-31.75-21-51 0-19 7.75-37.5 21.25-50.75l36.75-36.5c13.5-13.5 31.75-20.75 50.75-20.75 19.25 0 37.5 7.5 51 21.25l51.5 51.75c13.5 13.5 20.75 31.75 20.75 50.75 0 19.75-8 38.5-22 52.25l22 22c13.75-14 32.25-22 52-22 19 0 37.5 7.5 51 21l52 52c13.75 13.75 21 31.75 21 51z"></path></svg></span><span class="pojo-a11y-toolbar-text">Links Underline</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-readable-font" data-action="readable-font" data-action-group="toggle" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Readable Font</title><path fill="currentColor" d="M181.25 139.75l-42.5 112.5c24.75 0.25 49.5 1 74.25 1 4.75 0 9.5-0.25 14.25-0.5-13-38-28.25-76.75-46-113zM0 416l0.5-19.75c23.5-7.25 49-2.25 59.5-29.25l59.25-154 70-181h32c1 1.75 2 3.5 2.75 5.25l51.25 120c18.75 44.25 36 89 55 133 11.25 26 20 52.75 32.5 78.25 1.75 4 5.25 11.5 8.75 14.25 8.25 6.5 31.25 8 43 12.5 0.75 4.75 1.5 9.5 1.5 14.25 0 2.25-0.25 4.25-0.25 6.5-31.75 0-63.5-4-95.25-4-32.75 0-65.5 2.75-98.25 3.75 0-6.5 0.25-13 1-19.5l32.75-7c6.75-1.5 20-3.25 20-12.5 0-9-32.25-83.25-36.25-93.5l-112.5-0.5c-6.5 14.5-31.75 80-31.75 89.5 0 19.25 36.75 20 51 22 0.25 4.75 0.25 9.5 0.25 14.5 0 2.25-0.25 4.5-0.5 6.75-29 0-58.25-5-87.25-5-3.5 0-8.5 1.5-12 2-15.75 2.75-31.25 3.5-47 3.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Readable Font</span>								</a>
+							</li>
+																		<li class="pojo-a11y-toolbar-item">
+							<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-reset" data-action="reset" tabindex="-1" role="button">
+								<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Reset</title><path fill="currentColor" d="M384 224c0 105.75-86.25 192-192 192-57.25 0-111.25-25.25-147.75-69.25-2.5-3.25-2.25-8 0.5-10.75l34.25-34.5c1.75-1.5 4-2.25 6.25-2.25 2.25 0.25 4.5 1.25 5.75 3 24.5 31.75 61.25 49.75 101 49.75 70.5 0 128-57.5 128-128s-57.5-128-128-128c-32.75 0-63.75 12.5-87 34.25l34.25 34.5c4.75 4.5 6 11.5 3.5 17.25-2.5 6-8.25 10-14.75 10h-112c-8.75 0-16-7.25-16-16v-112c0-6.5 4-12.25 10-14.75 5.75-2.5 12.75-1.25 17.25 3.5l32.5 32.25c35.25-33.25 83-53 132.25-53 105.75 0 192 86.25 192 192z"></path></svg></span>
+								<span class="pojo-a11y-toolbar-text">Reset</span>
+							</a>
+						</li>
+					</ul>
+									</div>
+			</div>
+		</nav>
+		</body>
+</html>

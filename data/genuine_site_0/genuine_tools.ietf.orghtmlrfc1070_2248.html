@@ -1,0 +1,1773 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html data-bs-theme="auto" lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            
+                RFC 1070 - Use of the Internet as a subnetwork for experimentation with the OSI network layer
+            
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://static.ietf.org/fonts/inter/import.css" rel="stylesheet">
+        <link href="https://static.ietf.org/fonts/noto-sans-mono/import.css" rel="stylesheet">
+        
+            <link rel="stylesheet" href="https://static.ietf.org/dt/12.45.0/ietf/css/document_html_referenced.css">
+            
+            <script type="module" crossorigin="" src="https://static.ietf.org/dt/12.45.0/assets/embedded-12b6e5e7.js"></script>
+<link href="https://static.ietf.org/dt/12.45.0/assets/create-pinia-singleton-6a0ec72c.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://static.ietf.org/dt/12.45.0/assets/Scrollbar-a7264c62.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+            <script src="https://static.ietf.org/dt/12.45.0/ietf/js/document_html.js"></script>
+            <script src="https://static.ietf.org/dt/12.45.0/ietf/js/theme.js"></script>
+        
+        <link rel="alternate" type="application/atom+xml" title="Document changes" href="/feed/document-changes/rfc1070/">
+        <meta name="description"
+            
+                content="Use of the Internet as a subnetwork for experimentation with the OSI network layer (RFC 1070, )"
+            >
+        
+
+<link rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-180.png">
+<link rel="icon"
+      sizes="32x32"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-32.png">
+<link rel="icon"
+      sizes="16x16"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon"
+      href="https://static.ietf.org/dt/12.45.0/ietf/images/ietf-logo-nor-mask.svg"
+      color="#ffffff">
+<meta name="msapplication-TileColor"
+      content="#ffffff">
+<meta name="theme-color"
+      content="#ffffff">
+        
+
+
+
+
+<meta property="og:title" content="RFC 1070: Use of the Internet as a subnetwork for experimentation with the OSI network layer">
+<meta property="og:url" content="https://datatracker.ietf.org/doc/html/rfc1070">
+<link rel="canonical" href="https://datatracker.ietf.org/doc/html/rfc1070">
+<meta property="og:site_name" content="IETF Datatracker">
+<meta property="og:description" content="This RFC proposes a scenario for experimentation with the International Organization for Standardization (ISO) Open Systems Interconnection (OSI) network layer protocols over the Internet and requests discussion and suggestions for improvements to this scenario. This RFC also proposes the creation of an experimental OSI internet. To participate in the experimental OSI internet, a system must abide by the agreements set forth in this RFC.">
+<meta property="og:type" content="article">
+
+<meta property="article:section" content="Individual Internet-Draft">
+
+<meta property="article:author" content="Dr. Marshall T. Rose">
+<meta property="article:author" content="Robert Hagens">
+<meta property="article:author" content="Nancy E. Hall">
+
+
+
+        
+        <style>
+            
+            .diff-form .select2-selection__rendered {
+                direction: rtl;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <noscript><iframe class="status" title="Site status" src="/status/latest"></iframe></noscript>
+<div class="vue-embed" data-component="Status"></div>
+        <div class="btn-toolbar sidebar-toolbar position-fixed top-0 end-0 m-2 m-lg-3 d-print-none">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm me-1 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                    aria-label="Toggle theme">
+                        <i class="theme-icon-active bi bi-circle-half"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="bd-theme">
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="light" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-sun-fill"></i>
+                            Light<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-moon-stars-fill"></i>
+                            Dark<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                            data-bs-theme-value="auto" aria-pressed="true">
+                            <i class="me-2 opacity-50 theme-icon bi bi-circle-half"></i>
+                            Auto<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm sidebar-toggle"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar"
+                    aria-expanded="true"
+                    aria-controls="sidebar"
+                    aria-label="Toggle metadata sidebar"
+                    title="Toggle metadata sidebar">
+            <i class="bi bi-arrow-bar-left sidebar-shown"></i>
+            <i class="bi bi-arrow-bar-right sidebar-collapsed"></i>
+            </button>
+        </div>
+        <nav class="navbar bg-light-subtle px-1 fixed-top d-print-none d-md-none">
+            <a class="nav-link ps-1"
+               href="/doc/rfc1070/">
+                
+                    RFC 1070
+                
+                <br class="d-sm-none">
+
+                <span class="ms-sm-3 badge rounded-pill badge-unkn">
+                    
+                        Unknown
+                    
+                </span>
+            </a>
+            <button class="navbar-toggler p-1"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#docinfo-collapse"
+                    aria-controls="docinfo-collapse"
+                    aria-expanded="false"
+                    aria-label="Show document information">
+                <span class="navbar-toggler-icon small"></span>
+            </button>
+            <div class="navbar-nav navbar-nav-scroll overscroll-none collapse pt-1" id="docinfo-collapse">
+                <div class="bg-light-subtle p-0">
+                    <table class="table table-sm table-borderless small">
+                        <tbody class="meta align-top">
+                            <tr>
+                                <th scope="row"></th>
+                                <th scope="row">Title</th>
+                                <td class="edit"></td>
+                                <td>Use of the Internet as a subnetwork for experimentation with the OSI network layer</td>
+                            </tr>
+                        </tbody>
+                        
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Unknown
+    
+</span>
+
+            
+                
+                    <br>February 1989
+                
+                <br>
+                
+                
+                    <a class="btn btn-sm btn-warning"
+                       title="Click to report an error in the document."
+                       href="https://www.rfc-editor.org/errata.php#reportnew"
+                       target="_blank">
+                        Report errata
+                    </a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
+            
+            
+                
+
+
+
+
+    	
+        <div class="alert alert-warning small p-2 mt-2" role="alert">
+            This RFC is labeled as "Legacy"; it was published before a formal source was recorded.
+            This RFC is <strong>not endorsed by the IETF</strong> and has <strong>no formal standing</strong> in the
+            <a href="/doc/rfc2026/">IETF standards process</a>.
+        </div>
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+            
+            
+            <li class="page-item rfc active">
+                <a class="page-link"
+                href="/doc/html/rfc1070">
+                    RFC 1070
+                </a>
+            </li>
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Authors</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Dr. Marshall T. Rose"
+            href="/person/mrose17@gmail.com" >Dr. Marshall T. Rose</a> <a 
+               href="mailto:mrose17%40gmail.com"
+               aria-label="Compose email to mrose17@gmail.com"
+               title="Compose email to mrose17@gmail.com">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Robert Hagens"
+            href="/person/hagens@mci.net" >Robert Hagens</a> <a 
+               href="mailto:hagens%40mci.net"
+               aria-label="Compose email to hagens@mci.net"
+               title="Compose email to hagens@mci.net">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Nancy Hall"
+            href="/person/nhall@cs.wisc.edu" >Nancy Hall</a> <a 
+               href="mailto:nhall%40cs.wisc.edu"
+               aria-label="Compose email to nhall@cs.wisc.edu"
+               title="Compose email to nhall@cs.wisc.edu">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:rfc1070@ietf.org?subject=rfc1070" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        Legacy
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc1070.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc1070.html">
+            
+                <i class="bi bi-file-code"></i> html
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+            download="rfc1070.pdf"
+          
+         
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/pdfrfc/rfc1070.txt.pdf">
+            
+                <i class="bi bi-file-pdf"></i> pdf
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/rfc1070/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+    
+</tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <td class="edit"></td>
+                            <td>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </nav>
+        <div class="row g-0">
+            <div class="col-md-9 d-flex justify-content-center lh-sm"
+                 data-bs-spy="scroll"
+                 data-bs-target="#toc-nav"
+                 data-bs-smooth-scroll="true"
+                 tabindex="0"
+                 id="content">
+                
+                    <div class="rfcmarkup">
+                        <br class="noprint">
+                        <!-- [html-validate-disable-block attr-quotes, void-style, element-permitted-content, heading-level -- FIXME: rfcmarkup/rfc2html generates HTML with issues] -->
+                        <div class="rfcmarkup"><pre>Network Working Group                                          R. Hagens
+Request for Comments:  1070                    U of Wiscsonsin - Madison
+                                                                 N. Hall
+                                               U of Wiscsonsin - Madison
+                                                                 M. Rose
+                                                    The Wollongong Group
+                                                           February 1989
+
+
+                <span class="h1">Use of the Internet as a Subnetwork for</span>
+              <span class="h1">Experimentation with the OSI Network Layer</span>
+
+
+Status of this Memo
+
+   This RFC proposes a scenario for experimentation with the
+   International Organization for Standardization (ISO) Open Systems
+   Interconnection (OSI) network layer protocols over the Internet and
+   requests discussion and suggestions for improvements to this
+   scenario.  This RFC also proposes the creation of an experimental OSI
+   internet.  To participate in the experimental OSI internet, a system
+   must abide by the agreements set forth in this RFC.  Distribution of
+   this memo is unlimited.
+
+WARNING
+
+   The methods proposed in this RFC are suitable ONLY for experimental
+   use on a limited scale.  These methods are not suitable for use in an
+   operational environment.
+
+Introduction
+
+   Since the International Organization for Standardization (ISO) Open
+   Systems Interconnection (OSI) network layer protocols are in their
+   infancy, both interest in their development and concern for their
+   potential impact on internetworking are widespread.  This interest
+   has grown substantially with the introduction of the US Government
+   OSI Profile (GOSIP), which mandates, for the US Government, the use
+   of OSI products in the near future.  The OSI network layer protocols
+   have not yet received significant experimentation and testing.  The
+   status of the protocols in the OSI network layer varies from ISO
+   International Standard to &quot;contribution&quot; (not yet a Draft Proposal).
+   We believe that thorough testing of the protocols and implementations
+   of the protocols should take place concurrently with the progression
+   of the protocols to ISO standards.  For this reason, the creation of
+   an environment for experimentation with these protocols is timely.
+
+   Thorough testing of network and transport layer protocols for
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 1]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-2" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   internetworking requires a large, varied, and complex environment.
+   While an implementor of the OSI protocols may of course test an
+   implementation locally, few implementors have the resources to create
+   a sufficiently large dynamic topology in which to test the protocols
+   and implementations well.
+
+   One way to create such an environment is to implement the OSI network
+   layer protocols in the existing routers in an existing internetwork.
+   This solution is likely to be disruptive due to the immature state of
+   the OSI network layer protocols and implementations, coupled with the
+   fact that a large set of routers would have to implement the OSI
+   network layer in order to do realistic testing.
+
+   This memo suggests a scenario that will make it easy for implementors
+   to test with other implementors, exploiting the existing connectivity
+   of the Internet without disturbing existing gateways.
+
+   The method suggested is to treat the Internet as a subnetwork,
+   hereinafter called the &quot;IP subnet.&quot;  We do this by encapsulating OSI
+   connectionless network layer protocol (ISO 8473) packets in IP
+   datagrams, where IP refers to the Internet network layer protocol,
+   <a href="/doc/html/rfc791">RFC 791</a>.  This encapsulation occurs only with packets travelling over
+   the IP subnet to sites not reachable over a local area network.  The
+   intent is for implementations to use OSI network layer protocols
+   directly over links locally, and to use the IP subnet as a link only
+   when necessary to reach a site that is separated from the source by
+   an IP gateway.  While it is true that almost any system at a
+   participating site may be reachable with IP, it is expected that
+   experimenters will configure their systems so that a subset of their
+   systems will consider themselves to be directly connected to the IP
+   subnet for the purpose of testing the OSI network layer protocols or
+   their implementations.  The proposed scheme permits systems to change
+   their topological relationship to the IP subnet at any time, also to
+   change their behavior as an end system (ES), intermediate system
+   (IS), or both at any time.  This flexibility is necessary to test the
+   dynamic adaptive properties of the routing exchange protocols.
+
+   A variant of this scheme is proposed for implementors who do not have
+   direct access to the IP layer in their systems.  This variation uses
+   the User Datagram Protocol over IP (UDP/IP) as the subnetwork.
+
+   In this memo we will call the experiment based on the IP subnet EON,
+   an acronym for &quot;Experimental OSI-based Network&quot;.  We will call the
+   experiment based on the UDP/IP subnet EON-UDP.
+
+   It is assumed that the reader is familiar with the OSI connectionless
+   network layer and, in particular, with the following documents:
+
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 2]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-3" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   <a href="/doc/html/rfc768">RFC 768</a>
+
+      User Datagram Protocol.
+
+   <a href="/doc/html/rfc791">RFC 791</a>
+
+      Internet Protocol.
+
+   ISO 8473
+
+      Protocol for Providing the Connectionless mode Network Service.
+
+   ISO DP 9542
+
+      End System to Intermediate System Routing Exchange Protocol for
+      Use in Conjunction with the Protocol for the Provision of the
+      Connectionless-mode Network Service (ISO 8473).
+
+   ISO TC 97/SC 6/N xxxx
+
+      Intermediate System to Intermediate System Intra-Domain Routing
+      Exchange Protocol.
+
+   PD TR 97/SC 6/N 9575
+
+      OSI Routing Framework.
+
+
+Definitions
+
+   EON
+
+      An acronym for Experimental OSI Network, a name for the proposed
+      experimental OSI-based internetwork that uses the IP over the
+      Internet as a subnetwork.
+
+   EON-UDP
+
+      A name for the proposed experimental OSI-based internetwork that
+      uses the UDP/IP over the Internet as a subnetwork.
+
+   ES
+
+      End system as defined by OSI: an OSI network layer entity that
+      provides the OSI network layer service to a transport layer.
+
+
+
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 3]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-4" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   IANA
+
+      The Internet Assigned Numbers Authority.  Contact Joyce K.
+      Reynolds (JKREY@ISI.EDU).
+
+   IS
+
+      An OSI network layer entity that provides the routing and
+      forwarding functions of the OSI connectionless network layer.
+
+   OSI CLNL
+
+      OSI connectionless network layer.
+
+   NSDU
+
+      Network Service Data Unit.
+
+   PDU
+
+      Protocol Data Unit, or packet.
+
+   NPDU
+
+      Network Protocol Data Unit.
+
+   ISO-gram
+
+      An NPDU for any protocol in the OSI CLNL, including ISO 8473
+      (CLNP), ISO DP 9542 (ES-IS), and ISO TC 97/SC 6/N xxxx (IS-IS).
+
+   Participating system
+
+      An ES or IS that is running a subset of the OSI CLNL protocols and
+      is reachable through the application of these protocols and the
+      agreements set forth in this memo.
+
+   Core system
+
+      An ES or IS that considers itself directly connected to the IP
+      subnet for the purpose of participating in EON.
+
+   NSAP-address
+
+      Network Service Access Point address, or an address at which the
+      OSI network services are available to a transport entity.
+
+
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 4]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-5" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   SNPA-address
+
+      SubNetwork Point of Attachment address, or an address at which the
+      subnetwork service is available to the network entity.
+
+
+Issues to be Addressed by this Memo
+
+   In order to make the experimental OSI internet work, participating
+   experimenters must agree upon:
+
+   -    how ISO-grams will be encapsulated in IP or UDP packets,
+
+   -    the format of NSAP-addresses to be used,
+
+   -    how NSAP-addresses will be mapped to SNPA-addresses on
+        the IP subnet,
+
+   -    how multicasting, which is assumed by some OSI CLNL
+        protocols, will be satisfied, and
+
+   -    how topology information and host names will be
+        disseminated.
+
+   This memo contains proposals for each of these issues.
+
+Design Considerations
+
+   The goals of this memo are:
+
+   -    to facilitate the testing of the OSI network layer
+        protocols among different implementions,
+
+   -    to do this as soon as possible, exploiting existing
+        connectivity,
+
+   -    to do this without requiring any changes to existing IP
+        gateways,
+
+   -    to create a logical topology that can be changed
+        easily, for the purpose of testing the dynamic adaptive
+        properties of the protocols, and
+
+   -    to minimize the administrative requirements of this
+        experimental internetwork.
+
+   The following are not goals of this memo:
+
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 5]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-6" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   -    to permit the use of arbitrary ISO-style
+        NSAP-addresses,
+
+   -    to require that participants have working
+        implementations of all of the OSI routing protocols
+        before they can participate in any capacity,
+
+   -    to permit or encourage the use of existing IP routing
+        methods and algorithms for the routing of ISO-grams
+        among participating ESs and ISs,
+
+   -    to create a production-like environment accommodating a
+        very large number of systems (ESs, ISs or both), and
+
+   -    to provide or to encourage IP-to-CLNP gatewaying.
+
+Encapsulating ISO-grams in IP datagrams
+
+   The entire OSI network layer PDU, whether it be an ISO 8473 PDU, an
+   ISO DP 9542 PDU, or an IS-IS PDU, will be placed in the data portion
+   of an IP datagrams at the source.  The ISO 8473 entity may fragment
+   an NSDU into several NPDUs, in which case each NPDU will be
+   encapsulated in an IP datagram.  The intent is for the OSI CLNL to
+   fragment rather than to have IP fragment, for the purpose of testing
+   the OSI CLNL.  Of course, there is no guarantee that fragmentation
+   will not occur within the IP subnet, so reassembly must be supported
+   at the IP level in the destination participating system.
+
+   SNPA-addresses (Internet addresses) will be algorithmically derived
+   from the NSAP-addresses as described below.  The &quot;protocol&quot; field of
+   the IP datagram will take the value 80 (decimal), which has been
+   assigned for this purpose.
+
+NSAP-Address Format
+
+   The OSI internetwork described here will form one routing domain,
+   with one form of NSAP address recognized by all level 1 routers in
+   this domain.  Other address formats may be agreed upon in later
+   editions of this memo.
+
+   The address format to be used in this experiment is that specified in
+   <a href="/doc/html/rfc1069">RFC 1069</a>.  According to <a href="/doc/html/rfc1069">RFC 1069</a>, the low-order portion of the Domain
+   Specific Part of the NSAP address may vary depending on the
+   conventions of the particular routing domain.  For the purposes of
+   this experiment, we shall use the following address format:
+
+
+
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 6]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-7" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+                        Address Format for EON
+     Octet    Value         Meaning
+     -------- ------------- ----------------------------------------
+     1        47            Authority and Format Identifier
+     2,3      00, 06        International Code Designator
+     4        3             Version Number
+     5,6      0             Global Area Number, see <a href="/doc/html/rfc1069">RFC 1069</a>
+     7,8      RDN           Routing Domain Number, assigned by IANA
+     9-11     0             Pad
+     12,13    0             LOC-AREA, see below
+     14,15    0             unused
+     16-19    A.B.C.D       Internet address
+     20                     NSAP Selector, assigned IANA
+
+      Note: It is our desire that the address format used by EON be
+      consistent with <a href="/doc/html/rfc1069">RFC 1069</a>.  To that end, the address format
+      proposed by this RFC may change as future editions of <a href="/doc/html/rfc1069">RFC 1069</a>
+      become available.
+
+   The mapping between NSAP-addresses and SNPA-addresses (Internet
+   addreses) on the proposed IP subnet is straightforward.  The SNPA-
+   address is embeded in the NSAP-address.
+
+   There are several ways in which the LOC-AREA field could be used.
+
+   (1) Assign local areas, administered by the Internet Assigned Numbers
+       Authority (IANA).  The advantage of this is that it permits
+       experimentation with area routing.  The disadvantage is that it
+       will require an additional directory service to map host names to
+       NSAP-addresses.  We would like to use the existing domain name
+       servers to derive Internet addresses from names, and we would
+       like NSAP-addresses to be derivable from the Internet addresses
+       alone.
+
+   (2) Have one local area in the EON, with LOC-AREA value 0.  This
+       would eliminate the problem of name-toNSAP-address binding, but
+       would not permit experimentation with area routing.  It would
+       not, however preclude the use of areas later, for example, when
+       OSI directory services are widely available.
+
+   (3) Make the local area a simple function of the Internet address.
+       The advantage of this is that it would permit experimentation
+       with area addressing without requiring additional directory
+       services, but the areas derived would not be under the control of
+       the experimenters and may not correspond to anything useful or
+       meaningful for the purposes of this experiment.
+
+   We believe that initially, the preferred alternative is to use only
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 7]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-8" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   zero-valued local areas.  Later editions of this memo may contain
+   proposals for use of the local area field, when the IS-IS proposal is
+   more mature and perhaps when OSI directory services are in use among
+   experimenters.
+
+   The value of the high-order portion of the DSP will be set in
+   accordance with <a href="/doc/html/rfc1069">RFC 1069</a>.
+
+Other NSAP-Address Formats
+
+   PDUs carrying NSAP-addresses of other formats can be routed through
+   this domain.  This is the job of the level 2 routers, described in
+   the IS-IS document.
+
+Multicast Addresses on the IP Subnet
+
+   The ES-IS and IS-IS routing exchange protocols assume that broadcast
+   subnetworks support two multicast addresses: one for all ESs and the
+   other for all ISs.  While one could obviate this issue by treating
+   the IP subnet as a general topology subnetwork or as a set of point-
+   to-point links, it is also desirable to treat the IP subnet as a
+   broadcast subnetwork for the purpose of testing those parts of an
+   implementation that run over broadcast subnets.  A participating
+   implementor not having access to several local machines running the
+   OSI CLNL may test the protocols over the IP subnet as if the IP
+   subnet were a broadcast subnet.
+
+   The multicasting assumed by the OSI CLNL can be simulated by a small
+   sublayer lying between the OSI CLNL and the IP subnet layer.  For the
+   purpose of this discussion, call this sublayer an SNAcP, a SubNetwork
+   Access Protocol, in OSI argot.  In each system the SNAcP caches a
+   table of the Internet addresses of systems that it considers to be
+   reachable in one ISO 8473-hop over the IP subnet.  These are called
+   &quot;core&quot; systems.  In this sense, the use of the cache simulates a set
+   of links over which a system will send ISO configuration messages (ES
+   Hello, IS Hello, etc.) when it comes up.  As a local matter, the
+   table of core systems may or may not expand during the system&#x27;s
+   lifetime, in response to configuration messages from other core
+   systems.
+
+   On the outgoing path, the SNAcP accepts an ISO-gram and a parameter
+   indicating the intended use of this ISO-gram: send to a single
+   system, to all ESs, to all ISs, or to all systems.  If the indended
+   destination is a single system, the ISO-gram is sent only to its
+   destination.  Otherwise, the SNAcP makes a copy of the ISO-gram for
+   each of the SNPA-addresses in the cache, effecting a broadcast to all
+   participating systems.  Before passing an ISO-gram to the IP subnet
+   layer, the SNAcP prepends an SNAcP header to each outgoing ISO-gram.
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 8]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-9" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   This header will take the form:
+
+                          SNAcP Header Format
+       Octet   Value                       Meaning
+       --------------------------------------------------------
+       1       01            Version number
+       --------------------------------------------------------
+       2                     Semantics of address:
+               00            Not a multicast address
+               01            All ESs
+               02            All ISs
+               03            Broadcast
+       --------------------------------------------------------
+       3,4                   OSI checksum as defined in ISO 8473
+
+   The SNAcP header has three fields, a version number field, a
+   semantics field, and a checksum field.  The version number will take
+   the value 01.  The checksum field will take the two octet ISO
+   (Fletcher) checksum of the SNAcP header.  The checksum algorithm is
+   described in ISO 8473.
+
+   The semantics field will take one of 4 values, indicating &quot;all ESs&quot;,
+   &quot;all ISs&quot;, &quot;broadcast&quot;, or &quot;not a multicast address&quot;.  The value of
+   the semantics field is determined by a parameter passed to the SNAcP
+   by the calling OSI network entity.  A participant in the experiment
+   may test the OSI network layer over a set of point-to-point links by
+   choosing not to use the multicast capabilities provided by the SNAcP
+   on the outgoing path.
+
+   On the incoming path, the SNAcP inspects the SNAcP header and decides
+   whether or not to accept the ISO-gram.  If it accepts the ISO-gram,
+   the SNAcP removes the SNAcP header and passes the ISO-gram to the OSI
+   CLNL, otherwise, it discards the ISO-gram.  The SNAcP will always
+   accept ISO-grams with SNAcP headers indicating &quot;not a multicast
+   address&quot; (value zero in the semantics field) and &quot;broadcast&quot; (value
+   03).  Whether an SNAcP will accept ISO-grams for either of the two
+   multicast groups &quot;all ESs&quot; (value 1) and &quot;all ISs&quot; (value 2) will
+   depend on local configuration information.  If the system on which
+   the SNAcP resides is configured as an end system, it will accept
+   ISO-grams destined for &quot;all ESs&quot; and if it is configured as an
+   intermediate system, it will accept ISO-grams destined for &quot;all ISs&quot;.
+
+   A participant who is testing the OSI network layer over a set of
+   point-to-point links will accept ISO-grams according to these rules
+   as well.
+
+   Consideration was given to making the SNAcP extensible by making the
+   semantics and checksum fields variable-length parameters, in the
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                            [Page 9]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-10" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   manner of ISO 8473.  We feel that the presence of a version number
+   provides sufficient extensibility.
+
+Errors on the IP subnet
+
+   The IP subnet layer may receive ICMP messages and may pass error
+   indications to the SNAcP layer as a result of having received these
+   ICMP messages.  It is assumed that in this context, the IP subnet
+   will handle ICMP messages in the same way that it handles them in any
+   other context.  For example, upon receipt of an ICMP echo message,
+   the IP subnet will respond with an ICMP echo reply, and the SNAcP
+   need not be informed of the receipt of the ICMP echo message.
+   Certain ICMP messages such as source quench are likely to produce an
+   error indication to all layers using the IP subnet.  The actions
+   taken by the SNAcP for these indications is purely a local matter,
+   however the following actions are suggested.
+
+                Suggested SNAcP Actions in Response to
+                    ICMP-related Error Indications
+         ICMP message type          Action taken by the SNAcP
+      -----------------------------------------------------------
+      Destination unreachable,   If the remote address is present
+      Parameter problem,         in the cache of core systems&#x27;
+      Time exceeded              addresses, mark it unusable.
+                                 Inform network management.
+      -----------------------------------------------------------
+      Source quench              If the remote address is present
+                                 in the cache of core systems&#x27;
+                                 addresses, mark the remote
+                                 address as unusable and set a
+                                 timer for a time after which
+                                 the address becomes usable
+                                 again.
+                                 Inform network management.
+      -----------------------------------------------------------
+      All others                 Ignored by the SNAcP layer.
+
+
+   To &quot;inform network management&quot; may mean to print a message on the
+   system console, to inform a local process, to increment a counter, to
+   write a message in a log file, or it may mean to do nothing.
+
+   The effect of marking a cached address as unusable is as follows.
+   When the SNAcP attempts to broadcast or multicast an ISO-gram,
+   addresses in the cache that are marked as unusable are ignored.  When
+   the SNAcP attempts to send a non-multicast ISO-gram to an unusable
+   cached address, the SNAcP returns an error indication to the OSI
+   CLNL.  In this way, when the OSI CLNL uses the SNAcP to simulate a
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                           [Page 10]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-11" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   set of point-to-point links, it is notified when a link fails, but
+   when the OSI CLNL uses the SNAcP to simulate a multicast subnet, it
+   is not notified when one system on the subnet goes down.
+
+Use of UDP/IP in Lieu of IP
+
+   In addition to using IP directly, for testing purposes it may be
+   useful to support the OSI CLNL over the User Datagram Protocol (UDP).
+   This is because some implementors do not have direct access to IP,
+   but do have access to the UDP.  For example, an implementor may have
+   an a binary license for an operating system that provides TCP/IP and
+   UDP/IP, but no direct access to IP.  These implementors may
+   participate in a parallel experiment, called EON-UDP, by using UDP/IP
+   as a subnetwork instead of using the IP subnet.  In this case, the
+   OSI NPDU (after fragmentation, if applicable) will be placed in the
+   data portion of a UDP datagram.  UDP port 147 (decimal) has been
+   assigned for this purpose.  These participants will place an SNAcP
+   between UDP and ISO 8473 rather than between IP and ISO 8473.  In all
+   other respects, the EON-UDP experiment is identical to the EON
+   experiment.
+
+   Of course, network layers entities using the UDP/IP subnet will not
+   interoperate directly with network layers entities using the IP
+   subnet.  The procedures proposed in this memo do not prevent an
+   implementor from building an EON to EON-UDP gateway, however the
+   issues related to building and routing to such a gateway are not
+   addressed in this memo.  This memo simply proposes two distinct
+   parallel experiments for two groups of experimenters having different
+   resources.
+
+   The preferred method of experimentation is to use the IP subnet, in
+   other words, EON.  The EON-UDP variant is intended for use only by
+   those who cannot participate in EON.
+
+Dissemination of Topological Information and Host Names
+
+   The EON experiment simulates a logical topology that is not as
+   connected as the underlying logical topology offered by the Internet.
+   The topology of the IP subnet is, in effect, simulated by the SNAcP
+   layer in each of the core systems.  Each of the core systems caches a
+   list of the other core systems in the EON.  When a system boots, it
+   needs some initial list of the participating core systems.  For this
+   reason, a list of core systems will be maintained by the IANA.
+
+   In addition, a list of all participating ESs will be maintained by
+   the IANA.  This list is not necessary for the functioning of the EON
+   network layer.  It is a convenience to the experimenters, and is
+   meant for use by application layer software or human users.
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                           [Page 11]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-12" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   Two pairs of lists are kept, one for the EON and one for EON-UDP.
+
+   core.EON  This is a list of SNPA-addresses of those systems
+             that will be (logically) reachable via the IP subnet
+             in one ISO 8473-hop from any other core system.  This
+             does not mean that systems in this file are gateways
+             or ISs.  They may be ESs, ISs or both.  A site may
+             participate as a core system before its address is
+             included in this file and distributed to other core
+             systems, but under these circumstances other core systems
+             will not know to send configuration messages (ESHs and
+             ISHs) to the new site when coming up or rebooting.  The
+             SNPA-addresses in this file will be ASCII strings of
+             the form A.B.C.D, no more than one per line.
+             White space (tabs, blanks) will be optional before
+             A and after D.  A pound-sign (#) will indicate that
+             it and everything following it on that line is a comment.
+             For example:
+
+             128.105.2.153 # bounty.cs.wisc.edu
+
+   core.EON-UDP
+             This is the equivalent of core.EON for use with
+             the UDP/IP subnet.  The format is the same that of
+             core.EON.
+
+   hosts.EON This is a list of the ASCII host names of all end
+             systems participating in the IP subnet experiment,
+             one host name per line.  It is not used by the OSI
+             CLNL.
+
+   hosts.EON-UDP
+             This is a list of the ASCII host names of all end
+             systems participating in the UDP/IP subnet experiment,
+             one host name per line.  It is meant for the use of
+             applications.  It is not used by the OSI CLNL.
+
+   The files will be available from the IANA via anonymous ftp.  Sites
+   wishing to join the experimental OSI internet will have to have their
+   host names and core system addresses added to the appropriate files.
+   They may do so by sending requests to Joyce K. Reynolds at the
+   electronic mail address:
+
+             JKREY@ISI.EDU
+
+
+
+
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                           [Page 12]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-13" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+Hypothetical EON Topology
+
+   Figure 1 describes the logical links in a hypothetical topology, in
+   which three university computer sciences departments are
+   participating in the experiment: the University of Wisconsin (U of
+   W), the University of Tudor (U of Tudor), and the University of
+   Fordor (U of Fordor).  The U of W has two local area networks(LANs),
+   128.105.4 and 128.105.2, and four systems that are acting as ESs in
+   the experiment.  Two systems are attached to both LANs.  Only one of
+   these two systems is forwarding ISO-grams, in other words, acting as
+   an IS.  The U of Tudor has only one participating system, and it is
+   acting as an ES.  The U of Fordor has two systems that are
+   participating in the experiment, one of which is an IS only, and the
+   other of which is acting as an ES only.
+
+   The contents of the core.EON and hosts.EON files for this topology
+   are shown below.
+
+   #
+   # core.EON for hypothetical EON topology
+   #
+   128.105.2.153   # IS/ES in cs.wisc.edu
+   26.5.0.73       # ES in cs.tudor.edu
+   192.5.2.1       # IS in cs.fordor.edu
+
+
+   #
+   # hosts.EON hypothetical EON topology
+   #
+   128.105.4.150   # ES in cs.wisc.edu
+   128.105.2.150   # same as above : multihomed ES
+   128.105.4.154   # ES in cs.wisc.edu
+   128.105.4.151   # ES in cs.wisc.edu
+   128.105.2.153   # IS/ES in cs.wisc.edu
+   26.5.0.73       # ES in cs.tudor.edu
+   192.5.2.2       # ES in cs.fordor.edu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                           [Page 13]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-14" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+    ______U of WI (128.105)______
+   (                             )
+   ( 128.105.4                   )
+   (   |                         )                   _U of Tudor__
+   (   |   128.105.2.150         )                  (             )
+   (   |   128.105.4.150         )                  (             )
+   (   |------ES-----------|     )                  (   ES        )
+   (   |                   |     )                  (  26.5.0.73  )
+   (   |                   |     )                  (   |         )
+   (   |                   |     )                  (___|_________)
+   (   |                   |     )                      |
+   (   |                   |     )         -------------
+   (   |---ES              |     )        _|_
+   (   |  128.105.4.154    |     )       (   )
+   (   |                   |     )      (     )
+   (   |                   |     )     (  IP   )
+   (   |                   |----------(  subnet )
+   (   |                   |     )     (       )
+   (   |                   |     )      (     )
+   (   |                   |     )       (___)
+   (   |---ES              |     )         |
+   (   |  128.105.4.151    |     )         -------------
+   (   |                   |     )                      |
+   (   |                   |     )                 _U of Fordor_
+   (   |                   |     )                (     |       )
+   (   |---IS/ES-----------|     )                (     |       )
+   (      128.105.2.153    |     )                (    IS       )
+   (      128.105.4.153    |     )                (   192.5.2.1 )
+   (                       |     )                (     |       )
+   (                       |     )                (     |       )
+   (                  128.105.2  )                (    ES       )
+   (                             )                (   192.5.2.2 )
+   (_____________________________)                (_____________)
+
+                    Figure 1: Hypothetical EON Topology
+
+
+   The U of Fordor system 192.5.2.1 may, in addition to acting as an IS,
+   begin acting as an ES at any time, by participating in the ES-IS
+   protocol as an ES and by beginning to serve a set of NSAPs.  It may
+   act as an ES or as an IS or as both.  In fact, the U of Fordor
+   systems 192.5.2.1 and 192.5.2.2 could reverse roles at any time,
+   regardless of their physical connectivity to the Internet, merely by
+   modifying their use of the ES-IS protocol and by their serving or not
+   serving NSAPs.  Suppose that these two systems reverse roles:
+   192.5.2.1 becomes an ES, not a core system, and 192.5.2.2 becomes a
+   core system and an IS.  Suppose further that the experimenters at the
+   U of Fordor do not inform the IANA of the change immediately, so the
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                           [Page 14]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-15" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+   core.EON file is out-of-date for a while.  The effect will be that
+   other core systems will continue to send configuration messages to
+   192.5.2.1, which will respond as an ES, not as an IS, and it will
+   appear that 192.5.2.2 is not reachable from the rest of the topology
+   because the other core systems will not know to send configuration
+   information to it.  However, when 192.5.2.2 is booted, it will send
+   configuration messages to all core systems informing them of its
+   existence via the IS-IS protocol.  Those core systems that are acting
+   as ISs will respond with their configuration messages, update their
+   core system caches, thereby establishing a set of logical links
+   between 192.5.2.2 and the rest of the core systems.
+
+Relationship of this Memo to other RFCs
+
+   RFCs 1006 and 983
+
+      ISO Transport Services on top of the TCP.  Whereas RFCs 1006 and
+      983 offer a means of running the OSI session layer protocol and
+      higher OSI layers over TCP/IP, this memo provides a means of
+      running the OSI network and transport layers on an IP
+      internetwork.
+
+   <a href="/doc/html/rfc1069">RFC 1069</a>
+
+      Guidelines for the use of Internet-IP addresses in the ISO
+      Connectionless-Mode Network Protocol.  <a href="/doc/html/rfc1069">RFC 1069</a> suggests a method
+      to use the existing Internet routing and addressing in a gateway
+      that forwards ISO connectionless network layer protocol datagrams.
+      In contrast, this memo suggests a method to use the ISO routing
+      and addressing in a gateway that forwards ISO connectionless
+      network layer protocol datagrams.
+
+   <a href="/doc/html/rfc982">RFC 982</a>
+
+      ANSI Working Document X3S3.3/85-258.  This is a set of guidelines
+      for specifying the structure of the DSP part of an ISO address.
+      The addresses described in this memo meet the guidelines set forth
+      in <a href="/doc/html/rfc982">RFC 982</a>.
+
+References
+
+      Plummer, D., &quot;An Ethernet Address Resolution Protocol - or -
+      Converting Network Protocol Addresses to 48.bit Ethernet Address
+      for Transmission on Ethernet Hardware&quot;, <a href="/doc/html/rfc826">RFC 826</a>, MIT, November
+      1982.
+
+      Finlayson, R., T. Mann, J. Mogul, and M. Theimer, &quot;A Reverse
+      Address Resolution Protocol&quot;, <a href="/doc/html/rfc903">RFC 903</a>, Stanford, June 1984.
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                           [Page 15]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-16" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+      Postel, J., &quot;Internet Protocol - DARPA Internet Program Protocol
+      Specification&quot;, <a href="/doc/html/rfc791">RFC 791</a>, DARPA, September 1981.
+
+      Postel, J., &quot;Internet Control Message Protocol - DARPA Internet
+      Program Protocol Specification&quot;, <a href="/doc/html/rfc792">RFC 792</a>, ISI, September 1981.
+
+      Postel, J., &quot;User Datagram Protocol&quot;, <a href="/doc/html/rfc768">RFC 768</a>, ISI, August 1980.
+
+      ISO, &quot;Protocol For Providing the Connectionless Mode Network
+      Service&quot;, (ISO 8473), March 1986.  (This is also published as <a href="/doc/html/rfc994">RFC</a>
+      <a href="/doc/html/rfc994">994</a>.)
+
+      ISO, &quot;End System to Intermediate System Routing Exchange Protocol
+      for Use in Conjunction with the Protocol for the Provision of the
+      Connectionless-mode Network Service (ISO 8473)&quot;, (ISO DP 9542).
+      (This is also published as <a href="/doc/html/rfc995">RFC 995</a>.)
+
+      ISO, &quot;Intermediate System to Intermediate System Intra-Domain
+      Routing Exchange Protocol&quot;, (ISO TC 97/SC 6/N xxxx).
+
+      OSI, &quot;OSI Routing Framework&quot;, (PD TR 97/SC 6/N 9575).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="grey">Hagens, Hall, &amp; Rose                                           [Page 16]</span></pre>
+<hr class='noprint'/><!--NewPage--><pre class='newpage'><span id="page-17" ></span>
+<span class="grey"><a href="/doc/html/rfc1070">RFC 1070</a>                  Experimental OSI Net             February 1989</span>
+
+
+Authors&#x27; Addresses
+
+      Robert A. Hagens
+      Computer Sciences Department
+      University of Wisconsin - Madison
+      1210 West Dayton Street
+      Madison, WI  53706
+      608/ 262-1017
+
+      EMail: hagens@cs.wisc.edu
+
+      Nancy E. Hall
+      Computer Sciences Department
+      University of Wisconsin - Madison
+      1210 West Dayton Street
+      Madison, WI  53706
+      608/ 262-5945
+
+      EMail: nhall@cs.wisc.edu
+
+      Marshall T. Rose
+      The Wollongong Group
+      San Antonio Blvd.
+      Palo Alto, California
+      415/ 962-7100
+
+      Email: mrose@twg.com
+
+
+
+
+Comments and Suggestions
+
+   Please direct comments, suggestions, and indications of desire to
+   participate to the authors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hagens, Hall, &amp; Rose                                           [Page 17]
+</pre></div>
+                    </div>
+                
+            </div>
+            <div class="d-print-none col-md-3 bg-light-subtle collapse show" id="sidebar">
+                <div class="position-fixed border-start sidebar overflow-scroll overscroll-none no-scrollbar">
+                    <div class="d-flex flex-column vh-100 pt-2 pt-lg-3 ps-3 pl-md-2 pl-lg-3">
+                        <div>
+                            <a class="btn btn-primary btn-sm" href="/doc/rfc1070/">Datatracker</a>
+                            <p class="fw-bold pt-2">
+                                
+                                    RFC 1070
+                                
+                                <br>
+                                
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Unknown
+    
+</span>
+
+                            </p>
+                        </div>
+                        
+                        <ul class="nav nav-tabs nav-fill small me-2" role="tablist">
+                            <li class="nav-item" role="presentation" title="Document information">
+                                <button class="nav-link px-2"
+                                        id="docinfo-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#docinfo-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="docinfo-tab-pane"
+                                        aria-selected="true">
+                                    <i class="bi bi-info-circle"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Info</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Table of contents">
+                                <button class="nav-link px-2"
+                                        id="toc-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#toc-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="toc-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-list-ol"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Contents</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Preferences">
+                                <button class="nav-link px-2"
+                                        id="pref-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#pref-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="pref-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-gear"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Prefs</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="overflow-auto tab-content pt-2 me-2">
+                            <div class="tab-pane"
+                                 id="docinfo-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="docinfo-tab"
+                                 tabindex="0">
+                                <table class="table table-sm table-borderless">
+                                    
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+<span class="text-success">RFC
+    
+    - Unknown
+    
+</span>
+
+            
+                
+                    <br>February 1989
+                
+                <br>
+                
+                
+                    <a class="btn btn-sm btn-warning"
+                       title="Click to report an error in the document."
+                       href="https://www.rfc-editor.org/errata.php#reportnew"
+                       target="_blank">
+                        Report errata
+                    </a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
+            
+            
+                
+
+
+
+
+    	
+        <div class="alert alert-warning small p-2 mt-2" role="alert">
+            This RFC is labeled as "Legacy"; it was published before a formal source was recorded.
+            This RFC is <strong>not endorsed by the IETF</strong> and has <strong>no formal standing</strong> in the
+            <a href="/doc/rfc2026/">IETF standards process</a>.
+        </div>
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+            
+            
+            <li class="page-item rfc active">
+                <a class="page-link"
+                href="/doc/html/rfc1070">
+                    RFC 1070
+                </a>
+            </li>
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Authors</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Dr. Marshall T. Rose"
+            href="/person/mrose17@gmail.com" >Dr. Marshall T. Rose</a> <a 
+               href="mailto:mrose17%40gmail.com"
+               aria-label="Compose email to mrose17@gmail.com"
+               title="Compose email to mrose17@gmail.com">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Robert Hagens"
+            href="/person/hagens@mci.net" >Robert Hagens</a> <a 
+               href="mailto:hagens%40mci.net"
+               aria-label="Compose email to hagens@mci.net"
+               title="Compose email to hagens@mci.net">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Nancy Hall"
+            href="/person/nhall@cs.wisc.edu" >Nancy Hall</a> <a 
+               href="mailto:nhall%40cs.wisc.edu"
+               aria-label="Compose email to nhall@cs.wisc.edu"
+               title="Compose email to nhall@cs.wisc.edu">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:rfc1070@ietf.org?subject=rfc1070" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        Legacy
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc1070.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/rfc1070.html">
+            
+                <i class="bi bi-file-code"></i> html
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+            download="rfc1070.pdf"
+          
+         
+          target="_blank"
+          href="https://www.rfc-editor.org/rfc/pdfrfc/rfc1070.txt.pdf">
+            
+                <i class="bi bi-file-pdf"></i> pdf
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/rfc1070/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+    
+</tbody>
+                                </table>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a datatracker bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </div>
+                            <div class="tab-pane mb-5"
+                                 id="toc-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="toc-tab"
+                                 tabindex="0">
+                                <nav class="nav nav-pills flex-column small" id="toc-nav">
+                                </nav>
+                            </div>
+                            <div class="tab-pane mb-5 small"
+                                 id="pref-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="pref-tab"
+                                 tabindex="0">
+                                <label class="form-label fw-bold mb-2">Show sidebar by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="sidebar" id="on-radio">
+                                    <label class="btn btn-outline-primary" for="on-radio">Yes</label>
+                                    <input type="radio" class="btn-check" name="sidebar" id="off-radio">
+                                    <label class="btn btn-outline-primary" for="off-radio">No</label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Tab to show by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="deftab" id="docinfo-radio">
+                                    <label class="btn btn-outline-primary" for="docinfo-radio">
+                                        <i class="bi bi-info-circle me-1"></i>Info
+                                    </label>
+                                    <input type="radio" class="btn-check" name="deftab" id="toc-radio">
+                                    <label class="btn btn-outline-primary" for="toc-radio">
+                                        <i class="bi bi-list-ol me-1"></i>Contents
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">HTMLization configuration</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="htmlconf" id="txt-radio">
+                                    <label class="btn btn-outline-primary" for="txt-radio" title="This is the traditional HTMLization method.">
+                                        <i class="bi bi-badge-sd me-1"></i>HTMLize the plaintext
+                                    </label>
+                                    <input type="radio" class="btn-check" name="htmlconf" id="html-radio">
+                                    <label class="btn btn-outline-primary" for="html-radio" title="This is the modern HTMLization method.">
+                                        <i class="bi bi-badge-hd me-1"></i>Plaintextify the HTML
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2" for="ptsize">Maximum font size</label>
+                                <input type="range" class="form-range" min="7" max="16" id="ptsize" oninput="ptdemo.value = ptsize.value">
+                                <label class="form-label fw-bold mt-4 mb-2">Page dependencies</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="pagedeps" id="inline-radio">
+                                    <label class="btn btn-outline-primary" for="inline-radio" title="Generate larger, standalone web pages that do not require network access to render.">
+                                        <i class="bi bi-box me-1"></i>Inline
+                                    </label>
+                                    <input type="radio" class="btn-check" name="pagedeps" id="reference-radio">
+                                    <label class="btn btn-outline-primary" for="reference-radio" title="Generate regular web pages that require network access to render.">
+                                        <i class="bi bi-link-45deg me-1"></i>Reference
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Citation links</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="reflinks" id="refsection-radio">
+                                    <label class="btn btn-outline-primary" for="refsection-radio" title="Citation links go to the reference section.">
+                                        <i class="bi bi-arrow-clockwise"></i> Go to reference section
+                                    </label>
+                                    <input type="radio" class="btn-check" name="reflinks" id="citation-radio">
+                                    <label class="btn btn-outline-primary" for="citation-radio" title="Citation links go directly to the cited document.">
+                                        <i class="bi bi-link-45deg me-1"></i>Go to linked document
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+  var _paq = window._paq || [];
+  
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ietf.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 7]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.ietf.org/matomo.php?idsite=7" style="border:0;" alt="" /></p></noscript>
+
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c5fb5a6cc72b06',t:'MTc1NDcyOTE3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
